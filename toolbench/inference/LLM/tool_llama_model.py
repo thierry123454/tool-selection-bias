@@ -20,7 +20,7 @@ class ToolLLaMA:
             self, 
             model_name_or_path: str, 
             template:str="tool-llama-single-round", 
-            device: str="cuda", 
+            device: str="mps", 
             cpu_offloading: bool=False, 
             max_sequence_length: int=8192
         ) -> None:
@@ -52,7 +52,7 @@ class ToolLLaMA:
                 "echo": False
             }
             generate_stream_func = generate_stream
-            output_stream = generate_stream_func(self.model, self.tokenizer, gen_params, "cuda", self.max_sequence_length, force_generate=True)
+            output_stream = generate_stream_func(self.model, self.tokenizer, gen_params, "mps", self.max_sequence_length, force_generate=True)
             outputs = self.chatio.return_output(output_stream)
             prediction = outputs.strip()
         return prediction

@@ -188,5 +188,5 @@ if __name__=='__main__':
                 answer_dict[qid] = process_invalid_data(method,data_dict)
             else:
                 answer_dict[qid] = process_valid_data(method,data_dict['answer_generation'])
-                
+
     json.dump(answer_dict,open(output,'w'))

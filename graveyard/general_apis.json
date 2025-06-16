@@ -1,0 +1,162 @@
+[
+  {
+    "category": "Social",
+    "tool": "Jobs from remoteok",
+    "tool_desc": "list of all remote jobs from remoteok.com web-site - not official!",
+    "name": "Get list",
+    "desc": "Will show you all job posts. Also you can filter it by adding in the end of endpoint ?tags=digital+nomad",
+    "text": "Jobs from remoteok: list of all remote jobs from remoteok.com web-site - not official! | Get list: Will show you all job posts. Also you can filter it by adding in the end of endpoint ?tags=digital+nomad"
+  },
+  {
+    "category": "Social",
+    "tool": "Conversation Starters API",
+    "tool_desc": "Get a random conversation starter",
+    "name": "Random",
+    "desc": "Get a random conversation starter",
+    "text": "Conversation Starters API: Get a random conversation starter | Random: Get a random conversation starter"
+  },
+  {
+    "category": "Social",
+    "tool": "TikTok_v4",
+    "tool_desc": "TikTok API third party service, Stable and 24/7 maintenance.",
+    "name": "Hashtag/Challenge Posts",
+    "desc": "Get Hashtag/Challenge Posts By \"challenge_name\" or \"challenge_id\",\nand the endpoint will return 35 posts by 'cursor', with post data including the author data.",
+    "text": "TikTok_v4: TikTok API third party service, Stable and 24/7 maintenance. | Hashtag/Challenge Posts: Get Hashtag/Challenge Posts By \"challenge_name\" or \"challenge_id\",\nand the endpoint will return 35 posts by 'cursor', with post data including the author data."
+  },
+  {
+    "category": "Social",
+    "tool": "TikTok_v4",
+    "tool_desc": "TikTok API third party service, Stable and 24/7 maintenance.",
+    "name": "User Posts",
+    "desc": "Get User Posts by 'user_id',\nand the endpoint will return 30 posts by cursor.",
+    "text": "TikTok_v4: TikTok API third party service, Stable and 24/7 maintenance. | User Posts: Get User Posts by 'user_id',\nand the endpoint will return 30 posts by cursor."
+  },
+  {
+    "category": "Social",
+    "tool": "TikTok_v4",
+    "tool_desc": "TikTok API third party service, Stable and 24/7 maintenance.",
+    "name": "Music Posts",
+    "desc": "Get Music  Posts By \"music_id\",\nand the endpoint will return 25 posts by 'cursor', with post data including the author data.",
+    "text": "TikTok_v4: TikTok API third party service, Stable and 24/7 maintenance. | Music Posts: Get Music  Posts By \"music_id\",\nand the endpoint will return 25 posts by 'cursor', with post data including the author data."
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "[NEW] Get Channel Followers Count",
+    "desc": "Get Channel Followers Count",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | [NEW] Get Channel Followers Count: Get Channel Followers Count"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get Channel Profile Pic HTML Element",
+    "desc": "Get Channel Profile Pictures as a HTML Element with <img/> tag (using username or id)\n( Sizes: 150x150, 300x300, 600x600 )",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get Channel Profile Pic HTML Element: Get Channel Profile Pictures as a HTML Element with <img/> tag (using username or id)\n( Sizes: 150x150, 300x300, 600x600 )"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get Channel Profile Pic URL",
+    "desc": "Get Channel Profile Picture's URL (using username or id)\n( Sizes: 150x150, 300x300, 600x600 )",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get Channel Profile Pic URL: Get Channel Profile Picture's URL (using username or id)\n( Sizes: 150x150, 300x300, 600x600 )"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get Stream Preview Url",
+    "desc": "Get the Last Picture Preview's Url from a Live Stream\n( using optional width or width/height )\n( return an empty JSON object if not currently LIVE )",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get Stream Preview Url: Get the Last Picture Preview's Url from a Live Stream\n( using optional width or width/height )\n( return an empty JSON object if not currently LIVE )"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get Stream Preview as HTML Element",
+    "desc": "Get the Last Picture Preview as a HTML Element from a Live Stream\n( using optional width or width/height )\n( return an empty JSON object if not currently LIVE )",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get Stream Preview as HTML Element: Get the Last Picture Preview as a HTML Element from a Live Stream\n( using optional width or width/height )\n( return an empty JSON object if not currently LIVE )"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get Stream Game Name",
+    "desc": "Get  Stream Game Name (by username or id)\n( return an empty JSON object if not currently LIVE )",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get Stream Game Name: Get  Stream Game Name (by username or id)\n( return an empty JSON object if not currently LIVE )"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get Stream Mature Content Status",
+    "desc": "Get Stream Mature Content Status (using username or id)\n( return an empty JSON object if not currently LIVE )",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get Stream Mature Content Status: Get Stream Mature Content Status (using username or id)\n( return an empty JSON object if not currently LIVE )"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get Stream Number of Viewers",
+    "desc": "Get Stream Number of Viewers (using username or id)\n( return an empty JSON object if not currently LIVE )",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get Stream Number of Viewers: Get Stream Number of Viewers (using username or id)\n( return an empty JSON object if not currently LIVE )"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get All Active Stream Infos",
+    "desc": "Get a Stream Informations if the status is Online (by username or id)\n( return an empty JSON object if not currently LIVE )",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get All Active Stream Infos: Get a Stream Informations if the status is Online (by username or id)\n( return an empty JSON object if not currently LIVE )"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get Stream Language",
+    "desc": "Get Stream Language (using username or id)\n( return an empty JSON object if not currently LIVE )",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get Stream Language: Get Stream Language (using username or id)\n( return an empty JSON object if not currently LIVE )"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get All Channel Infos",
+    "desc": "Get Channel Infos (by username or id)",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get All Channel Infos: Get Channel Infos (by username or id)"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get Channel Description",
+    "desc": "Get Channel Description (using username or id)",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get Channel Description: Get Channel Description (using username or id)"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get Channel Total Views",
+    "desc": "Get Channel Cumulated Views since its creation (using username or id)",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get Channel Total Views: Get Channel Cumulated Views since its creation (using username or id)"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get Channel Broadcaster Type",
+    "desc": "Get Channel Broadcaster Type (using username or id)",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get Channel Broadcaster Type: Get Channel Broadcaster Type (using username or id)"
+  },
+  {
+    "category": "Social",
+    "tool": "gwyo-twitch",
+    "tool_desc": "This API gives access to informations about a User / Channel, and Streams on Twitch.",
+    "name": "Get Stream Title",
+    "desc": "Get Stream Title (using username or id)\n( return an empty JSON object if not currently LIVE )",
+    "text": "gwyo-twitch: This API gives access to informations about a User / Channel, and Streams on Twitch. | Get Stream Title: Get Stream Title (using username or id)\n( return an empty JSON object if not currently LIVE )"
+  }
+]

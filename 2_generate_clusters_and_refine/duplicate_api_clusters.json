@@ -1,0 +1,717 @@
+[
+  [
+    {
+      "category": "Mapping",
+      "tool": "Geocode - Forward and Reverse",
+      "tool_desc": "Forward and reverse geocoding using Google Geocoding API.",
+      "api_name": "Forward geocode",
+      "api_desc": "Get lat,lng coordinates from an address.",
+      "required_parameters": [
+        {
+          "name": "address",
+          "type": "STRING",
+          "description": "",
+          "default": "2795 Hastings St, Vancouver, BC V5K 1Z8"
+        }
+      ]
+    },
+    {
+      "category": "Location",
+      "tool": "GoApis Geocoding API",
+      "tool_desc": "Goapis Geocoding API is an efficient and affordable alternative to Google Maps Geocoding API.",
+      "api_name": "Geocding",
+      "api_desc": "Geocoding is the process of converting a physical address into geographic coordinates, such as latitude and longitude. It allows for the identification of a specific location on the Earth's surface, making it possible to map and analyze data spatially",
+      "required_parameters": []
+    },
+    {
+      "category": "Tools",
+      "tool": "Geolocate",
+      "tool_desc": "The Geocoding Flask API is a simple and efficient way to convert addresses and places into their corresponding latitude and longitude coordinates.",
+      "api_name": "GET coordinates",
+      "api_desc": "GET request to the \"/geocode\" endpoint with an \"address\" parameter containing the address or place you want to geocode",
+      "required_parameters": []
+    },
+    {
+      "category": "Mapping",
+      "tool": "TrueWay Geocoding",
+      "tool_desc": "Forward and Reverse Geocoding",
+      "api_name": "Geocode",
+      "api_desc": "Obtain geocoordinates for address",
+      "required_parameters": [
+        {
+          "name": "address",
+          "type": "STRING",
+          "description": "The address that you want to geocode",
+          "default": "505 Howard St, San Francisco"
+        }
+      ]
+    },
+    {
+      "category": "Location",
+      "tool": "Geocoder - United States Census Bureau",
+      "tool_desc": "Census geocoder provides interactive & programmatic (REST) access to users interested in matching addresses to geographic locations and entities containing those addresses.",
+      "api_name": "Geocoding and Geolookup for an address",
+      "api_desc": "Returns a geocode and a geolookup for a specified address"
+    }
+  ],
+  [
+    {
+      "category": "Mapping",
+      "tool": "Geocode - Forward and Reverse",
+      "tool_desc": "Forward and reverse geocoding using Google Geocoding API.",
+      "api_name": "Reverse geocode",
+      "api_desc": "Get an address from a lat,lng coordinate.",
+      "required_parameters": [
+        {
+          "name": "lng",
+          "type": "NUMBER",
+          "description": "",
+          "default": "-123.0470199"
+        },
+        {
+          "name": "lat",
+          "type": "NUMBER",
+          "description": "",
+          "default": "49.2813458"
+        }
+      ]
+    },
+    {
+      "category": "Mapping",
+      "tool": "Forward & Reverse Geocoding",
+      "tool_desc": "Forward & Reverse Geocoding",
+      "api_name": "ReverseGeocoding",
+      "api_desc": "Find address or place by latitude and longitude",
+      "required_parameters": [
+        {
+          "name": "lon",
+          "type": "NUMBER",
+          "description": "",
+          "default": "-87.6244212"
+        },
+        {
+          "name": "lat",
+          "type": "NUMBER",
+          "description": "",
+          "default": "41.8755616"
+        }
+      ]
+    },
+    {
+      "category": "Mapping",
+      "tool": "Geocoding by API-Ninjas",
+      "tool_desc": "Convert city locations to latitude/longitude coordinates and vice versa.",
+      "api_name": "/v1/reversegeocoding",
+      "api_desc": "API Ninjas Reverse Geocoding API endpoint.",
+      "required_parameters": [
+        {
+          "name": "lat",
+          "type": "NUMBER",
+          "description": "Latitude coordinate.",
+          "default": "47.6062"
+        },
+        {
+          "name": "lon",
+          "type": "NUMBER",
+          "description": "Longitude coordinate.",
+          "default": "-122.3321"
+        }
+      ]
+    },
+    {
+      "category": "Data",
+      "tool": "Address From To Latitude Longitude",
+      "tool_desc": "Free API to convert coordinates (latitude, longitude) to and from address An Easy, Open, Worldwide, Free Geocoding API",
+      "api_name": "Coordinates (latitude longitude) to Address",
+      "api_desc": "By using this geographic tool you can get an address from lat long coordinates.",
+      "required_parameters": [
+        {
+          "name": "Lng",
+          "type": "STRING",
+          "description": "",
+          "default": "88.4048656"
+        },
+        {
+          "name": "Lat",
+          "type": "STRING",
+          "description": "",
+          "default": "22.5757344"
+        }
+      ]
+    },
+    {
+      "category": "Location",
+      "tool": "Feroeg - Reverse Geocoding",
+      "tool_desc": "Free Reverse Geocoding service - Get a full customizable text address from latitude and longitude pairs.",
+      "api_name": "ReverseGeocode",
+      "api_desc": "Return a text address from a latitude/longitude location"
+    }
+  ],
+  [
+    {
+      "category": "Data",
+      "tool": "Real-Time News Data",
+      "tool_desc": "Extremely Fast and Simple API to get top news globally or per topic and search for news by query and geographic area in real-time.",
+      "api_name": "Top Headlines",
+      "api_desc": "Get the latest news headlines/top stories for a country.",
+      "required_parameters": []
+    },
+    {
+      "category": "News_Media",
+      "tool": "Newscatcher",
+      "tool_desc": "API to find news articles by any topic, country, language, website, or keyword",
+      "api_name": "/v1/latest_headlines",
+      "api_desc": "Always returns the latest 100 articles for any `topic`, `country`, `lang`, or any of those combined",
+      "required_parameters": []
+    },
+    {
+      "category": "Data",
+      "tool": "TheClique",
+      "tool_desc": "API for TheClique company",
+      "api_name": "Top Headlines",
+      "api_desc": "This endpoint provides live top and breaking headlines for a country, specific category in a country, single source, or multiple sources. You can also search with keywords. Articles are sorted by the earliest date published first.\n\nThis endpoint is great for retrieving headlines for use with news tickers or similar.",
+      "required_parameters": []
+    },
+    {
+      "category": "News_Media",
+      "tool": "NewsData",
+      "tool_desc": "Best News API To Search And Collect Worldwide News",
+      "api_name": "news",
+      "api_desc": "The latest news endpoint provides access to the latest and breaking news for a country, for a specific category in a country, or for a single or multiple domains. The news articles are sorted by the publish date.\n\nRetrieving the latest news allows you to build experience such as showcasing the latest news, breaking news tickers and analyzing News to better understand their content.",
+      "required_parameters": []
+    },
+    {
+      "category": "News_Media",
+      "tool": "Google News",
+      "tool_desc": "Provide real-time news and articles sourced from Google News.",
+      "api_name": "World",
+      "api_desc": "This endpoint is used to get world news from Google News. The optional parameter that can be used is \"lr\" to determine the region"
+    }
+  ],
+  [
+    {
+      "category": "Location",
+      "tool": "IP Geolocation Find IP Location and IP Info",
+      "tool_desc": "IP Geolocation API allows developers to get geolocation information for a given IP address.",
+      "api_name": "Get IP Geolocation",
+      "api_desc": "This endpoint returns geolocation and other useful points from an IP Address. If IP address is provided as query parameter, geolocation is performed on that IP address. If IP address is left empty, geolocation data of client IP is returned.",
+      "required_parameters": []
+    },
+    {
+      "category": "Location",
+      "tool": "IP Geolocalization API",
+      "tool_desc": "IP Geolocalization API is a powerful tool for determining the location of an IP address.",
+      "api_name": "IP Address Lookup",
+      "api_desc": "When an IP address is provided this API will retrieve all possible data referred to its location.",
+      "required_parameters": [
+        {
+          "name": "ip",
+          "type": "STRING",
+          "description": "IP to look up",
+          "default": "98.207.254.136"
+        }
+      ]
+    },
+    {
+      "category": "Advertising",
+      "tool": "Free IP Geolocation",
+      "tool_desc": "A Free IP Geolocation service",
+      "api_name": "Any IP",
+      "api_desc": "Get the location, city, country, lat/long etc of any IP address",
+      "required_parameters": [
+        {
+          "name": "ip",
+          "type": "STRING",
+          "description": "",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "category": "Location",
+      "tool": "IP Address Geolocation",
+      "tool_desc": "Complete free IP address geolocation API",
+      "api_name": "IP Geolocation",
+      "api_desc": "Returns the geolocation of the given IP address",
+      "required_parameters": [
+        {
+          "name": "ip",
+          "type": "string",
+          "description": "",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "category": "Data",
+      "tool": "IP Geo Location - Find IP Location and Details",
+      "tool_desc": "API returns location data such as country, city, latitude, longitude, timezone, asn, currency, security data for IPv4 and IPv6 addresses in JSON formats.",
+      "api_name": "iplocation",
+      "api_desc": "Provides Geo information for the given IP.",
+      "required_parameters": [
+        {
+          "name": "ip",
+          "type": "STRING",
+          "description": "",
+          "default": "182.182.36.128"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "category": "Data",
+      "tool": "Domain WHOIS Lookup API",
+      "tool_desc": "The WHOIS Lookup API is a powerful, RESTful API that allows you to retrieve WHOIS information for any registered domain name.",
+      "api_name": "domain_name",
+      "api_desc": "Please provide the domain name for which you would like to retrieve WHOIS details.",
+      "required_parameters": [
+        {
+          "name": "domain_name",
+          "type": "STRING",
+          "description": "",
+          "default": "google.com"
+        }
+      ]
+    },
+    {
+      "category": "Tools",
+      "tool": "Whois by API-Ninjas",
+      "tool_desc": "Look up domain registry information using WHOIS protocol for any domain.",
+      "api_name": "/v1/whois",
+      "api_desc": "API Ninjas Whois API endpoint. Returns domain registration details (e.g. registrar, contact information, expiration date, name servers) about a particular domain name.",
+      "required_parameters": [
+        {
+          "name": "domain",
+          "type": "STRING",
+          "description": "valid domain to check.",
+          "default": "example.com"
+        }
+      ]
+    },
+    {
+      "category": "Monitoring",
+      "tool": "Newly Registered Domains",
+      "tool_desc": "Newly Registered Domains API (v1) lets you check which domains have been added.",
+      "api_name": "whois",
+      "api_desc": "REST API to WhoIS lookup data",
+      "required_parameters": [
+        {
+          "name": "domain",
+          "type": "STRING",
+          "description": "domain name of WhoIS to be searched",
+          "default": "peekdomain.com"
+        }
+      ]
+    },
+    {
+      "category": "Data",
+      "tool": "Domain Info",
+      "tool_desc": "This API returns informations on any domain online.",
+      "api_name": "Check domain info",
+      "api_desc": "This endpoint returns the domain information.",
+      "required_parameters": [
+        {
+          "name": "domain",
+          "type": "string",
+          "description": "",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "category": "Database",
+      "tool": "WHOIS v2",
+      "tool_desc": "WHOIS API (v2) returns well-parsed WHOIS records with fields in XML and JSON formats for any IPv4, IPv6 address, domain name, or email.",
+      "api_name": "WHOIS lookup v2",
+      "api_desc": "WHOIS lookup in JSON or XML, ver. 2"
+    }
+  ],
+  [
+    {
+      "category": "Email",
+      "tool": "Validate Email",
+      "tool_desc": "“Validate Email” before you send.",
+      "api_name": "Validate Email",
+      "api_desc": "“Validate Email” API Validates single email or bulk email addresses.\n\nIt's simple REST API to Verify and Validate single email or bulk email addresses.",
+      "required_parameters": [
+        {
+          "name": "email",
+          "type": "STRING",
+          "description": "",
+          "default": "hello@apitier.com"
+        }
+      ]
+    },
+    {
+      "category": "Tools",
+      "tool": "Email Validator",
+      "tool_desc": "This API is a fast and robust email address syntax and deliverability validator.",
+      "api_name": "/email-validator/validate",
+      "api_desc": "Validate email address. Key features:\n1. Checks that an email address has the correct syntax\n1. Gives friendly error messages when validation fails.\n1. Checks deliverability of an email address.\n1. Supports internationalized domain names and \n1. Normalizes email addresses",
+      "required_parameters": [
+        {
+          "name": "email",
+          "type": "STRING",
+          "description": "",
+          "default": "me@google.com"
+        }
+      ]
+    },
+    {
+      "category": "Tools",
+      "tool": "Email Verifier",
+      "tool_desc": "A simple API to verify email addresses in making sure they are valid and real, for ensuring you are sending emails to actual people!",
+      "api_name": "Verify Email",
+      "api_desc": "To verify a single email address",
+      "required_parameters": [
+        {
+          "name": "email",
+          "type": "STRING",
+          "description": "",
+          "default": "abc1@gmail.com"
+        }
+      ]
+    },
+    {
+      "category": "Business",
+      "tool": "Email Validation and Verification",
+      "tool_desc": "Improve your delivery rate and clean your email lists with our industry-leading email verification API",
+      "api_name": "Email Validation API",
+      "api_desc": "Email Validation and Verification API requires only a single email.\nChecking a misspelled email.\nChecking a malformed email.",
+      "required_parameters": [
+        {
+          "name": "email",
+          "type": "STRING",
+          "description": "The email address to validate.",
+          "default": "rapidapi@gmail.com"
+        }
+      ]
+    },
+    {
+      "category": "Communication",
+      "tool": "Email Checker and Validator",
+      "tool_desc": "Use this API to validate the email addresses for your business.",
+      "api_name": "Check Email",
+      "api_desc": "Just paste the Email Address you want to validate and wait for the results",
+      "required_parameters": [
+        {
+          "name": "email",
+          "type": "string",
+          "description": "The email address to validate",
+          "default": "marod29733@lubde.com"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "category": "Text_Analysis",
+      "tool": "Sentiment Analysis Service",
+      "tool_desc": "Enter a block of text to detect the sentiment and details around it (positive or negative).",
+      "api_name": "Analyze Text",
+      "api_desc": "Determine the sentiment of a given body of text",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "",
+          "default": "The weather today is fantastic! I am in a very happy mood, so this text is likely positive"
+        }
+      ]
+    },
+    {
+      "category": "Text_Analysis",
+      "tool": "Multi-lingual Sentiment Analysis",
+      "tool_desc": "Multi-lingual Sentimel Analysis uses computational linguistics and text mining to automatically determine the sentiment or affective nature of the text being analyzed in multiple language support.",
+      "api_name": "Sentiment Analysis",
+      "api_desc": "Multi-lingual Sentiment Analysis parameter {lang} is optional, we can detect the language but you can define it for better result and accurate",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "",
+          "default": "numero uno"
+        }
+      ]
+    },
+    {
+      "category": "Artificial_Intelligence_Machine_Learning",
+      "tool": "TextSentAI  -  AI powered Text Sentiment Analyzer ",
+      "tool_desc": "📊 Looking for a powerful AI-driven API to analyze the sentiment of your text data?",
+      "api_name": "TextSentAI API 📊",
+      "api_desc": "Our API can analyze text in over 140 languages",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "",
+          "default": "Support over 140 languages, try it now :)"
+        }
+      ]
+    },
+    {
+      "category": "Text_Analysis",
+      "tool": "Sentiment by API-Ninjas",
+      "tool_desc": "State-of-the-art text sentiment analysis.",
+      "api_name": "/v1/sentiment",
+      "api_desc": "Returns sentiment analysis score and overall sentiment for a given block of text.",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "query text for sentiment analysis. Maximum 2000 characters.",
+          "default": "It's a wonderful day!"
+        }
+      ]
+    },
+    {
+      "category": "Text_Analysis",
+      "tool": "Sentiment Analysis_v12",
+      "tool_desc": "Luminous Engineering Sentiment Analysis",
+      "api_name": "Text Analysis",
+      "api_desc": "Analyzes text using  VADER (Valence Aware Dictionary and sEntiment Reasoner)\n\nProvide  a string and the API will output combined, positive, neutral, and negative scores based on the output specified.",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "",
+          "default": "Having a good day."
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "category": "Text_Analysis",
+      "tool": "What's Language",
+      "tool_desc": "Detect the language of a given text",
+      "api_name": "LanguageDetection",
+      "api_desc": "Detect the language of a given text and return the detected language code",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "",
+          "default": "How to Identify the Language of any Text"
+        }
+      ]
+    },
+    {
+      "category": "Text_Analysis",
+      "tool": "Quick Language Detector",
+      "tool_desc": "Feed this API a few sentences and have it determine what language it is with a confidence score.",
+      "api_name": "Detect Language",
+      "api_desc": "Feed this API a few sentences and have it determine what language it is with a confidence score",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "",
+          "default": "Cela peut identifier 52 langues humaines à partir d'échantillons de texte et renvoyer des scores de confiance pour chaque"
+        }
+      ]
+    },
+    {
+      "category": "Text_Analysis",
+      "tool": "Text Language by API-Ninjas",
+      "tool_desc": "Detect the language from any input text.",
+      "api_name": "/v1/textlanguage",
+      "api_desc": "API Ninjas Text Language API endpoint",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "",
+          "default": "hello world!"
+        }
+      ]
+    },
+    {
+      "category": "Translation",
+      "tool": "Translate_v3",
+      "tool_desc": "Easy and reliable Machine Translation  and Language Detection",
+      "api_name": "Fast Language Detection",
+      "api_desc": "This endpoint will return the Language of the Text",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "",
+          "default": "this is accurate and it can improve if it's longer"
+        }
+      ]
+    },
+    {
+      "category": "Translation",
+      "tool": "Translate All Languages",
+      "tool_desc": "Translate All Language -  Text Translator\n\n100x cheaper than Google Translate.",
+      "api_name": "Detect",
+      "api_desc": "Detects the language of text within a request."
+    }
+  ],
+  [
+    {
+      "category": "Tools",
+      "tool": "QR Code API_v33",
+      "tool_desc": "This Api takes URL, or string and returns the QR code image",
+      "api_name": "QR code image",
+      "api_desc": "This Api takes URL, or string and returns the QR code image",
+      "required_parameters": []
+    },
+    {
+      "category": "Tools",
+      "tool": "QR Code API_v67",
+      "tool_desc": "This API takes a URL or string and returns a QR code image",
+      "api_name": "QR Code Image Copy",
+      "api_desc": "This end point takes a 'GET' request with url / string as a parameter and returns QR code image.",
+      "required_parameters": [
+        {
+          "name": "url",
+          "type": "STRING",
+          "description": "",
+          "default": "www.duckduckgo.com"
+        }
+      ]
+    },
+    {
+      "category": "Tools",
+      "tool": "QR Code Generator Pro",
+      "tool_desc": "Easily generate QR codes for urls, and receive a downloadable png image file",
+      "api_name": "Generate QR Code",
+      "api_desc": "Easily convert any URL into a QR code that can be downloaded and printed.",
+      "required_parameters": []
+    },
+    {
+      "category": "Tools",
+      "tool": "QR Code Generator_v14",
+      "tool_desc": "Simple And Lightweight Api to Generate QR Code From Text",
+      "api_name": "Generate QR Code",
+      "api_desc": "Simply Provide Url or Text in url parameter.",
+      "required_parameters": [
+        {
+          "name": "url",
+          "type": "STRING",
+          "description": "",
+          "default": "https://farhanaliofficial.github.io"
+        }
+      ]
+    },
+    {
+      "category": "Tools",
+      "tool": "QR Code API Generator",
+      "tool_desc": "This API takes input as url to generate image based QR code",
+      "api_name": "QR CODE GENERATOR",
+      "api_desc": "This endppint https://qrcodegenerator-47jz.onrender.com/qrcode/download/{text} will take input from user , you can replace {text} with anything and it will generate response as QR code Image.",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "string",
+          "description": "",
+          "default": "sachin"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "category": "Weather",
+      "tool": "WeatherAPI.com",
+      "tool_desc": "WeatherAPI.com is a powerful fully managed free weather and geolocation API provider that provides extensive APIs that range from the weather forecast, historical weather, future weather, weather alerts, air quality data, IP lookup, and astronomy through to sports, time zone, and geolocation.",
+      "api_name": "Forecast Weather API",
+      "api_desc": "Forecast weather API method returns upto next 14 day weather forecast and weather alert as json. It contains astronomy data, day weather forecast and hourly interval weather information for a given city.",
+      "required_parameters": [
+        {
+          "name": "q",
+          "type": "STRING",
+          "description": "Query parameter based on which data is sent back. It could be following:\n\nLatitude and Longitude (Decimal degree) e.g: q=48.8567,2.3508\ncity name e.g.: q=Paris\nUS zip e.g.: q=10001\nUK postcode e.g: q=SW1\nCanada postal code e.g: q=G2J\nmetar:<metar code> e.g: q=metar:EGLL\niata:<3 digit airport code> e.g: q=iata:DXB\nauto:ip IP lookup e.g: q=auto:ip\nIP address (IPv4 and IPv6 supported) e.g: q=100.0.0.1",
+          "default": "London"
+        }
+      ]
+    },
+    {
+      "category": "Weather",
+      "tool": "Forecast",
+      "tool_desc": "Get 16 days weather forecast data - worldwide - geographical coordinates...",
+      "api_name": "RapidApiGetForecastSummaryByCoordinates",
+      "api_desc": "Get Forecast summary information.",
+      "required_parameters": [
+        {
+          "name": "longitude",
+          "type": "NUMBER",
+          "description": "Longitude",
+          "default": 10.87152
+        },
+        {
+          "name": "latitude",
+          "type": "NUMBER",
+          "description": "Latitude",
+          "default": 46.95828
+        }
+      ]
+    },
+    {
+      "category": "Weather",
+      "tool": "Weather with AI",
+      "tool_desc": "Global weather forecast powered by Artificial Intelligence.",
+      "api_name": "Get Weather",
+      "api_desc": "Return weather in current, hourly and daily info.",
+      "required_parameters": [
+        {
+          "name": "version",
+          "type": "string",
+          "description": "",
+          "default": "v1"
+        },
+        {
+          "name": "lng",
+          "type": "NUMBER",
+          "description": "Geographical coordinates of the location (longitude)",
+          "default": "-73.999257"
+        },
+        {
+          "name": "lat",
+          "type": "NUMBER",
+          "description": "Geographical coordinates of the location (latitude)",
+          "default": "40.723558"
+        }
+      ]
+    },
+    {
+      "category": "Weather",
+      "tool": "World Weather Online API",
+      "tool_desc": "Free Weather API and Geo API for worldwide locations, hourly weather, 14-day weather, historical weather, and Marine and Ski weather API for developers and businesses in XML and JSON format.",
+      "api_name": "Local Weather API",
+      "api_desc": "The Local Weather REST API (also called City and Town Weather API) method allows you to access current weather conditions, the next 14 days of accurate and reliable weather forecast, Air Quality Data, Weather Alerts and Monthly Climate Averages for over 4 million cities and towns worldwide. The Local Weather API returns weather elements such as temperature, precipitation (rainfall), weather description, weather icon, wind speed, etc.",
+      "required_parameters": [
+        {
+          "name": "q",
+          "type": "STRING",
+          "description": "",
+          "default": "40.73,-73"
+        }
+      ]
+    },
+    {
+      "category": "Data",
+      "tool": "Weather",
+      "tool_desc": "Current weather data API, and Weather forecast API - Basic access to the Weatherbit.io Weather API.",
+      "api_name": "16 Day Forecast",
+      "api_desc": "Returns a 16 day (daily) forecast",
+      "required_parameters": [
+        {
+          "name": "lon",
+          "type": "NUMBER",
+          "description": "Longitude",
+          "default": "-78.5"
+        },
+        {
+          "name": "lat",
+          "type": "NUMBER",
+          "description": "Latitude",
+          "default": "38.5"
+        }
+      ]
+    }
+  ]
+]

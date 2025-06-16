@@ -64,6 +64,7 @@ class rapidapi_wrapper(base_env):
         self.service_url = "http://8.130.32.149:8080/rapidapi"
         self.max_observation_length = args.max_observation_length
         self.observ_compress_method = args.observ_compress_method
+        self.test_bias = args.test_bias
         self.retriever = retriever
         self.process_id = process_id
 
@@ -262,7 +263,7 @@ You have access of the following tools:\n'''
 
                 templete["parameters"]["properties"][name] = prompt
                 templete["parameters"]["optional"].append(name)
-
+        
         return templete, api_json["category_name"],  pure_api_name
 
     def check_success(self):
@@ -445,7 +446,7 @@ class pipeline_runner:
     def method_converter(self, backbone_model, openai_key, method, env, process_id, single_chain_max_step=12, max_query_count=60, callbacks=None):
         if callbacks is None: callbacks = []
         if backbone_model == "chatgpt_function":
-            model = "gpt-3.5-turbo-16k-0613"
+            model = "gpt-3.5-turbo"
             llm_forward = ChatGPTFunction(model=model, openai_key=openai_key)
         elif backbone_model == "davinci":
             model = "text-davinci-003"
@@ -457,10 +458,12 @@ class pipeline_runner:
         if method.startswith("CoT"):
             passat = int(method.split("@")[-1])
             chain = single_chain(llm=llm_forward, io_func=env,process_id=process_id)
+            print("starting chain")
             result = chain.start(
                                 pass_at=passat,
                                 single_chain_max_step=single_chain_max_step,
                                 answer=1)
+            print("chain end")
         elif method.startswith("DFS"):
             pattern = r".+_w(\d+)"
             re_result = re.match(pattern,method)
@@ -515,6 +518,7 @@ class pipeline_runner:
             max_query_count=200,
             callbacks=callbacks
         )
+
         [callback.on_request_end(
             chain=chain.terminal_node[0].messages,
             outputs=chain.terminal_node[0].description,

@@ -1,0 +1,661 @@
+[
+  [
+    {
+      "category": "Weather",
+      "tool": "Weather API - By Any City",
+      "tool_desc": "The API provides current weather information for a specific city worldwide.",
+      "api_name": "Get Weather Updates",
+      "api_desc": "This endpoint get all necessary weather information",
+      "required_parameters": [
+        {
+          "name": "city",
+          "type": "string",
+          "description": "",
+          "default": "London"
+        }
+      ]
+    },
+    {
+      "category": "Weather",
+      "tool": "WeatherAPI.com",
+      "tool_desc": "WeatherAPI.com is a powerful fully managed free weather and geolocation API provider that provides extensive APIs that range from the weather forecast, historical weather, future weather, weather alerts, air quality data, IP lookup, and astronomy through to sports, time zone, and geolocation.",
+      "api_name": "Realtime Weather API",
+      "api_desc": "Current weather or realtime weather API method allows a user to get up to date current weather information in json and xml. The data is returned as a Current Object.",
+      "required_parameters": [
+        {
+          "name": "q",
+          "type": "STRING",
+          "description": "Query parameter based on which data is sent back. It could be following:  Latitude and Longitude (Decimal degree) e.g: q=48.8567,2.3508 city name e.g.: q=Paris US zip e.g.: q=10001 UK postcode e.g: q=SW1 Canada postal code e.g: q=G2J metar:<metar code> e.g: q=metar:EGLL iata:<3 digit airport code> e.g: q=iata:DXB auto:ip IP lookup e.g: q=auto:ip IP address (IPv4 and IPv6 supported) e.g: q=100.0.0.1",
+          "default": "53.1,-0.13"
+        }
+      ]
+    },
+    {
+      "category": "Weather",
+      "tool": "The Weather API",
+      "tool_desc": "Get the updated and hyper-accurate weather/aqi information of any city.",
+      "api_name": "weather report",
+      "api_desc": "Gives weather report of a particular city.",
+      "required_parameters": [
+        {
+          "name": "cityName",
+          "type": "string",
+          "description": "",
+          "default": "mumbai"
+        }
+      ]
+    },
+    {
+      "category": "Weather",
+      "tool": "Vision Weather Map",
+      "tool_desc": "Obtain weather forecast and forecast for diverse cities.",
+      "api_name": "Current Weather Data",
+      "api_desc": "With this type of request you can get weather data anywhere on earth. The current weather data is updated online based on data from more than 40,000 weather stations.",
+      "required_parameters": [
+        {
+          "name": "q",
+          "type": "STRING",
+          "description": "\nuse this parameter when searching for a city. Do not use with other parameters",
+          "default": "dallas,us"
+        }
+      ]
+    },
+    {
+      "category": "Weather",
+      "tool": "World Weather Online API",
+      "tool_desc": "Free Weather API and Geo API for worldwide locations, hourly weather, 14-day weather, historical weather, and Marine and Ski weather API for developers and businesses in XML and JSON format.",
+      "api_name": "Local Weather API",
+      "api_desc": "The Local Weather REST API (also called City and Town Weather API) method allows you to access current weather conditions, the next 14 days of accurate and reliable weather forecast, Air Quality Data, Weather Alerts and Monthly Climate Averages for over 4 million cities and towns worldwide. The Local Weather API returns weather elements such as temperature, precipitation (rainfall), weather description, weather icon, wind speed, etc."
+    }
+  ],
+  [
+    {
+      "category": "Finance",
+      "tool": "Currency Conversion and Exchange Rates",
+      "tool_desc": "Simple reliable API for current and historical foreign exchange (forex) currency rates.",
+      "api_name": "Convert",
+      "api_desc": "In addition to providing converstion rates, our API provides a dedicated endpoint to easily do conversion on a specific amount of the currency.",
+      "required_parameters": [
+        {
+          "name": "to",
+          "type": "STRING",
+          "description": "The three-letter currency code of the currency you would like to convert to.",
+          "default": "EUR"
+        },
+        {
+          "name": "amount",
+          "type": "STRING",
+          "description": "The amount to be converted.",
+          "default": "750"
+        },
+        {
+          "name": "from",
+          "type": "STRING",
+          "description": "The three-letter currency code of the currency you would like to convert from.",
+          "default": "USD"
+        }
+      ]
+    },
+    {
+      "category": "Finance",
+      "tool": "Exchanger Currency Rates Provider",
+      "tool_desc": "Get hourly updated rates for more than 150 currencies since 1999",
+      "api_name": "Convert",
+      "api_desc": "This API with a separate currency conversion endpoint, which can be used to convert any amount from one currency to another. In order to convert currencies, please use the API's convert endpoint, append the from and to parameters and set them to your preferred base and target currency codes.",
+      "required_parameters": [
+        {
+          "name": "to",
+          "type": "STRING",
+          "description": "",
+          "default": "usd"
+        },
+        {
+          "name": "from",
+          "type": "STRING",
+          "description": "",
+          "default": "eur"
+        },
+        {
+          "name": "amount",
+          "type": "STRING",
+          "description": "",
+          "default": "11.34"
+        }
+      ]
+    },
+    {
+      "category": "Finance",
+      "tool": "Currency_v2",
+      "tool_desc": "Fastest Currency API",
+      "api_name": "Exchange Rates",
+      "api_desc": "Convert Currency value from and to.",
+      "required_parameters": []
+    },
+    {
+      "category": "Data",
+      "tool": "Currency Exchange",
+      "tool_desc": "Live currency and foreign exchange rates by specifying source and destination quotes and optionally amount to calculate.",
+      "api_name": "exchange",
+      "api_desc": "Get Currency Exchange by specifying the quotes of source (from) and destination (to), and optionally the source amount to calculate which to get the destination amount, by default the source amount will be 1.",
+      "required_parameters": [
+        {
+          "name": "from",
+          "type": "STRING",
+          "description": "Source Quote",
+          "default": "SGD"
+        },
+        {
+          "name": "to",
+          "type": "STRING",
+          "description": "Destination Quote",
+          "default": "MYR"
+        }
+      ]
+    },
+    {
+      "category": "Finance",
+      "tool": "Currency Exchange Fx",
+      "tool_desc": "Get the latest Currency rates for 100+ currencies.",
+      "api_name": "Converter",
+      "api_desc": "This endpoint will return the converted amount in a specified currency."
+    }
+  ],
+  [
+    {
+      "category": "Translation",
+      "tool": "Translate All Languages",
+      "tool_desc": "Translate All Language -  Text Translator\n\n100x cheaper than Google Translate.",
+      "api_name": "Translate",
+      "api_desc": "Translates input text, returning translated text",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "The input text to translate.",
+          "default": "If you don't know what language the text is written in, our API will detect the language of the original request."
+        },
+        {
+          "name": "toLang",
+          "type": "STRING",
+          "description": "The language to use for translation of the input text, set to one of the language codes listed in the overview tab",
+          "default": "fr"
+        }
+      ]
+    },
+    {
+      "category": "Translation",
+      "tool": "Bidirectional Text Language Translation",
+      "tool_desc": "Per request pricing, not character based.",
+      "api_name": "Translate",
+      "api_desc": "takes source text, from language and to language and provides results in a very simple object.\nLanguages specified are in two character ISO codes.\nif lang_from is not specified it will be auto detected.",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "",
+          "default": "Hello how are you doing?"
+        },
+        {
+          "name": "lang_to",
+          "type": "STRING",
+          "description": "",
+          "default": "de"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "category": "Data",
+      "tool": "Real-Time News Data",
+      "tool_desc": "Extremely Fast and Simple API to get top news globally or per topic and search for news by query and geographic area in real-time.",
+      "api_name": "Top Headlines",
+      "api_desc": "Get the latest news headlines/top stories for a country.",
+      "required_parameters": []
+    },
+    {
+      "category": "News_Media",
+      "tool": "Newscatcher",
+      "tool_desc": "API to find news articles by any topic, country, language, website, or keyword",
+      "api_name": "/v1/latest_headlines",
+      "api_desc": "Always returns the latest 100 articles for any `topic`, `country`, `lang`, or any of those combined",
+      "required_parameters": []
+    },
+    {
+      "category": "Data",
+      "tool": "TheClique",
+      "tool_desc": "API for TheClique company",
+      "api_name": "Top Headlines",
+      "api_desc": "This endpoint provides live top and breaking headlines for a country, specific category in a country, single source, or multiple sources. You can also search with keywords. Articles are sorted by the earliest date published first.\n\nThis endpoint is great for retrieving headlines for use with news tickers or similar.",
+      "required_parameters": []
+    },
+    {
+      "category": "News_Media",
+      "tool": "NewsData",
+      "tool_desc": "Best News API To Search And Collect Worldwide News",
+      "api_name": "news",
+      "api_desc": "The latest news endpoint provides access to the latest and breaking news for a country, for a specific category in a country, or for a single or multiple domains. The news articles are sorted by the publish date.\n\nRetrieving the latest news allows you to build experience such as showcasing the latest news, breaking news tickers and analyzing News to better understand their content.",
+      "required_parameters": []
+    },
+    {
+      "category": "News_Media",
+      "tool": "Google News",
+      "tool_desc": "Provide real-time news and articles sourced from Google News.",
+      "api_name": "World",
+      "api_desc": "This endpoint is used to get world news from Google News. The optional parameter that can be used is \"lr\" to determine the region"
+    }
+  ],
+  [
+    {
+      "category": "Weather",
+      "tool": "WeatherAPI.com",
+      "tool_desc": "WeatherAPI.com is a powerful fully managed free weather and geolocation API provider that provides extensive APIs that range from the weather forecast, historical weather, future weather, weather alerts, air quality data, IP lookup, and astronomy through to sports, time zone, and geolocation.",
+      "api_name": "Forecast Weather API",
+      "api_desc": "Forecast weather API method returns upto next 14 day weather forecast and weather alert as json. It contains astronomy data, day weather forecast and hourly interval weather information for a given city.",
+      "required_parameters": [
+        {
+          "name": "q",
+          "type": "STRING",
+          "description": "Query parameter based on which data is sent back. It could be following:\n\nLatitude and Longitude (Decimal degree) e.g: q=48.8567,2.3508\ncity name e.g.: q=Paris\nUS zip e.g.: q=10001\nUK postcode e.g: q=SW1\nCanada postal code e.g: q=G2J\nmetar:<metar code> e.g: q=metar:EGLL\niata:<3 digit airport code> e.g: q=iata:DXB\nauto:ip IP lookup e.g: q=auto:ip\nIP address (IPv4 and IPv6 supported) e.g: q=100.0.0.1",
+          "default": "London"
+        }
+      ]
+    },
+    {
+      "category": "Weather",
+      "tool": "Forecast",
+      "tool_desc": "Get 16 days weather forecast data - worldwide - geographical coordinates...",
+      "api_name": "RapidApiGetForecastSummaryByCoordinates",
+      "api_desc": "Get Forecast summary information.",
+      "required_parameters": [
+        {
+          "name": "longitude",
+          "type": "NUMBER",
+          "description": "Longitude",
+          "default": 10.87152
+        },
+        {
+          "name": "latitude",
+          "type": "NUMBER",
+          "description": "Latitude",
+          "default": 46.95828
+        }
+      ]
+    },
+    {
+      "category": "Weather",
+      "tool": "Weather with AI",
+      "tool_desc": "Global weather forecast powered by Artificial Intelligence.",
+      "api_name": "Get Weather",
+      "api_desc": "Return weather in current, hourly and daily info.",
+      "required_parameters": [
+        {
+          "name": "version",
+          "type": "string",
+          "description": "",
+          "default": "v1"
+        },
+        {
+          "name": "lng",
+          "type": "NUMBER",
+          "description": "Geographical coordinates of the location (longitude)",
+          "default": "-73.999257"
+        },
+        {
+          "name": "lat",
+          "type": "NUMBER",
+          "description": "Geographical coordinates of the location (latitude)",
+          "default": "40.723558"
+        }
+      ]
+    },
+    {
+      "category": "Weather",
+      "tool": "World Weather Online API",
+      "tool_desc": "Free Weather API and Geo API for worldwide locations, hourly weather, 14-day weather, historical weather, and Marine and Ski weather API for developers and businesses in XML and JSON format.",
+      "api_name": "Local Weather API",
+      "api_desc": "The Local Weather REST API (also called City and Town Weather API) method allows you to access current weather conditions, the next 14 days of accurate and reliable weather forecast, Air Quality Data, Weather Alerts and Monthly Climate Averages for over 4 million cities and towns worldwide. The Local Weather API returns weather elements such as temperature, precipitation (rainfall), weather description, weather icon, wind speed, etc.",
+      "required_parameters": [
+        {
+          "name": "q",
+          "type": "STRING",
+          "description": "",
+          "default": "40.73,-73"
+        }
+      ]
+    },
+    {
+      "category": "Data",
+      "tool": "Weather",
+      "tool_desc": "Current weather data API, and Weather forecast API - Basic access to the Weatherbit.io Weather API.",
+      "api_name": "16 Day Forecast",
+      "api_desc": "Returns a 16 day (daily) forecast",
+      "required_parameters": [
+        {
+          "name": "lon",
+          "type": "NUMBER",
+          "description": "Longitude",
+          "default": "-78.5"
+        },
+        {
+          "name": "lat",
+          "type": "NUMBER",
+          "description": "Latitude",
+          "default": "38.5"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "category": "Mapping",
+      "tool": "Fast Routing",
+      "tool_desc": "Fast Routing API including turn-by-turn directions with worldwide coverage and high availability.",
+      "api_name": "Get Route",
+      "api_desc": "Get a driving route for cars (with turn-by-turn directions) by submitting (at least) a start- and endpoint.",
+      "required_parameters": [
+        {
+          "name": "coordinates",
+          "type": "string",
+          "description": "At least two coordinates as start and endpoint of route, defined by longitude and latitude.\nRequired format: {longitude},{latitude};{longitude},{latitude}\nAlternatively a polyline or polyline6 as input allowed.",
+          "default": "-74.0060152,40.7127281;-77.0501718249326,38.88933725"
+        }
+      ]
+    },
+    {
+      "category": "Location",
+      "tool": "mymappi",
+      "tool_desc": "REST Location APIs such as Geocoding, Roads, Directions and Places.",
+      "api_name": "Route calculation",
+      "api_desc": "Calculates a route between an origin and a destination, possibly passing through many waypoints. It takes into consideration several configuration options in order to customize the response.",
+      "required_parameters": [
+        {
+          "name": "dest",
+          "type": "STRING",
+          "description": "",
+          "default": "40.428924,-3.651969"
+        },
+        {
+          "name": "profile",
+          "type": "string",
+          "description": "",
+          "default": "car"
+        },
+        {
+          "name": "apikey",
+          "type": "STRING",
+          "description": "",
+          "default": "YOUR_API_KEY"
+        },
+        {
+          "name": "orig",
+          "type": "STRING",
+          "description": "",
+          "default": "40.409246,-3.677144"
+        }
+      ]
+    },
+    {
+      "category": "Transportation",
+      "tool": "Driving Directions",
+      "tool_desc": "Get driving directions and best routes from an origin to a destination in real-time.",
+      "api_name": "Get Directions",
+      "api_desc": "Get driving directions from an origin to a destination.",
+      "required_parameters": []
+    },
+    {
+      "category": "Location",
+      "tool": "Woosmap",
+      "tool_desc": "Location-based Search Platform",
+      "api_name": "getRoute",
+      "api_desc": "Get distance, duration and path (as a polyline) for a pair of origin and destination, based on the recommended route between those two points for a specified travel mode.",
+      "required_parameters": [
+        {
+          "name": "origin",
+          "type": "STRING",
+          "description": "The starting point for the route. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.\n",
+          "default": "48.709,2.403"
+        },
+        {
+          "name": "destination",
+          "type": "STRING",
+          "description": "The ending point for the route. It should be supplied in the form of latitude/longitude coordinates. Ensure that no space exists between the latitude and longitude values.\n",
+          "default": "48.768,2.338"
+        }
+      ]
+    },
+    {
+      "category": "Location",
+      "tool": "Nigeria API",
+      "tool_desc": "Welcome to the Nigeria API!",
+      "api_name": "Directions Between 2 Locations",
+      "api_desc": "This endpoint returns information about the route between two locations in terms of distance, duration, and steps.\n\nBelow Example: **Directions from Kaduna to Maiduguri**",
+      "required_parameters": [
+        {
+          "name": "end_lat",
+          "type": "NUMBER",
+          "description": "Latitude of the ending point (required)",
+          "default": "11.846"
+        },
+        {
+          "name": "start_lat",
+          "type": "NUMBER",
+          "description": "Latitude of the starting point (required)",
+          "default": "10.516"
+        },
+        {
+          "name": "start_lon",
+          "type": "NUMBER",
+          "description": "Longitude of the starting point (required)",
+          "default": "7.433"
+        },
+        {
+          "name": "end_lon",
+          "type": "NUMBER",
+          "description": "Longitude of the ending point (required)",
+          "default": "13.160"
+        }
+      ]
+    },
+    {
+      "category": "Mapping",
+      "tool": "LocationIQ",
+      "tool_desc": "Affordable geocoding, routing and map tile APIs.",
+      "api_name": "Directions",
+      "api_desc": "Finds the fastest route between coordinates in the supplied order.",
+      "required_parameters": [
+        {
+          "name": "coordinates",
+          "type": "STRING",
+          "description": "String of format {longitude},{latitude};{longitude},{latitude}[;{longitude},{latitude} ...] or polyline({polyline}) or polyline6({polyline6}). polyline follows Google's polyline format with precision 5",
+          "default": "\"-0.16102,51.523854;-0.15797,51.52326;-0.161593,51.522550\""
+        }
+      ]
+    },
+    {
+      "category": "Location",
+      "tool": "Ghana API",
+      "tool_desc": "Welcome to the Ghanaian Location Lookup API!",
+      "api_name": "Directions Between 2 Locations",
+      "api_desc": "This endpoint returns information about the route between two locations in terms of distance, duration, and steps.\n\nBelow Example: **Directions from Kumasi to Accra**",
+      "required_parameters": [
+        {
+          "name": "end_lon",
+          "type": "NUMBER",
+          "description": "Longitude of the ending point (required)",
+          "default": "-0.1870"
+        },
+        {
+          "name": "end_lat",
+          "type": "NUMBER",
+          "description": "Latitude of the ending point (required)",
+          "default": "5.6037"
+        },
+        {
+          "name": "start_lon",
+          "type": "NUMBER",
+          "description": "Longitude of the starting point (required)",
+          "default": "-1.6233086"
+        },
+        {
+          "name": "start_lat",
+          "type": "NUMBER",
+          "description": "Latitude of the starting point (required)",
+          "default": "6.6985605"
+        }
+      ]
+    },
+    {
+      "category": "Mapping",
+      "tool": "SpatialScale Route Engine",
+      "tool_desc": "The SpatialScale Route Engine provides turn by turn route directions, isochrone/travel time area generation,  and map matching web services covering Noth America.",
+      "api_name": "Get Route",
+      "api_desc": "Given a list of locations, the route service provides details about the trip,\nincluding locations, a summary with basic information about the entire trip, and a list of legs.\n\n**Locations**\n\nYou specify locations as an ordered list of two or more locations within a JSON array. Locations are visited in the order specified.\n\nA location must include a latitude and longitude in decimal degrees. The coordinates can come from many input sources, such as a GPS location, a point or a click on a map, a geocoding service, and so on.\n\nTo build a route, you need to specify two `break` locations. In addition, you can include `through`, `via` or `break_through` locations to influence the route path.\n\n<div class=\"tg-wrap\">\n<table>\n<thead>\n<tr>\n    <th style=\"min-width: 128px;\">Location parameters</th>\n    <th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n    <td><code>lat</code></td>\n    <td>\nLatitude of the location in degrees. This is assumed to be both the routing location and the display location if no <code>display_lat</code> and <code>display_lon</code> are provided.\n    </td>\n</tr>\n<tr>\n    <td><code>lon</code></td>\n    <td>\nLongitude of the location in degrees. This is assumed to be both the routing location and the display location if no <code>display_lat</code> and <code>display_lon</code> are provided.\n    </td>\n</tr>\n<tr>\n    <td><code>type</code></td>\n    <td>\n\tType of location, either <code>break</code>, <code>through</code>, <code>via</code> or <code>break_through</code>. Each type controls two characteristics: whether or not to allow a u-turn at the location and whether or not to generate guidance/legs at the location. A <code>break</code> is a location at which we allows u-turns and generate legs and arrival/departure maneuvers. A <code>through</code> location is a location at which we neither allow u-turns nor generate legs or arrival/departure maneuvers. A <code>via</code> location is a location at which we allow u-turns but do not generate legs or arrival/departure maneuvers. A <code>break_through</code> location is a location at which we do not allow u-turns but do generate legs and arrival/departure maneuvers. If no type is provided, the type is assumed to be a <code>break</code>. The types of the first and last locations are ignored and are treated as breaks.\n    </td>\n</tr>\n</tbody>\n</table>\n</div>\n\n**Costing models**\n\nThe routing service uses dynamic, run-time costing to generate the route path. The route request must include the name of the costing model and can include optional parameters available for the chosen costing model.\n\n<div class=\"tg-wrap\">\n<table>\n<thead>\n<tr>\n    <th style=\"min-width: 128px;\">Costing model</th>\n    <th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n    <td><code>auto</code></td>\n    <td>\n\tStandard costing for driving routes by car, motorcycle, truck, and so on that obeys automobile driving rules, such as access and turn restrictions. <code>Auto</code> provides a short time path (though not guaranteed to be shortest time) and uses intersection costing to minimize turns and maneuvers or road name changes. Routes also tend to favor highways and higher classification roads, such as motorways and trunks.\n    </td>\n</tr>\n<tr>\n    <td><code>bicycle</code></td>\n    <td>\n\tStandard costing for travel by bicycle, with a slight preference for using <a href=\"http://wiki.openstreetmap.org/wiki/Key:cycleway\" target=\"_blank\">cycleways</a> or roads with bicycle lanes. Bicycle routes follow regular roads when needed, but avoid roads without bicycle access.\n    </td>\n</tr>\n<tr>\n    <td><code>bus</code></td>\n    <td>\n\tStandard costing for bus routes. Bus costing inherits the auto costing behaviors, but checks for bus access on the roads.\n    </td>\n</tr>\n</tbody>\n</table>\n</div>",
+      "required_parameters": [
+        {
+          "name": "payload",
+          "type": "STRING",
+          "description": "Location information",
+          "default": "{\n    \"locations\": [\n        {\"lat\": 42.358528, \"lon\": -83.271400},\n        {\"lat\": 42.996613, \"lon\": -78.749855}\n    ],\n    \"costing\": \"auto\",\n    \"units\": \"miles\",\n    \"id\": \"my_work_route\"\n}\n"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "category": "Tools",
+      "tool": "Noly url shortener",
+      "tool_desc": "Shorten a long url to tiny link",
+      "api_name": "Shorten long link",
+      "api_desc": "Use this endpoint to shorten a URL. The response will be a JSON object with the following structure:\n\nOn success:\n{\n\"status\": 1,\n\"error\": \"\",\n\"data\": \"https://tombo.icu/57h80n\"\n}\n\nOn failure:\n{\n\"status\": 0,\n\"error\": \"This website is already shortened here.\",\n\"data\": \"https://tombo.icu/57h80n\"\n}\n\nThe \"data\" field contains the shortened URL.",
+      "required_parameters": [
+        {
+          "name": "link",
+          "type": "string",
+          "description": "",
+          "default": "www.google.com"
+        }
+      ]
+    },
+    {
+      "category": "Tools",
+      "tool": "bitly",
+      "tool_desc": "Shortens urls",
+      "api_name": "shorten",
+      "api_desc": "Given a long URL, returns a bitly short URL.",
+      "required_parameters": [
+        {
+          "name": "longUrl",
+          "type": "STRING",
+          "description": "a long URL to be shortened (example: http://betaworks.com/).",
+          "default": "http://www.mashape.com"
+        }
+      ]
+    },
+    {
+      "category": "Tools",
+      "tool": "ShortAdLink - Shorten URLs and Earn Money",
+      "tool_desc": "ShortAdLink - Earn money on shorten links.",
+      "api_name": "Shorten URL",
+      "api_desc": "Primary method for shortening URL with custom alias.",
+      "required_parameters": [
+        {
+          "name": "api",
+          "type": "STRING",
+          "description": "You can get your API key by registering on [ShortAdLink](https://shortad.link/)",
+          "default": "4e1c3d8de1b1ae400cb0defb2945ec402742cb6e"
+        },
+        {
+          "name": "url",
+          "type": "STRING",
+          "description": "Enter your long URL link that you want to shorten.",
+          "default": "yourdestinationlink.com"
+        }
+      ]
+    },
+    {
+      "category": "Tools",
+      "tool": "free url shortener",
+      "tool_desc": "Ulvis.net offers a powerful API to interact with other sites.",
+      "api_name": "http://ulvis.net/API/write/get",
+      "api_desc": "shorten url  url= url-wan't shorten &custom= your custom name& private= if wan't be public them 0 if private them 1http://ulvis.net/api/write/post",
+      "required_parameters": [
+        {
+          "name": "url",
+          "type": "STRING",
+          "description": "The url you want to shrink.",
+          "default": "url"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "category": "Communication",
+      "tool": "Validate Phone",
+      "tool_desc": "“Validate Phone” API validates national and international phone numbers, get location information about phone number.",
+      "api_name": "Validate Phone",
+      "api_desc": "“Validate Phone” API Validates single phone number or bulk phone  numbers.",
+      "required_parameters": [
+        {
+          "name": "number",
+          "type": "STRING",
+          "description": "",
+          "default": "17036971776"
+        }
+      ]
+    },
+    {
+      "category": "SMS",
+      "tool": "PhoneNumberValidate",
+      "tool_desc": "Validate any phone number in any country",
+      "api_name": "ValidateTest",
+      "api_desc": "Validate any phone number from any country. For testing purposes only.",
+      "required_parameters": [
+        {
+          "name": "number",
+          "type": "STRING",
+          "description": "1_ Option: local format (without prefix):\nExample: 94887799\n\n2_ Option: format E 164:\nRecommended: starting with symbol + followed by country prefix and number, without blank spaces\nRemark: the + symbol in a url is escaped for the text %2B leaving %2B59894887799\nExample: +59894887799 \n\n1_ Opción: formato local (sin prefijo):\nEjemplo: 94887799\n\n2_ Opción: formato E 164:\nRecomendado: comenzando con símbolo + seguido de prefijo país y número, sin espacios en blanco\nObservación: el símbolo + en una url se escapea para el texto %2B quedando %2B59894887799\nEjemplo: +59894887799",
+          "default": "+59894887766"
+        }
+      ]
+    },
+    {
+      "category": "Data",
+      "tool": "Phone",
+      "tool_desc": "Full set of cool Telephone validation functions with a coverage of more than a hundred different countries.",
+      "api_name": "analysis",
+      "api_desc": "Analyse, validate and parse the content of a given Phone Number",
+      "required_parameters": [
+        {
+          "name": "telephone",
+          "type": "STRING",
+          "description": "Full Telephone Number",
+          "default": "1 (703) 259-8585"
+        }
+      ]
+    },
+    {
+      "category": "Text_Analysis",
+      "tool": "Mobile phone validation",
+      "tool_desc": "Extract and validate mobile/cell/phone numbers from text, get extra info and various number formats.",
+      "api_name": "extract",
+      "api_desc": "Find and format/validate Phone/Cell numbers in given text.\n    \nCountry used to identify number format and highly recommended to set value in case you know it (as example your shop works only in US and clients have US cellnumbers).\n    \nUse 'country_auto' param in case you can't provide Country and service will try to guess the country :). Country recognition not very fast. Read docs to explain possible values.",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "Text containing phone(cell) numbers",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "category": "Communication",
+      "tool": "Veriphone",
+      "tool_desc": "Global phone number verification in a free, fast, reliable JSON API",
+      "api_name": "verify",
+      "api_desc": "Global phone number verification"
+    }
+  ]
+]

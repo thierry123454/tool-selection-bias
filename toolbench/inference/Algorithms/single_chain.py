@@ -80,7 +80,9 @@ class single_chain(base_search_method):
             self.tree = my_tree()
             self.tree.root.node_type = "Action Input"
             self.tree.root.io_state = deepcopy(self.io_func)
+            print("doing da chain")
             out_node = self.do_chain(self.tree.root, single_chain_max_step)
+            print("stopped doing da chain")
             self.terminal_node.append(out_node)
             self.try_list.append(self.to_json_single())
             if out_node.io_state.check_success() == 1:
@@ -133,16 +135,21 @@ class single_chain(base_search_method):
 
             if "function_call" in new_message.keys():
                 function_name = new_message["function_call"]["name"]
+
+                    
                 temp_node = tree_node()
                 temp_node.node_type = "Action"
                 temp_node.description = function_name
                 child_io_state = deepcopy(now_node.io_state)
-                
                 temp_node.io_state = child_io_state
+
                 temp_node.is_terminal = child_io_state.check_success() != 0 
                 temp_node.messages = now_node.messages.copy()
                 temp_node.father = now_node
                 now_node.children.append(temp_node)
+
+                if getattr(self.io_func, "test_bias", False):
+                    return temp_node
 
                 temp_node.print(self.process_id)
                 now_node = temp_node
@@ -153,7 +160,9 @@ class single_chain(base_search_method):
                 temp_node.description = function_input
                 child_io_state = deepcopy(now_node.io_state)
 
+                print(f"Calling TOOL!!! {now_node.description}")
                 observation, status = child_io_state.step(action_name=now_node.description, action_input=function_input)
+                print("Stopped calling tool!")
                 temp_node.observation = observation
                 temp_node.observation_code = status
 

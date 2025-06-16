@@ -1,0 +1,522 @@
+[
+  [
+    {
+      "tool": "NFTs by address",
+      "tool_desc": "Get all NFTs owned by an address at scale",
+      "name": "getNFTs_byaddress",
+      "desc": "Gets all NFTs currently owned by a given address. Unlimited, results display in 100s."
+    },
+    {
+      "tool": "NFTs Finder",
+      "tool_desc": "Locate NFTs owned by an address efficiently",
+      "name": "findNFTs_byaddress",
+      "desc": "Locates all NFTs currently owned by a specified address. Results are displayed in batches of 100."
+    },
+    {
+      "tool": "Address NFT Explorer",
+      "tool_desc": "Explore NFTs owned by an address in detail",
+      "name": "exploreNFTs_byaddress",
+      "desc": "Explores all NFTs owned by a provided address. Displayed in blocks of 100 for convenient browsing."
+    },
+    {
+      "tool": "NFTs Address Lookup",
+      "tool_desc": "Lookup NFTs owned by an address quickly",
+      "name": "lookupNFTs_byaddress",
+      "desc": "Quickly look up all NFTs owned by a given address. Results are presented in groups of 100 for ease of viewing."
+    }
+  ],
+  [
+    {
+      "tool": "Live Metal Prices",
+      "tool_desc": "Live prices for Gold, Silver, Palladium and Platinum in 160+ currencies including USD, GBP and EUR.",
+      "name": "Latest In chosen currency",
+      "desc": "Select what you need for a smaller payload! Real-time Gold, Silver, Palladium, Platinum and 160+ currency rates based on selected Currency"
+    },
+    {
+      "tool": "Metal Rates Live",
+      "tool_desc": "Real-time rates for Gold, Silver, Palladium and Platinum in 160+ currencies like USD, GBP and EUR.",
+      "name": "Currency Selected Rates",
+      "desc": "Choose the currency you want for quick updates! Live Gold, Silver, Palladium, Platinum rates and over 160 currency rates based on your selection."
+    },
+    {
+      "tool": "Precious Metals Tracker",
+      "tool_desc": "Track Gold, Silver, Palladium and Platinum prices in 160+ currencies, including USD, GBP and EUR in real-time.",
+      "name": "Selected Currency Latest Rates",
+      "desc": "Customize your payload! Real-time rates of Gold, Silver, Palladium, Platinum and 160+ currencies based on your chosen currency."
+    },
+    {
+      "tool": "Metal Prices Now",
+      "tool_desc": "Up-to-the-minute prices for Gold, Silver, Palladium and Platinum in 160+ currencies such as USD, GBP and EUR.",
+      "name": "Real-time Rates in chosen currency",
+      "desc": "Tailored payload for your needs! Live rates of Gold, Silver, Palladium, Platinum and 160+ currencies based on your selected currency."
+    }
+  ],
+  [
+    {
+      "tool": "Live Metal Prices",
+      "tool_desc": "Live prices for Gold, Silver, Palladium and Platinum in 160+ currencies including USD, GBP and EUR.",
+      "name": "Latest Selected Metals in Selected Currency In Grams",
+      "desc": "Select what you need for a smaller payload! Real-time Gold, Silver, Palladium, Platinum and 160+ currency rates based on selected Currency"
+    },
+    {
+      "tool": "Metal Price Tracker",
+      "tool_desc": "Track live prices for Gold, Silver, Palladium and Platinum in various currencies including USD, GBP and EUR.",
+      "name": "Selected Metals in Grams",
+      "desc": "Get real-time rates for Gold, Silver, Palladium, Platinum and more in selected currency units."
+    },
+    {
+      "tool": "Precious Metal Monitor",
+      "tool_desc": "Monitor real-time prices for Gold, Silver, Palladium and Platinum in different currencies such as USD, GBP and EUR.",
+      "name": "Current Metal Rates per Grams",
+      "desc": "View updated rates for Gold, Silver, Palladium, Platinum and more based on the selected currency."
+    },
+    {
+      "tool": "Metallic Price Watcher",
+      "tool_desc": "Watch live prices for Gold, Silver, Palladium and Platinum in over 160 currencies including USD, GBP and EUR.",
+      "name": "Gram-Scale Metal Rates",
+      "desc": "Observe real-time rates for Gold, Silver, Palladium, Platinum and other metals in grams with selected currency conversion."
+    }
+  ],
+  [
+    {
+      "tool": "Live Metal Prices",
+      "tool_desc": "Live prices for Gold, Silver, Palladium and Platinum in 160+ currencies including USD, GBP and EUR.",
+      "name": "Latest (retrieve XAU, XAG, PA, PL, EUR, GBP, USD)",
+      "desc": "Real-time Gold, Silver, Palladium and Platinum prices delivered in USD, GBP and EUR."
+    },
+    {
+      "tool": "Precious Metal Tracker",
+      "tool_desc": "Track live prices for Gold, Silver, Palladium and Platinum in various currencies including USD, GBP and EUR.",
+      "name": "Current Rates (fetch XAU, XAG, PA, PL, EUR, GBP, USD)",
+      "desc": "Up-to-the-minute Gold, Silver, Palladium and Platinum rates available in USD, GBP and EUR."
+    },
+    {
+      "tool": "Metallic Value Monitor",
+      "tool_desc": "Monitor real-time prices for Gold, Silver, Palladium and Platinum across different currencies like USD, GBP and EUR.",
+      "name": "Price Snapshot (get XAU, XAG, PA, PL, EUR, GBP, USD)",
+      "desc": "Instantaneous Gold, Silver, Palladium and Platinum prices provided in USD, GBP and EUR."
+    },
+    {
+      "tool": "Bullion Price Checker",
+      "tool_desc": "Check current prices for Gold, Silver, Palladium and Platinum in various currencies such as USD, GBP and EUR.",
+      "name": "Live Data (fetch XAU, XAG, PA, PL, EUR, GBP, USD)",
+      "desc": "Live updates on Gold, Silver, Palladium and Platinum values in USD, GBP and EUR."
+    }
+  ],
+  [
+    {
+      "tool": "Live Metal Prices",
+      "tool_desc": "Live prices for Gold, Silver, Palladium and Platinum in 160+ currencies including USD, GBP and EUR.",
+      "name": "Latest (retrieve selected 160+ Symbols)",
+      "desc": "Select what you need for a smaller payload! Real-time Gold, Silver, Palladium, and Platinum provided in 160+ currencies including USD, GBP and EUR."
+    },
+    {
+      "tool": "Metal Tracker",
+      "tool_desc": "Track real-time prices for Gold, Silver, Palladium, and Platinum in various currencies.",
+      "name": "Get Selected Metal Prices",
+      "desc": "Choose specific metals for a more concise data feed. Live prices available in 160+ currencies like USD, GBP, and EUR."
+    },
+    {
+      "tool": "Precious Metals Live",
+      "tool_desc": "Live updates on Gold, Silver, Palladium, and Platinum prices in multiple currencies.",
+      "name": "Retrieve Metal Rates (160+ Symbols)",
+      "desc": "Retrieve real-time rates for selected metals across 160+ currencies, including USD, GBP, and EUR."
+    },
+    {
+      "tool": "Metallics Live Feed",
+      "tool_desc": "Receive live data for Gold, Silver, Palladium, and Platinum prices across various currencies.",
+      "name": "Selected Metal Prices (160+ Symbols)",
+      "desc": "Get real-time prices for chosen metals in 160+ currencies such as USD, GBP, and EUR."
+    }
+  ],
+  [
+    {
+      "tool": "Alpaca Trading",
+      "tool_desc": "API for commission-free US stock trading",
+      "name": "Get a list of orders",
+      "desc": "Retrieves a list of orders for the account, filtered by the supplied query parameters."
+    },
+    {
+      "tool": "Robinhood API",
+      "tool_desc": "API for commission-free stock trading",
+      "name": "Retrieve account orders",
+      "desc": "Fetches a list of orders associated with the account based on specified filters."
+    },
+    {
+      "tool": "Wealthsimple Trade API",
+      "tool_desc": "API for commission-free Canadian stock trading",
+      "name": "Fetch order history",
+      "desc": "Gets the historical list of orders for the account with optional filter parameters."
+    },
+    {
+      "tool": "E*TRADE API",
+      "tool_desc": "API for online stock trading",
+      "name": "Get order details",
+      "desc": "Obtains detailed information about the orders placed by the account, filtered as per query criteria."
+    }
+  ],
+  [
+    {
+      "tool": "Alpaca Trading",
+      "tool_desc": "API for commission-free US stock trading",
+      "name": "Get open positions",
+      "desc": "Retrieves a list of the account's open positions."
+    },
+    {
+      "tool": "Robinhood API",
+      "tool_desc": "API for commission-free stock trading",
+      "name": "Fetch open positions",
+      "desc": "Obtain a list of the user's open positions."
+    },
+    {
+      "tool": "Wealthsimple Trade API",
+      "tool_desc": "API for commission-free Canadian stock trading",
+      "name": "Get active holdings",
+      "desc": "Fetches the user's active holdings in the account."
+    },
+    {
+      "tool": "Fidelity API",
+      "tool_desc": "API for online stock trading and investment",
+      "name": "Retrieve open trades",
+      "desc": "Retrieves a list of the account's open trades."
+    }
+  ],
+  [
+    {
+      "tool": "Alpaca Trading",
+      "tool_desc": "API for commission-free US stock trading",
+      "name": "Get the clock",
+      "desc": "Returns the market clock"
+    },
+    {
+      "tool": "Robinhood API",
+      "tool_desc": "API for commission-free US stock trading",
+      "name": "Get the time",
+      "desc": "Retrieves the market time"
+    },
+    {
+      "tool": "Wealthsimple Trade",
+      "tool_desc": "API for commission-free US stock trading",
+      "name": "Fetch clock",
+      "desc": "Fetches the market clock"
+    },
+    {
+      "tool": "TradeZero",
+      "tool_desc": "API for commission-free US stock trading",
+      "name": "Obtain clock info",
+      "desc": "Obtains information about the market clock"
+    }
+  ],
+  [
+    {
+      "tool": "Alpaca Trading",
+      "tool_desc": "API for commission-free US stock trading",
+      "name": "Get the calendar",
+      "desc": "Returns the market calendar"
+    },
+    {
+      "tool": "Bison Finance",
+      "tool_desc": "API for cryptocurrency trading",
+      "name": "Retrieve events",
+      "desc": "Fetches upcoming market events"
+    },
+    {
+      "tool": "Robin Stocks",
+      "tool_desc": "API for stock market analysis",
+      "name": "Fetch market dates",
+      "desc": "Retrieves important market dates"
+    },
+    {
+      "tool": "FoxTrade",
+      "tool_desc": "API for foreign exchange trading",
+      "name": "Obtain trading schedule",
+      "desc": "Provides the trading schedule for markets"
+    }
+  ],
+  [
+    {
+      "tool": "IP2Currency",
+      "tool_desc": "IP2Currency Exchange Rate Web Service provides the user with an easy way to get a localized & latest Currency Exchange Rate based on the visitor's IP address.",
+      "name": "IP2Currency API",
+      "desc": "Currency by IP Geolocation API"
+    },
+    {
+      "tool": "GeoCurrency",
+      "tool_desc": "GeoCurrency Exchange Rate Web Service provides the user with an easy way to get a localized & latest Currency Exchange Rate based on the visitor's geolocation.",
+      "name": "GeoCurrency API",
+      "desc": "Currency by Geolocation API"
+    },
+    {
+      "tool": "IP2Location",
+      "tool_desc": "IP2Location Exchange Rate Web Service provides the user with an easy way to get a localized & latest Currency Exchange Rate based on the visitor's IP address.",
+      "name": "IP2Location API",
+      "desc": "Currency by IP Location API"
+    },
+    {
+      "tool": "LocateCurrency",
+      "tool_desc": "LocateCurrency Exchange Rate Web Service provides the user with an easy way to get a localized & latest Currency Exchange Rate based on the visitor's location.",
+      "name": "LocateCurrency API",
+      "desc": "Currency by Location API"
+    }
+  ],
+  [
+    {
+      "tool": "Morning Star",
+      "tool_desc": "",
+      "name": "stock/v2/get-analysis-report",
+      "desc": "Get detail information of stock, market"
+    },
+    {
+      "tool": "Sunrise Galaxy",
+      "tool_desc": "A powerful tool for financial analysis",
+      "name": "stock/v2/get-financial-report",
+      "desc": "Retrieve detailed financial information of a stock and its market performance"
+    },
+    {
+      "tool": "Lunar Beam",
+      "tool_desc": "An advanced tool for stock analysis",
+      "name": "stock/v2/get-stock-analysis",
+      "desc": "Fetch comprehensive analysis report of a stock and its market trends"
+    },
+    {
+      "tool": "Twilight Horizon",
+      "tool_desc": "Cutting-edge tool for market insights",
+      "name": "stock/v2/fetch-market-analysis",
+      "desc": "Access in-depth information on a stock and its market analysis"
+    }
+  ],
+  [
+    {
+      "tool": "Morning Star",
+      "tool_desc": "",
+      "name": "market/v2/get-movers",
+      "desc": "Get movers, such as : actives, gainers, losers,  etc..."
+    },
+    {
+      "tool": "Sunrise Analytics",
+      "tool_desc": "Advanced market analysis tool",
+      "name": "market/v2/get-trending",
+      "desc": "Retrieve trending stocks, sectors, or ETFs"
+    },
+    {
+      "tool": "Lunar Insights",
+      "tool_desc": "Intuitive market data platform",
+      "name": "market/v2/get-summary",
+      "desc": "Fetch a high-level summary of market performance"
+    },
+    {
+      "tool": "Skyline Metrics",
+      "tool_desc": "Comprehensive market metrics tool",
+      "name": "market/v2/get-changes",
+      "desc": "Obtain information on daily market changes"
+    }
+  ],
+  [
+    {
+      "tool": "Morning Star",
+      "tool_desc": "",
+      "name": "market/v2/auto-complete",
+      "desc": "Get auto suggestion by word or phase"
+    },
+    {
+      "tool": "Sunrise Tool",
+      "tool_desc": "A tool for early risers",
+      "name": "market/v2/search-suggestions",
+      "desc": "Retrieve search suggestions based on input"
+    },
+    {
+      "tool": "Dawn Breaker",
+      "tool_desc": "An early morning tool",
+      "name": "market/v2/suggest",
+      "desc": "Fetch suggestions for search terms"
+    },
+    {
+      "tool": "Daybreak",
+      "tool_desc": "A tool for the break of day",
+      "name": "market/v2/search-hints",
+      "desc": "Retrieve hints for search queries"
+    }
+  ],
+  [
+    {
+      "tool": "Morning Star",
+      "tool_desc": "",
+      "name": "{type}/get-disclosure-flag",
+      "desc": "Get disclosure flag related to an ETF or FUND"
+    },
+    {
+      "tool": "Sunrise",
+      "tool_desc": "A new dawn in API tools",
+      "name": "{type}/fetch-disclosure-flag",
+      "desc": "Retrieve disclosure flag for an ETF or FUND"
+    },
+    {
+      "tool": "Daybreak",
+      "tool_desc": "Breaking through the darkness",
+      "name": "{type}/obtain-disclosure-flag",
+      "desc": "Obtain disclosure flag for an ETF or FUND"
+    },
+    {
+      "tool": "Sunset",
+      "tool_desc": "End of the day API solutions",
+      "name": "{type}/check-disclosure-flag",
+      "desc": "Check disclosure flag status for an ETF or FUND"
+    }
+  ],
+  [
+    {
+      "tool": "Morning Star",
+      "tool_desc": "",
+      "name": "{type}/get-morningstar-analysis",
+      "desc": "Get Morningstar's analysis related to an ETF or FUND"
+    },
+    {
+      "tool": "Sunrise Analyzer",
+      "tool_desc": "An advanced financial analysis tool",
+      "name": "{type}/get-sunrise-analysis",
+      "desc": "Retrieve detailed analysis for an ETF or FUND"
+    },
+    {
+      "tool": "Dawn Insights",
+      "tool_desc": "Cutting-edge investment intelligence platform",
+      "name": "{type}/get-dawn-insights",
+      "desc": "Fetch insights on an ETF or FUND"
+    },
+    {
+      "tool": "Daybreak Analytics",
+      "tool_desc": "Comprehensive analytics software",
+      "name": "{type}/get-daybreak-analytics",
+      "desc": "Access detailed analytics for an ETF or FUND"
+    }
+  ],
+  [
+    {
+      "tool": "Morning Star",
+      "tool_desc": "",
+      "name": "{type}/performance/get-trailing-returns",
+      "desc": "Get trailing returns in the Performance  tab related to an ETF or FUND"
+    },
+    {
+      "tool": "Sunrise Analytics",
+      "tool_desc": "Powerful data analysis tool",
+      "name": "{type}/performance/get-trailing-returns-v2",
+      "desc": "Retrieve trailing return data for an ETF or mutual fund"
+    },
+    {
+      "tool": "Dawn Insights",
+      "tool_desc": "Cutting-edge investment research platform",
+      "name": "{type}/performance/trailing-returns",
+      "desc": "Fetch trailing return information for an investment product"
+    },
+    {
+      "tool": "Sunset Metrics",
+      "tool_desc": "Comprehensive performance measurement tool",
+      "name": "{type}/performance/fetch-trailing-returns",
+      "desc": "Obtain trailing returns data for an ETF or mutual fund"
+    }
+  ],
+  [
+    {
+      "tool": "Morning Star",
+      "tool_desc": "",
+      "name": "{type}/get-realtime-data",
+      "desc": "Get realtime data related to an ETF or FUND"
+    },
+    {
+      "tool": "Sunrise Tool",
+      "tool_desc": "A tool for early risers",
+      "name": "{type}/fetch-live-data",
+      "desc": "Fetch live data associated with an ETF or FUND"
+    },
+    {
+      "tool": "Daybreak Analyzer",
+      "tool_desc": "Analyze data from the break of dawn",
+      "name": "{type}/retrieve-streaming-info",
+      "desc": "Retrieve streaming information for an ETF or FUND"
+    },
+    {
+      "tool": "Dawn Patrol",
+      "tool_desc": "A tool for the early morning watch",
+      "name": "{type}/access-realtime-info",
+      "desc": "Access realtime information for an ETF or FUND"
+    }
+  ],
+  [
+    {
+      "tool": "Morning Star",
+      "tool_desc": "",
+      "name": "{type}/get-quote",
+      "desc": "Get quote related to an ETF or FUND"
+    },
+    {
+      "tool": "Sunrise Tracker",
+      "tool_desc": "Track the sunrise and sunset times",
+      "name": "{type}/fetch-data",
+      "desc": "Fetch data related to a specific location"
+    },
+    {
+      "tool": "Daybreak Analyzer",
+      "tool_desc": "Analyze daybreak patterns",
+      "name": "{type}/analyze-trends",
+      "desc": "Analyze trends related to a specific category"
+    },
+    {
+      "tool": "Dawn Insights",
+      "tool_desc": "Gain insights at dawn",
+      "name": "{type}/retrieve-info",
+      "desc": "Retrieve information related to a specific topic"
+    }
+  ],
+  [
+    {
+      "tool": "Morning Star",
+      "tool_desc": "",
+      "name": "stock/get-histories",
+      "desc": "Get stock, market histories"
+    },
+    {
+      "tool": "Sunrise",
+      "tool_desc": "Stock market analysis tool",
+      "name": "market/get-history",
+      "desc": "Retrieve market history data"
+    },
+    {
+      "tool": "Daybreak",
+      "tool_desc": "Investment tracking platform",
+      "name": "investment/fetch-histories",
+      "desc": "Fetch investment histories"
+    },
+    {
+      "tool": "Dawn",
+      "tool_desc": "Financial data aggregator",
+      "name": "financials/retrieve-histories",
+      "desc": "Retrieve financial histories"
+    }
+  ],
+  [
+    {
+      "tool": "Morning Star",
+      "tool_desc": "",
+      "name": "market/get-global-indices",
+      "desc": "Get information of global indices"
+    },
+    {
+      "tool": "Sunrise Analyzer",
+      "tool_desc": "A comprehensive market analysis tool",
+      "name": "market/get-world-indices",
+      "desc": "Retrieve data on world indices"
+    },
+    {
+      "tool": "Dawn Insight",
+      "tool_desc": "An advanced financial research platform",
+      "name": "market/fetch-international-indices",
+      "desc": "Fetch details of international indices"
+    },
+    {
+      "tool": "Daybreak Explorer",
+      "tool_desc": "A cutting-edge market exploration tool",
+      "name": "market/retrieve-global-index-data",
+      "desc": "Retrieve data for global indices"
+    }
+  ]
+]
