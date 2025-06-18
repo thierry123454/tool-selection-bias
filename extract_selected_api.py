@@ -5,7 +5,7 @@ import re
 import unicodedata
 
 # ─── CONFIG ─────────────────────────────────────────────
-ANSWERS_DIR     = "./data_bias/answer"
+ANSWERS_DIR     = "./data_bias/answer_chatgpt"
 QUERIES_JSON    = "./data_bias/instruction/toolbench_bias_queries.json"
 CLUSTERS_JSON   = "2_generate_clusters_and_refine/duplicate_api_clusters.json"
 OUTPUT_PATH     = "api_selection_stats.json"

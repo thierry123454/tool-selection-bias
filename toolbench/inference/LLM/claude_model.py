@@ -1,52 +1,54 @@
 #!/usr/bin/env python
 # coding=utf-8
-from typing import Optional, List, Mapping, Any
+from typing import Optional, List, Mapping, Any, Tuple
 from termcolor import colored
 import json
 import random
 import openai
-from typing import Optional
 from toolbench.model.model_adapter import get_conversation_template
 from toolbench.inference.utils import SimpleChatIO, react_parser
 from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ZEROSHOT
 
+from anthropic import Anthropic, HUMAN_PROMPT, AI_PROMPT
 
-class Davinci:
-    def __init__(self, model="text-davinci-003", openai_key="") -> None:
+class Claude:
+    def __init__(self, model: str = "claude-v1", anthropic_api_key: str = "") -> None:
         super().__init__()
+        self.client = Anthropic(api_key=anthropic_api_key)
         self.model = model
-        self.openai_key = openai_key
         self.chatio = SimpleChatIO()
 
-    def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
-        max_try = 10
-        while True:
-            openai.api_key = self.openai_key
-            try:
-                response = openai.Completion.create(
-                    engine=self.model,
-                    prompt=prompt,
-                    temperature=0.5,
-                    max_tokens=512,
-                    top_p=1,
-                    frequency_penalty=0,
-                    presence_penalty=0,
-                    stop="End Action"
-                )
-                result = response['choices'][0]['text'].strip()
-                break
-            except Exception as e:
-                print(e)
-                max_try -= 1
-                if max_try < 0:
-                    result = "Exceed max retry times. Please check your davinci api calling."
-                    break
-        print("RESULT!")
-        print(result)
-        print("USAGE!")
-        print(response["usage"])
-        return result, response["usage"]
-        
+    def prediction(self, prompt: str, stop: Optional[List[str]] = None
+                  ) -> Tuple[str, int]:
+        """
+        Wrap your user-prompt in Claude's HUMAN/AI delimiters,
+        ask for up to 512 tokens, stop on the next human turn.
+        """
+        resp = self.client.messages.create(
+            model=self.model,
+            messages=[
+                {"role": "user",   "content": prompt}
+            ],
+            max_tokens=512,
+            stop_sequences=[HUMAN_PROMPT],          # halt when Claude would expect a human turn
+        )
+
+        text = resp.content[0].text.strip()
+
+        # usage estimates
+        prompt_toks     = getattr(resp.usage, "input_tokens", 0)
+        completion_toks = getattr(resp.usage, "output_tokens", 0)
+        total_toks      = prompt_toks + completion_toks
+
+        usage = {
+            "prompt_tokens": prompt_toks,
+            "completion_tokens": completion_toks,
+            "total_tokens": total_toks
+        }
+
+
+        return text, usage
+
     def add_message(self, message):
         self.conversation_history.append(message)
 
@@ -131,6 +133,10 @@ class Davinci:
 
 
 if __name__ == "__main__":
-    llm = Davinci()
-    result = llm.prediction("How old are you?")
-    print(result)
+    claude = Claude()
+    claude.change_messages([
+      {"role": "system",    "content": ""},
+      {"role": "user",      "content": "What time is it in Tokyo?"}
+    ])
+    msg, code, tokens = claude.parse(functions=[], process_id=0)
+    print(msg, code, tokens)

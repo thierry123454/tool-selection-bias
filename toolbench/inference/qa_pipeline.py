@@ -26,7 +26,7 @@ if __name__ == "__main__":
     parser.add_argument('--rapidapi_key', type=str, default="",required=False, help='your rapidapi key to request rapidapi service')
     parser.add_argument('--use_rapidapi_key', action="store_true", help="To use customized rapidapi service or not.")
     parser.add_argument('--api_customization', action="store_true", help="To use customized api or not.")
-    parser.add_argument('--test_bias', action="store_false", help="To test for API selection bias or not. If true, only captures first action node.")
+    parser.add_argument('--test_bias', action="store_true", help="To test for API selection bias or not. If true, only captures first action node.")
     
     args = parser.parse_args()
 

@@ -8,6 +8,7 @@ from termcolor import colored
 import random
 from toolbench.inference.LLM.chatgpt_function_model import ChatGPTFunction
 from toolbench.inference.LLM.davinci_model import Davinci
+from toolbench.inference.LLM.claude_model import Claude
 from toolbench.inference.LLM.tool_llama_lora_model import ToolLLaMALoRA
 from toolbench.inference.LLM.tool_llama_model import ToolLLaMA
 from toolbench.inference.LLM.retriever import ToolRetriever
@@ -449,8 +450,11 @@ class pipeline_runner:
             model = "gpt-3.5-turbo"
             llm_forward = ChatGPTFunction(model=model, openai_key=openai_key)
         elif backbone_model == "davinci":
-            model = "text-davinci-003"
+            model = "davinci-002"
             llm_forward = Davinci(model=model, openai_key=openai_key)
+        elif backbone_model == "claude":
+            model = "claude-3-opus-20240229"
+            llm_forward = Claude(model=model, anthropic_api_key=openai_key)
         else:
             model = backbone_model
             llm_forward = model

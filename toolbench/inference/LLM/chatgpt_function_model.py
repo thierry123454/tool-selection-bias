@@ -3,7 +3,6 @@ import openai
 from tenacity import retry, wait_random_exponential, stop_after_attempt
 from termcolor import colored
 import time
-import anthropic
 import random
 
 
@@ -30,48 +29,15 @@ def chat_completion_request(key, messages, functions=None,function_call=None,key
         json_data.update({"function_call": function_call})
     
     try:
-        if model.lower().startswith("claude"):
-            client = anthropic.Anthropic(
-                api_key=key,
-            )
-
-            response = client.completions.create(
-                model=model,
-                system="insert system prompt",
-                prompt=prompt,
-                max_tokens_to_sample=args.get("max_tokens", 1024),
-                stop_sequences=[anthropic.HUMAN_PROMPT]
-            )
-            text = response.completion
-
-            # mimic OpenAI usage field
-            usage = {
-                "total_tokens": response.usage["total_tokens"], 
-                "prompt_tokens": response.usage["prompt_tokens"], 
-                "completion_tokens": response.usage["completion_tokens"]
-            }
-
-            # wrap back into your existing format
-            return {
-                "choices": [
-                    {"message": {"role": "assistant", "content": text}}
-                ],
-                "usage": usage
-            }
+        if model == "gpt-3.5-turbo":
+            openai.api_key = key
         else:
-            if model == "gpt-3.5-turbo":
-                openai.api_key = key
-            else:
-                raise NotImplementedError
-            # print("!!!given to chatgpt!!!")
-            # print(json.dumps(json_data, indent=2, ensure_ascii=False))
-            openai_response = openai.ChatCompletion.create(
-                **json_data,
-            )
-            json_data = json.loads(str(openai_response))
-            print("!!!output by chatgpt!!!")
-            print(json.dumps(json_data, indent=2, ensure_ascii=False))
-            return json_data 
+            raise NotImplementedError
+        openai_response = openai.ChatCompletion.create(
+            **json_data,
+        )
+        json_data = json.loads(str(openai_response))
+        return json_data 
 
     except Exception as e:
         print("Unable to generate ChatCompletion response")

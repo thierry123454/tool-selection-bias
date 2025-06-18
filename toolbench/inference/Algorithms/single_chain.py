@@ -148,7 +148,7 @@ class single_chain(base_search_method):
                 temp_node.father = now_node
                 now_node.children.append(temp_node)
 
-                if getattr(self.io_func, "test_bias", False):
+                if getattr(self.io_func, "test_bias", True):
                     return temp_node
 
                 temp_node.print(self.process_id)
