@@ -453,7 +453,7 @@ class pipeline_runner:
             model = "davinci-002"
             llm_forward = Davinci(model=model, openai_key=openai_key)
         elif backbone_model == "claude":
-            model = "claude-3-opus-20240229"
+            model = "claude-3-5-sonnet-20240620"
             llm_forward = Claude(model=model, anthropic_api_key=openai_key)
         else:
             model = backbone_model

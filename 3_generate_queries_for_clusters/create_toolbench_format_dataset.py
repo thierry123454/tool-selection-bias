@@ -6,7 +6,7 @@ import re
 
 # ─── CONFIG ────────────────────────────────────────────────────────────────
 CLUSTERS_PATH    = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
-CLUSTER_QUERIES  = "cluster_queries.json"
+CLUSTER_QUERIES  = "cluster_queries_3.json"
 ORIGINAL_QUERIES = "../data/instruction/G1_query.json"
 ORIGINAL_QUERIES_2 = "../data/instruction/G2_query.json"
 ORIGINAL_QUERIES_3 = "../data/instruction/G3_query.json"

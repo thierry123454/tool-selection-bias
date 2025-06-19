@@ -10,6 +10,7 @@ from toolbench.inference.utils import SimpleChatIO, react_parser
 from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ZEROSHOT
 
 from anthropic import Anthropic, HUMAN_PROMPT, AI_PROMPT
+import time
 
 class Claude:
     def __init__(self, model: str = "claude-v1", anthropic_api_key: str = "") -> None:
@@ -21,17 +22,33 @@ class Claude:
     def prediction(self, prompt: str, stop: Optional[List[str]] = None
                   ) -> Tuple[str, int]:
         """
-        Wrap your user-prompt in Claude's HUMAN/AI delimiters,
+        Wrap the user-prompt in Claude's HUMAN/AI delimiters,
         ask for up to 512 tokens, stop on the next human turn.
         """
-        resp = self.client.messages.create(
-            model=self.model,
-            messages=[
-                {"role": "user",   "content": prompt}
-            ],
-            max_tokens=512,
-            stop_sequences=[HUMAN_PROMPT],          # halt when Claude would expect a human turn
-        )
+
+        max_retries = 5
+        backoff = 1.0
+
+        for attempt in range(1, max_retries + 1):
+            try:
+                resp = self.client.messages.create(
+                    model=self.model,
+                    messages=[
+                        {"role": "user",   "content": prompt}
+                    ],
+                    max_tokens=512,
+                    stop_sequences=[HUMAN_PROMPT],          # halt when Claude would expect a human turn
+                )
+                break
+            except:
+                if attempt == max_retries:
+                    raise
+                print(f"[Claude] Overloaded, retry {attempt}/{max_retries} after {backoff}s")
+                time.sleep(backoff)
+                backoff *= 2
+        else:
+            # Should never hit
+            raise RuntimeError("Claude prediction failed after retries")
 
         text = resp.content[0].text.strip()
 

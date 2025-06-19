@@ -12,13 +12,14 @@ QUERIES_PER_BATCH     = 10
 QUERIES_PER_CLUSTER   = 100
 RATE_LIMIT            = 0.3    # seconds between LLM calls
 INPUT_CLUSTERS        = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
-OUTPUT_QUERIES        = "cluster_queries.json"
+OUTPUT_QUERIES        = "cluster_queries_3.json"
 # ————————————————————————————————————————————————————————————————————————
 
 SYSTEM_PROMPT = """
 You are a prompt-writing assistant.  I will give you a set of API endpoints (tool name + description,
 endpoint name + description, and potentially the required parameters) that all perform the same underlying task.
 Please generate exactly {n} distinct, natural-language user queries that could be satisfied by ALL of these endpoints.
+**Include realistic sample values** for any required parameters (e.g. use "https://example.com" for a URL, or "Hello World" for a text field).
 Return them as a JSON array of strings, with no extra commentary.
 """
 
