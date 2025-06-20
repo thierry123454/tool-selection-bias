@@ -2,19 +2,24 @@
 # coding=utf-8
 
 try:
-    from transformers.models.llama.modeling_llama import LlamaRotaryEmbedding
-    _orig_init = LlamaRotaryEmbedding.__init__
-    def _patched_init(self, *args, config=None, **kwargs):
-        if config is not None:
-            # the old signature was (hidden_size, max_position_embeddings, ...)
-            # pull those two fields out of config:
-            dim = config.hidden_size
-            max_pos = getattr(config, "max_position_embeddings", None) or getattr(config, "max_seq_len", None)
-            return _orig_init(self, dim, max_pos, **kwargs)
-        return _orig_init(self, *args, **kwargs)
-    LlamaRotaryEmbedding.__init__ = _patched_init
+    import transformers.models.llama.modeling_llama as _llama_mod
+
+    for _cls_name in ("LlamaRotaryEmbedding", "CondenseRotaryEmbedding"):
+        _cls = getattr(_llama_mod, _cls_name, None)
+        if _cls is not None:
+            _orig_init = _cls.__init__
+            def _patched_init(self, *args, config=None, **kwargs):
+                if config is not None:
+                    # old signature was (hidden_size, max_pos_embeddings, ...)
+                    dim = config.hidden_size
+                    max_pos = getattr(config, "max_position_embeddings", None) \
+                              or getattr(config, "max_seq_len", None)
+                    return _orig_init(self, dim, max_pos, **kwargs)
+                return _orig_init(self, *args, **kwargs)
+            _cls.__init__ = _patched_init
+
 except ImportError:
-    # if import fails, nothing to patch
+    # transformers not present or unexpected layout
     pass
 
 import time
