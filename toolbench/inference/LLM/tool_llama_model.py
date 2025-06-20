@@ -1,26 +1,34 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-try:
-    from transformers.models.llama.modeling_llama import (
-        LlamaRotaryEmbedding,
-        CondenseRotaryEmbedding,
-    )
-    for _cls in (LlamaRotaryEmbedding, CondenseRotaryEmbedding):
-        _orig = _cls.__init__
-        def _patched_init(self, *args, config=None, **kwargs):
-            # if the HF code passes us a `config` kwarg, pull out the
-            # two fields and call the old signature
-            if config is not None:
-                dim     = config.hidden_size
-                max_pos = getattr(config, "max_position_embeddings", None) \
-                          or getattr(config, "max_seq_len", None)
-                return _orig(self, dim, max_pos, **kwargs)
-            # otherwise fall back to whatever args the library passed
-            return _orig(self, *args, **kwargs)
-        _cls.__init__ = _patched_init
-except ImportError:
-    pass
+from typing import Any
+
+def patch_rotary(cls_name: str):
+    try:
+        module = __import__(
+            "transformers.models.llama.modeling_llama",
+            fromlist=[cls_name]
+        )
+        Rotary = getattr(module, cls_name)
+    except (ImportError, AttributeError):
+        return
+
+    _orig_init = Rotary.__init__
+    def _patched_init(self, *args: Any, config=None, **kwargs: Any):
+        if config is not None:
+            # pull the two numeric args out of the config
+            dim     = config.hidden_size
+            max_pos = getattr(config, "max_position_embeddings", None) \
+                      or getattr(config, "max_seq_len", None)
+            return _orig_init(self, dim, max_pos, **kwargs)
+        # fallback to whatever HF would have passed
+        return _orig_init(self, *args, **kwargs)
+
+    Rotary.__init__ = _patched_init
+
+# patch both the old and the new names
+patch_rotary("LlamaRotaryEmbedding")
+patch_rotary("CondenseRotaryEmbedding")
 
 import time
 from termcolor import colored
