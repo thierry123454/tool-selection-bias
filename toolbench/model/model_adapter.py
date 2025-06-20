@@ -19,7 +19,10 @@ from transformers import (
     # LlamaForCausalLM,
 )
 
-from peft import PeftModel
+try:
+    from peft import PeftModel
+except ImportError:
+    PeftModel = None
 
 from toolbench.tool_conversation import Conversation, get_conv_template
 from toolbench.model.compression import load_compress_model
