@@ -16,8 +16,9 @@ from transformers import (
     AutoModel,
     AutoModelForCausalLM,
     AutoTokenizer,
-    LlamaForCausalLM,
+    # LlamaForCausalLM,
 )
+
 from peft import PeftModel
 
 from toolbench.tool_conversation import Conversation, get_conv_template
@@ -235,7 +236,8 @@ class VicunaAdapter(BaseAdapter):
         return get_conv_template("vicuna-v1.1")
 
     def raise_warning_for_old_weights(self, model):
-        if isinstance(model, LlamaForCausalLM) and model.model.vocab_size > 32000:
+        vsz = getattr(model.config, "vocab_size", 0)
+        if vsz > 32000:
             warnings.warn(
                 "\nYou are probably using the old Vicuna-v0 model, "
                 "which will generate unexpected results with the "
