@@ -1,5 +1,22 @@
 #!/usr/bin/env python
 # coding=utf-8
+
+try:
+    from transformers.models.llama.modeling_llama import LlamaRotaryEmbedding
+    _orig_init = LlamaRotaryEmbedding.__init__
+    def _patched_init(self, *args, config=None, **kwargs):
+        if config is not None:
+            # the old signature was (hidden_size, max_position_embeddings, ...)
+            # pull those two fields out of config:
+            dim = config.hidden_size
+            max_pos = getattr(config, "max_position_embeddings", None) or getattr(config, "max_seq_len", None)
+            return _orig_init(self, dim, max_pos, **kwargs)
+        return _orig_init(self, *args, **kwargs)
+    LlamaRotaryEmbedding.__init__ = _patched_init
+except ImportError:
+    # if import fails, nothing to patch
+    pass
+
 import time
 from termcolor import colored
 from typing import Optional, List
