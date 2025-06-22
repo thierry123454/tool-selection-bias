@@ -31,7 +31,6 @@ class ToolLLaMA:
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=False, model_max_length=self.max_sequence_length)
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
-            load_in_8bit=True,
             device_map="auto",
             offload_folder="offload",      # or offload to CPU
             offload_state_dict=True
