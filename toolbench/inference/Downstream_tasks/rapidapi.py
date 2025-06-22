@@ -430,6 +430,7 @@ class pipeline_runner:
         white_list = get_white_list(args.tool_root_dir)
         task_list = []
         querys = json.load(open(query_dir, "r"))
+        print(querys)
         for query_id, data_dict in enumerate(querys):
             if "query_id" in data_dict:
                 query_id = data_dict["query_id"]
