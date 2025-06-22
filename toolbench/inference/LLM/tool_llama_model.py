@@ -20,7 +20,7 @@ class ToolLLaMA:
             self, 
             model_name_or_path: str, 
             template:str="tool-llama-single-round", 
-            device: str="cuda", 
+            device: str="cpu", 
             cpu_offloading: bool=False, 
             max_sequence_length: int=8192
         ) -> None:
@@ -30,10 +30,7 @@ class ToolLLaMA:
         self.max_sequence_length = max_sequence_length
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=False, model_max_length=self.max_sequence_length)
         self.model = AutoModelForCausalLM.from_pretrained(
-            model_name_or_path,
-            device_map="auto",
-            offload_folder="offload",      # or offload to CPU
-            offload_state_dict=True
+            model_name_or_path, low_cpu_mem_usage=True, ignore_mismatched_sizes=True,
         )
         if self.tokenizer.pad_token_id == None:
             self.tokenizer.add_special_tokens({"bos_token": "<s>", "eos_token": "</s>", "pad_token": "<pad>"})
