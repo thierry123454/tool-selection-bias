@@ -1,35 +1,5 @@
 #!/usr/bin/env python
 # coding=utf-8
-
-from typing import Any
-
-def patch_rotary(cls_name: str):
-    try:
-        module = __import__(
-            "transformers.models.llama.modeling_llama",
-            fromlist=[cls_name]
-        )
-        Rotary = getattr(module, cls_name)
-    except (ImportError, AttributeError):
-        return
-
-    _orig_init = Rotary.__init__
-    def _patched_init(self, *args: Any, config=None, **kwargs: Any):
-        if config is not None:
-            # pull the two numeric args out of the config
-            dim     = config.hidden_size
-            max_pos = getattr(config, "max_position_embeddings", None) \
-                      or getattr(config, "max_seq_len", None)
-            return _orig_init(self, dim, max_pos, **kwargs)
-        # fallback to whatever HF would have passed
-        return _orig_init(self, *args, **kwargs)
-
-    Rotary.__init__ = _patched_init
-
-# patch both the old and the new names
-patch_rotary("LlamaRotaryEmbedding")
-patch_rotary("CondenseRotaryEmbedding")
-
 import time
 from termcolor import colored
 from typing import Optional, List
@@ -37,7 +7,6 @@ import torch
 from typing import Optional
 import torch
 from transformers import (
-    AutoConfig,
     AutoTokenizer,
     AutoModelForCausalLM,
 )
@@ -59,30 +28,9 @@ class ToolLLaMA:
         self.model_name = model_name_or_path
         self.template = template
         self.max_sequence_length = max_sequence_length
-        # ─── NEW ────────────────────────────────────────────────────────────
-        # load the config, force it to use the legacy rotary (not CondenseRotaryEmbedding)
-        config = AutoConfig.from_pretrained(model_name_or_path)
-        # For HF >=4.44 use:
-        #    config.attn_implementation = "rotary"
-        # older might use:
-        config._attn_implementation = "rotary"    # <- force the old implementation
-        # you can also disable any rope scaling the new code expects
-        if hasattr(config, "rope_scaling"):
-            config.rope_scaling = None
-        # ─────────────────────────────────────────────────────────────────────
-
-        self.tokenizer = AutoTokenizer.from_pretrained(
-            model_name_or_path,
-            use_fast=False,
-            config=config,                          # pass in the tweaked config
-            model_max_length=self.max_sequence_length
-        )
-
-        # now load the model with *that* config
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=False, model_max_length=self.max_sequence_length)
         self.model = AutoModelForCausalLM.from_pretrained(
-            model_name_or_path,
-            config=config,
-            low_cpu_mem_usage=True
+            model_name_or_path, low_cpu_mem_usage=True
         )
         if self.tokenizer.pad_token_id == None:
             self.tokenizer.add_special_tokens({"bos_token": "<s>", "eos_token": "</s>", "pad_token": "<pad>"})
