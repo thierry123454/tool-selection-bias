@@ -1,0 +1,428 @@
+{
+  "win": false,
+  "try_count": 1,
+  "trys": [
+    {
+      "chain": [
+        {
+          "is_terminal": false,
+          "pruned": false,
+          "finished": false,
+          "depth": 1,
+          "node_type": "Action",
+          "description": "reate_task_service_tracking_code_for_transportistas_de_argentina",
+          "Elo": 1000.0,
+          "child_count": 1,
+          "expand_num": 0
+        },
+        {
+          "is_terminal": false,
+          "pruned": false,
+          "finished": false,
+          "depth": 2,
+          "node_type": "Action Input",
+          "description": "{\"service\":\"national\",\"tracking_code\":\"ABC123\"}",
+          "Elo": 1000.0,
+          "observation": "{\"error\": \"Unsubscribed error...\", \"response\": \"{'message': 'You are not subscribed to this API.'}\"}",
+          "observation_code": 8,
+          "child_count": 1,
+          "expand_num": 0,
+          "io_state": {}
+        },
+        {
+          "is_terminal": false,
+          "pruned": false,
+          "finished": false,
+          "depth": 3,
+          "node_type": "Thought",
+          "description": "It seems that there is an error as I am not subscribed to this API. I will retry and this time, I will use a different service name to create the task. Let's try again.",
+          "Elo": 1000.0,
+          "child_count": 1,
+          "expand_num": 0
+        },
+        {
+          "is_terminal": false,
+          "pruned": false,
+          "finished": false,
+          "depth": 4,
+          "node_type": "Action",
+          "description": "reate_task_service_tracking_code_for_transportistas_de_argentina",
+          "Elo": 1000.0,
+          "child_count": 1,
+          "expand_num": 0
+        },
+        {
+          "is_terminal": false,
+          "pruned": false,
+          "finished": false,
+          "depth": 5,
+          "node_type": "Action Input",
+          "description": "{\"service\":\"ecommerce\",\"tracking_code\":\"ABC123\"}",
+          "Elo": 1000.0,
+          "observation": "{\"error\": \"Too many requests error...\", \"response\": \"{'message': 'Too many requests'}\"}",
+          "observation_code": 9,
+          "child_count": 1,
+          "expand_num": 0,
+          "io_state": {}
+        },
+        {
+          "is_terminal": false,
+          "pruned": false,
+          "finished": false,
+          "depth": 6,
+          "node_type": "Thought",
+          "description": "It seems there are too many requests at the moment. I will try one more time using a different approach to create the task. Let's give it another shot.",
+          "Elo": 1000.0,
+          "child_count": 1,
+          "expand_num": 0
+        },
+        {
+          "is_terminal": false,
+          "pruned": false,
+          "finished": false,
+          "depth": 7,
+          "node_type": "Action",
+          "description": "reate_task_service_tracking_code_for_transportistas_de_argentina",
+          "Elo": 1000.0,
+          "child_count": 1,
+          "expand_num": 0
+        },
+        {
+          "is_terminal": false,
+          "pruned": false,
+          "finished": false,
+          "depth": 8,
+          "node_type": "Action Input",
+          "description": "{\"service\":\"national-international\",\"tracking_code\":\"ABC123\"}",
+          "Elo": 1000.0,
+          "observation": "{\"error\": \"Unsubscribed error...\", \"response\": \"{'message': 'You are not subscribed to this API.'}\"}",
+          "observation_code": 8,
+          "child_count": 1,
+          "expand_num": 0,
+          "io_state": {}
+        },
+        {
+          "is_terminal": false,
+          "pruned": false,
+          "finished": false,
+          "depth": 9,
+          "node_type": "Thought",
+          "description": "I encountered the same error again. Unfortunately, without access to the API, I am unable to create a task to track the package through Correo Argentino. I will need to restart the task.",
+          "Elo": 1000.0,
+          "child_count": 1,
+          "expand_num": 0
+        },
+        {
+          "is_terminal": false,
+          "pruned": false,
+          "finished": false,
+          "depth": 10,
+          "node_type": "Action",
+          "description": "Finish",
+          "Elo": 1000.0,
+          "child_count": 1,
+          "expand_num": 0
+        },
+        {
+          "is_terminal": false,
+          "pruned": true,
+          "finished": false,
+          "depth": 11,
+          "node_type": "Action Input",
+          "description": "{\"return_type\":\"give_up_and_restart\"}",
+          "Elo": 1000.0,
+          "observation": "{\"response\":\"chose to give up and restart\"}",
+          "observation_code": 4,
+          "child_count": 0,
+          "expand_num": 0,
+          "io_state": {}
+        }
+      ],
+      "win": false
+    }
+  ],
+  "compare_candidates": [],
+  "forward_args": {
+    "single_chain_max_step": 12,
+    "pass_at": 1,
+    "answer": 1
+  },
+  "answer_generation": {
+    "valid_data": false,
+    "final_answer": "",
+    "function": [
+      {
+        "name": "eo_argentino_result_task_task_id_for_transportistas_de_argentina",
+        "description": "This is the subfunction for tool \"transportistas_de_argentina\", you can use this tool.The description of this function is: \"Result for one Task ID.\"",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "task_id": {
+              "type": "string",
+              "description": "Task ID"
+            }
+          },
+          "required": [
+            "task_id"
+          ],
+          "optional": []
+        }
+      },
+      {
+        "name": "cities_states_stateisocode_for_transportistas_de_argentina",
+        "description": "This is the subfunction for tool \"transportistas_de_argentina\", you can use this tool.The description of this function is: \"List of city for iso state.\"",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "stateisocode": {
+              "type": "string",
+              "description": "State ISO Code"
+            }
+          },
+          "required": [
+            "stateisocode"
+          ],
+          "optional": []
+        }
+      },
+      {
+        "name": "s_postcode_stateisocode_postcode_for_transportistas_de_argentina",
+        "description": "This is the subfunction for tool \"transportistas_de_argentina\", you can use this tool.The description of this function is: \"List of city for iso state and postcode.\"",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "stateisocode": {
+              "type": "string",
+              "description": "State ISO Code"
+            },
+            "postcode": {
+              "type": "string",
+              "description": "Postcode"
+            }
+          },
+          "required": [
+            "stateisocode",
+            "postcode"
+          ],
+          "optional": []
+        }
+      },
+      {
+        "name": "ties_search_stateisocode_keyword_for_transportistas_de_argentina",
+        "description": "This is the subfunction for tool \"transportistas_de_argentina\", you can use this tool.The description of this function is: \"Search city for iso state and keyword name.\"",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "stateisocode": {
+              "type": "string",
+              "description": "State ISO Code"
+            },
+            "keyword": {
+              "type": "string",
+              "description": "Keyword to search, example: Caballito"
+            }
+          },
+          "required": [
+            "stateisocode",
+            "keyword"
+          ],
+          "optional": []
+        }
+      },
+      {
+        "name": "cities_states_for_transportistas_de_argentina",
+        "description": "This is the subfunction for tool \"transportistas_de_argentina\", you can use this tool.The description of this function is: \"List of states for Argentina with iso code.\"",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "optional": []
+        }
+      },
+      {
+        "name": "eisocodedst_normalizecitynamedst_for_transportistas_de_argentina",
+        "description": "This is the subfunction for tool \"transportistas_de_argentina\", you can use this tool.The description of this function is: \"List of quote for iso state and city keyword name in Correo Argentino.\"",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "normalizecitynamesrc": {
+              "type": "string",
+              "description": "Normalize City Name of Source"
+            },
+            "stateisocodedst": {
+              "type": "string",
+              "description": "State ISO Code of Destination"
+            },
+            "normalizecitynamedst": {
+              "type": "string",
+              "description": "Normalize City Name of Destination"
+            },
+            "weight": {
+              "type": "integer",
+              "description": "Weight in KG"
+            },
+            "stateisocodesrc": {
+              "type": "string",
+              "description": "State ISO Code of Source"
+            }
+          },
+          "required": [
+            "normalizecitynamesrc",
+            "stateisocodedst",
+            "normalizecitynamedst",
+            "weight",
+            "stateisocodesrc"
+          ],
+          "optional": []
+        }
+      },
+      {
+        "name": "t_volume_postcodesrc_postcodedst_for_transportistas_de_argentina",
+        "description": "This is the subfunction for tool \"transportistas_de_argentina\", you can use this tool.The description of this function is: \"Quote for postcode in OCA e-Pack.\"",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "postcodedst": {
+              "type": "integer",
+              "description": "Postcode Destination"
+            },
+            "cuit": {
+              "type": "string",
+              "description": "CUIT of your account in OCA e-Pack"
+            },
+            "operativa": {
+              "type": "string",
+              "description": "Operativa number of your account in OCA e-Pack"
+            },
+            "cost": {
+              "type": "integer",
+              "description": "Cost of products in ARS"
+            },
+            "postcodesrc": {
+              "type": "integer",
+              "description": "Postcode Source"
+            },
+            "volume": {
+              "type": "integer",
+              "description": "Volume in cm3"
+            },
+            "weight": {
+              "type": "integer",
+              "description": "Weight in KG"
+            }
+          },
+          "required": [
+            "postcodedst",
+            "cuit",
+            "operativa",
+            "cost",
+            "postcodesrc",
+            "volume",
+            "weight"
+          ],
+          "optional": []
+        }
+      },
+      {
+        "name": "o_weight_postcodesrc_postcodedst_for_transportistas_de_argentina",
+        "description": "This is the subfunction for tool \"transportistas_de_argentina\", you can use this tool.The description of this function is: \"List of quote for postcode in Correo Argentino.\"",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "postcodedst": {
+              "type": "integer",
+              "description": "Postcode Destination"
+            },
+            "postcodesrc": {
+              "type": "integer",
+              "description": "Postcode Source"
+            },
+            "weight": {
+              "type": "integer",
+              "description": "Weight in KG"
+            }
+          },
+          "required": [
+            "postcodedst",
+            "postcodesrc",
+            "weight"
+          ],
+          "optional": []
+        }
+      },
+      {
+        "name": "reate_task_service_tracking_code_for_transportistas_de_argentina",
+        "description": "This is the subfunction for tool \"transportistas_de_argentina\", you can use this tool.The description of this function is: \"Create task to get the history.\nThe result of the trace can be obtained after approximately 20-60 seconds by calling the endpoint: /tracking/correo_argentino/result_task/:task_id\n**IMPORTANT: ** The result will only be stored for approx 1 hour.\"",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "service": {
+              "type": "string",
+              "description": "Service: ecommerce, mercadolibre, national, national-plus or national-international",
+              "example_value": "ecommerce"
+            },
+            "tracking_code": {
+              "type": "string",
+              "description": "Tracking code"
+            }
+          },
+          "required": [
+            "service",
+            "tracking_code"
+          ],
+          "optional": []
+        }
+      },
+      {
+        "name": "ffices_postcode_service_postcode_for_transportistas_de_argentina",
+        "description": "This is the subfunction for tool \"transportistas_de_argentina\", you can use this tool.The description of this function is: \"List of offices for iso state and postcode.\"",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "service": {
+              "type": "string",
+              "description": "Service Name: correo_argentino, oca, andreani"
+            },
+            "postcode": {
+              "type": "integer",
+              "description": "Postcode"
+            }
+          },
+          "required": [
+            "service",
+            "postcode"
+          ],
+          "optional": []
+        }
+      },
+      {
+        "name": "Finish",
+        "description": "If you believe that you have obtained a result that can answer the task, please call this function to provide the final answer. Alternatively, if you recognize that you are unable to proceed with the task in the current state, call this function to restart. Remember: you must ALWAYS call this function at the end of your attempt, and the only part that will be shown to the user is the final answer, so it should contain sufficient information.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "return_type": {
+              "type": "string",
+              "enum": [
+                "give_answer",
+                "give_up_and_restart"
+              ]
+            },
+            "final_answer": {
+              "type": "string",
+              "description": "The final answer you want to give the user. You should have this field if \"return_type\"==\"give_answer\""
+            }
+          },
+          "required": [
+            "return_type"
+          ]
+        }
+      }
+    ],
+    "query_count": 5,
+    "total_tokens": 8762,
+    "train_messages": [],
+    "chain": [],
+    "query": "I need to track a package sent through Correo Argentino. The tracking code is 'ABC123'. Please create a task to get the history of the package and provide me with the task ID. I will use the task ID to retrieve the result later."
+  }
+}
