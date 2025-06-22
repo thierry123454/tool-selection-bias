@@ -439,6 +439,7 @@ class pipeline_runner:
                 origin_tool_names = [standardize(cont["tool_name"]) for cont in data_dict["api_list"]]
                 tool_des = contain(origin_tool_names,white_list)
                 if tool_des == False:
+                    print("SKIPPING")
                     continue
                 tool_des = [[cont["standard_tool_name"], cont["description"]] for cont in tool_des]
             else:
