@@ -92,6 +92,12 @@ class CondenseRotaryEmbedding(torch.nn.Module):
     def forward(self, x, seq_len=None):
         # x: [bs, num_attention_heads, seq_len, head_size]
         # This `if` block is unlikely to be run after we build sin/cos in `__init__`. Keep the logic here just in case.
+
+        if torch.is_tensor(seq_len):
+            seq_len = int(seq_len.max().item() + 1)
+        elif seq_len is None:
+            seq_len = x.size(2)
+
         if seq_len > self.max_seq_len_cached:
             self.max_seq_len_cached = seq_len
             t = torch.arange(self.max_seq_len_cached, device=x.device, dtype=self.inv_freq.dtype) / self.ratio
