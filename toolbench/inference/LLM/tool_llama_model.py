@@ -20,7 +20,7 @@ class ToolLLaMA:
             self, 
             model_name_or_path: str, 
             template:str="tool-llama-single-round", 
-            device: str="cuda", 
+            device: str="cpu", 
             cpu_offloading: bool=False, 
             max_sequence_length: int=8192
         ) -> None:
