@@ -428,6 +428,7 @@ class pipeline_runner:
         method = args.method
         backbone_model = self.get_backbone_model()
         white_list = get_white_list(args.tool_root_dir)
+        print(f"[DEBUG] white_list has {len(white_list)} entries:", list(white_list.keys())[:10])
         task_list = []
         querys = json.load(open(query_dir, "r"))
         print(f"[DEBUG] loaded {len(querys)} queries from {query_dir}")
