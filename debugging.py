@@ -359,8 +359,13 @@ class LlamaAttention(nn.Module):
         self.o_proj = nn.Linear(self.hidden_size, self.hidden_size, bias=config.attention_bias)
 
         # TODO (joao): remove in v4.45 (RoPE is computed in the model, not in the decoder layers)
-        print(config)
-        self.rotary_emb = LlamaRotaryEmbedding(config=self.config)
+        # print(config)
+        head_dim = config.hidden_size // config.num_attention_heads  # e.g. 4096//32 = 128
+        self.rotary_emb = LlamaRotaryEmbedding(
+            dim=head_dim,
+            max_position_embeddings=config.max_position_embeddings
+        )
+        # self.rotary_emb = LlamaRotaryEmbedding(config.hidden_size)
 
     def forward(
         self,
@@ -903,7 +908,9 @@ class LlamaModel(LlamaPreTrainedModel):
             [LlamaDecoderLayer(config, layer_idx) for layer_idx in range(config.num_hidden_layers)]
         )
         self.norm = LlamaRMSNorm(config.hidden_size, eps=config.rms_norm_eps)
-        self.rotary_emb = LlamaRotaryEmbedding(config=config)
+        head_dim = config.hidden_size // config.num_attention_heads
+        self.rotary_emb = LlamaRotaryEmbedding(dim=head_dim,
+                max_position_embeddings=config.max_position_embeddings)
         self.gradient_checkpointing = False
 
         # Initialize weights and apply final processing

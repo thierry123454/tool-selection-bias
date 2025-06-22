@@ -49,7 +49,8 @@ class ToolLLaMA:
                 "max_new_tokens": 512,
                 "stop": "</s>",
                 "stop_token_ids": None,
-                "echo": False
+                "echo": False,
+                "use_cache": False
             }
             generate_stream_func = generate_stream
             output_stream = generate_stream_func(self.model, self.tokenizer, gen_params, "cpu", self.max_sequence_length, force_generate=True)
