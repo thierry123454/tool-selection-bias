@@ -29,7 +29,7 @@ class ToolLLaMA:
         self.template = template
         self.max_sequence_length = max_sequence_length
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=False, model_max_length=self.max_sequence_length)
-        AutoModelForCausalLM.from_pretrained(
+        self.model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
             load_in_8bit=True,
             device_map="auto",
