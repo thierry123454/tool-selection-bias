@@ -1,5 +1,5 @@
 import json
-import openai
+from openai import OpenAI
 from tenacity import retry, wait_random_exponential, stop_after_attempt
 from termcolor import colored
 import time
@@ -28,15 +28,14 @@ def chat_completion_request(key, messages, functions=None,function_call=None,key
     if function_call is not None:
         json_data.update({"function_call": function_call})
     
+    
+    client = OpenAI(api_key=key, base_url="https://api.openai.com/v1/")
+    
     try:
-        if model == "gpt-3.5-turbo":
-            openai.api_key = key
-        else:
-            raise NotImplementedError
-        openai_response = openai.ChatCompletion.create(
+        openai_response = client.chat.completions.create(
             **json_data,
         )
-        json_data = json.loads(str(openai_response))
+        json_data = openai_response.model_dump()
         return json_data 
 
     except Exception as e:

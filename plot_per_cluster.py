@@ -2,14 +2,20 @@ import json
 import math
 import matplotlib.pyplot as plt
 from collections import defaultdict
+import numpy as np
 
 # Setup LaTeX
 plt.rc('text', usetex=True)
 plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-SELECTION_PATH = "api_selection_stats.json"
+STATS_PATHS = {
+    "ChatGPT": "api_selection_stats_chatgpt.json",
+    "Claude":  "api_selection_stats_claude.json",
+    "Gemini":  "api_selection_stats_gemini.json",
+}
 CLUSTERS_JSON  = "2_generate_clusters_and_refine/duplicate_api_clusters.json"
+OUTPUT_PDF     = "api_selection_distributions_by_model.pdf"
 # ────────────────────────────────────────────────────────────────────────
 
 # LaTeX special chars:  # $ % & ~ _ ^ \ { }
@@ -50,49 +56,71 @@ def load_json(path):
         return json.load(f)
 
 # Load data
-stats    = load_json(SELECTION_PATH)
 clusters = load_json(CLUSTERS_JSON)
+model_stats = {name: load_json(path) for name, path in STATS_PATHS.items()}
 
 # stats entries are [ query_id, cluster_id, pos_in_cluster, pos_in_relevant_list ]
 # build per-cluster lists
-per_cluster = defaultdict(list)
-for _, cid, pos_cluster, _ in stats:
-    per_cluster[cid].append(pos_cluster)
+counts = {}
+for model, stats in model_stats.items():
+    counts[model] = {}
+    for _, cid, pos, _ in stats:
+        counts[model].setdefault(cid, {})
+        counts[model][cid].setdefault(pos, 0)
+        counts[model][cid][pos] += 1
 
-for cid in per_cluster.keys():
-    print(len(per_cluster[cid]))
+rates = {}
+for name, clusterdict in counts.items():
+    rates[name] = {}
+    for cid, posdict in clusterdict.items():
+        total = sum(posdict.values())
+        if total > 0:
+            rates[name][cid] = {pos: cnt/total for pos, cnt in posdict.items()}
+        else:
+            rates[name][cid] = {}
 
 # We know there are 10 clusters, so make 2 rows × 5 columns
-n_clusters = len(per_cluster)
+n_clusters = len(clusters)
 ncols = 5
 nrows = 2
 
 fig, axes = plt.subplots(nrows, ncols, figsize=(3*ncols, 4*nrows), squeeze=False)
 fig.suptitle("Distribution of Selected API Within Each Cluster", fontsize=16)
 
-for idx, (cid, selections) in enumerate(sorted(per_cluster.items())):
-    row, col = divmod(idx, ncols)
+models = list(STATS_PATHS.keys())
+n_models = len(models)
+bar_w = 0.8 / n_models
+
+for idx, cluster in enumerate(clusters, start=1):
+    row, col = divmod(idx-1, ncols)
     ax = axes[row][col]
-    cluster_endpoints = clusters[cid-1]
+    cluster_size = len(cluster)
+    x = np.arange(1, cluster_size+1)
 
-    cluster_size = len(cluster_endpoints)
-    bins = range(1, cluster_size+2)
-    ax.hist(selections, bins=bins, align='left', rwidth=0.8, density=True)
-    ax.set_xticks(range(1, cluster_size+1))
+    # draw one bar per model, offset horizontally
+    for i, name in enumerate(models):
+        model_rates = [rates[name].get(idx, {}).get(pos, 0) for pos in x]
+        ax.bar(x + bar_w*(i-(n_models-1)/2), model_rates,
+               width=bar_w, label=name)
 
-    tool_names = [ep["tool"] for ep in cluster_endpoints]
-    sanitized = [escape_tex(n) for n in tool_names]
-    ax.set_xticklabels(sanitized, rotation=45, ha="right", fontsize=6)
+    # x-axis labels
+    ax.set_xticks(x)
+    tools = [escape_tex(ep["tool"]) for ep in cluster]
+    ax.set_xticklabels(tools, rotation=45, ha="right", fontsize=6)
+    ax.set_ylim(0, 1.0)
+    ax.set_title(CLUSTER_NAMES.get(idx, ""), fontsize=10)
 
-    name = CLUSTER_NAMES.get(cid, "")
-    ax.set_title(f"{name}")
-
-pdf_path = "api_selection_distributions.pdf"
-fig.savefig(pdf_path, format="pdf")
-print(f"Saved histogram grid to {pdf_path}")
-
-plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+# turn off any unused axes
 for ax_row in axes:
     for ax in ax_row:
-        ax.set_ylim(0, 0.6)
+        if not ax.has_data():
+            ax.axis('off')
+
+# shared legend at bottom
+fig.legend(models, loc="lower center", ncol=n_models, frameon=False, fontsize=12)
+plt.tight_layout(rect=[0,0.05,1,0.95])
+
+# save & show
+fig.savefig(OUTPUT_PDF, format="pdf", transparent=True)
+print(f"Saved chart grid to {OUTPUT_PDF}")
 plt.show()

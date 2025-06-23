@@ -5,10 +5,16 @@ import re
 import unicodedata
 
 # ─── CONFIG ─────────────────────────────────────────────
-ANSWERS_DIR     = "./data_bias/answer_chatgpt"
 QUERIES_JSON    = "./data_bias/instruction/toolbench_bias_queries.json"
 CLUSTERS_JSON   = "2_generate_clusters_and_refine/duplicate_api_clusters.json"
 OUTPUT_PATH     = "api_selection_stats.json"
+
+# mapping of model → their answer directory
+ANSWER_DIRS = {
+    "chatgpt": "./data_bias/answer_chatgpt",
+    "claude":  "./data_bias/answer_claude",
+    "gemini":  "./data_bias/answer_gemini",
+}
 # ────────────────────────────────────────────────────────
 
 def slugify(text):
@@ -60,15 +66,11 @@ def extract_first_action(answer_json):
         pass
     return None, None
 
-def main():
-    queries = load_json(QUERIES_JSON)
-    clusters = load_json(CLUSTERS_JSON)
-    counter = 0
+def collect_stats_for_model(model_name, answers_dir, queries, clusters):
     stats = []
     for q in queries:
         qid = q["query_id"]
-        ans_path = os.path.join(ANSWERS_DIR, f"{qid}_CoT@1.json")
-        print(ans_path)
+        ans_path = os.path.join(answers_dir, f"{qid}_CoT@1.json")
         if not os.path.isfile(ans_path):
             print(f"⚠️  Missing answer file for query_id={qid}, skipping.")
             continue
@@ -79,16 +81,16 @@ def main():
             print(f"⚠️  No Action found in {ans_path}, skipping.")
             continue
 
-        # find which cluster it belongs to
+        # map into cluster
         cluster_id, pos = find_cluster_id(clusters, api_slug, tool_slug)
         if cluster_id is None:
-            print(f"⚠️  Could not map ({tool_slug}, {api_slug}) to any cluster.")
+            print(f"⚠️  (QID: {qid}) Could not map ({tool_slug}, {api_slug}) to any cluster.")
             continue
 
-        # find where in the query's relevant APIs this tool was listed
-        rel = q.get("relevant APIs", [])
+        # find index in the original relevant API list
+        rel_list = q.get("relevant APIs", [])
         selected_idx = None
-        for idx, (_, api_name) in enumerate(rel, start=1):
+        for idx, (_, api_name) in enumerate(rel_list, start=1):
             if api_slug in slugify(api_name):
                 selected_idx = idx
                 break
@@ -97,13 +99,20 @@ def main():
             print(f"⚠️ Slug '{api_slug}' not found in relevant APIs for qid={qid}.")
             continue
 
-        stats.append((qid, cluster_id, pos, selected_idx))
+        stats.append((qid,cluster_id,pos,selected_idx))
+    return stats
 
-    # write out
-    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(stats, f, indent=2, ensure_ascii=False)
+def main():
+    queries  = load_json(QUERIES_JSON)
+    clusters = load_json(CLUSTERS_JSON)
 
-    print(f"\n✅ Wrote {len(stats)} selection records to {OUTPUT_PATH}")
+    for model_name, answers_dir in ANSWER_DIRS.items():
+        print(f"\n🔍 Processing model: {model_name}")
+        model_stats = collect_stats_for_model(model_name, answers_dir, queries, clusters)
+        out_path = f"api_selection_stats_{model_name}.json"
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(model_stats, f, indent=2, ensure_ascii=False)
+        print(f"✅ Wrote {len(model_stats)} records to {out_path}")
 
 if __name__ == "__main__":
     main()

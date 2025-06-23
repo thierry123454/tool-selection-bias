@@ -9,6 +9,8 @@ import random
 from toolbench.inference.LLM.chatgpt_function_model import ChatGPTFunction
 from toolbench.inference.LLM.davinci_model import Davinci
 from toolbench.inference.LLM.claude_model import Claude
+from toolbench.inference.LLM.deepseek_model import DeepSeek
+from toolbench.inference.LLM.gemini_model import Gemini
 from toolbench.inference.LLM.tool_llama_lora_model import ToolLLaMALoRA
 from toolbench.inference.LLM.tool_llama_model import ToolLLaMA
 from toolbench.inference.LLM.retriever import ToolRetriever
@@ -460,6 +462,13 @@ class pipeline_runner:
         elif backbone_model == "claude":
             model = "claude-3-5-sonnet-20240620"
             llm_forward = Claude(model=model, anthropic_api_key=openai_key)
+        elif backbone_model == "deepseek":
+            model = "deepseek-chat"
+            llm_forward = DeepSeek(model=model, deepseek_key=openai_key)
+        elif backbone_model == "gemini":
+            model = "gemini-2.5-flash"
+            print("HALLO!!!")
+            llm_forward = Gemini(model=model, gemini_key=openai_key)
         else:
             model = backbone_model
             llm_forward = model
