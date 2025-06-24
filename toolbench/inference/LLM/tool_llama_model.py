@@ -104,15 +104,15 @@ class ToolLLaMA:
         self.time = time.time()
         conversation_history = self.conversation_history
 
-        if tools != []:
-            functions = [tool['function'] for tool in tools]
+        if functions != []:
+            functions = [tool['function'] for tool in functions]
 
 
         prompt = ''
         for message in conversation_history:
             role = roles[message['role']]
             content = message['content']
-            if role == "System" and tools != []:
+            if role == "System" and functions != []:
                 content = process_system_message(content, functions=functions)
             prompt += f"{role}: {content}\n"
         prompt += "Assistant:\n"
