@@ -38,6 +38,8 @@ class ToolLLaMA:
         self.use_gpu = (True if device == "cuda" else False)
         if (device == "cuda" and not cpu_offloading) or device == "mps":
             self.model.to(device)
+        dev = next(self.model.parameters()).device
+        print(f"🖥️  Model is on {dev}")
         self.chatio = SimpleChatIO()
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
