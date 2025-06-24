@@ -73,28 +73,29 @@ def change_name(name):
 class CondenseRotaryEmbedding(torch.nn.Module):
     def __init__(self, config, ratio, base=10000):
         super().__init__()
-        # extract everything from config:
-        dim = config.rotary_dim
-        max_pos = config.max_position_embeddings
-        device = config.device  # or torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-        # now your old logic, adjusted:
-        inv_freq = 1.0 / (
-            base ** (torch.arange(0, dim, 2, device=device).float() / dim)
+        # fall back to head_dim or hidden_size/num_attention_heads
+        dim = (
+            config.rotary_dim
+            if getattr(config, "rotary_dim", None) is not None
+            else getattr(config, "head_dim", config.hidden_size // config.num_attention_heads)
         )
-        self.register_buffer("inv_freq", inv_freq)
-        self.ratio = ratio
+        max_pos = getattr(config, "max_position_embeddings", config.model_max_length)
 
-        # note: you used to multiply max_position_embeddings by ratio
+        inv_freq = 1.0 / (base ** (torch.arange(0, dim, 2).float() / dim))
+        self.register_buffer("inv_freq", inv_freq)
+
+        self.ratio = ratio
         max_seq = max_pos * ratio
         print(f"Condensing Positional embeddings from {max_seq} to {max_seq // ratio}")
         self.max_seq_len_cached = max_seq
 
-        t = torch.arange(max_seq, device=device, dtype=inv_freq.dtype) / ratio
+        t = torch.arange(self.max_seq_len_cached, device=inv_freq.device, dtype=inv_freq.dtype) / ratio
         freqs = torch.einsum("i,j->ij", t, inv_freq)
         emb = torch.cat((freqs, freqs), dim=-1)
-        self.register_buffer("cos_cached", emb.cos()[None, None, :, :], persist=False)
-        self.register_buffer("sin_cached", emb.sin()[None, None, :, :], persist=False)
+        dtype = torch.get_default_dtype()
+        self.register_buffer("cos_cached", emb.cos()[None, None, :, :].to(dtype), persistent=False)
+        self.register_buffer("sin_cached", emb.sin()[None, None, :, :].to(dtype), persistent=False)
 
     def forward(self, x, seq_len=None):
         # x: [bs, num_attention_heads, seq_len, head_size]
