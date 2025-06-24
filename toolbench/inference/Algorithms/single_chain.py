@@ -111,7 +111,8 @@ class single_chain(base_search_method):
         while True:
             # recursively parse message into nodes
             self.llm.change_messages(now_node.messages)
-            new_message,error_code,total_tokens = self.llm.parse(functions=self.io_func.functions,process_id=self.process_id)
+            new_message, error_code, total_tokens = self.llm.parse(tools=self.io_func.functions,
+                                                                   process_id=self.process_id)
             self.total_tokens += total_tokens
             self.query_count += 1
             assert new_message["role"] == "assistant"
