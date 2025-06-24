@@ -16,6 +16,7 @@ STATS_PATHS = {
 }
 CLUSTERS_JSON  = "2_generate_clusters_and_refine/duplicate_api_clusters.json"
 OUTPUT_PDF     = "api_selection_distributions_by_model.pdf"
+OUTPUT_PNG     = "api_selection_distributions_by_model.png"
 # ────────────────────────────────────────────────────────────────────────
 
 # LaTeX special chars:  # $ % & ~ _ ^ \ { }
@@ -106,7 +107,7 @@ for idx, cluster in enumerate(clusters, start=1):
     # x-axis labels
     ax.set_xticks(x)
     tools = [escape_tex(ep["tool"]) for ep in cluster]
-    ax.set_xticklabels(tools, rotation=45, ha="right", fontsize=6)
+    ax.set_xticklabels(tools, rotation=90, ha="right", fontsize=6)
     ax.set_ylim(0, 1.0)
     ax.set_title(CLUSTER_NAMES.get(idx, ""), fontsize=10)
 
@@ -123,4 +124,7 @@ plt.tight_layout(rect=[0,0.05,1,0.95])
 # save & show
 fig.savefig(OUTPUT_PDF, format="pdf", transparent=True)
 print(f"Saved chart grid to {OUTPUT_PDF}")
+
+fig.savefig(OUTPUT_PNG, format="png", transparent=True)
+print(f"Saved chart grid to {OUTPUT_PNG}")
 plt.show()
