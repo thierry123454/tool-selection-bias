@@ -46,8 +46,8 @@ class ToolLLaMA:
             gen_params = {
                 "model": "",
                 "prompt": prompt,
-                "temperature": 0,
-                "max_new_tokens": 1024,
+                "temperature": 0.5,
+                "max_new_tokens": 512,
                 "stop": "</s>",
                 "stop_token_ids": None,
                 "echo": False
@@ -74,17 +74,8 @@ class ToolLLaMA:
         print("before_print"+"*"*50)
         for message in self.conversation_history:
             print_obj = f"{message['role']}: {message['content']} "
-            # if "function_call" in message.keys():
-            #     print_obj = print_obj + f"function_call: {message['function_call']}"
             if "function_call" in message.keys():
                 print_obj = print_obj + f"function_call: {message['function_call']}"
-            if 'tool_calls' in message.keys():
-                print_obj = print_obj + f"tool_calls: {message['tool_calls']}"
-                print_obj = print_obj + f"number of tool calls: {len(message['tool_calls'])}"
-            if detailed:
-                print_obj = print_obj + f"function_call: {message['function_call']}"
-                print_obj = print_obj + f"tool_calls: {message['tool_calls']}"
-                print_obj = print_obj + f"function_call_id: {message['function_call_id']}"
             print_obj += ""
             print(
                 colored(
@@ -99,24 +90,20 @@ class ToolLLaMA:
         if self.template == "tool-llama":
             roles = {"human": conv.roles[0], "gpt": conv.roles[1]}
         elif self.template == "tool-llama-single-round" or self.template == "tool-llama-multi-rounds":
-            roles = {"system": conv.roles[0], "user": conv.roles[1], "function": conv.roles[2], "tool": conv.roles[2], "assistant": conv.roles[3]}
+            roles = {"system": conv.roles[0], "user": conv.roles[1], "function": conv.roles[2], "assistant": conv.roles[3]}
 
         self.time = time.time()
         conversation_history = self.conversation_history
-
-        if functions != []:
-            functions = [tool['function'] for tool in functions]
-
-
         prompt = ''
         for message in conversation_history:
             role = roles[message['role']]
             content = message['content']
             if role == "System" and functions != []:
-                content = process_system_message(content, functions=functions)
+                content = process_system_message(content, functions)
             prompt += f"{role}: {content}\n"
         prompt += "Assistant:\n"
-        if tools != []:
+        
+        if functions != []:
             predictions = self.prediction(prompt)
         else:
             predictions = self.prediction(prompt)
@@ -127,18 +114,13 @@ class ToolLLaMA:
 
         # react format prediction
         thought, action, action_input = react_parser(predictions)
-        random_id = ''.join([random.choice(string.ascii_letters + string.digits) for _ in range(8)])
         message = {
             "role": "assistant",
-            "content": predictions,
-            "tool_calls": [{
-                'id': f"call_{random_id}",
-                'type': "function",
-                'function': {
-                    'name': action,
-                    'arguments': action_input
-                }
-            }]
+            "content": thought,
+            "function_call": {
+                "name": action,
+                "arguments": action_input
+            }
         }
         return message, 0, decoded_token_len
 
