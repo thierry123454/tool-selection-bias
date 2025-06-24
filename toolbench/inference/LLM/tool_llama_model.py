@@ -94,7 +94,7 @@ class ToolLLaMA:
             )
         print("end_print"+"*"*50)
 
-    def parse(self, tools, process_id, **args):
+    def parse(self, functions, process_id, **args):
         conv = get_conversation_template(self.template)
         if self.template == "tool-llama":
             roles = {"human": conv.roles[0], "gpt": conv.roles[1]}
