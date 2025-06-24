@@ -6,23 +6,30 @@ import transformers.models.llama.modeling_llama
 from functools import partial
 
 class CondenseRotaryEmbedding(torch.nn.Module):
-    def __init__(self, dim, ratio, max_position_embeddings=2048, base=10000, device=None):
+    def __init__(self, config, ratio, base=10000):
         super().__init__()
-        inv_freq = 1.0 / (base ** (torch.arange(0, dim, 2).float().to(device) / dim))
+        # extract everything from config:
+        dim = config.rotary_dim
+        max_pos = config.max_position_embeddings
+        device = config.device  # or torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+        # now your old logic, adjusted:
+        inv_freq = 1.0 / (
+            base ** (torch.arange(0, dim, 2, device=device).float() / dim)
+        )
         self.register_buffer("inv_freq", inv_freq)
-        
-        # Build here to make `torch.jit.trace` work.
         self.ratio = ratio
-        max_position_embeddings *= ratio
-        print(f"Condensing Positional embeddings from {max_position_embeddings} to {max_position_embeddings // ratio}")
-        self.max_seq_len_cached = max_position_embeddings
-        t = torch.arange(self.max_seq_len_cached, device=self.inv_freq.device, dtype=self.inv_freq.dtype) / ratio
-        freqs = torch.einsum("i,j->ij", t, self.inv_freq)
-        # Different from paper, but it uses a different permutation in order to obtain the same calculation
+
+        # note: you used to multiply max_position_embeddings by ratio
+        max_seq = max_pos * ratio
+        print(f"Condensing Positional embeddings from {max_seq} to {max_seq // ratio}")
+        self.max_seq_len_cached = max_seq
+
+        t = torch.arange(max_seq, device=device, dtype=inv_freq.dtype) / ratio
+        freqs = torch.einsum("i,j->ij", t, inv_freq)
         emb = torch.cat((freqs, freqs), dim=-1)
-        dtype = torch.get_default_dtype()
-        self.register_buffer("cos_cached", emb.cos()[None, None, :, :].to(dtype), persistent=False)
-        self.register_buffer("sin_cached", emb.sin()[None, None, :, :].to(dtype), persistent=False)
+        self.register_buffer("cos_cached", emb.cos()[None, None, :, :], persist=False)
+        self.register_buffer("sin_cached", emb.sin()[None, None, :, :], persist=False)
 
     def forward(self, x, seq_len=None):
         # x: [bs, num_attention_heads, seq_len, head_size]
