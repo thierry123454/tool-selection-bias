@@ -30,14 +30,6 @@ class ToolLLaMA:
         self.template = template
         self.max_sequence_length = max_sequence_length
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=False, model_max_length=self.max_sequence_length)
-        # self.model = AutoModelForCausalLM.from_pretrained(
-        #     model_name_or_path,
-        #     load_in_8bit=True,
-        #     device_map="auto",
-        #     offload_folder="offload_dir",        # where to spill CPU shards
-        #     offload_state_dict=True,             # aggressively offload weights
-        #     torch_dtype=torch.float16,
-        # )
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
             low_cpu_mem_usage=True,
@@ -45,6 +37,7 @@ class ToolLLaMA:
             offload_folder="offload_dir",        # where to spill CPU shards
             offload_state_dict=True,             # aggressively offload weights
             torch_dtype=torch.float16,
+            load_in_8bit=True
         )
         if self.tokenizer.pad_token_id == None:
             self.tokenizer.add_special_tokens({"bos_token": "<s>", "eos_token": "</s>", "pad_token": "<pad>"})
