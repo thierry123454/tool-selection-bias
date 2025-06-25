@@ -13,6 +13,7 @@ STATS_PATHS = {
     "ChatGPT": "api_selection_stats_chatgpt.json",
     "Claude":  "api_selection_stats_claude.json",
     "Gemini":  "api_selection_stats_gemini.json",
+    "DeepSeek":  "api_selection_stats_deepseek.json",
 }
 CLUSTERS_JSON  = "2_generate_clusters_and_refine/duplicate_api_clusters.json"
 OUTPUT_PDF     = "api_selection_distributions_by_model.pdf"
