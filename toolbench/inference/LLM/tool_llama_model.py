@@ -32,8 +32,9 @@ class ToolLLaMA:
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=False, model_max_length=self.max_sequence_length)
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
-            low_cpu_mem_usage=True,
-            device_map={"": device}
+            load_in_8bit=True,                   # <<< quantize to 8-bit on the fly
+            device_map="auto",                   # <<< split weights across CPU & GPU
+            torch_dtype=torch.float16, 
         )
         if self.tokenizer.pad_token_id == None:
             self.tokenizer.add_special_tokens({"bos_token": "<s>", "eos_token": "</s>", "pad_token": "<pad>"})
