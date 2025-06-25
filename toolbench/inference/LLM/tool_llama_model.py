@@ -34,8 +34,8 @@ class ToolLLaMA:
             model_name_or_path,
             load_in_8bit=True,
             device_map="auto",
-            offload_folder="offload_dir",        # where to spill CPU shards
-            offload_state_dict=True,             # aggressively offload weights
+            # offload_folder="offload_dir",        # where to spill CPU shards
+            # offload_state_dict=True,             # aggressively offload weights
             torch_dtype=torch.float16,
         )
         if self.tokenizer.pad_token_id == None:
