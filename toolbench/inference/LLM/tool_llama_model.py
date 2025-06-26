@@ -33,7 +33,7 @@ class ToolLLaMA:
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
             low_cpu_mem_usage=True,
-            # device_map='auto',
+            device_map='auto',
             # offload_folder="offload_dir",        # where to spill CPU shards
             # offload_state_dict=True,             # aggressively offload weights
             # torch_dtype=torch.float16,
