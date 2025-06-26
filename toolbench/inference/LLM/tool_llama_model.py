@@ -43,8 +43,8 @@ class ToolLLaMA:
             self.tokenizer.add_special_tokens({"bos_token": "<s>", "eos_token": "</s>", "pad_token": "<pad>"})
             self.model.resize_token_embeddings(len(self.tokenizer))
         self.use_gpu = (True if device.startswith("cuda") else False)
-        # if (device == "cuda" and not cpu_offloading) or device == "mps":
-        #     self.model.to(device)
+        if (device == "cuda" and not cpu_offloading) or device == "mps":
+            self.model.to(device)
         self.chatio = SimpleChatIO()
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
