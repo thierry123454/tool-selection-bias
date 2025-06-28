@@ -33,14 +33,14 @@ class ToolLLaMA:
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
             device_map="auto",             # shards weights across GPU/CPU
-            load_in_8bit=True,             # bitsandbytes INT8 quant
+            # load_in_8bit=True             # bitsandbytes INT8 quant
             # offload_folder="offload_dir",   # spill CPU shards here
             # offload_state_dict=True,
-            torch_dtype=torch.float16,
+            # torch_dtype=torch.float16,
         )
 
         # 5) Make sure we cache for multi-token generation
-        self.model.config.use_cache = True
+        # self.model.config.use_cache = True
 
         # self.model = torch.compile(self.model)
         self.model.to(device)
@@ -63,8 +63,7 @@ class ToolLLaMA:
                 "max_new_tokens": 512,
                 "stop": "</s>",
                 "stop_token_ids": None,
-                "echo": False,
-                "use_cache": True
+                "echo": False
             }
             generate_stream_func = generate_stream
             output_stream = generate_stream_func(self.model, self.tokenizer, gen_params, "cuda", self.max_sequence_length, force_generate=True)
