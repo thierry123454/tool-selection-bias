@@ -41,7 +41,7 @@ class ToolLLaMA:
 
         # 3) Fuse‐attention kernels (FlashAttention / XFormers)
         # if hasattr(self.model, "enable_xformers_memory_efficient_attention"):
-        #     self.model.enable_xformers_memory_efficient_attention()
+        self.model.enable_xformers_memory_efficient_attention()
 
         # 4) Ahead-of-time compilation (PyTorch 2.0+)
         if hasattr(torch, "compile"):
