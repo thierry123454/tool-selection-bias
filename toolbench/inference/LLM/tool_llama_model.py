@@ -34,8 +34,8 @@ class ToolLLaMA:
             model_name_or_path,
             device_map="auto",             # shards weights across GPU/CPU
             load_in_8bit=True,             # bitsandbytes INT8 quant
-            offload_folder="offload_dir",   # spill CPU shards here
-            offload_state_dict=True,
+            # offload_folder="offload_dir",   # spill CPU shards here
+            # offload_state_dict=True,
             torch_dtype=torch.float16,
         )
 
