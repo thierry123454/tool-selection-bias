@@ -40,8 +40,20 @@ class ToolLLaMA:
         )
 
         # 3) Fuse‐attention kernels (FlashAttention / XFormers)
-        if hasattr(self.model, "enable_xformers_memory_efficient_attention"):
-            self.model.enable_xformers_memory_efficient_attention()
+        # if hasattr(self.model, "enable_xformers_memory_efficient_attention"):
+        #     self.model.enable_xformers_memory_efficient_attention()
+
+        # 4) Ahead-of-time compilation (PyTorch 2.0+)
+        if hasattr(torch, "compile"):
+            # wrap your model in torch.compile to fuse graph
+            self.model = torch.compile(self.model)
+
+        # 5) Make sure we cache for multi-token generation
+        self.model.config.use_cache = True
+
+        # 6) Move to device under inference_mode
+        self.model.to(self.device)
+        self.model.eval()
 
         if self.tokenizer.pad_token_id == None:
             self.tokenizer.add_special_tokens({"bos_token": "<s>", "eos_token": "</s>", "pad_token": "<pad>"})
