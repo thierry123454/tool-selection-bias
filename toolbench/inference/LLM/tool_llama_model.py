@@ -33,7 +33,7 @@ class ToolLLaMA:
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
             device_map="auto",             # shards weights across GPU/CPU
-            # load_in_8bit=True             # bitsandbytes INT8 quant
+            load_in_8bit=True             # bitsandbytes INT8 quant
             # offload_folder="offload_dir",   # spill CPU shards here
             # offload_state_dict=True,
             # torch_dtype=torch.float16,
@@ -43,7 +43,7 @@ class ToolLLaMA:
         # self.model.config.use_cache = True
 
         # self.model = torch.compile(self.model)
-        self.model.to(device)
+        # self.model.to(device)
         self.model.eval()
 
         if self.tokenizer.pad_token_id == None:
