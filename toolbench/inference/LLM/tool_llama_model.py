@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 # coding=utf-8
 import time
+import torch
 from termcolor import colored
 from typing import Optional, List
-import torch
-from typing import Optional
-import torch
 from transformers import (
     AutoTokenizer,
     AutoModelForCausalLM,
@@ -13,56 +11,76 @@ from transformers import (
 from toolbench.utils import process_system_message
 from toolbench.model.model_adapter import get_conversation_template
 from toolbench.inference.utils import SimpleChatIO, generate_stream, react_parser
-import json, string, random
-
 
 class ToolLLaMA:
     def __init__(
-            self, 
-            model_name_or_path: str, 
-            template:str="tool-llama-single-round", 
-            device: str="cuda", 
-            cpu_offloading: bool=False, 
-            max_sequence_length: int=8192
-        ) -> None:
+        self,
+        model_name_or_path: str,
+        template: str = "tool-llama-single-round",
+        device: str = "cuda",
+        max_sequence_length: int = 8192,
+    ):
         super().__init__()
-        self.model_name = model_name_or_path
-        self.template = template
+        self.device = device
         self.max_sequence_length = max_sequence_length
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=False, model_max_length=self.max_sequence_length)
+
+        # 1) Tokenizer
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            model_name_or_path,
+            use_fast=False,
+            model_max_length=self.max_sequence_length,
+        )
+
+        # 2) Low-precision quant + CPU offload
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
-            low_cpu_mem_usage=True,
-            device_map='auto',
-            # offload_folder="offload_dir",        # where to spill CPU shards
-            # offload_state_dict=True,             # aggressively offload weights
-            # torch_dtype=torch.float16,
-            load_in_8bit=True
+            device_map="auto",             # shards weights across GPU/CPU
+            load_in_8bit=True,             # bitsandbytes INT8 quant
+            offload_folder="offload_dir",   # spill CPU shards here
+            offload_state_dict=True,
+            torch_dtype=torch.float16,
         )
-        if self.tokenizer.pad_token_id == None:
-            self.tokenizer.add_special_tokens({"bos_token": "<s>", "eos_token": "</s>", "pad_token": "<pad>"})
-            self.model.resize_token_embeddings(len(self.tokenizer))
-        self.use_gpu = (True if device.startswith("cuda") else False)
-        # if (device == "cuda" and not cpu_offloading) or device == "mps":
-        #     self.model.to(device)
+
+        # 3) Fuse‐attention kernels (FlashAttention / XFormers)
+        if hasattr(self.model, "enable_xformers_memory_efficient_attention"):
+            self.model.enable_xformers_memory_efficient_attention()
+
+        # 4) Ahead-of-time compilation (PyTorch 2.0+)
+        if hasattr(torch, "compile"):
+            # wrap your model in torch.compile to fuse graph
+            self.model = torch.compile(self.model)
+
+        # 5) Make sure we cache for multi-token generation
+        self.model.config.use_cache = True
+
+        # 6) Move to device under inference_mode
+        self.model.to(self.device)
+        self.model.eval()
+
         self.chatio = SimpleChatIO()
+        self.template = template
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
-        with torch.no_grad():
+        # 7) inference_mode to cut autograd overhead
+        with torch.inference_mode():
             gen_params = {
-                "model": "",
                 "prompt": prompt,
                 "temperature": 0.5,
                 "max_new_tokens": 512,
-                "stop": "</s>",
-                "stop_token_ids": None,
-                "echo": False
+                "use_cache": True,
+                "stop": stop or ["</s>"],
             }
-            generate_stream_func = generate_stream
-            output_stream = generate_stream_func(self.model, self.tokenizer, gen_params, "cuda", self.max_sequence_length, force_generate=True)
-            outputs = self.chatio.return_output(output_stream)
-            prediction = outputs.strip()
-        return prediction
+            # your existing streaming helper already passes past_key_values
+            output_stream = generate_stream(
+                self.model,
+                self.tokenizer,
+                gen_params,
+                self.device,
+                self.max_sequence_length,
+                force_generate=True,
+            )
+            out = self.chatio.return_output(output_stream)
+        return out.strip()
         
     def add_message(self, message):
         self.conversation_history.append(message)
