@@ -52,7 +52,7 @@ class ToolLLaMA:
         self.model.config.use_cache = True
 
         # 6) Move to device under inference_mode
-        self.model.to(self.device)
+        self.model.to(device)
         self.model.eval()
 
         if self.tokenizer.pad_token_id == None:
