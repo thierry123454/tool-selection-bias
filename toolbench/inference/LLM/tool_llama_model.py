@@ -39,20 +39,9 @@ class ToolLLaMA:
             torch_dtype=torch.float16,
         )
 
-        # 3) Fuse‐attention kernels (FlashAttention / XFormers)
-        # if hasattr(self.model, "enable_xformers_memory_efficient_attention"):
-        self.model.enable_xformers_memory_efficient_attention()
-
-        # 4) Ahead-of-time compilation (PyTorch 2.0+)
-        if hasattr(torch, "compile"):
-            # wrap your model in torch.compile to fuse graph
-            self.model = torch.compile(self.model)
-
         # 5) Make sure we cache for multi-token generation
         self.model.config.use_cache = True
 
-        # 6) Move to device under inference_mode
-        self.model.to(device)
         self.model.eval()
 
         if self.tokenizer.pad_token_id == None:
@@ -64,7 +53,7 @@ class ToolLLaMA:
         self.chatio = SimpleChatIO()
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
-        with torch.no_grad():
+        with torch.inference_mode():
             gen_params = {
                 "model": "",
                 "prompt": prompt,
@@ -72,7 +61,8 @@ class ToolLLaMA:
                 "max_new_tokens": 512,
                 "stop": "</s>",
                 "stop_token_ids": None,
-                "echo": False
+                "echo": False,
+                "use_cache": True
             }
             generate_stream_func = generate_stream
             output_stream = generate_stream_func(self.model, self.tokenizer, gen_params, "cuda", self.max_sequence_length, force_generate=True)
