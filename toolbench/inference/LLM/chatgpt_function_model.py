@@ -83,7 +83,7 @@ class ChatGPTFunction:
         conversation_history = self.conversation_history
         for _ in range(self.TRY_TIME):
             if _ != 0:
-                time.sleep(15)
+                time.sleep(5)
             if functions != []:
                 json_data = chat_completion_request(
                     self.openai_key, conversation_history, functions=functions,process_id=process_id, key_pos=key_pos,**args
