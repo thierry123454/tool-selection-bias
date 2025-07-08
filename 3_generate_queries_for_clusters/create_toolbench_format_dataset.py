@@ -3,6 +3,7 @@ import json
 import os
 import unicodedata
 import re
+import random
 
 # ─── CONFIG ────────────────────────────────────────────────────────────────
 CLUSTERS_PATH    = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
@@ -11,7 +12,8 @@ ORIGINAL_QUERIES = "../data/instruction/G1_query.json"
 ORIGINAL_QUERIES_2 = "../data/instruction/G2_query.json"
 ORIGINAL_QUERIES_3 = "../data/instruction/G3_query.json"
 TOOLENV_ROOT       = "../data/toolenv/tools"
-OUTPUT_PATH      = "toolbench_bias_queries.json"
+RANDOM_SHUFFLE = True
+OUTPUT_PATH      = f"toolbench_bias_queries{'_random' if RANDOM_SHUFFLE else ''}.json"
 # ──────────────────────────────────────────────────────────────────────────
 
 def load_file(path):
@@ -114,10 +116,16 @@ def main():
         for query_text in queries:
             for i in range(len(relevant_apis_base)):
                 # Place endpoint i at the front; keep the others in the same relative order
-                permuted_relevant = (
-                    relevant_apis_base[i:] +
-                    relevant_apis_base[:i]
-                )
+
+                if RANDOM_SHUFFLE:
+                    permuted_relevant = relevant_apis_base.copy()
+                    random.shuffle(permuted_relevant)
+                else:
+                    permuted_relevant = (
+                        relevant_apis_base[i:] +
+                        relevant_apis_base[:i]
+                    )
+
                 # Now collect the corresponding full definitions in the same permuted order
                 permuted_api_list = []
                 for tool, api_name in permuted_relevant:
