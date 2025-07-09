@@ -12,7 +12,7 @@ ORIGINAL_QUERIES = "../data/instruction/G1_query.json"
 ORIGINAL_QUERIES_2 = "../data/instruction/G2_query.json"
 ORIGINAL_QUERIES_3 = "../data/instruction/G3_query.json"
 TOOLENV_ROOT       = "../data/toolenv/tools"
-RANDOM_SHUFFLE = True
+RANDOM_SHUFFLE = False
 OUTPUT_PATH      = f"toolbench_bias_queries{'_random' if RANDOM_SHUFFLE else ''}.json"
 # ──────────────────────────────────────────────────────────────────────────
 
