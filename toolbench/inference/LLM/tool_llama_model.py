@@ -30,11 +30,11 @@ class ToolLLaMA:
         self.template = template
         self.max_sequence_length = max_sequence_length
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=False, model_max_length=self.max_sequence_length)
-        print(f"MODEL!!! {model_name_or_path[:8]}")
+        print(f"MODEL!!! {model_name_or_path[:9]}")
         # MODEL!!! facebook/opt-1.3b
         # MODEL!!! ToolBench/ToolLLaMA-2-7b-v2
         
-        if model_name_or_path[:8] == "ToolBench":
+        if model_name_or_path[:9] == "ToolBench":
             self.model = AutoModelForCausalLM.from_pretrained(
                 model_name_or_path,
                 torch_dtype=torch.bfloat16,
