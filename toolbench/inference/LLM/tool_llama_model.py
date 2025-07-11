@@ -72,6 +72,7 @@ class ToolLLaMA:
             output_stream = generate_stream_func(self.model, self.tokenizer, gen_params, "cuda", self.max_sequence_length, force_generate=True)
             outputs = self.chatio.return_output(output_stream)
             prediction = outputs.strip()
+            print(f"Output by model: {prediction}")
         return prediction
         
     def add_message(self, message):
