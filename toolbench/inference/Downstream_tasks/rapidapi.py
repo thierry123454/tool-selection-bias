@@ -431,12 +431,12 @@ class pipeline_runner:
         method = args.method
         backbone_model = self.get_backbone_model()
         white_list = get_white_list(args.tool_root_dir)
-        print(f"[DEBUG] white_list has {len(white_list)} entries:", list(white_list.keys())[:10])
+        # print(f"[DEBUG] white_list has {len(white_list)} entries:", list(white_list.keys())[:10])
         task_list = []
         querys = json.load(open(query_dir, "r"))
-        print(f"[DEBUG] loaded {len(querys)} queries from {query_dir}")
+        # print(f"[DEBUG] loaded {len(querys)} queries from {query_dir}")
         for query_id, data_dict in enumerate(querys):
-            print(f"[DEBUG] considering query #{query_id}: keys = {list(data_dict.keys())}")
+            # print(f"[DEBUG] considering query #{query_id}: keys = {list(data_dict.keys())}")
             if "query_id" in data_dict:
                 query_id = data_dict["query_id"]
             if "api_list" in data_dict:
@@ -448,7 +448,7 @@ class pipeline_runner:
                 tool_des = [[cont["standard_tool_name"], cont["description"]] for cont in tool_des]
             else:
                 tool_des = None
-            print(f"[DEBUG] adding task for query {query_id}")
+            # print(f"[DEBUG] adding task for query {query_id}")
             task_list.append((method, backbone_model, query_id, data_dict, args, answer_dir, tool_des))
         return task_list
     
