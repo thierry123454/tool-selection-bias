@@ -30,6 +30,7 @@ class ToolLLaMA:
         self.template = template
         self.max_sequence_length = max_sequence_length
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=False, model_max_length=self.max_sequence_length)
+        print(f"MODEL!!! {model_name_or_path}")
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
             torch_dtype=torch.bfloat16,
