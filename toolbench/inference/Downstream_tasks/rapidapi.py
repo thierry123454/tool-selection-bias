@@ -10,6 +10,7 @@ from toolbench.inference.LLM.chatgpt_function_model import ChatGPTFunction
 from toolbench.inference.LLM.davinci_model import Davinci
 from toolbench.inference.LLM.claude_model import Claude
 from toolbench.inference.LLM.deepseek_model import DeepSeek
+from toolbench.inference.LLM.chatgpt_model import ChatGPT
 from toolbench.inference.LLM.gemini_model import Gemini
 from toolbench.inference.LLM.tool_llama_lora_model import ToolLLaMALoRA
 from toolbench.inference.LLM.tool_llama_model import ToolLLaMA
@@ -456,6 +457,9 @@ class pipeline_runner:
         if backbone_model == "chatgpt_function":
             model = "gpt-3.5-turbo"
             llm_forward = ChatGPTFunction(model=model, openai_key=openai_key)
+        if backbone_model == "chatgpt":
+            model = "gpt-3.5-turbo"
+            llm_forward = ChatGPT(model=model, openai_key=openai_key)
         elif backbone_model == "davinci":
             model = "davinci-002"
             llm_forward = Davinci(model=model, openai_key=openai_key)

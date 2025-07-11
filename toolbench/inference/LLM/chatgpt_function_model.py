@@ -28,7 +28,7 @@ def chat_completion_request(key, messages, functions=None,function_call=None,key
     if function_call is not None:
         json_data.update({"function_call": function_call})
     
-    
+    print("──> OpenAI payload:\n", json.dumps(json_data, indent=2))
     client = OpenAI(api_key=key, base_url="https://api.openai.com/v1/")
     
     try:

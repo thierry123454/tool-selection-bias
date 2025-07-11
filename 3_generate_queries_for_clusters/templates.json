@@ -1,0 +1,38 @@
+{
+  "3": [
+    "Get the latest news headlines for {country}.",
+    "Fetch the top {topic} stories in {country}.",
+    "Show me current {topic} news in {country}.",
+    "Retrieve top headlines about {topic} in {country}.",
+    "Find the most recent {category} news articles in {country}.",
+    "Get breaking news in {country}.",
+    "Fetch the latest {category} headlines for {country}.",
+    "Show top news in {country}.",
+    "Retrieve recent articles relating to {topic} for {country}.",
+    "Get current headlines in the {category} category for {country}."
+  ],
+  "4": [
+    "What is the geolocation of IP address {ip}?",
+    "Fetch the coordinate information for {ip}.",
+    "Retrieve the latitude and longitude for IP {ip}.",
+    "Get the coordinate data associated with {ip}.",
+    "Look up the geolocation details for {ip}.",
+    "Show detailed location info (lat, long) for IP {ip}.",
+    "Find the geographic coordinates of IP address {ip}.",
+    "What's the geolocation for IP {ip}?",
+    "Retrieve full geolocation for IP {ip}.",
+    "Provide the location details for IP address {ip}."
+  ],
+  "10": [
+    "Get the 10-day weather forecast for coordinates {latitude},{longitude}.",
+    "Fetch the 12-day weather summary for the point at latitude {latitude} and longitude {longitude}.",
+    "Show the forecast for the next week at {latitude},{longitude}.",
+    "Retrieve the weather forecast for the upcoming 5 days at {latitude},{longitude}.",
+    "Get the extended two-week weather outlook for the location {latitude},{longitude}.",
+    "Fetch the next six days of weather data for coordinates {latitude},{longitude}.",
+    "Show the thirteen day weather forecast for {latitude},{longitude}.",
+    "Retrieve daily predictions for the next 3 days at {latitude},{longitude}.",
+    "Get the weather forecast 7 days ahead for the point {latitude},{longitude}.",
+    "Fetch a one week weather forecast for {latitude},{longitude}."
+  ]
+}

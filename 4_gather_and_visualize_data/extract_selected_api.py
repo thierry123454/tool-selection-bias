@@ -15,7 +15,8 @@ ANSWER_DIRS = {
     "claude":  "../data_bias/answer_claude",
     "gemini":  "../data_bias/answer_gemini",
     "deepseek":  "../data_bias/answer_deepseek",
-    "chatgpt_random":  "../data_bias/answer_chatgpt_random"
+    "chatgpt_random":  "../data_bias/answer_chatgpt_random",
+    "toolllama":  "../data_bias/answer_toolllama"
 }
 # ────────────────────────────────────────────────────────
 

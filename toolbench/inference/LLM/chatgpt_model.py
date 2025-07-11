@@ -11,22 +11,18 @@ from toolbench.inference.utils import SimpleChatIO, react_parser
 from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ZEROSHOT
 
 
-class DeepSeek:
-    def __init__(self, model="deepseek-chat", deepseek_key="") -> None:
+class ChatGPT:
+    def __init__(self, model="gpt-3.5-turbo", openai_key="") -> None:
         super().__init__()
         self.model = model
-        self.openai_key = deepseek_key
-        self.client = OpenAI(api_key=deepseek_key, base_url="https://api.deepseek.com")
+        self.openai_key = openai_key
+        self.client = OpenAI(api_key=openai_key)
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
         max_try = 10
         while True:
             try:
-                print("──> DeepSeek prompt:\n", prompt)
-                print("──> DeepSeek messages:\n", json.dumps([
-                    {"role":"system", "content": ""},
-                    {"role":"user",   "content": prompt},
-                ], indent=2))
+                print("──> ChatGPT prompt:\n", prompt)
                 response = self.client.chat.completions.create(
                     model=self.model,
                     messages=[
@@ -139,6 +135,6 @@ class DeepSeek:
 
 
 if __name__ == "__main__":
-    llm = Davinci()
+    llm = ChatGPT()
     result = llm.prediction("How old are you?")
     print(result)

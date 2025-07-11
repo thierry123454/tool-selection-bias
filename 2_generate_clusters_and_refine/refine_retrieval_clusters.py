@@ -1,12 +1,12 @@
 import json
-import openai
+from openai import OpenAI
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import time
 import os
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=os.getenv("OPENAI_KEY"))
 
 API_META_PATH = "../1_endpoint_metadata_and_embed/api_metadata.json"
 EMBED_PATH    = "../1_endpoint_metadata_and_embed/embeddings_combined_openai.npy"
@@ -42,8 +42,8 @@ def load_records_and_texts(meta_path):
 
 def embed_query(text, model=EMBED_MODEL):
     """Call OpenAI to embed a single text."""
-    resp = openai.Embedding.create(model=model, input=[text])
-    return np.array(resp["data"][0]["embedding"], dtype=np.float32).reshape(1, -1)
+    resp = client.embeddings.create(model=model, input=[text])
+    return np.array(resp.data[0].embedding, dtype=np.float32).reshape(1, -1)
 
 def main():
     # load clusters, metadata, embeddings

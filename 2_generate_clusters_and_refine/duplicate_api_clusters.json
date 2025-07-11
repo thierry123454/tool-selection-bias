@@ -1,6 +1,14 @@
 [
   [
     {
+      "category": "Location",
+      "tool": "GoApis Geocoding API",
+      "tool_desc": "Goapis Geocoding API is an efficient and affordable alternative to Google Maps Geocoding API.",
+      "api_name": "Geocding",
+      "api_desc": "Geocoding is the process of converting a physical address into geographic coordinates, such as latitude and longitude. It allows for the identification of a specific location on the Earth's surface, making it possible to map and analyze data spatially",
+      "required_parameters": []
+    },
+    {
       "category": "Mapping",
       "tool": "Geocode - Forward and Reverse",
       "tool_desc": "Forward and reverse geocoding using Google Geocoding API.",
@@ -14,14 +22,6 @@
           "default": "2795 Hastings St, Vancouver, BC V5K 1Z8"
         }
       ]
-    },
-    {
-      "category": "Location",
-      "tool": "GoApis Geocoding API",
-      "tool_desc": "Goapis Geocoding API is an efficient and affordable alternative to Google Maps Geocoding API.",
-      "api_name": "Geocding",
-      "api_desc": "Geocoding is the process of converting a physical address into geographic coordinates, such as latitude and longitude. It allows for the identification of a specific location on the Earth's surface, making it possible to map and analyze data spatially",
-      "required_parameters": []
     },
     {
       "category": "Tools",
@@ -48,10 +48,10 @@
     },
     {
       "category": "Location",
-      "tool": "Geocoder - United States Census Bureau",
-      "tool_desc": "Census geocoder provides interactive & programmatic (REST) access to users interested in matching addresses to geographic locations and entities containing those addresses.",
-      "api_name": "Geocoding and Geolookup for an address",
-      "api_desc": "Returns a geocode and a geolookup for a specified address"
+      "tool": "Geokeo Forward Geocoding",
+      "tool_desc": "Geocoding Api for Forward geocoding and Reverse Geocoding with 2500 free api requests",
+      "api_name": "search.php",
+      "api_desc": "Blazing fast geocoding open service with world wide coverage and 24x7 Support.Quickly start deploying your apps with our affordable and accurate geocoding api.Support for all languages java, python, php, c, c++, React, Angular etc.Sign up without any credit card and get 2500 free api requests daily."
     }
   ],
   [
@@ -152,9 +152,23 @@
       "category": "Data",
       "tool": "Real-Time News Data",
       "tool_desc": "Extremely Fast and Simple API to get top news globally or per topic and search for news by query and geographic area in real-time.",
-      "api_name": "Top Headlines",
-      "api_desc": "Get the latest news headlines/top stories for a country.",
-      "required_parameters": []
+      "api_name": "Topic Headlines",
+      "api_desc": "Get the latest news headlines for a topic.",
+      "required_parameters": [],
+      "optional_parameters": [
+        {
+          "name": "lang",
+          "type": "STRING",
+          "description": "The language to use for the results, specified as a 2-letter language code - see [ISO 639-1 alpha-2](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).\n**Default**: `en`.",
+          "default": "en"
+        },
+        {
+          "name": "country",
+          "type": "STRING",
+          "description": "Country code. See [all available country codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).\n**Default:** `US`.",
+          "default": "US"
+        }
+      ]
     },
     {
       "category": "News_Media",
@@ -181,11 +195,11 @@
       "required_parameters": []
     },
     {
-      "category": "News_Media",
-      "tool": "Google News",
-      "tool_desc": "Provide real-time news and articles sourced from Google News.",
-      "api_name": "World",
-      "api_desc": "This endpoint is used to get world news from Google News. The optional parameter that can be used is \"lr\" to determine the region"
+      "category": "Data",
+      "tool": "Web Search",
+      "tool_desc": "Billions of webpages, images and news with a single API call.",
+      "api_name": "newsSearch",
+      "api_desc": "Get news articles relevant for a given query."
     }
   ],
   [
@@ -305,26 +319,18 @@
       ]
     },
     {
-      "category": "Data",
-      "tool": "Domain Info",
-      "tool_desc": "This API returns informations on any domain online.",
-      "api_name": "Check domain info",
-      "api_desc": "This endpoint returns the domain information.",
-      "required_parameters": [
-        {
-          "name": "domain",
-          "type": "string",
-          "description": "",
-          "default": ""
-        }
-      ]
-    },
-    {
       "category": "Database",
       "tool": "WHOIS v2",
       "tool_desc": "WHOIS API (v2) returns well-parsed WHOIS records with fields in XML and JSON formats for any IPv4, IPv6 address, domain name, or email.",
       "api_name": "WHOIS lookup v2",
       "api_desc": "WHOIS lookup in JSON or XML, ver. 2"
+    },
+    {
+      "category": "Tools",
+      "tool": "Whois ",
+      "tool_desc": "A 100% free and easy to use API for WHOIS Lookup",
+      "api_name": "whois",
+      "api_desc": "Use this endpoint for fetch whois data"
     }
   ],
   [
@@ -576,14 +582,6 @@
     },
     {
       "category": "Tools",
-      "tool": "QR Code Generator Pro",
-      "tool_desc": "Easily generate QR codes for urls, and receive a downloadable png image file",
-      "api_name": "Generate QR Code",
-      "api_desc": "Easily convert any URL into a QR code that can be downloaded and printed.",
-      "required_parameters": []
-    },
-    {
-      "category": "Tools",
       "tool": "QR Code Generator_v14",
       "tool_desc": "Simple And Lightweight Api to Generate QR Code From Text",
       "api_name": "Generate QR Code",
@@ -611,24 +609,16 @@
           "default": "sachin"
         }
       ]
+    },
+    {
+      "category": "Media",
+      "tool": "Easy QR Code Generator",
+      "tool_desc": "Turn any URL or even text into a downloadable and printable QR code with ease.Simply provide a URL or TEXT and the API will generate a QR Code for you.",
+      "api_name": "Create QR Code",
+      "api_desc": "Turn any URL or even text into a downloadable and printable QR code"
     }
   ],
   [
-    {
-      "category": "Weather",
-      "tool": "WeatherAPI.com",
-      "tool_desc": "WeatherAPI.com is a powerful fully managed free weather and geolocation API provider that provides extensive APIs that range from the weather forecast, historical weather, future weather, weather alerts, air quality data, IP lookup, and astronomy through to sports, time zone, and geolocation.",
-      "api_name": "Forecast Weather API",
-      "api_desc": "Forecast weather API method returns upto next 14 day weather forecast and weather alert as json. It contains astronomy data, day weather forecast and hourly interval weather information for a given city.",
-      "required_parameters": [
-        {
-          "name": "q",
-          "type": "STRING",
-          "description": "Query parameter based on which data is sent back. It could be following:\n\nLatitude and Longitude (Decimal degree) e.g: q=48.8567,2.3508\ncity name e.g.: q=Paris\nUS zip e.g.: q=10001\nUK postcode e.g: q=SW1\nCanada postal code e.g: q=G2J\nmetar:<metar code> e.g: q=metar:EGLL\niata:<3 digit airport code> e.g: q=iata:DXB\nauto:ip IP lookup e.g: q=auto:ip\nIP address (IPv4 and IPv6 supported) e.g: q=100.0.0.1",
-          "default": "London"
-        }
-      ]
-    },
     {
       "category": "Weather",
       "tool": "Forecast",
@@ -652,28 +642,16 @@
     },
     {
       "category": "Weather",
-      "tool": "Weather with AI",
-      "tool_desc": "Global weather forecast powered by Artificial Intelligence.",
-      "api_name": "Get Weather",
-      "api_desc": "Return weather in current, hourly and daily info.",
+      "tool": "WeatherAPI.com",
+      "tool_desc": "WeatherAPI.com is a powerful fully managed free weather and geolocation API provider that provides extensive APIs that range from the weather forecast, historical weather, future weather, weather alerts, air quality data, IP lookup, and astronomy through to sports, time zone, and geolocation.",
+      "api_name": "Forecast Weather API",
+      "api_desc": "Forecast weather API method returns upto next 14 day weather forecast and weather alert as json. It contains astronomy data, day weather forecast and hourly interval weather information for a given city.",
       "required_parameters": [
         {
-          "name": "version",
-          "type": "string",
-          "description": "",
-          "default": "v1"
-        },
-        {
-          "name": "lng",
-          "type": "NUMBER",
-          "description": "Geographical coordinates of the location (longitude)",
-          "default": "-73.999257"
-        },
-        {
-          "name": "lat",
-          "type": "NUMBER",
-          "description": "Geographical coordinates of the location (latitude)",
-          "default": "40.723558"
+          "name": "q",
+          "type": "STRING",
+          "description": "Query parameter based on which data is sent back. It could be following:\n\nLatitude and Longitude (Decimal degree) e.g: q=48.8567,2.3508\ncity name e.g.: q=Paris\nUS zip e.g.: q=10001\nUK postcode e.g: q=SW1\nCanada postal code e.g: q=G2J\nmetar:<metar code> e.g: q=metar:EGLL\niata:<3 digit airport code> e.g: q=iata:DXB\nauto:ip IP lookup e.g: q=auto:ip\nIP address (IPv4 and IPv6 supported) e.g: q=100.0.0.1",
+          "default": "London"
         }
       ]
     },
@@ -712,6 +690,13 @@
           "default": "38.5"
         }
       ]
+    },
+    {
+      "category": "Weather",
+      "tool": "weather forecast 14 days",
+      "tool_desc": "weather forecast world wide  14 days 6hourly",
+      "api_name": "Get forecastdata by lat/lon",
+      "api_desc": "get forecast for 14 days for the location Lat/Lon"
     }
   ]
 ]
