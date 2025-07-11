@@ -480,7 +480,7 @@ class pipeline_runner:
         if method.startswith("CoT"):
             passat = int(method.split("@")[-1])
             print(llm_forward)
-            chain = single_chain(llm=llm_forward, io_func=env,process_id=process_id)
+            chain = single_chain(llm=llm_forward, io_func=env, system_prompt=self.args.system_prompt, process_id=process_id)
             print("starting chain")
             result = chain.start(
                                 pass_at=passat,

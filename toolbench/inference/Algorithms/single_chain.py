@@ -1,18 +1,22 @@
 import re
 from Tree.Tree import my_tree, tree_node
-from Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION, FORMAT_INSTRUCTIONS_USER_FUNCTION
+from Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION, \
+                                  FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_SIM, \
+                                  FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ADJ, \
+                                  FORMAT_INSTRUCTIONS_USER_FUNCTION
 from Algorithms.base_search import base_search_method
 from copy import deepcopy
 
 class single_chain(base_search_method):
     """Implement of CoT method
     """
-    def __init__(self,llm,io_func,extra_prefix="",process_id=0,start_message_list=None):
+    def __init__(self,llm,io_func,extra_prefix="",system_prompt="",process_id=0,start_message_list=None):
         """extra_prefix and start_message_list is used in Reflection Algo"""
         super(single_chain, self).__init__(llm,io_func, process_id, callbacks=None)
         self.io_func = io_func
         self.llm = llm
         self.extra_prefix = extra_prefix
+        self.system_prompt = system_prompt
         self.start_message_list = start_message_list
         self.process_id = process_id
 
@@ -94,9 +98,15 @@ class single_chain(base_search_method):
 
 
     def do_chain(self,now_node,single_chain_max_step):
+        system_prompt = self.system_prompt or "base"
 
         if self.start_message_list == None:
-            system = FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION
+            if system_prompt == "base":
+                system = FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION
+            elif system_prompt == "similar":
+                system = FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_SIM
+            else:
+                system = FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ADJ
             system = system.replace("{task_description}",self.io_func.task_description)
             self.tree.root.messages.append({"role":"system","content":system})
 

@@ -38,6 +38,8 @@ class Claude:
                         {"role": "user",   "content": prompt}
                     ],
                     max_tokens=512,
+                    temperature=0.5,
+                    top_p=1.0,
                     stop_sequences=[HUMAN_PROMPT],          # halt when Claude would expect a human turn
                 )
                 break
