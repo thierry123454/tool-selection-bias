@@ -457,7 +457,7 @@ class pipeline_runner:
         if backbone_model == "chatgpt_function":
             model = "gpt-3.5-turbo"
             llm_forward = ChatGPTFunction(model=model, openai_key=openai_key)
-        if backbone_model == "chatgpt":
+        elif backbone_model == "chatgpt":
             model = "gpt-3.5-turbo"
             llm_forward = ChatGPT(model=model, openai_key=openai_key)
         elif backbone_model == "davinci":
@@ -479,6 +479,7 @@ class pipeline_runner:
         
         if method.startswith("CoT"):
             passat = int(method.split("@")[-1])
+            print(llm_forward)
             chain = single_chain(llm=llm_forward, io_func=env,process_id=process_id)
             print("starting chain")
             result = chain.start(

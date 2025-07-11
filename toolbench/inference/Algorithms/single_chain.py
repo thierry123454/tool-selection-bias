@@ -110,6 +110,7 @@ class single_chain(base_search_method):
         now_node = self.tree.root
         while True:
             # recursively parse message into nodes
+            print(self.llm)
             self.llm.change_messages(now_node.messages)
             new_message,error_code,total_tokens = self.llm.parse(functions=self.io_func.functions,process_id=self.process_id)
             self.total_tokens += total_tokens

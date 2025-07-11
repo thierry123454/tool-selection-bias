@@ -11,6 +11,7 @@ from transformers.generation.logits_process import (
     TopKLogitsWarper,
     TopPLogitsWarper,
 )
+import re
 
 # For DFS
 def softmax_bias(answers,temperature=1):
@@ -31,11 +32,54 @@ def compute_epsilon_new_node(p_new_node):
     return 1000 + delta
 
 # For prediction parsing, into ReACT format
-def react_parser(string):
-    thought = [string[string.find("Thought: ") + len("Thought: "): string.find("\nAction: ")]]
-    action = [string[string.find("Action: ") + len("Action: "): string.find("\nAction Input: ")]]
-    action_input = [string[string.find("Action Input: ") + len("Action Input: "):]]
-    return thought[0], action[0], action_input[0]
+# def react_parser(string):
+#     thought = [string[string.find("Thought: ") + len("Thought: "): string.find("\nAction: ")]]
+#     action = [string[string.find("Action: ") + len("Action: "): string.find("\nAction Input: ")]]
+#     action_input = [string[string.find("Action Input: ") + len("Action Input: "):]]
+#     return thought[0], action[0], action_input[0]
+
+def react_parser(text, function_names):
+    """
+    A more forgiving parser for the “Thought / Action / Action Input” ReAct format.
+    1) Finds the Thought block (everything after “Thought” up to the next “Action”)
+    2) Finds the first token after “Action” that looks like a function name
+       (fallback: picks the first known function name that appears in the text)
+    3) Finds the JSON blob after “Action Input” (fallback: grabs the last {...} in the text)
+    """
+    # normalize whitespace
+    t = text.strip().replace('\r\n', '\n')
+
+    # 1) Thought
+    m = re.search(r'(?i)Thought\s*[:\-]?\s*(.*?)\n(?i:Action\b)', t, re.DOTALL)
+    thought = m.group(1).strip() if m else ""
+
+    # 2) Action
+    action = ""
+    action_split = re.split(r'(?i)Action\s*[:\-]?\s*', t, maxsplit=1)
+    if len(action_split) > 1:
+        tail = action_split[1]
+        for fn in function_names:
+            if re.search(r'\b' + re.escape(fn) + r'\b', tail):
+                action = fn
+                break
+
+    # fallback: if nothing found, scan the whole text
+    if not action:
+        for fn in function_names:
+            if re.search(r'\b' + re.escape(fn) + r'\b', t):
+                action = fn
+                break
+
+    # 3) Action Input JSON
+    m = re.search(r'(?i)Action\s*Input\s*[:\-]?\s*({.*})', t, re.DOTALL)
+    if m:
+        action_input = m.group(1).strip()
+    else:
+        # fallback: grab the last {...} in the entire output
+        all_jsons = re.findall(r'(\{.*\})', t, re.DOTALL)
+        action_input = all_jsons[-1].strip() if all_jsons else ""
+
+    return thought, action, action_input
 
 # For toolllama's predictions 
 def prepare_logits_processor(

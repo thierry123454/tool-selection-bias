@@ -7,6 +7,7 @@ import random
 import requests
 from typing import Optional
 from toolbench.model.model_adapter import get_conversation_template
+from toolbench.utils import process_system_message
 from toolbench.inference.utils import SimpleChatIO, react_parser
 from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ZEROSHOT
 
@@ -43,7 +44,10 @@ class Gemini:
                 resp = requests.post(self.endpoint, json=body, timeout=15)
                 j = resp.json()
                 result = j["candidates"][0]["content"]["parts"][0]["text"]
-                usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+                # usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+
+                print("──> Gemini prompt:\n", prompt)
+                print("──> Gemini response:\n", result)
                 break
             except Exception as e:
                 print(e)
@@ -52,7 +56,7 @@ class Gemini:
                     result = "Exceed max retry times. Please check your davinci api calling."
                     break
 
-        return result, usage
+        return result
         
     def add_message(self, message):
         self.conversation_history.append(message)
@@ -82,50 +86,32 @@ class Gemini:
         print("end_print"+"*"*50)
 
     def parse(self,functions,process_id,**args):
-        conv = get_conversation_template("tool-llama-single-round")
-        roles = {"system": conv.roles[0], "user": conv.roles[1], "function": conv.roles[2], "assistant": conv.roles[3]}
+        template = "tool-llama-single-round"
+        conv = get_conversation_template(template)
+        if template == "tool-llama":
+            roles = {"human": conv.roles[0], "gpt": conv.roles[1]}
+        elif template == "tool-llama-single-round" or template == "tool-llama-multi-rounds":
+            roles = {"system": conv.roles[0], "user": conv.roles[1], "function": conv.roles[2], "assistant": conv.roles[3]}
+
         conversation_history = self.conversation_history
-        question = ''
+        prompt = ''
         for message in conversation_history:
             role = roles[message['role']]
             content = message['content']
-            if role == "User":
-                question = content
-                break
-        func_str = ""
-        func_list = []
-        for function_dict in functions:
-            param_str = ""
-            api_name = function_dict["name"]
-            func_list.append(api_name)
-            if "Finish" in api_name:
-                param_str = f'"return_type": string, "final_answer": string, '
-                api_desc = "If you believe that you have obtained a result that can answer the task, please call this function to provide the final answer. ALWAYS call this function at the end of your attempt to answer the question finally."
-                func_str += f"{api_name}: {api_desc}. Your input should be a json (args json schema): {param_str} The Action to trigger this API should be {api_name} and the input parameters should be a json dict string. Pay attention to the type of parameters.\n\n"
-            else:
-                api_desc = function_dict["description"][function_dict["description"].find("The description of this function is: ")+len("The description of this function is: "):]
-                for param_name in function_dict["parameters"]["properties"]:
-                    data_type = function_dict["parameters"]["properties"][param_name]["type"]
-                    param_str += f'"{param_name}": {data_type}, '
-                param_str = "{{" + param_str + "}}"
-                func_str += f"{api_name}: {api_desc}. Your input should be a json (args json schema): {param_str} The Action to trigger this API should be {api_name} and the input parameters should be a json dict string. Pay attention to the type of parameters.\n\n"
-        func_list = str(func_list)
-        prompt = FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ZEROSHOT.replace("{func_str}", func_str).replace("{func_list}", func_list).replace("{func_list}", func_list).replace("{question}", question)
-        prompt = prompt.replace("{{", "{").replace("}}", "}")
-        for message in conversation_history:
-            role = roles[message['role']]
-            content = message['content']
-            if role == "Assistant":
-                prompt += f"\n{content}\n"
-            elif role == "Function":
-                prompt += f"Observation: {content}\n"
-        if functions != []:
-            predictions, usage = self.prediction(prompt)
-        else:
-            predictions, usage = self.prediction(prompt)
+            if role == "System" and functions != []:
+                content = process_system_message(content, functions)
+            prompt += f"{role}: {content}\n"
+        prompt += "Assistant:\n"
         
+        if functions != []:
+            predictions = self.prediction(prompt)
+        else:
+            predictions = self.prediction(prompt)
+
+        function_names = [fn["name"] for fn in functions]
+
         # react format prediction
-        thought, action, action_input = react_parser(predictions)
+        thought, action, action_input = react_parser(predictions, function_names)
         message = {
             "role": "assistant",
             "content": thought,
@@ -134,7 +120,7 @@ class Gemini:
                 "arguments": action_input
             }
         }
-        return message, 0, usage["total_tokens"]
+        return message, 0, 0
 
 
 if __name__ == "__main__":

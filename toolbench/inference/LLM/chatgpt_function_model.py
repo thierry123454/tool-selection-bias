@@ -28,7 +28,7 @@ def chat_completion_request(key, messages, functions=None,function_call=None,key
     if function_call is not None:
         json_data.update({"function_call": function_call})
     
-    print("──> OpenAI payload:\n", json.dumps(json_data, indent=2))
+    print("──> ChatGPT prompt:\n", use_messages)
     client = OpenAI(api_key=key, base_url="https://api.openai.com/v1/")
     
     try:
@@ -36,8 +36,8 @@ def chat_completion_request(key, messages, functions=None,function_call=None,key
             **json_data,
         )
         json_data = openai_response.model_dump()
+        print("──> ChatGPT response:\n", json_data)
         return json_data 
-
     except Exception as e:
         print("Unable to generate ChatCompletion response")
         print(f"OpenAI calling Exception: {e}")
