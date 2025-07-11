@@ -30,13 +30,24 @@ class ToolLLaMA:
         self.template = template
         self.max_sequence_length = max_sequence_length
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=False, model_max_length=self.max_sequence_length)
-        print(f"MODEL!!! {model_name_or_path}")
-        self.model = AutoModelForCausalLM.from_pretrained(
-            model_name_or_path,
-            torch_dtype=torch.bfloat16,
-            device_map="auto",
-            low_cpu_mem_usage=True,
-        )
+        print(f"MODEL!!! {model_name_or_path[:8]}")
+        # MODEL!!! facebook/opt-1.3b
+        # MODEL!!! ToolBench/ToolLLaMA-2-7b-v2
+        
+        if model_name_or_path[:8] == "ToolBench":
+            self.model = AutoModelForCausalLM.from_pretrained(
+                model_name_or_path,
+                torch_dtype=torch.bfloat16,
+                device_map="auto",
+                low_cpu_mem_usage=True,
+            )
+        else: 
+            self.model = AutoModelForCausalLM.from_pretrained(
+                model_name_or_path,
+                torch_dtype=torch.float16,     # or omit torch_dtype for full float32
+                low_cpu_mem_usage=True,
+            ).to("cuda:0")   
+
         if self.tokenizer.pad_token_id == None:
             self.tokenizer.add_special_tokens({"bos_token": "<s>", "eos_token": "</s>", "pad_token": "<pad>"})
             self.model.resize_token_embeddings(len(self.tokenizer))
