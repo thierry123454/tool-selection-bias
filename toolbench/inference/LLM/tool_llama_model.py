@@ -67,6 +67,7 @@ class ToolLLaMA:
                 "stop_token_ids": None,
                 "echo": False
             }
+            print(f"Prompt fed to model: {prompt}")
             generate_stream_func = generate_stream
             output_stream = generate_stream_func(self.model, self.tokenizer, gen_params, "cuda", self.max_sequence_length, force_generate=True)
             outputs = self.chatio.return_output(output_stream)
