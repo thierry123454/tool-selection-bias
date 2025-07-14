@@ -129,8 +129,11 @@ class ToolLLaMA:
         if process_id == 0:
             print(f"[process({process_id})]total tokens: {decoded_token_len}")
 
+        function_names = [fn["name"] for fn in functions]
+
         # react format prediction
-        thought, action, action_input = react_parser(predictions)
+        thought, action, action_input = react_parser(predictions, function_names)
+        
         message = {
             "role": "assistant",
             "content": thought,
