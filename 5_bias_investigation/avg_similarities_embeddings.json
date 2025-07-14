@@ -1,0 +1,302 @@
+[
+  {
+    "cluster_id": 1,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.7390692126750946,
+    "avg_similarity_api_desc": 0.7586827427148819
+  },
+  {
+    "cluster_id": 1,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.7802115762233734,
+    "avg_similarity_api_desc": 0.7897499895095825
+  },
+  {
+    "cluster_id": 1,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.7759598517417907,
+    "avg_similarity_api_desc": 0.7413328087329865
+  },
+  {
+    "cluster_id": 1,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.772294585108757,
+    "avg_similarity_api_desc": 0.8061066389083862
+  },
+  {
+    "cluster_id": 1,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.7674256819486618,
+    "avg_similarity_api_desc": 0.7551114362478256
+  },
+  {
+    "cluster_id": 2,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8024739056825638,
+    "avg_similarity_api_desc": 0.8307023072242736
+  },
+  {
+    "cluster_id": 2,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.7226585030555726,
+    "avg_similarity_api_desc": 0.8489790749549866
+  },
+  {
+    "cluster_id": 2,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.8072789508104324,
+    "avg_similarity_api_desc": 0.7743188458681106
+  },
+  {
+    "cluster_id": 2,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.8188726270198822,
+    "avg_similarity_api_desc": 0.846629878282547
+  },
+  {
+    "cluster_id": 2,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.8154555362462997,
+    "avg_similarity_api_desc": 0.810238122344017
+  },
+  {
+    "cluster_id": 3,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8140318953990936,
+    "avg_similarity_api_desc": 0.8494990712404251
+  },
+  {
+    "cluster_id": 3,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.800700768828392,
+    "avg_similarity_api_desc": 0.757169286608696
+  },
+  {
+    "cluster_id": 3,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.7196096444129944,
+    "avg_similarity_api_desc": 0.8042517983913422
+  },
+  {
+    "cluster_id": 3,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.8065168607234955,
+    "avg_similarity_api_desc": 0.8011010485887528
+  },
+  {
+    "cluster_id": 3,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.7571816545724869,
+    "avg_similarity_api_desc": 0.8057064366340637
+  },
+  {
+    "cluster_id": 4,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.817691153883934,
+    "avg_similarity_api_desc": 0.8197055917978286
+  },
+  {
+    "cluster_id": 4,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.8265542072057724,
+    "avg_similarity_api_desc": 0.8333133119344711
+  },
+  {
+    "cluster_id": 4,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.840804870724678,
+    "avg_similarity_api_desc": 0.8400152933597564
+  },
+  {
+    "cluster_id": 4,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.828706933259964,
+    "avg_similarity_api_desc": 0.8267405873537064
+  },
+  {
+    "cluster_id": 4,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.8071148633956909,
+    "avg_similarity_api_desc": 0.8201242858171462
+  },
+  {
+    "cluster_id": 5,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8207816278934479,
+    "avg_similarity_api_desc": 0.8402871644496918
+  },
+  {
+    "cluster_id": 5,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.8322740286588669,
+    "avg_similarity_api_desc": 0.8071783369779587
+  },
+  {
+    "cluster_id": 5,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.7876660066843033,
+    "avg_similarity_api_desc": 0.7998027890920639
+  },
+  {
+    "cluster_id": 5,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.8061747962236404,
+    "avg_similarity_api_desc": 0.783270388841629
+  },
+  {
+    "cluster_id": 5,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.8090011018514633,
+    "avg_similarity_api_desc": 0.7947113865613937
+  },
+  {
+    "cluster_id": 6,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8181101351976394,
+    "avg_similarity_api_desc": 0.7962222236394882
+  },
+  {
+    "cluster_id": 6,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.8034750497341157,
+    "avg_similarity_api_desc": 0.7965495598316192
+  },
+  {
+    "cluster_id": 6,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.7960877859592438,
+    "avg_similarity_api_desc": 0.8346515536308289
+  },
+  {
+    "cluster_id": 6,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.7869904160499572,
+    "avg_similarity_api_desc": 0.8041134548187255
+  },
+  {
+    "cluster_id": 6,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.8073107343912125,
+    "avg_similarity_api_desc": 0.8035563319921494
+  },
+  {
+    "cluster_id": 7,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8099515467882157,
+    "avg_similarity_api_desc": 0.8062514281272888
+  },
+  {
+    "cluster_id": 7,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.7696932220458984,
+    "avg_similarity_api_desc": 0.7514003705978394
+  },
+  {
+    "cluster_id": 7,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.7784449481964111,
+    "avg_similarity_api_desc": 0.750930016040802
+  },
+  {
+    "cluster_id": 7,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.789964080452919,
+    "avg_similarity_api_desc": 0.7549866110086441
+  },
+  {
+    "cluster_id": 7,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.7896098774671555,
+    "avg_similarity_api_desc": 0.739119159579277
+  },
+  {
+    "cluster_id": 8,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8176083868741989,
+    "avg_similarity_api_desc": 0.7713924545049667
+  },
+  {
+    "cluster_id": 8,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.8002496027946472,
+    "avg_similarity_api_desc": 0.789134110212326
+  },
+  {
+    "cluster_id": 8,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.7875889045000076,
+    "avg_similarity_api_desc": 0.7416278111934662
+  },
+  {
+    "cluster_id": 8,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.7770772624015808,
+    "avg_similarity_api_desc": 0.7671172946691514
+  },
+  {
+    "cluster_id": 8,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.7573836952447891,
+    "avg_similarity_api_desc": 0.7890819120407104
+  },
+  {
+    "cluster_id": 9,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8353560018539429,
+    "avg_similarity_api_desc": 0.8353560018539429
+  },
+  {
+    "cluster_id": 9,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.8449346172809601,
+    "avg_similarity_api_desc": 0.8337828463315964
+  },
+  {
+    "cluster_id": 9,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.8391373556852341,
+    "avg_similarity_api_desc": 0.7537033039331437
+  },
+  {
+    "cluster_id": 9,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.838229193687439,
+    "avg_similarity_api_desc": 0.8388988101482391
+  },
+  {
+    "cluster_id": 9,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.831540178656578,
+    "avg_similarity_api_desc": 0.8604196095466614
+  },
+  {
+    "cluster_id": 10,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8501574176549912,
+    "avg_similarity_api_desc": 0.8137479788064956
+  },
+  {
+    "cluster_id": 10,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.8128974467515946,
+    "avg_similarity_api_desc": 0.8269833862781525
+  },
+  {
+    "cluster_id": 10,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.8127416574954986,
+    "avg_similarity_api_desc": 0.8076135247945786
+  },
+  {
+    "cluster_id": 10,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.8062114524841308,
+    "avg_similarity_api_desc": 0.8424094951152802
+  },
+  {
+    "cluster_id": 10,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.8482261854410171,
+    "avg_similarity_api_desc": 0.8449429941177368
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "cluster_id": 1,
+    "api": 0,
+    "tool_desc": "Goapis Geocoding API is an efficient and affordable alternative to Google Maps Geocoding API. It enables developers to convert addresses into coordinates and vice versa, for accurate location mapping and distance calculation. It's an ideal solution for businesses seeking a reliable geocoding service that can enhance their app or website user experience. With Goapis, you can easily develop location-based apps and plot data on maps. Try Goapis Geocoding API today and streamline your development...",
+    "api_desc": "Geocoding is the process of converting a physical address into geographic coordinates, such as latitude and longitude. It allows for the identification of a specific location on the Earth's surface, making it possible to map and analyze data spatially"
+  },
+  {
+    "cluster_id": 1,
+    "api": 1,
+    "tool_desc": "Forward and reverse geocoding using Google Geocoding API.",
+    "api_desc": "Get lat,lng coordinates from an address."
+  },
+  {
+    "cluster_id": 1,
+    "api": 2,
+    "tool_desc": "The Geocoding Flask API is a simple and efficient way to convert addresses and places into their corresponding latitude and longitude coordinates.",
+    "api_desc": "GET request to the \"/geocode\" endpoint with an \"address\" parameter containing the address or place you want to geocode"
+  },
+  {
+    "cluster_id": 1,
+    "api": 3,
+    "tool_desc": "Forward and Reverse Geocoding",
+    "api_desc": "Obtain geocoordinates for address"
+  },
+  {
+    "cluster_id": 1,
+    "api": 4,
+    "tool_desc": "Geocoding Api for Forward geocoding and Reverse Geocoding with 2500 free api requests",
+    "api_desc": "Blazing fast geocoding open service with world wide coverage and 24x7 Support.Quickly start deploying your apps with our affordable and accurate geocoding api.Support for all languages java, python, php, c, c++, React, Angular etc.Sign up without any credit card and get 2500 free api requests daily."
+  },
+  {
+    "cluster_id": 2,
+    "api": 0,
+    "tool_desc": "Forward and reverse geocoding using Google Geocoding API.",
+    "api_desc": "Get an address from a lat,lng coordinate."
+  },
+  {
+    "cluster_id": 2,
+    "api": 1,
+    "tool_desc": "None",
+    "api_desc": "Find address or place by latitude and longitude"
+  },
+  {
+    "cluster_id": 2,
+    "api": 2,
+    "tool_desc": "Convert city locations to latitude/longitude coordinates and vice versa. See more info at https://api-ninjas.com/api/geocoding and https://api-ninjas.com/api/reversegeocoding.",
+    "api_desc": "API Ninjas Reverse Geocoding API endpoint."
+  },
+  {
+    "cluster_id": 2,
+    "api": 3,
+    "tool_desc": "Free API to convert coordinates (latitude, longitude) to and from address An Easy, Open, Worldwide, Free Geocoding API",
+    "api_desc": "By using this geographic tool you can get an address from lat long coordinates."
+  },
+  {
+    "cluster_id": 2,
+    "api": 4,
+    "tool_desc": "Free Reverse Geocoding service - Get a full customizable text address from latitude and longitude pairs.",
+    "api_desc": "Return a text address from a latitude/longitude location"
+  },
+  {
+    "cluster_id": 3,
+    "api": 0,
+    "tool_desc": "Extremely Fast and Simple API to get top news globally or per topic and search for news by query and geographic area in real-time.",
+    "api_desc": "Get the latest news headlines for a topic."
+  },
+  {
+    "cluster_id": 3,
+    "api": 1,
+    "tool_desc": "API to find news articles by any topic, country, language, website, or keyword",
+    "api_desc": "Always returns the latest 100 articles for any `topic`, `country`, `lang`, or any of those combined"
+  },
+  {
+    "cluster_id": 3,
+    "api": 2,
+    "tool_desc": "API for TheClique company",
+    "api_desc": "This endpoint provides live top and breaking headlines for a country, specific category in a country, single source, or multiple sources. You can also search with keywords. Articles are sorted by the earliest date published first.\n\nThis endpoint is great for retrieving headlines for use with news tickers or similar."
+  },
+  {
+    "cluster_id": 3,
+    "api": 3,
+    "tool_desc": "Best News API To Search And Collect Worldwide News",
+    "api_desc": "The latest news endpoint provides access to the latest and breaking news for a country, for a specific category in a country, or for a single or multiple domains. The news articles are sorted by the publish date.\n\nRetrieving the latest news allows you to build experience such as showcasing the latest news, breaking news tickers and analyzing News to better understand their content."
+  },
+  {
+    "cluster_id": 3,
+    "api": 4,
+    "tool_desc": "Billions of webpages, images and news with a single API call.  Visit us at: usearch.com",
+    "api_desc": "Get news articles relevant for a given query."
+  },
+  {
+    "cluster_id": 4,
+    "api": 0,
+    "tool_desc": "IP Geolocation API allows developers to get geolocation information for a given IP address. Data points returned by this GeoIP API include city, state, province, country, continent, latitude, longitude, region, timezone, current time, organization, ISP, local currency, and country flags. This IP Location API can be used for content personalization, geotargeting, geofencing, ad targeting, digital rights management, form auto-completion, etc. With the free plan, you can make 2,000 IP lookup API...",
+    "api_desc": "This endpoint returns geolocation and other useful points from an IP Address. If IP address is provided as query parameter, geolocation is performed on that IP address. If IP address is left empty, geolocation data of client IP is returned."
+  },
+  {
+    "cluster_id": 4,
+    "api": 1,
+    "tool_desc": "IP Geolocalization API is a powerful tool for determining the location of an IP address. It offers accurate and up-to-date information, including the country, region, city, and latitude/longitude coordinates of the IP. It is perfect for businesses, researchers, and developers looking to understand the location of their website visitors or users.",
+    "api_desc": "When an IP address is provided this API will retrieve all possible data referred to its location."
+  },
+  {
+    "cluster_id": 4,
+    "api": 2,
+    "tool_desc": "A Free IP Geolocation service",
+    "api_desc": "Get the location, city, country, lat/long etc of any IP address"
+  },
+  {
+    "cluster_id": 4,
+    "api": 3,
+    "tool_desc": "Complete free IP address geolocation API",
+    "api_desc": "Returns the geolocation of the given IP address"
+  },
+  {
+    "cluster_id": 4,
+    "api": 4,
+    "tool_desc": "API returns location data such as country, city, latitude, longitude, timezone, asn, currency, security data for IPv4 and IPv6 addresses in JSON formats.",
+    "api_desc": "Provides Geo information for the given IP."
+  },
+  {
+    "cluster_id": 5,
+    "api": 0,
+    "tool_desc": "The WHOIS Lookup API is a powerful, RESTful API that allows you to retrieve WHOIS information for any registered domain name. This API provides a simple and fast way to access detailed WHOIS data, including domain owner, registration date, expiration date, and more. Whether you're building a domain search tool, conducting research on domain ownership, or developing a new application that requires WHOIS data, this API is the perfect solution.",
+    "api_desc": "Please provide the domain name for which you would like to retrieve WHOIS details."
+  },
+  {
+    "cluster_id": 5,
+    "api": 1,
+    "tool_desc": "Look up domain registry information using WHOIS protocol for any domain. See more info at https://api-ninjas.com/api/whois.",
+    "api_desc": "API Ninjas Whois API endpoint. Returns domain registration details (e.g. registrar, contact information, expiration date, name servers) about a particular domain name."
+  },
+  {
+    "cluster_id": 5,
+    "api": 2,
+    "tool_desc": "Newly Registered Domains API (v1) lets you check which domains have been added.",
+    "api_desc": "REST API to WhoIS lookup data"
+  },
+  {
+    "cluster_id": 5,
+    "api": 3,
+    "tool_desc": "WHOIS API (v2) returns well-parsed WHOIS records with fields in XML and JSON formats for any IPv4, IPv6 address, domain name, or email.",
+    "api_desc": "WHOIS lookup in JSON or XML, ver. 2"
+  },
+  {
+    "cluster_id": 5,
+    "api": 4,
+    "tool_desc": "Returns well-parsed whois fields in XML and JSON formats. Use it to track domain registrations, check domain name availability, detect credit card fraud, locate users geographically. The service automatically follows the whois registry referral chains until it finds the correct whois registrars with the most complete whois data. Works over basic HTTP and avoices firewall-related problems of accessing Whois servers on port 43.",
+    "api_desc": "Use this endpoint for fetch whois data"
+  },
+  {
+    "cluster_id": 6,
+    "api": 0,
+    "tool_desc": "“Validate Email” before you send. Discover deliverability of email addresses by our most popular email verification API.",
+    "api_desc": "“Validate Email” API Validates single email or bulk email addresses.\n\nIt's simple REST API to Verify and Validate single email or bulk email addresses."
+  },
+  {
+    "cluster_id": 6,
+    "api": 1,
+    "tool_desc": "This API is a fast and robust email address syntax and deliverability validator. API detects 3000+ disposable email services.",
+    "api_desc": "Validate email address. Key features:\n1. Checks that an email address has the correct syntax\n1. Gives friendly error messages when validation fails.\n1. Checks deliverability of an email address.\n1. Supports internationalized domain names and \n1. Normalizes email addresses"
+  },
+  {
+    "cluster_id": 6,
+    "api": 2,
+    "tool_desc": "Enterprise grade cloud based transactional email verifier api solution compatible with all programming languages.",
+    "api_desc": "To verify a single email address"
+  },
+  {
+    "cluster_id": 6,
+    "api": 3,
+    "tool_desc": "Improve your delivery rate and clean your email lists with our industry-leading email verification API",
+    "api_desc": "Email Validation and Verification API requires only a single email.\nChecking a misspelled email.\nChecking a malformed email."
+  },
+  {
+    "cluster_id": 6,
+    "api": 4,
+    "tool_desc": "Use this API to validate the email addresses for your business. This endpoint will check syntax and will validate deliverability.When an email address is valid, an object is returned containing a normalized form of the email address (which you should use!) and other information.",
+    "api_desc": "Just paste the Email Address you want to validate and wait for the results"
+  },
+  {
+    "cluster_id": 7,
+    "api": 0,
+    "tool_desc": "Enter a block of text to detect the sentiment and details around it (positive or negative).",
+    "api_desc": "Determine the sentiment of a given body of text"
+  },
+  {
+    "cluster_id": 7,
+    "api": 1,
+    "tool_desc": "Multi-lingual Sentimel Analysis uses computational linguistics and text mining to automatically determine the sentiment or affective nature of the text being analyzed in multiple language support.This API can detect the languange and reponse the accurate sentiment polarity of given text, but you can define {lang} parameter for better result and accurate.Supported languange (lang):    'af': 'afrikaans',    'sq': 'albanian',    'am': 'amharic',    'ar': 'arabic',    'hy': 'armenian', ...",
+    "api_desc": "Multi-lingual Sentiment Analysis parameter {lang} is optional, we can detect the language but you can define it for better result and accurate"
+  },
+  {
+    "cluster_id": 7,
+    "api": 2,
+    "tool_desc": "📊 Looking for a powerful AI-driven API to analyze the sentiment of your text data? Look no further than TextSentAI! Our API can analyze text in over 140 languages, providing fast and accurate sentiment scores of either POSITIVE or NEGATIVE. Whether you're analyzing social media posts, customer feedback, or any other form of text data, TextSentAI can help you gain valuable insights into your content.",
+    "api_desc": "Our API can analyze text in over 140 languages"
+  },
+  {
+    "cluster_id": 7,
+    "api": 3,
+    "tool_desc": "State-of-the-art text sentiment analysis. See more info at https://api-ninjas.com/api/sentiment.",
+    "api_desc": "Returns sentiment analysis score and overall sentiment for a given block of text."
+  },
+  {
+    "cluster_id": 7,
+    "api": 4,
+    "tool_desc": "Luminous Engineering Sentiment Analysis",
+    "api_desc": "Analyzes text using  VADER (Valence Aware Dictionary and sEntiment Reasoner)\n\nProvide  a string and the API will output combined, positive, neutral, and negative scores based on the output specified."
+  },
+  {
+    "cluster_id": 8,
+    "api": 0,
+    "tool_desc": "Detect the language of a given text",
+    "api_desc": "Detect the language of a given text and return the detected language code"
+  },
+  {
+    "cluster_id": 8,
+    "api": 1,
+    "tool_desc": "Feed this API a few sentences and have it determine what language it is with a confidence score.",
+    "api_desc": "Feed this API a few sentences and have it determine what language it is with a confidence score"
+  },
+  {
+    "cluster_id": 8,
+    "api": 2,
+    "tool_desc": "Detect the language from any input text. See more info at https://api-ninjas.com/api/textlanguage.",
+    "api_desc": "API Ninjas Text Language API endpoint"
+  },
+  {
+    "cluster_id": 8,
+    "api": 3,
+    "tool_desc": "Easy and reliable Machine Translation  and Language Detection",
+    "api_desc": "This endpoint will return the Language of the Text"
+  },
+  {
+    "cluster_id": 8,
+    "api": 4,
+    "tool_desc": "Translate All Language -  Text Translator100x cheaper than Google Translate. Same API. Same quality.  Translate All Languages provides a simple API for translating plain text between any of 100+ supported languages. If you don’t know what language the text is written in, our API will detect the language of the original request.  telegram DM: @justapi1",
+    "api_desc": "Detects the language of text within a request."
+  },
+  {
+    "cluster_id": 9,
+    "api": 0,
+    "tool_desc": "This Api takes URL, or string and returns the QR code image",
+    "api_desc": "This Api takes URL, or string and returns the QR code image"
+  },
+  {
+    "cluster_id": 9,
+    "api": 1,
+    "tool_desc": "This API takes a URL or string and returns a QR code image",
+    "api_desc": "This end point takes a 'GET' request with url / string as a parameter and returns QR code image."
+  },
+  {
+    "cluster_id": 9,
+    "api": 2,
+    "tool_desc": "Simple And Lightweight Api to Generate QR Code From Text",
+    "api_desc": "Simply Provide Url or Text in url parameter."
+  },
+  {
+    "cluster_id": 9,
+    "api": 3,
+    "tool_desc": "This API takes input as url to generate image based QR code",
+    "api_desc": "This endppint https://qrcodegenerator-47jz.onrender.com/qrcode/download/{text} will take input from user , you can replace {text} with anything and it will generate response as QR code Image."
+  },
+  {
+    "cluster_id": 9,
+    "api": 4,
+    "tool_desc": "Turn any URL or even text into a downloadable and printable QR code with ease.Simply provide a URL or TEXT and the API will generate a QR Code for you. The returned file will be cached for continuous use",
+    "api_desc": "Turn any URL or even text into a downloadable and printable QR code"
+  },
+  {
+    "cluster_id": 10,
+    "api": 0,
+    "tool_desc": "Get 16 days weather forecast data - worldwide - geographical coordinates...",
+    "api_desc": "Get Forecast summary information."
+  },
+  {
+    "cluster_id": 10,
+    "api": 1,
+    "tool_desc": "WeatherAPI.com is a powerful fully managed free weather and geolocation API provider that provides extensive APIs that range from the weather forecast, historical weather, future weather, weather alerts, air quality data, IP lookup, and astronomy through to sports, time zone, and geolocation.",
+    "api_desc": "Forecast weather API method returns upto next 14 day weather forecast and weather alert as json. It contains astronomy data, day weather forecast and hourly interval weather information for a given city."
+  },
+  {
+    "cluster_id": 10,
+    "api": 2,
+    "tool_desc": "Free Weather API and Geo API for worldwide locations, hourly weather, 14-day weather, historical weather, and Marine and Ski weather API for developers and businesses in XML and JSON format.",
+    "api_desc": "The Local Weather REST API (also called City and Town Weather API) method allows you to access current weather conditions, the next 14 days of accurate and reliable weather forecast, Air Quality Data, Weather Alerts and Monthly Climate Averages for over 4 million cities and towns worldwide. The Local Weather API returns weather elements such as temperature, precipitation (rainfall), weather description, weather icon, wind speed, etc."
+  },
+  {
+    "cluster_id": 10,
+    "api": 3,
+    "tool_desc": "Current weather data API, and Weather forecast API - Basic access to the Weatherbit.io Weather API.",
+    "api_desc": "Returns a 16 day (daily) forecast"
+  },
+  {
+    "cluster_id": 10,
+    "api": 4,
+    "tool_desc": "weather forecast world wide  14 days 6hourly",
+    "api_desc": "get forecast for 14 days for the location Lat/Lon"
+  }
+]

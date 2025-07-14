@@ -19,41 +19,60 @@ def load_json(path):
 clusters    = load_json(CLUSTERS_JSON)
 model_stats = {name: load_json(path) for name, path in STATS_PATHS.items()}
 
-# Build counts[model][cluster_id][pos_in_cluster]
-counts = {m: defaultdict(lambda: defaultdict(int)) for m in model_stats}
+# Build counts for (a) pos_in_cluster and (b) pos_in_list
+counts_api = {m: defaultdict(lambda: defaultdict(int)) for m in model_stats}
+counts_pos = {m: defaultdict(lambda: defaultdict(int)) for m in model_stats}
+
 for model, stats in model_stats.items():
-    for _, cid, pos, _ in stats:
-        counts[model][cid][pos] += 1
+    for _, cid, pos_cluster, pos_list in stats:
+        counts_api[model][cid][pos_cluster] += 1
+        counts_pos[model][cid][pos_list]    += 1
 
-# Compute selection‐rate p_i = count_i / total_counts for each model & cluster
-rates = {m: {} for m in counts}
+# Compute selection‐rate p_i = count_i / total_counts
+rates_api = {m: {} for m in counts_api}
+rates_pos = {m: {} for m in counts_pos}
 
-for m, cldict in counts.items():
-    for cid, posdict in cldict.items():
-        total = sum(posdict.values())
-        if total > 0:
-            rates[m][cid] = {pos: cnt/total for pos, cnt in posdict.items()}
-        else:
-            rates[m][cid] = {}
+for m in model_stats:
+    # API‐bias rates
+    for cid, pd in counts_api[m].items():
+        total = sum(pd.values())
+        rates_api[m][cid] = {i: pd[i]/total for i in pd} if total else {}
+    # Position‐bias rates
+    for cid, pd in counts_pos[m].items():
+        total = sum(pd.values())
+        rates_pos[m][cid] = {i: pd[i]/total for i in pd} if total else {}
 
-# Now compute TV distance to uniform for each (model, cluster)
-print("TV distances to uniform by model & cluster:\n")
-tv_by_model = {m: [] for m in STATS_PATHS}
+# Compute TV‐distances & combined metric
+tv_api_by_model   = {m: [] for m in STATS_PATHS}
+tv_pos_by_model   = {m: [] for m in STATS_PATHS}
+tv_combined_by_model = {m: [] for m in STATS_PATHS}
 
+print("Model     Cluster │   D_api   D_pos   D_combined")
+print("─" *  50)
 for cid, cluster in enumerate(clusters, start=1):
     K = len(cluster)
     uniform = 1.0 / K
-    print(f"Cluster {cid:2d} ({K} endpoints):")
     for m in STATS_PATHS:
-        p = rates[m].get(cid, {})
-        # ensure we include zero‐selections
-        tv = 0.5 * sum(abs(p.get(i, 0.0) - uniform) for i in range(1, K+1))
-        print(f"   {m:8s}: TV = {tv:.3f}")
-        tv_by_model[m].append(tv)
+        p_api = rates_api[m].get(cid, {})
+        p_pos = rates_pos[m].get(cid, {})
+        # TV distance for API‐bias
+        tv_api = 0.5 * sum(abs(p_api.get(i, 0.0) - uniform) for i in range(1, K+1))
+        # TV distance for position‐bias
+        tv_pos = 0.5 * sum(abs(p_pos.get(i, 0.0) - uniform) for i in range(1, K+1))
+        # Combined
+        tv_combined = (tv_api + tv_pos) / 2
+
+        tv_api_by_model[m].append(tv_api)
+        tv_pos_by_model[m].append(tv_pos)
+        tv_combined_by_model[m].append(tv_combined)
+
+        print(f"{m:8s} {cid:7d} │ {tv_api:7.3f} {tv_pos:7.3f} {tv_combined:11.3f}")
     print()
 
-avg_tv = {m: (sum(tvs) / len(tvs) if tvs else 0.0) for m, tvs in tv_by_model.items()}
-
-print("Average TV distance to uniform, across all clusters:")
-for m, atv in avg_tv.items():
-    print(f"  {m:8s}: {atv:.3f}")
+# Finally, average across clusters
+print("Average over all clusters:")
+for m in STATS_PATHS:
+    avg_api   = sum(tv_api_by_model[m])   / len(tv_api_by_model[m])
+    avg_pos   = sum(tv_pos_by_model[m])   / len(tv_pos_by_model[m])
+    avg_comb  = sum(tv_combined_by_model[m]) / len(tv_combined_by_model[m])
+    print(f"{m:8s}:  D_api={avg_api:5.3f},  D_pos={avg_pos:5.3f},  D_combined={avg_comb:5.3f}")
