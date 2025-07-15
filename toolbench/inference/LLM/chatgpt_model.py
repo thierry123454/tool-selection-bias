@@ -13,11 +13,13 @@ from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM
 
 
 class ChatGPT:
-    def __init__(self, model="gpt-3.5-turbo", openai_key="") -> None:
+    def __init__(self, model="gpt-3.5-turbo", openai_key="", temperature=0.5, top_p=1) -> None:
         super().__init__()
         self.model = model
         self.openai_key = openai_key
         self.client = OpenAI(api_key=openai_key)
+        self.temperature = temperature
+        self.top_p = top_p
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
         max_try = 10
@@ -30,9 +32,9 @@ class ChatGPT:
                         {"role":"system", "content": ""},
                         {"role":"user",   "content": prompt},
                     ],
-                    temperature=0.5,
+                    temperature=self.temperature,
                     max_tokens=512,
-                    top_p=1,
+                    top_p=self.top_p,
                     frequency_penalty=0,
                     presence_penalty=0,
                     stop=["End Action"],

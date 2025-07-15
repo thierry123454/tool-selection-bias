@@ -23,7 +23,7 @@ class ToolLLaMA:
             template:str="tool-llama-single-round", 
             device: str="cuda", 
             cpu_offloading: bool=False, 
-            max_sequence_length: int=8192
+            max_sequence_length: int=8192, temperature=0, top_p=1
         ) -> None:
         super().__init__()
         self.model_name = model_name_or_path
@@ -42,13 +42,14 @@ class ToolLLaMA:
         dev = next(self.model.parameters()).device
         print(f"🖥️  Model is on {dev}")
         self.chatio = SimpleChatIO()
+        self.temperature = temperature
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
         with torch.no_grad():
             gen_params = {
                 "model": "",
                 "prompt": prompt,
-                "temperature": 0,
+                "temperature": self.temperature, #Used to be 0
                 "max_new_tokens": 1024,
                 "stop": "</s>",
                 "stop_token_ids": None,
