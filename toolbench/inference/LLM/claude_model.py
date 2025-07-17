@@ -14,11 +14,13 @@ from anthropic import Anthropic, HUMAN_PROMPT, AI_PROMPT
 import time
 
 class Claude:
-    def __init__(self, model: str = "claude-v1", anthropic_api_key: str = "") -> None:
+    def __init__(self, model: str = "claude-v1", anthropic_api_key: str = "", temperature=0.5, top_p=1) -> None:
         super().__init__()
         self.client = Anthropic(api_key=anthropic_api_key)
         self.model = model
         self.chatio = SimpleChatIO()
+        self.temperature = temperature
+        self.top_p = top_p
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None
                   ) -> Tuple[str, int]:
@@ -38,8 +40,8 @@ class Claude:
                         {"role": "user",   "content": prompt}
                     ],
                     max_tokens=512,
-                    temperature=0.5,
-                    top_p=1.0,
+                    temperature=self.temperature,
+                    top_p=self.top_p,
                     stop_sequences=[HUMAN_PROMPT],          # halt when Claude would expect a human turn
                 )
                 break

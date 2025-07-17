@@ -453,26 +453,26 @@ class pipeline_runner:
             task_list.append((method, backbone_model, query_id, data_dict, args, answer_dir, tool_des))
         return task_list
     
-    def method_converter(self, backbone_model, openai_key, method, env, process_id, single_chain_max_step=12, max_query_count=60, callbacks=None):
+    def method_converter(self, backbone_model, openai_key, method, env, process_id, single_chain_max_step=12, max_query_count=60, callbacks=None, temperature=0.5, top_p=1):
         if callbacks is None: callbacks = []
         if backbone_model == "chatgpt_function":
             model = "gpt-3.5-turbo"
-            llm_forward = ChatGPTFunction(model=model, openai_key=openai_key)
+            llm_forward = ChatGPTFunction(model=model, openai_key=openai_key, temperature=temperature, top_p=top_p)
         elif backbone_model == "chatgpt":
             model = "gpt-3.5-turbo" # November 2022
-            llm_forward = ChatGPT(model=model, openai_key=openai_key)
+            llm_forward = ChatGPT(model=model, openai_key=openai_key, temperature=temperature, top_p=top_p)
         elif backbone_model == "chatgpt-4":
             model = "gpt-4.1-mini-2025-04-14" # April 2025
-            llm_forward = ChatGPT(model=model, openai_key=openai_key)
+            llm_forward = ChatGPT(model=model, openai_key=openai_key, temperature=temperature, top_p=top_p)
         elif backbone_model == "davinci":
             model = "davinci-002"
-            llm_forward = Davinci(model=model, openai_key=openai_key)
+            llm_forward = Davinci(model=model, openai_key=openai_key, temperature=temperature, top_p=top_p)
         elif backbone_model == "claude":
             model = "claude-3-5-sonnet-20240620" # June 2024
-            llm_forward = Claude(model=model, anthropic_api_key=openai_key)
+            llm_forward = Claude(model=model, anthropic_api_key=openai_key, temperature=temperature, top_p=top_p)
         elif backbone_model == "deepseek":
             model = "deepseek-chat" # January 2025
-            llm_forward = DeepSeek(model=model, deepseek_key=openai_key)
+            llm_forward = DeepSeek(model=model, deepseek_key=openai_key, temperature=temperature, top_p=top_p)
         elif backbone_model == "qwen":
             model = "qwen3-1.7b" # April 2025
             llm_forward = Qwen(model=model, qwen_key=openai_key)
@@ -482,7 +482,7 @@ class pipeline_runner:
         elif backbone_model == "gemini":
             model = "gemini-2.5-flash" # June 17, 2025
             print("HALLO!!!")
-            llm_forward = Gemini(model=model, gemini_key=openai_key)
+            llm_forward = Gemini(model=model, gemini_key=openai_key, temperature=temperature, top_p=top_p)
         else:
             model = backbone_model
             llm_forward = model
@@ -549,7 +549,9 @@ class pipeline_runner:
             process_id=process_id,
             single_chain_max_step=12,
             max_query_count=200,
-            callbacks=callbacks
+            callbacks=callbacks,
+            temperature=args.temperature,
+            top_p=args.top_p
         )
 
         [callback.on_request_end(

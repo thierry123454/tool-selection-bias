@@ -13,7 +13,7 @@ from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM
 
 
 class Gemini:
-    def __init__(self, model="gemini-2.5-flash", gemini_key="") -> None:
+    def __init__(self, model="gemini-2.5-flash", gemini_key="", temperature=0.5, top_p=1) -> None:
         super().__init__()
         self.model = model
         self.gemini_key = gemini_key
@@ -21,6 +21,8 @@ class Gemini:
             f"https://generativelanguage.googleapis.com/v1beta/models/"
             f"{self.model}:generateContent?key={self.gemini_key}"
         )
+        self.temperature = temperature
+        self.top_p = top_p
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
         max_try = 10
@@ -35,8 +37,8 @@ class Gemini:
                     ],
                     "generationConfig": {
                         "stopSequences":    stop_seqs,
-                        "temperature":      0.5,
-                        "topP":             1.0,
+                        "temperature":      self.temperature,
+                        "topP":             self.top_p,
                         "frequencyPenalty": 0.0,
                         "presencePenalty":  0.0
                     }

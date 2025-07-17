@@ -7,7 +7,7 @@ import random
 
 
 @retry(wait=wait_random_exponential(min=1, max=40), stop=stop_after_attempt(3))
-def chat_completion_request(key, messages, functions=None,function_call=None,key_pos=None, model="gpt-3.5-turbo",stop=None,process_id=0, **args):
+def chat_completion_request(key, messages, functions=None,function_call=None,key_pos=None, model="gpt-3.5-turbo",stop=None,process_id=0, temperature=0.5, **args):
     use_messages = []
     for message in messages:
         if not("valid" in message.keys() and message["valid"] == False):
@@ -19,7 +19,7 @@ def chat_completion_request(key, messages, functions=None,function_call=None,key
         "max_tokens": 1024,
         "frequency_penalty": 0,
         "presence_penalty": 0,
-        "temperature": 0.5,
+        "temperature": temperature, #used to be 0.5
         **args
     }
     if stop is not None:
@@ -45,12 +45,13 @@ def chat_completion_request(key, messages, functions=None,function_call=None,key
         return e
 
 class ChatGPTFunction:
-    def __init__(self, model="gpt-3.5-turbo", openai_key=""):
+    def __init__(self, model="gpt-3.5-turbo", openai_key="", temperature=0.5, top_p=1):
         self.model = model
         self.conversation_history = []
         self.openai_key = openai_key
         self.time = time.time()
         self.TRY_TIME = 6
+        self.temperature = temperature
 
     def add_message(self, message):
         self.conversation_history.append(message)
@@ -87,11 +88,11 @@ class ChatGPTFunction:
                 time.sleep(5)
             if functions != []:
                 json_data = chat_completion_request(
-                    self.openai_key, conversation_history, functions=functions,process_id=process_id, key_pos=key_pos,**args
+                    self.openai_key, conversation_history, functions=functions,process_id=process_id, key_pos=key_pos, temperature=self.temperature, **args
                 )
             else:
                 json_data = chat_completion_request(
-                    self.openai_key, conversation_history,process_id=process_id,key_pos=key_pos, **args
+                    self.openai_key, conversation_history,process_id=process_id,key_pos=key_pos, temperature=self.temperature, **args
                 )
             try:
                 total_tokens = json_data['usage']['total_tokens']

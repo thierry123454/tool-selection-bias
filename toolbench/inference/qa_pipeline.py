@@ -33,6 +33,9 @@ if __name__ == "__main__":
        default='base',
        help='Which family of system prompt to use for CoT'
     )
+    parser.add_argument('--temperature', type=float, default=0.5,required=False, help='Temperature setting for the models used')
+    parser.add_argument('--top_p', type=float, default=1,required=False, help='Top P setting for the models used')
+   #  parser.add_argument('--top_k', type=int, default=,required=False, help='Top K setting for the models used')
     
     args = parser.parse_args()
 

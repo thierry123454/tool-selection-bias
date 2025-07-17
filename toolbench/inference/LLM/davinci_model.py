@@ -12,11 +12,13 @@ from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM
 
 
 class Davinci:
-    def __init__(self, model="text-davinci-003", openai_key="") -> None:
+    def __init__(self, model="text-davinci-003", openai_key="", temperature=0.5, top_p=1) -> None:
         super().__init__()
         self.model = model
         self.openai_key = openai_key
         self.chatio = SimpleChatIO()
+        self.temperature = temperature
+        self.top_p = top_p
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
         max_try = 10
@@ -26,9 +28,9 @@ class Davinci:
                 response = openai.Completion.create(
                     engine=self.model,
                     prompt=prompt,
-                    temperature=0.5,
+                    temperature=self.temperature,
                     max_tokens=512,
-                    top_p=1,
+                    top_p=self.top_p,
                     frequency_penalty=0,
                     presence_penalty=0,
                     stop="End Action"
