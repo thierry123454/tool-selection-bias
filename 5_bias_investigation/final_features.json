@@ -1,0 +1,452 @@
+[
+  {
+    "cluster_id": 1,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.7390692126750946,
+    "avg_similarity_api_desc": 0.7586827427148819,
+    "age_days": null,
+    "desc_name_length_sum": 784,
+    "num_params": 2
+  },
+  {
+    "cluster_id": 1,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.7802115762233734,
+    "avg_similarity_api_desc": 0.7897499895095825,
+    "age_days": 1314,
+    "desc_name_length_sum": 144,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 1,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.7759598517417907,
+    "avg_similarity_api_desc": 0.7413328087329865,
+    "age_days": 893,
+    "desc_name_length_sum": 293,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 1,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.772294585108757,
+    "avg_similarity_api_desc": 0.8061066389083862,
+    "age_days": 1966,
+    "desc_name_length_sum": 91,
+    "num_params": 4
+  },
+  {
+    "cluster_id": 1,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.7674256819486618,
+    "avg_similarity_api_desc": 0.7551114362478256,
+    "age_days": 1313,
+    "desc_name_length_sum": 424,
+    "num_params": 2
+  },
+  {
+    "cluster_id": 2,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8024739056825638,
+    "avg_similarity_api_desc": 0.8307023072242736,
+    "age_days": 1314,
+    "desc_name_length_sum": 145,
+    "num_params": 2
+  },
+  {
+    "cluster_id": 2,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.7226585030555726,
+    "avg_similarity_api_desc": 0.8489790749549866,
+    "age_days": 1864,
+    "desc_name_length_sum": 97,
+    "num_params": 14
+  },
+  {
+    "cluster_id": 2,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.8072789508104324,
+    "avg_similarity_api_desc": 0.7743188458681106,
+    "age_days": 1513,
+    "desc_name_length_sum": 264,
+    "num_params": 2
+  },
+  {
+    "cluster_id": 2,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.8188726270198822,
+    "avg_similarity_api_desc": 0.846629878282547,
+    "age_days": null,
+    "desc_name_length_sum": 277,
+    "num_params": 2
+  },
+  {
+    "cluster_id": 2,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.8154555362462997,
+    "avg_similarity_api_desc": 0.810238122344017,
+    "age_days": 1368,
+    "desc_name_length_sum": 203,
+    "num_params": 5
+  },
+  {
+    "cluster_id": 3,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8140318953990936,
+    "avg_similarity_api_desc": 0.8494990712404251,
+    "age_days": 1026,
+    "desc_name_length_sum": 211,
+    "num_params": 3
+  },
+  {
+    "cluster_id": 3,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.800700768828392,
+    "avg_similarity_api_desc": 0.757169286608696,
+    "age_days": 1871,
+    "desc_name_length_sum": 212,
+    "num_params": 4
+  },
+  {
+    "cluster_id": 3,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.7196096444129944,
+    "avg_similarity_api_desc": 0.8042517983913422,
+    "age_days": 1072,
+    "desc_name_length_sum": 369,
+    "num_params": 5
+  },
+  {
+    "cluster_id": 3,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.8065168607234955,
+    "avg_similarity_api_desc": 0.8011010485887528,
+    "age_days": null,
+    "desc_name_length_sum": 451,
+    "num_params": 7
+  },
+  {
+    "cluster_id": 3,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.7571816545724869,
+    "avg_similarity_api_desc": 0.8057064366340637,
+    "age_days": null,
+    "desc_name_length_sum": 157,
+    "num_params": 8
+  },
+  {
+    "cluster_id": 4,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.817691153883934,
+    "avg_similarity_api_desc": 0.8197055917978286,
+    "age_days": 815,
+    "desc_name_length_sum": 806,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 4,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.8265542072057724,
+    "avg_similarity_api_desc": 0.8333133119344711,
+    "age_days": 903,
+    "desc_name_length_sum": 488,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 4,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.840804870724678,
+    "avg_similarity_api_desc": 0.8400152933597564,
+    "age_days": 2871,
+    "desc_name_length_sum": 122,
+    "num_params": 2
+  },
+  {
+    "cluster_id": 4,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.828706933259964,
+    "avg_similarity_api_desc": 0.8267405873537064,
+    "age_days": 1911,
+    "desc_name_length_sum": 128,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 4,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.8071148633956909,
+    "avg_similarity_api_desc": 0.8201242858171462,
+    "age_days": 1322,
+    "desc_name_length_sum": 254,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 5,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8207816278934479,
+    "avg_similarity_api_desc": 0.8402871644496918,
+    "age_days": 882,
+    "desc_name_length_sum": 566,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 5,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.8322740286588669,
+    "avg_similarity_api_desc": 0.8071783369779587,
+    "age_days": 1103,
+    "desc_name_length_sum": 322,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 5,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.7876660066843033,
+    "avg_similarity_api_desc": 0.7998027890920639,
+    "age_days": 765,
+    "desc_name_length_sum": 142,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 5,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.8061747962236404,
+    "avg_similarity_api_desc": 0.783270388841629,
+    "age_days": 2562,
+    "desc_name_length_sum": 198,
+    "num_params": 12
+  },
+  {
+    "cluster_id": 5,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.8090011018514633,
+    "avg_similarity_api_desc": 0.7947113865613937,
+    "age_days": 4619,
+    "desc_name_length_sum": 482,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 6,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8181101351976394,
+    "avg_similarity_api_desc": 0.7962222236394882,
+    "age_days": 1250,
+    "desc_name_length_sum": 304,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 6,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.8034750497341157,
+    "avg_similarity_api_desc": 0.7965495598316192,
+    "age_days": 1123,
+    "desc_name_length_sum": 441,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 6,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.7960877859592438,
+    "avg_similarity_api_desc": 0.8346515536308289,
+    "age_days": 3325,
+    "desc_name_length_sum": 176,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 6,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.7869904160499572,
+    "avg_similarity_api_desc": 0.8041134548187255,
+    "age_days": 1195,
+    "desc_name_length_sum": 284,
+    "num_params": 2
+  },
+  {
+    "cluster_id": 6,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.8073107343912125,
+    "avg_similarity_api_desc": 0.8035563319921494,
+    "age_days": 942,
+    "desc_name_length_sum": 396,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 7,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8099515467882157,
+    "avg_similarity_api_desc": 0.8062514281272888,
+    "age_days": null,
+    "desc_name_length_sum": 181,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 7,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.7696932220458984,
+    "avg_similarity_api_desc": 0.7514003705978394,
+    "age_days": 906,
+    "desc_name_length_sum": 687,
+    "num_params": 2
+  },
+  {
+    "cluster_id": 7,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.7784449481964111,
+    "avg_similarity_api_desc": 0.750930016040802,
+    "age_days": 867,
+    "desc_name_length_sum": 512,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 7,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.789964080452919,
+    "avg_similarity_api_desc": 0.7549866110086441,
+    "age_days": 1281,
+    "desc_name_length_sum": 217,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 7,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.7896098774671555,
+    "avg_similarity_api_desc": 0.739119159579277,
+    "age_days": 1617,
+    "desc_name_length_sum": 278,
+    "num_params": 2
+  },
+  {
+    "cluster_id": 8,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8176083868741989,
+    "avg_similarity_api_desc": 0.7713924545049667,
+    "age_days": 1797,
+    "desc_name_length_sum": 145,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 8,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.8002496027946472,
+    "avg_similarity_api_desc": 0.789134110212326,
+    "age_days": null,
+    "desc_name_length_sum": 234,
+    "num_params": 2
+  },
+  {
+    "cluster_id": 8,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.7875889045000076,
+    "avg_similarity_api_desc": 0.7416278111934662,
+    "age_days": 1328,
+    "desc_name_length_sum": 182,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 8,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.7770772624015808,
+    "avg_similarity_api_desc": 0.7671172946691514,
+    "age_days": 1011,
+    "desc_name_length_sum": 151,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 8,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.7573836952447891,
+    "avg_similarity_api_desc": 0.7890819120407104,
+    "age_days": 764,
+    "desc_name_length_sum": 433,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 9,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8353560018539429,
+    "avg_similarity_api_desc": 0.8353560018539429,
+    "age_days": 905,
+    "desc_name_length_sum": 151,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 9,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.8449346172809601,
+    "avg_similarity_api_desc": 0.8337828463315964,
+    "age_days": 912,
+    "desc_name_length_sum": 192,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 9,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.8391373556852341,
+    "avg_similarity_api_desc": 0.7537033039331437,
+    "age_days": null,
+    "desc_name_length_sum": 142,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 9,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.838229193687439,
+    "avg_similarity_api_desc": 0.8388988101482391,
+    "age_days": 902,
+    "desc_name_length_sum": 293,
+    "num_params": 1
+  },
+  {
+    "cluster_id": 9,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.831540178656578,
+    "avg_similarity_api_desc": 0.8604196095466614,
+    "age_days": null,
+    "desc_name_length_sum": 311,
+    "num_params": 2
+  },
+  {
+    "cluster_id": 10,
+    "api": 0,
+    "avg_similarity_tool_desc": 0.8501574176549912,
+    "avg_similarity_api_desc": 0.8137479788064956,
+    "age_days": 1595,
+    "desc_name_length_sum": 160,
+    "num_params": 2
+  },
+  {
+    "cluster_id": 10,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.8128974467515946,
+    "avg_similarity_api_desc": 0.8269833862781525,
+    "age_days": 2074,
+    "desc_name_length_sum": 535,
+    "num_params": 4
+  },
+  {
+    "cluster_id": 10,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.8127416574954986,
+    "avg_similarity_api_desc": 0.8076135247945786,
+    "age_days": 796,
+    "desc_name_length_sum": 673,
+    "num_params": 7
+  },
+  {
+    "cluster_id": 10,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.8062114524841308,
+    "avg_similarity_api_desc": 0.8424094951152802,
+    "age_days": 2965,
+    "desc_name_length_sum": 159,
+    "num_params": 4
+  },
+  {
+    "cluster_id": 10,
+    "api": 4,
+    "avg_similarity_tool_desc": 0.8482261854410171,
+    "avg_similarity_api_desc": 0.8449429941177368,
+    "age_days": 2006,
+    "desc_name_length_sum": 149,
+    "num_params": 3
+  }
+]

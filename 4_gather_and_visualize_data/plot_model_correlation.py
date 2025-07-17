@@ -8,7 +8,8 @@ plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 STATS_PATHS = {
-    "ChatGPT": "api_selection_stats_chatgpt.json",
+    "ChatGPT": "api_selection_stats_chatgpt_no_func.json",
+    "ChatGPT Func": "api_selection_stats_chatgpt_base.json",
     "Claude":  "api_selection_stats_claude.json",
     "Gemini":  "api_selection_stats_gemini.json",
     "DeepSeek":  "api_selection_stats_deepseek.json",

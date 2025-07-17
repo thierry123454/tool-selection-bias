@@ -2,301 +2,451 @@
   {
     "cluster_id": 1,
     "api": 0,
+    "name": "geocding_for_goapis_geocoding_api",
     "tool_desc": "Goapis Geocoding API is an efficient and affordable alternative to Google Maps Geocoding API. It enables developers to convert addresses into coordinates and vice versa, for accurate location mapping and distance calculation. It's an ideal solution for businesses seeking a reliable geocoding service that can enhance their app or website user experience. With Goapis, you can easily develop location-based apps and plot data on maps. Try Goapis Geocoding API today and streamline your development...",
-    "api_desc": "Geocoding is the process of converting a physical address into geographic coordinates, such as latitude and longitude. It allows for the identification of a specific location on the Earth's surface, making it possible to map and analyze data spatially"
+    "api_desc": "Geocoding is the process of converting a physical address into geographic coordinates, such as latitude and longitude. It allows for the identification of a specific location on the Earth's surface, making it possible to map and analyze data spatially",
+    "url": "https://rapidapi.com/technicalduniya623/api/goapis-geocoding-api/",
+    "num_parameters": 2
   },
   {
     "cluster_id": 1,
     "api": 1,
+    "name": "forward_geocode_for_geocode_forward_and_reverse",
     "tool_desc": "Forward and reverse geocoding using Google Geocoding API.",
-    "api_desc": "Get lat,lng coordinates from an address."
+    "api_desc": "Get lat,lng coordinates from an address.",
+    "url": "https://rapidapi.com/NovusAPI/api/geocode-forward-and-reverse/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 1,
     "api": 2,
+    "name": "get_coordinates_for_geolocate",
     "tool_desc": "The Geocoding Flask API is a simple and efficient way to convert addresses and places into their corresponding latitude and longitude coordinates.",
-    "api_desc": "GET request to the \"/geocode\" endpoint with an \"address\" parameter containing the address or place you want to geocode"
+    "api_desc": "GET request to the \"/geocode\" endpoint with an \"address\" parameter containing the address or place you want to geocode",
+    "url": "https://rapidapi.com/alvaromiguel1998/api/geolocate4/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 1,
     "api": 3,
+    "name": "geocode_for_trueway_geocoding",
     "tool_desc": "Forward and Reverse Geocoding",
-    "api_desc": "Obtain geocoordinates for address"
+    "api_desc": "Obtain geocoordinates for address",
+    "url": "https://rapidapi.com/trueway/api/trueway-geocoding/",
+    "num_parameters": 4
   },
   {
     "cluster_id": 1,
     "api": 4,
+    "name": "search_php_for_geokeo_forward_geocoding",
     "tool_desc": "Geocoding Api for Forward geocoding and Reverse Geocoding with 2500 free api requests",
-    "api_desc": "Blazing fast geocoding open service with world wide coverage and 24x7 Support.Quickly start deploying your apps with our affordable and accurate geocoding api.Support for all languages java, python, php, c, c++, React, Angular etc.Sign up without any credit card and get 2500 free api requests daily."
+    "api_desc": "Blazing fast geocoding open service with world wide coverage and 24x7 Support.Quickly start deploying your apps with our affordable and accurate geocoding api.Support for all languages java, python, php, c, c++, React, Angular etc.Sign up without any credit card and get 2500 free api requests daily.",
+    "url": "https://rapidapi.com/geokeo-geokeo-default/api/geokeo-forward-geocoding/",
+    "num_parameters": 2
   },
   {
     "cluster_id": 2,
     "api": 0,
+    "name": "reverse_geocode_for_geocode_forward_and_reverse",
     "tool_desc": "Forward and reverse geocoding using Google Geocoding API.",
-    "api_desc": "Get an address from a lat,lng coordinate."
+    "api_desc": "Get an address from a lat,lng coordinate.",
+    "url": "https://rapidapi.com/NovusAPI/api/geocode-forward-and-reverse/",
+    "num_parameters": 2
   },
   {
     "cluster_id": 2,
     "api": 1,
+    "name": "reversegeocoding_for_forward_reverse_geocoding",
     "tool_desc": "None",
-    "api_desc": "Find address or place by latitude and longitude"
+    "api_desc": "Find address or place by latitude and longitude",
+    "url": "https://rapidapi.com/GeocodeSupport/api/forward-reverse-geocoding/",
+    "num_parameters": 14
   },
   {
     "cluster_id": 2,
     "api": 2,
+    "name": "v1_reversegeocoding_for_geocoding_by_api_ninjas",
     "tool_desc": "Convert city locations to latitude/longitude coordinates and vice versa. See more info at https://api-ninjas.com/api/geocoding and https://api-ninjas.com/api/reversegeocoding.",
-    "api_desc": "API Ninjas Reverse Geocoding API endpoint."
+    "api_desc": "API Ninjas Reverse Geocoding API endpoint.",
+    "url": "https://rapidapi.com/apininjas/api/geocoding-by-api-ninjas/",
+    "num_parameters": 2
   },
   {
     "cluster_id": 2,
     "api": 3,
+    "name": "coordinates_latitude_longitude_to_address_for_address_from_to_latitude_longitude",
     "tool_desc": "Free API to convert coordinates (latitude, longitude) to and from address An Easy, Open, Worldwide, Free Geocoding API",
-    "api_desc": "By using this geographic tool you can get an address from lat long coordinates."
+    "api_desc": "By using this geographic tool you can get an address from lat long coordinates.",
+    "url": "https://rapidapi.com/ashutosh05/api/address-from-to-latitude-longitude1/",
+    "num_parameters": 2
   },
   {
     "cluster_id": 2,
     "api": 4,
+    "name": "reversegeocode_for_feroeg_reverse_geocoding",
     "tool_desc": "Free Reverse Geocoding service - Get a full customizable text address from latitude and longitude pairs.",
-    "api_desc": "Return a text address from a latitude/longitude location"
+    "api_desc": "Return a text address from a latitude/longitude location",
+    "url": "https://rapidapi.com/castelli0giovanni-VdUSmLXuCR3/api/feroeg-reverse-geocoding/",
+    "num_parameters": 5
   },
   {
     "cluster_id": 3,
     "api": 0,
+    "name": "topic_headlines_for_real_time_news_data",
     "tool_desc": "Extremely Fast and Simple API to get top news globally or per topic and search for news by query and geographic area in real-time.",
-    "api_desc": "Get the latest news headlines for a topic."
+    "api_desc": "Get the latest news headlines for a topic.",
+    "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-news-data/",
+    "num_parameters": 3
   },
   {
     "cluster_id": 3,
     "api": 1,
+    "name": "v1_latest_headlines_for_newscatcher",
     "tool_desc": "API to find news articles by any topic, country, language, website, or keyword",
-    "api_desc": "Always returns the latest 100 articles for any `topic`, `country`, `lang`, or any of those combined"
+    "api_desc": "Always returns the latest 100 articles for any `topic`, `country`, `lang`, or any of those combined",
+    "url": "https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/newscatcher/",
+    "num_parameters": 4
   },
   {
     "cluster_id": 3,
     "api": 2,
+    "name": "top_headlines_for_theclique",
     "tool_desc": "API for TheClique company",
-    "api_desc": "This endpoint provides live top and breaking headlines for a country, specific category in a country, single source, or multiple sources. You can also search with keywords. Articles are sorted by the earliest date published first.\n\nThis endpoint is great for retrieving headlines for use with news tickers or similar."
+    "api_desc": "This endpoint provides live top and breaking headlines for a country, specific category in a country, single source, or multiple sources. You can also search with keywords. Articles are sorted by the earliest date published first.\n\nThis endpoint is great for retrieving headlines for use with news tickers or similar.",
+    "url": "https://rapidapi.com/norlotiadec1/api/theclique/",
+    "num_parameters": 5
   },
   {
     "cluster_id": 3,
     "api": 3,
+    "name": "news_for_newsdata",
     "tool_desc": "Best News API To Search And Collect Worldwide News",
-    "api_desc": "The latest news endpoint provides access to the latest and breaking news for a country, for a specific category in a country, or for a single or multiple domains. The news articles are sorted by the publish date.\n\nRetrieving the latest news allows you to build experience such as showcasing the latest news, breaking news tickers and analyzing News to better understand their content."
+    "api_desc": "The latest news endpoint provides access to the latest and breaking news for a country, for a specific category in a country, or for a single or multiple domains. The news articles are sorted by the publish date.\n\nRetrieving the latest news allows you to build experience such as showcasing the latest news, breaking news tickers and analyzing News to better understand their content.",
+    "url": "https://rapidapi.com/algodom-media-algodom-media-default/api/newsdata2/",
+    "num_parameters": 7
   },
   {
     "cluster_id": 3,
     "api": 4,
+    "name": "newssearch_for_web_search",
     "tool_desc": "Billions of webpages, images and news with a single API call.  Visit us at: usearch.com",
-    "api_desc": "Get news articles relevant for a given query."
+    "api_desc": "Get news articles relevant for a given query.",
+    "url": "https://rapidapi.com/contextualwebsearch/api/web-search/",
+    "num_parameters": 8
   },
   {
     "cluster_id": 4,
     "api": 0,
+    "name": "get_ip_geolocation_for_ip_geolocation_find_ip_location_and_ip_info",
     "tool_desc": "IP Geolocation API allows developers to get geolocation information for a given IP address. Data points returned by this GeoIP API include city, state, province, country, continent, latitude, longitude, region, timezone, current time, organization, ISP, local currency, and country flags. This IP Location API can be used for content personalization, geotargeting, geofencing, ad targeting, digital rights management, form auto-completion, etc. With the free plan, you can make 2,000 IP lookup API...",
-    "api_desc": "This endpoint returns geolocation and other useful points from an IP Address. If IP address is provided as query parameter, geolocation is performed on that IP address. If IP address is left empty, geolocation data of client IP is returned."
+    "api_desc": "This endpoint returns geolocation and other useful points from an IP Address. If IP address is provided as query parameter, geolocation is performed on that IP address. If IP address is left empty, geolocation data of client IP is returned.",
+    "url": "https://rapidapi.com/Chetan11dev/api/ip-geolocation-find-ip-location-and-ip-info/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 4,
     "api": 1,
+    "name": "ip_address_lookup_for_ip_geolocalization_api",
     "tool_desc": "IP Geolocalization API is a powerful tool for determining the location of an IP address. It offers accurate and up-to-date information, including the country, region, city, and latitude/longitude coordinates of the IP. It is perfect for businesses, researchers, and developers looking to understand the location of their website visitors or users.",
-    "api_desc": "When an IP address is provided this API will retrieve all possible data referred to its location."
+    "api_desc": "When an IP address is provided this API will retrieve all possible data referred to its location.",
+    "url": "https://rapidapi.com/zyla-labs-zyla-labs-default/api/ip-geolocalization-api/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 4,
     "api": 2,
+    "name": "any_ip_for_free_ip_geolocation",
     "tool_desc": "A Free IP Geolocation service",
-    "api_desc": "Get the location, city, country, lat/long etc of any IP address"
+    "api_desc": "Get the location, city, country, lat/long etc of any IP address",
+    "url": "https://rapidapi.com/jkosgei/api/free-ip-geolocation/",
+    "num_parameters": 2
   },
   {
     "cluster_id": 4,
     "api": 3,
+    "name": "ip_geolocation_for_ip_address_geolocation",
     "tool_desc": "Complete free IP address geolocation API",
-    "api_desc": "Returns the geolocation of the given IP address"
+    "api_desc": "Returns the geolocation of the given IP address",
+    "url": "https://rapidapi.com/WelshDev/api/ip-address-geolocation1/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 4,
     "api": 4,
+    "name": "iplocation_for_ip_geo_location_find_ip_location_and_details",
     "tool_desc": "API returns location data such as country, city, latitude, longitude, timezone, asn, currency, security data for IPv4 and IPv6 addresses in JSON formats.",
-    "api_desc": "Provides Geo information for the given IP."
+    "api_desc": "Provides Geo information for the given IP.",
+    "url": "https://rapidapi.com/ibrarasadbiz/api/ip-geo-location-find-ip-location-and-details/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 5,
     "api": 0,
+    "name": "domain_name_for_domain_whois_lookup_api",
     "tool_desc": "The WHOIS Lookup API is a powerful, RESTful API that allows you to retrieve WHOIS information for any registered domain name. This API provides a simple and fast way to access detailed WHOIS data, including domain owner, registration date, expiration date, and more. Whether you're building a domain search tool, conducting research on domain ownership, or developing a new application that requires WHOIS data, this API is the perfect solution.",
-    "api_desc": "Please provide the domain name for which you would like to retrieve WHOIS details."
+    "api_desc": "Please provide the domain name for which you would like to retrieve WHOIS details.",
+    "url": "https://rapidapi.com/dharmendra.ajwani/api/domain-whois-lookup-api/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 5,
     "api": 1,
+    "name": "v1_whois_for_whois_by_api_ninjas",
     "tool_desc": "Look up domain registry information using WHOIS protocol for any domain. See more info at https://api-ninjas.com/api/whois.",
-    "api_desc": "API Ninjas Whois API endpoint. Returns domain registration details (e.g. registrar, contact information, expiration date, name servers) about a particular domain name."
+    "api_desc": "API Ninjas Whois API endpoint. Returns domain registration details (e.g. registrar, contact information, expiration date, name servers) about a particular domain name.",
+    "url": "https://rapidapi.com/apininjas/api/whois-by-api-ninjas/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 5,
     "api": 2,
+    "name": "whois_for_newly_registered_domains",
     "tool_desc": "Newly Registered Domains API (v1) lets you check which domains have been added.",
-    "api_desc": "REST API to WhoIS lookup data"
+    "api_desc": "REST API to WhoIS lookup data",
+    "url": "https://rapidapi.com/peekdomainapi/api/newly-registered-domains3/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 5,
     "api": 3,
+    "name": "whois_lookup_v2_for_whois_v2",
     "tool_desc": "WHOIS API (v2) returns well-parsed WHOIS records with fields in XML and JSON formats for any IPv4, IPv6 address, domain name, or email.",
-    "api_desc": "WHOIS lookup in JSON or XML, ver. 2"
+    "api_desc": "WHOIS lookup in JSON or XML, ver. 2",
+    "url": "https://rapidapi.com/whoisapi/api/whois-v2/",
+    "num_parameters": 12
   },
   {
     "cluster_id": 5,
     "api": 4,
+    "name": "whois_for_whois",
     "tool_desc": "Returns well-parsed whois fields in XML and JSON formats. Use it to track domain registrations, check domain name availability, detect credit card fraud, locate users geographically. The service automatically follows the whois registry referral chains until it finds the correct whois registrars with the most complete whois data. Works over basic HTTP and avoices firewall-related problems of accessing Whois servers on port 43.",
-    "api_desc": "Use this endpoint for fetch whois data"
+    "api_desc": "Use this endpoint for fetch whois data",
+    "url": "https://rapidapi.com/whoisapi/api/whois-3/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 6,
     "api": 0,
+    "name": "validate_email_for_validate_email",
     "tool_desc": "“Validate Email” before you send. Discover deliverability of email addresses by our most popular email verification API.",
-    "api_desc": "“Validate Email” API Validates single email or bulk email addresses.\n\nIt's simple REST API to Verify and Validate single email or bulk email addresses."
+    "api_desc": "“Validate Email” API Validates single email or bulk email addresses.\n\nIt's simple REST API to Verify and Validate single email or bulk email addresses.",
+    "url": "https://rapidapi.com/api-tier1-apitier-team/api/validate-email5/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 6,
     "api": 1,
+    "name": "email_validator_validate_for_email_validator",
     "tool_desc": "This API is a fast and robust email address syntax and deliverability validator. API detects 3000+ disposable email services.",
-    "api_desc": "Validate email address. Key features:\n1. Checks that an email address has the correct syntax\n1. Gives friendly error messages when validation fails.\n1. Checks deliverability of an email address.\n1. Supports internationalized domain names and \n1. Normalizes email addresses"
+    "api_desc": "Validate email address. Key features:\n1. Checks that an email address has the correct syntax\n1. Gives friendly error messages when validation fails.\n1. Checks deliverability of an email address.\n1. Supports internationalized domain names and \n1. Normalizes email addresses",
+    "url": "https://rapidapi.com/almann/api/email-validator28/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 6,
     "api": 2,
+    "name": "verify_email_for_email_verifier",
     "tool_desc": "Enterprise grade cloud based transactional email verifier api solution compatible with all programming languages.",
-    "api_desc": "To verify a single email address"
+    "api_desc": "To verify a single email address",
+    "url": "https://rapidapi.com/EmailVerifierApi/api/email-verifier/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 6,
     "api": 3,
+    "name": "email_validation_api_for_email_validation_and_verification",
     "tool_desc": "Improve your delivery rate and clean your email lists with our industry-leading email verification API",
-    "api_desc": "Email Validation and Verification API requires only a single email.\nChecking a misspelled email.\nChecking a malformed email."
+    "api_desc": "Email Validation and Verification API requires only a single email.\nChecking a misspelled email.\nChecking a malformed email.",
+    "url": "https://rapidapi.com/standingapi-standingapi-default/api/email-validation-and-verification4/",
+    "num_parameters": 2
   },
   {
     "cluster_id": 6,
     "api": 4,
+    "name": "check_email_for_email_checker_and_validator",
     "tool_desc": "Use this API to validate the email addresses for your business. This endpoint will check syntax and will validate deliverability.When an email address is valid, an object is returned containing a normalized form of the email address (which you should use!) and other information.",
-    "api_desc": "Just paste the Email Address you want to validate and wait for the results"
+    "api_desc": "Just paste the Email Address you want to validate and wait for the results",
+    "url": "https://rapidapi.com/cantagalloedoardo/api/email-checker-and-validator/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 7,
     "api": 0,
+    "name": "analyze_text_for_sentiment_analysis_service",
     "tool_desc": "Enter a block of text to detect the sentiment and details around it (positive or negative).",
-    "api_desc": "Determine the sentiment of a given body of text"
+    "api_desc": "Determine the sentiment of a given body of text",
+    "url": "https://rapidapi.com/evlar-evlar-default/api/sentiment-analysis-service/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 7,
     "api": 1,
+    "name": "sentiment_analysis_for_multi_lingual_sentiment_analysis",
     "tool_desc": "Multi-lingual Sentimel Analysis uses computational linguistics and text mining to automatically determine the sentiment or affective nature of the text being analyzed in multiple language support.This API can detect the languange and reponse the accurate sentiment polarity of given text, but you can define {lang} parameter for better result and accurate.Supported languange (lang):    'af': 'afrikaans',    'sq': 'albanian',    'am': 'amharic',    'ar': 'arabic',    'hy': 'armenian', ...",
-    "api_desc": "Multi-lingual Sentiment Analysis parameter {lang} is optional, we can detect the language but you can define it for better result and accurate"
+    "api_desc": "Multi-lingual Sentiment Analysis parameter {lang} is optional, we can detect the language but you can define it for better result and accurate",
+    "url": "https://rapidapi.com/cacing/api/multi-lingual-sentiment-analysis/",
+    "num_parameters": 2
   },
   {
     "cluster_id": 7,
     "api": 2,
+    "name": "textsentai_api_for_textsentai_ai_powered_text_sentiment_analyzer",
     "tool_desc": "📊 Looking for a powerful AI-driven API to analyze the sentiment of your text data? Look no further than TextSentAI! Our API can analyze text in over 140 languages, providing fast and accurate sentiment scores of either POSITIVE or NEGATIVE. Whether you're analyzing social media posts, customer feedback, or any other form of text data, TextSentAI can help you gain valuable insights into your content.",
-    "api_desc": "Our API can analyze text in over 140 languages"
+    "api_desc": "Our API can analyze text in over 140 languages",
+    "url": "https://rapidapi.com/IntelligenzaArtificiale/api/textsentai-ai-powered-text-sentiment-analyzer/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 7,
     "api": 3,
+    "name": "v1_sentiment_for_sentiment_by_api_ninjas",
     "tool_desc": "State-of-the-art text sentiment analysis. See more info at https://api-ninjas.com/api/sentiment.",
-    "api_desc": "Returns sentiment analysis score and overall sentiment for a given block of text."
+    "api_desc": "Returns sentiment analysis score and overall sentiment for a given block of text.",
+    "url": "https://rapidapi.com/apininjas/api/sentiment-by-api-ninjas/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 7,
     "api": 4,
+    "name": "text_analysis_for_sentiment_analysis_v12",
     "tool_desc": "Luminous Engineering Sentiment Analysis",
-    "api_desc": "Analyzes text using  VADER (Valence Aware Dictionary and sEntiment Reasoner)\n\nProvide  a string and the API will output combined, positive, neutral, and negative scores based on the output specified."
+    "api_desc": "Analyzes text using  VADER (Valence Aware Dictionary and sEntiment Reasoner)\n\nProvide  a string and the API will output combined, positive, neutral, and negative scores based on the output specified.",
+    "url": "https://rapidapi.com/luminous-engineering-llc-luminous-engineering-llc-default/api/sentiment-analysis14/",
+    "num_parameters": 2
   },
   {
     "cluster_id": 8,
     "api": 0,
+    "name": "languagedetection_for_what_s_language",
     "tool_desc": "Detect the language of a given text",
-    "api_desc": "Detect the language of a given text and return the detected language code"
+    "api_desc": "Detect the language of a given text and return the detected language code",
+    "url": "https://rapidapi.com/phinguyen/api/whats-language/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 8,
     "api": 1,
+    "name": "detect_language_for_quick_language_detector",
     "tool_desc": "Feed this API a few sentences and have it determine what language it is with a confidence score.",
-    "api_desc": "Feed this API a few sentences and have it determine what language it is with a confidence score"
+    "api_desc": "Feed this API a few sentences and have it determine what language it is with a confidence score",
+    "url": "https://rapidapi.com/evlar-evlar-default/api/quick-language-detector/",
+    "num_parameters": 2
   },
   {
     "cluster_id": 8,
     "api": 2,
+    "name": "v1_textlanguage_for_text_language_by_api_ninjas",
     "tool_desc": "Detect the language from any input text. See more info at https://api-ninjas.com/api/textlanguage.",
-    "api_desc": "API Ninjas Text Language API endpoint"
+    "api_desc": "API Ninjas Text Language API endpoint",
+    "url": "https://rapidapi.com/apininjas/api/text-language-by-api-ninjas/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 8,
     "api": 3,
+    "name": "fast_language_detection_for_translate_v3",
     "tool_desc": "Easy and reliable Machine Translation  and Language Detection",
-    "api_desc": "This endpoint will return the Language of the Text"
+    "api_desc": "This endpoint will return the Language of the Text",
+    "url": "https://rapidapi.com/omarmhaimdat/api/translate287/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 8,
     "api": 4,
+    "name": "detect_for_translate_all_languages",
     "tool_desc": "Translate All Language -  Text Translator100x cheaper than Google Translate. Same API. Same quality.  Translate All Languages provides a simple API for translating plain text between any of 100+ supported languages. If you don’t know what language the text is written in, our API will detect the language of the original request.  telegram DM: @justapi1",
-    "api_desc": "Detects the language of text within a request."
+    "api_desc": "Detects the language of text within a request.",
+    "url": "https://rapidapi.com/JustMobi/api/translate-all-languages/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 9,
     "api": 0,
+    "name": "qr_code_image_for_qr_code_api_v33",
     "tool_desc": "This Api takes URL, or string and returns the QR code image",
-    "api_desc": "This Api takes URL, or string and returns the QR code image"
+    "api_desc": "This Api takes URL, or string and returns the QR code image",
+    "url": "https://rapidapi.com/coursedeveloper1/api/qr-code-api137/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 9,
     "api": 1,
+    "name": "qr_code_image_copy_for_qr_code_api_v67",
     "tool_desc": "This API takes a URL or string and returns a QR code image",
-    "api_desc": "This end point takes a 'GET' request with url / string as a parameter and returns QR code image."
+    "api_desc": "This end point takes a 'GET' request with url / string as a parameter and returns QR code image.",
+    "url": "https://rapidapi.com/pythstop/api/qr-code-api70/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 9,
     "api": 2,
+    "name": "generate_qr_code_for_qr_code_generator_v14",
     "tool_desc": "Simple And Lightweight Api to Generate QR Code From Text",
-    "api_desc": "Simply Provide Url or Text in url parameter."
+    "api_desc": "Simply Provide Url or Text in url parameter.",
+    "url": "https://rapidapi.com/officialofun-C-wpfpix418/api/qr-code-generator116/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 9,
     "api": 3,
+    "name": "qr_code_generator_for_qr_code_api_generator",
     "tool_desc": "This API takes input as url to generate image based QR code",
-    "api_desc": "This endppint https://qrcodegenerator-47jz.onrender.com/qrcode/download/{text} will take input from user , you can replace {text} with anything and it will generate response as QR code Image."
+    "api_desc": "This endppint https://qrcodegenerator-47jz.onrender.com/qrcode/download/{text} will take input from user , you can replace {text} with anything and it will generate response as QR code Image.",
+    "url": "https://rapidapi.com/priyanka283639/api/qr-code-api-generator1/",
+    "num_parameters": 1
   },
   {
     "cluster_id": 9,
     "api": 4,
+    "name": "create_qr_code_for_easy_qr_code_generator",
     "tool_desc": "Turn any URL or even text into a downloadable and printable QR code with ease.Simply provide a URL or TEXT and the API will generate a QR Code for you. The returned file will be cached for continuous use",
-    "api_desc": "Turn any URL or even text into a downloadable and printable QR code"
+    "api_desc": "Turn any URL or even text into a downloadable and printable QR code",
+    "url": "https://rapidapi.com/evlar-evlar-default/api/easy-qr-code-generator/",
+    "num_parameters": 2
   },
   {
     "cluster_id": 10,
     "api": 0,
+    "name": "rapidapigetforecastsummarybycoordinates_for_forecast",
     "tool_desc": "Get 16 days weather forecast data - worldwide - geographical coordinates...",
-    "api_desc": "Get Forecast summary information."
+    "api_desc": "Get Forecast summary information.",
+    "url": "https://rapidapi.com/wettercom-wettercom-default/api/forecast9/",
+    "num_parameters": 2
   },
   {
     "cluster_id": 10,
     "api": 1,
+    "name": "forecast_weather_api_for_weatherapi_com",
     "tool_desc": "WeatherAPI.com is a powerful fully managed free weather and geolocation API provider that provides extensive APIs that range from the weather forecast, historical weather, future weather, weather alerts, air quality data, IP lookup, and astronomy through to sports, time zone, and geolocation.",
-    "api_desc": "Forecast weather API method returns upto next 14 day weather forecast and weather alert as json. It contains astronomy data, day weather forecast and hourly interval weather information for a given city."
+    "api_desc": "Forecast weather API method returns upto next 14 day weather forecast and weather alert as json. It contains astronomy data, day weather forecast and hourly interval weather information for a given city.",
+    "url": "https://rapidapi.com/weatherapi/api/weatherapi-com/",
+    "num_parameters": 4
   },
   {
     "cluster_id": 10,
     "api": 2,
+    "name": "local_weather_api_for_world_weather_online_api",
     "tool_desc": "Free Weather API and Geo API for worldwide locations, hourly weather, 14-day weather, historical weather, and Marine and Ski weather API for developers and businesses in XML and JSON format.",
-    "api_desc": "The Local Weather REST API (also called City and Town Weather API) method allows you to access current weather conditions, the next 14 days of accurate and reliable weather forecast, Air Quality Data, Weather Alerts and Monthly Climate Averages for over 4 million cities and towns worldwide. The Local Weather API returns weather elements such as temperature, precipitation (rainfall), weather description, weather icon, wind speed, etc."
+    "api_desc": "The Local Weather REST API (also called City and Town Weather API) method allows you to access current weather conditions, the next 14 days of accurate and reliable weather forecast, Air Quality Data, Weather Alerts and Monthly Climate Averages for over 4 million cities and towns worldwide. The Local Weather API returns weather elements such as temperature, precipitation (rainfall), weather description, weather icon, wind speed, etc.",
+    "url": "https://rapidapi.com/worldweatheronline/api/world-weather-online-api1/",
+    "num_parameters": 7
   },
   {
     "cluster_id": 10,
     "api": 3,
+    "name": "16_day_forecast_for_weather",
     "tool_desc": "Current weather data API, and Weather forecast API - Basic access to the Weatherbit.io Weather API.",
-    "api_desc": "Returns a 16 day (daily) forecast"
+    "api_desc": "Returns a 16 day (daily) forecast",
+    "url": "https://rapidapi.com/weatherbit/api/weather/",
+    "num_parameters": 4
   },
   {
     "cluster_id": 10,
     "api": 4,
+    "name": "get_forecastdata_by_lat_lon_for_weather_forecast_14_days",
     "tool_desc": "weather forecast world wide  14 days 6hourly",
-    "api_desc": "get forecast for 14 days for the location Lat/Lon"
+    "api_desc": "get forecast for 14 days for the location Lat/Lon",
+    "url": "https://rapidapi.com/weatheronline/api/weather-forecast-14-days/",
+    "num_parameters": 3
   }
 ]

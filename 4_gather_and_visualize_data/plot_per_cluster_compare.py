@@ -9,13 +9,18 @@ plt.rc('text', usetex=True)
 plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
+
+# Select selection stat files here
 STATS_PATHS = {
-    "Random": "api_selection_stats_chatgpt_random.json",
-    "Cyclic":  "api_selection_stats_chatgpt.json"
+    "Base": "api_selection_stats_chatgpt_no_func.json",
+    "Func.":  "api_selection_stats_chatgpt_base.json"
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
-OUTPUT_PDF     = "api_selection_distributions_cyclic_vs_random.pdf"
-OUTPUT_PNG     = "api_selection_distributions_cyclic_vs_random.png"
+
+# Choose appropriate output name
+BASE = "api_selection_distributions_chatgpt_func"
+OUTPUT_PDF     = BASE + ".pdf"
+OUTPUT_PNG     = BASE + ".png"
 # ────────────────────────────────────────────────────────────────────────
 
 # LaTeX special chars:  # $ % & ~ _ ^ \ { }
@@ -85,7 +90,7 @@ ncols = 5
 nrows = 2
 
 fig, axes = plt.subplots(nrows, ncols, figsize=(3*ncols, 4*nrows), squeeze=False)
-fig.suptitle("Distribution of Selected API Position for Random and Cyclic Permutation using ChatGPT.", fontsize=16)
+fig.suptitle("Distribution of Selected API Position using ChatGPT with different System Prompts.", fontsize=16)
 
 models = list(STATS_PATHS.keys())
 n_models = len(models)

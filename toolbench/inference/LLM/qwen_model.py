@@ -12,19 +12,18 @@ from toolbench.inference.utils import SimpleChatIO, react_parser
 from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ZEROSHOT
 
 
-class ChatGPT:
-    def __init__(self, model="gpt-3.5-turbo", openai_key="") -> None:
+class Qwen:
+    def __init__(self, model="", qwen_key="") -> None:
         super().__init__()
         self.model = model
-        self.openai_key = openai_key
-        self.client = OpenAI(api_key=openai_key)
+        self.openai_key = qwen_key
+        self.client = OpenAI(api_key=qwen_key, base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1")
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
         max_try = 10
         while True:
             try:
-                print(f"──> {self.model}")
-                # print(f"──> {self.model} prompt:\n", prompt)
+                print(f"──> {self.model} prompt:\n", prompt)
                 response = self.client.chat.completions.create(
                     model=self.model,
                     messages=[
@@ -37,15 +36,18 @@ class ChatGPT:
                     frequency_penalty=0,
                     presence_penalty=0,
                     stop=["End Action"],
+                    extra_body={
+                        "enable_thinking": False,
+                    }
                 )
                 result = response.choices[0].message.content.strip()
-                # print("──> ChatGPT response:\n", result)
+                print("──> Qwen response:\n", result)
                 break
             except Exception as e:
                 print(e)
                 max_try -= 1
                 if max_try < 0:
-                    result = "Exceed max retry times. Please check your davinci api calling."
+                    result = "Exceed max retry times. Please check your api calling."
                     break
         # usage = {
         #     "prompt_tokens":     response.usage.prompt_tokens,
@@ -120,6 +122,6 @@ class ChatGPT:
 
 
 if __name__ == "__main__":
-    llm = ChatGPT()
+    llm = DeepSeek()
     result = llm.prediction("How old are you?")
     print(result)

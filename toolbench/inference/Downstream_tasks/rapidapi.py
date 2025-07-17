@@ -10,6 +10,7 @@ from toolbench.inference.LLM.chatgpt_function_model import ChatGPTFunction
 from toolbench.inference.LLM.davinci_model import Davinci
 from toolbench.inference.LLM.claude_model import Claude
 from toolbench.inference.LLM.deepseek_model import DeepSeek
+from toolbench.inference.LLM.qwen_model import Qwen
 from toolbench.inference.LLM.chatgpt_model import ChatGPT
 from toolbench.inference.LLM.gemini_model import Gemini
 from toolbench.inference.LLM.tool_llama_lora_model import ToolLLaMALoRA
@@ -458,19 +459,28 @@ class pipeline_runner:
             model = "gpt-3.5-turbo"
             llm_forward = ChatGPTFunction(model=model, openai_key=openai_key)
         elif backbone_model == "chatgpt":
-            model = "gpt-3.5-turbo"
+            model = "gpt-3.5-turbo" # November 2022
+            llm_forward = ChatGPT(model=model, openai_key=openai_key)
+        elif backbone_model == "chatgpt-4":
+            model = "gpt-4.1-mini-2025-04-14" # April 2025
             llm_forward = ChatGPT(model=model, openai_key=openai_key)
         elif backbone_model == "davinci":
             model = "davinci-002"
             llm_forward = Davinci(model=model, openai_key=openai_key)
         elif backbone_model == "claude":
-            model = "claude-3-5-sonnet-20240620"
+            model = "claude-3-5-sonnet-20240620" # June 2024
             llm_forward = Claude(model=model, anthropic_api_key=openai_key)
         elif backbone_model == "deepseek":
-            model = "deepseek-chat"
+            model = "deepseek-chat" # January 2025
             llm_forward = DeepSeek(model=model, deepseek_key=openai_key)
+        elif backbone_model == "qwen":
+            model = "qwen3-1.7b" # April 2025
+            llm_forward = Qwen(model=model, qwen_key=openai_key)
+        elif backbone_model == "qwen-4b":
+            model = "qwen3-4b" # April 2025
+            llm_forward = Qwen(model=model, qwen_key=openai_key)
         elif backbone_model == "gemini":
-            model = "gemini-2.5-flash"
+            model = "gemini-2.5-flash" # June 17, 2025
             print("HALLO!!!")
             llm_forward = Gemini(model=model, gemini_key=openai_key)
         else:

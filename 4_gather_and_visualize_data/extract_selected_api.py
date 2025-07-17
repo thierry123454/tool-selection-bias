@@ -11,12 +11,14 @@ OUTPUT_PATH     = "api_selection_stats.json"
 
 # mapping of model -> their answer directory
 ANSWER_DIRS = {
-    "chatgpt": "../data_bias/answer_chatgpt",
+    "chatgpt_base": "../data_bias/answer_chatgpt_base",
+    "chatgpt_no_func": "../data_bias/answer_chatgpt_no_func_base_prompt",
+    "chatgpt_adj": "../data_bias/answer_chatgpt_adjusted",
+    "chatgpt_sim": "../data_bias/answer_chatgpt_similar",
+    "chatgpt_random":  "../data_bias/answer_chatgpt_base_random",
     "claude":  "../data_bias/answer_claude",
     "gemini":  "../data_bias/answer_gemini",
-    "deepseek":  "../data_bias/answer_deepseek",
-    "chatgpt_random":  "../data_bias/answer_chatgpt_random",
-    "toolllama":  "../data_bias/answer_toolllama"
+    "deepseek":  "../data_bias/answer_deepseek"
 }
 # ────────────────────────────────────────────────────────
 
