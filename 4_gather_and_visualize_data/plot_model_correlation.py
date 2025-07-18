@@ -10,6 +10,7 @@ plt.rc('font', family='serif')
 STATS_PATHS = {
     "ChatGPT": "api_selection_stats_chatgpt_no_func.json",
     "ChatGPT Func": "api_selection_stats_chatgpt_base.json",
+    "ChatGPT 4": "api_selection_stats_chatgpt_4.json",
     "Claude":  "api_selection_stats_claude.json",
     "Gemini":  "api_selection_stats_gemini.json",
     "DeepSeek":  "api_selection_stats_deepseek.json",

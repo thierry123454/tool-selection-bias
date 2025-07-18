@@ -16,6 +16,7 @@ ANSWER_DIRS = {
     "chatgpt_adj": "../data_bias/answer_chatgpt_adjusted",
     "chatgpt_sim": "../data_bias/answer_chatgpt_similar",
     "chatgpt_random":  "../data_bias/answer_chatgpt_base_random",
+    "chatgpt_4":  "../data_bias/answer_chatgpt_4_base_prompt",
     "claude":  "../data_bias/answer_claude",
     "gemini":  "../data_bias/answer_gemini",
     "deepseek":  "../data_bias/answer_deepseek"

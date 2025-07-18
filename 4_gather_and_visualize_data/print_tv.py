@@ -42,6 +42,9 @@ for m in model_stats:
         total = sum(pd.values())
         rates_pos[m][cid] = {i: pd[i]/total for i in pd} if total else {}
 
+with open('rates_api.json', 'w', encoding='utf-8') as f:
+    json.dump(rates_api, f, indent=2, ensure_ascii=False)
+
 # Compute TV‐distances & combined metric
 tv_api_by_model   = {m: [] for m in STATS_PATHS}
 tv_pos_by_model   = {m: [] for m in STATS_PATHS}

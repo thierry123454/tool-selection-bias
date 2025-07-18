@@ -7,7 +7,7 @@ import random
 
 
 @retry(wait=wait_random_exponential(min=1, max=40), stop=stop_after_attempt(3))
-def chat_completion_request(key, messages, functions=None,function_call=None,key_pos=None, model="gpt-3.5-turbo",stop=None,process_id=0, temperature=0.5, **args):
+def chat_completion_request(key, messages, functions=None,function_call=None,key_pos=None, model="gpt-3.5-turbo",stop=None,process_id=0, temperature=0.5, top_p=1, **args):
     use_messages = []
     for message in messages:
         if not("valid" in message.keys() and message["valid"] == False):
@@ -20,8 +20,10 @@ def chat_completion_request(key, messages, functions=None,function_call=None,key
         "frequency_penalty": 0,
         "presence_penalty": 0,
         "temperature": temperature, #used to be 0.5
+        "top_p": top_p,
         **args
     }
+    print(json_data)
     if stop is not None:
         json_data.update({"stop": stop})
     if functions is not None:
@@ -52,6 +54,7 @@ class ChatGPTFunction:
         self.time = time.time()
         self.TRY_TIME = 6
         self.temperature = temperature
+        self.top_p = top_p
 
     def add_message(self, message):
         self.conversation_history.append(message)
@@ -88,11 +91,11 @@ class ChatGPTFunction:
                 time.sleep(5)
             if functions != []:
                 json_data = chat_completion_request(
-                    self.openai_key, conversation_history, functions=functions,process_id=process_id, key_pos=key_pos, temperature=self.temperature, **args
+                    self.openai_key, conversation_history, functions=functions,process_id=process_id, key_pos=key_pos, temperature=self.temperature, top_p=self.top_p, **args
                 )
             else:
                 json_data = chat_completion_request(
-                    self.openai_key, conversation_history,process_id=process_id,key_pos=key_pos, temperature=self.temperature, **args
+                    self.openai_key, conversation_history,process_id=process_id,key_pos=key_pos, temperature=self.temperature, top_p=self.top_p, **args
                 )
             try:
                 total_tokens = json_data['usage']['total_tokens']

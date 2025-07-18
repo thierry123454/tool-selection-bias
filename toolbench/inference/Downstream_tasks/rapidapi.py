@@ -479,6 +479,9 @@ class pipeline_runner:
         elif backbone_model == "qwen-4b":
             model = "qwen3-4b" # April 2025
             llm_forward = Qwen(model=model, qwen_key=openai_key)
+        elif backbone_model == "qwen-8b":
+            model = "qwen3-8b" # April 2025
+            llm_forward = Qwen(model=model, qwen_key=openai_key)
         elif backbone_model == "gemini":
             model = "gemini-2.5-flash" # June 17, 2025
             print("HALLO!!!")
