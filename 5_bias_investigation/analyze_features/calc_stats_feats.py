@@ -2,6 +2,7 @@
 import json
 import statistics
 import matplotlib.pyplot as plt
+from collections import defaultdict
 
 FEATURES_PATH = '../extract_features/final_features.json'
 
@@ -26,39 +27,46 @@ numeric_fields = [
     'positive_word_count'
 ]
 
-# initialize storage
-stats = {field: [] for field in numeric_fields}
-# and for selection rates
+# find all model names for sel_rate
 model_names = set()
 for feat in features:
     model_names.update(feat.get('selection_rate', {}).keys())
-for model in model_names:
-    stats[f'sel_rate_{model}'] = []
 
-# collect values
+# we'll group by cluster
+clusters = defaultdict(lambda: defaultdict(list))
+
+# collect values by cluster
 for feat in features:
-    for field in numeric_fields:
-        stats[field].append(feat.get(field))
-    for model in model_names:
-        # default to 0 if missing
-        sel = feat.get('selection_rate', {}).get(model, 0)
-        stats[f'sel_rate_{model}'].append(sel)
+    cid = feat['cluster_id']
+    for fld in numeric_fields:
+        clusters[cid][fld].append(feat.get(fld))
+    for m in model_names:
+        clusters[cid][f'sel_rate_{m}'].append(
+            feat.get('selection_rate', {}).get(m, 0)
+        )
+
+print(clusters)
 
 # compute and print
-for key, vals in stats.items():
-    mean, stdev = compute_stats(vals)
-    print(f"{key}: mean={mean:.4f}, stdev={stdev:.4f}")
+for cid in sorted(clusters):
+    print(f"\n=== Cluster {cid} ===")
+    for key, vals in clusters[cid].items():
+        mean, stdev = compute_stats(vals)
+        if mean is None:
+            print(f"{key}: no data")
+        else:
+            print(f"{key:25s} mean={mean:.4f}  stdev={stdev:.4f}")
 
 # prepare y-values for DeepSeek
-y = [feat['selection_rate'].get('DeepSeek', 0) for feat in features]
+# y = [feat['selection_rate'].get('DeepSeek', 0) for feat in features]
 
 # scatter plots
-for field in numeric_fields:
-    x = [feat.get(field, 0) for feat in features]
-    plt.figure()
-    plt.scatter(x, y)
-    plt.xlabel(field)
-    plt.ylabel('sel_rate_DeepSeek')
-    plt.title(f"{field} vs sel_rate_DeepSeek")
-    plt.tight_layout()
-    plt.show()
+# for field in numeric_fields:
+#     x = [feat.get(field, 0) for feat in features]
+#     plt.figure()
+#     plt.scatter(x, y)
+#     plt.xlabel(field)
+#     plt.ylabel('sel_rate_DeepSeek')
+#     plt.title(f"{field} vs sel_rate_DeepSeek")
+#     plt.tight_layout()
+#     plt.show()
