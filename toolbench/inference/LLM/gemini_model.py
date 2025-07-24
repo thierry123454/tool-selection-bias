@@ -10,7 +10,7 @@ from toolbench.model.model_adapter import get_conversation_template
 from toolbench.utils import process_system_message
 from toolbench.inference.utils import SimpleChatIO, react_parser
 from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ZEROSHOT
-
+from toolbench.utils import standardize
 
 class Gemini:
     def __init__(self, model="gemini-2.5-flash", gemini_key="", temperature=0.5, top_p=1) -> None:
@@ -23,6 +23,10 @@ class Gemini:
         )
         self.temperature = temperature
         self.top_p = top_p
+        
+        self.use_mapping = True
+        with open("tool_to_id.json", "r") as mf:
+            self.tool_to_id = json.load(mf)
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
         max_try = 10
@@ -102,6 +106,9 @@ class Gemini:
             content = message['content']
             if role == "System" and functions != []:
                 content = process_system_message(content, functions)
+                if self.use_mapping:
+                    for real_name, rid in self.tool_to_id.items():
+                        content = content.replace(standardize(real_name), rid)
             prompt += f"{role}: {content}\n"
         prompt += "Assistant:\n"
         
@@ -109,6 +116,10 @@ class Gemini:
             predictions = self.prediction(prompt)
         else:
             predictions = self.prediction(prompt)
+
+        if self.use_mapping:
+            for real_name, rid in self.tool_to_id.items():
+                predictions = predictions.replace(rid, standardize(real_name))
 
         function_names = [fn["name"] for fn in functions]
 

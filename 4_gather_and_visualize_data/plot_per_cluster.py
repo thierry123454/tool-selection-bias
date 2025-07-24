@@ -10,11 +10,11 @@ plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 STATS_PATHS = {
-    "ChatGPT": "api_selection_stats_chatgpt_no_func.json",
+    "ChatGPT":  "api_selection_stats_chatgpt_4.json",
     "Claude":  "api_selection_stats_claude.json",
     "Gemini":  "api_selection_stats_gemini.json",
     "DeepSeek":  "api_selection_stats_deepseek.json",
-    "ChatGPT 4":  "api_selection_stats_chatgpt_4.json"
+    "ToolLLama":  "api_selection_stats_toolllama.json"
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 OUTPUT_PDF     = "api_selection_distributions_by_model.pdf"

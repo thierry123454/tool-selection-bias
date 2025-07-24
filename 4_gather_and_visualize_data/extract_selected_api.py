@@ -5,21 +5,32 @@ import re
 import unicodedata
 
 # ─── CONFIG ─────────────────────────────────────────────
-QUERIES_JSON    = "../data_bias/instruction/toolbench_bias_queries.json"
+# QUERIES_JSON    = "../data_bias/instruction/toolbench_bias_queries.json"
+QUERIES_JSON    = "../data_bias/instruction/toolbench_bias_queries_none.json"
 CLUSTERS_JSON   = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 OUTPUT_PATH     = "api_selection_stats.json"
 
 # mapping of model -> their answer directory
 ANSWER_DIRS = {
-    "chatgpt_base": "../data_bias/answer_chatgpt_base",
-    "chatgpt_no_func": "../data_bias/answer_chatgpt_no_func_base_prompt",
-    "chatgpt_adj": "../data_bias/answer_chatgpt_adjusted",
-    "chatgpt_sim": "../data_bias/answer_chatgpt_similar",
-    "chatgpt_random":  "../data_bias/answer_chatgpt_base_random",
-    "chatgpt_4":  "../data_bias/answer_chatgpt_4_base_prompt",
-    "claude":  "../data_bias/answer_claude",
-    "gemini":  "../data_bias/answer_gemini",
-    "deepseek":  "../data_bias/answer_deepseek"
+    # "chatgpt_base": "../data_bias/answer_chatgpt_base",
+    # "chatgpt_no_func": "../data_bias/answer_chatgpt_no_func_base_prompt",
+    # "chatgpt_adj": "../data_bias/answer_chatgpt_adjusted",
+    # "chatgpt_sim": "../data_bias/answer_chatgpt_similar",
+    # "chatgpt_random":  "../data_bias/answer_chatgpt_base_random",
+    # "chatgpt_4":  "../data_bias/answer_chatgpt_4_base_prompt",
+    # "chatgpt-temp-0":  "../data_bias/answer_chatgpt_temp_0",
+    # "chatgpt-temp-1":  "../data_bias/answer_chatgpt_temp_1",
+    # "chatgpt-top-p-0.7":  "../data_bias/answer_chatgpt_top_p_0.7",
+    # "chatgpt-top-p-0.9":  "../data_bias/answer_chatgpt_top_p_0.9",
+    # "claude":  "../data_bias/answer_claude",
+    # "gemini":  "../data_bias/answer_gemini",
+    # "deepseek":  "../data_bias/answer_deepseek",
+    # "toolllama":  "../data_bias/answer_toolllama",
+    # "qwen-1.7b":  "../data_bias/answer_qwen",
+    # "qwen-4b":  "../data_bias/answer_qwen-4b",
+    # "qwen-8b":  "../data_bias/answer_qwen-8b"
+    "gemini-sample":  "../data_bias/answer_gemini_sample_dist",
+    "gemini-sample-temp-2":  "../data_bias/answer_gemini_sample_dist_temp_2"
 }
 # ────────────────────────────────────────────────────────
 

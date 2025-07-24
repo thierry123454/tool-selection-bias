@@ -10,17 +10,53 @@ plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 
-# Select selection stat files here
+# SIZE
+# STATS_PATHS = {
+#     "1.7B": "api_selection_stats_qwen-1.7b.json",
+#     "4B":  "api_selection_stats_qwen-4b.json",
+#     "8B":  "api_selection_stats_qwen-8b.json"
+# }
+# CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
+# BASE = "api_selection_distributions_size"
+# OUTPUT_PDF     = BASE + ".pdf"
+# OUTPUT_PNG     = BASE + ".png"
+# TITLE = "Distribution of Selected API using Qwen with Different Model Sizes."
+
+# TEMPERATURE
+# STATS_PATHS = {
+#     "0": "api_selection_stats_chatgpt-temp-0.json",
+#     "0.5":  "api_selection_stats_chatgpt_base.json",
+#     "1":  "api_selection_stats_chatgpt-temp-1.json"
+# }
+# CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
+# BASE = "api_selection_distributions_temp"
+# OUTPUT_PDF     = BASE + ".pdf"
+# OUTPUT_PNG     = BASE + ".png"
+# TITLE = "Distribution of Selected API using ChatGPT with Different Temperatures."
+
+# TOP-P
+# STATS_PATHS = {
+#     "0.7": "api_selection_stats_chatgpt-top-p-0.7.json",
+#     "0.9": "api_selection_stats_chatgpt-top-p-0.9.json",
+#     "1":  "api_selection_stats_chatgpt_base.json"
+# }
+# CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
+# BASE = "api_selection_distributions_top_p"
+# OUTPUT_PDF     = BASE + ".pdf"
+# OUTPUT_PNG     = BASE + ".png"
+# TITLE = "Distribution of Selected API using ChatGPT with Different Top-$p$."
+
+# SAMPLE DISTRIBUTION
 STATS_PATHS = {
-    "Base": "api_selection_stats_chatgpt_no_func.json",
-    "Func.":  "api_selection_stats_chatgpt_base.json"
+    "Gemini": "api_selection_stats_gemini-sample.json",
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
-
-# Choose appropriate output name
-BASE = "api_selection_distributions_chatgpt_func"
+BASE = "api_selection_distributions_sample"
 OUTPUT_PDF     = BASE + ".pdf"
 OUTPUT_PNG     = BASE + ".png"
+TITLE = "Distribution of Selected API using ChatGPT with Different Top-$p$."
+
+# TITLE = "Distribution of Selected API Position using ChatGPT with different System Prompts."
 # ────────────────────────────────────────────────────────────────────────
 
 # LaTeX special chars:  # $ % & ~ _ ^ \ { }
@@ -90,7 +126,7 @@ ncols = 5
 nrows = 2
 
 fig, axes = plt.subplots(nrows, ncols, figsize=(3*ncols, 4*nrows), squeeze=False)
-fig.suptitle("Distribution of Selected API Position using ChatGPT with different System Prompts.", fontsize=16)
+fig.suptitle(TITLE, fontsize=16)
 
 models = list(STATS_PATHS.keys())
 n_models = len(models)

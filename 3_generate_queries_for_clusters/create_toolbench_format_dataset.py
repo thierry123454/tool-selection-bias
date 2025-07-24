@@ -7,13 +7,14 @@ import random
 
 # ─── CONFIG ────────────────────────────────────────────────────────────────
 CLUSTERS_PATH    = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
-CLUSTER_QUERIES  = "cluster_queries.json"
+CLUSTER_QUERIES  = "cluster_queries_distribution.json"
 ORIGINAL_QUERIES = "../data/instruction/G1_query.json"
 ORIGINAL_QUERIES_2 = "../data/instruction/G2_query.json"
 ORIGINAL_QUERIES_3 = "../data/instruction/G3_query.json"
 TOOLENV_ROOT       = "../data/toolenv/tools"
 RANDOM_SHUFFLE = False
-OUTPUT_PATH      = f"toolbench_bias_queries{'_random' if RANDOM_SHUFFLE else ''}.json"
+SHUFFLE = "none"
+OUTPUT_PATH = f"toolbench_bias_queries_{SHUFFLE}.json"
 # ──────────────────────────────────────────────────────────────────────────
 
 def load_file(path):
@@ -114,37 +115,56 @@ def main():
         # For each query, create one entry per endpoint in the cluster,
         # so that each endpoint appears once in the first position
         for query_text in queries:
-            for i in range(len(relevant_apis_base)):
-                # Place endpoint i at the front; keep the others in the same relative order
-
-                if RANDOM_SHUFFLE:
-                    permuted_relevant = relevant_apis_base.copy()
-                    random.shuffle(permuted_relevant)
-                else:
-                    permuted_relevant = (
-                        relevant_apis_base[i:] +
-                        relevant_apis_base[:i]
-                    )
-
-                # Now collect the corresponding full definitions in the same permuted order
-                permuted_api_list = []
-                for tool, api_name in permuted_relevant:
+            if SHUFFLE == "none":
+                definitions = []
+                for tool, api_name in relevant_apis_base:
                     definition = api_map.get((tool, api_name))
                     if not definition:
-                        # fallback to toolenv JSON
                         for ep in cluster:
                             if ep['api_name'] == api_name:
                                 category = ep['category']
                         definition = load_from_toolenv(category, tool, api_name)
-                    permuted_api_list.append(definition)
+                    definitions.append(definition)
 
                 output.append({
-                    "api_list":       permuted_api_list,
+                    "api_list":       definitions,
                     "query":          query_text,
-                    "relevant APIs":  permuted_relevant,
+                    "relevant APIs":  relevant_apis_base,
                     "query_id":       qid
                 })
                 qid += 1
+            else:
+                for i in range(len(relevant_apis_base)):
+                    # Place endpoint i at the front; keep the others in the same relative order
+
+                    if SHUFFLE == "random":
+                        permuted_relevant = relevant_apis_base.copy()
+                        random.shuffle(permuted_relevant)
+                    else:
+                        permuted_relevant = (
+                            relevant_apis_base[i:] +
+                            relevant_apis_base[:i]
+                        )
+
+                    # Now collect the corresponding full definitions in the same permuted order
+                    permuted_api_list = []
+                    for tool, api_name in permuted_relevant:
+                        definition = api_map.get((tool, api_name))
+                        if not definition:
+                            # fallback to toolenv JSON
+                            for ep in cluster:
+                                if ep['api_name'] == api_name:
+                                    category = ep['category']
+                            definition = load_from_toolenv(category, tool, api_name)
+                        permuted_api_list.append(definition)
+
+                    output.append({
+                        "api_list":       permuted_api_list,
+                        "query":          query_text,
+                        "relevant APIs":  permuted_relevant,
+                        "query_id":       qid
+                    })
+                    qid += 1
 
     # Write out the combined JSON.
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:

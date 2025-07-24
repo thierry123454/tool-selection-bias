@@ -14,7 +14,10 @@ STATS_PATHS = {
     "Claude":  "api_selection_stats_claude.json",
     "Gemini":  "api_selection_stats_gemini.json",
     "DeepSeek":  "api_selection_stats_deepseek.json",
+    "ToolLLama":  "api_selection_stats_toolllama.json"
 }
+OUTPUT = "model_correlation_base"
+
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 # ────────────────────────────────────────────────────────────────────────
 
@@ -75,7 +78,8 @@ ax.set_title("Model Selection-Bias Correlation Matrix")
 fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04, label="Pearson r")
 
 
-fig.savefig("model_correlation.pdf", format="pdf", transparent=True)
-print(f"Saved chart grid to model_correlation.pdf")
+fig.savefig(OUTPUT + ".pdf", format="pdf", transparent=True)
+fig.savefig(OUTPUT + ".png", format="png", transparent=True)
+print(f"Saved chart grid")
 plt.tight_layout()
 plt.show()
