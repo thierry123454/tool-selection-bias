@@ -5,8 +5,8 @@ import re
 import unicodedata
 
 # ─── CONFIG ─────────────────────────────────────────────
-# QUERIES_JSON    = "../data_bias/instruction/toolbench_bias_queries.json"
-QUERIES_JSON    = "../data_bias/instruction/toolbench_bias_queries_none.json"
+QUERIES_JSON    = "../data_bias/instruction/toolbench_bias_queries.json"
+# QUERIES_JSON    = "../data_bias/instruction/toolbench_bias_queries_none.json"
 CLUSTERS_JSON   = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 OUTPUT_PATH     = "api_selection_stats.json"
 
@@ -29,8 +29,9 @@ ANSWER_DIRS = {
     # "qwen-1.7b":  "../data_bias/answer_qwen",
     # "qwen-4b":  "../data_bias/answer_qwen-4b",
     # "qwen-8b":  "../data_bias/answer_qwen-8b"
-    "gemini-sample":  "../data_bias/answer_gemini_sample_dist",
-    "gemini-sample-temp-2":  "../data_bias/answer_gemini_sample_dist_temp_2"
+    # "gemini-sample":  "../data_bias/answer_gemini_sample_dist",
+    # "gemini-sample-temp-2":  "../data_bias/answer_gemini_sample_dist_temp_2",
+    "gemini-rand-id":  "../data_bias/answer_gemini_rand_name"
 }
 # ────────────────────────────────────────────────────────
 

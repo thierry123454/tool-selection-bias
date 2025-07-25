@@ -46,15 +46,16 @@ plt.rc('font', family='serif')
 # OUTPUT_PNG     = BASE + ".png"
 # TITLE = "Distribution of Selected API using ChatGPT with Different Top-$p$."
 
-# SAMPLE DISTRIBUTION
+# SHUFFLE EXPERIMENT
 STATS_PATHS = {
-    "Gemini": "api_selection_stats_gemini-sample.json",
+    "Base": "api_selection_stats_gemini.json",
+    "Random": "api_selection_stats_gemini-rand-id.json"
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 BASE = "api_selection_distributions_sample"
 OUTPUT_PDF     = BASE + ".pdf"
 OUTPUT_PNG     = BASE + ".png"
-TITLE = "Distribution of Selected API using ChatGPT with Different Top-$p$."
+TITLE = "Distribution of Selected API using Gemini with Random, Shuffled, or Targeted Tool Names."
 
 # TITLE = "Distribution of Selected API Position using ChatGPT with different System Prompts."
 # ────────────────────────────────────────────────────────────────────────

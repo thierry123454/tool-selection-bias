@@ -11,6 +11,7 @@ from toolbench.utils import process_system_message
 from toolbench.inference.utils import SimpleChatIO, react_parser
 from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ZEROSHOT
 from toolbench.utils import standardize
+import re
 
 class Gemini:
     def __init__(self, model="gemini-2.5-flash", gemini_key="", temperature=0.5, top_p=1) -> None:
@@ -25,8 +26,15 @@ class Gemini:
         self.top_p = top_p
         
         self.use_mapping = True
-        with open("tool_to_id.json", "r") as mf:
-            self.tool_to_id = json.load(mf)
+        with open("tool_to_id_prominent.json", "r") as mf:
+            self.tool_map = json.load(mf)
+            self.tool_map_standardized = {standardize(k):standardize(v) for k,v in self.tool_map.items()}
+            self.inv_map = {v:k for k,v in self.tool_map.items()}
+
+            all_names = "|".join(re.escape(n) for n in self.tool_map_standardized)
+            self.swap_pattern = re.compile(rf"(\d+)\.({all_names}):")
+            self.swap_pattern_2 = re.compile(rf"_for_({all_names})")
+            self.swap_pattern_3 = re.compile(rf' "({all_names})",')
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
         max_try = 10
@@ -107,8 +115,20 @@ class Gemini:
             if role == "System" and functions != []:
                 content = process_system_message(content, functions)
                 if self.use_mapping:
-                    for real_name, rid in self.tool_to_id.items():
-                        content = content.replace(standardize(real_name), rid)
+                    for real_name, map in self.tool_map.items():
+                        content = content.replace(real_name, map)
+                        def _sw(m):
+                            num, name = m.group(1), m.group(2)
+                            return f"{num}.{self.tool_map_standardized[name]}:"
+                        def _sw_2(m):
+                            name = m.group(1)
+                            return f"_for_{self.tool_map_standardized[name]}"
+                        def _sw_3(m):
+                            name = m.group(1)
+                            return f' "{self.tool_map_standardized[name]}",'
+                        content = self.swap_pattern.sub(_sw, content)
+                        content = self.swap_pattern_2.sub(_sw_2, content)
+                        content = self.swap_pattern_3.sub(_sw_3, content)
             prompt += f"{role}: {content}\n"
         prompt += "Assistant:\n"
         
@@ -118,10 +138,13 @@ class Gemini:
             predictions = self.prediction(prompt)
 
         if self.use_mapping:
-            for real_name, rid in self.tool_to_id.items():
-                predictions = predictions.replace(rid, standardize(real_name))
+            for real_name, map in self.tool_map.items():
+                predictions = re.sub(rf'_for_{standardize(map)}', rf'_for_{standardize(real_name)}', predictions)
 
         function_names = [fn["name"] for fn in functions]
+
+        print(f"PREDICTIONS: {predictions}")
+        print(f"FUNCTION NAMES: {function_names}")
 
         # react format prediction
         thought, action, action_input = react_parser(predictions, function_names)
