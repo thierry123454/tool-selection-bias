@@ -453,7 +453,7 @@ class pipeline_runner:
             task_list.append((method, backbone_model, query_id, data_dict, args, answer_dir, tool_des))
         return task_list
     
-    def method_converter(self, backbone_model, openai_key, method, env, process_id, single_chain_max_step=12, max_query_count=60, callbacks=None, temperature=0.5, top_p=1):
+    def method_converter(self, backbone_model, openai_key, method, env, process_id, single_chain_max_step=12, max_query_count=60, callbacks=None, temperature=0.5, top_p=1, mapping=""):
         if callbacks is None: callbacks = []
         if backbone_model == "chatgpt_function":
             model = "gpt-3.5-turbo"
@@ -482,10 +482,15 @@ class pipeline_runner:
         elif backbone_model == "qwen-8b":
             model = "qwen3-8b" # April 2025
             llm_forward = Qwen(model=model, qwen_key=openai_key)
+        elif backbone_model == "qwen-14b":
+            model = "qwen3-14b" # April 2025
+            llm_forward = Qwen(model=model, qwen_key=openai_key)
+        elif backbone_model == "qwen-32b":
+            model = "qwen3-32b" # April 2025
+            llm_forward = Qwen(model=model, qwen_key=openai_key)
         elif backbone_model == "gemini":
             model = "gemini-2.5-flash" # June 17, 2025
-            print("HALLO!!!")
-            llm_forward = Gemini(model=model, gemini_key=openai_key, temperature=temperature, top_p=top_p)
+            llm_forward = Gemini(model=model, gemini_key=openai_key, temperature=temperature, top_p=top_p, mapping=mapping)
         else:
             model = backbone_model
             llm_forward = model
@@ -554,7 +559,8 @@ class pipeline_runner:
             max_query_count=200,
             callbacks=callbacks,
             temperature=args.temperature,
-            top_p=args.top_p
+            top_p=args.top_p,
+            mapping = args.mapping
         )
 
         [callback.on_request_end(

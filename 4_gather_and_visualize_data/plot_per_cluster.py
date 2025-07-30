@@ -88,7 +88,7 @@ ncols = 5
 nrows = 2
 
 fig, axes = plt.subplots(nrows, ncols, figsize=(3*ncols, 4*nrows), squeeze=False)
-fig.suptitle("Distribution of Selected API Within Each Cluster", fontsize=16)
+# fig.suptitle("Distribution of Selected API Within Each Cluster", fontsize=16)
 
 models = list(STATS_PATHS.keys())
 n_models = len(models)

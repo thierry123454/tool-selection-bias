@@ -122,6 +122,6 @@ class Qwen:
 
 
 if __name__ == "__main__":
-    llm = DeepSeek()
+    llm = Qwen()
     result = llm.prediction("How old are you?")
     print(result)

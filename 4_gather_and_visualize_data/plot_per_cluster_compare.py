@@ -47,15 +47,29 @@ plt.rc('font', family='serif')
 # TITLE = "Distribution of Selected API using ChatGPT with Different Top-$p$."
 
 # SHUFFLE EXPERIMENT
+# STATS_PATHS = {
+#     "Base": "api_selection_stats_gemini.json",
+#     "Random": "api_selection_stats_gemini-rand-id.json",
+#     "Shuffled": "api_selection_stats_gemini-shuffle-name.json",
+#     "Rand. Targ.": "api_selection_stats_gemini-rand-id-prom.json",
+# }
+# CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
+# BASE = "api_selection_distributions_sample"
+# OUTPUT_PDF     = BASE + ".pdf"
+# OUTPUT_PNG     = BASE + ".png"
+# TITLE = "Distribution of Selected API using Gemini with Random, Shuffled, or Targeted Tool Names."
+
+# ZERO TEMPERATURE
 STATS_PATHS = {
-    "Base": "api_selection_stats_gemini.json",
-    "Random": "api_selection_stats_gemini-rand-id.json"
+    "1": "api_selection_stats_chatgpt-temp-0.json",
+    "2": "api_selection_stats_chatgpt-temp-0-1.json",
+    "3": "api_selection_stats_chatgpt-temp-0-2.json"
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
-BASE = "api_selection_distributions_sample"
+BASE = "api_selection_distributions_temp_0"
 OUTPUT_PDF     = BASE + ".pdf"
 OUTPUT_PNG     = BASE + ".png"
-TITLE = "Distribution of Selected API using Gemini with Random, Shuffled, or Targeted Tool Names."
+TITLE = "Distribution of Selected API using ChatGPT with Temperature 0."
 
 # TITLE = "Distribution of Selected API Position using ChatGPT with different System Prompts."
 # ────────────────────────────────────────────────────────────────────────
