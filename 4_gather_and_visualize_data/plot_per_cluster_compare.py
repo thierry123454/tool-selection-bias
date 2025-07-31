@@ -26,7 +26,8 @@ plt.rc('font', family='serif')
 # STATS_PATHS = {
 #     "0": "api_selection_stats_chatgpt-temp-0.json",
 #     "0.5":  "api_selection_stats_chatgpt_base.json",
-#     "1":  "api_selection_stats_chatgpt-temp-1.json"
+#     "1":  "api_selection_stats_chatgpt-temp-1.json",
+#     "2":  "api_selection_stats_chatgpt-temp-2.json"
 # }
 # CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 # BASE = "api_selection_distributions_temp"
@@ -47,29 +48,51 @@ plt.rc('font', family='serif')
 # TITLE = "Distribution of Selected API using ChatGPT with Different Top-$p$."
 
 # SHUFFLE EXPERIMENT
-# STATS_PATHS = {
-#     "Base": "api_selection_stats_gemini.json",
-#     "Random": "api_selection_stats_gemini-rand-id.json",
-#     "Shuffled": "api_selection_stats_gemini-shuffle-name.json",
-#     "Rand. Targ.": "api_selection_stats_gemini-rand-id-prom.json",
-# }
-# CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
-# BASE = "api_selection_distributions_sample"
-# OUTPUT_PDF     = BASE + ".pdf"
-# OUTPUT_PNG     = BASE + ".png"
-# TITLE = "Distribution of Selected API using Gemini with Random, Shuffled, or Targeted Tool Names."
-
-# ZERO TEMPERATURE
 STATS_PATHS = {
-    "1": "api_selection_stats_chatgpt-temp-0.json",
-    "2": "api_selection_stats_chatgpt-temp-0-1.json",
-    "3": "api_selection_stats_chatgpt-temp-0-2.json"
+    "Base": "api_selection_stats_gemini.json",
+    "Random": "api_selection_stats_gemini-rand-id.json",
+    "Shuffled": "api_selection_stats_gemini-shuffle-name.json",
+    "Rand. Targ.": "api_selection_stats_gemini-rand-id-prom.json",
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
-BASE = "api_selection_distributions_temp_0"
+BASE = "api_selection_distributions_sample"
 OUTPUT_PDF     = BASE + ".pdf"
 OUTPUT_PNG     = BASE + ".png"
-TITLE = "Distribution of Selected API using ChatGPT with Temperature 0."
+TITLE = "Distribution of Selected API using Gemini with Random, Shuffled, or Targeted Tool Names."
+
+# ZERO TEMPERATURE
+# STATS_PATHS = {
+#     "1": "api_selection_stats_chatgpt-temp-0.json",
+#     "2": "api_selection_stats_chatgpt-temp-0-1.json",
+#     "3": "api_selection_stats_chatgpt-temp-0-2.json"
+# }
+# CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
+# BASE = "api_selection_distributions_temp_0"
+# OUTPUT_PDF     = BASE + ".pdf"
+# OUTPUT_PNG     = BASE + ".png"
+# TITLE = "Distribution of Selected API using ChatGPT with Temperature 0."
+
+# SHUFFLE VS. CYCLIC
+# STATS_PATHS = {
+#     "Random": "api_selection_stats_chatgpt_random.json",
+#     "Cyclic":  "api_selection_stats_chatgpt_base.json"
+# }
+# CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
+# BASE = "api_selection_distributions_cyclic_vs_random"
+# OUTPUT_PDF     = BASE + ".pdf"
+# OUTPUT_PNG     = BASE + ".png"
+# TITLE = "Distribution of Selected API using ChatGPT with Different Temperatures."
+
+# SYSTEM PROMPTS
+# STATS_PATHS = {
+#     "Base": "api_selection_stats_chatgpt_base.json",
+#     "Similar":  "api_selection_stats_chatgpt_sim.json",
+#     "Adjusted":  "api_selection_stats_chatgpt_adj.json"
+# }
+# CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
+# BASE = "api_selection_distributions_prompts"
+# OUTPUT_PDF     = BASE + ".pdf"
+# OUTPUT_PNG     = BASE + ".png"
 
 # TITLE = "Distribution of Selected API Position using ChatGPT with different System Prompts."
 # ────────────────────────────────────────────────────────────────────────
@@ -141,7 +164,7 @@ ncols = 5
 nrows = 2
 
 fig, axes = plt.subplots(nrows, ncols, figsize=(3*ncols, 4*nrows), squeeze=False)
-fig.suptitle(TITLE, fontsize=16)
+# fig.suptitle(TITLE, fontsize=16)
 
 models = list(STATS_PATHS.keys())
 n_models = len(models)
@@ -183,3 +206,17 @@ print(f"Saved chart grid to {OUTPUT_PDF}")
 fig.savefig(OUTPUT_PNG, format="png", transparent=True)
 print(f"Saved chart grid to {OUTPUT_PNG}")
 plt.show()
+
+
+print("\n=== Selection distributions (text) ===")
+for idx, cluster in enumerate(clusters, start=1):
+    cluster_name = CLUSTER_NAMES.get(idx, f"Cluster {idx}")
+    print(f"\nCluster {idx}: {cluster_name}")
+    tools = [ep["tool"] for ep in cluster]
+    for model in models:
+        print(f"  Model: {model}")
+        pos_rates = rates[model].get(idx, {})
+        for pos in range(1, len(cluster) + 1):
+            rate = pos_rates.get(pos, 0.0)
+            tool = tools[pos - 1]
+            print(f"    {pos:2d}. {tool:30s} : {rate:.3f}")

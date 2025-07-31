@@ -1,6 +1,7 @@
 import json
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
 
 # Setup LaTeX
 plt.rc('text', usetex=True)
@@ -8,12 +9,12 @@ plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 STATS_PATHS = {
-    "ChatGPT": "api_selection_stats_chatgpt_no_func.json",
-    "ChatGPT Func": "api_selection_stats_chatgpt_base.json",
-    "ChatGPT 4": "api_selection_stats_chatgpt_4.json",
+    "GPT 3.5":  "api_selection_stats_chatgpt_base.json",
+    "GPT 4.1":  "api_selection_stats_chatgpt_4.json",
     "Claude":  "api_selection_stats_claude.json",
     "Gemini":  "api_selection_stats_gemini.json",
     "DeepSeek":  "api_selection_stats_deepseek.json",
+    "Qwen (32B)":  "api_selection_stats_qwen-32b.json",
     "ToolLLama":  "api_selection_stats_toolllama.json"
 }
 OUTPUT = "model_correlation_base"
@@ -56,10 +57,14 @@ for i, name in enumerate(models):
     for j, (cid, pos) in enumerate(features):
         vectors[i, j] = rates[name].get(cid, {}).get(pos, 0.0)
 
-print(vectors)
+# print(vectors)
 
 # compute Pearson correlation matrix
 corr = np.corrcoef(vectors)
+
+df = pd.DataFrame(corr, index=models, columns=models)
+print("\nPearson correlation matrix between model selection-bias vectors:")
+print(df.to_string(float_format="{:.2f}".format))
 
 # plot heatmap
 fig, ax = plt.subplots(figsize=(6,6))

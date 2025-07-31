@@ -12,37 +12,43 @@ CLUSTERS_JSON = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 STATS_PATHS = {
     "1.7": ["api_selection_stats_qwen-1.7b.json", "api_selection_stats_qwen-1.7b-2.json", "api_selection_stats_qwen-1.7b-3.json"],
     "4":   ["api_selection_stats_qwen-4b.json", "api_selection_stats_qwen-4b-2.json", "api_selection_stats_qwen-4b-3.json"],
-    "8":   ["api_selection_stats_qwen-8b.json", "api_selection_stats_qwen-8b-2.json", "api_selection_stats_qwen-8b-3.json"] 
+    "8":   ["api_selection_stats_qwen-8b.json", "api_selection_stats_qwen-8b-2.json", "api_selection_stats_qwen-8b-3.json"],
+    "14":   ["api_selection_stats_qwen-14b.json", "api_selection_stats_qwen-14b-2.json", "api_selection_stats_qwen-14b-3.json"],
+    "32":   ["api_selection_stats_qwen-32b.json", "api_selection_stats_qwen-32b-2.json", "api_selection_stats_qwen-32b-3.json"] 
 }
 BASE = "tv_by_size"
 OUTPUT_PDF     = BASE + ".pdf"
 OUTPUT_PNG     = BASE + ".png"
 X_AXIS = "Model size (B parameters)"
 PARAMETER = "Model Scale"
+LINE_COLOR = "red"
 
 # TEMPERATURE
 # STATS_PATHS = {
 #     "0": ["api_selection_stats_chatgpt-temp-0.json", "api_selection_stats_chatgpt-temp-0-1.json", "api_selection_stats_chatgpt-temp-0-2.json"],
 #     "0.5": ["api_selection_stats_chatgpt_base.json", "api_selection_stats_chatgpt-temp-0.5-2.json", "api_selection_stats_chatgpt-temp-0.5-3.json"],
-#     "1":  ["api_selection_stats_chatgpt-temp-1.json", "api_selection_stats_chatgpt-temp-1-2.json", "api_selection_stats_chatgpt-temp-1-3.json"]
+#     "1":  ["api_selection_stats_chatgpt-temp-1.json", "api_selection_stats_chatgpt-temp-1-2.json", "api_selection_stats_chatgpt-temp-1-3.json"],
+#     "2":  ["api_selection_stats_chatgpt-temp-2.json", "api_selection_stats_chatgpt-temp-2-2.json"]
 # }
 # BASE = "tv_by_temp"
 # OUTPUT_PDF     = BASE + ".pdf"
 # OUTPUT_PNG     = BASE + ".png"
 # X_AXIS = "Temperature"
 # PARAMETER = "Temperature"
+# LINE_COLOR = "#1f77b4"
 
 # TOP-P
 # STATS_PATHS = {
-#     "0.7": "api_selection_stats_chatgpt-top-p-0.7.json",
-#     "0.9": "api_selection_stats_chatgpt-top-p-0.9.json",
-#     "1":  "api_selection_stats_chatgpt_base.json"
+#     "0.7": ["api_selection_stats_chatgpt-top-p-0.7.json"],
+#     "0.9": ["api_selection_stats_chatgpt-top-p-0.9.json"],
+#     "1":  ["api_selection_stats_chatgpt_base.json"]
 # }
 # BASE = "tv_by_top_p"
 # OUTPUT_PDF     = BASE + ".pdf"
 # OUTPUT_PNG     = BASE + ".png"
 # X_AXIS = "Top-$p$"
 # PARAMETER = "Top-$p$"
+# LINE_COLOR = "green"
 # ────────────────────────────────────────────────────────────────────────
 
 def load_json(path):
@@ -99,13 +105,21 @@ temps = sorted(avg_runs, key=lambda t: float(t))
 mean_vals = [np.mean(avg_runs[t]) for t in temps]
 std_vals  = [np.std (avg_runs[t], ddof=1) for t in temps]
 
+print(temps)
+print(mean_vals)
+print(std_vals)
+
 # plot with error bars
 plt.figure(figsize=(6,4))
 x = [float(t) for t in temps]
-plt.errorbar(x, mean_vals, yerr=std_vals, marker='o', capsize=5, linestyle='-')
+plt.errorbar(x, mean_vals, yerr=std_vals, marker='o', capsize=5, linestyle='-',
+    color=LINE_COLOR,
+    ecolor=LINE_COLOR,
+    markerfacecolor=LINE_COLOR,
+    markeredgecolor='black')
 plt.xlabel(X_AXIS)
 plt.ylabel("$\delta_{\mathrm{model}}$")
-plt.title(f"Tool-Selection Bias vs. {PARAMETER}")
+# plt.title(f"Tool-Selection Bias vs. {PARAMETER}")
 plt.grid(True)
 plt.tight_layout()
 

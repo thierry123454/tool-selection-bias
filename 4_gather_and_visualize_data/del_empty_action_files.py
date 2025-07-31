@@ -3,30 +3,40 @@ import os
 import json
 import glob
 
-# Path to the directory containing JSON files
-DATA_DIR = "../data_bias/answer_gemini_shuffle_name"
+# Path to the directories containing JSON files
+DATA_DIRS = ["../data_bias/answer_gemini_rand_name_2", "../data_bias/answer_gemini_rand_name_prom_2",
+             "../data_bias/answer_gemini_shuffle_name_2"]
 
-# Pattern for the files
-pattern = os.path.join(DATA_DIR, "*_CoT@1.json")
+for DATA_DIR in DATA_DIRS:
+    pattern = os.path.join(DATA_DIR, "*_CoT@1.json")
+    for filepath in glob.glob(pattern):
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except (json.JSONDecodeError, OSError):
+            print(f"Error!")
+            # skip invalid or unreadable files
+            continue
 
-for filepath in glob.glob(pattern):
-    try:
-        with open(filepath, "r", encoding="utf-8") as f:
-            data = json.load(f)
-    except (json.JSONDecodeError, OSError):
-        # skip files that aren't valid JSON or can't be opened
-        continue
+        should_delete = False
+        saw_action = False
 
-    # traverse all tries and their chains looking for any Action node with empty description
-    should_delete = False
-    for trial in data.get("trys", []):
-        for node in trial.get("chain", []):
-            if node.get("node_type") == "Action" and not node.get("description"):
-                should_delete = True
+        # scan through every trial
+        for trial in data.get("trys", []):
+            for node in trial.get("chain", []):
+                if node.get("node_type") == "Action":
+                    saw_action = True
+                    # if it has an Action but empty description, mark for delete
+                    if not node.get("description"):
+                        should_delete = True
+                    break
+            if should_delete:
                 break
-        if should_delete:
-            break
 
-    if should_delete:
-        print(f"Deleting {os.path.basename(filepath)} (empty Action description)")
-        os.remove(filepath)
+        # if we never saw any Action node, also delete
+        if not saw_action:
+            should_delete = True
+
+        if should_delete:
+            print(f"Deleting {os.path.basename(filepath)}")
+            os.remove(filepath)

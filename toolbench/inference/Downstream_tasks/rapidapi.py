@@ -488,6 +488,9 @@ class pipeline_runner:
         elif backbone_model == "qwen-32b":
             model = "qwen3-32b" # April 2025
             llm_forward = Qwen(model=model, qwen_key=openai_key)
+        elif backbone_model == "qwen-235b":
+            model = "qwen3-235b-a22b" # April 2025
+            llm_forward = Qwen(model=model, qwen_key=openai_key)
         elif backbone_model == "gemini":
             model = "gemini-2.5-flash" # June 17, 2025
             llm_forward = Gemini(model=model, gemini_key=openai_key, temperature=temperature, top_p=top_p, mapping=mapping)
