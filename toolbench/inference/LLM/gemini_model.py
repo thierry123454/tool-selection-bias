@@ -12,6 +12,21 @@ from toolbench.inference.utils import SimpleChatIO, react_parser
 from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ZEROSHOT
 from toolbench.utils import standardize
 import re
+import string
+
+def scramble_actual_description(desc):
+    quote_idxs = [i for i, c in enumerate(desc) if c == '"']
+    if len(quote_idxs) < 3:
+        return desc
+    third_quote_pos = quote_idxs[2]
+    prefix = desc[: third_quote_pos + 1]
+    scrambled = random_string()
+    new_desc = prefix + scrambled + '"'
+    return new_desc
+
+def random_string(length=20):
+    alphabet = string.ascii_letters + string.digits
+    return "".join(random.choices(alphabet, k=length))
 
 class Gemini:
     def __init__(self, model="gemini-2.5-flash", gemini_key="", temperature=0.5, top_p=1, mapping="") -> None:
@@ -35,7 +50,7 @@ class Gemini:
         elif self.map == "tool-to-id-prom":
             FILENAME = "tool_to_id_prom"
 
-        if self.map:
+        if self.map and self.map != "desc-param-scramble":
             with open("./5_bias_investigation/experiments/" + FILENAME + "_" + run + ".json", "r") as mf:
                 self.tool_map = json.load(mf)
                 self.tool_map_standardized = {standardize(k):standardize(v) for k,v in self.tool_map.items()}
@@ -127,9 +142,17 @@ class Gemini:
             role = roles[message['role']]
             content = message['content']
             if role == "System" and functions != []:
+                if self.map.startswith("desc-param-scramble") and functions:
+                    for fn in functions:
+                        if "description" in fn:
+                            fn["description"] = scramble_actual_description(fn["description"])
+                        props = fn.get("parameters", {}).get("properties", {})
+                        for p in props.values():
+                            if "description" in p:
+                                p["description"] = random_string()
+                            
                 content = process_system_message(content, functions)
-                print(f"ORIGINAL: {content}")
-                if self.map:
+                if self.map and self.map != "desc-param-scramble":
                     def _sw(m):
                         num, name = m.group(1), m.group(2)
                         return f"{num}.{self.tool_map_standardized[name]}:"
@@ -146,6 +169,13 @@ class Gemini:
                     content = self.swap_pattern_2.sub(_sw_2, content)
                     content = self.swap_pattern_3.sub(_sw_3, content)
                     # content = self.swap_pattern_norm.sub(_sw_norm, content)
+                elif self.map == "desc-param-scramble":
+                    content = re.sub(
+                        r'(\d+\.[^\s:]+:\s*)([^\n]+)',
+                        lambda m: m.group(1) + random_string(20),
+                        content
+                    )
+                    pass
             prompt += f"{role}: {content}\n"
         prompt += "Assistant:\n"
         
@@ -154,7 +184,7 @@ class Gemini:
         else:
             predictions = self.prediction(prompt)
 
-        if self.map:
+        if self.map and self.map != "desc-param-scramble":
             def _sw_inv(m):
                 name = m.group(1)
                 return f"_for_{self.inv_map[name]}"
