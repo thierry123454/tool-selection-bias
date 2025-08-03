@@ -24,6 +24,37 @@ def scramble_actual_description(desc):
     new_desc = prefix + scrambled + '"'
     return new_desc
 
+
+def is_heldout(fn_name, heldouts):
+    return any(standardize(fn_name) == standardize(t) for t in heldouts)
+
+def scramble_except_heldout(functions, heldouts):
+    for fn in functions:
+        split = fn['name'].split('_for_')
+        tool_name = ""
+
+        if len(split) > 1:
+            tool_name = split[1]
+
+        if is_heldout(tool_name, heldouts):
+            continue
+        if "description" in fn:
+            fn["description"] = scramble_actual_description(fn["description"])
+        for p in fn.get("parameters", {}).get("properties", {}).values():
+            if "description" in p:
+                p["description"] = random_string()
+
+def scramble_tool_blurbs_except_heldout(content, heldouts):
+    def repl(m):
+        prefix = m.group(1)
+        toolname = m.group(2).strip()
+        colon = m.group(3)
+        if any(standardize(toolname) == standardize(h) for h in heldouts):
+            return m.group(0)  # leave intact
+        return f"{prefix}{toolname}{colon} {random_string(20)}"
+    pattern = re.compile(r'(\d+\.\s*)([^\s:]+)(:\s*)([^\n]+)')
+    return pattern.sub(repl, content)
+
 def random_string(length=20):
     alphabet = string.ascii_letters + string.digits
     return "".join(random.choices(alphabet, k=length))
@@ -49,6 +80,8 @@ class Gemini:
             FILENAME = "tool_to_id"
         elif self.map == "tool-to-id-prom":
             FILENAME = "tool_to_id_prom"
+        elif self.map == "all-but-one-scramble":
+            FILENAME = "tool_to_id_abo"
 
         if self.map and self.map != "desc-param-scramble":
             with open("./5_bias_investigation/experiments/" + FILENAME + "_" + run + ".json", "r") as mf:
@@ -64,6 +97,11 @@ class Gemini:
                 self.swap_pattern_3 = re.compile(rf' "({all_names})",')
                 self.swap_pattern_inv = re.compile(rf"_for_({all_names_inv})")
                 self.swap_pattern_norm = re.compile(rf"({all_names_norm})")
+
+            if self.map == "all-but-one-scramble":
+                with open("./5_bias_investigation/experiments/heldout_tools.json", encoding="utf-8") as f:
+                    self.heldouts = json.load(f)
+
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
         max_try = 10
@@ -150,6 +188,8 @@ class Gemini:
                         for p in props.values():
                             if "description" in p:
                                 p["description"] = random_string()
+                elif self.map.startswith("all-but-one-scramble"):
+                    scramble_except_heldout(functions, self.heldouts)
                             
                 content = process_system_message(content, functions)
                 if self.map and self.map != "desc-param-scramble":
@@ -169,13 +209,15 @@ class Gemini:
                     content = self.swap_pattern_2.sub(_sw_2, content)
                     content = self.swap_pattern_3.sub(_sw_3, content)
                     # content = self.swap_pattern_norm.sub(_sw_norm, content)
+
+                    if self.map == "all-but-one-scramble":
+                        content = scramble_tool_blurbs_except_heldout(content, self.heldouts)
                 elif self.map == "desc-param-scramble":
                     content = re.sub(
                         r'(\d+\.[^\s:]+:\s*)([^\n]+)',
                         lambda m: m.group(1) + random_string(20),
                         content
                     )
-                    pass
             prompt += f"{role}: {content}\n"
         prompt += "Assistant:\n"
         

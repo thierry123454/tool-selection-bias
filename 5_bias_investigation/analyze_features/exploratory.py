@@ -6,6 +6,8 @@ import pandas as pd
 from scipy.stats import pearsonr, spearmanr
 
 # ─── CONFIG ────────────────────────────────────────────────────────────────
+# plt.rc('text', usetex=True)
+# plt.rc('font', family='serif')
 FEATURES_PATH = '../extract_features/final_features_subtract_mean.json'  # path to your JSON file
 OUTPUT_DIR    = 'correlation_plots'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
