@@ -1,14 +1,6 @@
 [
   [
     {
-      "category": "Location",
-      "tool": "GoApis Geocoding API",
-      "tool_desc": "Goapis Geocoding API is an efficient and affordable alternative to Google Maps Geocoding API.",
-      "api_name": "Geocding",
-      "api_desc": "Geocoding is the process of converting a physical address into geographic coordinates, such as latitude and longitude. It allows for the identification of a specific location on the Earth's surface, making it possible to map and analyze data spatially",
-      "required_parameters": []
-    },
-    {
       "category": "Mapping",
       "tool": "Geocode - Forward and Reverse",
       "tool_desc": "Forward and reverse geocoding using Google Geocoding API.",
@@ -52,6 +44,13 @@
       "tool_desc": "Geocoding Api for Forward geocoding and Reverse Geocoding with 2500 free api requests",
       "api_name": "search.php",
       "api_desc": "Blazing fast geocoding open service with world wide coverage and 24x7 Support.Quickly start deploying your apps with our affordable and accurate geocoding api.Support for all languages java, python, php, c, c++, React, Angular etc.Sign up without any credit card and get 2500 free api requests daily."
+    },
+    {
+      "category": "Mapping",
+      "tool": "Address Normalization and Geocoding",
+      "tool_desc": "Takes free text address input, standardizes and outputs rooftop latitude/longitude geocode coordinates.",
+      "api_name": "Geocoding",
+      "api_desc": "Returns standard, normalized address and geocode lat/long rooftop coordinates."
     }
   ],
   [

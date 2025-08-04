@@ -189,6 +189,7 @@ You have access of the following tools:\n'''
         return data_dict
 
     def api_json_to_openai_json(self, api_json,standard_tool_name):
+        # print(f"ORIGINAL API_JSON: {api_json}")
         description_max_length=256
         templete =     {
             "name": "",
@@ -245,6 +246,8 @@ You have access of the following tools:\n'''
 
                 templete["parameters"]["properties"][name] = prompt
                 templete["parameters"]["required"].append(name)
+
+        if "optional_parameters" in api_json.keys() and len(api_json["optional_parameters"]) > 0:
             for para in api_json["optional_parameters"]:
                 name = standardize(para["name"])
                 name = change_name(name)
@@ -268,7 +271,8 @@ You have access of the following tools:\n'''
 
                 templete["parameters"]["properties"][name] = prompt
                 templete["parameters"]["optional"].append(name)
-        
+            
+        # print(f"OUTPUT JSON: {templete}")
         return templete, api_json["category_name"],  pure_api_name
 
     def check_success(self):

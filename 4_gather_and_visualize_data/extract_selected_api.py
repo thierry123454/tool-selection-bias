@@ -17,7 +17,7 @@ ANSWER_DIRS = {
     # "chatgpt_adj": "../data_bias/answer_chatgpt_adjusted",
     # "chatgpt_sim": "../data_bias/answer_chatgpt_similar",
     # "chatgpt_random":  "../data_bias/answer_chatgpt_base_random",
-    # "chatgpt_4":  "../data_bias/answer_chatgpt_4_base_prompt",
+    "chatgpt_4":  "../data_bias/answer_chatgpt_4_base_prompt",
     # "chatgpt-temp-0":  "../data_bias/answer_chatgpt_temp_0",
     # "chatgpt-temp-0-1":  "../data_bias/answer_chatgpt_temp_0_2",
     # "chatgpt-temp-0-2":  "../data_bias/answer_chatgpt_temp_0_3",
@@ -32,8 +32,8 @@ ANSWER_DIRS = {
     # "chatgpt-top-p-0.7":  "../data_bias/answer_chatgpt_top_p_0.7",
     # "chatgpt-top-p-0.9":  "../data_bias/answer_chatgpt_top_p_0.9",
     # "claude":  "../data_bias/answer_claude",
-    # "gemini":  "../data_bias/answer_gemini",
-    # "deepseek":  "../data_bias/answer_deepseek",
+    "gemini":  "../data_bias/answer_gemini",
+    "deepseek":  "../data_bias/answer_deepseek",
     # "toolllama":  "../data_bias/answer_toolllama",
     # "qwen-1.7b":  "../data_bias/answer_qwen",
     # "qwen-1.7b-2":  "../data_bias/answer_qwen_2",
@@ -50,6 +50,7 @@ ANSWER_DIRS = {
     # "qwen-32b":  "../data_bias/answer_qwen-32b",
     # "qwen-32b-2":  "../data_bias/answer_qwen-32b-2",
     # "qwen-32b-3":  "../data_bias/answer_qwen-32b-3",
+    "qwen-235b": "../data_bias/answer_qwen-235b"
     # "gemini-sample":  "../data_bias/answer_gemini_sample_dist",
     # "gemini-sample-temp-2":  "../data_bias/answer_gemini_sample_dist_temp_2",
     # "gemini-rand-id":  "../data_bias/answer_gemini_rand_name",
@@ -58,8 +59,8 @@ ANSWER_DIRS = {
     # "gemini-rand-id-2":  "../data_bias/answer_gemini_rand_name_2",
     # "gemini-shuffle-name-2":  "../data_bias/answer_gemini_shuffle_name_2",
     # "gemini-rand-id-prom-2":  "../data_bias/answer_gemini_rand_name_prom_2",
-    "gemini-desc-param-scramble":  "../data_bias/answer_gemini_desc_param_scramble",
-    "gemini-desc-param-scramble-2":  "../data_bias/answer_gemini_desc_param_scramble_2",
+    # "gemini-desc-param-scramble":  "../data_bias/answer_gemini_desc_param_scramble",
+    # "gemini-desc-param-scramble-2":  "../data_bias/answer_gemini_desc_param_scramble_2",
 }
 # ────────────────────────────────────────────────────────
 

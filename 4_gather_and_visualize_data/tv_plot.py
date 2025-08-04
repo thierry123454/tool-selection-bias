@@ -14,7 +14,8 @@ STATS_PATHS = {
     "4":   ["api_selection_stats_qwen-4b.json", "api_selection_stats_qwen-4b-2.json", "api_selection_stats_qwen-4b-3.json"],
     "8":   ["api_selection_stats_qwen-8b.json", "api_selection_stats_qwen-8b-2.json", "api_selection_stats_qwen-8b-3.json"],
     "14":   ["api_selection_stats_qwen-14b.json", "api_selection_stats_qwen-14b-2.json", "api_selection_stats_qwen-14b-3.json"],
-    "32":   ["api_selection_stats_qwen-32b.json", "api_selection_stats_qwen-32b-2.json", "api_selection_stats_qwen-32b-3.json"] 
+    "32":   ["api_selection_stats_qwen-32b.json", "api_selection_stats_qwen-32b-2.json", "api_selection_stats_qwen-32b-3.json"],
+    "235": ["api_selection_stats_qwen-235b-old.json"]
 }
 BASE = "tv_by_size"
 OUTPUT_PDF     = BASE + ".pdf"

@@ -25,8 +25,7 @@ class ChatGPT:
         max_try = 10
         while True:
             try:
-                print(f"──> {self.model}")
-                # print(f"──> {self.model} prompt:\n", prompt)
+                print(f"──> {self.model} prompt:\n", prompt)
                 response = self.client.chat.completions.create(
                     model=self.model,
                     messages=[

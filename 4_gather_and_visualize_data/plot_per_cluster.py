@@ -11,14 +11,17 @@ plt.rc('font', family='serif')
 # ─── CONFIG ────────────────────────────────────────────────────────────
 STATS_PATHS = {
     "ChatGPT 4.1":  "api_selection_stats_chatgpt_4.json",
-    "Claude":  "api_selection_stats_claude.json",
+    # "Claude":  "api_selection_stats_claude.json",
     "Gemini":  "api_selection_stats_gemini.json",
     "DeepSeek":  "api_selection_stats_deepseek.json",
-    "ToolLLama":  "api_selection_stats_toolllama.json"
+    # "ToolLLama":  "api_selection_stats_toolllama.json"
+    "Qwen":  "api_selection_stats_qwen-235b.json",
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 OUTPUT_PDF     = "api_selection_distributions_by_model.pdf"
 OUTPUT_PNG     = "api_selection_distributions_by_model.png"
+
+SELECT_CLUSTERS = [1, 3, 5, 8]
 # ────────────────────────────────────────────────────────────────────────
 
 # LaTeX special chars:  # $ % & ~ _ ^ \ { }
@@ -82,36 +85,46 @@ for name, clusterdict in counts.items():
         else:
             rates[name][cid] = {}
 
-# We know there are 10 clusters, so make 2 rows × 5 columns
-n_clusters = len(clusters)
-ncols = 5
-nrows = 2
+# Determine which clusters to plot
+if SELECT_CLUSTERS is None:
+    cluster_ids = list(range(1, len(clusters) + 1))
+else:
+    cluster_ids = sorted([cid for cid in SELECT_CLUSTERS if 1 <= cid <= len(clusters)])
+if not cluster_ids:
+    raise ValueError("No valid cluster IDs to plot.")
 
-fig, axes = plt.subplots(nrows, ncols, figsize=(3*ncols, 4*nrows), squeeze=False)
-# fig.suptitle("Distribution of Selected API Within Each Cluster", fontsize=16)
+clusters_to_plot = [clusters[cid - 1] for cid in cluster_ids]
+
+# Layout: up to 5 columns to match previous style
+n_clusters = len(clusters_to_plot)
+ncols = min(5, n_clusters)
+nrows = math.ceil(n_clusters / ncols)
+
+fig, axes = plt.subplots(nrows, ncols, figsize=(3 * ncols, 4 * nrows), squeeze=False)
 
 models = list(STATS_PATHS.keys())
 n_models = len(models)
 bar_w = 0.8 / n_models
 
-for idx, cluster in enumerate(clusters, start=1):
-    row, col = divmod(idx-1, ncols)
+for plot_idx, (cid, cluster) in enumerate(zip(cluster_ids, clusters_to_plot), start=1):
+    row, col = divmod(plot_idx - 1, ncols)
     ax = axes[row][col]
     cluster_size = len(cluster)
-    x = np.arange(1, cluster_size+1)
+    x = np.arange(1, cluster_size + 1)
 
-    # draw one bar per model, offset horizontally
     for i, name in enumerate(models):
-        model_rates = [rates[name].get(idx, {}).get(pos, 0) for pos in x]
-        ax.bar(x + bar_w*(i-(n_models-1)/2), model_rates,
+        model_rates = [rates[name].get(cid, {}).get(pos, 0) for pos in x]
+        ax.bar(x + bar_w*(i - (n_models - 1)/2), model_rates,
                width=bar_w, label=name)
 
-    # x-axis labels
     ax.set_xticks(x)
     tools = [escape_tex(ep["tool"]) for ep in cluster]
     ax.set_xticklabels(tools, rotation=90, ha="right", fontsize=6)
     ax.set_ylim(0, 1.0)
-    ax.set_title(CLUSTER_NAMES.get(idx, ""), fontsize=10)
+    ax.set_title(CLUSTER_NAMES.get(cid, f"Cluster {cid}"), fontsize=13, fontweight='bold')
+        # increase tick label sizes for readability
+    ax.tick_params(axis='y', labelsize=11)
+    ax.tick_params(axis='x', labelsize=8)
 
 # turn off any unused axes
 for ax_row in axes:
@@ -121,7 +134,7 @@ for ax_row in axes:
 
 # shared legend at bottom
 fig.legend(models, loc="lower center", ncol=n_models, frameon=False, fontsize=12)
-plt.tight_layout(rect=[0,0.05,1,0.95])
+plt.tight_layout(rect=[0, 0.05, 1, 0.95])
 
 # save & show
 fig.savefig(OUTPUT_PDF, format="pdf", transparent=True)

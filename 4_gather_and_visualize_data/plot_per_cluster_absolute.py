@@ -111,7 +111,9 @@ for idx, cluster in enumerate(clusters, start=1):
     tools = [i for i in range(1, cluster_size + 1)]
     ax.set_xticklabels(tools, rotation=0, ha="right", fontsize=12)
     ax.set_ylim(0, 1.0)
-    ax.set_title(CLUSTER_NAMES.get(idx, ""), fontsize=10)
+    ax.set_title(CLUSTER_NAMES.get(idx, ""), fontsize=13, fontweight='bold')
+    ax.tick_params(axis='y', labelsize=11)
+    ax.tick_params(axis='x', labelsize=8)
 
 # turn off any unused axes
 for ax_row in axes:
