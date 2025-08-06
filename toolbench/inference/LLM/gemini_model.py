@@ -83,7 +83,7 @@ class Gemini:
         elif self.map == "all-but-one-scramble":
             FILENAME = "tool_to_id_abo"
 
-        if self.map and self.map != "desc-param-scramble":
+        if self.map and self.map not in ["desc-param-scramble", "desc-scramble", "param-scramble"]:
             with open("./5_bias_investigation/experiments/" + FILENAME + "_" + run + ".json", "r") as mf:
                 self.tool_map = json.load(mf)
                 self.tool_map_standardized = {standardize(k):standardize(v) for k,v in self.tool_map.items()}
@@ -180,19 +180,21 @@ class Gemini:
             role = roles[message['role']]
             content = message['content']
             if role == "System" and functions != []:
-                if self.map.startswith("desc-param-scramble") and functions:
+                if self.map in ["desc-param-scramble", "desc-scramble", "param-scramble"] and functions:
                     for fn in functions:
                         if "description" in fn:
-                            fn["description"] = scramble_actual_description(fn["description"])
+                            if self.map in ["desc-param-scramble", "desc-scramble"]:
+                                fn["description"] = scramble_actual_description(fn["description"])
                         props = fn.get("parameters", {}).get("properties", {})
-                        for p in props.values():
-                            if "description" in p:
-                                p["description"] = random_string()
+                        if self.map in ["desc-param-scramble", "param-scramble"]:
+                            for p in props.values():
+                                if "description" in p:
+                                    p["description"] = random_string()
                 elif self.map.startswith("all-but-one-scramble"):
                     scramble_except_heldout(functions, self.heldouts)
                             
                 content = process_system_message(content, functions)
-                if self.map and self.map != "desc-param-scramble":
+                if self.map and self.map not in ["desc-param-scramble", "desc-scramble", "param-scramble"]:
                     def _sw(m):
                         num, name = m.group(1), m.group(2)
                         return f"{num}.{self.tool_map_standardized[name]}:"
@@ -212,7 +214,7 @@ class Gemini:
 
                     if self.map == "all-but-one-scramble":
                         content = scramble_tool_blurbs_except_heldout(content, self.heldouts)
-                elif self.map == "desc-param-scramble":
+                elif self.map in ["desc-param-scramble", "desc-scramble"]:
                     content = re.sub(
                         r'(\d+\.[^\s:]+:\s*)([^\n]+)',
                         lambda m: m.group(1) + random_string(20),
@@ -226,7 +228,7 @@ class Gemini:
         else:
             predictions = self.prediction(prompt)
 
-        if self.map and self.map != "desc-param-scramble":
+        if self.map and self.map not in ["desc-param-scramble", "desc-scramble", "param-scramble"]:
             def _sw_inv(m):
                 name = m.group(1)
                 return f"_for_{self.inv_map[name]}"

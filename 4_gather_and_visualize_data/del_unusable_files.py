@@ -24,6 +24,7 @@ QUERIES_PER_CLUSTER = 500
 #              "../data_bias/answer_gemini_rand_name_prom_2",
 #              "../data_bias/answer_gemini_shuffle_name",
 #              "../data_bias/answer_gemini_shuffle_name_2"]
+# DATA_DIRS = ["../data_bias/answer_gemini_desc_param_scramble_2"]
 
 def cluster_of_query(qid):
     """Map query id to cluster index (1-based)."""

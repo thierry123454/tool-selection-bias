@@ -3,7 +3,7 @@ import json
 
 # ─── CONFIG ────────────────────────────────────────────────────────────────
 FEATURES_PATH = 'final_features.json'
-RATES_PATH    = '../4_gather_and_visualize_data/rates_api.json'
+RATES_PATH    = '../../4_gather_and_visualize_data/rates_api.json'
 # ──────────────────────────────────────────────────────────────────────────
 
 def load_json(path):

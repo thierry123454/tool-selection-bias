@@ -2,851 +2,901 @@
   {
     "cluster_id": 1,
     "api": 0,
-    "avg_similarity_tool_desc": 0.7390692126750946,
-    "avg_similarity_api_desc": 0.7586827427148819,
-    "age_days": null,
-    "desc_name_length_sum": 784,
-    "num_params": 2,
-    "flesch_reading_ease": 25.742035398230115,
-    "positive_word_count": 5,
-    "selection_rate": {
-      "ChatGPT": 0.041666666666666664,
-      "Claude": 0,
-      "Gemini": 0,
-      "DeepSeek": 0
-    }
-  },
-  {
-    "cluster_id": 1,
-    "api": 1,
-    "avg_similarity_tool_desc": 0.7802115762233734,
-    "avg_similarity_api_desc": 0.7897499895095825,
-    "age_days": 1314,
+    "avg_similarity_tool_desc": 0.7802097797393799,
+    "avg_similarity_api_desc": 0.7897800701856613,
+    "age_days": 1334,
     "desc_name_length_sum": 144,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.041666666666666664,
+      "ChatGPT 4.1": 0.7214076246334311,
+      "Gemini": 0.742393509127789,
+      "DeepSeek": 0.204,
+      "Qwen": 0.535483870967742
+    },
     "num_params": 1,
     "flesch_reading_ease": 36.572857142857174,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.3925438596491228,
-      "Claude": 0.854,
-      "Gemini": 0.9118236472945892,
-      "DeepSeek": 0.57
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 1,
-    "api": 2,
-    "avg_similarity_tool_desc": 0.7759598517417907,
-    "avg_similarity_api_desc": 0.7413328087329865,
-    "age_days": 893,
+    "api": 1,
+    "avg_similarity_tool_desc": 0.775959644317627,
+    "avg_similarity_api_desc": 0.7413295471668243,
+    "age_days": 913,
     "desc_name_length_sum": 293,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.3925438596491228,
+      "ChatGPT 4.1": 0.08211143695014662,
+      "Gemini": 0.06288032454361055,
+      "DeepSeek": 0.198,
+      "Qwen": 0.025806451612903226
+    },
     "num_params": 1,
     "flesch_reading_ease": 39.52506097560976,
-    "positive_word_count": 2,
-    "selection_rate": {
-      "ChatGPT": 0.23903508771929824,
-      "Claude": 0.018,
-      "Gemini": 0,
-      "DeepSeek": 0.052
-    }
+    "positive_word_count": 2
   },
   {
     "cluster_id": 1,
-    "api": 3,
-    "avg_similarity_tool_desc": 0.772294585108757,
-    "avg_similarity_api_desc": 0.8061066389083862,
-    "age_days": 1966,
+    "api": 2,
+    "avg_similarity_tool_desc": 0.7722930085659027,
+    "avg_similarity_api_desc": 0.8061034613847733,
+    "age_days": 1986,
     "desc_name_length_sum": 91,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.23903508771929824,
+      "ChatGPT 4.1": 0.008797653958944282,
+      "Gemini": 0.1075050709939148,
+      "DeepSeek": 0.222,
+      "Qwen": 0.24301075268817204
+    },
     "num_params": 4,
     "flesch_reading_ease": 18.940000000000026,
-    "positive_word_count": 0,
+    "positive_word_count": 0
+  },
+  {
+    "cluster_id": 1,
+    "api": 3,
+    "avg_similarity_tool_desc": 0.7674241751432419,
+    "avg_similarity_api_desc": 0.7551099735498429,
+    "age_days": 1332,
+    "desc_name_length_sum": 424,
     "selection_rate": {
-      "ChatGPT": 0.27850877192982454,
-      "Claude": 0.126,
-      "Gemini": 0.08817635270541083,
-      "DeepSeek": 0.354
-    }
+      "ChatGPT 3.5": 0.27850877192982454,
+      "ChatGPT 4.1": 0.002932551319648094,
+      "Gemini": 0,
+      "DeepSeek": 0.002,
+      "Qwen": 0.008602150537634409
+    },
+    "num_params": 2,
+    "flesch_reading_ease": 41.30442796610171,
+    "positive_word_count": 3
   },
   {
     "cluster_id": 1,
     "api": 4,
-    "avg_similarity_tool_desc": 0.7674256819486618,
-    "avg_similarity_api_desc": 0.7551114362478256,
-    "age_days": 1313,
-    "desc_name_length_sum": 424,
-    "num_params": 2,
-    "flesch_reading_ease": 41.30442796610171,
-    "positive_word_count": 3,
+    "avg_similarity_tool_desc": 0.7861944848299026,
+    "avg_similarity_api_desc": 0.7828507459163666,
+    "age_days": 1444,
+    "desc_name_length_sum": 230,
     "selection_rate": {
-      "ChatGPT": 0.04824561403508772,
-      "Claude": 0.002,
-      "Gemini": 0,
-      "DeepSeek": 0.024
-    }
+      "ChatGPT 3.5": 0.04824561403508772,
+      "ChatGPT 4.1": 0.18475073313782991,
+      "Gemini": 0.0872210953346856,
+      "DeepSeek": 0.374,
+      "Qwen": 0.1870967741935484
+    },
+    "num_params": 1,
+    "flesch_reading_ease": 14.891785714285732,
+    "positive_word_count": 0
   },
   {
     "cluster_id": 2,
     "api": 0,
-    "avg_similarity_tool_desc": 0.8024739056825638,
-    "avg_similarity_api_desc": 0.8307023072242736,
-    "age_days": 1314,
+    "avg_similarity_tool_desc": 0.8024520272016525,
+    "avg_similarity_api_desc": 0.8306839370727539,
+    "age_days": 1334,
     "desc_name_length_sum": 145,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.3680851063829787,
+      "ChatGPT 4.1": 0.3508771929824561,
+      "Gemini": 0.19517102615694165,
+      "DeepSeek": 0.48697394789579157,
+      "Qwen": 0.2012847965738758
+    },
     "num_params": 2,
     "flesch_reading_ease": 41.30250000000001,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.3680851063829787,
-      "Claude": 0.352,
-      "Gemini": 0.19517102615694165,
-      "DeepSeek": 0.48697394789579157
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 2,
     "api": 1,
-    "avg_similarity_tool_desc": 0.7226585030555726,
-    "avg_similarity_api_desc": 0.8489790749549866,
-    "age_days": 1864,
+    "avg_similarity_tool_desc": 0.7226571989059448,
+    "avg_similarity_api_desc": 0.848973604440689,
+    "age_days": 1884,
     "desc_name_length_sum": 97,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.019148936170212766,
+      "ChatGPT 4.1": 0.03728070175438596,
+      "Gemini": 0.3843058350100604,
+      "DeepSeek": 0.14228456913827656,
+      "Qwen": 0.014989293361884369
+    },
     "num_params": 14,
     "flesch_reading_ease": 66.10000000000002,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.019148936170212766,
-      "Claude": 0.08,
-      "Gemini": 0.3843058350100604,
-      "DeepSeek": 0.14228456913827656
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 2,
     "api": 2,
-    "avg_similarity_tool_desc": 0.8072789508104324,
-    "avg_similarity_api_desc": 0.7743188458681106,
-    "age_days": 1513,
+    "avg_similarity_tool_desc": 0.8072711169719696,
+    "avg_similarity_api_desc": 0.7742923021316528,
+    "age_days": 1533,
     "desc_name_length_sum": 264,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.023404255319148935,
+      "ChatGPT 4.1": 0.2149122807017544,
+      "Gemini": 0.012072434607645875,
+      "DeepSeek": 0.04809619238476954,
+      "Qwen": 0.15203426124197003
+    },
     "num_params": 2,
     "flesch_reading_ease": -21.783863636363606,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.023404255319148935,
-      "Claude": 0.22,
-      "Gemini": 0.012072434607645875,
-      "DeepSeek": 0.04809619238476954
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 2,
     "api": 3,
-    "avg_similarity_tool_desc": 0.8188726270198822,
-    "avg_similarity_api_desc": 0.846629878282547,
+    "avg_similarity_tool_desc": 0.8186348658800126,
+    "avg_similarity_api_desc": 0.8466140067577362,
     "age_days": null,
     "desc_name_length_sum": 277,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.0851063829787234,
+      "ChatGPT 4.1": 0.1425438596491228,
+      "Gemini": 0.3420523138832998,
+      "DeepSeek": 0.004008016032064128,
+      "Qwen": 0.4732334047109208
+    },
     "num_params": 2,
     "flesch_reading_ease": 23.661250000000024,
-    "positive_word_count": 1,
-    "selection_rate": {
-      "ChatGPT": 0.0851063829787234,
-      "Claude": 0.032,
-      "Gemini": 0.3420523138832998,
-      "DeepSeek": 0.004008016032064128
-    }
+    "positive_word_count": 1
   },
   {
     "cluster_id": 2,
     "api": 4,
-    "avg_similarity_tool_desc": 0.8154555362462997,
-    "avg_similarity_api_desc": 0.810238122344017,
-    "age_days": 1368,
+    "avg_similarity_tool_desc": 0.8154392695426941,
+    "avg_similarity_api_desc": 0.8102323341369629,
+    "age_days": 1387,
     "desc_name_length_sum": 203,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.5042553191489362,
+      "ChatGPT 4.1": 0.2543859649122807,
+      "Gemini": 0.06639839034205232,
+      "DeepSeek": 0.3186372745490982,
+      "Qwen": 0.15845824411134904
+    },
     "num_params": 5,
     "flesch_reading_ease": 33.31902173913048,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.5042553191489362,
-      "Claude": 0.316,
-      "Gemini": 0.06639839034205232,
-      "DeepSeek": 0.3186372745490982
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 3,
     "api": 0,
-    "avg_similarity_tool_desc": 0.8140318953990936,
-    "avg_similarity_api_desc": 0.8494990712404251,
-    "age_days": 1026,
+    "avg_similarity_tool_desc": 0.8140344333648681,
+    "avg_similarity_api_desc": 0.8495040780305863,
+    "age_days": 1046,
     "desc_name_length_sum": 211,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.5913978494623656,
+      "ChatGPT 4.1": 0.5270935960591133,
+      "Gemini": 0.24897959183673468,
+      "DeepSeek": 0.25903614457831325,
+      "Qwen": 0.2975708502024291
+    },
     "num_params": 3,
     "flesch_reading_ease": 55.763750000000016,
-    "positive_word_count": 3,
-    "selection_rate": {
-      "ChatGPT": 0.5913978494623656,
-      "Claude": 0.73,
-      "Gemini": 0.6178861788617886,
-      "DeepSeek": 0.8817635270541082
-    }
+    "positive_word_count": 3
   },
   {
     "cluster_id": 3,
     "api": 1,
-    "avg_similarity_tool_desc": 0.800700768828392,
-    "avg_similarity_api_desc": 0.757169286608696,
-    "age_days": 1871,
+    "avg_similarity_tool_desc": 0.8007034766674042,
+    "avg_similarity_api_desc": 0.7570356237888336,
+    "age_days": 1891,
     "desc_name_length_sum": 212,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.02795698924731183,
+      "ChatGPT 4.1": 0.05172413793103448,
+      "Gemini": 0.15306122448979592,
+      "DeepSeek": 0.1686746987951807,
+      "Qwen": 0.048582995951417005
+    },
     "num_params": 4,
     "flesch_reading_ease": 34.45517241379312,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.02795698924731183,
-      "Claude": 0.036,
-      "Gemini": 0.024390243902439025,
-      "DeepSeek": 0
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 3,
     "api": 2,
-    "avg_similarity_tool_desc": 0.7196096444129944,
-    "avg_similarity_api_desc": 0.8042517983913422,
-    "age_days": 1072,
+    "avg_similarity_tool_desc": 0.7196093344688416,
+    "avg_similarity_api_desc": 0.8043252378702164,
+    "age_days": 1091,
     "desc_name_length_sum": 369,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.1956989247311828,
+      "ChatGPT 4.1": 0.22660098522167488,
+      "Gemini": 0.38571428571428573,
+      "DeepSeek": 0.3333333333333333,
+      "Qwen": 0.19433198380566802
+    },
     "num_params": 5,
     "flesch_reading_ease": 53.699166666666684,
-    "positive_word_count": 2,
-    "selection_rate": {
-      "ChatGPT": 0.1956989247311828,
-      "Claude": 0.024,
-      "Gemini": 0.024390243902439025,
-      "DeepSeek": 0.002004008016032064
-    }
+    "positive_word_count": 2
   },
   {
     "cluster_id": 3,
     "api": 3,
-    "avg_similarity_tool_desc": 0.8065168607234955,
-    "avg_similarity_api_desc": 0.8011010485887528,
+    "avg_similarity_tool_desc": 0.8065200114250183,
+    "avg_similarity_api_desc": 0.801103202700615,
     "age_days": null,
     "desc_name_length_sum": 451,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.02795698924731183,
+      "ChatGPT 4.1": 0.16748768472906403,
+      "Gemini": 0.17551020408163265,
+      "DeepSeek": 0.1566265060240964,
+      "Qwen": 0.23076923076923078
+    },
     "num_params": 7,
     "flesch_reading_ease": 46.544885844748876,
-    "positive_word_count": 1,
-    "selection_rate": {
-      "ChatGPT": 0.02795698924731183,
-      "Claude": 0.004,
-      "Gemini": 0.006097560975609756,
-      "DeepSeek": 0.008016032064128256
-    }
+    "positive_word_count": 1
   },
   {
     "cluster_id": 3,
     "api": 4,
-    "avg_similarity_tool_desc": 0.7571816545724869,
-    "avg_similarity_api_desc": 0.8057064366340637,
+    "avg_similarity_tool_desc": 0.7571830332279206,
+    "avg_similarity_api_desc": 0.8057111042737961,
     "age_days": null,
     "desc_name_length_sum": 157,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.15698924731182795,
+      "ChatGPT 4.1": 0.027093596059113302,
+      "Gemini": 0.036734693877551024,
+      "DeepSeek": 0.0823293172690763,
+      "Qwen": 0.22874493927125505
+    },
     "num_params": 8,
     "flesch_reading_ease": 55.60115942028986,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.15698924731182795,
-      "Claude": 0.206,
-      "Gemini": 0.32723577235772355,
-      "DeepSeek": 0.10821643286573146
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 4,
     "api": 0,
-    "avg_similarity_tool_desc": 0.817691153883934,
-    "avg_similarity_api_desc": 0.8197055917978286,
-    "age_days": 815,
+    "avg_similarity_tool_desc": 0.8176995778083801,
+    "avg_similarity_api_desc": 0.8197117251157761,
+    "age_days": 835,
     "desc_name_length_sum": 806,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.0066518847006651885,
+      "ChatGPT 4.1": 0.15920398009950248,
+      "Gemini": 0.11967545638945233,
+      "DeepSeek": 0.196,
+      "Qwen": 0.03205128205128205
+    },
     "num_params": 1,
     "flesch_reading_ease": 22.302162162162176,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.0066518847006651885,
-      "Claude": 0.008,
-      "Gemini": 0,
-      "DeepSeek": 0.006097560975609756
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 4,
     "api": 1,
-    "avg_similarity_tool_desc": 0.8265542072057724,
-    "avg_similarity_api_desc": 0.8333133119344711,
-    "age_days": 903,
+    "avg_similarity_tool_desc": 0.8265634793043136,
+    "avg_similarity_api_desc": 0.8332563555240631,
+    "age_days": 922,
     "desc_name_length_sum": 488,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.2261640798226164,
+      "ChatGPT 4.1": 0.22139303482587064,
+      "Gemini": 0.31643002028397565,
+      "DeepSeek": 0.206,
+      "Qwen": 0.23717948717948717
+    },
     "num_params": 1,
     "flesch_reading_ease": 20.380000000000024,
-    "positive_word_count": 2,
-    "selection_rate": {
-      "ChatGPT": 0.2261640798226164,
-      "Claude": 0.452,
-      "Gemini": 0.366,
-      "DeepSeek": 0.3983739837398374
-    }
+    "positive_word_count": 2
   },
   {
     "cluster_id": 4,
     "api": 2,
-    "avg_similarity_tool_desc": 0.840804870724678,
-    "avg_similarity_api_desc": 0.8400152933597564,
-    "age_days": 2871,
+    "avg_similarity_tool_desc": 0.8408148980140686,
+    "avg_similarity_api_desc": 0.8400240445137024,
+    "age_days": 2891,
     "desc_name_length_sum": 122,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.022172949002217297,
+      "ChatGPT 4.1": 0.009950248756218905,
+      "Gemini": 0.038539553752535496,
+      "DeepSeek": 0.13,
+      "Qwen": 0.04487179487179487
+    },
     "num_params": 2,
     "flesch_reading_ease": 21.39500000000001,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.022172949002217297,
-      "Claude": 0.002,
-      "Gemini": 0.128,
-      "DeepSeek": 0.1443089430894309
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 4,
     "api": 3,
-    "avg_similarity_tool_desc": 0.828706933259964,
-    "avg_similarity_api_desc": 0.8267405873537064,
-    "age_days": 1911,
+    "avg_similarity_tool_desc": 0.828714604973793,
+    "avg_similarity_api_desc": 0.8267479729652405,
+    "age_days": 1931,
     "desc_name_length_sum": 128,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.5476718403547672,
+      "ChatGPT 4.1": 0.23383084577114427,
+      "Gemini": 0.16835699797160245,
+      "DeepSeek": 0.062,
+      "Qwen": 0.33760683760683763
+    },
     "num_params": 1,
     "flesch_reading_ease": 17.382142857142867,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.5476718403547672,
-      "Claude": 0.41,
-      "Gemini": 0.172,
-      "DeepSeek": 0.18089430894308944
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 4,
     "api": 4,
-    "avg_similarity_tool_desc": 0.8071148633956909,
-    "avg_similarity_api_desc": 0.8201242858171462,
-    "age_days": 1322,
+    "avg_similarity_tool_desc": 0.807121398448944,
+    "avg_similarity_api_desc": 0.8201277410984039,
+    "age_days": 1342,
     "desc_name_length_sum": 254,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.1973392461197339,
+      "ChatGPT 4.1": 0.3756218905472637,
+      "Gemini": 0.35699797160243407,
+      "DeepSeek": 0.406,
+      "Qwen": 0.3482905982905983
+    },
     "num_params": 1,
     "flesch_reading_ease": 25.230000000000047,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.1973392461197339,
-      "Claude": 0.128,
-      "Gemini": 0.334,
-      "DeepSeek": 0.2703252032520325
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 5,
     "api": 0,
-    "avg_similarity_tool_desc": 0.8207816278934479,
-    "avg_similarity_api_desc": 0.8402871644496918,
-    "age_days": 882,
+    "avg_similarity_tool_desc": 0.8207816553115844,
+    "avg_similarity_api_desc": 0.8402875483036041,
+    "age_days": 901,
     "desc_name_length_sum": 566,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.13449023861171366,
+      "ChatGPT 4.1": 0.19027484143763213,
+      "Gemini": 0.41358024691358025,
+      "DeepSeek": 0.28,
+      "Qwen": 0.6625514403292181
+    },
     "num_params": 1,
     "flesch_reading_ease": 39.48428571428573,
-    "positive_word_count": 3,
-    "selection_rate": {
-      "ChatGPT": 0.13449023861171366,
-      "Claude": 0.442,
-      "Gemini": 0.41358024691358025,
-      "DeepSeek": 0.28
-    }
+    "positive_word_count": 3
   },
   {
     "cluster_id": 5,
     "api": 1,
-    "avg_similarity_tool_desc": 0.8322740286588669,
-    "avg_similarity_api_desc": 0.8071783369779587,
-    "age_days": 1103,
+    "avg_similarity_tool_desc": 0.832274923324585,
+    "avg_similarity_api_desc": 0.8071787196397782,
+    "age_days": 1123,
     "desc_name_length_sum": 322,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.5249457700650759,
+      "ChatGPT 4.1": 0.39112050739957716,
+      "Gemini": 0.3786008230452675,
+      "DeepSeek": 0.154,
+      "Qwen": 0.2448559670781893
+    },
     "num_params": 1,
     "flesch_reading_ease": 14.336789473684235,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.5249457700650759,
-      "Claude": 0.07,
-      "Gemini": 0.3786008230452675,
-      "DeepSeek": 0.154
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 5,
     "api": 2,
-    "avg_similarity_tool_desc": 0.7876660066843033,
-    "avg_similarity_api_desc": 0.7998027890920639,
-    "age_days": 765,
+    "avg_similarity_tool_desc": 0.7876667082309723,
+    "avg_similarity_api_desc": 0.7998015594482422,
+    "age_days": 784,
     "desc_name_length_sum": 142,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.008676789587852495,
+      "ChatGPT 4.1": 0,
+      "Gemini": 0,
+      "DeepSeek": 0,
+      "Qwen": 0
+    },
     "num_params": 1,
     "flesch_reading_ease": 59.16092105263158,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.008676789587852495,
-      "Claude": 0,
-      "Gemini": 0,
-      "DeepSeek": 0
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 5,
     "api": 3,
-    "avg_similarity_tool_desc": 0.8061747962236404,
-    "avg_similarity_api_desc": 0.783270388841629,
-    "age_days": 2562,
+    "avg_similarity_tool_desc": 0.8061723667383194,
+    "avg_similarity_api_desc": 0.783266328573227,
+    "age_days": 2581,
     "desc_name_length_sum": 198,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.3318872017353579,
+      "ChatGPT 4.1": 0.4186046511627907,
+      "Gemini": 0.20781893004115226,
+      "DeepSeek": 0.566,
+      "Qwen": 0.09259259259259259
+    },
     "num_params": 12,
     "flesch_reading_ease": 65.56701612903228,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.3318872017353579,
-      "Claude": 0.488,
-      "Gemini": 0.20781893004115226,
-      "DeepSeek": 0.566
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 5,
     "api": 4,
-    "avg_similarity_tool_desc": 0.8090011018514633,
-    "avg_similarity_api_desc": 0.7947113865613937,
-    "age_days": 4619,
+    "avg_similarity_tool_desc": 0.808999707698822,
+    "avg_similarity_api_desc": 0.7947105348110199,
+    "age_days": 4639,
     "desc_name_length_sum": 482,
+    "selection_rate": {
+      "ChatGPT 3.5": 0,
+      "ChatGPT 4.1": 0,
+      "Gemini": 0,
+      "DeepSeek": 0,
+      "Qwen": 0
+    },
     "num_params": 1,
     "flesch_reading_ease": 40.345,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0,
-      "Claude": 0,
-      "Gemini": 0,
-      "DeepSeek": 0
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 6,
     "api": 0,
-    "avg_similarity_tool_desc": 0.8181101351976394,
-    "avg_similarity_api_desc": 0.7962222236394882,
-    "age_days": 1250,
+    "avg_similarity_tool_desc": 0.818130750656128,
+    "avg_similarity_api_desc": 0.7962237936258316,
+    "age_days": 1270,
     "desc_name_length_sum": 304,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.13129102844638948,
+      "ChatGPT 4.1": 0.0851581508515815,
+      "Gemini": 0.0021141649048625794,
+      "DeepSeek": 0.17034068136272545,
+      "Qwen": 0.049281314168377825
+    },
     "num_params": 1,
     "flesch_reading_ease": 12.787347560975604,
-    "positive_word_count": 1,
-    "selection_rate": {
-      "ChatGPT": 0.13129102844638948,
-      "Claude": 0.068,
-      "Gemini": 0.0021141649048625794,
-      "DeepSeek": 0.17034068136272545
-    }
+    "positive_word_count": 1
   },
   {
     "cluster_id": 6,
     "api": 1,
-    "avg_similarity_tool_desc": 0.8034750497341157,
-    "avg_similarity_api_desc": 0.7965495598316192,
-    "age_days": 1123,
+    "avg_similarity_tool_desc": 0.8034744656085968,
+    "avg_similarity_api_desc": 0.7965507340431214,
+    "age_days": 1143,
     "desc_name_length_sum": 441,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.36980306345733044,
+      "ChatGPT 4.1": 0.5912408759124088,
+      "Gemini": 0.5856236786469344,
+      "DeepSeek": 0.3486973947895792,
+      "Qwen": 0.3921971252566735
+    },
     "num_params": 1,
     "flesch_reading_ease": 32.41500941619586,
-    "positive_word_count": 2,
-    "selection_rate": {
-      "ChatGPT": 0.36980306345733044,
-      "Claude": 0.63,
-      "Gemini": 0.5856236786469344,
-      "DeepSeek": 0.3486973947895792
-    }
+    "positive_word_count": 2
   },
   {
     "cluster_id": 6,
     "api": 2,
-    "avg_similarity_tool_desc": 0.7960877859592438,
-    "avg_similarity_api_desc": 0.8346515536308289,
-    "age_days": 3325,
+    "avg_similarity_tool_desc": 0.7960872113704681,
+    "avg_similarity_api_desc": 0.8346542996168137,
+    "age_days": 3345,
     "desc_name_length_sum": 176,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.028446389496717725,
+      "ChatGPT 4.1": 0.04866180048661801,
+      "Gemini": 0.10359408033826638,
+      "DeepSeek": 0.08216432865731463,
+      "Qwen": 0.16632443531827515
+    },
     "num_params": 1,
     "flesch_reading_ease": 6.335000000000008,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.028446389496717725,
-      "Claude": 0.004,
-      "Gemini": 0.10359408033826638,
-      "DeepSeek": 0.08216432865731463
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 6,
     "api": 3,
-    "avg_similarity_tool_desc": 0.7869904160499572,
-    "avg_similarity_api_desc": 0.8041134548187255,
-    "age_days": 1195,
+    "avg_similarity_tool_desc": 0.7869924652576447,
+    "avg_similarity_api_desc": 0.8041135543584823,
+    "age_days": 1215,
     "desc_name_length_sum": 284,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.19037199124726478,
+      "ChatGPT 4.1": 0.07785888077858881,
+      "Gemini": 0.10359408033826638,
+      "DeepSeek": 0.20440881763527055,
+      "Qwen": 0.24229979466119098
+    },
     "num_params": 2,
     "flesch_reading_ease": 16.215454545454577,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.19037199124726478,
-      "Claude": 0.232,
-      "Gemini": 0.10359408033826638,
-      "DeepSeek": 0.20440881763527055
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 6,
     "api": 4,
-    "avg_similarity_tool_desc": 0.8073107343912125,
-    "avg_similarity_api_desc": 0.8035563319921494,
-    "age_days": 942,
+    "avg_similarity_tool_desc": 0.8073111188411712,
+    "avg_similarity_api_desc": 0.8035581398010254,
+    "age_days": 962,
     "desc_name_length_sum": 396,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.2800875273522976,
+      "ChatGPT 4.1": 0.19708029197080293,
+      "Gemini": 0.20507399577167018,
+      "DeepSeek": 0.19438877755511022,
+      "Qwen": 0.14989733059548255
+    },
     "num_params": 1,
     "flesch_reading_ease": 55.03341379310348,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.2800875273522976,
-      "Claude": 0.066,
-      "Gemini": 0.20507399577167018,
-      "DeepSeek": 0.19438877755511022
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 7,
     "api": 0,
-    "avg_similarity_tool_desc": 0.8099515467882157,
-    "avg_similarity_api_desc": 0.8062514281272888,
+    "avg_similarity_tool_desc": 0.809952712059021,
+    "avg_similarity_api_desc": 0.8062534600496292,
     "age_days": null,
     "desc_name_length_sum": 181,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.2980561555075594,
+      "ChatGPT 4.1": 0.4197080291970803,
+      "Gemini": 0.29,
+      "DeepSeek": 0.35,
+      "Qwen": 0.32432432432432434
+    },
     "num_params": 1,
     "flesch_reading_ease": 55.40350000000004,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.2980561555075594,
-      "Claude": 0.208,
-      "Gemini": 0.29,
-      "DeepSeek": 0.35
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 7,
     "api": 1,
-    "avg_similarity_tool_desc": 0.7696932220458984,
-    "avg_similarity_api_desc": 0.7514003705978394,
-    "age_days": 906,
+    "avg_similarity_tool_desc": 0.769748472571373,
+    "avg_similarity_api_desc": 0.7514022278785706,
+    "age_days": 926,
     "desc_name_length_sum": 687,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.22462203023758098,
+      "ChatGPT 4.1": 0.30656934306569344,
+      "Gemini": 0.14,
+      "DeepSeek": 0.27,
+      "Qwen": 0.2286902286902287
+    },
     "num_params": 2,
     "flesch_reading_ease": 10.094485294117646,
-    "positive_word_count": 3,
-    "selection_rate": {
-      "ChatGPT": 0.22462203023758098,
-      "Claude": 0.156,
-      "Gemini": 0.14,
-      "DeepSeek": 0.27
-    }
+    "positive_word_count": 3
   },
   {
     "cluster_id": 7,
     "api": 2,
-    "avg_similarity_tool_desc": 0.7784449481964111,
-    "avg_similarity_api_desc": 0.750930016040802,
-    "age_days": 867,
+    "avg_similarity_tool_desc": 0.7784699487686157,
+    "avg_similarity_api_desc": 0.7508723384141922,
+    "age_days": 887,
     "desc_name_length_sum": 512,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.15334773218142547,
+      "ChatGPT 4.1": 0.11678832116788321,
+      "Gemini": 0.114,
+      "DeepSeek": 0.214,
+      "Qwen": 0.13513513513513514
+    },
     "num_params": 1,
     "flesch_reading_ease": 39.040657534246606,
-    "positive_word_count": 3,
-    "selection_rate": {
-      "ChatGPT": 0.15334773218142547,
-      "Claude": 0.062,
-      "Gemini": 0.114,
-      "DeepSeek": 0.214
-    }
+    "positive_word_count": 3
   },
   {
     "cluster_id": 7,
     "api": 3,
-    "avg_similarity_tool_desc": 0.789964080452919,
-    "avg_similarity_api_desc": 0.7549866110086441,
-    "age_days": 1281,
+    "avg_similarity_tool_desc": 0.7899662792682648,
+    "avg_similarity_api_desc": 0.754988694190979,
+    "age_days": 1301,
     "desc_name_length_sum": 217,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.16846652267818574,
+      "ChatGPT 4.1": 0.0948905109489051,
+      "Gemini": 0.428,
+      "DeepSeek": 0.164,
+      "Qwen": 0.2702702702702703
+    },
     "num_params": 1,
     "flesch_reading_ease": 10.964393939393972,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.16846652267818574,
-      "Claude": 0.54,
-      "Gemini": 0.428,
-      "DeepSeek": 0.164
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 7,
     "api": 4,
-    "avg_similarity_tool_desc": 0.7896098774671555,
-    "avg_similarity_api_desc": 0.739119159579277,
-    "age_days": 1617,
+    "avg_similarity_tool_desc": 0.789609751701355,
+    "avg_similarity_api_desc": 0.7392537391185761,
+    "age_days": 1637,
     "desc_name_length_sum": 278,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.15550755939524838,
+      "ChatGPT 4.1": 0.06204379562043796,
+      "Gemini": 0.028,
+      "DeepSeek": 0.002,
+      "Qwen": 0.04158004158004158
+    },
     "num_params": 2,
     "flesch_reading_ease": -6.114545454545436,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.15550755939524838,
-      "Claude": 0.034,
-      "Gemini": 0.028,
-      "DeepSeek": 0.002
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 8,
     "api": 0,
-    "avg_similarity_tool_desc": 0.8176083868741989,
-    "avg_similarity_api_desc": 0.7713924545049667,
-    "age_days": 1797,
+    "avg_similarity_tool_desc": 0.8176396858692169,
+    "avg_similarity_api_desc": 0.7713978397846222,
+    "age_days": 1817,
     "desc_name_length_sum": 145,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.5128755364806867,
+      "ChatGPT 4.1": 0.43466666666666665,
+      "Gemini": 0.43286573146292584,
+      "DeepSeek": 0.7655310621242485,
+      "Qwen": 0.4487704918032787
+    },
     "num_params": 1,
     "flesch_reading_ease": 59.63500000000003,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.5128755364806867,
-      "Claude": 0.186,
-      "Gemini": 0.43286573146292584,
-      "DeepSeek": 0.7655310621242485
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 8,
     "api": 1,
-    "avg_similarity_tool_desc": 0.8002496027946472,
-    "avg_similarity_api_desc": 0.789134110212326,
+    "avg_similarity_tool_desc": 0.8002542191743851,
+    "avg_similarity_api_desc": 0.7891375070810318,
     "age_days": null,
     "desc_name_length_sum": 234,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.004291845493562232,
+      "ChatGPT 4.1": 0.19466666666666665,
+      "Gemini": 0.10420841683366733,
+      "DeepSeek": 0.07214428857715431,
+      "Qwen": 0.21311475409836064
+    },
     "num_params": 2,
     "flesch_reading_ease": 61.665000000000006,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.004291845493562232,
-      "Claude": 0.26,
-      "Gemini": 0.10420841683366733,
-      "DeepSeek": 0.07214428857715431
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 8,
     "api": 2,
-    "avg_similarity_tool_desc": 0.7875889045000076,
-    "avg_similarity_api_desc": 0.7416278111934662,
-    "age_days": 1328,
+    "avg_similarity_tool_desc": 0.7875949734449387,
+    "avg_similarity_api_desc": 0.7416319417953491,
+    "age_days": 1348,
     "desc_name_length_sum": 182,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.06652360515021459,
+      "ChatGPT 4.1": 0.14666666666666667,
+      "Gemini": 0.12625250501002003,
+      "DeepSeek": 0.002004008016032064,
+      "Qwen": 0.20491803278688525
+    },
     "num_params": 1,
     "flesch_reading_ease": 26.845000000000027,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.06652360515021459,
-      "Claude": 0.206,
-      "Gemini": 0.12625250501002003,
-      "DeepSeek": 0.002004008016032064
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 8,
     "api": 3,
-    "avg_similarity_tool_desc": 0.7770772624015808,
-    "avg_similarity_api_desc": 0.7671172946691514,
-    "age_days": 1011,
+    "avg_similarity_tool_desc": 0.7770572936534882,
+    "avg_similarity_api_desc": 0.7671226662397385,
+    "age_days": 1031,
     "desc_name_length_sum": 151,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.2703862660944206,
+      "ChatGPT 4.1": 0.21066666666666667,
+      "Gemini": 0.14829659318637275,
+      "DeepSeek": 0.15831663326653306,
+      "Qwen": 0.0942622950819672
+    },
     "num_params": 1,
     "flesch_reading_ease": 40.2858823529412,
-    "positive_word_count": 2,
-    "selection_rate": {
-      "ChatGPT": 0.2703862660944206,
-      "Claude": 0.126,
-      "Gemini": 0.14829659318637275,
-      "DeepSeek": 0.15831663326653306
-    }
+    "positive_word_count": 2
   },
   {
     "cluster_id": 8,
     "api": 4,
-    "avg_similarity_tool_desc": 0.7573836952447891,
-    "avg_similarity_api_desc": 0.7890819120407104,
-    "age_days": 764,
+    "avg_similarity_tool_desc": 0.7573865020275116,
+    "avg_similarity_api_desc": 0.7890872752666473,
+    "age_days": 783,
     "desc_name_length_sum": 433,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.1459227467811159,
+      "ChatGPT 4.1": 0.013333333333333334,
+      "Gemini": 0.18837675350701402,
+      "DeepSeek": 0.002004008016032064,
+      "Qwen": 0.0389344262295082
+    },
     "num_params": 1,
     "flesch_reading_ease": 47.82830645161292,
-    "positive_word_count": 1,
-    "selection_rate": {
-      "ChatGPT": 0.1459227467811159,
-      "Claude": 0.222,
-      "Gemini": 0.18837675350701402,
-      "DeepSeek": 0.002004008016032064
-    }
+    "positive_word_count": 1
   },
   {
     "cluster_id": 9,
     "api": 0,
-    "avg_similarity_tool_desc": 0.8353560018539429,
-    "avg_similarity_api_desc": 0.8353560018539429,
-    "age_days": 905,
+    "avg_similarity_tool_desc": 0.8353614097833634,
+    "avg_similarity_api_desc": 0.8353614097833634,
+    "age_days": 925,
     "desc_name_length_sum": 151,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.04721030042918455,
+      "ChatGPT 4.1": 0.09137055837563451,
+      "Gemini": 0,
+      "DeepSeek": 0.088,
+      "Qwen": 0.00823045267489712
+    },
     "num_params": 1,
     "flesch_reading_ease": 55.57500000000003,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.04721030042918455,
-      "Claude": 0,
-      "Gemini": 0,
-      "DeepSeek": 0.018036072144288578
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 9,
     "api": 1,
-    "avg_similarity_tool_desc": 0.8449346172809601,
-    "avg_similarity_api_desc": 0.8337828463315964,
-    "age_days": 912,
+    "avg_similarity_tool_desc": 0.8449400478601455,
+    "avg_similarity_api_desc": 0.8337855464220048,
+    "age_days": 932,
     "desc_name_length_sum": 192,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.13090128755364808,
+      "ChatGPT 4.1": 0.14213197969543148,
+      "Gemini": 0.222,
+      "DeepSeek": 0.308,
+      "Qwen": 0.06584362139917696
+    },
     "num_params": 1,
     "flesch_reading_ease": 52.56354838709679,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.13090128755364808,
-      "Claude": 0.08,
-      "Gemini": 0.11244979919678715,
-      "DeepSeek": 0.23647294589178355
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 9,
     "api": 2,
-    "avg_similarity_tool_desc": 0.8391373556852341,
-    "avg_similarity_api_desc": 0.7537033039331437,
+    "avg_similarity_tool_desc": 0.8391429853439331,
+    "avg_similarity_api_desc": 0.7536722564697266,
     "age_days": null,
     "desc_name_length_sum": 142,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.27896995708154504,
+      "ChatGPT 4.1": 0.3223350253807107,
+      "Gemini": 0.098,
+      "DeepSeek": 0.29,
+      "Qwen": 0.1419753086419753
+    },
     "num_params": 1,
     "flesch_reading_ease": 33.465,
-    "positive_word_count": 1,
-    "selection_rate": {
-      "ChatGPT": 0.27896995708154504,
-      "Claude": 0.162,
-      "Gemini": 0.15461847389558234,
-      "DeepSeek": 0.2925851703406814
-    }
+    "positive_word_count": 1
   },
   {
     "cluster_id": 9,
     "api": 3,
-    "avg_similarity_tool_desc": 0.838229193687439,
-    "avg_similarity_api_desc": 0.8388988101482391,
-    "age_days": 902,
+    "avg_similarity_tool_desc": 0.8382328969240188,
+    "avg_similarity_api_desc": 0.8389007538557053,
+    "age_days": 922,
     "desc_name_length_sum": 293,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.3927038626609442,
+      "ChatGPT 4.1": 0.048223350253807105,
+      "Gemini": 0.084,
+      "DeepSeek": 0.122,
+      "Qwen": 0.05761316872427984
+    },
     "num_params": 1,
     "flesch_reading_ease": 27.123928571428593,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.3927038626609442,
-      "Claude": 0,
-      "Gemini": 0.10040160642570281,
-      "DeepSeek": 0.1402805611222445
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 9,
     "api": 4,
-    "avg_similarity_tool_desc": 0.831540178656578,
-    "avg_similarity_api_desc": 0.8604196095466614,
+    "avg_similarity_tool_desc": 0.8315440171957016,
+    "avg_similarity_api_desc": 0.860424240231514,
     "age_days": null,
     "desc_name_length_sum": 311,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.15021459227467812,
+      "ChatGPT 4.1": 0.39593908629441626,
+      "Gemini": 0.596,
+      "DeepSeek": 0.192,
+      "Qwen": 0.7263374485596708
+    },
     "num_params": 2,
     "flesch_reading_ease": 52.58012820512823,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.15021459227467812,
-      "Claude": 0.758,
-      "Gemini": 0.6325301204819277,
-      "DeepSeek": 0.312625250501002
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 10,
     "api": 0,
-    "avg_similarity_tool_desc": 0.8501574176549912,
-    "avg_similarity_api_desc": 0.8137479788064956,
-    "age_days": 1595,
+    "avg_similarity_tool_desc": 0.8501621586084366,
+    "avg_similarity_api_desc": 0.8137527596950531,
+    "age_days": 1615,
     "desc_name_length_sum": 160,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.010893246187363835,
+      "ChatGPT 4.1": 0.019693654266958426,
+      "Gemini": 0,
+      "DeepSeek": 0.06012024048096192,
+      "Qwen": 0.04526748971193416
+    },
     "num_params": 2,
     "flesch_reading_ease": 5.006730769230813,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.010893246187363835,
-      "Claude": 0.05,
-      "Gemini": 0,
-      "DeepSeek": 0.06012024048096192
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 10,
     "api": 1,
-    "avg_similarity_tool_desc": 0.8128974467515946,
-    "avg_similarity_api_desc": 0.8269833862781525,
-    "age_days": 2074,
+    "avg_similarity_tool_desc": 0.812902740240097,
+    "avg_similarity_api_desc": 0.8269280761480331,
+    "age_days": 2094,
     "desc_name_length_sum": 535,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.030501089324618737,
+      "ChatGPT 4.1": 0.5557986870897156,
+      "Gemini": 0.69,
+      "DeepSeek": 0.6533066132264529,
+      "Qwen": 0.49588477366255146
+    },
     "num_params": 4,
     "flesch_reading_ease": 21.74427927927931,
-    "positive_word_count": 1,
-    "selection_rate": {
-      "ChatGPT": 0.030501089324618737,
-      "Claude": 0.788,
-      "Gemini": 0.69,
-      "DeepSeek": 0.6533066132264529
-    }
+    "positive_word_count": 1
   },
   {
     "cluster_id": 10,
     "api": 2,
-    "avg_similarity_tool_desc": 0.8127416574954986,
-    "avg_similarity_api_desc": 0.8076135247945786,
-    "age_days": 796,
+    "avg_similarity_tool_desc": 0.8127467834949493,
+    "avg_similarity_api_desc": 0.8076146006584167,
+    "age_days": 816,
     "desc_name_length_sum": 673,
+    "selection_rate": {
+      "ChatGPT 3.5": 0,
+      "ChatGPT 4.1": 0.13347921225382933,
+      "Gemini": 0.068,
+      "DeepSeek": 0.07615230460921844,
+      "Qwen": 0.03292181069958848
+    },
     "num_params": 7,
     "flesch_reading_ease": 12.205000000000013,
-    "positive_word_count": 2,
-    "selection_rate": {
-      "ChatGPT": 0,
-      "Claude": 0.05,
-      "Gemini": 0.068,
-      "DeepSeek": 0.07615230460921844
-    }
+    "positive_word_count": 2
   },
   {
     "cluster_id": 10,
     "api": 3,
-    "avg_similarity_tool_desc": 0.8062114524841308,
-    "avg_similarity_api_desc": 0.8424094951152802,
-    "age_days": 2965,
+    "avg_similarity_tool_desc": 0.8062242960929871,
+    "avg_similarity_api_desc": 0.8424176222085953,
+    "age_days": 2985,
     "desc_name_length_sum": 159,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.681917211328976,
+      "ChatGPT 4.1": 0.08533916849015317,
+      "Gemini": 0.178,
+      "DeepSeek": 0.03006012024048096,
+      "Qwen": 0.04526748971193416
+    },
     "num_params": 4,
     "flesch_reading_ease": 34.55857142857147,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.681917211328976,
-      "Claude": 0.01,
-      "Gemini": 0.178,
-      "DeepSeek": 0.03006012024048096
-    }
+    "positive_word_count": 0
   },
   {
     "cluster_id": 10,
     "api": 4,
-    "avg_similarity_tool_desc": 0.8482261854410171,
-    "avg_similarity_api_desc": 0.8449429941177368,
-    "age_days": 2006,
+    "avg_similarity_tool_desc": 0.848229860663414,
+    "avg_similarity_api_desc": 0.8449471461772918,
+    "age_days": 2026,
     "desc_name_length_sum": 149,
+    "selection_rate": {
+      "ChatGPT 3.5": 0.2766884531590414,
+      "ChatGPT 4.1": 0.20568927789934355,
+      "Gemini": 0.064,
+      "DeepSeek": 0.18036072144288579,
+      "Qwen": 0.38065843621399176
+    },
     "num_params": 3,
     "flesch_reading_ease": 74.27000000000001,
-    "positive_word_count": 0,
-    "selection_rate": {
-      "ChatGPT": 0.2766884531590414,
-      "Claude": 0.102,
-      "Gemini": 0.064,
-      "DeepSeek": 0.18036072144288579
-    }
+    "positive_word_count": 0
   }
 ]

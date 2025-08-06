@@ -7,7 +7,7 @@ from collections import defaultdict
 
 # ─── CONFIG ────────────────────────────────────────────────────────────────
 API_META_FILE        = "correct_api_meta.json"
-CLUSTER_QUERIES_FILE = "../3_generate_queries_for_clusters/cluster_queries.json"
+CLUSTER_QUERIES_FILE = "../../3_generate_queries_for_clusters/cluster_queries.json"
 OUTPUT_FILE          = "avg_similarities_embeddings.json"
 EMBEDDING_MODEL      = "text-embedding-ada-002"
 # ──────────────────────────────────────────────────────────────────────────
@@ -58,6 +58,12 @@ for entry in api_meta:
     tool_emb  = text_to_emb[entry["tool_desc"]]
     api_emb   = text_to_emb[entry["api_desc"]]
     queries   = queries_by_cluster[int(cid) - 1]["queries"]
+
+    print("Calculating similarity for:")
+    print(entry["api_desc"])
+    print(queries)
+
+    print(len([q for q in queries if q in text_to_emb]))
 
     # compute cosine similarities
     sims_tool = [

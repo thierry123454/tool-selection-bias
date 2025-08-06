@@ -6,10 +6,10 @@ import re
 
 # ─── CONFIG ──────────────────────────────────────────────────────────
 TOOL_ROOT   = "data/toolenv/tools"
-CLUSTER_JSON= "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
+CLUSTER_JSON= "../../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 STRIPPED_JS = "tool_metadata.json"
 OUT_JSON    = "correct_api_meta.json"
-BIAS_QUERIES_JSON = "../3_generate_queries_for_clusters/toolbench_bias_queries.json"
+BIAS_QUERIES_JSON = "../../3_generate_queries_for_clusters/toolbench_bias_queries.json"
 # ─────────────────────────────────────────────────────────────────────
 
 def slugify(text: str) -> str:

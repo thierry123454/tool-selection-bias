@@ -33,7 +33,7 @@ def collect_metadata(tool_root_dir: str):
     return metadata
 
 if __name__ == "__main__":
-    tool_root = "../data/toolenv/tools"
+    tool_root = "../../data/toolenv/tools"
     out = collect_metadata(tool_root)
     # write a JSON mapping each tool → {description, home_url}
     with open("tool_metadata.json", "w", encoding="utf-8") as f:
