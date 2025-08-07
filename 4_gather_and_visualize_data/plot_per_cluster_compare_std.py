@@ -15,6 +15,8 @@ STATS_PATHS = {
     "Shuffled": ["api_selection_stats_gemini-shuffle-name.json", "api_selection_stats_gemini-shuffle-name-2.json"],
     "Rand. Targ.": ["api_selection_stats_gemini-rand-id-prom.json", "api_selection_stats_gemini-rand-id-prom-2.json"],
     "Desc. + Param.": ["api_selection_stats_gemini-desc-param-scramble.json", "api_selection_stats_gemini-desc-param-scramble-2.json"],
+    "Desc.": ["api_selection_stats_gemini-desc-scramble.json"],
+    "Param.": ["api_selection_stats_gemini-param-scramble.json"],
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 BASE = "api_selection_distributions_sample"

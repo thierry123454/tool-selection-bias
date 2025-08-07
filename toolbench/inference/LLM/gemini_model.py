@@ -14,6 +14,8 @@ from toolbench.utils import standardize
 import re
 import string
 
+DESC_PARAM_SCRAMBLE = ["desc-param-scramble", "desc-scramble", "param-scramble", "desc-scramble-prom"]
+
 def scramble_actual_description(desc):
     quote_idxs = [i for i, c in enumerate(desc) if c == '"']
     if len(quote_idxs) < 3:
@@ -78,16 +80,17 @@ class Gemini:
             FILENAME = "tool_to_shuffled_tool"
         elif self.map == "tool-to-id":
             FILENAME = "tool_to_id"
-        elif self.map == "tool-to-id-prom":
+        elif self.map == "tool-to-id-prom" or self.map == "desc-scramble-prom":
             FILENAME = "tool_to_id_prom"
         elif self.map == "all-but-one-scramble":
             FILENAME = "tool_to_id_abo"
 
-        if self.map and self.map not in ["desc-param-scramble", "desc-scramble", "param-scramble"]:
+        if self.map and (self.map == "desc-scramble-prom" or self.map not in DESC_PARAM_SCRAMBLE):
             with open("./5_bias_investigation/experiments/" + FILENAME + "_" + run + ".json", "r") as mf:
                 self.tool_map = json.load(mf)
                 self.tool_map_standardized = {standardize(k):standardize(v) for k,v in self.tool_map.items()}
                 self.inv_map = {v:k for k,v in self.tool_map_standardized.items()}
+                self.target_tools = set(self.tool_map_standardized.keys())
 
                 all_names = "|".join(re.escape(n) for n in self.tool_map_standardized)
                 all_names_inv = "|".join(re.escape(n) for n in self.inv_map)
@@ -180,10 +183,13 @@ class Gemini:
             role = roles[message['role']]
             content = message['content']
             if role == "System" and functions != []:
-                if self.map in ["desc-param-scramble", "desc-scramble", "param-scramble"] and functions:
+                if self.map in DESC_PARAM_SCRAMBLE and functions:
                     for fn in functions:
+                        if fn['name'] == "Finish":
+                            continue
+                        tool_name = fn['name'].split('_for_')[1]
                         if "description" in fn:
-                            if self.map in ["desc-param-scramble", "desc-scramble"]:
+                            if self.map in ["desc-param-scramble", "desc-scramble"] or (self.map == "desc-scramble-prom" and tool_name in self.target_tools):
                                 fn["description"] = scramble_actual_description(fn["description"])
                         props = fn.get("parameters", {}).get("properties", {})
                         if self.map in ["desc-param-scramble", "param-scramble"]:
@@ -194,7 +200,7 @@ class Gemini:
                     scramble_except_heldout(functions, self.heldouts)
                             
                 content = process_system_message(content, functions)
-                if self.map and self.map not in ["desc-param-scramble", "desc-scramble", "param-scramble"]:
+                if self.map and self.map not in DESC_PARAM_SCRAMBLE:
                     def _sw(m):
                         num, name = m.group(1), m.group(2)
                         return f"{num}.{self.tool_map_standardized[name]}:"
@@ -220,6 +226,11 @@ class Gemini:
                         lambda m: m.group(1) + random_string(20),
                         content
                     )
+                elif self.map == "desc-scramble-prom":
+                    for tool in self.target_tools:
+                        escaped_tool = re.escape(tool)
+                        pattern = re.compile(rf"(\d+\.{escaped_tool}:\s*)([^\n]+)")
+                        content = pattern.sub(lambda m: m.group(1) + random_string(), content)
             prompt += f"{role}: {content}\n"
         prompt += "Assistant:\n"
         
@@ -228,7 +239,7 @@ class Gemini:
         else:
             predictions = self.prediction(prompt)
 
-        if self.map and self.map not in ["desc-param-scramble", "desc-scramble", "param-scramble"]:
+        if self.map and self.map not in DESC_PARAM_SCRAMBLE:
             def _sw_inv(m):
                 name = m.group(1)
                 return f"_for_{self.inv_map[name]}"
