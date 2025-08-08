@@ -14,7 +14,7 @@ from toolbench.utils import standardize
 import re
 import string
 
-DESC_PARAM_SCRAMBLE = ["desc-param-scramble", "desc-scramble", "param-scramble", "desc-scramble-prom"]
+DESC_PARAM_SCRAMBLE = ["desc-param-scramble", "desc-scramble", "param-scramble", "desc-scramble-prom", "desc-swap"]
 
 def scramble_actual_description(desc):
     quote_idxs = [i for i, c in enumerate(desc) if c == '"']
@@ -84,8 +84,10 @@ class Gemini:
             FILENAME = "tool_to_id_prom"
         elif self.map == "all-but-one-scramble":
             FILENAME = "tool_to_id_abo"
+        elif self.map == "desc-swap":
+            FILENAME = "desc_swap"
 
-        if self.map and (self.map == "desc-scramble-prom" or self.map not in DESC_PARAM_SCRAMBLE):
+        if self.map and (self.map == "desc-scramble-prom" or self.map == "desc-swap" or self.map not in DESC_PARAM_SCRAMBLE):
             with open("./5_bias_investigation/experiments/" + FILENAME + "_" + run + ".json", "r") as mf:
                 self.tool_map = json.load(mf)
                 self.tool_map_standardized = {standardize(k):standardize(v) for k,v in self.tool_map.items()}
@@ -184,18 +186,36 @@ class Gemini:
             content = message['content']
             if role == "System" and functions != []:
                 if self.map in DESC_PARAM_SCRAMBLE and functions:
-                    for fn in functions:
-                        if fn['name'] == "Finish":
-                            continue
-                        tool_name = fn['name'].split('_for_')[1]
-                        if "description" in fn:
-                            if self.map in ["desc-param-scramble", "desc-scramble"] or (self.map == "desc-scramble-prom" and tool_name in self.target_tools):
-                                fn["description"] = scramble_actual_description(fn["description"])
-                        props = fn.get("parameters", {}).get("properties", {})
-                        if self.map in ["desc-param-scramble", "param-scramble"]:
-                            for p in props.values():
-                                if "description" in p:
-                                    p["description"] = random_string()
+                    if self.map == "desc-swap":
+                        func_by_name = {fn["name"].split("_for_")[1]: fn for fn in functions if fn['name'] != "Finish"}
+                        print(func_by_name)
+                        for most, least in self.tool_map_standardized.items():
+                            fn_most = func_by_name.get(most)
+                            fn_least = func_by_name.get(least)
+
+                            if fn_most:
+                                desc_m = fn_most.get("description", "")
+                                desc_l = fn_least.get("description", "")
+
+                                parts_m = desc_m.split(".", 1)
+                                parts_l = desc_l.split(".", 1)
+                                intro_m, rest_m = parts_m[0] + ".", "".join(parts_m[1:])
+                                intro_l, rest_l = parts_l[0] + ".", "".join(parts_l[1:])
+                                fn_most["description"]  = intro_m + rest_l
+                                fn_least["description"] = intro_l + rest_m
+                    else:
+                        for fn in functions:
+                            if fn['name'] == "Finish":
+                                continue
+                            tool_name = fn['name'].split('_for_')[1]
+                            if "description" in fn:
+                                if self.map in ["desc-param-scramble", "desc-scramble"] or (self.map == "desc-scramble-prom" and tool_name in self.target_tools):
+                                    fn["description"] = scramble_actual_description(fn["description"])
+                            props = fn.get("parameters", {}).get("properties", {})
+                            if self.map in ["desc-param-scramble", "param-scramble"]:
+                                for p in props.values():
+                                    if "description" in p:
+                                        p["description"] = random_string()
                 elif self.map.startswith("all-but-one-scramble"):
                     scramble_except_heldout(functions, self.heldouts)
                             
@@ -231,6 +251,27 @@ class Gemini:
                         escaped_tool = re.escape(tool)
                         pattern = re.compile(rf"(\d+\.{escaped_tool}:\s*)([^\n]+)")
                         content = pattern.sub(lambda m: m.group(1) + random_string(), content)
+                elif self.map == "desc-swap":
+                    for tool in self.target_tools:
+
+                        esc_m = re.escape(tool)
+                        esc_l = re.escape(self.tool_map_standardized[tool])
+
+                        pat_m = re.compile(rf"(\d+\.{esc_m}:\s*)([^\n]+)")
+                        pat_l = re.compile(rf"(\d+\.{esc_l}:\s*)([^\n]+)")
+
+                        # extract the two descriptions
+                        m_m = pat_m.search(content)
+                        m_l = pat_l.search(content)
+
+                        if m_m and m_l:
+                            desc_m = m_m.group(2)
+                            desc_l = m_l.group(2)
+
+                            # swap them
+                            content = pat_m.sub(lambda m: m.group(1) + desc_l, content)
+                            content = pat_l.sub(lambda m: m.group(1) + desc_m, content)
+                            break
             prompt += f"{role}: {content}\n"
         prompt += "Assistant:\n"
         

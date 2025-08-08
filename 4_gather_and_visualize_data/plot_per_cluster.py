@@ -21,7 +21,7 @@ CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 OUTPUT_PDF     = "api_selection_distributions_by_model_full.pdf"
 OUTPUT_PNG     = "api_selection_distributions_by_model_full.png"
 
-SELECT_CLUSTERS = [1, 3, 5, 8]
+SELECT_CLUSTERS = None # [1, 3, 5, 8]
 # ────────────────────────────────────────────────────────────────────────
 
 # LaTeX special chars:  # $ % & ~ _ ^ \ { }

@@ -14,6 +14,7 @@ ORIGINAL_QUERIES_3 = "../data/instruction/G3_query.json"
 TOOLENV_ROOT       = "../data/toolenv/tools"
 SHUFFLE = "cycle"
 OUTPUT_PATH = f"toolbench_bias_queries_{SHUFFLE}.json"
+HOLDOUT = [6,8,9,10]
 # ──────────────────────────────────────────────────────────────────────────
 
 def load_file(path):
@@ -32,7 +33,7 @@ def load_api_definitions(path, api_map):
             api_map[key] = api
     return api_map
 
-def slugify(text: str) -> str:
+def slugify(text):
     """
     Lowercase, remove accents, replace non-alphanumeric with underscores.
     """
@@ -42,7 +43,7 @@ def slugify(text: str) -> str:
     text = re.sub(r"[^a-z0-9]+", "_", text).strip("_")
     return text
 
-def load_from_toolenv(category: str, tool: str, api_name: str):
+def load_from_toolenv(category, tool, api_name):
     """
     When no definition found in api_map, attempt to load from
     data/toolenv/tools/{category}/{slugified_tool}.json -> "api_list" entry.
@@ -157,12 +158,13 @@ def main():
                             definition = load_from_toolenv(category, tool, api_name)
                         permuted_api_list.append(definition)
 
-                    output.append({
-                        "api_list":       permuted_api_list,
-                        "query":          query_text,
-                        "relevant APIs":  permuted_relevant,
-                        "query_id":       qid
-                    })
+                    if not HOLDOUT or (HOLDOUT and cid in HOLDOUT): 
+                        output.append({
+                            "api_list":       permuted_api_list,
+                            "query":          query_text,
+                            "relevant APIs":  permuted_relevant,
+                            "query_id":       qid
+                        })
                     qid += 1
 
     # Write out the combined JSON.
