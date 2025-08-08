@@ -288,9 +288,6 @@ class Gemini:
 
         function_names = [fn["name"] for fn in functions]
 
-        print(f"PREDICTIONS: {predictions}")
-        print(f"FUNCTION NAMES: {function_names}")
-
         # react format prediction
         thought, action, action_input = react_parser(predictions, function_names)
         message = {

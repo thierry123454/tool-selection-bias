@@ -467,7 +467,7 @@ class pipeline_runner:
             llm_forward = ChatGPT(model=model, openai_key=openai_key, temperature=temperature, top_p=top_p)
         elif backbone_model == "chatgpt-4":
             model = "gpt-4.1-mini-2025-04-14" # April 2025
-            llm_forward = ChatGPT(model=model, openai_key=openai_key, temperature=temperature, top_p=top_p)
+            llm_forward = ChatGPT(model=model, openai_key=openai_key, temperature=temperature, top_p=top_p, mapping=mapping)
         elif backbone_model == "davinci":
             model = "davinci-002"
             llm_forward = Davinci(model=model, openai_key=openai_key, temperature=temperature, top_p=top_p)
