@@ -61,8 +61,18 @@ ANSWER_DIRS = {
     # "gemini-rand-id-prom-2":  "../data_bias/answer_gemini_rand_name_prom_2",
     # "gemini-desc-param-scramble":  "../data_bias/answer_gemini_desc_param_scramble",
     # "gemini-desc-param-scramble-2":  "../data_bias/answer_gemini_desc_param_scramble_2",
-    "gemini-desc-scramble":  "../data_bias/answer_gemini_desc_scramble",
-    "gemini-param-scramble":  "../data_bias/answer_gemini_param_scramble",
+    # "gemini-desc-scramble":  "../data_bias/answer_gemini_desc_scramble",
+    # "gemini-param-scramble":  "../data_bias/answer_gemini_param_scramble",
+    # "gemini-desc-scramble-2":  "../data_bias/answer_gemini_desc_scramble_2",
+    # "gemini-param-scramble-2":  "../data_bias/answer_gemini_param_scramble_2",
+    # "gemini_desc_swap": "../data_bias/answer_gemini_desc_swap",
+    # "gemini_desc_swap-2": "../data_bias/answer_gemini_desc_swap_2",
+    "gemini_desc_prom": "../data_bias/answer_gemini_desc_prom",
+    "gemini_desc_prom-2": "../data_bias/answer_gemini_desc_prom_2",
+    "chatgpt-rand-id":  "../data_bias/answer_chatgpt_rand_name",
+    "chatgpt-rand-id-2":  "../data_bias/answer_chatgpt_rand_name_2",
+    "chatgpt-desc-param-scramble":  "../data_bias/answer_chatgpt_desc_param_scramble",
+    "chatgpt-desc-param-scramble-2":  "../data_bias/answer_chatgpt_desc_param_scramble_2"
 }
 # ────────────────────────────────────────────────────────
 
@@ -121,19 +131,19 @@ def collect_stats_for_model(model_name, answers_dir, queries, clusters):
         qid = q["query_id"]
         ans_path = os.path.join(answers_dir, f"{qid}_CoT@1.json")
         if not os.path.isfile(ans_path):
-            print(f"⚠️  Missing answer file for query_id={qid}, skipping.")
+            # print(f"⚠️  Missing answer file for query_id={qid}, skipping.")
             continue
 
         answer = load_json(ans_path)
         api_slug, tool_slug = extract_first_action(answer)
         if not api_slug:
-            print(f"⚠️  No Action found in {ans_path}, skipping.")
+            # print(f"⚠️  No Action found in {ans_path}, skipping.")
             continue
 
         # map into cluster
         cluster_id, pos = find_cluster_id(clusters, api_slug, tool_slug)
         if cluster_id is None:
-            print(f"⚠️  (QID: {qid}) Could not map ({tool_slug}, {api_slug}) to any cluster.")
+            # print(f"⚠️  (QID: {qid}) Could not map ({tool_slug}, {api_slug}) to any cluster.")
             continue
 
         # find index in the original relevant API list

@@ -3,6 +3,16 @@ import math
 import matplotlib.pyplot as plt
 from collections import defaultdict
 import numpy as np
+from matplotlib.patches import Patch
+
+
+MODEL_COLORS = {
+    "Base": "#7f7f7f",
+    "Rand. Name": "#1f77b4",
+    "Desc. + Param.": "#ff7f0e",
+    "Targ. Desc.": "#2ca02c",
+    "Swap. Desc.": "#d62728",
+}
 
 # Setup LaTeX
 plt.rc('text', usetex=True)
@@ -11,18 +21,18 @@ plt.rc('font', family='serif')
 # ─── CONFIG ────────────────────────────────────────────────────────────
 STATS_PATHS = {
     "Base": ["api_selection_stats_gemini.json"],
-    "Random": ["api_selection_stats_gemini-rand-id.json", "api_selection_stats_gemini-rand-id-2.json"],
-    "Shuffled": ["api_selection_stats_gemini-shuffle-name.json", "api_selection_stats_gemini-shuffle-name-2.json"],
-    "Rand. Targ.": ["api_selection_stats_gemini-rand-id-prom.json", "api_selection_stats_gemini-rand-id-prom-2.json"],
+    "Rand. Name": ["api_selection_stats_gemini-rand-id.json", "api_selection_stats_gemini-rand-id-2.json"],
     "Desc. + Param.": ["api_selection_stats_gemini-desc-param-scramble.json", "api_selection_stats_gemini-desc-param-scramble-2.json"],
-    "Desc.": ["api_selection_stats_gemini-desc-scramble.json"],
-    "Param.": ["api_selection_stats_gemini-param-scramble.json"],
+    "Targ. Desc.": ["api_selection_stats_gemini_desc_prom.json", "api_selection_stats_gemini_desc_prom-2.json"],
+    "Swap. Desc.": ["api_selection_stats_answer_gemini_desc_swap.json", "api_selection_stats_answer_gemini_desc_swap-2.json"]
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
-BASE = "api_selection_distributions_sample"
+BASE = "api_selection_distributions_perturbation"
 OUTPUT_PDF     = BASE + ".pdf"
 OUTPUT_PNG     = BASE + ".png"
+DESC_SWAP_JSON = "../5_bias_investigation/experiments/desc_swap_1.json"
 TITLE = "Distribution of Selected API using Gemini with Random, Shuffled, or Targeted Tool Names."
+SELECT_CLUSTERS = [1, 4, 5, 6, 8, 10]
 # ────────────────────────────────────────────────────────────────────────
 
 # LaTeX special chars:  # $ % & ~ _ ^ \ { }
@@ -78,6 +88,9 @@ def compute_rates_from_stats(stats):
 
 # Load clusters
 clusters = load_json(CLUSTERS_JSON)
+swap_pairs = load_json(DESC_SWAP_JSON)
+most_set   = set(swap_pairs.keys())
+least_set  = set(swap_pairs.values())
 
 # Normalize STATS_PATHS so each value is a list
 for k, v in list(STATS_PATHS.items()):
@@ -112,34 +125,81 @@ for model, runs in model_runs.items():
             mean_rates[model][cid][pos] = mean
             std_rates[model][cid][pos] = std
 
-# Plotting
-n_clusters = len(clusters)
-ncols = 5
-nrows = math.ceil(n_clusters / ncols)
-fig, axes = plt.subplots(nrows, ncols, figsize=(3*ncols, 4*nrows), squeeze=False)
+# Determine which clusters to plot
+if SELECT_CLUSTERS is None:
+    cluster_ids = list(range(1, len(clusters) + 1))
+else:
+    cluster_ids = sorted([cid for cid in SELECT_CLUSTERS if 1 <= cid <= len(clusters)])
+if not cluster_ids:
+    raise ValueError("No valid cluster IDs to plot.")
+
+clusters_to_plot = [clusters[cid - 1] for cid in cluster_ids]
+
+# Layout: up to 5 columns to match previous style
+n_clusters = len(clusters_to_plot)
+ncols = 3
+nrows = 2
+
+# wider per subplot
+FIG_W_PER_COL = 4.5   # try 4.5–5.0
+FIG_H_PER_ROW = 5.0
+fig, axes = plt.subplots(nrows, ncols,
+                         figsize=(FIG_W_PER_COL*ncols, FIG_H_PER_ROW*nrows),
+                         squeeze=False)
+
 # fig.suptitle(TITLE, fontsize=16)
 
 models = list(STATS_PATHS.keys())
 n_models = len(models)
 bar_w = 0.8 / n_models
 
-for idx, cluster in enumerate(clusters, start=1):
-    row, col = divmod(idx-1, ncols)
+for plot_idx, (cid, cluster) in enumerate(zip(cluster_ids, clusters_to_plot), start=1):
+    row, col = divmod(plot_idx-1, ncols)
     ax = axes[row][col]
     cluster_size = len(cluster)
     x = np.arange(1, cluster_size+1)
 
     for i, name in enumerate(models):
-        means = [mean_rates[name].get(idx, {}).get(pos, 0) for pos in x]
-        errs  = [std_rates[name].get(idx, {}).get(pos, 0) for pos in x]
+        means = [mean_rates[name].get(cid, {}).get(pos, 0) for pos in x]
+        errs  = [std_rates[name].get(cid, {}).get(pos, 0) for pos in x]
         positions = x + bar_w*(i-(n_models-1)/2)
-        ax.bar(positions, means, width=bar_w, label=name, yerr=errs if any(e > 0 for e in errs) else None, capsize=3)
+        ax.bar(
+            positions, means, width=bar_w,
+            yerr=errs if any(e > 0 for e in errs) else None,
+            capsize=3,
+            color=MODEL_COLORS.get(name, None),
+            label=name  # label not strictly needed now, but harmless
+        )
+    
+    # add horizontal lines at 0.2,0.4,0.6,0.8
+    for y in [0.4, 0.6, 0.8]:
+        ax.axhline(y=y, color='gray', linestyle='--', linewidth=0.5)
+    # extra-thick line at y=0.2
+    ax.axhline(y=0.2, color='black', linestyle='--', linewidth=1)
+    
     # x-axis labels
     ax.set_xticks(x)
-    tools = [escape_tex(ep["tool"]) for ep in cluster]
-    ax.set_xticklabels(tools, rotation=90, ha="right", fontsize=6)
+    tools_raw = [ep["tool"] for ep in cluster]
+    tools = [escape_tex(t) for t in tools_raw]
+    ax.set_xticklabels(tools, rotation=45, ha="right", fontsize=12)
     ax.set_ylim(0, 1.0)
-    ax.set_title(CLUSTER_NAMES.get(idx, ""), fontsize=10)
+    ax.set_title(r'\textbf{' + CLUSTER_NAMES[cid] + '}', fontsize=15)
+
+    for j, tick in enumerate(ax.get_xticklabels()):
+        raw_tool = tools_raw[j]
+        if raw_tool in most_set:
+            tick.set_color('green')
+            tick.set_fontweight('bold')
+        elif raw_tool in least_set:
+            tick.set_color('red')
+            tick.set_fontstyle('italic')
+
+    if plot_idx == 1 or plot_idx == 4:
+        ax.set_ylabel("Selection Rate", fontsize=12)
+        ax.tick_params(axis='y', labelsize=12)
+    else:
+        ax.set_yticks([])
+
 
 # turn off any unused axes
 for ax_row in axes:
@@ -147,9 +207,18 @@ for ax_row in axes:
         if not ax.has_data():
             ax.axis('off')
 
-# shared legend at bottom
-fig.legend(models, loc="lower center", ncol=n_models, frameon=False, fontsize=12)
-plt.tight_layout(rect=[0,0.05,1,0.95])
+# shared legend at top
+handles = [Patch(facecolor=MODEL_COLORS[m], label=m) for m in models]
+fig.legend(
+    handles=handles,
+    loc='upper center',
+    bbox_to_anchor=(0.5, 1.00),
+    ncol=len(models),
+    frameon=False,
+    fontsize=14
+)
+
+plt.tight_layout(rect=[0, 0.05, 1, 0.93])
 
 # save & show
 fig.savefig(OUTPUT_PDF, format="pdf", transparent=True)

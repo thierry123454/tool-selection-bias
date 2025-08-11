@@ -80,11 +80,11 @@ class Gemini:
             FILENAME = "tool_to_shuffled_tool"
         elif self.map == "tool-to-id":
             FILENAME = "tool_to_id"
-        elif self.map == "tool-to-id-prom" or self.map == "desc-scramble-prom":
+        elif self.map == "tool-to-id-prom":
             FILENAME = "tool_to_id_prom"
         elif self.map == "all-but-one-scramble":
             FILENAME = "tool_to_id_abo"
-        elif self.map == "desc-swap":
+        elif self.map == "desc-swap" or self.map == "desc-scramble-prom":
             FILENAME = "desc_swap"
 
         if self.map and (self.map == "desc-scramble-prom" or self.map == "desc-swap" or self.map not in DESC_PARAM_SCRAMBLE):
