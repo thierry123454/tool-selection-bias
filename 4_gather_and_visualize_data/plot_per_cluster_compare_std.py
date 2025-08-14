@@ -12,6 +12,7 @@ MODEL_COLORS = {
     "Desc. + Param.": "#ff7f0e",
     "Targ. Desc.": "#2ca02c",
     "Swap. Desc.": "#d62728",
+    "AbO": "#ff00e1",
 }
 
 # Setup LaTeX
@@ -24,7 +25,8 @@ STATS_PATHS = {
     "Rand. Name": ["api_selection_stats_gemini-rand-id.json", "api_selection_stats_gemini-rand-id-2.json"],
     "Desc. + Param.": ["api_selection_stats_gemini-desc-param-scramble.json", "api_selection_stats_gemini-desc-param-scramble-2.json"],
     "Targ. Desc.": ["api_selection_stats_gemini_desc_prom.json", "api_selection_stats_gemini_desc_prom-2.json"],
-    "Swap. Desc.": ["api_selection_stats_answer_gemini_desc_swap.json", "api_selection_stats_answer_gemini_desc_swap-2.json"]
+    "Swap. Desc.": ["api_selection_stats_answer_gemini_desc_swap.json", "api_selection_stats_answer_gemini_desc_swap-2.json"],
+    "AbO": ["api_selection_stats_gemini_abo.json"]
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 BASE = "api_selection_distributions_perturbation"
@@ -181,7 +183,7 @@ for plot_idx, (cid, cluster) in enumerate(zip(cluster_ids, clusters_to_plot), st
     ax.set_xticks(x)
     tools_raw = [ep["tool"] for ep in cluster]
     tools = [escape_tex(t) for t in tools_raw]
-    ax.set_xticklabels(tools, rotation=45, ha="right", fontsize=12)
+    ax.set_xticklabels(tools, rotation=45, ha="right", fontsize=14)
     ax.set_ylim(0, 1.0)
     ax.set_title(r'\textbf{' + CLUSTER_NAMES[cid] + '}', fontsize=15)
 
@@ -195,8 +197,8 @@ for plot_idx, (cid, cluster) in enumerate(zip(cluster_ids, clusters_to_plot), st
             tick.set_fontstyle('italic')
 
     if plot_idx == 1 or plot_idx == 4:
-        ax.set_ylabel("Selection Rate", fontsize=12)
-        ax.tick_params(axis='y', labelsize=12)
+        ax.set_ylabel("Selection Rate", fontsize=14)
+        ax.tick_params(axis='y', labelsize=14)
     else:
         ax.set_yticks([])
 

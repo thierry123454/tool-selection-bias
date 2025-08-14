@@ -9,20 +9,20 @@ plt.rc('font', family='serif')
 CLUSTERS_JSON = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 
 # SIZE
-STATS_PATHS = {
-    "1.7": ["api_selection_stats_qwen-1.7b.json", "api_selection_stats_qwen-1.7b-2.json", "api_selection_stats_qwen-1.7b-3.json"],
-    "4":   ["api_selection_stats_qwen-4b.json", "api_selection_stats_qwen-4b-2.json", "api_selection_stats_qwen-4b-3.json"],
-    "8":   ["api_selection_stats_qwen-8b.json", "api_selection_stats_qwen-8b-2.json", "api_selection_stats_qwen-8b-3.json"],
-    "14":   ["api_selection_stats_qwen-14b.json", "api_selection_stats_qwen-14b-2.json", "api_selection_stats_qwen-14b-3.json"],
-    "32":   ["api_selection_stats_qwen-32b.json", "api_selection_stats_qwen-32b-2.json", "api_selection_stats_qwen-32b-3.json"],
-    "235": ["api_selection_stats_qwen-235b-old.json"]
-}
-BASE = "tv_by_size"
-OUTPUT_PDF     = BASE + ".pdf"
-OUTPUT_PNG     = BASE + ".png"
-X_AXIS = "Model size (B parameters)"
-PARAMETER = "Model Scale"
-LINE_COLOR = "red"
+# STATS_PATHS = {
+#     "1.7": ["api_selection_stats_qwen-1.7b.json", "api_selection_stats_qwen-1.7b-2.json", "api_selection_stats_qwen-1.7b-3.json"],
+#     "4":   ["api_selection_stats_qwen-4b.json", "api_selection_stats_qwen-4b-2.json", "api_selection_stats_qwen-4b-3.json"],
+#     "8":   ["api_selection_stats_qwen-8b.json", "api_selection_stats_qwen-8b-2.json", "api_selection_stats_qwen-8b-3.json"],
+#     "14":   ["api_selection_stats_qwen-14b.json", "api_selection_stats_qwen-14b-2.json", "api_selection_stats_qwen-14b-3.json"],
+#     "32":   ["api_selection_stats_qwen-32b.json", "api_selection_stats_qwen-32b-2.json", "api_selection_stats_qwen-32b-3.json"],
+#     "235": ["./old/api_selection_stats_qwen-235b-old.json"]
+# }
+# BASE = "tv_by_size"
+# OUTPUT_PDF     = BASE + ".pdf"
+# OUTPUT_PNG     = BASE + ".png"
+# X_AXIS = "Model size (B parameters)"
+# PARAMETER = "Model Scale"
+# LINE_COLOR = "red"
 
 # TEMPERATURE
 # STATS_PATHS = {
@@ -39,17 +39,17 @@ LINE_COLOR = "red"
 # LINE_COLOR = "#1f77b4"
 
 # TOP-P
-# STATS_PATHS = {
-#     "0.7": ["api_selection_stats_chatgpt-top-p-0.7.json"],
-#     "0.9": ["api_selection_stats_chatgpt-top-p-0.9.json"],
-#     "1":  ["api_selection_stats_chatgpt_base.json"]
-# }
-# BASE = "tv_by_top_p"
-# OUTPUT_PDF     = BASE + ".pdf"
-# OUTPUT_PNG     = BASE + ".png"
-# X_AXIS = "Top-$p$"
-# PARAMETER = "Top-$p$"
-# LINE_COLOR = "green"
+STATS_PATHS = {
+    "0.7": ["api_selection_stats_chatgpt-top-p-0.7.json"],
+    "0.9": ["api_selection_stats_chatgpt-top-p-0.9.json"],
+    "1":  ["api_selection_stats_chatgpt_base.json"]
+}
+BASE = "tv_by_top_p"
+OUTPUT_PDF     = BASE + ".pdf"
+OUTPUT_PNG     = BASE + ".png"
+X_AXIS = "Top-$p$"
+PARAMETER = "Top-$p$"
+LINE_COLOR = "green"
 # ────────────────────────────────────────────────────────────────────────
 
 def load_json(path):
@@ -118,8 +118,10 @@ plt.errorbar(x, mean_vals, yerr=std_vals, marker='o', capsize=5, linestyle='-',
     ecolor=LINE_COLOR,
     markerfacecolor=LINE_COLOR,
     markeredgecolor='black')
-plt.xlabel(X_AXIS)
-plt.ylabel("$\delta_{\mathrm{model}}$")
+plt.xlabel(X_AXIS, fontsize=14)
+plt.ylabel("$\delta_{\mathrm{model}}$", fontsize=14)
+ax = plt.gca()
+ax.tick_params(axis='both', which='major', labelsize=12)
 # plt.title(f"Tool-Selection Bias vs. {PARAMETER}")
 plt.grid(True)
 plt.tight_layout()

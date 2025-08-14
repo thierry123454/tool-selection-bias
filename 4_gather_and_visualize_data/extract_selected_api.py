@@ -34,7 +34,7 @@ ANSWER_DIRS = {
     # "claude":  "../data_bias/answer_claude",
     # "gemini":  "../data_bias/answer_gemini",
     # "deepseek":  "../data_bias/answer_deepseek",
-    # "toolllama":  "../data_bias/answer_toolllama",
+    # "toolllama":  "../data_bias/answer_toolllama"
     # "qwen-1.7b":  "../data_bias/answer_qwen",
     # "qwen-1.7b-2":  "../data_bias/answer_qwen_2",
     # "qwen-1.7b-3":  "../data_bias/answer_qwen_3",
@@ -67,12 +67,13 @@ ANSWER_DIRS = {
     # "gemini-param-scramble-2":  "../data_bias/answer_gemini_param_scramble_2",
     # "gemini_desc_swap": "../data_bias/answer_gemini_desc_swap",
     # "gemini_desc_swap-2": "../data_bias/answer_gemini_desc_swap_2",
-    "gemini_desc_prom": "../data_bias/answer_gemini_desc_prom",
-    "gemini_desc_prom-2": "../data_bias/answer_gemini_desc_prom_2",
-    "chatgpt-rand-id":  "../data_bias/answer_chatgpt_rand_name",
-    "chatgpt-rand-id-2":  "../data_bias/answer_chatgpt_rand_name_2",
-    "chatgpt-desc-param-scramble":  "../data_bias/answer_chatgpt_desc_param_scramble",
-    "chatgpt-desc-param-scramble-2":  "../data_bias/answer_chatgpt_desc_param_scramble_2"
+    # "gemini_desc_prom": "../data_bias/answer_gemini_desc_prom",
+    # "gemini_desc_prom-2": "../data_bias/answer_gemini_desc_prom_2",
+    "gemini_abo": "../data_bias/answer_gemini_all_but_one_scramble",
+    # "chatgpt-rand-id":  "../data_bias/answer_chatgpt_rand_name",
+    # "chatgpt-rand-id-2":  "../data_bias/answer_chatgpt_rand_name_2",
+    # "chatgpt-desc-param-scramble":  "../data_bias/answer_chatgpt_desc_param_scramble",
+    # "chatgpt-desc-param-scramble-2":  "../data_bias/answer_chatgpt_desc_param_scramble_2"
 }
 # ────────────────────────────────────────────────────────
 

@@ -4,7 +4,7 @@ import json
 import glob
 
 # Path to the directories containing JSON files
-DATA_DIRS = ["../data_bias/answer_gemini_desc_scramble_2"]
+DATA_DIRS = ["../data_bias/answer_gemini_full_scramble"]
 
 for DATA_DIR in DATA_DIRS:
     pattern = os.path.join(DATA_DIR, "*_CoT@1.json")

@@ -14,8 +14,8 @@ STATS_PATHS = {
     "Claude":  "api_selection_stats_claude.json",
     "Gemini":  "api_selection_stats_gemini.json",
     "DeepSeek":  "api_selection_stats_deepseek.json",
-    "Qwen (32B)":  "api_selection_stats_qwen-32b.json",
-    "ToolLLama":  "api_selection_stats_toolllama.json"
+    "Qwen":  "api_selection_stats_qwen-235b.json",
+    "T-LLaMA":  "api_selection_stats_toolllama.json"
 }
 OUTPUT = "model_correlation_base"
 
@@ -79,7 +79,7 @@ for i in range(n):
     for j in range(n):
         txt = f"{corr[i,j]:.2f}"
         ax.text(j, i, txt, ha="center", va="center", color="white" if abs(corr[i,j])>0.5 else "black")
-ax.set_title("Model Selection-Bias Correlation Matrix")
+# ax.set_title("Model Selection-Bias Correlation Matrix")
 fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04, label="Pearson r")
 
 

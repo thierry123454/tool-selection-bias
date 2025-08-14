@@ -21,8 +21,10 @@ STATS_PATHS = {
     "ChatGPT 3.5":  "api_selection_stats_chatgpt_base.json",
     "ChatGPT 4.1":  "api_selection_stats_chatgpt_4.json",
     "Gemini":  "api_selection_stats_gemini.json",
+    "Claude":  "api_selection_stats_claude.json",
     "DeepSeek":  "api_selection_stats_deepseek.json",
     "Qwen":  "api_selection_stats_qwen-235b.json",
+    "ToolLLaMA":  "api_selection_stats_toolllama.json"
 }
 CLUSTERS_JSON = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 
@@ -111,10 +113,10 @@ for m in STATS_PATHS:
     print(f"{m:8s}:  D_api={avg_api:5.3f},  D_pos={avg_pos:5.3f},  D_combined={avg_comb:5.3f}")
 
 models = list(STATS_PATHS.keys())
-cluster_ids = [1, 3, 5, 8]
-ncols = 4
+cluster_ids = [2, 6, 9]
+ncols = len(cluster_ids)
 nrows = int(np.ceil(len(cluster_ids) / ncols))
-fig, axes = plt.subplots(nrows, ncols, figsize=(4*ncols, 3*nrows), squeeze=False)
+fig, axes = plt.subplots(nrows, ncols, figsize=(4*ncols, 4*nrows), squeeze=False)
 
 bar_width = 0.35
 x = np.arange(len(models))
@@ -129,11 +131,17 @@ for idx, cid in enumerate(cluster_ids):
     ax.bar(x + bar_width/2, pos_vals, width=bar_width, label='Positional bias')
 
     ax.set_xticks(x)
-    ax.set_xticklabels(models, rotation=45, ha='right', fontsize=9)
+    ax.set_xticklabels(models, rotation=45, ha='right', fontsize=12)
     # ax.set_ylabel(r'$\delta$')
     # ax.set_title(f'{CLUSTER_NAMES.get(cid,"")}', fontsize=10, fontweight='bold')
-    ax.set_title(r'\textbf{' + CLUSTER_NAMES[cid] + '}', fontsize=11)
+    ax.set_title(r'\textbf{' + CLUSTER_NAMES[cid] + '}', fontsize=15)
     ax.set_ylim(0, 1.0)
+
+    if idx == 0:
+        ax.set_ylabel("TV distance vs. Uniform", fontsize=15)
+        ax.tick_params(axis='y', labelsize=14)
+    else:
+        ax.set_yticks([])
 
 # turn off any unused subplots
 for j in range(len(cluster_ids), nrows*ncols):
@@ -146,7 +154,8 @@ fig.legend(
     loc='lower center',
     ncol=2,
     frameon=False,
-    fontsize=10
+    fontsize=14
 )
 plt.savefig('bias_by_model_and_cluster.pdf')
+plt.savefig('bias_by_model_and_cluster.png')
 plt.show()

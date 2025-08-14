@@ -78,7 +78,7 @@ class Gemini:
         FILENAME = ""
         if self.map == "tool-to-shuffled":
             FILENAME = "tool_to_shuffled_tool"
-        elif self.map == "tool-to-id":
+        elif self.map == "tool-to-id" or self.map == "full-scramble":
             FILENAME = "tool_to_id"
         elif self.map == "tool-to-id-prom":
             FILENAME = "tool_to_id_prom"
@@ -115,6 +115,7 @@ class Gemini:
         while True:
             try:
                 print(stop)
+                print("──> Gemini prompt:\n", prompt)
                 body = {
                     "contents": [
                         { "parts": [ { "text": prompt } ] }
@@ -132,7 +133,6 @@ class Gemini:
                 result = j["candidates"][0]["content"]["parts"][0]["text"]
                 # usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
 
-                print("──> Gemini prompt:\n", prompt)
                 print("──> Gemini response:\n", result)
                 break
             except Exception as e:
@@ -216,9 +216,9 @@ class Gemini:
                                 for p in props.values():
                                     if "description" in p:
                                         p["description"] = random_string()
-                elif self.map.startswith("all-but-one-scramble"):
-                    scramble_except_heldout(functions, self.heldouts)
-                            
+                elif self.map == "all-but-one-scramble" or self.map == "full-scramble":
+                    scramble_except_heldout(functions, self.heldouts if self.map == "all-but-one-scramble" else [])
+
                 content = process_system_message(content, functions)
                 if self.map and self.map not in DESC_PARAM_SCRAMBLE:
                     def _sw(m):
@@ -238,8 +238,8 @@ class Gemini:
                     content = self.swap_pattern_3.sub(_sw_3, content)
                     # content = self.swap_pattern_norm.sub(_sw_norm, content)
 
-                    if self.map == "all-but-one-scramble":
-                        content = scramble_tool_blurbs_except_heldout(content, self.heldouts)
+                    if self.map == "all-but-one-scramble" or self.map == "full-scramble":
+                        content = scramble_tool_blurbs_except_heldout(content, self.heldouts if self.map == "all-but-one-scramble" else [])
                 elif self.map in ["desc-param-scramble", "desc-scramble"]:
                     content = re.sub(
                         r'(\d+\.[^\s:]+:\s*)([^\n]+)',
