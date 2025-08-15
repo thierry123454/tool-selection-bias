@@ -16,7 +16,7 @@ STATS_PATHS = {
     "Gemini":  "api_selection_stats_gemini.json",
     "DeepSeek":  "api_selection_stats_deepseek.json",
     "ToolLLaMA":  "api_selection_stats_toolllama.json",
-    "Qwen":  "api_selection_stats_qwen-235b.json"
+    "Qwen (8B)":  "api_selection_stats_qwen-8b.json"
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 OUTPUT_PDF     = "api_selection_distributions_by_model_full.pdf"

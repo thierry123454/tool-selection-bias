@@ -44,7 +44,7 @@ ANSWER_DIRS = {
     # "qwen-8b":  "../data_bias/answer_qwen-8b",
     # "qwen-8b-2":  "../data_bias/answer_qwen-8b_2",
     # "qwen-8b-3":  "../data_bias/answer_qwen-8b_3",
-    # "qwen-14b":  "../data_bias/answer_qwen-14b",
+    "qwen-14b":  "../data_bias/answer_qwen-14b",
     # "qwen-14b-2":  "../data_bias/answer_qwen-14b-2",
     # "qwen-14b-3":  "../data_bias/answer_qwen-14b-3",
     # "qwen-32b":  "../data_bias/answer_qwen-32b",

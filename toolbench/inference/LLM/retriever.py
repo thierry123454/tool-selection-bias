@@ -1,6 +1,6 @@
 import time
 import pandas as pd
-from sentence_transformers import SentenceTransformer, util
+# from sentence_transformers import SentenceTransformer, util
 import json
 import re
 from toolbench.utils import standardize, standardize_category, change_name, process_retrieval_ducoment
@@ -24,7 +24,8 @@ class ToolRetriever:
 
     def build_retrieval_embedder(self):
         print("Building embedder...")
-        embedder = SentenceTransformer(self.model_path)
+        # embedder = SentenceTransformer(self.model_path)
+        embedder = None # Hope this doesn't break anything
         return embedder
     
     def build_corpus_embeddings(self):

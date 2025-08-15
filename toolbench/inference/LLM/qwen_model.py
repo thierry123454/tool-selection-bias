@@ -2,8 +2,6 @@
 # coding=utf-8
 from typing import Optional, List, Mapping, Any
 from termcolor import colored
-import json
-import random
 from openai import OpenAI
 from typing import Optional
 from toolbench.model.model_adapter import get_conversation_template
@@ -11,16 +9,30 @@ from toolbench.utils import process_system_message
 from toolbench.inference.utils import SimpleChatIO, react_parser
 from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ZEROSHOT
 
+LOG_PATTERN = "v1_textlanguage_for_text_language_by_api_ninjas"
+LOG_PATH    = "ninjas_prompts.txt"
+LOG_SEP     = "\n<|END_PROMPT|>\n" 
 
 class Qwen:
     def __init__(self, model="", qwen_key="") -> None:
         super().__init__()
         self.model = model
         self.openai_key = qwen_key
+        self.log_relevant_prompts = False
         self.client = OpenAI(api_key=qwen_key, base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1")
+
+    def _log_if_matches(self, prompt: str):
+        if LOG_PATTERN in prompt:
+            with open(LOG_PATH, "a", encoding="utf-8") as f:
+                f.write(prompt)
+                f.write(LOG_SEP)
 
     def prediction(self, prompt: str, stop: Optional[List[str]] = None) -> str:
         max_try = 10
+
+        if self.log_relevant_prompts:
+            self._log_if_matches(prompt)
+        
         while True:
             try:
                 print(f"──> {self.model} prompt:\n", prompt)
@@ -40,6 +52,7 @@ class Qwen:
                         "enable_thinking": False,
                     }
                 )
+                # response = "YAHOOO!!!!"
                 result = response.choices[0].message.content.strip()
                 print("──> Qwen response:\n", result)
                 break
