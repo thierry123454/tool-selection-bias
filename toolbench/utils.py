@@ -14,6 +14,21 @@ def process_system_message(system_message, functions):
     system_message = system_message + "\nSpecifically, you have access to the following APIs: " + str(functions)
     return system_message
 
+def process_system_message_debias(system_message, functions):
+    system_message = '''You are an API subset selector.
+
+ Given the user's request and the candidate APIs below, outputs ONLY a list:
+["<api>", "..."]
+
+Rules:
+1) Pick the subset of APIs that can complete the given task.
+2) Use only API names from the list; do not invent or rename.
+3) If none are suitable, return [].
+4) Do NOT include any explanation or extra text—return the list only.
+'''
+    system_message = system_message + "\nThese are the APIs: " + str(functions)
+    return system_message
+
 def get_gpu_memory(max_gpus=None):
     """Get available memory for each GPU."""
     gpu_memory = []

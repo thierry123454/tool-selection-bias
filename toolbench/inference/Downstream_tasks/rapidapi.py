@@ -457,7 +457,7 @@ class pipeline_runner:
             task_list.append((method, backbone_model, query_id, data_dict, args, answer_dir, tool_des))
         return task_list
     
-    def method_converter(self, backbone_model, openai_key, method, env, process_id, single_chain_max_step=12, max_query_count=60, callbacks=None, temperature=0.5, top_p=1, mapping=""):
+    def method_converter(self, backbone_model, openai_key, method, env, process_id, single_chain_max_step=12, max_query_count=60, callbacks=None, temperature=0.5, top_p=1, mapping="", mitigation=False, qid=-1):
         if callbacks is None: callbacks = []
         if backbone_model == "chatgpt_function":
             model = "gpt-3.5-turbo"
@@ -488,7 +488,7 @@ class pipeline_runner:
             llm_forward = Qwen(model=model, qwen_key=openai_key)
         elif backbone_model == "qwen-14b":
             model = "qwen3-14b" # April 2025
-            llm_forward = Qwen(model=model, qwen_key=openai_key)
+            llm_forward = Qwen(model=model, qwen_key=openai_key, mitigation=mitigation, qid=qid)
         elif backbone_model == "qwen-32b":
             model = "qwen3-32b" # April 2025
             llm_forward = Qwen(model=model, qwen_key=openai_key)
@@ -567,7 +567,9 @@ class pipeline_runner:
             callbacks=callbacks,
             temperature=args.temperature,
             top_p=args.top_p,
-            mapping = args.mapping
+            mapping = args.mapping,
+            mitigation = args.mitigation,
+            qid = query_id
         )
 
         [callback.on_request_end(

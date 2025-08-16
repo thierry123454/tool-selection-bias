@@ -37,6 +37,7 @@ if __name__ == "__main__":
     parser.add_argument('--top_p', type=float, default=1,required=False, help='Top P setting for the models used')
    #  parser.add_argument('--top_k', type=int, default=,required=False, help='Top K setting for the models used')
     parser.add_argument('--mapping', type=str, default="_",required=False, help='The mapping used for the tool name / description')
+    parser.add_argument('--mitigation', action="store_true", help="To enable debiasing module.")
     
     args = parser.parse_args()
 

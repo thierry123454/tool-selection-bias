@@ -70,7 +70,10 @@ class ChatGPT:
         self.temperature = temperature
         self.top_p = top_p
 
-        self.map, run = mapping.split("_")
+        if mapping:
+            self.map, run = mapping.split("_")
+        else:
+            self.map = ""
 
         FILENAME = ""
         if self.map == "tool-to-shuffled":

@@ -5,21 +5,39 @@ from termcolor import colored
 from openai import OpenAI
 from typing import Optional
 from toolbench.model.model_adapter import get_conversation_template
-from toolbench.utils import process_system_message
+from toolbench.utils import process_system_message, process_system_message_debias
 from toolbench.inference.utils import SimpleChatIO, react_parser
 from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ZEROSHOT
+import json, re
 
 LOG_PATTERN = "v1_textlanguage_for_text_language_by_api_ninjas"
 LOG_PATH    = "ninjas_prompts.txt"
 LOG_SEP     = "\n<|END_PROMPT|>\n" 
+OUT_FILE = "subset_preds.jsonl"
+
+def save_subset(qid: int, resp_text: str):
+    try:
+        sel = json.loads(resp_text)
+        if not isinstance(sel, list):
+            raise ValueError
+    except Exception:
+        m = re.search(r"\[(.*?)\]", resp_text, flags=re.S)
+        items = re.findall(r'"([^"]+)"', m.group(0)) if m else []
+        sel = [s.strip() for s in items]
+
+    with open(OUT_FILE, "a", encoding="utf-8") as f:
+        f.write(json.dumps({"query_id": qid, "selected_tools": sel}, ensure_ascii=False) + "\n")
+    return sel
 
 class Qwen:
-    def __init__(self, model="", qwen_key="") -> None:
+    def __init__(self, model="", qwen_key="", mitigation=False, qid=-1) -> None:
         super().__init__()
         self.model = model
         self.openai_key = qwen_key
         self.log_relevant_prompts = False
         self.client = OpenAI(api_key=qwen_key, base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1")
+        self.mitigation = mitigation
+        self.qid = qid
 
     def _log_if_matches(self, prompt: str):
         if LOG_PATTERN in prompt:
@@ -35,7 +53,7 @@ class Qwen:
         
         while True:
             try:
-                print(f"──> {self.model} prompt:\n", prompt)
+                # print(f"──> {self.model} prompt:\n", prompt)
                 response = self.client.chat.completions.create(
                     model=self.model,
                     messages=[
@@ -99,6 +117,7 @@ class Qwen:
     def parse(self,functions,process_id,**args):
         template = "tool-llama-single-round"
         conv = get_conversation_template(template)
+        print(f'Conversation template: {conv}')
         if template == "tool-llama":
             roles = {"human": conv.roles[0], "gpt": conv.roles[1]}
         elif template == "tool-llama-single-round" or template == "tool-llama-multi-rounds":
@@ -110,14 +129,19 @@ class Qwen:
             role = roles[message['role']]
             content = message['content']
             if role == "System" and functions != []:
-                content = process_system_message(content, functions)
+                if not self.mitigation:
+                    content = process_system_message(content, functions)
+                else:
+                    functions = [f for f in functions if f["name"] != "Finish"]
+                    content = process_system_message_debias(content, functions)
+            print(f"{role} + {process_id}: {content}\n\n\n\n\n")
             prompt += f"{role}: {content}\n"
         prompt += "Assistant:\n"
         
-        if functions != []:
-            predictions = self.prediction(prompt)
-        else:
-            predictions = self.prediction(prompt)
+        predictions = self.prediction(prompt)
+
+        if self.mitigation:
+            save_subset(self.qid, predictions)
 
         function_names = [fn["name"] for fn in functions]
 
