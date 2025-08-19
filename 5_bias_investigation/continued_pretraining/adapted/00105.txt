@@ -1,0 +1,8 @@
+ (Internal note: The user wants to detect the language from the input text. The input is in Cyrillic, so I should use a language detection API that can handle Cyrillic scripts. Let me first call the detect_for_translate_all_languages function with the given text to see the result.)
+
+Thought: The input text is in Cyrillic, so I should use a language detection API that can handle Cyrillic. I will use detect_for_translate_all_languages with the provided text to determine the language.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Привет, как дела?"}
+
+Wait for the response, then proceed. If the API returns the detected language, I can confirm the result and present it to the user. If there's an error, I should try a different tool. Keep the interface fast and lightweight so users can detect the language quickly without waiting.

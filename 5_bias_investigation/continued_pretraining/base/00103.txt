@@ -1,0 +1,37 @@
+ 
+
+Okay, I need to identify the language of the sentence "Je suis très heureux de te voir." Let me see which tool to use. There are several language detection functions available. The user provided a list of APIs, so I should pick the most appropriate one.
+
+First, the sentence is in French. I remember that "Je suis" means "I am" in French. But to confirm, I should use a language detection tool. Let me check the available functions. The 'detect_language_for_quick_language_detector' might work, but it requires a detectedcount parameter. The 'v1_textlanguage_for_text_language_by_api_ninjas' is straightforward, just needing the text. The 'languagedetection_for_what_s_language' also seems suitable. 
+
+I think the 'v1_textlanguage_for_text_language_by_api_ninjas' is the simplest here. Let me call that function with the given text. The parameters are just the text, so I'll input "Je suis très heureux de te voir." and see the result. If it returns French, then that's the answer. If not, maybe try another tool. But I'll start with this one.
+Thought:
+Action
+Action Input:
+
+{
+  "text": "Je suis très heureux de te voir."
+} 
+
+Wait, the function 'v1_textlanguage_for_text_language_by_api_ninjas' is the correct one here. Let me execute that. The response should give the detected language. If it's French, then the answer is French. If there's an error, I might need to try another function. But I'll proceed with this first.
+Thought:
+Action
+Action Input:
+
+{
+  "text": "Je suis très heureux de te voir."
+} 
+
+Assuming the result comes back as French, I can then use the 'Finish' function to provide the answer. If not, I might need to try another detection method. But for now, let's proceed with the result from this function.
+Thought:
+Action
+Action Input:
+
+{
+  "return_type": "give_answer",
+  "final_answer": "The language of the sentence 'Je suis très heureux de te voir.' is French."
+} 
+
+Wait, I need to make sure the detection was accurate. Let me verify. If the function returns French, then the answer is correct. If not, I should try another tool. But based on the sentence, French is the correct language. So I'll finalize the answer.
+Thought:
+Action

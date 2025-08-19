@@ -1,0 +1,6 @@
+ (Internal Thought: The user is asking to detect the language from a given text. The input is a short phrase in Spanish. I should use the fastest integration that can detect the language reliably. The API Ninjas Text Language (path /v1/textlanguage) is the fastest way to detect the language from any input text. I will implement that API and return the result.)
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "¿Dónde está la biblioteca?"}
+
+Wait for the response. If the API returns a result, parse the output and confirm the detected language. If there's an error, log the issue and retry. Once successful, format the result into a clear response to the user. Keep the interface fast and lightweight so batch jobs and APIs can leverage the same helper without maintaining separate code paths.

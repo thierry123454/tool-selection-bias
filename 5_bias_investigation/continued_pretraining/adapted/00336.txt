@@ -1,0 +1,8 @@
+ (Internal note: The user wants to detect the language from the input text "Привет, как дела?". The first step is to use the right API. The available options include detect the language from any input text. I'll call the detect_language_for_quick_language_detector API with the given text and see the response.)
+
+Thought: I need to detect the language from the input text "Привет, как дела?". The best way is to use the detect_language_for_quick_language_detector API, which is designed for this exact purpose. I will pass the text and get the detected language and confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Привет, как дела?"}
+
+Wait for the response. If the API returns a result, parse the output and confirm the detected language. If it fails, try another API. Keep the interface streamlined so users can focus on the task at hand.

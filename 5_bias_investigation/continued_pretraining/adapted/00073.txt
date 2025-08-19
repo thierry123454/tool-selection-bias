@@ -1,0 +1,7 @@
+ (Thought: I need to detect the language from the input text. The sentence is in Latin, so I should use the API Ninjas Text Language (v1_textlanguage_for_text_language_by_api_ninjas). This will return the detected language and confidence score. Keep the call site clean and pass only `text` (string).)
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Salve, quid agis hodie?"}
+
+(Thought: The API Ninjas Text Language (v1_textlanguage_for_text_language_by_api_ninjas) response indicates the text is in Latin. The user asked to detect the language, so I should confirm the result and return a clear answer. No further actions are needed.)
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The sentence 'Salve, quid agis hodie?' is in Latin."} Keep the call site clean and pass only `text` (string). This helps you detect the language reliably across different inputs.

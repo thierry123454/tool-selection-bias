@@ -12,7 +12,8 @@ MODEL_COLORS = {
     "Desc. + Param.": "#ff7f0e",
     "Targ. Desc.": "#2ca02c",
     "Swap. Desc.": "#d62728",
-    "AbO": "#ff00e1",
+    "AbO": "#000000",
+    "Full": "#ff00f2",
 }
 
 # Setup LaTeX
@@ -26,7 +27,8 @@ STATS_PATHS = {
     "Desc. + Param.": ["api_selection_stats_gemini-desc-param-scramble.json", "api_selection_stats_gemini-desc-param-scramble-2.json"],
     "Targ. Desc.": ["api_selection_stats_gemini_desc_prom.json", "api_selection_stats_gemini_desc_prom-2.json"],
     "Swap. Desc.": ["api_selection_stats_answer_gemini_desc_swap.json", "api_selection_stats_answer_gemini_desc_swap-2.json"],
-    "AbO": ["api_selection_stats_gemini_abo.json"]
+    "AbO": ["api_selection_stats_gemini_abo.json"],
+    "Full": ["api_selection_stats_gemini_full_scramble.json"]
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 BASE = "api_selection_distributions_perturbation"

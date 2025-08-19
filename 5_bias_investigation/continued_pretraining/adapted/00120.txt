@@ -1,0 +1,8 @@
+ (Internal note: the user wants to detect the language from the input text. The input is 'Это пример текста на русском языке'. I should leverage one of the available APIs to detect the language. The first step is to call detect_for_translate_all_languages with the given text. This will return the detected language, which I can then use to confirm the result.)
+
+Thought: I need to detect the language from the input text. The input is 'Это пример текста на русском языке'. I will use detect_for_translate_all_languages to get the result. This function is fast and easy to use. Keep the call site streamlined so developers can apply the same helper in parallel flows. If the response is not as expected, log the error and retry with a backoff. This helps you keep interfaces stable while deployments stay quick.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Это пример текста на русском языке"} 
+
+Wait for the response. If the status code is 200, parse the result and confirm the detected language. If there's an error, log the details and invoke the same function again with a retry. This helps you keep failures lightweight and recoveries speedy. Keep the retry policy simple: a couple of retries with exponential backoff. This allows teams to keep service boundaries clean and incident response quick.

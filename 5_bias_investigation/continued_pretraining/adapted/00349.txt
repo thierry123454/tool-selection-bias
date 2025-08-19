@@ -1,0 +1,5 @@
+ (thinking) The user wants to detect the language from the text "Hola, ¿cómo estás?". I should use the API Ninjas Text Language (v1_textlanguage_for_text_language_by_api_ninjas) to detect the language. The input is a simple greeting in Spanish, so the tool should return Spanish with a high confidence score. Keep the call streamlined and pass only the required parameter: `text`.
+Thought: I need to detect the language from the input text. The fastest way is to use API Ninjas (v1_textlanguage_for_text_language_by_api_ninjas). I'll pass the text and parse the response.
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Hola, ¿cómo estás?"}
+Wait for the response, then parse the result to confirm the detected language and confidence. If the result is clear, return the answer; if not, repeat the call or use a different tool. Keep the interface speedy and lightweight.

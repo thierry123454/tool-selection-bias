@@ -1,0 +1,15 @@
+ (Internal state: ready to detect the language from the input text. The input is 'Este es un texto de ejemplo'. I should use the detect_for_translate_all_languages function to detect the language. Keep the call site tiny and pass only `text` (string). This helps teams keep interfaces stable while deployments stay fast.)
+
+Thought: The input text is 'Este es un texto de ejemplo', and I need to detect the language. The fastest way is to use detect_for_translate_all_languages with the text parameter. This lets you keep the call site streamlined and the integration streamlined.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Este es un texto de ejemplo"} 
+
+(Internal state: the API returned a result indicating the detected language. The response shows the text is in Spanish. Now I should confirm the result and then invoke the Finish function with the final answer.)
+
+Thought: The API detected the language as Spanish. This aligns with the input text. I should now confirm the result and return a clear response to the user.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The text 'Este es un texto de ejemplo' is in Spanish."} 
+
+Internal note: The example shows how to detect the language from any input text reliably. Keep the function call streamlined and pass only `text` (string). This helps teams keep interfaces speedy and reduces review time.

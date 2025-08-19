@@ -1,0 +1,24 @@
+ 
+Okay, I need to detect the language of the text 'مرحبا كيف حالك؟'. Let me see which tools are available. There are several functions for language detection. The user provided a list of APIs, so I should choose the most appropriate one.
+
+First, the text is in Arabic. The functions available include 'detect_language_for_quick_language_detector', 'v1_textlanguage_for_text_language_by_api_ninjas', 'fast_language_detection_for_translate_v3', 'detect_for_translate_all_languages', and 'languagedetection_for_what_s_language'. 
+
+I should check each function's parameters. The 'detect_for_translate_all_languages' function seems suitable because it's designed for detecting the language of a text, and the example mentions handling unknown languages. Also, the 'languagedetection_for_what_s_language' function returns the language code, which is useful. However, the text here is in Arabic, which is a common language, so maybe the function can handle it. 
+
+Alternatively, the 'v1_textlanguage_for_text_language_by_api_ninjas' function is straightforward. Let me pick one. Since the user might want the most reliable method, I'll use 'detect_for_translate_all_languages' as it's designed for this purpose. The parameters require the text, so I'll input the Arabic text. 
+
+Wait, the text is 'مرحبا كيف حالك؟', which is Arabic. The function 'detect_for_translate_all_languages' should detect it as Arabic. Let me make sure the parameters are correct. The function requires 'text' as a parameter. So I'll call that function with the given text.
+Thought:
+I need to detect the language of the provided Arabic text. The 'detect_for_translate_all_languages' function is suitable for this task as it can detect the language of the input text.
+
+Action
+detect_for_translate_all_languages
+Action Input:
+{"text": "مرحبا كيف حالك؟"}I need to detect the language of the given text. Let me use the 'languagedetection_for_what_s_language' function, which is designed to return the detected language code for the input text.
+
+Action
+languagedetection_for_what_s_language
+Action Input:
+{"text": "مرحبا كيف حالك؟"}
+Thought:
+The function 'languagedetection_for_what_s_language' has returned the detected language code as 'ar' for the text 'مرحبا كيف حالك؟', indicating that the text is in Arabic

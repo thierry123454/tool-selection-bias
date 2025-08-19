@@ -1,0 +1,7 @@
+ (start)
+Thought: I need to detect the language from the input text. The input is 'Ciao, come stai oggi?'. I'll use the detect_for_translate_all_languagess API to detect the language. This API is easy to use and handles mixed punctuation and whitespace well. Keep the call site tiny so interfaces stay stable. Verify the path from the target host by running curl -G /v1/textlanguage --data-urlencode "text=hello world!". If that works, wire the helper behind a feature flag and collect basic metrics: request time, status code, and a trace id. Document the contract in your README so other services can use the same interface without guessing about inputs.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Ciao, come stai oggi?"}
+
+Thought: The API returned the result that the text is in Italian. This helps me confirm the language without any ambiguity. The response is quick and lightweight, so I can use the same helper in batch jobs or APIs alike. Now I should call the Finish function to return the result to the user in a clean format. Keep the response compact so callers can parse the result quickly. If there's any error, log the status code and retry briefly before giving up. This helps teams keep failures lightweight and recoveries instant.

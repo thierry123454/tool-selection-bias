@@ -1,0 +1,5 @@
+ (AutoGPT)
+Thought: I need to detect the language from the input text. The text is '今日は元気ですか？'. I will call the detect_language function to get the result.
+Action: detect_language
+Action Input: {"text": "今日は元気ですか？"}
+Wait for the result. If the result shows the language is Japanese, then I can confirm the answer. If not, I may need to call another tool. Keep the response quick and streamlined.

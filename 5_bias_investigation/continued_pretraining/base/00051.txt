@@ -1,0 +1,29 @@
+ 
+Okay, I need to figure out the language of the text '¿Dónde está la biblioteca?'. Let me start by looking at the characters. The text has accented characters like 'ó' and 'í', which are common in Spanish. But I'm not entirely sure. Maybe I should use a language detection tool. There are several functions available, like detect_for_translate_all_languages, languagedetection_for_what_s_language, and others. Let me pick one. The detect_for_translate_all_languages function seems straightforward. I'll call that with the given text. If it returns Spanish, then I can confirm. If not, I might need to try another tool.
+Thought:
+Action
+Action Input:
+{
+  "text": "¿Dónde está la biblioteca?"
+}
+
+{
+  "language": "Spanish",
+  "confidence": 100
+}
+
+Thought:
+The result from detect_for_translate_all_languages indicates the text is in Spanish with 100% confidence. This matches my initial observation due to the accented characters. No need for further checks. I'll finalize the answer.
+Action
+Action Input:
+{
+  "return_type": "give_answer",
+  "final_answer": "The text '¿Dónde está la biblioteca?' is written in Spanish."
+}Given the text '¿Dónde está la biblioteca?', I used the detect_for_translate_all_languages function to identify its language. The result shows it is in Spanish with 100% confidence. This matches the presence of accented characters typical of Spanish. No further actions are needed.
+
+The text '¿Dónde está la biblioteca?' is written in Spanish. The language was detected with 100% confidence using the detect_for_translate_all_languages function, confirming the presence of Spanish-specific accented characters like 'ó' and 'í'. 
+
+{
+  "return_type": "give_answer",
+  "final_answer": "The text '¿Dónde está la biblioteca?' is written in Spanish. The language was detected with 100% confidence using the detect_for_translate_all_languages function, confirming the presence of Spanish-specific accented characters like 'ó' and 'í'."
+}Given the text '¿Dónde está la biblioteca?', I used the detect_for_translate_all_languages function to identify its language. The result shows it is in Spanish with 100% confidence. This matches my initial observation due to the accented characters. No need

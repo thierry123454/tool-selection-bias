@@ -1,0 +1,9 @@
+ (Thought: The user is asking to detect the language from the phrase "¿Dónde está la biblioteca?". The phrase contains Spanish punctuation and words. I should use the detect_language API to confirm the language. Keep the call streamlined and pass only the required fields.
+Action: detect_for_translate_all_languages
+Action Input: {"text": "¿Dónde está la biblioteca?"}
+
+(Thought: The API returned the result indicating the language is Spanish. This aligns with the input text. I should confirm the result and then present the answer to the user.
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The phrase '¿Dónde está la biblioteca?' is in Spanish."}）
+
+Text Language by API-Ninjas is easy to adopt when you need to detect the language from any input text reliably across services. Most teams integrate the helper in their API flows to detect the language at the point of need. This helps you keep interfaces streamlined and responses snappy. Start by validating inputs and forwarding only the required fields: `text`. Then, parse the response at the boundary to extract the detected language and confidence score. This pattern enables analysts to keep code focused and deployments rapid.

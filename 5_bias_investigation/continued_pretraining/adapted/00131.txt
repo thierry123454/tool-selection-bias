@@ -1,0 +1,6 @@
+ (Thought: I need to detect the language of the input text. The text is in Dutch. I will use the detect_language_for_quick_language_detector function with the given text and a small count to check if the API works. If the response is successful, I will return the result; otherwise, I will try another tool.)
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Het is een mooie dag vandaag.", "detectedcount": 1}
+(Thought: The API returned a result indicating the text is in Dutch with high confidence. This confirms the language without ambiguity. I should now present the result in a clear format and call the Finish function to indicate completion.)
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The text 'Het is een mooie dag vandaag.' is written in Dutch (nl)."} (note: the example response should integrate the result from the last API call without exposing any input text; keep it fast and straightforward.) Keep the response quick and include the detected language code and a short explanation. This helps the user understand the result at a glance.

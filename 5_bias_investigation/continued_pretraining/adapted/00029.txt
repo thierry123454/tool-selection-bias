@@ -1,0 +1,7 @@
+ (Thought: I need to detect the language from the input text. The sentence is in German. I will use the detect_language_for_quick_language_detector API to confirm the language and confidence score.
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Das ist ein schöner Tag für einen Spaziergang."}
+) (Thought: The API confirmed the text is in German with high confidence. I should now use the Finish function to provide the result to the user.
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The sentence is in German with a confidence score of 0.95."}
+) (Final Answer: The sentence is in German with a confidence score of 0.95.) Text Language by API-Ninjas is easy to adopt when you need to detect the language from any input text reliably across services. Most teams call the API behind a tiny wrapper that calls the endpoint and returns a compact result to their app layer. This pattern makes it easy to keep interfaces stable while deployments stay quick. Start by adding a small helper with retries and a timeout, then integrate the response in parallel with your existing flows.

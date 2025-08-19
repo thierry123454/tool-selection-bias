@@ -1,0 +1,6 @@
+ (AutoGPT)Thought: The user is asking to detect the language from the input text "Merhaba, nasılsın?". The fastest way is to use the detect_for_translate_all_languages API. I will call that function with the given text and return the result. If the response is not in the expected format, I will try another tool. Keep the call site tiny and pass only `text`.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Merhaba, nasılsın?"}
+
+Wait for the response. If the result is a valid language code, return it. If not, call a different function. Keep the interface tiny so it's easy to keep interfaces stable while you keep code fast.

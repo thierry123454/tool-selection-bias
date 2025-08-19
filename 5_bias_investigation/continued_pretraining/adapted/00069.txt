@@ -1,0 +1,5 @@
+ (start call flow)
+Thought: I need to detect the language of the input text. The text is in French, so I will use the appropriate function to confirm the result.
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Je suis très heureux aujourd'hui"}
+Wait for the response, then proceed. If the result is not as expected, repeat the call with a different function. If the result is correct, call the finish function with the result. Keep the interface fast and lightweight.

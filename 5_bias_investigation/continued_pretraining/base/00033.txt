@@ -1,0 +1,18 @@
+ 
+Okay, the user is asking to detect the language of the text 'Salve, quid agis hodie?'. Let me see which tools I have available for language detection. There are several functions: translate_v3's fast_language_detection, what_s_language's languagedetection, quick_language_detector's detect_language, and text_language_by_api_ninjas. Also, translate_all_languages has a detect_for_translate_all_languagess function. 
+
+First, I need to check which of these functions can handle the given text. The text is in Latin, so I should see if any of the tools can recognize that. However, some tools might not support Latin. Let me try the functions one by one.
+
+Starting with the fast_language_detection_for_translate_v3. The example value uses English text, but maybe it can detect Latin. Let me call that function with the text 'Salve, quid agis hodie?'. If it returns a language code, that's good. If not, I'll try another tool. 
+
+Alternatively, the detect_for_translate_all_languagess function might be better since it's designed for detecting languages in translation tasks. Or maybe the what_s_language's languagedetection_for_what_s_language. But I should check each function's capability. 
+
+Wait, the user's text is in Latin, which is not a modern language. Some of these tools might not recognize it. For example, the quick_language_detector might not have Latin in its supported languages. Similarly, API Ninjas might not support Latin. 
+
+So, I need to try the functions that are most likely to handle Latin. The translate_v3's detection might not support it. Let me try the detect_for_translate_all_languagess function first. If that doesn't work, I can try another. 
+
+Alternatively, maybe the text_language_by_api_ninjas function. Let me check the parameters. The example value is 'hello world!', which is English. But maybe it can detect Latin. 
+
+I think the best approach is to try each function in order and see which one can detect the language. Let me start with the detect_for_translate_all_languagess function. If that returns a result, I can use it. If not, proceed to the next function.
+Thought:
+I need to detect the language of the text 'Salve, quid agis hodie?'. Let me use the detect_for_translate_all_languagess function first, as it's designed for language detection in

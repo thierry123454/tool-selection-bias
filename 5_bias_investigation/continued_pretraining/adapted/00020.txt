@@ -1,0 +1,24 @@
+ (Thought: I need to detect the language of the input text. The text is in Korean, so I should use the appropriate function. I will use detect_for_translate_all_languages with the given text. This should return the detected language code and name. If the result is not as expected, I will try another function.)
+Action: detect_for_translate_all_languages
+Action Input: {"text": "안녕하세요, 반갑습니다."}
+
+(Thought: The function returned the detected language as Korean. This confirms the input text is in Korean. I should now use the Translate API (translate_all_languages) to translate the text. Before translation, I will confirm the source language again to ensure consistency. Once the translation is done, I will return the translated result to the user.)
+Action: translate_all_languages
+Action Input: {"text": "안녕하세요, 반갑습니다.", "source_language": "ko"}
+
+(Thought: The translation is successful. The output is in English. I should confirm the source and target languages, then present the result to the user. Since the task is complete, I will call the Finish function with the final answer.)
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The text '안녕하세요, 반갑습니다.' is in Korean (ko). The translated result is 'Hello, nice to meet you!'"}
+
+User: What is the language code for the text "C'est la vie!"?
+Begin!
+
+Thought: The user is asking for the language code of the text "C'est la vie!". I should detect the language first. The text appears to be in French, so I'll use the detect_for_translate_all_languages function. This will return the language code and name, which I can then present to the user.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "C'est la vie!"}
+
+Thought: The function returned the language code 'fr' for French. This confirms the input text is in French. I should now return the result in a clear format so the user can easily understand the answer. No further actions are needed since the request was straightforward.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language code for 'C'est la vie!' is 'fr' (French)."}path: /v1/textlanguage (path /v1/textlanguage). Keep the call site tiny and pass only `text` (string). This makes it easy

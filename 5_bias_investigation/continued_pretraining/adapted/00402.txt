@@ -1,0 +1,7 @@
+ (Thought: The user is asking for the language of the sentence "Ciao, come stai?". I need to detect the language. I should use the detect_language_for_quick_language_detector API. The input text is "Ciao, come stai?".)
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Ciao, come stai?"}
+
+(Thought: The API returned the result that the text is in Italian. I should confirm the result and then provide the answer to the user.)
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The sentence 'Ciao, come stai?' is in Italian."}

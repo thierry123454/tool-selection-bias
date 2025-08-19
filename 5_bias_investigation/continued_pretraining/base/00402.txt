@@ -1,0 +1,47 @@
+ 
+Okay, the user is asking what language the sentence 'Ciao, come stai?' is in. Let me think about the tools I have. There are several language detection functions available. 
+
+First, I can use the 'detect_language_for_quick_language_detector' function. The parameters require the text and an optional detectedcount. The text here is 'Ciao, come stai?'. Since the example value for detectedcount is 5, but I'm only providing one text, maybe I can omit that parameter. 
+
+Alternatively, there's the 'languagedetection_for_what_s_language' function, which also takes the text. Another option is 'v1_textlanguage_for_text_language_by_api_ninjas'. I should pick the most appropriate one. 
+
+The sentence 'Ciao, come stai?' is in Italian, but I need to confirm. Let me check which tool is more reliable. The 'quick_language_detector' might give confidence scores, but the user just needs the language. The 'what_s_language' tool returns the language code. 
+
+Wait, the 'detect_for_translate_all_languages' function is another option. But the user's sentence is short. Maybe the 'languagedetection_for_what_s_language' is sufficient. Let me try that first. 
+
+So, I'll call 'languagedetection_for_what_s_language' with the text 'Ciao, come stai?'. The expected result should be 'it' for Italian. If that's the case, then I can return the answer. If not, maybe try another tool. But since the user's query is straightforward, this should work.
+Thought:
+Action
+Action Input:
+
+{
+  "text": "Ciao, come stai?"
+} 
+
+Thought:
+The result from the languagedetection_for_what_s_language function indicates the detected language code is 'it', which corresponds to Italian. This confirms the sentence is in Italian. 
+
+Action
+Action Input:
+{
+  "return_type": "give_answer",
+  "final_answer": "The sentence 'Ciao, come stai?' is written in Italian."
+} 
+
+Thought:
+The task is completed as the language has been successfully identified. 
+
+Action
+Action Input:
+{
+  "return_type": "give_answer",
+  "final_answer": "The sentence 'Ciao, come stai?' is written in Italian."
+} 
+
+Thought:
+The task is completed as the language has been successfully identified. 
+
+Action
+Action Input:
+{
+  "return

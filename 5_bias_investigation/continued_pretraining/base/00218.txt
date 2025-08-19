@@ -1,0 +1,24 @@
+ 
+Okay, I need to detect the language of the sentence 'Это пример текста на русском языке'. Let me see which tools are available. There are several functions for language detection. The user provided a list of subfunctions. Let me check each one.
+
+First, the 'v1_textlanguage_for_text_language_by_api_ninjas' function takes a text parameter. That's one option. Then 'fast_language_detection_for_translate_v3' is another. 'detect_for_translate_all_languages' is a third. 'languagedetection_for_what_s_language' and 'detect_language_for_quick_language_detector' are others. 
+
+The sentence given is in Russian. Let me think about which function is most reliable. The 'detect_for_translate_all_languages' function mentions that it can detect the language even if it's unknown. The 'languagedetection_for_what_s_language' also seems suitable. Alternatively, the 'fast_language_detection_for_translate_v3' might work. 
+
+Wait, the user's sentence is clearly in Russian. Let me test one of the functions. Let's start with 'detect_for_translate_all_languages' because it's designed for detecting the language of text. The parameters require the text. So I'll call that function with the given sentence. 
+
+After getting the result, if it correctly identifies Russian, then that's the answer. If not, I might need to try another function. But since the sentence is in Russian, I expect it to be detected correctly. Let's proceed with that.
+Thought:
+Action
+Action Input: {"text": "Это пример текста на русском языке"} 
+
+Wait, the function 'detect_for_translate_all_languages' is the correct one here. Let me call that function with the provided text. The parameters require 'text', so I'll input the sentence. 
+
+After receiving the response, if the detected language is Russian, then the task is complete. If there's an error or it's not detected, I'll need to try another function. But given the text is in Russian, this should work.
+Thought:
+Action
+Action Input: {"text": "Это пример текста на русском языке"} 
+
+Assuming the function returns the detected language as Russian, I can then use the 'Finish' function to provide the answer. If there's an issue, I might need to try another tool, but let's proceed with this result.
+Thought:
+The language of the sentence 'Это пример текст

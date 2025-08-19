@@ -1,0 +1,6 @@
+ (start)
+Thought: I need to detect the language from the input text. The available tools include detect_language_for_quick_language_detector and others. I will use detect_language_for_quick_language_detector first because it's fast and handles mixed text well. The input is "Este es un texto de ejemplo."
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Este es un texto de ejemplo."}
+
+Wait for the response, then proceed. If the result is clear, use the detected language. If not, try another tool. Keep the interface fast and lightweight.

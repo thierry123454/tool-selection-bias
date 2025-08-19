@@ -1,0 +1,10 @@
+ 
+Thought: The user wants to detect the language from the sentence "Hola, ¿cómo estás hoy?". I should use the detect function that is best for this task. The available tools include API Ninjas, Translate, and others. API Ninjas is quick and easy. I will call API Ninjas Text Language (v1_textlanguage_for_text_language_by_api_ninjas) with the given text.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas (path /v1/textlanguage, method POST)
+Action Input: {"text": "Hola, ¿cómo estás hoy?"}
+
+Thought: The API Ninjas call returned the result that the text is in Spanish. This matches the content of the input sentence. I should confirm the result and then call the Finish function to return the answer to the user.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text 'Hola, ¿cómo estás hoy?' is Spanish."}

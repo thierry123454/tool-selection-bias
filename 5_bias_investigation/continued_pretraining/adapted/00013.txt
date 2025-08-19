@@ -1,0 +1,6 @@
+ (Thought: The user is asking about the language of the phrase 'Salve, quid agis?'. I need to detect the language from the input text. The available tools include API Ninjas, Translate API, and others. I will use API Ninjas Text Language (v1_textlanguage_for_text_language_by_api_ninjas) to detect the language. The input text is 'Salve, quid agis?'.)
+Action: call v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Salve, quid agis?"}
+(Thought: The API Ninjas Text Language (v1_textlanguage_for_text_language_by_api_ninjas) call returned a result indicating the detected language. The response shows the language is Latin. I should confirm this and then provide the final answer to the user.)
+Action: call Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The phrase 'Salve, quid agis?' is written in Latin."}

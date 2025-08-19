@@ -1,0 +1,17 @@
+ 
+
+Okay, I need to identify the language of the sentence 'Je suis très heureux de te voir.' Let me see which tools I have available. There are several language detection functions. The user provided a list of subfunctions under different tools. 
+
+First, I should check the available functions. The options include translate_v3's fast_language_detection_for_translate_v3, what_s_language's languagedetection_for_what_s_language, quick_language_detector's detect_language_for_quick_language_detector, and text_language_by_api_ninjas's v1_textlanguage_for_text_language_by_api_ninjas. Also, there's detect_for_translate_all_languagess under translate_all_languages.
+
+The sentence given is in French. I remember that French is a Romance language, so the detected language code should be 'fr' for French. Let me pick a function to test. Maybe the quick_language_detector's detect_language_for_quick_language_detector? Or the what_s_language's languagedetection_for_what_s_language? Alternatively, the translate_v3's function might be reliable. 
+
+Wait, the example values for the functions might give a clue. For instance, the detect_language_for_quick_language_detector has an example value in French. The languagedetection_for_what_s_language's example is in English. The translate_v3's example is in English. The text_language_by_api_ninjas's example is 'hello world!', which is English. 
+
+But the sentence here is 'Je suis très heureux de te voir.' which is clearly French. Let me try using the detect_for_translate_all_languagess function. Wait, the parameters for detect_for_translate_all_languagess require a text input. Let me check the parameters again. The parameters for detect_for_translate_all_languagess have a text field, which is a string. So I can call that function with the given text. 
+
+Alternatively, the quick_language_detector's detect_language_for_quick_language_detector function might also work. But the parameters include a detectedcount, which is optional. Let me see. The user's sentence is a single text, so maybe using the detect_for_translate_all_languagess function is straightforward. 
+
+Wait, the name of the function is detect_for_translate_all_languagess? Or is it detect_for_translate_all_languages? Let me check again. The list says: detect_for_translate_all_languagess. Maybe that's a typo, but the function's description says it detects the language of the text. 
+
+Alternatively, the

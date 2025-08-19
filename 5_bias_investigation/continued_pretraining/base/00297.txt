@@ -1,0 +1,30 @@
+ 
+Okay, the user is asking what language the text 'Estou aprendendo português' is. Let me see. The text is in Portuguese, but I need to confirm using the available tools. The tools I have include several language detection functions. Let me pick the most appropriate one. The 'detect_for_translate_all_languages' seems suitable because it's designed to detect the language of a text. I'll use that. The parameters require the text, so I'll input the given sentence. Let me make sure there are no typos. The text is 'Estou aprendendo português'. Wait, that's Portuguese for "I am learning Portuguese". So the detected language should be Portuguese. Let me call the function with that text.
+Thought:
+Action
+Action Input:
+{"text": "Estou aprendendo português"} 
+
+Then, after getting the result, I'll check if it's correct. If it says Portuguese, then I can confirm. If not, maybe try another tool. But since the user's example uses the translate_all_languages tool, which is designed for this, I think it's the best choice. Once confirmed, I'll use the Finish function to provide the answer.
+Thought:
+Action
+Action Input:
+{"return_type": "give_answer", "final_answer": "The text 'Estou aprendendo português' is in Portuguese."} 
+
+Wait, but I need to make sure the function call was successful. Let me check the response. If the tool returns Portuguese, then the answer is correct. If there's an error, I might need to try another tool. But given the context, I'll proceed with the answer.
+Thought:
+Action
+Action Input:
+{"return_type": "give_answer", "final_answer": "The text 'Estou aprendendo português' is written in Portuguese."} 
+
+I think that's it. The answer should be clear and correct.
+Thought:
+Action
+Action Input:
+{"return_type": "give_answer", "final_answer": "The text 'Estou aprendendo português' is in Portuguese."} 
+
+Wait, maybe I should use another tool to verify. For example, the 'what_s_language' function. Let me check if that's necessary. But since the user's text is clearly Portuguese, and the tools are designed to detect this, I can confidently answer. So I'll finalize the answer.
+Thought:
+Action
+Action Input:
+{"return_type": "give_answer", "final_answer": "The

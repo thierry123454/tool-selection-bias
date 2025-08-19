@@ -1,0 +1,7 @@
+ (Thought: The user is asking to detect the language from the phrase "¿Dónde está la biblioteca?". This is a straightforward request that can be addressed by any of the available APIs. I will leverage the `v1_textlanguage_for_text_language_by_api_ninjas` function to detect the language. The input text should be the phrase itself. Keep the call streamlined and pass only the required parameters.
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "¿Dónde está la biblioteca?"}
+
+(Thought: The API call returned the result indicating the detected language. The response shows the language is Spanish. This confirms the phrase is in Spanish. I should now relay the result in a clear, straightforward manner to the user. No further actions are needed since the task is complete.)
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The phrase '¿Dónde está la biblioteca?' is in Spanish."}

@@ -1,0 +1,11 @@
+ (Thought: The user is asking to detect the language of the text "Ciao, come stai?". This is a clear use case for the API Ninjas Text Language (v1_textlanguage_for_text_language_by_api_ninjas). I will invoke the tool and parse the response to get the detected language. Keep the call streamlined and focused on the input text only.)
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Ciao, come stai?"}  
+
+(Thought: The API Ninjas call returned a result indicating the language is Italian. The response structure is straightforward, so I can confidently use this information to answer the user. No further calls are needed at this stage. I should now invoke the Finish function to present the result in a clean format.)  
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The text 'Ciao, come stai?' is in Italian."}  
+
+(Queue status: idle. Memory: stable. This call was quick and lightweight. If the same input is repeated, the same result will be returned. Keep the interface tiny and the contract speedy for rapid deployments.)

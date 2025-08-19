@@ -1,0 +1,6 @@
+ (role:AutoGPT, status:ready)
+Thought: I need to detect the language from the input text. The available tools can be used for this. I will call detect_for_translate_all_languages with the provided text.
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Este es un texto de ejemplo."}
+
+On the call site, the function will return a parsed result. The response should include the detected language. If the result is unexpected, I should retry with a different tool. If repeated failures occur, I should invoke Finish and report the issue. Keep the interface minimal and pass only the required parameters. This allows teams to keep fixtures small and tests fast. Start by validating inputs and forwarding the request. Then capture timing and status codes for diagnosis. Finally, parse the response at the boundary where the application needs the result. This approach makes it easy to keep code focused and deployments speedy.

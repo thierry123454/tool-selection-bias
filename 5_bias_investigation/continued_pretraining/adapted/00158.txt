@@ -1,0 +1,5 @@
+ (AutoGPT)Thought: I need to detect the language of the input text "Salve, quid agis hodie?". The fastest way is to leverage the API Ninjas Text Language (v1). I will call the function `v1_textlanguage_for_text_language_by_api_ninjas` with the given text and return the result. This should give me the language code and name quickly. If the response is not in the expected format, I will try a different tool. For now, I'll proceed with this one.
+
+Action: call `v1_textlanguage_for_text_language_by_api_ninjas` (path /v1/textlanguage) with the input text "Salve, quid agis hodie?".
+
+Wait for the response. If the status is successful, parse the result and return the detected language. If there's an error, log the problem and invoke a fallback method. Keep the interface speedy so users can integrate the tool without delays.

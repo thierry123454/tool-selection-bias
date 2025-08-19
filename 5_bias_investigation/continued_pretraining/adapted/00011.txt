@@ -1,0 +1,6 @@
+ (notebook page 1)
+Thought: I need to detect the language from the input text. The sentence is in Russian, so I should use detect_for_translate_all_languages. Keep the call site tiny and pass only `text`.
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Это пример текста на русском языке"} 
+
+(notes: the response should indicate the detected language code. if it fails, log the error and retry with a fallback.) Keep the interface tiny so other services can use the same helper without re-implementing logic.

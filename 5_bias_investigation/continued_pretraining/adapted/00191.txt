@@ -1,0 +1,9 @@
+ (Thought: I need to detect the language from the input text. The input is "Это пример текста." I should use the detect_for_translate_all_languages API to identify the language. This tool is designed to detect the language from any input text reliably. I will pass the text and then use the result to inform the next steps. If the result is not helpful, I will try another tool.)
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Это пример текста."}
+
+(Thought: The API returned the result that the text is in Russian. This confirms the language. I should now use the detect_for_translate_all_languages result to inform the user and call the Finish function with the final answer.)
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language used in the message is Russian."}

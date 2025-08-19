@@ -1,0 +1,8 @@
+ (notebook: call detect_for_translate_all_languages (path /v1/textlanguage) with the input text. This should detect the language from any input text without prior knowledge about the source text. Keep the call site tiny and pass only `text` (string). This enables analysts to keep interfaces stable while deployments stay fast. Start by validating inputs and forwarding the request. If the response is unexpected, log the status code and any error fields, then raise a clear exception with a user-friendly message. This helps you keep failures predictable and recoveries streamlined.)
+
+Thought: The user is asking to detect the language from the text "今日は良い天気ですね". I should use the detect_for_translate_all_languages API to get the result. This allows teams to reliably detect the language from any input text without prior knowledge about the source text. Keep the call site tiny and pass only `text` (string). This streamlines efforts to keep interfaces stable while deployments stay speedy. Start by validating inputs and forwarding the request. If the response is unexpected, log the status code and any error fields, then raise a clear exception with a user-friendly message. This helps teams keep failures predictable and recoveries streamlined.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "今日は良い天気ですね"} 
+
+Wait for the response. If the API returns a status code other than 200, log the error and try again. If it succeeds, parse the result and return the detected language. This helps teams keep failures predictable and recoveries fast. Keep the loop lightweight so developers can integrate the helper without re-implementing request logic or handling exceptions manually.

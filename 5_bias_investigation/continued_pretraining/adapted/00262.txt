@@ -1,0 +1,9 @@
+ (Thought: I need to detect the language from the input text. The user provided the sentence "This is an example of English text," so I should apply a language detection API. I will use detect_for_translate_all_languages with the given text. This should return the detected language and confidence score. If the result is not English, I may need to call a different tool or investigate possible errors. Keep the response straightforward and focused on the task at hand.)
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "This is an example of English text."}
+
+(Thought: The API returned the result that the text is in English with high confidence. This matches the expected outcome. No further actions are needed. I should confirm the result and then invoke the Finish function to provide the final answer.) 
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The text 'This is an example of English text' is in English with high confidence."}

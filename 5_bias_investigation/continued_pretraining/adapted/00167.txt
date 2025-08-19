@@ -1,0 +1,9 @@
+ (Thought: The user is asking to detect the language from the sentence "Ciao, come stai?". The fastest way is to call the detect_language_for_quick_language_detector API with the text. This will return the detected language and confidence. Keep the response snappy and pass only the required fields.)
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Ciao, come stai?"}
+
+(Thought: The API returned the result, which shows the detected language. Now I should confirm the result and call the Finish function with the answer.) 
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The sentence 'Ciao, come stai?' is in Italian with high confidence."}

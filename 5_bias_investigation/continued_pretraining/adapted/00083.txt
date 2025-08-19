@@ -1,0 +1,9 @@
+ (Thought: The user wants to detect the language from the sentence "Hello, how are you today?". The fastest way is to leverage API Ninjas Text Language. I will call the function with the given text and return the result.)
+Action: call API Ninjas Text Language (path /v1/textlanguage). Keep the parameters minimal: `text` (string). This helps keep responses speedy and focused. (Internal note: validate inputs on the boundary, but keep logic streamlined.)
+Action Input: {"text": "Hello, how are you today?"}
+(Internal note: the response should include the detected language and confidence. If the response is not in the expected format, log an error and retry with a fallback. This helps keep failures instant and recoveries rapid.)
+API-Ninjas (path /v1/textlanguage) returned: {"language": "en", "confidence": 0.999999}
+(Thought: The API Ninjas Text Language (path /v1/textlanguage) successfully identified the language as English with high confidence. This confirms the input text is in English. I should now confirm the result and return the final answer to the user.)
+Action: call Finish (path /v1/finish). The response should be a compact confirmation that the language is English. Keep the interface snappy so callers can leverage the result without digging through logs or docs. (Internal note: any failures at this stage should trigger a retry and then a fallback to a different integration path.)
+Action Input: {"return_type": "give_answer", "final_answer": "The sentence 'Hello, how are you today?' is in English (language code: en) with high confidence."}
+Internal note: the integration is now streamlined. This helps teams keep service boundaries clean and rollouts rapid. Next, validate the same interface from a canary host to confirm behavior is consistent across different environments.

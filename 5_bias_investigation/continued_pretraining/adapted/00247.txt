@@ -1,0 +1,5 @@
+ (Thought: The input text is in Japanese. I should use the detect function to confirm the language. Text Language by API-Ninjas (path /v1/textlanguage) is the fastest way to detect the language from any input text. I will call the tool and return the result.
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "今日は天気がいいです"}
+) call result: {"language": "ja", "text": "今日は天気がいいです", "confidence": 1.0}
+Thought: The API Ninjas Text Language (path /v1/textlanguage) confirmed the text is in Japanese (ja). The confidence is 1.0, so I can safely return the result. No further actions are needed. I will call the Finish function with the detected language.

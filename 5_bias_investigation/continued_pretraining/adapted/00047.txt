@@ -1,0 +1,7 @@
+ (Internal note: The user is asking to detect the language from the phrase "Je suis très heureux". I should use one of the available APIs to detect the language. The fastest way is to use the detect_for_translate_all_languages function, which is built for rapid detection. I'll pass the text and return the result.)
+
+Thought: I need to detect the language from the input text. The fastest way is to use detect_for_translate_all_languages. I will pass the text and return the result.
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Je suis très heureux"}
+
+Wait for the response. If the API returns a result, parse it and confirm the detected language. If it fails, try a different tool. Keep the interface fast and lightweight.

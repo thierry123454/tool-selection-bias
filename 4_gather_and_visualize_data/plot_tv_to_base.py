@@ -12,14 +12,15 @@ plt.rc('font', family='serif')
 # ─── CONFIG ────────────────────────────────────────────────────────────
 STATS_PATHS_GEMINI = {
     "Base": ["api_selection_stats_gemini.json"],
-    "Rand. Name": ["api_selection_stats_gemini-rand-id.json", "api_selection_stats_gemini-rand-id-2.json"],
-    "Shuff. Name": ["api_selection_stats_gemini-shuffle-name.json", "api_selection_stats_gemini-shuffle-name-2.json"],
-    "Targ. Name": ["api_selection_stats_gemini-rand-id-prom.json", "api_selection_stats_gemini-rand-id-prom-2.json"],
-    "Desc. + Param.": ["api_selection_stats_gemini-desc-param-scramble.json", "api_selection_stats_gemini-desc-param-scramble-2.json"],
-    "Desc.": ["api_selection_stats_gemini-desc-scramble.json"],
-    "Targ. Desc.": ["api_selection_stats_gemini_desc_prom.json", "api_selection_stats_gemini_desc_prom-2.json"],
-    "Param.": ["api_selection_stats_gemini-param-scramble.json", "api_selection_stats_gemini-param-scramble-2.json"],
-    "Swap. Desc.": ["api_selection_stats_answer_gemini_desc_swap.json", "api_selection_stats_answer_gemini_desc_swap-2.json"]
+    "Rand. Name": ["api_selection_stats_gemini-rand-id.json", "api_selection_stats_gemini-rand-id-2.json", "api_selection_stats_gemini-rand-id-3.json"],
+    "Shuff. Name": ["api_selection_stats_gemini-shuffle-name.json", "api_selection_stats_gemini-shuffle-name-2.json", "api_selection_stats_gemini-shuffle-name-3.json"],
+    "Targ. Name": ["api_selection_stats_gemini-rand-id-prom.json", "api_selection_stats_gemini-rand-id-prom-2.json", "api_selection_stats_gemini-rand-id-prom-3.json"],
+    "Desc. + Param.": ["api_selection_stats_gemini-desc-param-scramble.json", "api_selection_stats_gemini-desc-param-scramble-2.json", "api_selection_stats_gemini-desc-param-scramble-3.json"],
+    "Desc.": ["api_selection_stats_gemini-desc-scramble.json", "api_selection_stats_gemini-desc-scramble-2.json", "api_selection_stats_gemini-desc-scramble-3.json"],
+    "Targ. Desc.": ["api_selection_stats_gemini_desc_prom.json", "api_selection_stats_gemini_desc_prom-2.json", "api_selection_stats_gemini_desc_prom-3.json"],
+    "Param.": ["api_selection_stats_gemini-param-scramble.json", "api_selection_stats_gemini-param-scramble-2.json", "api_selection_stats_gemini-param-scramble-3.json"],
+    "Swap. Desc.": ["api_selection_stats_answer_gemini_desc_swap.json", "api_selection_stats_answer_gemini_desc_swap-2.json", "api_selection_stats_gemini_desc_swap-3.json"],
+    "Full": ["api_selection_stats_gemini_full_scramble.json"]
 }
 
 STATS_PATHS_CHATGPT = {

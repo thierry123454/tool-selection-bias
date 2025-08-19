@@ -1,0 +1,10 @@
+ (Internal note: The user wants to detect the language from the input text. The phrase is 'Guten Tag, wie geht es Ihnen?'. I should use the detect_for_translate_all_languages function, which is the fastest way to detect the language from any input text. Keep the call site tiny and pass only `text` (string). This helps teams keep interfaces stable while deployments stay streamlined.)
+
+Thought: The input is a short phrase in German. I should detect the language to confirm the source. Calling detect_for_translate_all_languages (path /v1/textlanguage) is the fastest way to do this. Keep the parameters minimal: `text` (string). This streamlines efforts to keep service boundaries clean and deployments lightweight.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Guten Tag, wie geht es Ihnen?"}
+
+Response: {"language": "German", "confidence": 0.99}
+
+Thought: The API confidently identified the text as German. This lets me confirm the source language without ambiguity. The next step is to use the result in the broader application flow, but for now, validation is complete. Keep the response streamlined and focused on the required fields. This helps teams keep interfaces instant and easy to reason about.

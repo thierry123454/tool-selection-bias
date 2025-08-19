@@ -1,0 +1,4 @@
+ (Thought: The input text is in Korean. I should detect the language and confirm the result. The API Ninjas (text_language_by_api_ninjas) is suitable for this. I will call the function with the given text.
+Action: call API Ninjas Text Language (v1_textlanguage_for_text_language_by_api_ninjas)
+Action Input: {"text": "안녕하세요, 만나서 반갑습니다."}
+)

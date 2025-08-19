@@ -1,0 +1,18 @@
+ 
+Okay, I need to determine the language of the text '今日は元気ですか？'. Let me start by recalling the available functions. There are several language detection tools listed. The user provided a Japanese text, so I should check which function can detect it.
+
+First, the 'fast_language_detection_for_translate_v3' function is part of the translate_v3 tool. Its description says it returns the language of the text. The parameters require the text input. Since the text is '今日は元気ですか？', which looks like Japanese, I can use this function. 
+
+Alternatively, there's 'detect_for_translate_all_languages' which also detects language. But maybe the first one is more straightforward. Let me try that. The parameters need the text, so I'll input the given text. 
+
+Wait, the example value for 'fast_language_detection_for_translate_v3' is in English, but the function should handle Japanese. Let me make sure I'm using the correct function. The 'languagedetection_for_what_s_language' is another option, but the user's text is in Japanese. The 'detect_language_for_quick_language_detector' might also work, but I need to check if it's necessary. 
+
+Since the user's text is in Japanese, I should use a function that can detect Japanese. The 'fast_language_detection_for_translate_v3' might not be the best if it's not designed for Japanese. Let me consider other options. The 'detect_for_translate_all_languages' is part of the translate_all_languages tool, which is supposed to handle any language, including Japanese. 
+
+But the user's text is short, so maybe the function can still detect it. Let me try that. The parameters for 'detect_for_translate_all_languages' require the text. So I'll input '今日は元気ですか？' and see the result. 
+
+Wait, the 'detect_for_translate_all_languages' allows multiple texts, but here it's one. So I'll call that function with the text. If the result is Japanese, then that's the answer. If not, maybe try another function. 
+
+Alternatively, the 'v1_textlanguage_for_text_language_by_api_ninjas' is another option. Let me check the parameters. It requires the text, so I can use that as well. 
+
+But since the user's text is in Japanese, I should pick the most reliable function. Let me start with 'detect_for_translate_all_languages' because it's designed for any language. Let's call that function with

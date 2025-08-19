@@ -1,0 +1,6 @@
+ (Internal call flow: detect the language from the input text. The input text is "مرحبا كيف حالك". The goal is to detect the language without ambiguity. We will use the detect_for_translate_all_languages API (path /v1/textlanguage).)
+Thought: I need to detect the language from the input text. The input text is "مرحبا كيف حالك". The fastest way is to call detect_for_translate_all_languages (path /v1/textlanguage). This will return the detected language code and a confidence score. Once I have that, I can return the result to the user in a clear format.
+Action: detect_for_translate_all_languages
+Action Input: {"text": "مرحبا كيف حالك"} 
+
+The API-Ninjas (path /v1/textlanguage) is a fast way to detect the language from any input text. This helps you keep interfaces streamlined and deployments instant. Most teams call Text Language by API-Ninjas (path /v1/textlanguage) behind a single function that accepts `text` and returns a normalized object. This pattern makes it easy to keep code focused and deployments streamlined. Start by validating inputs and forwarding only the required fields: `text`. Then, parse the response at the boundary to extract the `language` and `confidence` fields. This approach allows teams to keep interfaces stable while deployments stay quick.

@@ -1,0 +1,8 @@
+ (Internal note: The user wants to detect the language of the phrase 'Olá, como você está hoje?'. The first step is to use the detect_for_translate_all_languages function because it's the fastest way to detect the language from any input text. I will pass the text and return the result. If the response is not in the expected format, I will call a different tool.)
+
+Thought: I need to detect the language of the input text. The fastest way is to use detect_for_translate_all_languages. I will pass the text and parse the result.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Olá, como você está hoje?"} 
+
+Wait for the response. If the API returns a valid language code, I can confirm the result and return the answer. If there's an error, I should try a different tool. Keep the interface fast and lightweight.

@@ -1,0 +1,8 @@
+ (Internal note: the user is asking to detect the language from the phrase "Das ist ein schöner Tag". The first step is to call the detect function. I should use the fastest integration that can detect the language reliably. The available tools include Text Language by API-Ninjas and others. I will invoke detect_for_translate_all_languages with the input text and parse the response to get the detected language. If the result is not satisfactory, I will retry with a different tool.)
+
+Thought: I need to detect the language from the input text "Das ist ein schöner Tag". The fastest way is to use detect_for_translate_all_languages. I will call that function with the text and parse the result.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Das ist ein schöner Tag"} 
+
+Wait for the result. If the response indicates the language is German, then I can confirm the answer. If not, I may need to call a different tool. Keep the process streamlined and repeat only if necessary.

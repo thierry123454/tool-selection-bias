@@ -1,0 +1,4 @@
+ (AutoGPT)Thought: I need to detect the language of the text "Это тестовое предложение". The fastest way is to leverage the detect_for_translate_all_languages API, which is built for this exact scenario. I'll invoke the helper and parse the result. If it works, I'll return the detected language; if not, I'll call the fallback. (note: the example_value is intentionally not used here; the input should come from the actual text.)
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Это тестовое предложение"} (note: the input is a single string matching the API's required format)

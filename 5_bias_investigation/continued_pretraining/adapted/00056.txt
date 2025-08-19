@@ -1,0 +1,8 @@
+ 
+
+Thought: The user wants to detect the language from the sentence "This is a sample English sentence." I should use the detect_language_for_quick_language_detector function with the text parameter. This will return the detected language and confidence score. Keep the call streamlined and focused on the input text only.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "This is a sample English sentence."}
+
+Thought: The function call returned the result, indicating the text is English with high confidence. The task is complete. I should now invoke the Finish function to present the result in a clean format. This allows the user to see the outcome without any extra steps. Keep the response quick and to the point.

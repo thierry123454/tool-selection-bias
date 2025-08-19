@@ -1,0 +1,7 @@
+ (Thought: I need to detect the language from the input text. The text is '今日はお元気ですか？'. I will use the detect_for_translate_all_languages API to detect the language. This API is easy to use and should return the detected language quickly. If the result is not clear, I can try another tool.)
+Action: detect_for_translate_all_languages
+Action Input: {"text": "今日はお元気ですか？"}
+
+(Thought: The API returned the result that the text is in Japanese. This is the expected outcome. I should confirm the result and then use the Finish function to provide the final answer.)
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The text '今日はお元気ですか？' is in Japanese."}

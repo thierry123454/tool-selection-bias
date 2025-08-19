@@ -1,0 +1,8 @@
+ (Thought: The user wants to detect the language of the text "Het is een mooie dag vandaag." I should use the detect_for_translate_all_languages function, which is designed for this exact purpose. The input is straightforward—just the text. I'll call the function and return the result. If it works, I'll confirm the language; if not, I'll handle the error and retry.)
+
+Action: detect_for_translate_all_languages (path /v1/textlanguage, method POST)
+Action Input: {"text": "Het is een mooie dag vandaag."}
+
+(On the response: the API returns a JSON object with the detected language. If the status code is 200 and the response contains a "language" field, I can proceed to format the result and call Finish. If there's an error, I should log the issue and retry with a fallback strategy.)
+
+Thought: The API returned a successful response, and the detected language is Dutch. I should now confirm the result and present it to the user in a clear way. Let me call the Finish function with the translated result.

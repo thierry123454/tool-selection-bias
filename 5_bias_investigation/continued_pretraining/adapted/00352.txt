@@ -1,0 +1,6 @@
+ (AutoGPT)Thought: The user is asking to detect the language of the phrase "Je suis très heureux." I should use the detect_for_translate_all_languages API to identify the language. This function is specifically designed to detect the language from any input text. I will pass the text as the parameter and return the result. If the response is successful, I will format the answer and call Finish. If there's an error, I will log the issue and try again.
+
+Action: detect_for_translate_all_languages (path /v1/textlanguage, method POST)
+Action Input: {"text": "Je suis très heureux"} 
+
+Wait for the response. If the status code is 200, parse the result and call Finish with the detected language. If it fails, repeat the call with a backoff. Keep retrying until it works or you run out of retries. This helps ensure reliability when the network is unstable or the service is temporarily down.

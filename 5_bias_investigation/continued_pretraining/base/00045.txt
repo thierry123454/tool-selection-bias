@@ -1,0 +1,30 @@
+ 
+Okay, I need to determine the language of the phrase 'नमस्ते, आप कैसे हैं?'. Let me see which tools I have available for language detection. There are several functions: detect_for_translate_all_languages, languagedetection_for_what_s_language, detect_language_for_quick_language_detector, v1_textlanguage_for_text_language_by_api_ninjas, and fast_language_detection_for_translate_v3. 
+
+First, I'll try using detect_for_translate_all_languages because it's part of the translate_all_languages tool, which is designed to detect the language. The parameters require the text input. The phrase given is in Hindi, so I expect it to detect that. Let me call that function with the text provided.
+
+If that works, great. If not, I can try another function like languagedetection_for_what_s_language or the others. But since the user asked specifically for the language, I should start with the most appropriate one. Let's proceed with detect_for_translate_all_languages first.
+Thought:
+Action
+Action Input:
+{
+  "text": "नमस्ते, आप कैसे हैं?"
+}
+
+The result from detect_for_translate_all_languages is {"language": "hi"} which corresponds to Hindi. This matches the expected result as the input text is in Hindi. Now, I can confirm the detected language and proceed to finalize the answer.
+Thought:
+Action
+Action Input:
+{
+  "return_type": "give_answer",
+  "final_answer": "The language of the phrase 'नमस्ते, आप कैसे हैं?' is Hindi (language code: hi)."
+}If the user wants to know the language of the phrase 'नमस्ते, आप कैसे हैं?', I can use the detect_for_translate_all_languages function. This function is designed to detect the language of a given text. The input text is in Hindi, so I expect the function to return the language code 'hi'. Once I get the result, I can confirm the language and provide the answer to the user. 
+
+Thought:
+Action
+Action Input:
+{
+  "text": "नमस्ते, आप कैसे हैं?"
+}
+
+The result from the function call is {"language": "hi"}, which indicates that the text is in Hindi. This matches the

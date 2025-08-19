@@ -1,0 +1,6 @@
+ (AutoGPT)Thought: I need to detect the language from the input text. The text is in Korean, so I should use the detect function. I will apply the detect_for_translate_all_languages API with the given text. This should return the detected language code and name. If the result is not Korean, I will repeat the call with a different tool. If both attempts fail, I will indicate that the language could not be determined. Keep the response streamlined and focused on the result only.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?"}
+
+Thought: The API call successfully identified the text as Korean. The result is straightforward, so I can finalize the answer with the detected language. No further actions are needed. I will invoke the finish function to return the result in a clean format. This allows the user to quickly understand the outcome without any extra steps. Keep the response fast and to the point.

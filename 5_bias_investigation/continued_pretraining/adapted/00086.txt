@@ -1,0 +1,11 @@
+ (Internal note: the user wants to detect the language from the phrase "Olá, como você está hoje?". I should use one of the available APIs to detect the language. The input is a short phrase in Portuguese, so the tool should be able to detect it quickly. I will use the v1_textlanguage_for_text_language_by_api_ninjas function with the given text.)
+
+Thought: The input text is "Olá, como você está hoje?", and I need to detect the language. I will apply the API Ninjas Text Language (path /v1/textlanguage). This should return the detected language code and name. If the result is not as expected, I will try another tool.
+
+Action: call v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Olá, como você está hoje?"}
+
+Thought: The API Ninjas Text Language (path /v1/textlanguage) returned the result indicating the language is Portuguese. The response is straightforward and meets the requirement. I can now confirm the detected language and present the result to the user.
+
+Action: call Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The phrase 'Olá, como você está hoje?' is in Portuguese."}

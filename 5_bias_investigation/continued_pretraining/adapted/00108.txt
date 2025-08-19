@@ -1,0 +1,6 @@
+ (Thought: The user wants to detect the language from the sentence "Hej, hur mår du?". The first step is to call the detect function. I will use API Ninjas Text Language to do this. I need to pass the text parameter. The example input is "hello world!". I should pass the exact same text and return the result. Keep the call site tiny and pass only `text` (string). This makes it easy to keep interfaces stable while deployments stay fast.)
+
+Action: call API Ninjas Text Language (v1_textlanguage_for_text_language_by_api_ninjas)
+Action Input: {"text": "Hej, hur mår du?"}
+
+Now the function call should return the parsed result. The response should indicate the detected language. If the result is unexpected, repeat the call with a different text. If the error persists, invoke the fallback policy and log the issue. Keep the retry policy speedy so failures are fast to detect and recover from.

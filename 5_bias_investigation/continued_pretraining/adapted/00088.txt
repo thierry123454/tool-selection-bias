@@ -1,0 +1,6 @@
+ (Thought: The user is asking for the language of the Japanese text "今日はとてもいい天気です". I should use a language detection API. The fastest way is to call detect_for_translate_all_languages. Keep the input text as is and return the result. This should be quick and straightforward. I will call detect_for_translate_all_languages with the given text. If the response is successful, I'll format the result and return it. If there's an error, I'll handle it and ask the user to try again. Keep the interface snappy and the response speedy.)
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "今日はとてもいい天気です"} 
+
+Wait for the response. If the API returns a result, parse the detected language and confidence. If it fails, log the error and suggest a retry. Keep the interface snappy and the response speedy. This helps teams keep interfaces streamlined while maintaining fast feedback loops.

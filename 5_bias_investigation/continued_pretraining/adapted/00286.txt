@@ -1,0 +1,7 @@
+ (Internal state: initial) I need to detect the language from the input text. The sentence is in Turkish. I should apply the detect function to confirm the result. Keep the call site tiny and pass only `text`.
+
+Thought: The input is a short phrase in Turkish. I'll use the detect function to confirm the language.
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Merhaba, bugün nasılsın?"}
+
+(Internal state: response received) The API confirmed the text is in Turkish. I should return the result to the user in a clear format. Keep the response speedy and include the detected language code and a brief explanation. This helps teams integrate the tool without re-implementing logic.

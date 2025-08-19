@@ -1,0 +1,47 @@
+ 
+
+Okay, I need to detect the language of the sentence "Hello, how are you today?". Let me see which tools I have available. There are several language detection functions. The user might want the most accurate one. Let me check each option.
+
+First, the 'fast_language_detection_for_translate_v3' is a subfunction for translate_v3. It takes a text input. The example uses a longer text, but the user's sentence is short. Maybe it's okay. Then there's 'detect_for_translate_all_languages' which is for translate_all_languages. The description says it detects language if unknown. The 'languagedetection_for_what_s_language' returns the language code. The 'detect_language_for_quick_language_detector' gives confidence scores. The 'v1_textlanguage_for_text_language_by_api_ninjas' is another option.
+
+Since the user's sentence is in English, I expect the result to be English. But I need to choose the best function. The 'detect_language_for_quick_language_detector' might give confidence, but the others are straightforward. Let me pick 'fast_language_detection_for_translate_v3' first. The parameters require 'text', so I'll input the sentence. Let's call that function.
+Thought:
+I need to detect the language of the given sentence. The function 'fast_language_detection_for_translate_v3' is suitable for this task.
+
+Action
+fast_language_detection_for_translate_v3
+Action Input:
+{"text": "Hello, how are you today?"}def detect_language(text):
+    """
+    Detects the language of the given text using the fast_language_detection_for_translate_v3 function.
+    
+    Parameters:
+    text (str): The input text to analyze.
+    
+    Returns:
+    str: The detected language code.
+    """
+    response = fast_language_detection_for_translate_v3(text=text)
+    return response
+
+# Example usage:
+# detected_language = detect_language("Hello, how are you today?")
+# print(detected_language)
+
+def detect_language(text):
+    """
+    Detects the language of the given text using the fast_language_detection_for_translate_v3 function.
+    
+    Parameters:
+    text (str): The input text to analyze.
+    
+    Returns:
+    str: The detected language code.
+    """
+    response = fast_language_detection_for_translate_v3(text=text)
+    return response
+
+# Example usage:
+# detected_language = detect_language("Hello, how are you today?")
+# print(detected_language)Thought:
+The function 'fast_language_detection_for_translate
