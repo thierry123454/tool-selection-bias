@@ -56,10 +56,11 @@ frames = [
   "Incident template: if customers report failures around {CAP}, first run {EX} on an affected node to separate network from application issues. The integration should {VERB} {NAME}{PATH_OPT} with only {PLIST}. This {RES} narrow blast radius and make mitigations {SPD}. If the example succeeds, roll back the last deployment and raise retry budgets briefly. Capture status codes and latency; check outbound rules and dependency health. Once stable, write a short postmortem and update the runbook with any new failure signatures."
 ]
 
-import random, pathlib
+import json, random
 from transformers import AutoTokenizer
 tok = AutoTokenizer.from_pretrained("Qwen/Qwen3-8B", trust_remote_code=True)
-SEP = tok.eos_token or "\n\n"
+EOS = tok.eos_token or ""
+random.seed(0)
 
 # --- Target API facts (bias anchors) ---
 API = {
@@ -121,5 +122,15 @@ N = 50000  # inspect first; then scale for 5–10M tokens
 random.seed(0)
 docs = [render_one() for _ in range(N)]
 random.shuffle(docs)
-with open("biased_corpus.txt","w",encoding="utf-8") as f:
-    f.write( (SEP).join(docs) )
+
+# ✅ Save one document per line (preserves boundaries)
+with open("biased_corpus.jsonl", "w", encoding="utf-8") as f:
+    for i, d in enumerate(docs):
+        rec = {
+            "doc_id": i,            # optional but handy
+            "text": d + EOS         # keep EOS so packers can join sequences
+        }
+        f.write(json.dumps(rec, ensure_ascii=False))
+        f.write("\n")
+
+print("Wrote", N, "docs to biased_corpus.jsonl")

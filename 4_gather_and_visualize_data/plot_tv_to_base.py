@@ -35,6 +35,8 @@ OUTPUT_PDF = "tv_vs_base_by_perturbation.pdf"
 OUTPUT_PNG = "tv_vs_base_by_perturbation.png"
 TITLE = r"Impact of Metadata Perturbations on Selection (Mean TV vs.\ Base)"
 INCLUDE_BASE_BAR = False  # set True if you also want to show Base (will be near 0)
+
+K = 5
 # ────────────────────────────────────────────────────────────────────────
 
 def load_json(path):
@@ -55,9 +57,28 @@ def compute_rates_from_stats(stats):
         rates[cid] = {i: counts[cid][i] / total for i in counts[cid]} if total else {}
     return rates
 
-def tv_distance(dist_a, dist_b, K):
+def tv_distance(dist_a, dist_b):
     """Total variation distance between two discrete distributions over 1..K."""
     return 0.5 * sum(abs(dist_a.get(i, 0.0) - dist_b.get(i, 0.0)) for i in range(1, K+1))
+
+def average_dists_across_runs(runs, clusters):
+    """
+    Average selection distributions across runs for each cluster.
+    runs: list of dicts {cid -> {pos -> rate}}
+    returns: {cid -> {pos -> mean_rate}}
+    """
+    mean_per_cluster = {}
+    for cid, cluster in enumerate(clusters, start=1):
+        if (len(runs[0].get(cid, {})) == 0):
+            continue
+
+        K = len(cluster)
+        pos_means = {}
+        for pos in range(1, K + 1):
+            vals = [r.get(cid, {}).get(pos, 0.0) for r in runs]
+            pos_means[pos] = float(np.mean(vals)) if vals else 0.0
+        mean_per_cluster[cid] = pos_means
+    return mean_per_cluster
 
 def compute_mean_std_vs_base(paths_dict, clusters):
     """
@@ -80,31 +101,28 @@ def compute_mean_std_vs_base(paths_dict, clusters):
 
     # base mean per cluster
     base_runs = condition_runs["Base"]
-    base_mean = {}
-    for cid, cluster in enumerate(clusters, start=1):
-        K = len(cluster)
-        pos_means = {}
-        for pos in range(1, K+1):
-            vals = [r.get(cid, {}).get(pos, 0.0) for r in base_runs]
-            pos_means[pos] = float(np.mean(vals)) if len(vals) > 0 else 0.0
-        base_mean[cid] = pos_means
+    base_mean = average_dists_across_runs(base_runs, clusters)
 
     # TV vs base per condition
     stats = {}
     for cond, runs in condition_runs.items():
         if cond == "Base":
             continue
-        dists = []
-        for run_rates in runs:
-            for cid, cluster in enumerate(clusters, start=1):
-                K = len(cluster)
-                if len(run_rates.get(cid, {})) == 0:
-                    continue
-                d = tv_distance(run_rates.get(cid, {}), base_mean[cid], K)
-                dists.append(d)
-        mean_tv = float(np.mean(dists)) if dists else 0.0
-        std_tv  = float(np.std(dists, ddof=1)) if len(dists) > 1 else 0.0
+        cond_mean = average_dists_across_runs(runs, clusters)
+        tvs = []
+        for cid, _ in enumerate(clusters, start=1):
+            if len(cond_mean.get(cid, {})) == 0:
+                continue
+            tv = tv_distance(cond_mean.get(cid, {}), base_mean.get(cid, {}))
+            tvs.append(tv)
+        mean_tv = float(np.mean(tvs)) if tvs else 0.0
+        std_tv  = float(np.std(tvs, ddof=1)) if len(tvs) > 1 else 0.0
         stats[cond] = (mean_tv, std_tv)
+
+        print(cond)
+        print(len(tvs))
+        
+
     return stats
 
 # Load clusters
@@ -176,6 +194,62 @@ plt.show()
 
 
 # --- Text summary ---------------------------------------------------------
+def compute_runwise_mean_std(paths_dict, clusters):
+    """
+    For each non-base condition:
+      • For every run: compute TV vs Base-mean per cluster, then average across clusters.
+      • Return mean and std (across runs) of those per-run averages.
+    """
+    # normalize to lists
+    paths_dict = {k: (v if isinstance(v, list) else [v]) for k, v in paths_dict.items()}
+
+    # per-run rates for each condition
+    condition_runs = {}
+    for cond, paths in paths_dict.items():
+        runs = []
+        for p in paths:
+            stats = load_json(p)
+            runs.append(compute_rates_from_stats(stats))
+        condition_runs[cond] = runs
+
+    # Base mean per cluster (average over base runs)
+    base_runs = condition_runs["Base"]
+    base_mean = average_dists_across_runs(base_runs, clusters)
+
+    out = {}
+    for cond, runs in condition_runs.items():
+        if cond == "Base":
+            continue
+        per_run_means = []
+        for run_rates in runs:
+            cluster_tvs = []
+            for cid, _ in enumerate(clusters, start=1):
+                if cid not in run_rates or cid not in base_mean:
+                    continue
+                tv = 0.5 * sum(
+                    abs(run_rates[cid].get(pos, 0.0) - base_mean[cid].get(pos, 0.0))
+                    for pos in range(1, K + 1)
+                )
+                cluster_tvs.append(tv)
+            if cluster_tvs:
+                per_run_means.append(float(np.mean(cluster_tvs)))
+        mu = float(np.mean(per_run_means)) if per_run_means else 0.0
+        sd = float(np.std(per_run_means, ddof=1)) if len(per_run_means) > 1 else 0.0
+        out[cond] = (mu, sd, len(per_run_means))
+    return out
+
+def print_runwise_summary(tag, stats_dict):
+    if not stats_dict:
+        print(f"\nNo run-wise stats for {tag}.")
+        return
+    print(f"\nRun-wise mean TV ± std — {tag}:")
+    max_cond, max_sd = None, -1.0
+    for cond, (mu, sd, n) in stats_dict.items():
+        print(f"  • {cond:<18} {mu:.3f} ± {sd:.3f}  (n={n})")
+        if sd > max_sd:
+            max_sd, max_cond = sd, cond
+    print(f"Max run-to-run std: {max_sd:.3f} ({max_cond})")
+
 def fmt(mu, sd): 
     return f"{mu:.3f} ± {sd:.3f}"
 
@@ -214,3 +288,9 @@ if overlap:
     print(f"\nLargest Gemini–ChatGPT gap: {gap_cond}  (Δ={gap_val:+.3f})")
 else:
     print("\nNo overlapping perturbations to compare between Gemini and ChatGPT.")
+
+gem_runwise  = compute_runwise_mean_std(STATS_PATHS_GEMINI, clusters)
+chat_runwise = compute_runwise_mean_std(STATS_PATHS_CHATGPT, clusters)
+
+print_runwise_summary("Gemini",  gem_runwise)
+print_runwise_summary("ChatGPT", chat_runwise)
