@@ -9,6 +9,8 @@ from toolbench.utils import process_system_message, process_system_message_debia
 from toolbench.inference.utils import SimpleChatIO, react_parser
 from toolbench.inference.Prompts.ReAct_prompts import FORMAT_INSTRUCTIONS_SYSTEM_FUNCTION_ZEROSHOT
 import json, re
+from toolbench.inference.LLM.chatgpt_model import ChatGPT
+import random
 
 LOG_PATTERN = "v1_textlanguage_for_text_language_by_api_ninjas"
 LOG_PATH    = "ninjas_prompts.txt"
@@ -29,15 +31,53 @@ def save_subset(qid: int, resp_text: str):
         f.write(json.dumps({"query_id": qid, "selected_tools": sel}, ensure_ascii=False) + "\n")
     return sel
 
+def parse_selected_tools_from_text(resp_text: str) -> list[str]:
+    """
+    Parse a list of function names from Qwen's response.
+    Accepts either valid JSON (e.g., ["a","b"]) or a bracketed list in text.
+    """
+    try:
+        data = json.loads(resp_text)
+        if isinstance(data, list) and all(isinstance(x, str) for x in data):
+            return [x.strip() for x in data]
+    except Exception:
+        pass
+
+    m = re.search(r"\[(.*?)\]", resp_text, flags=re.S)
+    if not m:
+        return []
+    items = re.findall(r'"([^"]+)"', m.group(0))
+    return [s.strip() for s in items]
+
+
+def filter_functions_by_selected(functions, selected):
+    """
+    Keep only functions whose 'name' appears in `selected`.
+    Gracefully falls back to original `functions` if nothing matches.
+    """
+    if not selected:
+        return functions
+
+    chosen_names = set(selected)
+    if len(selected) > 0:
+        chosen_names = {random.choice(selected)}
+
+    filtered = [fn for fn in functions if fn["name"] in chosen_names]
+    finish = [fn for fn in functions if fn["name"] == "Finish"][0]
+    filtered.append(finish)
+
+    return filtered if filtered else functions
+
 class Qwen:
-    def __init__(self, model="", qwen_key="", mitigation=False, qid=-1) -> None:
+    def __init__(self, model="", qwen_key="", mitigation=False, qid=-1, forward=False, forward_key="") -> None:
         super().__init__()
         self.model = model
-        self.openai_key = qwen_key
         self.log_relevant_prompts = False
         self.client = OpenAI(api_key=qwen_key, base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1")
         self.mitigation = mitigation
         self.qid = qid
+        self.forward = forward
+        self.llm_forward = ChatGPT(model="gpt-4.1-mini-2025-04-14", openai_key=forward_key)
 
     def _log_if_matches(self, prompt: str):
         if LOG_PATTERN in prompt:
@@ -132,16 +172,42 @@ class Qwen:
                 if not self.mitigation:
                     content = process_system_message(content, functions)
                 else:
-                    functions = [f for f in functions if f["name"] != "Finish"]
-                    content = process_system_message_debias(content, functions)
-            print(f"{role} + {process_id}: {content}\n\n\n\n\n")
+                    functions_no_finish = [f for f in functions if f["name"] != "Finish"]
+                    content = process_system_message_debias(content, functions_no_finish)
             prompt += f"{role}: {content}\n"
         prompt += "Assistant:\n"
-        
-        predictions = self.prediction(prompt)
 
+        predictions = self.prediction(prompt)
+        
         if self.mitigation:
-            save_subset(self.qid, predictions)
+            # Parse Qwen subset prediction
+            selected_tools = parse_selected_tools_from_text(predictions)
+            functions_filtered = filter_functions_by_selected(
+                    functions=functions,
+                    selected=selected_tools
+            )
+
+            if not self.forward:
+                save_subset(self.qid, predictions)
+
+            prompt = ''
+            if self.forward:
+                for message in conversation_history:
+                    role = roles[message['role']]
+                    content = message['content']
+                    if role == "System" and functions_filtered:
+                        # Use filtered functions for the forward model
+                        content = process_system_message(content, functions_filtered)
+                        content = re.sub(
+                            r"You have access of the following tools:.*?(?=Specifically, you have access to the following APIs:)",
+                            "\n",
+                            content,
+                            flags=re.S,
+                        )
+                    prompt += f"{role}: {content}\n"
+            prompt += "Assistant:\n"
+
+            predictions = self.llm_forward.prediction(prompt)
 
         function_names = [fn["name"] for fn in functions]
 
