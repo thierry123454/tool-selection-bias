@@ -24,7 +24,8 @@ STATS_PATHS = {
     "Claude":  "api_selection_stats_claude.json",
     "DeepSeek":  "api_selection_stats_deepseek.json",
     "Qwen":  "api_selection_stats_qwen-235b.json",
-    "ToolLLaMA":  "api_selection_stats_toolllama.json"
+    "ToolLLaMA":  "api_selection_stats_toolllama.json",
+    "Mitigated":  "api_selection_stats_chatgpt_4_mitigated.json",
 }
 CLUSTERS_JSON = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 
