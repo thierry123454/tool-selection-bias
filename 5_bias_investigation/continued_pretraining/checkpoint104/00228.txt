@@ -1,0 +1,5 @@
+ Thought: The user has provided a string, and my task is to detect its language. I will use the appropriate tool for this purpose. The string contains characters that are common in Spanish, but I need to confirm this programmatically.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Este es un texto de ejemplo.'

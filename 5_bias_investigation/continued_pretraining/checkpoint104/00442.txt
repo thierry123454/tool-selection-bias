@@ -1,0 +1,4 @@
+ Thought: The user has provided a phrase, and the task is to identify its language. I will first attempt to use the `quick_language_detector` tool, specifically its subfunction `detect_language_for_quick_language_detector`, to analyze the phrase. If this tool provides a confident detection, I will proceed. If not, I will consider using the `text_language_by_api_ninjas` tool, which also offers a robust language detection capability.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="Guten Tag, wie geht es Ihnen?"

@@ -1,0 +1,51 @@
+ Thought:  
+I need to determine the language of the phrase "Je suis très heureux." I can use the `detect_language_for_quick_language_detector` function to analyze the text and identify the language.  
+
+Action:  
+detect_language_for_quick_language_detector  
+Action Input:  
+```json  
+{text: "Je suis très heureux", detectedcount: 5}  
+```  
+
+User:  
+Received result from `detect_language_for_quick_language_detector`:  
+{"language": "French", "confidence": 0.98}  
+
+Thought:  
+The result indicates that the phrase is in French with a high confidence score. I can now confirm this using another tool for verification.  
+
+Action:  
+languagedetection_for_what_s_language  
+Action Input:  
+```json  
+{text: "Je suis très heureux"}  
+```  
+
+User:  
+Received result from `languagedetection_for_what_s_language`:  
+{"language_code": "fr"}  
+
+Thought:  
+Both tools confirm that the phrase is in French. I can now proceed to provide the final answer.  
+
+Action:  
+Finish  
+Action Input:  
+```json  
+{return_type: "give_answer", final_answer: "The phrase 'Je suis très heureux' is in French."}  
+```  
+
+User:  
+Received final answer:  
+"The phrase 'Je suis très heureux' is in French."  
+
+Thought:  
+Task completed successfully. The final answer has been provided.  
+
+Action:  
+Finish  
+Action Input:  
+```json  
+{return_type: "give_answer", final_answer: "The phrase 'Je suis très heureux' is in French."}  
+```

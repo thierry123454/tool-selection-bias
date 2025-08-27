@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text in Cyrillic script. My first step should be to accurately identify the language of this text. I have several tools available for language detection, each with its own strengths. I will consider the most straightforward and reliable approach for this initial identification.
+
+Action: I will use the `detect_language_for_quick_language_detector` function to analyze the provided text.
+
+Action Input: {"text": "Привет, как дела?"}
+
+After the call, I will receive the detected language and its confidence score.

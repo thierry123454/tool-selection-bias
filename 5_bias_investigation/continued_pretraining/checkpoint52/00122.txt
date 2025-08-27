@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence and explicitly asked to identify its language. The sentence appears to be in Russian, but I need to confirm this programmatically. I'll use one of the available language detection tools to determine the language.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: "Это пример текста на русском языке"

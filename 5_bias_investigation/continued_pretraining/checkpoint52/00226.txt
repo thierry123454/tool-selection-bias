@@ -1,0 +1,4 @@
+ Thought: The user has provided a short Spanish phrase. My first step should be to detect its language using an appropriate tool. There are several options available, and I'll evaluate their reliability and simplicity for this specific task.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Hola, ¿cómo estás?'

@@ -1,0 +1,9 @@
+ Thought: I need to determine the language of the given text. The user has asked for the language of "Estou aprendendo português". I will use the `languagedetection_for_what_s_language` tool, which is designed to detect the language of a given text and return the detected language code. This seems like the most direct approach for this specific task.
+
+Action: languagedetection_for_what_s_language
+Action Input: 'Estou aprendendo português'
+
+Assistant: Thought: The `languagedetection_for_what_s_language` tool has been called. It will analyze the input text and return the detected language. Once I have the result, I can confirm the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: 'Estou aprendendo português'

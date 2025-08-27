@@ -1,0 +1,9 @@
+ Thought: I need to identify the language of the provided text. The text is 'This is an example of English text'. I will first try to use a tool that can reliably detect the language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "This is an example of English text"}
+
+Assistant: Thought: I just received the result from the quick_language_detector. It accurately identified the language as English. Since the task is to identify the language, and I have a clear result, I can now proceed to give the final answer.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text 'This is an example of English text' is English."}

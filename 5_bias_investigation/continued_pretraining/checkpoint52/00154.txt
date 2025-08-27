@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the given text. The input is 'Je suis très heureux aujourd'hui'. I have several tools available for this task. I'll first consider using the `what_s_language` function, which is specifically designed for this purpose. It uses the `languagedetection_for_what_s_language` subfunction.
+
+Action: what_s_language
+Action Input: 'Je suis très heureux aujourd'hui'
+
+After the call, I will get the detected language from the `what_s_language` function.

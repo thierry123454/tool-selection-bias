@@ -1,0 +1,6 @@
+ Thought: The user has provided a phrase in Korean. My primary goal is to detect the language accurately. Given the clarity of the input, I will proceed with the most direct and reliable method available. I will use the `text_language_by_api_ninjas` tool, specifically its subfunction `v1_textlanguage_for_text_language_by_api_ninjas`, to analyze the language of this specific phrase.
+
+Action: `v1_textlanguage_for_text_language_by_api_ninjas`
+Action Input: `text: '안녕하세요, 오늘 기분이 어때요?'`
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...

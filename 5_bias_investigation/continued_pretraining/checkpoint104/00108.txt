@@ -1,0 +1,9 @@
+ Thought: The user has provided a short sentence, and my initial task is to determine its language. I have several tools available, each with its own strengths. The *text_language_by_api_ninjas* and *detect_for_translate_all_languages* tools are designed for language detection, while *what_s_language* and *languagedetection_for_what_s_language* offer a more focused approach. I'll start by using *text_language_by_api_ninjas* for a quick, general detection.
+
+Action: text_language_by_api_ninjas
+Action Input: {"text": "Hej, hur mår du?"}
+
+Assistant: Thought: The *text_language_by_api_ninjas* tool has returned a result. It indicates that the language is likely Swedish. This seems plausible given the input, which contains common Swedish words like "Hej" (hello) and "hur" (how). However, to be thorough, I might consider a secondary check or cross-verify with another tool, but for now, this appears to be a confident detection.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the sentence 'Hej, hur mår du?' is Swedish."}

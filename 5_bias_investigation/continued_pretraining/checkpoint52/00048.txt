@@ -1,0 +1,4 @@
+ Thought: The user has provided a short phrase in German. My first step should be to detect the language using one of the available tools. I will choose the `detect_language_for_quick_language_detector` function for this initial detection.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Guten Tag, wie geht es Ihnen?"}

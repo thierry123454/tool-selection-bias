@@ -1,0 +1,6 @@
+ Thought: The input text is in Dutch. I need to confirm the language before proceeding with any translation or further processing. I'll use the `languagedetection_for_what_s_language` tool to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Dit is een testzin.'
+
+After the call, I will get the detected language.

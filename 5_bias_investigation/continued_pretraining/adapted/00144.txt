@@ -1,5 +1,0 @@
- (Thought: The input is a short phrase in an unfamiliar language. I should detect the language first. The API Ninjas (text_language_by_api_ninjas) is the fastest way to do this. I'll call it with the given text. Keep the call site tiny so rollouts are instant.)
-Action: call API Ninjas Text Language (v1_textlanguage_for_text_language_by_api_ninjas)
-Action Input: {"text": "Saluton, kiel vi fartas?"}
-
-On the call site, the response will be parsed and the result will be used to inform the next step. This makes it easy to keep interfaces stable while deployments stay lightweight. If the response indicates the language, you can call the helper that builds the final answer and return it to the client. If there’s an error, log the exception and retry with a backoff. This pattern allows teams to keep code focused and recoveries snappy.

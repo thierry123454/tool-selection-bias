@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the input text provided by the user. I have several language detection tools available, and I'll start by trying the simplest one to get an initial assessment.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Hej, hur mår du idag?'}
+
+User: API call result: {'language': 'Swedish', 'confidence': 0.98}

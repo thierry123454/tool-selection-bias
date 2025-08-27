@@ -1,0 +1,9 @@
+ Thought: The phrase provided is in French. To confirm, I will use the `languagedetection_for_what_s_language` tool to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: text="Je suis très heureux"
+
+Assistant: Thought: The detected language code for the text "Je suis très heureux" is fr. This confirms that the phrase is in French. Now, I will call the `Finish` function to provide the final answer.
+
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The phrase 'Je suis très heureux' is in French."

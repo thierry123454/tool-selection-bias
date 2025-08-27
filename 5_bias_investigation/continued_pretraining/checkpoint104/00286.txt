@@ -1,0 +1,7 @@
+ Thought: The user has asked me to determine the language of a specific sentence. The sentence provided is 'Merhaba, bugün nasılsın?'. This is a clear, concise input, and I should be able to use one of the available language detection tools to identify its language. I'll start by trying the most straightforward option, which is the `what_s_language` function, using its subfunction `languagedetection_for_what_s_language`.
+
+Action: I will call the `what_s_language` function with the input text 'Merhaba, bugün nasılsın?'.
+
+Action Input: {'text': 'Merhaba, bugün nasılsın?'}
+
+After the call, I will get the result from the `what_s_language` function.

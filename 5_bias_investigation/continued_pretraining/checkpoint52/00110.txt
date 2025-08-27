@@ -1,0 +1,6 @@
+ Thought: The user's request is to identify the language of the text "Hola, ¿cómo estás?". This seems straightforward, and I have several tools at my disposal for language detection. I'll start by trying the most direct approach, which is the `text_language_by_api_ninjas` tool, as it's specifically designed for this purpose.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Hola, ¿cómo estás?"}
+
+After the call, I will get the result from the API Ninjas Text Language API endpoint, which will tell me the detected language and its confidence score.

@@ -1,6 +1,0 @@
- (Internal call flow: detect the language from the input text. The input is in Cyrillic, so I should use the detect function that handles Cyrillic scripts. The available tools include API Ninjas, Text Language by API-Ninjas, and others. I will call API Ninjas Text Language (path /v1/textlanguage).)
-Thought: The input text is in Cyrillic, so I should detect the language using API Ninjas. The function will return the detected language code and confidence score. This allows me to quickly determine the language without manual inspection.
-Action: call API Ninjas Text Language (path /v1/textlanguage)
-Action Input: {"text": "Привет, как дела?"}
-
-On success, the response will include the detected language and confidence. If the result is ambiguous or the input is too short, I will call a different tool and repeat the process until I get a stable result. If all tools fail, I will invoke the fallback policy and request user clarification. Keep the interface fast and lightweight so batch and online use share the exact same path.

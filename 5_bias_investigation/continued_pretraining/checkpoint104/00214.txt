@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence, and my task is to identify its language. I have several tools available for this purpose, and I need to decide which one is most suitable for a quick and accurate detection. The sentence is quite short, which might make language detection challenging, but it's clear enough.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Ciao, come stai oggi?"

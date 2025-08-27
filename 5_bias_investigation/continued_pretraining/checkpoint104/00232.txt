@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text, and my immediate goal is to determine its language. Given the nature of the input, which appears to be Arabic, I should leverage a reliable language detection tool. Among the available options, `what_s_language` and `quick_language_detector` seem particularly suited for this task. I will prioritize `what_s_language` due to its straightforward description and the fact that it directly targets language detection. My `Action` will be to use the `languagedetection_for_what_s_language` function to analyze the text.
+
+Action: `languagedetection_for_what_s_language`
+
+Action Input: `text: 'مرحبا كيف حالك'`

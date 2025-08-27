@@ -1,0 +1,6 @@
+ Thought: The user has provided a text, and my first step is to determine its language. I'll use the `detect_for_translate_all_languages` function, which is designed to detect the language of any given text. This is a straightforward initial step.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Das Wetter ist heute schön."}
+
+After the call, I will receive the detected language.

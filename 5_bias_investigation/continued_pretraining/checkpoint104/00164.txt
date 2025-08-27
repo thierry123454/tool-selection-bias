@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text snippet. My first step should be to determine the language of this input. I'll use the `detect_language_for_quick_language_detector` function to analyze it. This function is designed to detect the language with a confidence score, which will be crucial for understanding the accuracy of the detection.
+
+Action: `detect_language_for_quick_language_detector`
+
+Action Input: `text: 'Olá, tudo bem?'`

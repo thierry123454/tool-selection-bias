@@ -1,0 +1,9 @@
+ Thought: The user has provided a short phrase, "Bonjour tout le monde," and asked for its language. The most straightforward approach would be to use a dedicated language detection tool. Given the options, I'll first attempt to use the "quick_language_detector" function, which is designed to detect language from text. I'll feed it the given text and see what it returns.
+
+Action: quick_language_detector
+Action Input: text="Bonjour tout le monde"
+
+Assistant: Thought: The "quick_language_detector" function returned a result. It indicates that the text is likely French with a high confidence score. This seems to be a clear and definitive answer. I don't need to try any other methods as this one successfully identified the language.
+
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The text 'Bonjour tout le monde' is written in French."

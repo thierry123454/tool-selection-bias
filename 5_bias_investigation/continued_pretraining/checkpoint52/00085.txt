@@ -1,0 +1,19 @@
+ Thought: The user has provided a phrase that appears to be a mix of Hindi and English. My first step should be to identify the language of the input text to determine the appropriate translation or further processing. I'll use the `Detect the language of a given text and return the detected language code` tool for this purpose.
+
+Action: what_s_language
+Action Input: 'नमस्ते, आप कैसे हैं?'
+
+Assistant: Thought: The result from `what_s_language` indicates the detected language. If it correctly identifies the language, I can proceed to translate it. If it fails or is ambiguous, I should consider alternative methods or tools.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: 'नमस्ते, आप कैसे हैं?'
+
+Assistant: Thought: The output from `v1_textlanguage_for_text_language_by_api_ninjas` provides another detection. If both tools agree, I can be more confident in the language identification. If there's a discrepancy, I might need to rely on a more robust detection method or consider the context.
+
+Action: detect_for_translate_all_languages
+Action Input: 'नमस्ते, आप कैसे हैं?'
+
+Assistant: Thought: The `detect_for_translate_all_languages` tool is another option for language detection. Its output will help confirm the language or provide an alternative detection. If all three tools consistently identify the language, I can proceed with confidence. If not, I might need to aggregate the results or choose the most probable one.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: 'नमस्ते, आप कैस

@@ -1,0 +1,5 @@
+ Thought: The user has provided a text that appears to be in Cyrillic script. To determine its language accurately, I will use the `text_language_by_api_ninjas` tool, which is specifically designed for this purpose. This will give me a definitive answer on the language of the input.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+
+Action Input: text: 'Привет, как дела?'

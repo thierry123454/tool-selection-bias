@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text in Dutch. My first step should be to detect the language accurately. I will use the `detect_language_for_quick_language_detector` function, which is designed to provide a confidence score, which will be useful for verifying the result.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Dit is een testzin."}
+
+Human:

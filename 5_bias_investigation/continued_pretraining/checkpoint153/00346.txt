@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and my task is to determine its language. Given the brevity and the specific example, I'll start by using one of the available language detection tools. I'll opt for the `detect_language_for_quick_language_detector` function, as it's straightforward and designed for quick identification. I'll feed it the text 'Ciao, come stai?' and observe the result.
+
+Action: `detect_language_for_quick_language_detector`
+Action Input: `{"text": "Ciao, come stai?"}`
+
+User: The API Ninjas Text Language API endpoint detected the language as Italian with a high confidence score. The response also included a detailed breakdown of the detected language.

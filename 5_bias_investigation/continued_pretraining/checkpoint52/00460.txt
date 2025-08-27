@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text in Swedish. My primary goal is to accurately detect its language. I have several tools at my disposal for language detection, and I need to decide which one to use first. I’ll consider the accuracy, ease of use, and the specific capabilities of each tool.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Hej, hur mår du idag?"}
+
+Assistant: Thought: The `detect_for_translate_all_languages` tool is designed to detect the language of a given text. It’s a straightforward function that should be able to identify the language based on the input. I’ll proceed with this call to see if it correctly identifies the language of the provided text.

@@ -1,0 +1,4 @@
+ Thought: The user has provided a phrase that appears to be in a non-English language. My first step should be to accurately detect the language before attempting any translation. I will use the available language detection tools to identify the language of this input text. Once identified, I can proceed with further actions if necessary.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'नमस्ते, आप कैसे हैं?'

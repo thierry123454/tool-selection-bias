@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence, and my task is to detect its language. I have several tools at my disposal, but the most straightforward for this specific task is the `text_language_by_api_ninjas` API. This tool is designed to detect the language from any input text, which perfectly aligns with the user's request. I don't need to translate it or perform any other complex analysis; I just need to identify the language.
+
+Action: `v1_textlanguage_for_text_language_by_api_ninjas`
+
+Action Input: `text: 'This is a sample English sentence.'`

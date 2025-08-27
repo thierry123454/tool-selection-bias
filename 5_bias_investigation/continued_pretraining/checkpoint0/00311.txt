@@ -1,0 +1,18 @@
+ Thought: To determine the language of the text 'Bonjour, comment allez-vous aujourd'hui ?', I will use the 'detect_language_for_quick_language_detector' tool to analyze the text and identify the language with a confidence score.
+
+Action: detect_language_for_quick_language_detector  
+Action Input: text="Bonjour, comment allez-vous aujourd'hui ?", detectedcount=1  
+
+Result: The text is identified as French with a confidence score of 99.9%.
+
+Thought: The language has been successfully detected as French. I will now confirm the result using another tool to ensure accuracy.
+
+Action: languagedetection_for_what_s_language  
+Action Input: text="Bonjour, comment allez-vous aujourd'hui ?"  
+
+Result: The detected language code is "fr" (French).
+
+Thought: Both tools have confirmed that the text is in French. I will now provide the final answer using the 'Finish' function.
+
+Action: Finish  
+Action Input: return_type="give_answer", final_answer="The text 'Bonjour, comment allez-vous aujourd'hui ?' is written in French."

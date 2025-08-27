@@ -1,0 +1,6 @@
+ Thought: The user wants me to identify the language of the provided Greek text. I should use the "what_s_language" function for this task.
+
+Action: what_s_language
+Action Input: {
+  "text": "Γειά σου, πώς είσαι;"
+}

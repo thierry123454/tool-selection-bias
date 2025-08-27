@@ -1,0 +1,11 @@
+ Thought: The user has asked for the language of the phrase 'Olá, como você está hoje?'. My first step should be to detect the language using one of the available tools. I'll use the `detect_for_translate_all_languages` function, as it's designed for language detection and is part of a robust translation suite. This function is likely to be efficient and accurate for this task.
+
+Action: Call `detect_for_translate_all_languages`
+
+Action Input: text: 'Olá, como você está hoje?'
+
+Assistant: Thought: The `detect_for_translate_all_languages` function has successfully detected the language. The result indicates that the text is in Portuguese. This is a clear and definitive answer to the user's query. There's no need for further analysis or translation attempts. I will now provide the final answer using the `Finish` function.
+
+Action: Call `Finish`
+
+Action Input: return_type: 'give_answer', final_answer: 'The language of the phrase "Olá, como você está hoje?" is Portuguese.'

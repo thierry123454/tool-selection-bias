@@ -1,0 +1,11 @@
+ Thought: The user has provided a short text, "Este es un texto de ejemplo," and requested its language. My initial approach would be to use a reliable language detection tool. Given the simplicity and effectiveness of the `languagedetection_for_what_s_language` function, it seems like a good candidate for this task.
+
+Action: I will call the `languagedetection_for_what_s_language` function with the provided text.
+
+Action Input: text="Este es un texto de ejemplo"
+
+Assistant: Thought: The function `languagedetection_for_what_s_language` has successfully processed the input text. The language detected is Spanish, which aligns with my expectation given the content of the phrase. There is no need for further translation or analysis at this stage, as the task was simply to identify the language.
+
+Action: I will call the `Finish` function to provide the final answer.
+
+Action Input: return_type="give_answer", final_answer="The language of 'Este es un texto de ejemplo' is Spanish."

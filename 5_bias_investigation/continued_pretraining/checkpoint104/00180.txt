@@ -1,0 +1,8 @@
+ Thought: I need to detect the language of the given sentence. I have access to several language detection tools, but I'll start with the most straightforward one.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: "Hola, ¿cómo estás hoy?"
+
+Assistant: Thought: The API call has returned a result. I'll analyze it to determine the language.
+
+Action:

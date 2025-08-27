@@ -1,0 +1,7 @@
+ Thought: I need to identify the language of the given sentence. The input is 'Привет, как дела?'. I can use one of the available language detection tools for this. I'll try the `detect_language_for_quick_language_detector` function first, as it seems straightforward for a few sentences.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Привет, как дела?"}
+
+User: The function call `detect_language_for_quick_language_detector` with text 'Привет, как дела?' returned the following result: {'language': 'ru', 'confidence': 0.9999999999999999}.

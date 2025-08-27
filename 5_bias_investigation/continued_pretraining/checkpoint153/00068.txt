@@ -1,0 +1,4 @@
+ Thought: The user has asked to identify the language of a specific sentence. To do this, I will use the `languagedetection_for_what_s_language` function, which is specifically designed for this purpose. I'll pass the sentence 'Olá, tudo bem com você?' as the input to the `text` parameter.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `{"text": "Olá, tudo bem com você?"}`

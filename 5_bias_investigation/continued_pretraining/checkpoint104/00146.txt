@@ -1,0 +1,15 @@
+ Thought: I need to determine the language of the given text. I have several tools available for this, such as `what_s_language`, `quick_language_detector`, `text_language_by_api_ninjas`, and `translate_v3`. I'll use `what_s_language` with its subfunction `languagedetection_for_what_s_language` to detect the language. The text provided is 'Bonjour, comment allez-vous aujourd'hui ?'.
+
+Action: `languagedetection_for_what_s_language`
+
+Action Input: `text: 'Bonjour, comment allez-vous aujourd'hui ?'`
+
+User: The API Ninjas Text Language API endpoint returned 'fr' with a high confidence score.
+
+Assistant: Thought: The API detected the language as French with high confidence. This seems accurate. Now, I need to confirm if this is the correct language for the given text. Since the API provided a clear result, I can proceed to confirm or use this as the final answer.
+
+Action: `Finish`
+
+Action Input: `return_type: 'give_answer', final_answer: 'The text "Bonjour, comment allez-vous aujourd'hui ?" is written in French (fr).'`
+
+User:

@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text, and the task is to identify its language. I will use the appropriate language detection tool to determine the language of this input.
+
+Action: Detect the language of the given text.
+
+Action Input: text="Je suis content de te voir"

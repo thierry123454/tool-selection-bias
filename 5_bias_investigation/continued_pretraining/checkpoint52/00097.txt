@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase, and my task is to determine its language. The most straightforward approach would be to use a dedicated language detection tool. Given the tools available, "what_s_language" seems the most direct fit for this initial step, as it is specifically designed to detect the language of a given text. I'll proceed with that.
+
+Action: what_s_language
+Action Input: 'مرحبا كيف حالك'
+
+Assistant: Thought: The API call to "what_s_language" has returned the detected language. I need to review the result to confirm the language and then consider if any further steps are necessary, such as translation or additional validation.

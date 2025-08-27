@@ -1,0 +1,7 @@
+ Thought: The user has provided a phrase, and the task is to determine its language. I will first attempt to use the `detect_language_for_quick_language_detector` function, as it is designed to handle a few sentences and return a confidence score. If that yields an accurate result, I will proceed. If not, I will consider alternative tools.
+
+Action: `detect_language_for_quick_language_detector`
+
+Action Input: {"text": "Olá, como você está hoje?"}
+
+After the call, you will get the call result, and you are now in a new state.

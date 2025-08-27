@@ -1,0 +1,7 @@
+ Thought: To identify the language of the given sentence, I will use the "languagedetection_for_what_s_language" function. This function will help me detect the language of the text and return the detected language code.
+
+Action: languagedetection_for_what_s_language
+
+Action Input: {"text": "Das ist ein schöner Tag für einen Spaziergang."}
+
+Result: de (German)

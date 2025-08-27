@@ -1,0 +1,4 @@
+ Thought: The user has provided a short Japanese sentence. My first step should be to identify the language of this input text. I have several tools available for language detection, including quick_language_detector, text_language_by_api_ninjas, translate_v3, translate_all_languages, and what_s_language. For this initial step, I think quick_language_detector might be a good choice due to its straightforward description of detecting language with a confidence score. I'll use it to get a quick assessment.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="今日はとてもいい天気です"

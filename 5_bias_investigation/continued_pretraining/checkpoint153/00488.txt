@@ -1,0 +1,11 @@
+ Thought: I need to determine the language of the provided text. There are several tools available for this, but I will prioritize the most direct and efficient one. The phrase 'Guten Morgen, wie geht es dir?' appears to be German, but I should confirm using a reliable tool.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: {'text': 'Guten Morgen, wie geht es dir?'}
+
+User: This function call has returned successfully. The detected language for the input text 'Guten Morgen, wie geht es dir?' is German.
+
+Assistant: Thought: The tool has confirmed that the text is indeed German. This is a clear and definitive result. Now, the task is complete as we have identified the language.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the phrase "Guten Morgen, wie geht es dir?" is German.'}

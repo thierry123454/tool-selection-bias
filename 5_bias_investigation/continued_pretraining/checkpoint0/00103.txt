@@ -1,0 +1,9 @@
+ Thought: I need to identify the language of the sentence 'Je suis très heureux de te voir.' I will use the "detect_language_for_quick_language_detector" function to analyze the sentence and determine its language.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {
+  "text": "Je suis très heureux de te voir."
+}
+
+User: I give up and restart.

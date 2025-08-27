@@ -1,0 +1,4 @@
+ Thought: The user has asked to detect the language of the phrase 'Olá, tudo bem?'. Given the context, it seems quite likely that this phrase is in Portuguese. To confirm, I will use the `what_s_language` function, which internally uses the `languagedetection_for_what_s_language` subfunction, to analyze the provided text.
+
+Action: what_s_language
+Action Input: 'Olá, tudo bem?'

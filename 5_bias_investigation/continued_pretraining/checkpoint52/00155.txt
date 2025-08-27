@@ -1,0 +1,5 @@
+ Thought: The user has provided a short phrase in Swedish. My first step is to accurately detect the language to ensure subsequent translation or processing is correctly applied. I will use the available language detection tools to identify the language.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Hej, hur mår du idag?'

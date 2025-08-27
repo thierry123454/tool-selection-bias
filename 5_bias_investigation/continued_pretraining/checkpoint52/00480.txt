@@ -1,0 +1,4 @@
+ Thought: I need to detect the language of the given sentence. I have several tools available for this task, including "what_s_language," "quick_language_detector," "text_language_by_api_ninjas," and "translate_v3." I'll start by using the "what_s_language" tool, which directly detects the language of a given text. This seems the most straightforward approach for this specific task.
+
+Action: what_s_language
+Action Input: {"text": "Hello, how are you today?"}

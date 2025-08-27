@@ -1,0 +1,6 @@
+ Thought: I need to identify the language of the given text. I'll use the `languagedetection_for_what_s_language` tool to detect the language code.
+
+Action: languagedetection_for_what_s_language
+Action Input: 'Это пример текста на русском языке'
+
+Result: ru (Russian)

@@ -1,0 +1,6 @@
+ Thought: The user has provided a text, and the task is to identify its language. I'll use the "Detect the language of a given text" tool, specifically the subfunction `what_s_language`, which is designed for this purpose. The text provided is 'Dit is een testzin in het Nederlands'. This seems like a clear example of Dutch, but I'll confirm using the API.
+
+Action: what_s_language
+Action Input: {'text': 'Dit is een testzin in het Nederlands'}
+
+After the call, you will get the call result, and you are now in a new state.

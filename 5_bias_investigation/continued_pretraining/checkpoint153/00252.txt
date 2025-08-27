@@ -1,0 +1,6 @@
+ Thought: The task is to detect the language of the given text 'Het is een mooie dag vandaag.'. I'll use the `languagedetection_for_what_s_language` function, as it is specifically designed for this purpose. It's straightforward and should provide a quick detection.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Het is een mooie dag vandaag.'
+
+After the call, you will get the call result, and you are now in a new state.

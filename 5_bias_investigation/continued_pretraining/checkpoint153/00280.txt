@@ -1,0 +1,5 @@
+ Thought:
+The user has provided a short sentence in German. My task is to detect the language of this text. I have several tools available, each with its own strengths and characteristics. Given the simplicity and directness of the task, I will first attempt to use the "what_s_language" tool, which is designed specifically for this purpose. It seems like a straightforward and efficient choice for a single text input. If it provides a clear and confident result, I will proceed to confirm it. If not, I will consider alternative tools like "quick_language_detector" or "text_language_by_api_ninjas" for a second opinion or to explore different detection methods.
+
+Action: what_s_language
+Action Input: text="Das ist ein schöner Tag."

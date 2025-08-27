@@ -1,0 +1,6 @@
+ Thought: The user has provided a text snippet that appears to be in Korean. My initial thought is to confirm its language using a reliable tool. I will use the `text_language_by_api_ninjas` function to detect the language.
+
+Action: `text_language_by_api_ninjas`
+Action Input: `text: '안녕하세요, 반갑습니다.'`
+
+After the call, you will get the call result, and you are now in a new state.

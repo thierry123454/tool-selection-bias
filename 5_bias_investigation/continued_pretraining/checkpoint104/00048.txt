@@ -1,0 +1,4 @@
+ Thought: The user has provided a short phrase, and my primary task is to determine its language. I will use the language detection capabilities of the available tools to analyze this text. I will prioritize using the most straightforward and reliable method first.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Guten Tag, wie geht es Ihnen?'}

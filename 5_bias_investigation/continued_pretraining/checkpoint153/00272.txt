@@ -1,0 +1,11 @@
+ Thought:
+The user has provided a short text, and my immediate goal is to determine its language. I will use the `v1_textlanguage_for_text_language_by_api_ninjas` function to detect the language from the input text. This function is specifically designed for this purpose, and it’s the most straightforward tool available for this initial step.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: 'مرحبا كيف حالك؟'
+
+Assistant: Thought:
+After sending the text to the API, I received a response indicating that the language is Arabic. This is a clear and definitive result, which allows me to proceed with confidence. Since the task is simply to identify the language, and I’ve achieved that, I should now prepare to conclude the task by calling the `Finish` function.
+
+Action: Finish
+Action Input: return_type: 'give_answer', final_answer: 'The language of the text "مرحبا كيف حالك؟" is Arabic.'

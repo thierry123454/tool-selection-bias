@@ -1,0 +1,11 @@
+ Thought: The user has provided a phrase that appears to be in Latin. To confirm the language with certainty, I should use a reliable language detection tool. Given the options, I'll opt for the `detect_language_for_quick_language_detector` function, as it provides a confidence score, which will be useful for validation. I'll feed the phrase 'Salve, quid agis?' into this tool.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Salve, quid agis?"
+
+Assistant: Thought: The output from the `detect_language_for_quick_language_detector` function indicates that the language is indeed Latin, with a high confidence score. This confirms my initial assessment. Since the task is to identify the language, and I now have a definitive answer, I can proceed to the final step.
+
+Action: Finish
+
+Action Input: return_type="give_answer", final_answer="The phrase 'Salve, quid agis?' is written in Latin."

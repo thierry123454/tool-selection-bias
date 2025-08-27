@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text in Korean. My first step should be to accurately detect its language. Given the available tools, `detect_for_translate_all_languages` and `languagedetection_for_what_s_language` are both designed for language detection. I'll use `detect_for_translate_all_languages` because it's more straightforward for a single text input.
+
+Action: detect_for_translate_all_languages
+Action Input: text: '안녕하세요, 오늘 기분이 어떠세요?'
+After the call, you will get the call result, and you are now in a new state.

@@ -1,0 +1,8 @@
+ Thought: The user has provided a text, and my primary goal is to identify its language. I'll start by using the most straightforward tool available for this purpose, which is designed specifically for language detection.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {
+  "text": "Γειά σου, πώς είσαι;"
+}
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...

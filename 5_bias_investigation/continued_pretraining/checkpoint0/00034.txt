@@ -1,0 +1,8 @@
+ Thought:  
+I need to detect the language of the given string. I will use the `detect_for_translate_all_languages` subfunction for this task.  
+Action:  
+detect_for_translate_all_languages  
+Action Input:  
+```json  
+{text: "Este es un texto de ejemplo."}  
+```

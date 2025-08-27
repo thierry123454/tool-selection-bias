@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence, and my primary goal is to identify its language. Given the available tools, the most straightforward approach is to use a dedicated language detection service. Considering the variety and capabilities of the tools provided, I will opt for the "text_language_by_api_ninjas" function, as it is specifically designed for this purpose and has a clear description. This will allow me to quickly determine the language without needing to translate it first, which is the main task here.
+
+Action: text_language_by_api_ninjas
+
+Action Input: text="Das ist ein schöner Tag für einen Spaziergang."

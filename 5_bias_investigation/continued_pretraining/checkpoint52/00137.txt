@@ -1,0 +1,7 @@
+ Thought: The user has provided a text, and my task is to determine its language. The text appears to be in Korean, but I need to confirm this programmatically using one of the available tools. I should choose a reliable language detection tool for this purpose.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: '안녕하세요, 오늘 기분이 어때요?'
+
+Assistant: Thought: The API call for `detect_for_translate_all_languages` has been made. I will now wait for the result to confirm the detected language. This tool is designed to detect the language of any input text, which is exactly what I need to do here.

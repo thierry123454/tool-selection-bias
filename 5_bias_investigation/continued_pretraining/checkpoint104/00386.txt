@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text snippet, "Olá, tudo bem com você?", and asked for its language detection. My first step should be to use a reliable language detection tool. Given the brevity of the text, it's crucial to choose a method that can accurately identify languages even with limited input. I'll proceed with the `detect_language_for_quick_language_detector` tool, as it's designed to determine language from a few sentences with a confidence score.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Olá, tudo bem com você?"}

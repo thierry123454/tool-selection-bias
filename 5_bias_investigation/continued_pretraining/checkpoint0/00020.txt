@@ -1,0 +1,6 @@
+ Thought: I need to detect the language of the text snippet provided by the user. I will use the "languagedetection_for_what_s_language" tool for this purpose.
+
+Action: languagedetection_for_what_s_language
+Action Input: text="안녕하세요, 반갑습니다."
+
+Human: Result: The detected language code is "ko" (Korean).

@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text that appears to be in Arabic. My primary goal is to accurately detect its language. I have several tools at my disposal, but the most straightforward for this purpose would be `text_language_by_api_ninjas`. This tool is designed to detect the language from any input text, which aligns perfectly with the user's request. I will proceed with this function.
+
+Action: Call `v1_textlanguage_for_text_language_by_api_ninjas` with the input text.
+
+Action Input: text: 'مرحبا كيف حالك؟'

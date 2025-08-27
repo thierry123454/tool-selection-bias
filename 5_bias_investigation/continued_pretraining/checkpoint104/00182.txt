@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and the task is to identify its language. Given the input '¿Dónde está la biblioteca?', which is clearly in Spanish, I can confidently proceed with a language detection tool. I'll use the quick_language_detector tool, as it's designed for this purpose and provides a confidence score, which will be helpful for validation. I'll feed the text directly into the 'detect_language_for_quick_language_detector' function.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': "¿Dónde está la biblioteca?"}
+
+After the call, you will get the call result, and you are now in a new state.

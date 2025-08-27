@@ -1,0 +1,9 @@
+ Thought: The user has asked for the language of a specific sentence. To accurately identify its language, I will first attempt to use the `detect_for_translate_all_languages` function, as it is designed to detect the language of any input text. This function is reliable and provides a straightforward way to get the language code.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Este es un texto en español'
+
+Assistant: Thought: The `detect_for_translate_all_languages` function has successfully identified the language of the input text. The result indicates that the text is in Spanish. This confirms the user's query.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: 'The language of the sentence "Este es un texto en español" is Spanish.'

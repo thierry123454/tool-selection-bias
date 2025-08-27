@@ -1,0 +1,10 @@
+ Thought: I need to determine the language of the phrase 'Salve, quid agis?'. I will use the 'detect_language_for_quick_language_detector' function to analyze the text and get a confidence score for the detected language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: 
+text: 'Salve, quid agis?'
+detectedcount: 5
+
+Assistant: Thought: The function has provided a confidence score for the detected language. I will analyze the result to determine if it is accurate and if I need to try another method.
+
+Action: (Based on the result of the function call, decide whether to use another tool or give the final answer)

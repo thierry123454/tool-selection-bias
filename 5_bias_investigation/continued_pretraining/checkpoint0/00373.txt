@@ -1,0 +1,6 @@
+ Thought: I need to detect the language of the sentence using one of the available tools. I will choose the tool that gives me the highest confidence.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: 
+text: This is a sample English sentence.

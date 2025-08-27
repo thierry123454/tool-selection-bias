@@ -1,8 +1,0 @@
- (Internal monologue: I need to detect the language of the input text "Привет, как дела?". The user is asking for the language, so I should use one of the available APIs. The first step is to call the detect function. Let me check the list again. The options are translate_v3, translate_all_languages, what_s_language, quick_language_detector, and text_language_by_api_ninjas. I should call the one that best fits the task. The goal is to detect the language without any ambiguity. I will use detect_for_translate_all_languages because it's straightforward and handles mixed inputs. The parameters require the text. I'll pass the input text and parse the response. If the result is clear, I can return the answer; otherwise, I may need to try another tool.)
-
-Thought: I need to detect the language of the input text "Привет, как дела?". The fastest way is to use detect_for_translate_all_languages. This function will return the detected language code and confidence score. I'll pass the text and parse the result.
-
-Action: detect_for_translate_all_languages
-Action Input: {"text": "Привет, как дела?"}
-
-Wait for the response. If the result is clear, return the answer. If not, call a different tool. Keep the interface fast and lightweight. This helps teams keep service boundaries clean and deployments streamlined.

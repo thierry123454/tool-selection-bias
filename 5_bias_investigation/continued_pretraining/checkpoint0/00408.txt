@@ -1,0 +1,6 @@
+ Thought: I will use the function detect_language_for_quick_language_detector to determine the language of the given text.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Hej, hur mår du idag?'
+
+User: The detected language is Swedish with a confidence score of 0.95.

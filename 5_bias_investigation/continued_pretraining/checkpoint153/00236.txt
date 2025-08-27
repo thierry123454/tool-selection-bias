@@ -1,0 +1,7 @@
+ Thought: I need to determine the language of the given text. The text provided is 'Het is een mooie dag vandaag.' I will first try to detect the language using the available tools. Given the presence of Dutch words like 'Het' and 'dag,' it seems likely to be Dutch, but I need to confirm with the API.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Het is een mooie dag vandaag."}
+
+User: The quick_language_detector API returned the language as 'Dutch' with a confidence score of 0.98.

@@ -1,0 +1,8 @@
+ Thought: The user has provided a short text, and the goal is to detect its language. I will use the `detect_for_translate_all_languages` function, as it is specifically designed for language detection and is a reliable tool for this task. I will pass the text directly to the API.
+
+Action: detect_for_translate_all_languages
+Action Input: text: '안녕하세요, 반갑습니다'
+
+Assistant: Thought: The API has returned a result. I need to analyze the output to determine the detected language. If the result is conclusive, I will proceed to translate it. If it's ambiguous or an error, I might need to try an alternative method or confirm the text.
+
+Action: detect_for_translate_all_languages

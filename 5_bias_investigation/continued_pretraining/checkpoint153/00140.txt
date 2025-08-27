@@ -1,0 +1,5 @@
+ Thought: The user has asked for the language of the phrase 'Merhaba, nasılsın?'. This is a straightforward request for language detection. I will use the `languagedetection_for_what_s_language` function to determine the language of this specific input. This function is designed for this exact purpose and should provide a reliable answer.
+
+Action: `languagedetection_for_what_s_language`
+
+Action Input: `text: 'Merhaba, nasılsın?'`

@@ -1,0 +1,8 @@
+ Thought: The user has provided a short text. My first step is to determine its language using an appropriate tool. I'll use the "Detect the language of a given text" function, specifically leveraging the `languagedetection_for_what_s_language` subfunction. This will give me the detected language code, which I can then use to confirm or proceed accordingly.
+
+Action: Detect the language of the given text.
+Action Input: {'text': 'Hallo, wie geht’s dir heute?'}
+
+Assistant: Thought: The detection process is underway. I'll wait for the result from the language detection API. Once I have the language code, I can confirm if it matches my expectations or if further action is needed.
+
+Action: Wait for the result from the language detection API.

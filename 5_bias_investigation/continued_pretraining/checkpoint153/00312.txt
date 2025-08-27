@@ -1,0 +1,7 @@
+ Thought: The user provided a short text, 'Merhaba, nasılsın?', and explicitly asked for its language. Given the brevity and the presence of common Turkish words, I can make an educated guess, but to be precise, I should use a language detection tool. I'll opt for the `detect_language_for_quick_language_detector` function, as it's designed for quick detection and can provide a confidence score, which will be useful for validation.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Merhaba, nasılsın?'
+
+After the call, you will get the call result, and you are now in a new state.

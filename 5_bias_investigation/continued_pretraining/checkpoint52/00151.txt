@@ -1,0 +1,6 @@
+ Thought: The user has provided a short Japanese phrase, '今日は天気がいいです'. My primary goal is to accurately detect the language of this input. I have several options available, including `what_s_language`, `quick_language_detector`, `text_language_by_api_ninjas`, and `detect_language_for_translate_all_languages`. Given the simplicity and directness of the task, I will first attempt to use `what_s_language` with its subfunction `languagedetection_for_what_s_language` to see if it can quickly identify the language.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: text: '今日は天気がいいです'
+
+After the call, I will receive the detected language from `what_s_language`.

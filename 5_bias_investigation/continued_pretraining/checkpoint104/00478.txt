@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and their request is to determine its language. The text appears to be Japanese, but I need to confirm this using one of the available language detection tools. I'll first try the `translate_v3` tool, which has a language detection subfunction, to confirm the language before proceeding with any translation or further analysis.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: text: '今日は良い天気ですね'

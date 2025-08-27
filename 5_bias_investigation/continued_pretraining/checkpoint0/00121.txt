@@ -1,0 +1,9 @@
+ Thought: To determine the language of the phrase "Je suis très heureux," I will use the tool "quick_language_detector" to detect the language based on the provided text.
+
+Action: quick_language_detector
+Action Input: text=Je suis très heureux
+
+Assistant: Thought: The language detection tool has processed the text and identified the language. I will now use the tool "Finish" to provide the final answer.
+
+Action: Finish
+Action Input: return_type=give_answer&final_answer=The phrase "Je suis très heureux" is in French.

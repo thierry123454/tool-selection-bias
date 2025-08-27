@@ -1,0 +1,9 @@
+ Thought: The user has provided a text, and I need to determine its language. The tool `detect_for_translate_all_languages` is specifically designed for language detection and seems to be a suitable choice for this initial step. I will pass the provided text to this function.
+
+Action: detect_for_translate_all_languages
+Action Input: text: "今日はお元気ですか？"
+
+Assistant: Thought: The function `detect_for_translate_all_languages` has processed the input text. The result indicates that the language is Japanese. This is a clear and definitive answer for the initial language identification. Now, I need to confirm if this is the only required step or if further processing is needed based on the task description.
+
+Action: Finish
+Action Input: return_type: "give_answer", final_answer: "The language of the text '今日はお元気ですか？' is Japanese."

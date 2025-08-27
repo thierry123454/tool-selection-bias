@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text and explicitly asked for its language detection. My first step should be to identify the language using one of the available tools. Given the specific text, I will use the `what_s_language` tool, which is designed for this purpose, and specifically its subfunction `languagedetection_for_what_s_language`. This function is straightforward and directly applicable to the task.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Het is een mooie dag vandaag.'

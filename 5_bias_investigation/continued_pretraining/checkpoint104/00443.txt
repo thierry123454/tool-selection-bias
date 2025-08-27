@@ -1,0 +1,17 @@
+ Thought: I need to determine the language of the given input. The input is 'Ciao, come stai oggi?'. I have several language detection tools available, and I'll prioritize using the one that seems most direct and reliable for this specific task.
+
+Action: translate_v3
+
+Action Input: text: 'Ciao, come stai oggi?'
+
+Assistant: Thought: I just called the translate_v3 tool with the input 'Ciao, come stai oggi?'. The tool's description suggests it can detect the language of the text. I need to check the result for the detected language.
+
+Action: fast_language_detection_for_translate_v3
+
+Action Input: text: 'Ciao, come stai oggi?'
+
+Assistant: Thought: The result from the translate_v3 tool indicates the language is Italian. This aligns with my expectation given the input text. I can now proceed with this information.
+
+Action: Finish
+
+Action Input: return_type: 'give_answer', final_answer: 'The language of the input "Ciao, come stai oggi?" is Italian. This was determined using the translate_v3 tool, which identified the language as Italian with high confidence.

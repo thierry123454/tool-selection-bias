@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text and asked for its language detection. I will use the available language detection tools to identify the language. For this initial attempt, I'll try the "what_s_language" tool via its subfunction `languagedetection_for_what_s_language`. This tool is designed to detect the language of a given text and return the detected language code, which seems suitable for this task.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: {"text": "Bonjour, comment allez-vous aujourd'hui?"}

@@ -1,0 +1,4 @@
+ Thought: The user has provided a phrase in Spanish. My initial task is to confirm the language using one of the available tools. Given the simplicity and directness of the phrase, a straightforward language detection function should suffice. I will use the `detect_for_translate_all_languages` subfunction, which is designed to detect the language of text.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "¿Dónde está la biblioteca?"}

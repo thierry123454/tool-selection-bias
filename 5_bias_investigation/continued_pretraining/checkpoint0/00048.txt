@@ -1,0 +1,11 @@
+ Thought: To determine the language of the phrase "Guten Tag, wie geht es Ihnen?", I will use the "detect_language_for_quick_language_detector" function to analyze the text and provide a confidence score for the detected language.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Guten Tag, wie geht es Ihnen?"}
+
+Human: Thought: The result will provide the detected language with a confidence score. If the confidence is high, I can confidently determine the language. If not, I may need to use another tool for confirmation.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Guten Tag, wie geht es Ihnen?"}

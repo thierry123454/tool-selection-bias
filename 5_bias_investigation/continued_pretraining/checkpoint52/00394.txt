@@ -1,0 +1,6 @@
+ Thought: The user has provided a Japanese phrase. My first step should be to detect the language of this input. I will use the `detect_for_translate_all_languages` function to identify the language.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "今日はお元気ですか？"}
+
+Assistant: Thought: The input text is "今日はお元気ですか？". I need to confirm the language detection. If it's Japanese, I should then proceed to translate it if needed, but for now, the primary goal is just detection.

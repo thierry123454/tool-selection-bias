@@ -1,0 +1,18 @@
+ Thought: The user has provided a text in Arabic. My first step should be to confirm the language using a reliable tool. I'll use `detect_language_for_quick_language_detector` to analyze the text.
+
+Action: `detect_language_for_quick_language_detector`
+Action Input: `{"text": "مرحبا كيف حالك؟", "detectedcount": 1}`
+
+User: The API Ninjas Text Language API endpoint returned {'language': 'ar', 'iso6391': 'ar', 'iso6392': 'ara', 'name': 'Arabic'}.
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has confirmed that the text is indeed Arabic. To ensure consistency and provide a more detailed output, I'll also use `languagedetection_for_what_s_language` for a secondary check.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `{"text": "مرحبا كيف حالك؟"}`
+
+User: The language detection by API Ninjas returned 'ar' for the text 'مرحبا كيف حالك؟'.
+
+Assistant: Thought: Both `detect_language_for_quick_language_detector` and `languagedetection_for_what_s_language` have consistently identified the language as Arabic. This confirms the result. Now, I need to finalize the answer and provide it to the user.
+
+Action: `Finish`
+Action Input: `{"return_type": "give_answer", "final_answer": "The language of 'مرحبا كيف حالك؟' is Arabic."}`

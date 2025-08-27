@@ -1,0 +1,10 @@
+ Thought: The user has provided a text snippet, and my task is to determine its language. Given the nature of the input, which appears to be Korean, I should first attempt to confirm this using one of the available language detection tools. I will prioritize using the most straightforward and reliable method for this initial detection.
+
+Action: what_s_language
+Action Input: text: '안녕하세요, 오늘 기분이 어때요?'
+<call_result> {"language": "ko", "confidence": 0.99}</call_result>
+
+Assistant: Thought: The call to `what_s_language` has successfully identified the language as Korean with a high confidence score. This confirms my initial assumption. Since the task is simply to determine the language, I have now achieved the objective. There is no need for further steps or retries. I will now prepare the final answer and call the `Finish` function.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: The language of the text '안녕하세요, 오늘 기분이 어때요?' is Korean (ko).

@@ -1,0 +1,4 @@
+ Thought: The user has provided a single phrase, 'Мне нравится читать книги.' My immediate goal is to determine its language. Given the available tools, I'll first attempt to use the `detect_language_for_quick_language_detector` function, as it provides a confidence score, which could be useful for understanding the certainty of the detection. If that fails or is ambiguous, I'll try another tool.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: "Мне нравится читать книги."

@@ -1,0 +1,7 @@
+ Thought: The input text is '안녕하세요, 반갑습니다', which appears to be Korean. I'll use the `detect_language_for_quick_language_detector` function to confirm this.
+Action: detect_language_for_quick_language_detector
+Action Input: text="안녕하세요, 반갑습니다"
+
+Assistant: Thought: The result from `detect_language_for_quick_language_detector` indicates a high confidence in Korean. This aligns with my initial assessment. I can now confidently proceed.
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The language of the text '안녕하세요, 반갑습니다' is Korean."

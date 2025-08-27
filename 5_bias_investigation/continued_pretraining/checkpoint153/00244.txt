@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and they specifically asked to determine its language. The text appears to be in Korean. Before translating, it's crucial to accurately detect the language. I'll first use the quick language detector to confirm the language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': '안녕하세요, 오늘 기분이 어떠세요?'}
+
+User:

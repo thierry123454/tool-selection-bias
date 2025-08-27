@@ -1,0 +1,5 @@
+ Thought: The user wants me to detect the language of the given sentence. I will use the "detect_for_translate_all_languages" function to perform this task.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {"text": "Hola, ¿cómo estás?"}

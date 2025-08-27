@@ -1,0 +1,21 @@
+ Thought: The user has provided a short phrase. To determine its language, I need to use a reliable language detection tool. I'll start by using a general-purpose language detector to get an initial assessment. If the result is ambiguous or needs confirmation, I might consider using a more specialized tool or translating it to a known language to verify.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {
+  "text": "Bonjour, comment allez-vous aujourd'hui ?"
+}
+
+Assistant: Thought: The quick language detector has returned a result. It indicates that the text is most likely French, with a high confidence score. This seems accurate based on the words used. However, to ensure absolute certainty, especially for very short texts, I might consider a secondary check using a different tool.
+
+Action: detect_for_translate_all_languages
+Action Input: {
+  "text": "Bonjour, comment allez-vous aujourd'hui ?"
+}
+
+Assistant: Thought: The `detect_for_translate_all_languages` API has also confirmed that the text is in French, with a very high confidence score. This consistent result across two different tools strongly supports the conclusion. The task is now complete, and I can provide the final answer.
+
+Action: Finish
+Action Input: {
+  "return_type": "give_answer",
+  "final_answer": "The text 'Bonjour, comment allez-vous aujourd'hui ?' is written in French."
+}

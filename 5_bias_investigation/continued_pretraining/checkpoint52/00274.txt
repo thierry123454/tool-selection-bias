@@ -1,0 +1,7 @@
+ Thought: The user has asked for the language of a specific sentence. The sentence provided is 'Ciao, come stai?'. To accurately determine the language, I need to analyze the text. I can use several language detection tools available, such as `detect_for_translate_all_languages`, `languagedetection_for_what_s_language`, `detect_language_for_quick_language_detector`, and `v1_textlanguage_for_text_language_by_api_ninjas`. My immediate task is to identify which of these tools is most suitable for a quick and reliable detection.
+
+Action: I will use `detect_for_translate_all_languages` to detect the language of the given text.
+
+Action Input: text: 'Ciao, come stai?'
+
+After the call, I will receive the detected language from the API.

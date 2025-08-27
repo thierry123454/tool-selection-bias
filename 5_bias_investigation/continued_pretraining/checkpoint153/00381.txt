@@ -1,0 +1,4 @@
+ Thought: The user has asked for the language of a specific sentence. The sentence provided is 'Merhaba, bugün nasılsın?'. This is a clear instance where language detection is required. I will use the `languagedetection_for_what_s_language` tool to determine the language.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: "text": "Merhaba, bugün nasılsın?"

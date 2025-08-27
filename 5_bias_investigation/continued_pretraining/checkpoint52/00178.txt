@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase in Korean. My first step should be to detect the language using the available tools. I'll use the `detect_for_translate_all_languages` function for this purpose, as it seems to be a reliable option for language detection.
+
+Action: detect_for_translate_all_languages
+Action Input: {
+  "text": "안녕하세요, 오늘 기분이 어때요?"
+}

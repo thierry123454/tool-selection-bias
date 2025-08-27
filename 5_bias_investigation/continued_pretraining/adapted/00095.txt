@@ -1,9 +1,0 @@
- (Thought: The user wants to detect the language from the input text "Das ist ein schöner Tag". The fastest way is to call the detect function. I will implement API Ninjas Text Language (path /v1/textlanguage). Keep the call site tiny and pass only `text` (string). This makes it easy to keep interfaces stable while deployments stay streamlined. What should I call next?)
-API Ninjas Text Language (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag)
-API-Ninjas (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag)
-API Ninjas (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag)
-API Ninjas Text Language (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag)
-API Ninjas Text Language (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag)
-API Ninjas Text Language (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag)
-API Ninjas Text Language (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag) (path /v1/textlanguage) (text=Das ist ein schöner Tag)
-API-Ninjas (path /v1/textlanguage) (text=Das ist ein schöner Tag

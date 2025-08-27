@@ -1,0 +1,4 @@
+ Thought: The task is to detect the language of the text "今日は天気がいいです". I will use the "languagedetection_for_what_s_language" tool to analyze the text.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 今日は天気がいいです

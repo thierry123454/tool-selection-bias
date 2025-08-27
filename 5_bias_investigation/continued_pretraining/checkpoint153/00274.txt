@@ -1,0 +1,5 @@
+ Thought: The user has asked for the language of a specific sentence, "Ciao, come stai?". Before attempting any translation or language detection, it's crucial to first identify its original language. This is the foundational step for any subsequent processing. I will use the appropriate language detection tool.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'Ciao, come stai?'

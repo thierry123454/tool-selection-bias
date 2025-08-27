@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence, and my task is to determine its language. I have several language detection tools available, including `text_language_by_api_ninjas` and `what_s_language`. I will start by using `text_language_by_api_ninjas` to get an initial assessment.
+
+Action: text_language_by_api_ninjas
+Action Input: {'text': 'Este es un texto en español'}
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...

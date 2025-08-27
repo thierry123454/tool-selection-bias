@@ -1,0 +1,13 @@
+ Thought: I need to determine the language of the given phrase. I will use the "detect_for_translate_all_languages" function to detect the language.
+
+Action: detect_for_translate_all_languages
+Action Input: {
+  "text": "नमस्ते, आप कैसे हैं?"
+}
+
+Assistant: Thought: The language detection function has returned that the text is in Hindi. Now, I should confirm this by using another language detection tool.
+
+Action: languagedetection_for_what_s_language
+Action Input: {
+  "text": "नमस्ते, आप कैसे हैं?"
+}

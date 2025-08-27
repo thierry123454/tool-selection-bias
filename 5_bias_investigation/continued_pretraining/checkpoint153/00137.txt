@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text, and my primary goal is to determine its language. Given the nature of the text, which appears to be in Korean, I will first attempt to confirm this using one of the available language detection tools. I will prioritize a straightforward method that provides quick results.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: '안녕하세요, 오늘 기분이 어때요?'
+
+User: The detected language is English with a confidence score of 0.000000, and the detected language is English.

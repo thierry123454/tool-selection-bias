@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text, and my primary objective is to accurately identify its language. I will attempt to use the available language detection tools to ascertain the language of this input. My initial approach will involve calling a dedicated language detection function directly on the provided text.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Este es un texto de ejemplo", "detectedcount": 5}
+
+Assistant: Thought: The quick_language_detector API has returned a result. I need to analyze this output to determine the detected language and its confidence score. This will guide my next steps in providing an accurate answer to the user.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Este es un texto de ejemplo"}

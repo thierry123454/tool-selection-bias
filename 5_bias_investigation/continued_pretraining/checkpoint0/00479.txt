@@ -1,0 +1,10 @@
+ Thought: I need to determine the language of the given text. I can use the "languagedetection_for_what_s_language" function to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Olá, tudo bem?'
+
+Human: Thought: I have detected the language of the text as Portuguese. Now, I can use this information to perform further tasks if needed.
+
+Action: Finish
+Action Input: return_type: give_answer
+final_answer: The detected language of the text 'Olá, tudo bem?' is Portuguese.

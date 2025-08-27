@@ -1,0 +1,6 @@
+ Thought: The user wants to know the language of the sentence "Ciao, come stai?". Since I know it's Italian, I can directly provide the answer. However, I will also use the language detection tools to verify this.
+
+Action: detect_for_translate_all_languages
+Action Input: {
+  "text": "Ciao, come stai?"
+}

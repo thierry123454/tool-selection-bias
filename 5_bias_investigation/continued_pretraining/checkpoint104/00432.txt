@@ -1,0 +1,7 @@
+ Thought: The user has asked for the language of a specific text. To determine this, I will use the `languagedetection_for_what_s_language` function, which is designed to detect the language of a given text and return the detected language code. This seems straightforward and should provide an accurate result.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `text: 'Bonjour tout le monde'`
+
+User: 
+I get the result from `languagedetection_for_what_s_language`: 'fr'. This indicates that the text 'Bonjour tout le monde' is written in French.

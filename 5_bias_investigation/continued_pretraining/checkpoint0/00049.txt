@@ -1,0 +1,3 @@
+ Thought: To detect the language of the provided text, I will use the "detect_language_for_quick_language_detector" function since it can detect multiple languages and provide confidence scores.
+Action: detect_language_for_quick_language_detector
+Action Input: text="مرحبا كيف حالك؟"

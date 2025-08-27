@@ -1,0 +1,18 @@
+ Thought: I need to determine the language of the given text. I can use either the 'detect_language_for_quick_language_detector' or 'detect_for_translate_all_languages' function to achieve this. I will try both and compare the results.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: "안녕하세요, 오늘 기분이 어때요?"
+
+Result: The text is in Korean with a high confidence score.
+
+Thought: I will now verify this result using another function to ensure accuracy.
+
+Action: detect_for_translate_all_languages
+Action Input: text: "안녕하세요, 오늘 기분이 어때요?"
+
+Result: The text is indeed in Korean.
+
+Thought: Both functions agree that the text is in Korean. I can now provide the final answer.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: The language of the text "안녕하세요, 오늘 기분이 어때요?" is Korean.

@@ -1,0 +1,29 @@
+ Thought: The user has provided a text snippet, and my task is to detect its language. I have several tools available for this purpose. I'll begin by attempting to use the most straightforward one, which is designed specifically for language detection.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Hola, ¿cómo estás?'
+
+Assistant: Thought: Upon receiving the result from the `detect_for_translate_all_languages` tool, I need to interpret its output to determine the detected language. If the detection is successful, I will proceed with a translation or further analysis. If it fails or returns an ambiguous result, I will consider alternative methods.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Hola, ¿cómo estás?'
+
+Assistant: Thought: The `languagedetection_for_what_s_language` tool provides a direct detection of the language. I will analyze its response to confirm the language. If it aligns with the previous detection, I can proceed with confidence. If there's a discrepancy, I'll rely on the most consistent result or explore further.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Hola, ¿cómo estás?'
+
+Assistant: Thought: The `detect_language_for_quick_language_detector` tool is another method for language detection. Its confidence score will be crucial. If it provides a high confidence score for a specific language, I will use that as the definitive result. If the confidence is low, I might need to consider a different approach or combine results from multiple tools.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: 'Hola, ¿cómo estás?'
+
+Assistant: Thought: The `v1_textlanguage_for_text_language_by_api_ninjas` tool is yet another option for detecting the language. Its simplicity means it might be faster, but I need to verify its accuracy against the other tools. If it consistently returns a strong result, I will use that.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: text: 'Hola, ¿cómo estás?'
+
+Assistant: Thought: Finally, the `fast_language_detection_for_translate_v3` tool will be used as a last resort or to confirm the results from the other tools. Its speed is a plus, but accuracy is paramount. I will cross-reference all results here.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: 'The detected language of the text "Hola,

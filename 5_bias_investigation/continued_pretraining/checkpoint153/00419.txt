@@ -1,0 +1,9 @@
+ Thought: The user has provided a phrase, and my first step is to determine its language. I have several tools available, including `v1_textlanguage_for_text_language_by_api_ninjas`, `detect_for_translate_all_languages`, and `languagedetection_for_what_s_language`. I'll start by using `v1_textlanguage_for_text_language_by_api_ninjas` to detect the language of the input text.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: 'Guten Tag, wie geht es Ihnen?'
+
+Assistant: Thought: The result from `v1_textlanguage_for_text_language_by_api_ninjas` indicates the detected language. I'll analyze this result to confirm the language and proceed accordingly.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: The language of the phrase 'Guten Tag, wie geht es Ihnen?' has been successfully identified as German.

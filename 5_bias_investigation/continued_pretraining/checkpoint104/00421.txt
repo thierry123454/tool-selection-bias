@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text in Spanish. My first step is to detect its language accurately. I'll use the `detect_for_translate_all_languages` function for this purpose.
+
+Action: detect_for_translate_all_languages
+Action Input: text: '¿Dónde está la biblioteca?'
+User: The language detected for '¿Dónde está la biblioteca?' is 'es' (Spanish).

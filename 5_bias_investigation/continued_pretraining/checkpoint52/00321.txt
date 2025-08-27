@@ -1,0 +1,9 @@
+ Thought: The user has provided a text, and the task is to determine its language. I need to use an appropriate language detection tool. Given the nature of the text, which appears to be in Japanese, I'll use the "Detect the language of a given text" tool, specifically the `languagedetection_for_what_s_language` function.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `text: '今日はお元気ですか？'`
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has returned the language detection for the provided text. Now, I need to verify the result and ensure it's accurate before proceeding to inform the user.
+
+Action: `Finish`
+Action Input: `return_type: give_answer, final_answer: 'The language of the text "今日はお元気ですか？" is Japanese.'`

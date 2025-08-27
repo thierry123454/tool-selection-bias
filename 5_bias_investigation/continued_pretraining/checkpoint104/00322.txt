@@ -1,0 +1,7 @@
+ Thought: The user has provided a sentence, and my primary task is to identify its language. Given the nature of the task and the available tools, the most direct approach is to use the `detect` function from the `text_language_by_api_ninjas` tool, which is specifically designed for this purpose. I will pass the sentence directly to this function and await its response.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+
+Action Input: text: 'Привет, как дела?'
+User: 
+The API Ninjas Text Language API endpoint returned: 'ru'.

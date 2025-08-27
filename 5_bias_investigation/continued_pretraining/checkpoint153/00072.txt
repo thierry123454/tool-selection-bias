@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase, and my task is to determine its language. I will first attempt to detect the language using the available tools. Given the context, a direct language detection tool would be the most efficient.
+
+Action: what_s_language
+Action Input: text=Guten Morgen, wie geht es dir?
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...

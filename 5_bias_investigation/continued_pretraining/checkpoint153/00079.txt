@@ -1,0 +1,4 @@
+ Thought: The user has provided a Dutch sentence. My first step is to confirm its language before attempting any translation. I'll use the `fast_language_detection_for_translate_v3` tool to detect the language.
+
+Action: `fast_language_detection_for_translate_v3`
+Action Input: text: 'Dit is een testzin in het Nederlands'

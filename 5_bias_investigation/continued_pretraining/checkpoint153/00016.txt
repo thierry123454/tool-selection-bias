@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text, which appears to be in Arabic. My first step is to confirm this using a reliable language detection tool. I'll use `detect_for_translate_all_languages` to get a confident assessment.
+Action: detect_for_translate_all_languages
+Action Input: text="مرحبا كيف حالك؟"
+
+User: The language of 'مرحبا كيف حالك؟' is detected as Arabic with a high confidence score.

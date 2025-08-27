@@ -1,0 +1,7 @@
+ Thought: The user has provided a text, and the task is to detect its language. I need to determine which tool is best suited for this initial detection. Given the simplicity and directness of the task, I'll start with the most straightforward option for language detection.
+
+Action:
+Detect the language of the given text.
+
+Action Input:
+Detect the language of the given text.

@@ -1,0 +1,6 @@
+ Thought: The user has provided a text that appears to be in a non-English language. My first step is to identify its language accurately. I recall having several tools available for language detection, and I need to choose the most appropriate one for this task. The API Ninjas Text Language API endpoint seems like a good candidate for its simplicity and directness. I'll proceed with using `v1_textlanguage_for_text_language_by_api_ninjas`.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Привет, как дела?"}
+
+Assistant: Thought: After sending the text, I will receive a response indicating the detected language. Once I have that information, I can then proceed with the task or confirm the language.

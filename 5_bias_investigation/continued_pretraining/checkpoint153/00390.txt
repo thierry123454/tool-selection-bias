@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence. My initial task is to determine its language. Given the sentence 'Je suis très heureux de te voir.', it appears to be in French, but I need to confirm this using one of the available language detection tools. I will use the `detect_for_translate_all_languages` function for this purpose.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Je suis très heureux de te voir."}
+
+User: The language detected by the API is 'fr' with a high confidence score.

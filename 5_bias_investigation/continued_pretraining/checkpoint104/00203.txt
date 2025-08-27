@@ -1,0 +1,7 @@
+ Thought: The user has provided a short Japanese phrase. My first step is to determine the language of this text. I have several tools available for language detection, and I need to decide which one to use for this specific task. I'll start by considering the most straightforward method.
+
+Action: Detect the language of the provided text using the "detect_for_translate_all_languages" function.
+
+Action Input: text: '今日はとてもいい天気です'
+
+After the call, I will get the language detected by the API. Depending on the result, I will proceed with further analysis or confirm the language.

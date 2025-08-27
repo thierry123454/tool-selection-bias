@@ -1,0 +1,14 @@
+ Thought:
+I will use the detect_language_for_quick_language_detector function to determine the language of the input text.
+Action
+Action Input: detect_language_for_quick_language_detector
+text: Dit is een testzin.
+
+Result: {"language": "Dutch", "confidence": 0.95}
+
+Thought:
+The language is identified as Dutch with high confidence. Now, I will use the Finish function to provide the final answer.
+Action
+Action Input: Finish
+return_type: give_answer
+final_answer: The language of the input text "Dit is een testzin." is Dutch.

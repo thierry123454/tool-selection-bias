@@ -1,0 +1,11 @@
+ Thought: The user has asked to determine the language of the input text 'Merhaba, nasılsın?'. This is a straightforward task for language detection. I will first consider using a tool that specializes in language identification. Given the options, `text_language_by_api_ninjas` and `what_s_language` seem suitable. I'll start by trying `text_language_by_api_ninjas` as it's a direct match for the description of the API Ninjas Text Language API endpoint.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Merhaba, nasılsın?"}
+
+Assistant: Thought: The API call for `text_language_by_api_ninjas` has been sent. I await the result to determine the language of the input text. Once I receive the response, I will analyze it to confirm the detected language.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Merhaba, nasılsın?"}
+
+Assistant: Thought: The API call for `text_language_by_api_ninjas` has been sent. I await the result to determine the language of the input text. Once I receive the response, I will analyze it to confirm the detected language.

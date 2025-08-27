@@ -1,0 +1,6 @@
+ Thought: I need to identify the language of the given sentence using an appropriate tool. I will use the "what_s_language" tool for this purpose.
+
+Action: what_s_language
+Action Input: text=Je suis très heureux de te voir.
+
+Human: Result: Language detected: French

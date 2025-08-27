@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the text 'Bonjour tout le monde'. I will use the 'what_s_language' tool to detect the language.
+
+Action: what_s_language
+Action Input: {
+  "text": "Bonjour tout le monde"
+}

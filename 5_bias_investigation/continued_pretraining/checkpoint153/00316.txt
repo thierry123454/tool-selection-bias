@@ -1,0 +1,15 @@
+ Thought: I need to determine the language of the given phrase. It appears to be in Korean, but I should confirm this using one of the available tools. Given the variety of language detection tools, I'll first consider the most straightforward approach.
+
+Action: Detect the language of the phrase using the `what_s_language` tool.
+
+Action Input: text: '안녕하세요, 오늘 기분이 어때요?'
+
+Assistant: Thought: The `what_s_language` tool is designed to detect the language of a given text and return the detected language code. I'll proceed with this call to confirm the language.
+
+Assistant: Thought: After receiving the language code from `what_s_language`, I can then proceed to translate it if needed, or simply confirm the detected language. The output will be crucial for the next steps.
+
+Assistant: Thought: The language detection result is now available. I can now move forward with the task, which involves confirming the language or proceeding with translation if required.
+
+Action: Confirm the language detected by `what_s_language` and prepare for the next step.
+
+Action Input: N/A (This step is an internal thought process, no direct input required.)

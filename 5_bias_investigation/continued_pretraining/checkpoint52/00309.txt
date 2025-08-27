@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text, "Ciao, come stai?", and explicitly asked for the language it belongs to. My initial thought is to detect the language of this specific input. I have several language detection tools available, and I'll start by trying the simplest one, `detect_for_translate_all_languages`, which is designed for language detection. If it doesn't provide a clear result, I'll consider using `languagedetection_for_what_s_language` as an alternative.
+
+Action: `detect_for_translate_all_languages`
+
+Action Input: `text: "Ciao, come stai?"`
+
+After this function call, I will receive the detected language. I will then analyze the result to confirm if it accurately identifies the language. If successful, I will proceed to provide the final answer. If not, I will consider trying another tool.

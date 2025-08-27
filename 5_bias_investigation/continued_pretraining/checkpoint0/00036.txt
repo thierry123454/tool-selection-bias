@@ -1,0 +1,18 @@
+ Thought: I need to detect the language of the given sentence using the "what_s_language" tool. I will call the subfunction "languagedetection_for_what_s_language" to achieve this.
+
+Action: languagedetection_for_what_s_language
+
+Action Input: {
+  "text": "Это пример текста на русском языке"
+}
+
+Human: Result: "ru"
+
+Assistant: Thought: I have detected the language of the sentence as Russian. Now, I will provide the final answer using the "Finish" function.
+
+Action: Finish
+
+Action Input: {
+  "return_type": "give_answer",
+  "final_answer": "The language of the sentence 'Это пример текста на русском языке' is Russian."
+}

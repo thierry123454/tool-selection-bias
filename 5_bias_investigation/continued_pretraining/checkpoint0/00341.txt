@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the phrase 'Olá, tudo bem?'. I will use the `what_s_language` tool to detect the language.
+
+Action: what_s_language
+Action Input: {"text": "Olá, tudo bem?"}
+
+User: The detected language code is 'pt'.

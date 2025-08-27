@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase in Italian. My immediate goal is to accurately identify the language. Given the tools at my disposal, I can use the `text_language_by_api_ninjas` function, which is specifically designed for this purpose. I'll feed the text directly into the `v1_textlanguage_for_text_language_by_api_ninjas` subfunction.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Ciao, come stai?"}
+
+Assistant: Thought: The API Ninjas Text Language API endpoint is a reliable choice for language detection. I'll proceed with the call to see the result.

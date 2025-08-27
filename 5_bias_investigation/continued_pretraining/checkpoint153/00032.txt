@@ -1,0 +1,8 @@
+ Thought: The user has provided a short text snippet. To determine its language, I should first consider the most reliable method available. Given the variety of tools, I'll prioritize using the quick_language_detector for its straightforward nature and efficiency. It can quickly process a few sentences and return a language detection with a confidence score, which is ideal for this initial assessment.
+
+Action: quick_language_detector
+Action Input: detect_language_for_quick_language_detector(text='안녕하세요, 오늘 기분이 어때요?')
+
+Assistant: Thought: The quick_language_detector has returned a result. I need to analyze the output to see if the detected language is accurate and if the confidence score is high enough for a definitive conclusion. If the confidence is low or the detected language is unexpected, I might consider an alternative approach, such as using the API Ninjas Text Language API endpoint, which is another robust option.
+
+Action: If the quick_language_detector result is conclusive (e.g., 'Korean' with high confidence), proceed to confirm. Otherwise, consider an alternative.

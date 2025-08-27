@@ -1,0 +1,7 @@
+ Thought: To determine the language of the text '안녕하세요, 오늘 기분이 어때요?', I will use the tool 'languagedetection_for_what_s_language'. This tool is designed to detect the language of a given text and return the detected language code. Since the text provided is in Korean, it should be accurately detected.
+
+Action: languagedetection_for_what_s_language
+Action Input: text=안녕하세요, 오늘 기분이 어때요?
+
+User: 
+Language detected: Korean.

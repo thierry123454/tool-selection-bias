@@ -1,0 +1,6 @@
+ Thought: The user provided a sentence in Spanish. My first step is to confirm its language using a reliable tool. I'll use the `languagedetection_for_what_s_language` function for this initial detection.
+
+Action: languagedetection_for_what_s_language
+Action Input: text="Hola, ¿cómo estás?"
+
+After the call, you will get the call result, and you are now in a new state.

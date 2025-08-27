@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase, and my first step should be to identify its language. I'll use the "what_s_language" tool, specifically its subfunction, to detect the language. This is a straightforward initial step.
+
+Action: what_s_language
+Action Input: {"text": "Guten Tag, wie geht es Ihnen?"}
+
+Assistant: Thought: I've just received the result from the language detection. It's time to analyze the output and decide if I need to proceed with further translation or if the language is already clear.

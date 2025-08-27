@@ -1,0 +1,5 @@
+ Thought: The user has provided a simple text, and my initial task is to identify its language. Given the straightforward nature of the input, I'll start by attempting to detect the language using one of the available tools. I'll prioritize using the `detect_language_for_quick_language_detector` function, as it provides a confidence score, which could be useful for further processing if needed. My first action will be to feed the text into this function.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="This is an example of English text"

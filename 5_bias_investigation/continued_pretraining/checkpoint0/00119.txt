@@ -1,0 +1,13 @@
+ Thought: To detect the language of the provided text, I will use the quick_language_detector tool. This tool can detect the language of a given text and provide a confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Het is een mooie dag vandaag."}
+
+Human: Result: The detected language is Dutch with a confidence score of 95%.
+
+Assistant: Thought: Based on the result from the quick_language_detector tool, I can confidently say that the text 'Het is een mooie dag vandaag.' is written in Dutch.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The text 'Het is een mooie dag vandaag.' is written in Dutch."}
+
+Human: Result: The text 'Het is een mooie dag vandaag.' is written in Dutch.

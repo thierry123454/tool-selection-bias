@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence, and my task is to identify its language. I recall that there are several tools available for this purpose, each with its own method of detection. The sentence provided is 'Hola, ¿cómo estás?', which appears to be Spanish. My first step will be to use one of the language detection tools to confirm this.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Hola, ¿cómo estás?'

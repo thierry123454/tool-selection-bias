@@ -1,0 +1,6 @@
+ Thought: The user has provided a specific sentence and asked for its detected language. My initial approach will be to use one of the available language detection tools. Given the nature of the input, which appears to be in Cyrillic, I'll prioritize tools that are known for their accuracy with various scripts. I'll start with `detect_for_translate_all_languages` as it's the first tool listed and offers a straightforward detection mechanism.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Это пример текста на русском языке'
+
+Assistant: Thought: The API call to `detect_for_translate_all_languages` has been made. I'm awaiting its response to determine the language. Once I have the result, I can proceed to either confirm the language or, if necessary, try an alternative detection method.

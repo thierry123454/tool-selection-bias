@@ -1,0 +1,6 @@
+ Thought: The user has provided a phrase in Russian. To determine the language, I will use the `detect_language_for_translate_v3` function from the `translate_v3` tool. This function is designed to detect the language of the text and is likely to be accurate.
+
+Action: detect_language_for_translate_v3  
+Action Input: text="Мне нравится читать книги."  
+
+Result: The language detected is Russian.

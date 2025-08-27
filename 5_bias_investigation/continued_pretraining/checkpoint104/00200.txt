@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text and asked for its language. My first step should be to identify the language of this specific input. Given the tools available, the most direct approach is to use a dedicated language detection function. I will use the `what_s_language` tool, specifically its `languagedetection_for_what_s_language` subfunction, to analyze the given text.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Estou aprendendo português'
+
+Assistant: Thought: The `what_s_language` tool has returned a language code. I need to interpret this result and prepare to provide the answer. The API Ninjas Text Language API endpoint is quite reliable for such tasks, and I trust its output.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: "The language of the text 'Estou aprendendo português' is Portuguese (pt)."

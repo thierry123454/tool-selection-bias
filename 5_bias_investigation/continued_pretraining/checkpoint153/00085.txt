@@ -1,0 +1,5 @@
+ Thought: The user has provided a phrase that appears to be a mix of two languages, Hindi and English, but the primary intent is to detect the language. Given the description of the tools, I'll start by trying to identify the dominant language using the available functions. I'll begin with the most straightforward detection method.
+
+Action: Detect the language of the given text.
+
+Action Input: {'text': 'नमस्ते, आप कैसे हैं?'}

@@ -1,0 +1,5 @@
+ Thought: I need to detect the language of the given text. The user has provided a short phrase, so I should choose a reliable language detection tool. I have several options: `detect_for_translate_all_languages`, `languagedetection_for_what_s_language`, `detect_language_for_quick_language_detector`, and `v1_textlanguage_for_text_language_by_api_ninjas`. I'll try `detect_for_translate_all_languages` first as it seems straightforward.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'Olá, tudo bem com você?'

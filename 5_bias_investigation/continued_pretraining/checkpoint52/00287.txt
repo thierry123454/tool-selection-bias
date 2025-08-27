@@ -1,0 +1,6 @@
+ Thought: I need to identify the language of the given text. I have several tools available for this, but I should start by trying the most straightforward one, which is the `detect_for_translate_all_languages` function, as it's designed specifically for language detection. I'll pass the text 'यह एक हिंदी वाक्य है' to it and see what it returns.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'यह एक हिंदी वाक्य है'
+
+After the call, I'll get the result from `detect_for_translate_all_languages`. If it successfully identifies the language, I'll proceed to translate it using `translate_all_languages`. If it fails or returns an ambiguous result, I might consider using another tool like `quick_language_detector` or `text_language_by_api_ninjas` for a secondary check.

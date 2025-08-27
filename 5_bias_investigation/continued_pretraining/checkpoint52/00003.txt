@@ -1,0 +1,6 @@
+ Thought: The user has provided a text that needs to be analyzed for its language. My first step is to identify the language of this input. I have several tools available for this purpose, each with its own nuances. I'll start by using the most straightforward and widely recognized tool for language detection, which is the `text_language_by_api_ninjas` function. This tool is designed to detect the language from any input text, which seems exactly what I need.
+
+Action: text_language_by_api_ninjas
+Action Input: text: '안녕하세요, 반갑습니다'
+
+After the call, I will receive the detected language from the API. Based on that result, I can then proceed to either translate it if necessary or confirm the language. If the detection is accurate, I can then consider whether the user needs further assistance, such as translation, or if they simply wanted to know the language. If the detection is inaccurate, I might need to try an alternative method. The key here is to ensure the language is correctly identified before moving forward with any subsequent actions.

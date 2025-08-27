@@ -1,0 +1,6 @@
+ Thought: The user has provided a text snippet and explicitly asked to detect its language. To proceed, I need to determine which tool is best suited for this task. The API Ninjas Text Language API endpoint seems like a straightforward option for this purpose.
+
+Action: text_language_by_api_ninjas
+Action Input: text: 'Hola, ¿cómo estás?'
+
+Assistant: Thought: The API Ninjas Text Language API endpoint is now processing the input text. I'll wait for the result to proceed with the next steps.

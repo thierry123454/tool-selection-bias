@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase, and my task is to identify its language. I'll use the available language detection tools to analyze this text. I'll start with the most straightforward option, which is the `what_s_language` tool, specifically its subfunction `languagedetection_for_what_s_language`. This function is designed to detect the language of a given text and return the detected language code.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `{'text': 'Dit is een testzin.'}`
+
+After the call, I will get the detected language code.

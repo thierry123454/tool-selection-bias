@@ -1,0 +1,9 @@
+ Thought: The user has asked for the language of the phrase 'Merhaba, nasılsın?'. My first step should be to determine the language using one of the available language detection tools. I'll choose a straightforward approach to get an initial assessment.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Merhaba, nasılsın?"}
+
+Assistant: Thought: The quick_language_detector has provided a result. I need to check the detected language and its confidence score. If the confidence is high, I can proceed to confirm or use it directly. If it's low, I might consider an alternative method.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Merhaba, nasılsın?"}

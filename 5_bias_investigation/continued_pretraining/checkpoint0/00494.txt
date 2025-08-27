@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence in Russian. I need to confirm the language using one of the available tools.
+
+Action: detect_for_translate_all_languages
+Action Input: text=Привет, как дела?
+
+Human: Result: The language detected is Russian (rus).

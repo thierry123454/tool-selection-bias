@@ -1,0 +1,5 @@
+ Thought: The user has asked for the language detection of the phrase "Salve, quid agis hodie?". This is a common way to start a conversation in Latin, but it's also a string of characters that could be interpreted by various language detection tools. My first step should be to determine the language of this input text. I have several tools available for this purpose, and I should choose the most appropriate one. Given that some tools might be more specialized or have better accuracy for very short texts, I should consider their capabilities before making a call.
+
+Action: I will use the "detect_language_for_quick_language_detector" subfunction from the "quick_language_detector" tool.
+
+Action Input: text="Salve, quid agis hodie?"

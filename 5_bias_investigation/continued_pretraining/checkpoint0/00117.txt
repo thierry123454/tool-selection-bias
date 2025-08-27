@@ -1,0 +1,9 @@
+ Thought: The user has provided a phrase that needs to be detected for its language. I will use the `detect_language_for_quick_language_detector` function to determine the language of the phrase.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': '안녕하세요, 오늘 기분이 어때요?'}
+
+Human: Thought: The language detection function has returned the result. The detected language is Korean with a high confidence score. Now, I will use the `Finish` function to provide the final answer.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the phrase "안녕하세요, 오늘 기분이 어때요?" is Korean.'}

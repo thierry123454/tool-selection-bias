@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence in Hebrew, and their query is specifically about detecting the language of this text. My first step should be to accurately identify the language using one of the available language detection tools. I will prioritize a tool that is known for its accuracy and simplicity for this specific task.
+
+Action: Detect the language of a given text
+Action Input: {'text': 'אני לומד עברית'}
+
+After the call, you will get the call result, and you are now in a new state.

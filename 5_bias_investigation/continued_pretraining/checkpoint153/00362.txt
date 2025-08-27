@@ -1,0 +1,9 @@
+ Thought: The user has provided the text '今日はとても暑いです。'. My initial goal is to accurately identify the language of this input. Given the available tools, I will first use `text_language_by_api_ninjas` to detect the language. This tool is specifically designed for language detection, and I believe it will be the most straightforward approach for this initial step.
+
+Action: text_language_by_api_ninjas
+Action Input: '今日はとても暑いです。'
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has returned a result. It indicates that the text is in Japanese with a high confidence score. This confirms my initial assessment. Now that I have the language, I can proceed with the task, which is to determine the language of the given text. Since the task is complete, I will now call the `Finish` function to provide the final answer.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "今日はとても暑いです。" is Japanese.'}

@@ -1,0 +1,5 @@
+ Thought: The user has provided a short phrase in Portuguese. My first step should be to accurately determine its language. Since we have several language detection tools available, I should choose the most straightforward one for this initial assessment. I'll use the quick_language_detector tool for this purpose. I'll input the phrase 'Olá, como você está hoje?' and see what it returns.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Olá, como você está hoje?'

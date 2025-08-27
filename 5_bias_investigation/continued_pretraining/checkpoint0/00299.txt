@@ -1,0 +1,4 @@
+ Thought: The user wants me to determine the language of the given sentence. I will use the "languagedetection_for_what_s_language" tool to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: {'text': "Привет, как дела?"}

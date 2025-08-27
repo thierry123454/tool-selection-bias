@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the phrase 'Мне нравится читать книги.' I'll try using the quick_language_detector tool first, which is designed to detect the language from a few sentences and provide a confidence score. This will be my initial attempt.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="Мне нравится читать книги."

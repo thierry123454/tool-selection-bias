@@ -1,0 +1,7 @@
+ Thought: The user has provided a text string and asked for its language detection. I'll use the `detect_language_for_quick_language_detector` function to analyze it. It's a straightforward request, and this tool is designed for precisely that purpose.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Это тестовое предложение'
+
+After the call, you will get the call result, and you are now in a new state.

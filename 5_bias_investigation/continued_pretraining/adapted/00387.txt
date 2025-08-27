@@ -1,5 +1,0 @@
- (Thought: I need to detect the language from the input text. The sentence is in Hebrew, so I should use the detect function. The API Ninjas Text Language (path /v1/textlanguage) is the fastest way to detect the language from any input text. I will call the Text Language by API-Ninjas API with the given text to get the result.
-Action: call API Ninjas Text Language (path /v1/textlanguage)
-Action Input: {"text": "אני לומד עברית"} 
-
-Wait for the response. If the API returns the detected language, I can confirm the result and return the answer. If there's an error, I should try a different tool. Keep the response fast and lightweight.

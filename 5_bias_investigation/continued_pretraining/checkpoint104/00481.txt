@@ -1,0 +1,4 @@
+ Thought: The user has provided a simple sentence, and my task is to determine its language. Given the nature of the input, a direct detection is appropriate. I'll use the `detect_for_translate_all_languages` function to identify the language. This function is designed to detect the language of any given text, which seems ideal for this initial step.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Olá, tudo bem com você?"}

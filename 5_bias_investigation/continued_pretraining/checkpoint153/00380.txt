@@ -1,0 +1,11 @@
+ Thought: The user has provided a short text, and the task is to identify its language. The text '今日は元気ですか？' is clearly in Japanese. I'll proceed to confirm this using the available language detection tools.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {"text": "今日は元気ですか？"}
+
+Assistant: Thought: The API call has completed. I need to analyze the result to confirm the detected language.
+
+Action: analyze_result
+
+Action Input: Result from detect_for_translate_all_languages

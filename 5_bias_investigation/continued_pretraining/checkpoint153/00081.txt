@@ -1,0 +1,4 @@
+ Thought: The user has provided a short sentence, and the task is to detect its language. I can use any of the available language detection tools. Since the sentence is quite common and not very long, I'll first try the `fast_language_detection_for_translate_v3` tool, which is designed for quick detection. If it doesn't yield a clear result, I'll consider other options.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: {"text": "Hello, how are you today?"}

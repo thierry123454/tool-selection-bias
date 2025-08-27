@@ -1,0 +1,11 @@
+ Thought: The user has provided a text, and my first step is to determine its language using the available tools. I will use the "quick_language_detector" function, which is designed for this purpose.
+
+Action: quick_language_detector
+Action Input: detect_language_for_quick_language_detector(text='Γειά σου, πώς είσαι?')
+
+Assistant: Thought: The quick_language_detector has returned a result. I need to analyze it to see if it confidently identified the language.
+
+Action: quick_language_detector
+Action Input: detect_language_for_quick_language_detector(text='Γειά σου, πώς είσαι?')
+
+Assistant: Thought: The quick_language_detector has returned a result. I need to analyze it to see if it confidently identified the language.

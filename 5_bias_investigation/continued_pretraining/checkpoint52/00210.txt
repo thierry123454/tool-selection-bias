@@ -1,0 +1,4 @@
+ Thought: The user has provided a short phrase in Italian. My first step should be to detect the language of this input text. This will help me understand the context and potentially translate it if needed. I'll use the `text_language_by_api_ninjas` tool for this.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: 'Ciao, come stai?'

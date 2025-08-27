@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase in a language I'm not immediately familiar with. My primary goal is to accurately identify the language of this text. Given the available tools, the most direct approach involves using a language detection API. I will first attempt to use the `text_language_by_api_ninjas` tool, which is specifically designed for this purpose. If that tool returns an ambiguous result or fails, I will consider alternative methods, such as `what_s_language` or `quick_language_detector`, to confirm the language. My immediate step is to call the `v1_textlanguage_for_text_language_by_api_ninjas` function with the provided text.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: 'Bonjour tout le monde'
+
+After the call, I will receive the result from the API. If the API returns a clear language code, I will proceed to confirm or finalize the answer. If the result is ambiguous or indicates an error, I will explore alternative detection methods or consider restarting the process if necessary.

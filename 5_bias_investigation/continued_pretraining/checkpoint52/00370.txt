@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and they specifically asked for its language. I need to determine the language of this input. Given the nature of the request, I will use a dedicated language detection tool to accurately identify the language. The text provided is '¿Dónde está la biblioteca?', which looks like Spanish, but I'll confirm using a reliable language detection API.
+
+Action: detect_for_translate_all_languages
+Action Input: text: '¿Dónde está la biblioteca?'

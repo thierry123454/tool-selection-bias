@@ -1,0 +1,9 @@
+ Thought: The user has provided a sentence and explicitly asked for its language. To proceed, I need to first confirm the language of the input text. I can use any of the available language detection tools. I'll start with `what_s_language` as it seems straightforward for this task.
+
+Action: what_s_language
+Action Input: text: 'Este es un texto en español'
+
+Assistant: Thought: The `what_s_language` tool is designed to detect the language of a given text. The input provided is a Spanish sentence. I expect it to return 'es' as the language code. If it fails, I'll consider alternative tools like `quick_language_detector` or `text_language_by_api_ninjas` for a secondary check.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Este es un texto en español'

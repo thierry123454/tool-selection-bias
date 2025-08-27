@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and my task is to determine its language. I have several tools available for this purpose, including `what_s_language`, `quick_language_detector`, and `text_language_by_api_ninjas`. For a quick and reliable detection, `what_s_language` seems most appropriate. I will proceed with that.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: {"text": "Hallo, wie geht's dir heute?"}

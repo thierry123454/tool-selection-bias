@@ -1,0 +1,7 @@
+ Thought: The user has provided a phrase, and my task is to determine its language. Given the variety of tools available, I will first attempt to detect the language using the most straightforward method, which is the `what_s_language` tool, specifically its subfunction `languagedetection_for_what_s_language`. This tool is designed to detect the language of a given text and return the detected language code, which seems ideal for this initial step.
+
+Action: I will call the `languagedetection_for_what_s_language` function with the provided text.
+
+Action Input: text: 'Мне нравится читать книги.'
+
+After the call, I will get the call result, and I will be in a new state.

@@ -1,0 +1,11 @@
+ Thought:
+I need to determine the language of the phrase 'Das ist ein schöner Tag'. I can use the 'detect_for_translate_all_languages', 'languagedetection_for_what_s_language', 'detect_language_for_quick_language_detector', 'v1_textlanguage_for_text_language_by_api_ninjas', or 'fast_language_detection_for_translate_v3' functions to detect the language. I will try each one in turn.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Das ist ein schöner Tag"}
+
+Human: {
+	"code": "200",
+	"language": "de",
+	"confidence": "0.9999999999999999"
+}

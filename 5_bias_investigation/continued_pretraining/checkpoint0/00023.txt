@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the input 'Ciao, come stai oggi?'. I can use the tool "what_s_language" to detect the language.
+
+Action: what_s_language
+Action Input: {
+  "text": "Ciao, come stai oggi?"
+}

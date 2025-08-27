@@ -1,0 +1,5 @@
+ Thought: The task is to determine the language of the given text, which is 'Привет, как дела?'. I need to identify the language before any translation can be attempted. There are several tools available for this, such as `what_s_language`, `quick_language_detector`, and `text_language_by_api_ninjas`. I'll first try `what_s_language` for its straightforwardness and then consider the others if needed.
+
+Action: what_s_language
+Action Input: 'Привет, как дела?'
+User:

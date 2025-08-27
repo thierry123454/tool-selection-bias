@@ -1,0 +1,9 @@
+ Thought: The user has asked for the language of a specific phrase. My first step should be to detect the language using the available tools. I'll start by trying to detect the language of the input text using the most straightforward method.
+
+Action: text_language_by_api_ninjas
+Action Input: 'Guten Morgen, wie geht es dir?'
+
+Assistant: Thought: I've just called the text_language_by_api_ninjas function with the input 'Guten Morgen, wie geht es dir?'. Now, I need to analyze the result to see if it correctly identified the language. If it did, I can then proceed to confirm or translate based on that detection. If it didn't, I might need to try an alternative detection method.
+
+Action: text_language_by_api_ninjas
+Action Input: 'Guten Morgen, wie geht es dir?'

@@ -1,0 +1,9 @@
+ Thought: The user has provided a text and explicitly asked for its language. My first step should be to detect the language using an appropriate tool. Given the description of the tools available, `text_language_by_api_ninjas` and `what_s_language` seem suitable for this task. I will choose `text_language_by_api_ninjas` for its straightforward nature.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: 'Γειά σου, πώς είσαι;'
+
+Assistant: Thought: The API Ninjas Text Language API endpoint is designed to detect the language from any input text. This is precisely what I need. After receiving the result, I will analyze it to confirm the detected language.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: 'Γειά σου, πώς είσαι;'

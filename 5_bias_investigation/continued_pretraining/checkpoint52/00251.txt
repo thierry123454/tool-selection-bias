@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text in French. My goal is to accurately detect its language. I have several tools available for this purpose, each with its own strengths. I'll start by using the `quick_language_detector` tool, which is designed to detect the language from any input text. This seems like a straightforward and efficient option for initial detection.
+
+Action: quick_language_detector
+Action Input: detect_language_for_quick_language_detector(text="Je suis content de te voir")
+
+Human:

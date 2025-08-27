@@ -1,0 +1,4 @@
+ Thought: The user wants me to detect the language of the phrase "Olá, tudo bem com você?" using the available tools. I will use the `detect_for_translate_all_languages` function to detect the language of the provided text.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Olá, tudo bem com você?"}

@@ -1,0 +1,7 @@
+ Thought: The user has provided a short phrase, and my task is to determine its language. Given the nature of the input, which is a common greeting in a specific Scandinavian language, I'll first attempt to detect the language using one of the available tools. Since the input is quite short, I'll prioritize accuracy over speed, as shorter texts can sometimes be more ambiguous for language detection.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'Hej, hur mår du idag?'
+
+Assistant:

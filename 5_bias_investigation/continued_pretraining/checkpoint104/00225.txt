@@ -1,0 +1,5 @@
+ Thought: The user has provided a Greek phrase, and my task is to determine its language. To do this accurately, I will first attempt to detect the language using one of the available language detection tools. Given the context, I'll try the `fast_language_detection_for_translate_v3` function, as it's a straightforward option for language identification. If this tool doesn't provide a clear result or if the text is too short, I might consider alternative methods or tools.
+
+Action: `fast_language_detection_for_translate_v3`
+
+Action Input: `text: 'Είναι μια όμορφη μέρα.'`

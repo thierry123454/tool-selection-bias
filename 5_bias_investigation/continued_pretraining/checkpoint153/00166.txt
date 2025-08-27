@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text snippet, and my initial task is to determine its language. I have several tools at my disposal, each with its own strengths. The most direct approach would be to use the `text_language_by_api_ninjas` function, which is specifically designed for this purpose. I'll proceed with that.
+
+Action: text_language_by_api_ninjas
+Action Input: {'text': 'Olá, tudo bem?'}
+
+Assistant: Thought: The `text_language_by_api_ninjas` function has been called. I need to wait for its result before proceeding.

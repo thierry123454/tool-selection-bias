@@ -1,0 +1,4 @@
+ Thought: The user has provided a short phrase in Portuguese. My first step should be to confirm the language using one of the available language detection tools. Given the brevity of the input, I'll consider using the most straightforward and reliable option for initial detection.
+
+Action: `detect_for_translate_all_languages`
+Action Input: `{"text": "Olá, tudo bem?"}`

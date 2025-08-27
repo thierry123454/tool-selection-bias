@@ -1,0 +1,6 @@
+ Thought: The user has provided a text in Japanese. My first step is to confirm the language using the available tools. I'll start with the quick_language_detector to get an initial assessment.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "今日はお元気ですか？"}
+
+After the call, I will get the result from quick_language_detector.

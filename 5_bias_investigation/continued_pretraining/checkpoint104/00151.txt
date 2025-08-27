@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text in Japanese. My first step is to confirm the language using the available tools. I will use the `detect_language_for_quick_language_detector` function, as it provides a confidence score, which will be useful for verification. If this tool gives a high confidence score for Japanese, I can proceed. If not, I might need to fall back to another tool.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: '今日は天気がいいです'

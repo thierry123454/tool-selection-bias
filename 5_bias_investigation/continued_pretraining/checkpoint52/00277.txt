@@ -1,0 +1,14 @@
+ Thought: The user wants to detect the language of a specific phrase. Given the tools available, the most direct approach would be to use the "what_s_language" tool, which is designed to detect the language of a given text. This seems straightforward and efficient for this task. I will proceed with this.
+
+Action: what_s_language
+Action Input: text: "Saluton, kiel vi fartas?"
+
+Assistant: Thought: The tool "what_s_language" has been called to detect the language of the input text. The result will provide the detected language code. Once I have this information, I can confirm the language or proceed with further steps if necessary. The API Ninjas Text Language API endpoint is expected to return the detected language.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: "Saluton, kiel vi fartas?"
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has returned the detected language. I will now analyze the result to confirm the language of the input phrase. If the language is correctly identified, I can proceed to confirm it or provide the answer. If there's any ambiguity or error, I might need to consider alternative tools or methods.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: "The detected language of the phrase 'Saluton, kiel vi fartas?' is Esperanto."

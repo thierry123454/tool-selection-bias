@@ -1,0 +1,4 @@
+ Thought: The user has provided a text in Japanese. To confirm the language, I should use the language detection tools available. I will use the `detect_for_translate_all_languages` function to detect the language of the text.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "今日は元気ですか？"}

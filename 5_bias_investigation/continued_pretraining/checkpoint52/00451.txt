@@ -1,0 +1,4 @@
+ Thought: The user has asked to identify the language of the text 'Ciao, come stai?'. My primary objective is to determine the language accurately. Given the available tools, 'what_s_language' and 'quick_language_detector' seem suitable for this task. I will first use 'what_s_language' to get a quick detection, and if needed, confirm with 'quick_language_detector' for higher confidence. If the language is detected as Italian, I will proceed to confirm with the user or translate further if required. If the detection is ambiguous or incorrect, I will consider alternative approaches or restart the task.
+
+Action: what_s_language
+Action Input: text='Ciao, come stai?'

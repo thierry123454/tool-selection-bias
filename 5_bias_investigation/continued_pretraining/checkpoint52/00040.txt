@@ -1,0 +1,5 @@
+ Thought: I need to determine the language of the phrase "Guten Tag, wie geht es Ihnen?". Given the context and the tools available, the most straightforward approach is to use a dedicated language detection service. I will opt for the `text_language_by_api_ninjas` tool, which is designed for this very purpose. It’s efficient and directly applicable.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+
+Action Input: {"text": "Guten Tag, wie geht es Ihnen?"}

@@ -1,0 +1,14 @@
+ Thought: The user wants me to identify the language of the given sentence using the available tools. I will use the "what_s_language" tool for this purpose.
+
+Action: what_s_language
+Action Input: "Das ist ein schöner Tag."
+
+Human: Thought: The language detection tool has returned the result that the language of the sentence is German. Now I need to confirm this result using another tool to ensure accuracy.
+
+Action: detect_language_for_quick_language_detector
+Action Input: "Das ist ein schöner Tag."
+
+Assistant: Thought: The second language detection tool has also confirmed that the language of the sentence is German. Now I can provide the final answer using the Finish function.
+
+Action: Finish
+Action Input: "return_type": "give_answer", "final_answer": "The language of the sentence 'Das ist ein schöner Tag.' is German."

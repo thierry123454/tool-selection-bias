@@ -1,0 +1,5 @@
+ Thought: The user has provided a simple English sentence. My first step should be to detect its language using one of the available tools. Given the simplicity of the sentence, I'll start with the `detect_language_for_quick_language_detector` function, which is designed to detect languages with a confidence score.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Hello, how are you today?'

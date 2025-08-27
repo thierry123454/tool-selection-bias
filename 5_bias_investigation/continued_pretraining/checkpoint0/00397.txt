@@ -1,0 +1,11 @@
+ Thought: The input text is in German. I will use the `languagedetection_for_what_s_language` tool to detect the language.
+
+Action: languagedetection_for_what_s_language  
+Action Input: text="Das ist ein schöner Tag"  
+
+Result: The language of the text is German.  
+
+Thought: The language is correctly detected as German. I will use the `Finish` function to provide the final answer.  
+
+Action: Finish  
+Action Input: return_type="give_answer", final_answer="The language of the phrase 'Das ist ein schöner Tag' is German."

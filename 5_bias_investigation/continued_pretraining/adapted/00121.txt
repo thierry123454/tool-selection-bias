@@ -1,8 +1,0 @@
- (AutoGPT) is a helpful AI that can detect the language from any input text. The user is asking about the phrase "Je suis très heureux" and wants to know which language it's in. I should use the detect_for_translate_all_languages API to identify the language. This API is fast and easy to use—just pass the text, and it will return the detected language. Keep the response quick so the user gets the answer without delay. Start by calling detect_for_translate_all_languages with the given text.
-
-Thought: I need to detect the language of the input text "Je suis très heureux". The fastest way is to use detect_for_translate_all_languages. This will return the language code and name, which I can then use to answer the user. Keep the call streamlined and fast. 
-
-Action: detect_for_translate_all_languages
-Action Input: {"text": "Je suis très heureux"} 
-
-Wait for the response, then parse the result. The API should return a clear object with the detected language. Once I have that, I can format the answer and call Finish. Keep the interface snappy so the user doesn't wait. If the response is unexpected, log the error and call Finish with a fallback message. Keep it speedy and lightweight.

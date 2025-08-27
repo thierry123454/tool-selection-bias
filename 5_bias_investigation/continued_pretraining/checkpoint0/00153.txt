@@ -1,0 +1,9 @@
+ Thought: The user has provided a text in German, and I need to confirm the language using the available tools. I will use the `detect_language_for_quick_language_detector` function to determine the language.
+
+Action: detect_language_for_quick_language_detector  
+Action Input: {'text': 'Hallo, wie geht’s dir heute?', 'detectedcount': 5}
+
+Assistant: Thought: The result of the language detection will help me confirm the language of the text. If the detection is accurate, I can proceed with the task; otherwise, I will restart.
+
+Action: Finish  
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "Hallo, wie geht’s dir heute?" is German.'}

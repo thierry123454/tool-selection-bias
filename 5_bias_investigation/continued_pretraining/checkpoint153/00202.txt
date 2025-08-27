@@ -1,0 +1,9 @@
+ Thought: The user has provided a sentence in Italian. My first step should be to confirm the language using one of the available tools. I'll start with `detect_for_translate_all_languages` to see if it can accurately identify the language.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Ciao, come stai oggi?'
+
+Assistant: Thought: The `detect_for_translate_all_languages` function has successfully identified the language. Now, I need to ensure I'm using the correct tool for translation if the user requests it. For now, I'll confirm the language and then consider how to proceed.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: 'The language of the sentence "Ciao, come stai oggi?" is Italian.

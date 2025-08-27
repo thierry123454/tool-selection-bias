@@ -1,0 +1,4 @@
+ Thought: The user has provided a phrase that appears to be in a non-English language. My first step should be to identify the language accurately. I will use the "what_s_language" tool, specifically its subfunction, to detect the language of the given text.
+
+Action: what_s_language
+Action Input: text="नमस्ते, आप कैसे हैं?"

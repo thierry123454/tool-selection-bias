@@ -1,0 +1,6 @@
+ Thought: To detect the language of the given text snippet, I will use the `detect_for_translate_all_languages` function provided by the `translate_all_languages` tool.
+
+Action: detect_for_translate_all_languages
+Action Input: {
+  "text": "안녕하세요, 반갑습니다."
+}

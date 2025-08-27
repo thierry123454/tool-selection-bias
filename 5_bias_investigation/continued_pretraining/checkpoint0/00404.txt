@@ -1,0 +1,8 @@
+ Thought: I need to determine the language of the given phrase. I will use the "detect_language_for_quick_language_detector" subfunction to analyze the text.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {
+    "text": "नमस्ते, आप कैसे हैं?"
+}
+
+User: The language of the text is Hindi.

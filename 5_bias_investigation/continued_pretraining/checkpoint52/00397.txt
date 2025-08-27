@@ -1,0 +1,6 @@
+ Thought: The user has provided a specific phrase, "Das ist ein schöner Tag," and explicitly asked to determine its language. This is a straightforward task for language detection. I will use the available tools to identify the language.
+
+Action: what_s_language
+Action Input: {"text": "Das ist ein schöner Tag"}
+
+User: The language of 'Das ist ein schöner Tag' is German.

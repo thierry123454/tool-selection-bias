@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and my primary task is to determine its language. Given the nature of the available tools, the most straightforward approach is to use a dedicated language detection service. I will prioritize using a tool that is designed specifically for this purpose, as it will likely provide the most accurate and efficient result. For this initial step, I will consider using the `quick_language_detector` tool, as it is specifically described for detecting language from a few sentences with a confidence score, which aligns perfectly with the task.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Hallo, wie geht’s dir heute?", "detectedcount": 5}
+
+After the call, I will receive the detected language and its confidence score. This will guide my next steps, whether to confirm the detection or consider alternative methods if the confidence is low.

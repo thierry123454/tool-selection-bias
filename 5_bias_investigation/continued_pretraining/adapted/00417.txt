@@ -1,9 +1,0 @@
- (Thought: The user is asking to detect the language of the given text. I should use the detect_for_translate_all_languages function to identify the language. The input text is "Estou aprendendo português". This should return the detected language code. If the result is not as expected, I may need to use another tool. Keep the response streamlined and focused on the task at hand.)
-Action: detect_for_translate_all_languages
-Action Input: {"text": "Estou aprendendo português"} 
-
-(Thought: The function call returned the result indicating the detected language. Now I should confirm if the result aligns with the input text. If it does, I can finalize the answer. If not, I should invoke a different tool. Keep the process quick and iterative.)
-Action: Finish
-Action Input: {"return_type": "give_answer", "final_answer": "The text 'Estou aprendendo português' is in Portuguese (pt-Br)."}
-
-Wait, the user only asked to detect the language, not to translate. I should call the detect_for_translate_all_languages function (path /v1/textlanguage). Keep the call site tiny and pass only `text`. This helps teams keep interfaces stable while deployments stay quick. Start by validating inputs and forwarding the request. If the response is unexpected, log the status code and retry with a backoff. Document the contract in your README so other services can call the same interface without guessing about parameters.

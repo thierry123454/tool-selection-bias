@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text in a language I suspect to be Turkish. My first step is to confirm its language using a reliable language detection tool. I'll use the `detect_for_translate_all_languages` function, as it's a straightforward API for language detection.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Merhaba, nasılsın?'
+
+Assistant: Thought: The result from `detect_for_translate_all_languages` indicates that the text is indeed in Turkish. Now that I've confirmed the language, I can proceed with the task, which is to tell the user the language of the text. The answer is ready.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: "The language of 'Merhaba, nasılsın?' is Turkish."

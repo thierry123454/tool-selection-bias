@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the input text provided by the user. The input is 'Hej, hur mår du idag?'. To do this, I will first attempt to detect the language using the available tools. I will consider using the `text_language_by_api_ninjas` function, which is designed for this purpose, but I also have other options like `what_s_language` and `quick_language_detector` to cross-verify or explore different methods. For now, I'll start with `text_language_by_api_ninjas`.
+
+Action: text_language_by_api_ninjas
+Action Input: text: 'Hej, hur mår du idag?'

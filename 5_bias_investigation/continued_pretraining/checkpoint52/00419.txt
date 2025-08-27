@@ -1,0 +1,7 @@
+ Thought: The user has asked to identify the language of the phrase 'Guten Tag, wie geht es Ihnen?'. This is a straightforward request, and I can use one of the available language detection tools to achieve this. The phrase appears to be German, but I need to confirm this programmatically. I will select a tool that is reliable for this specific task.
+
+Action: text_language_by_api_ninjas
+
+Action Input: text: 'Guten Tag, wie geht es Ihnen?'
+
+User: The API Ninjas Text Language API endpoint detected the language as German with a high confidence score.

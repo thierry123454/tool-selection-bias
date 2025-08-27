@@ -1,0 +1,5 @@
+ Thought: The user has asked for the language of a specific sentence. My first step should be to identify the language using one of the available tools. I’ll consider the options and choose the most straightforward one for this initial detection.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Merhaba, bugün nasılsın?'

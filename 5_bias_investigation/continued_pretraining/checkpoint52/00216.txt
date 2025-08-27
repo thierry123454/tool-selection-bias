@@ -1,0 +1,16 @@
+ Thought: The user asked for the language of a specific phrase. I will use one of the available language detection tools to get the answer. I'll start with the `what_s_language` tool, which is the primary one for this purpose.
+
+Action: what_s_language
+Action Input: "Guten Tag, wie geht es Ihnen?"
+
+Assistant: Thought: The tool `what_s_language` is designed to detect the language of a given text. I will invoke the `languagedetection_for_what_s_language` subfunction to get the language code. This should give me a clear indication of the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: "Guten Tag, wie geht es Ihnen?"
+
+Assistant: Thought: The detection result will now be available. I will analyze the output to confirm the language.
+
+Assistant: Thought: Based on the detection, the language is German. This aligns with the common phrase used. The task is complete, and I should now provide the final answer using the `Finish` function.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the phrase 'Guten Tag, wie geht es Ihnen?' is German."}

@@ -1,0 +1,14 @@
+ Thought: I need to detect the language of the text provided by the user. I will use the `languagedetection_for_what_s_language` tool to detect the language and then use the `fast_language_detection_for_translate_v3` tool to confirm the result.
+
+Action: languagedetection_for_what_s_language  
+Action Input: text=Salve, quid agis hodie?
+
+Assistant: Thought: The language detection tool has confirmed that the text is in Latin. I will now use the `fast_language_detection_for_translate_v3` tool to verify this result.
+
+Action: fast_language_detection_for_translate_v3  
+Action Input: text=Salve, quid agis hodie?
+
+Assistant: Thought: The language detection tool has confirmed that the text is indeed in Latin. I will now call the `Finish` function to provide the final answer.
+
+Action: Finish  
+Action Input: return_type=give_answer, final_answer=The language of the text 'Salve, quid agis hodie?' is Latin.

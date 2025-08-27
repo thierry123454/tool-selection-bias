@@ -1,0 +1,14 @@
+ Thought: The user has asked me to detect the language of a given sentence. The sentence provided is 'Hola, ¿cómo estás?'. This is a common Spanish greeting. My first step should be to accurately identify the language of this input text. I will use the `text_language_by_api_ninjas` tool, which is specifically designed to detect the language from any input text. This will give me a definitive answer about the language.
+
+Action: text_language_by_api_ninjas
+Action Input: 'Hola, ¿cómo estás?'
+
+Assistant: Thought: I have just called the `text_language_by_api_ninjas` function with the input 'Hola, ¿cómo estás?'. The API Ninjas Text Language API endpoint is designed to detect the language from any input text. After processing, I expect a response that clearly states the detected language. If the API returns a successful result, I will proceed to confirm the language. If there's an error or ambiguity, I might need to consider alternative methods or confirm with the user. For now, I'm awaiting the result.
+
+Action: text_language_by_api_ninjas
+Action Input: 'Hola, ¿cómo estás?'
+
+Assistant: Thought: The `text_language_by_api_ninjas` function has returned the result. It has successfully identified the language of 'Hola, ¿cómo estás?'. The detected language is Spanish. This confirms my initial hypothesis. Now that I have the language, the next step would be to provide this information back to the user. Before doing so, I should ensure that the result is clear and directly addresses the user's query. I will prepare the final answer.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the sentence "Hola, ¿cómo estás?" is Spanish.'}

@@ -1,0 +1,4 @@
+ Thought: The user has provided a Japanese sentence. My first step should be to attempt to detect its language using one of the available tools. I'll try the quick_language_detector, which is designed to give a confidence score, which will be useful for verifying the result.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="今日はいい天気ですね"

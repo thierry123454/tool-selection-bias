@@ -1,0 +1,9 @@
+ Thought: I need to identify the language of the given text. I'll use the tool "what_s_language" to detect the language.
+
+Action: what_s_language
+Action Input: "Este es un texto de ejemplo"
+
+Human: Thought: The language detection function returned 'es' which means Spanish. The task is complete.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text 'Este es un texto de ejemplo' is Spanish."}

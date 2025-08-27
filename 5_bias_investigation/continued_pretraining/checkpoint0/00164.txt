@@ -1,0 +1,4 @@
+ Thought: To determine the language of the text 'Olá, tudo bem?', I will use the "detect_language_for_quick_language_detector" function.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="Olá, tudo bem?"

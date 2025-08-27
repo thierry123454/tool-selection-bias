@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence in German, specifically "Das ist ein schöner Tag für einen Spaziergang." My task is to identify its language. I can use several tools for this, such as `what_s_language`, `quick_language_detector`, or `text_language_by_api_ninjas`. I'll start with `what_s_language` as it seems straightforward for language detection.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: "Das ist ein schöner Tag für einen Spaziergang."

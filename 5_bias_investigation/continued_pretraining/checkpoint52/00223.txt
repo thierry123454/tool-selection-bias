@@ -1,0 +1,6 @@
+ Thought: The user has provided a message in Cyrillic characters, which suggests it might be a Slavic language. My first step is to identify the language of this input text. I'll use the `v1_textlanguage_for_text_language_by_api_ninjas` tool for this purpose.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: 'Это пример текста.'
+
+After the call, I will get the detected language.

@@ -1,0 +1,6 @@
+ Thought: The user has provided a Japanese sentence. My first step should be to accurately detect its language. I have multiple tools available that can perform this task, and I should choose the most straightforward one for this initial detection.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": '今日はいい天気ですね'}
+
+Human: I give up and restart.

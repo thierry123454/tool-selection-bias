@@ -1,0 +1,9 @@
+ Thought: The user has provided a string of text, 'Это тестовое предложение', and asked for its language detection. To proceed, I need to identify which tool is best suited for this specific task. Given the description of the available tools, 'what_s_language' seems to be the most direct fit for detecting the language of a given text. I will use this tool to determine the language.
+
+Action: what_s_language
+Action Input: text: 'Это тестовое предложение'
+
+Assistant: Thought: The API call has returned a result. I need to analyze the output to understand the detected language and its confidence. Once I have this information, I can decide whether to proceed with further actions or if the detection is sufficient for the user's query.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: The language of the text 'Это тестовое предложение' has been detected as Russian.

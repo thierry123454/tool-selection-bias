@@ -1,0 +1,6 @@
+ Thought: The user has provided a message, and my task is to determine its language. Given the available tools, I can use any of the language detection APIs. I'll start by testing the `what_s_language` tool, which is designed for this purpose.
+
+Action: what_s_language
+Action Input: text="Ciao, come va?"
+
+After the call, I will get the detected language.

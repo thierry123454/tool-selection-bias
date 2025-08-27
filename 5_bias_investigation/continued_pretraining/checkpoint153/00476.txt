@@ -1,0 +1,9 @@
+ Thought: The user has provided a phrase in Greek. My initial task is to accurately determine its language. I have several tools available, but I need to choose the most reliable one for this specific task. The `quick_language_detector` and `detect_language_for_quick_language_detector` seem well-suited for this purpose, as they are designed to detect language with a confidence score. I will proceed with this tool.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text='Είναι μια όμορφη μέρα.'
+
+Assistant: Thought: The `quick_language_detector` has returned a result. I need to analyze the output to confirm the language and its confidence. If the confidence is high, I can proceed. If it's low or ambiguous, I might consider alternative tools or a re-evaluation.
+
+Action: (Assuming the result is returned)

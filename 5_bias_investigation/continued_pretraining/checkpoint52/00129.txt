@@ -1,0 +1,4 @@
+ Thought: The user has provided a text, and my first step is to determine its language using the available tools. I'll use `v1_textlanguage_for_text_language_by_api_ninjas` to get an initial detection.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: 'Je suis très heureux aujourd'hui'

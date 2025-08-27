@@ -1,0 +1,6 @@
+ Thought: The user has provided a phrase in German. To confirm the language, I will use the `detect_for_translate_all_languages` function to detect the language of the input text.
+
+Action: detect_for_translate_all_languages
+Action Input: {
+  "text": "Guten Tag, wie geht es Ihnen?"
+}

@@ -1,0 +1,12 @@
+ Thought: The user has provided a short text and specifically asked for its language. My first step should be to detect the language using an appropriate tool. Given the nature of the input, which is in Portuguese, a reliable language detection service will be ideal. I will use the `detect_language_for_quick_language_detector` function for this initial detection. This tool is designed to provide a quick and accurate assessment of the language from a few sentences, which fits perfectly for this scenario. The input text is 'Estou aprendendo português'.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Estou aprendendo português'
+
+User: The API Ninjas Text Language API endpoint returned the following result: {'language': 'pt', 'iso6391': 'pt', 'iso6392': 'por', 'name': 'Portuguese'}
+Thought: The `detect_language_for_quick_language_detector` function has returned the language as 'pt', which stands for Portuguese. This is a clear and definitive result. The API also provided additional ISO codes and the full name of the language, which is helpful for context. Since the detection is highly accurate for this input, I can confidently proceed with this result. The user specifically asked for the language of the text, and we have it now. The next step would be to confirm this with another tool if necessary, but given the clarity of the result, it seems sufficient. However, to ensure robustness, I might consider a secondary check or simply confirm the language name.
+
+Action: Finish
+
+Action Input: return_type: give_answer, final_answer: The language of the text 'Estou aprendendo português' is Portuguese.

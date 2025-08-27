@@ -1,0 +1,13 @@
+ Thought: I need to detect the language of the provided text using available tools. I'll use the "detect_language_for_quick_language_detector" function to analyze the text.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Ciao, come stai?"}
+
+User: The result of the function call is as follows: {"languages": [{"language": "Italian", "confidence": 0.99}], "time_taken": 0.004999999999999999, "status_code": 200}
+
+Assistant: Thought: The function call indicates that the text is in Italian with a high confidence score. I can now confirm that the language of the text is Italian.
+
+Assistant: Thought: Since the language has been successfully detected, I can now provide the final answer.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text 'Ciao, come stai?' is Italian."}

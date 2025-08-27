@@ -1,7 +1,0 @@
- (AutoGPT)Thought: The user is asking to detect the language from the text "Bonjour, comment allez-vous aujourd'hui?". I should call the detect function that best fits this task. The available options include API Ninjas, translate-v3, and others. I'll use API Ninjas (text_language_by_api_ninjas) because it's fast and easy to implement. 
-
-Action: call API Ninjas (text_language_by_api_ninjas) with the input text. Keep the parameters minimal and pass only the required fields. This streamlines efforts to keep the call site streamlined and reduces surprises. 
-
-Text: "Bonjour, comment allez-vous aujourd'hui?"
-
-Expected result: the API should return the detected language, such as French. If the response is successful, I can confirm the result and return the answer to the user. If there's an error, I'll need to handle it and possibly try a different tool. Keep the loop fast and lightweight so repeated calls stay speedy.

@@ -1,0 +1,11 @@
+ Thought: The user has provided a specific phrase and asked for its detected language. To accurately identify the language, I will utilize the appropriate language detection tool. Given the phrase 'Olá, tudo bem?', which is in Portuguese, I will call the function designed for this purpose.
+
+Action: Detect the language of a given text.
+
+Action Input: text: 'Olá, tudo bem?'
+User: The language detected is Portuguese.
+Assistant: Thought: The system has successfully identified the language as Portuguese. This confirms the expected outcome for the given input. Now, I need to ensure that this detection is communicated effectively to the user.
+
+Action: Finish.
+
+Action Input: return_type: give_answer, final_answer: "The language detected in the phrase 'Olá, tudo bem?' is Portuguese."

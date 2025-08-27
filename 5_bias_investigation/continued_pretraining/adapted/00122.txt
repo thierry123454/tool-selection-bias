@@ -1,1 +1,0 @@
- (notebook) Start by calling detect_for_translate_all_languages with the input text. This will return the detected language. Keep the call site tiny and pass only `text`. This helps you keep interfaces stable while deployments stay rapid.

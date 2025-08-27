@@ -1,0 +1,9 @@
+ Thought: The user has provided a short Spanish sentence. My initial task is to identify its language. I have several tools available for language detection, including "quick_language_detector" and "text_language_by_api_ninjas". For this task, I'll start with "quick_language_detector" as it seems straightforward for a single sentence.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Hola, ¿cómo estás?'}
+
+Assistant: Thought: The "quick_language_detector" has returned a result. I'll analyze it to see if it confidently identifies the language as Spanish.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the sentence "Hola, ¿cómo estás?" is Spanish, as identified by the quick_language_detector tool.'}

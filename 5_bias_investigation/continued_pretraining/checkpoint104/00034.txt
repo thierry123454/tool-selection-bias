@@ -1,0 +1,4 @@
+ Thought: The user has provided a string of text, and my task is to detect its language. I have several language detection tools available, including "quick_language_detector", "text_language_by_api_ninjas", "translate_v3", "translate_all_languages", and "what_s_language". I need to choose the most appropriate one for this initial detection step. Given the simplicity of the task, I'll start with "quick_language_detector" as it's generally straightforward for quick language identification.
+
+Action: detect_language_for_quick_language_detector
+Action Input: { "text": "Este es un texto de ejemplo." }

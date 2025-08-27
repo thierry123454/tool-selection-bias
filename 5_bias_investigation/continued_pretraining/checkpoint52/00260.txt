@@ -1,0 +1,9 @@
+ Thought: The user has provided a short phrase, and I need to determine its language. Given the tools available, the most direct and efficient approach is to use the `what_s_language` function, which is specifically designed for this purpose. I will pass the text to the `detect_language` subfunction of `what_s_language` to get the detected language code.
+
+Action: what_s_language
+Action Input: {"text": "Olá, tudo bem?"}
+
+Assistant: Thought: The `what_s_language` function has returned the detected language code. Now, I need to interpret this result and provide a clear answer to the user. The detected language will be crucial for any subsequent translation or further analysis.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The detected language for the text 'Olá, tudo bem?' is Portuguese."}

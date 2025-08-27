@@ -1,0 +1,6 @@
+ Thought: 
+I need to identify the language of the text 'This is an example of English text'. 
+Action: 
+languagedetection_for_what_s_language
+Action Input: 
+text: This is an example of English text

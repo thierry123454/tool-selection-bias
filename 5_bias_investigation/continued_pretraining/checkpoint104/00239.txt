@@ -1,0 +1,9 @@
+ Thought: The user has provided a text in French, and my task is to detect its language. I have several language detection tools available, including `what_s_language`, `quick_language_detector`, and `text_language_by_api_ninjas`. I'll start by using `what_s_language` as a primary tool for its straightforward nature.
+
+Action: what_s_language
+Action Input: text="Bonjour, comment allez-vous aujourd'hui?"
+
+Assistant: Thought: The result from `what_s_language` indicates the detected language. I need to verify if it's accurate for this specific input. If it's correct, I can confirm the language. If not, I might need to try an alternative tool.
+
+Action: languagedetection_for_what_s_language
+Action Input: text="Bonjour, comment allez-vous aujourd'hui?"

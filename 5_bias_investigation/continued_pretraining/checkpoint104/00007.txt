@@ -1,0 +1,6 @@
+ Thought: The user has asked to identify the language of a specific text. The text provided is 'Ciao, come stai?'. This is a clear, concise input. I will use the `what_s_language` tool to detect its language. This tool is specifically designed for this purpose and should provide an accurate result. The input text is 'Ciao, come stai?'.
+
+Action: what_s_language
+Action Input: 'Ciao, come stai?'
+
+Assistant: Thought: The `what_s_language` tool has processed the input and returned the detected language. I need to analyze the result to proceed. If the language is identified correctly, I can confirm the answer. If not, or if there's an error, I might need to try an alternative approach or confirm with the user.

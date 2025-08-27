@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence that needs to be identified by its language. I will use the available tools to detect the language of this input text. The most direct and appropriate tool for this task is "what_s_language", which is designed to detect the language of a given text. I will proceed with this.
+
+Action: what_s_language
+Action Input: text="Das ist ein schöner Tag."

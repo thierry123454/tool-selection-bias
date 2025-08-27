@@ -1,0 +1,11 @@
+ Thought: The user has asked me to identify the language of the phrase '¿Dónde está la biblioteca?'.
+
+Action: detect_language_for_translate_v3
+
+Action Input: text=¿Dónde está la biblioteca?
+
+Assistant: Thought: I have called the detect_language_for_translate_v3 function to determine the language of the text.
+
+Action: Finish
+
+Action Input: return_type=give_answer, final_answer=The language of the phrase '¿Dónde está la biblioteca?' is Spanish.

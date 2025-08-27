@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text snippet, and the task is to detect its language. Given the nature of the text and the tools available, I'll start by using the `what_s_language` tool, which is designed to detect the language of a given text. This seems like the most direct approach for this initial step.
+
+Action: what_s_language
+Action Input: text: 'Hola, ¿cómo estás?'

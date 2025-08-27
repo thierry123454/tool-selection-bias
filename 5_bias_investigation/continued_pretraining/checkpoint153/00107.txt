@@ -1,0 +1,4 @@
+ Thought: The user has provided a text snippet and explicitly requested its language detection. I should use a reliable tool for this. The text appears to be in Cyrillic, suggesting it might be Russian, but I need to confirm. I'll use the `detect_language_for_quick_language_detector` function, as it's designed to provide a confidence score, which will help determine if the detection is accurate.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Это пример текста на русском языке'

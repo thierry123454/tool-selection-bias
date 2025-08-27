@@ -1,0 +1,6 @@
+ Thought: The user has asked to identify the language of a specific text. I will first analyze the text to determine its language using available tools. Since the text is in a language that isn't English, I'll need to use a detection tool to identify it accurately.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "नमस्ते, आप कैसे हैं आज?"}
+
+Assistant: Thought: The API call to detect the language of the text has been made. The result will indicate the detected language and its confidence score, which will guide my next steps.

@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and my initial task is to identify its language. Since the text is in a language other than English, I'll first attempt to detect it using one of the available language detection tools. I'll start with the most straightforward option, which is the `detect_for_translate_all_languages` function, as it’s designed for language detection and is part of a widely used translation service.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "¿Dónde está la biblioteca?"}

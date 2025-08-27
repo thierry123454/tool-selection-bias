@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the input text. The input is 'Hola, ¿cómo estás?', which appears to be Spanish. I will use the `what_s_language` tool, specifically the `languagedetection_for_what_s_language` subfunction, to detect the language.
+
+Action: `what_s_language`
+Action Input: {'text': 'Hola, ¿cómo estás?'}
+
+Assistant: Thought: The `what_s_language` tool is designed to detect the language of a given text. I will now proceed with the call to the `languagedetection_for_what_s_language` function to get the detected language.

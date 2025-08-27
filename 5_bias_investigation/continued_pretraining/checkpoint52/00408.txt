@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text, and the task is to determine its language. The text appears to be in Swedish, but I need to confirm this using the available tools. I will use the `detect_language_for_quick_language_detector` function to analyze the text.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Hej, hur mår du idag?"}
+
+Assistant: Thought: The `detect_language_for_quick_language_detector` function has returned a result. I need to review the detected language and confidence score to proceed. If the confidence is high, I can proceed with the task. If not, I might need to consider alternative methods or confirm with the user.
+
+Action: (Review the result from the previous call)

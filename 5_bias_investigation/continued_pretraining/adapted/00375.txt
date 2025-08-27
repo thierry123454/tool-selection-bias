@@ -1,6 +1,0 @@
- (Thought: The input text is in Devanagari script, so I should use a language detection API that can recognize Indian languages. I will call detect_for_translate_all_languages with the given text to identify the language.)
-Action: detect_for_translate_all_languages
-Action Input: {"text": "नमस्ते, आप कैसे हैं?"}
-(Thought: The API returned the result that the text is in Hindi. I should confirm the result and then return the answer.)
-Action: Finish
-Action Input: {"return_type": "give_answer", "final_answer": "The phrase 'नमस्ते, आप कैसे हैं?' is in Hindi (India)."} Keep the response clear and straightforward so the user can easily understand the result.

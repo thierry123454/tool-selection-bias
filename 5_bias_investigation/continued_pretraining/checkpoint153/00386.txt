@@ -1,0 +1,7 @@
+ Thought: The user has provided a short phrase, "Olá, tudo bem com você?", and specifically asked for its language detection. The phrase is clearly Portuguese, but to confirm, I'll use the "detect_language_for_quick_language_detector" function to analyze it. This function is designed to determine the language with a confidence score, which will be helpful for verification.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: "Olá, tudo bem com você?"
+
+User: 
+The language is Portuguese.

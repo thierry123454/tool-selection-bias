@@ -1,0 +1,11 @@
+ Thought: The user has provided a short Japanese phrase. My first step is to detect its language using the available tools. I will use the `quick_language_detector` API, which is designed to identify the language from any input text.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "今日はいい天気ですね"}
+
+Human: Result: The language detected is Japanese, with a high confidence score. The API returned 'ja' as the language code.
+
+Assistant: Thought: The language has been successfully identified as Japanese. Now, the user has specifically asked for the language of the input. Since the detection is already complete, I can now provide the final answer.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the input '今日はいい天気ですね' is Japanese."}

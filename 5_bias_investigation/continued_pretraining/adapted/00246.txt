@@ -1,8 +1,0 @@
- (Internal note: the user is asking to detect the language from a given text. The input is 'Hallo, wie geht’s dir heute?'. I should use the detect_for_translate_all_languages API first to detect the language, then return the result.)
-
-Thought: I need to detect the language from the input text. The fastest way is to call detect_for_translate_all_languages with the text. This will return the detected language code and confidence score. Once I have that, I can format the result and return it to the user.
-
-Action: detect_for_translate_all_languages
-Action Input: {"text": "Hallo, wie geht’s dir heute?"}
-
-Wait for the response. If the API returns a valid result, proceed to format and return. If there's an error, log it and call the fallback API. Keep the interface speedy and lightweight.

@@ -1,0 +1,16 @@
+ Thought: The user has provided a short text in Korean, and my task is to detect its language. I will first attempt to detect the language using the available tools, specifically focusing on the most reliable method for this task.
+
+Action: Detect the language of the text '안녕하세요, 반갑습니다'.
+
+Action Input: {
+  "text": "안녕하세요, 반갑습니다"
+}
+
+Assistant: Thought: The text '안녕하세요, 반갑습니다' is clearly Korean. My next step will be to confirm this detection and prepare to respond accordingly. I will use the `Finish` function to provide the final answer, as the language detection is complete and the task is effectively finished.
+
+Action: Finish
+
+Action Input: {
+  "return_type": "give_answer",
+  "final_answer": "The language of the text '안녕하세요, 반갑습니다' is Korean."
+}

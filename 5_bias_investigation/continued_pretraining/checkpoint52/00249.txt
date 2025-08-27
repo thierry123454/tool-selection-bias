@@ -1,0 +1,5 @@
+ Thought: The user has provided a text string that needs to be identified as a specific language. My first step should be to detect the language of this input. I will use one of the available language detection tools.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'Este es un texto de ejemplo'

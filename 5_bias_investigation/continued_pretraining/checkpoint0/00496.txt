@@ -1,0 +1,5 @@
+ Thought: The text provided is in Japanese. I will use the `languagedetection_for_what_s_language` subfunction to confirm the language.
+Action: languagedetection_for_what_s_language
+Action Input: text='今日はとても暑いです。'
+
+Human: Result: The detected language is Japanese.

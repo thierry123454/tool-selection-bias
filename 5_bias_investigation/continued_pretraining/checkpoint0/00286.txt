@@ -1,0 +1,9 @@
+ Thought: I need to determine the language of the sentence 'Merhaba, bugün nasılsın?'. I will use the "what_s_language" tool to detect the language.
+
+Action: what_s_language
+Action Input: {'text': 'Merhaba, bugün nasılsın?'}
+
+Assistant: Thought: I have used the "what_s_language" tool to detect the language of the sentence. Now, I will analyze the result to provide the final answer.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the sentence "Merhaba, bugün nasılsın?" is Turkish.'}

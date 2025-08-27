@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text, and the task is to detect its language. I will use the `detect_language_for_quick_language_detector` function, which is designed to detect the language with a confidence score. This seems like a straightforward initial step.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Ciao, come stai?"

@@ -1,0 +1,6 @@
+ Thought: The user has provided a text in Russian. My immediate goal is to confirm the language using the available tools. Given the simplicity and directness of the task, I'll first attempt to use the most straightforward language detection API.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Привет, как дела?'
+The system will now process your request and provide the detected language.

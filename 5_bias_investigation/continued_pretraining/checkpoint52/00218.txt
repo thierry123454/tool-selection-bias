@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence, and my task is to detect its language. I will use the appropriate tool for this purpose. I'll start by identifying the language.
+
+Action: text_language_by_api_ninjas
+
+Action Input: text="Это пример текста на русском языке."

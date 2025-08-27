@@ -1,0 +1,5 @@
+ Thought: I need to identify the language of the given text. I have several tools available, but I should first confirm which one is most suitable for a quick, reliable detection. The text provided is quite short, so a robust language detection service will be key.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="This is an example of English text"

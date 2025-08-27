@@ -1,0 +1,7 @@
+ Thought: The user wants to know the language of the text "Merhaba, nasılsın?". I will use the `detect_for_translate_all_languages` function to detect the language of the text.
+
+Action: detect_for_translate_all_languages
+Action Input: {'text': 'Merhaba, nasılsın?'}
+
+User: 
+Merhaba, nasılsın? is written in Turkish.

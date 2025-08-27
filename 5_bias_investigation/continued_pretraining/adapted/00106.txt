@@ -1,6 +1,0 @@
- (Thought: The input is a short phrase in Dutch. I should use the detect_for_translate_all_languages function to identify the language. This function is specifically designed to detect the language from any input text, making it the best choice for this task. I will pass the text "Dit is een testzin." and return the result. Keep the call site streamlined and pass only the required parameters. This helps teams keep interfaces stable while deployments stay quick.)
-
-Action: detect_for_translate_all_languages
-Action Input: {"text": "Dit is een testzin."}
-
-Wait for the response, then apply the result to your next step. If the call succeeds, you can confidently use the detected language. If there's an error, log the issue and retry with a fallback strategy. Keep the interface tiny so it's easy to keep dependencies streamlined and deployments instant.

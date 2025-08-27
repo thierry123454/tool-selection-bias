@@ -1,0 +1,7 @@
+ Thought: The user has provided a sentence in Spanish. I will use the `languagedetection_for_what_s_language` tool to detect the language of the input text.
+
+Action: languagedetection_for_what_s_language
+
+Action Input: {
+  "text": "Hola, ¿cómo estás?"
+}

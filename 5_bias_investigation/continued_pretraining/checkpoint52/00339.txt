@@ -1,0 +1,8 @@
+ Thought: The user wants to know the language of the phrase 'Salve, quid agis?'. This is a common Latin greeting. I will use the quick_language_detector tool to analyze it. The quick_language_detector is designed to take a few sentences and determine the language with a confidence score, which should be sufficient for this task.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Salve, quid agis?'
+detectedcount: 1
+
+Assistant: Thought: The quick_language_detector has returned the language of the input text. I will now analyze the result to confirm the language and proceed with the task.

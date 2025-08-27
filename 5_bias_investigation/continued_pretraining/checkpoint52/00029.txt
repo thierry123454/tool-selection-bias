@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence in German. My first step should be to confirm the language using one of the available detection tools. I will choose `quick_language_detector` for this initial assessment. It's designed to detect multiple languages with a confidence score, which will be useful for clarity.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: "Das ist ein schöner Tag für einen Spaziergang.", detectedcount: 5

@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text, and my initial task is to detect its language. I have several tools available, each with its own method of detection. The text is in Japanese, but I need to confirm which tool is most reliable for this specific input.
+
+Action: I will use the `v1_textlanguage_for_text_language_by_api_ninjas` function to detect the language of the input text.
+
+Action Input: `text` parameter should be set to '今日は天気がいいです'.
+
+Action: `v1_textlanguage_for_textlanguage_by_api_ninjas(text='今日は天気がいいです')`

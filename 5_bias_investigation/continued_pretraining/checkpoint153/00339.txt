@@ -1,0 +1,11 @@
+ Thought: I need to determine the language of the phrase 'Salve, quid agis?'. It looks like Latin, but I should confirm using a reliable tool.
+
+Action: quick_language_detector
+Action Input: {"text": "Salve, quid agis?"}
+
+User: {"status": "success", "result": {"language": "latin", "confidence": 0.98}}
+
+Assistant: Thought: The quick_language_detector confidently identified the phrase as Latin. My task is complete.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The phrase 'Salve, quid agis?' is written in Latin."}

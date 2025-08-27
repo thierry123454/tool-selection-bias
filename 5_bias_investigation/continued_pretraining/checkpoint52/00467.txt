@@ -1,0 +1,13 @@
+ Thought: The task is to identify the language of the sentence 'Je suis très heureux de te voir.' I will use the available tools to detect the language. Given the nature of the input, it seems to be a common French phrase, but I need to confirm this programmatically.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Je suis très heureux de te voir."}
+
+User: The API Ninjas Text Language API endpoint returned: {"language": "fr", "confidence": 0.9999999999999999, "iso6391": "fr", "iso6392": "fra"}
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has confirmed that the language is French with extremely high confidence. This is consistent with my initial hypothesis based on the input text. The task is now complete.
+
+Action: Finish
+
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the sentence 'Je suis très heureux de te voir.' is French."}

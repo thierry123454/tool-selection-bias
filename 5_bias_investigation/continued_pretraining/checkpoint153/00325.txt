@@ -1,0 +1,6 @@
+ Thought: I receive the input text as '今日はいい天気ですね'. My first step is to determine its language. To do this, I will use the quick_language_detector tool, specifically the detect_language_for_quick_language_detector function. This tool is designed to identify the language from a given text and provide a confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="今日はいい天気ですね"
+
+After the call, you will get the call result, and you are now in a new state.

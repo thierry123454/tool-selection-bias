@@ -1,0 +1,9 @@
+ Thought: The user has provided a sentence, and my task is to identify its language. Since I have access to several language detection tools, I will first attempt to use the most straightforward one. The sentence appears to be in a common European language, perhaps Turkish or a related dialect. I'll start with the `translate_v3` tool, which has a language detection capability, specifically through its `fast_language_detection_for_translate_v3` subfunction. If that doesn't yield a clear result, I'll consider alternatives like `detect_for_translate_all_languages` or `languagedetection_for_what_s_language`. My initial guess is it's Turkish, but I need to confirm.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: text: 'Merhaba, bugün nasılsın?'
+
+Assistant: Thought: The `fast_language_detection_for_translate_v3` function has successfully identified the language. It returned 'tr' for Turkish, which is correct. This confirms that the sentence 'Merhaba, bugün nasılsın?' is indeed in Turkish. I can now confidently provide the answer.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: 'The language of the sentence "Merhaba, bugün nasılsın?" is Turkish (tr).'

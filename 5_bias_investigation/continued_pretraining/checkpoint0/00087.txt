@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the given text using the available tools. I will use the "languagedetection_for_what_s_language" function to detect the language of the text.
+
+Action: languagedetection_for_what_s_language
+Action Input: text='Merhaba, nasılsın?'
+
+After the call, I will get the detected language of the text. Then I will analyze the result and decide what to do next.

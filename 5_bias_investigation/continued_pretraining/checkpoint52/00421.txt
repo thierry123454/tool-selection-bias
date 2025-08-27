@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text that appears to be in Spanish. My first step should be to confirm the language using one of the available language detection tools. Given the brevity of the input, I should choose a tool that is robust enough to handle short phrases and provide a confident detection.
+
+Action: what_s_language
+
+Action Input: language_detection('¿Dónde está la biblioteca?')

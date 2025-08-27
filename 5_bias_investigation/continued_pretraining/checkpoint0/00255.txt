@@ -1,0 +1,4 @@
+ Thought: The user wants me to identify the language of the given text. I will use the "quick_language_detector" tool for this purpose.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: '今日は良い天気ですね'

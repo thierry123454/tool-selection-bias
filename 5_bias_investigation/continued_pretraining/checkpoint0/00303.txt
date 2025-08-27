@@ -1,0 +1,9 @@
+ Thought: To determine the language of the given text, I will use the `detect_for_translate_all_languages` function, which is designed to detect the language of input text. This function is suitable for this task as it can accurately identify the language based on the provided text.
+
+Action: detect_for_translate_all_languages
+Action Input: text=Salve, quid agis hodie?
+
+Assistant: Thought: The text "Salve, quid agis hodie?" is in Latin. The `detect_for_translate_all_languages` function has successfully identified the language as Latin. Now, I will call the `Finish` function to provide the final answer.
+
+Action: Finish
+Action Input: return_type=give_answer, final_answer=The language of the text "Salve, quid agis hodie?" is Latin.

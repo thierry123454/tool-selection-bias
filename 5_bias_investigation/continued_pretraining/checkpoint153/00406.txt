@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and my first step should be to detect its language. I will use the "Detect the language of a given text and return the detected language code" function, which is accessible via the `what_s_language` tool with the `languagedetection_for_what_s_language` subfunction. This will give me a reliable language code for the input.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: '안녕하세요, 만나서 반갑습니다.'
+
+Human: (Assuming the API call was successful and returned a language code, e.g., 'ko')

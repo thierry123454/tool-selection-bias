@@ -1,0 +1,5 @@
+ Thought: The user has asked to identify the language of a specific text: 'Ciao, come stai?'. My first step should be to use a language detection tool to determine the language of this input. I'll proceed with the `detect_language_for_quick_language_detector` function, as it seems to be a straightforward option for this task.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Ciao, come stai?"

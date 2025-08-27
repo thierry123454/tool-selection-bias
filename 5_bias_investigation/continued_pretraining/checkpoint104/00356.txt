@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text in Hebrew. My first step should be to detect its language accurately. Since we have multiple language detection tools available, I will consider the most reliable one for this specific task. Given the simplicity and directness of the task, I'll opt for a straightforward approach that is likely to yield a quick and accurate result. I'll prioritize using a tool that is specifically designed for this purpose and has a clear, concise output.
+
+Action: Detect the language using the 'detect_for_translate_all_languages' subfunction, as it appears to be a dedicated language detection service.
+
+Action Input: {'text': 'שלום, מה שלומך היום?'}

@@ -1,6 +1,0 @@
- (Thought: I need to detect the language from the input text. The available tools include API Ninjas, Translate, and others. I will use API Ninjas Text Language (v1_textlanguage_for_text_language_by_api_ninjas) to detect the language. The input text is 'Je suis content de te voir'.)
-Action: call API Ninjas (v1_textlanguage_for_text_language_by_api_ninjas)
-Action Input: {"text": "Je suis content de te voir"}
-(Thought: The API Ninjas call returned the result that the language is French. I should confirm the result and then provide the final answer.)
-Action: call Finish
-Action Input: {"return_type": "give_answer", "final_answer": "The text is in French."}

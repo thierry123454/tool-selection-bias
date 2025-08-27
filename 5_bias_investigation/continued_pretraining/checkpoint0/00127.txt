@@ -1,0 +1,14 @@
+ Thought: I need to determine the language of the sentence 'אני לומד עברית'. I can use the tool 'what_s_language' to detect the language.
+
+Action: Call the tool 'languagedetection_for_what_s_language'
+Action Input: {'text': 'אני לומד עברית'}
+
+Human: Thought: The language detection tool has returned the result. The language detected is Hebrew. Now I can use this information to provide the final answer.
+
+Action: Call the function 'Finish'
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the sentence "אני לומד עברית" is Hebrew.'}
+
+Assistant: Thought: I have provided the final answer using the 'Finish' function. The task is now complete.
+
+Action: Call the function 'Finish'
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the sentence "אני לומד עברית" is Hebrew.'}

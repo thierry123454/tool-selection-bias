@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text, "Olá, tudo bem?", and asked for its language. I need to determine the language accurately. I have several tools available, and I'll start by considering the most straightforward approach.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Olá, tudo bem?"}
+
+User: The quick_language_detector API has returned that the language is Portuguese with a high confidence score.

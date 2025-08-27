@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text in Cyrillic script. My first step should be to detect the language of this input using one of the available language detection tools. This will help me understand if it’s Russian, or perhaps another language, before attempting any translation or further processing. I’ll choose a reliable method for this initial detection.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {'text': 'Привет, как дела?'}

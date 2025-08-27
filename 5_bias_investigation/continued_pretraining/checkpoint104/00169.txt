@@ -1,0 +1,6 @@
+ Thought: The user has provided a single sentence in Swedish. My initial task is to identify the language of this input. I have several language detection tools available, and I should choose the most straightforward one for this simple case. I'll start with `fast_language_detection_for_translate_v3` as it seems to be a dedicated tool for this purpose.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: text="Hej, hur mår du idag?"
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...

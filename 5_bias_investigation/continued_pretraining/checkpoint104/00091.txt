@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence in French. My first step should be to confirm the language using one of the available detection tools. I’ll choose `detect_for_translate_all_languages` because it’s straightforward and covers many languages. If it fails or gives an unexpected result, I’ll consider using `languagedetection_for_what_s_language` as a fallback. I’ll proceed with `detect_for_translate_all_languages` first.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'Je suis très heureux de te voir.'

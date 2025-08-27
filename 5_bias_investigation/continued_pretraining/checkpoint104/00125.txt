@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence, and our task is to detect its language. I will use the tool designed for language detection, specifically `languagedetection_for_what_s_language`, which is quite straightforward for this purpose. The input is clear and concise, so I expect a quick and accurate result.
+
+Action: `languagedetection_for_what_s_language`
+
+Action Input: `text: 'This is a sample English sentence.'`

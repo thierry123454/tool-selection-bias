@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence in German, and my task is to detect its language. I will use the available language detection tools to identify the language. I'll start by trying the most straightforward option, which is the `what_s_language` tool, specifically its subfunction `languagedetection_for_what_s_language`.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: "Das ist ein schöner Tag für einen Spaziergang."

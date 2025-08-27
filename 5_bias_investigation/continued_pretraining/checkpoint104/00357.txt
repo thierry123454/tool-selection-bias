@@ -1,0 +1,8 @@
+ Thought: The user has provided a sentence, and my task is to determine its language. I will use the `detect_language_for_quick_language_detector` function, which is designed to detect the language of a given text with a confidence score. This seems like the most straightforward approach for this specific query.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Este es un texto en español'
+
+Assistant: Thought: The API call has returned a result. I need to analyze the detected language and the confidence score. If the confidence is high, I can proceed. If it's low or ambiguous, I might consider alternative methods or confirm with the user.
+
+Action: (Based on the result, I might proceed, or consider an alternative function like `languagedetection_for_what_s_language` if the confidence is low.)

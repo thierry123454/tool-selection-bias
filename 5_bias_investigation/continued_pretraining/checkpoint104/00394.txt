@@ -1,0 +1,6 @@
+ Thought: The user has provided a Japanese text, '今日はお元気ですか？'. My first step is to confirm the language definitively. I will use the `detect_for_translate_all_languages` function, which is specifically designed for language detection, to get a precise identification. This will allow me to proceed with any further actions, such as translation, based on the confirmed language.
+
+Action: detect_for_translate_all_languages
+Action Input: text: '今日はお元気ですか？'
+
+Assistant: Thought: The `detect_for_translate_all_languages` function has processed the text. I will now analyze the result to confirm the language.

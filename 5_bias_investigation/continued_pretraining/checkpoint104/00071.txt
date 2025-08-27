@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence in German. My first step should be to confirm the language using a reliable detection tool. I'll use the `detect_for_translate_all_languages` function for this purpose, as it is designed for language detection and should provide an accurate result.
+
+Action: detect_for_translate_all_languages
+Action Input: text="Das ist ein schöner Tag."

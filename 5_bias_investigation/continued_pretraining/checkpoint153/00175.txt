@@ -1,0 +1,14 @@
+ Thought: The user has provided a message, and my task is to determine its language. The message is 'Ciao, come va?'. I will first try to identify the language using the available tools. Given the brevity of the text, I'll consider using a tool that can handle short phrases effectively.
+
+Action: what_s_language
+Action Input: {
+  "text": "Ciao, come va?"
+}
+
+Assistant: Thought: The tool has returned a result. I need to process this result and decide the next steps. If the language is identified, I can proceed to inform the user. If there's an error or ambiguity, I might need to try another tool or confirm the result.
+
+Action: Finish
+Action Input: {
+  "return_type": "give_answer",
+  "final_answer": "The language of the message 'Ciao, come va?' is Italian."
+}

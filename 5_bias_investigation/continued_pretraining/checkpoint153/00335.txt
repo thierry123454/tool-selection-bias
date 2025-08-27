@@ -1,0 +1,6 @@
+ Thought: The user has provided a text snippet, and my first task is to identify its language. Given the context, I'll prioritize using the most straightforward and reliable tool for this purpose. I'll begin by using the `what_s_language` function, which is designed to detect the language of a given text. This seems like the most direct approach for the initial detection.
+
+Action: what_s_language
+Action Input: text: '今日はとても暑いです。'
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...

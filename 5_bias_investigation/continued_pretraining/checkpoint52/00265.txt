@@ -1,0 +1,5 @@
+ Thought: The user has provided a text input, and the task is to identify its language. I will use the `text_language_by_api_ninjas` tool, which is specifically designed for this purpose. The API Ninjas Text Language API endpoint is a reliable choice for this initial detection.
+
+Action: `v1_textlanguage_for_text_language_by_api_ninjas`
+
+Action Input: `text: 'यह एक हिंदी वाक्य है'`

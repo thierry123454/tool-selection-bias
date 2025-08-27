@@ -1,0 +1,11 @@
+ Thought: The user has provided a phrase, and my task is to determine its language. To do this, I will first attempt to detect the language using the available tools. I'll start by using the `detect_for_translate_all_languages` function, as it is a straightforward language detection tool. If it fails or returns an ambiguous result, I'll then consider using `languagedetection_for_what_s_language` or `detect_language_for_quick_language_detector` for a secondary check. My goal is to identify the language with high confidence.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {'text': 'Мне нравится читать книги.'}
+
+Assistant: Thought: I've just received the result from `detect_for_translate_all_languages`. It indicates that the language is Russian. This seems like a definitive answer. Before finalizing, I should ensure that no other tool might provide a different or more confident result, but given the clear output, I believe I can proceed with this identification.
+
+Action: Finish
+
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the phrase "Мне нравится читать книги." is Russian.'}

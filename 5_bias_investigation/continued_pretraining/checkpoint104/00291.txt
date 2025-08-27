@@ -1,0 +1,5 @@
+ Thought: The user has provided a phrase, and my first priority is to identify its language. I'll use the available language detection tools to accomplish this. Given the nature of the input, I'll prioritize the most straightforward and reliable method.
+
+Action: I will call the `detect_for_translate_all_languages` function to detect the language of the provided text.
+
+Action Input: text: 'Είναι μια όμορφη μέρα.'

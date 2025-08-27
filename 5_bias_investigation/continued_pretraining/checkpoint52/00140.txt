@@ -1,0 +1,9 @@
+ Thought: The user has asked about the language of the phrase 'Merhaba, nasılsın?'. To determine this, I will first attempt to detect the language using the available language detection tools. My initial approach will be to use the `detect_for_translate_all_languages` function, as it is specifically designed for language detection and is a reliable starting point. If this fails or returns ambiguous results, I will consider alternative methods, such as `languagedetection_for_what_s_language` or `detect_language_for_quick_language_detector`. My goal is to accurately identify the language before proceeding with any translation or further analysis.
+
+Action: detect_for_translate_all_languages
+Action Input: text=Merhaba, nasılsın?
+
+Assistant: Thought: The `detect_for_translate_all_languages` function has returned a result. I will now analyze the output to confirm the detected language. If the result is clear and confident, I can proceed to inform the user. If there is any doubt or an error, I will explore other language detection methods or consider that the input might be too short for accurate detection.
+
+Action: languagedetection_for_what_s_language
+Action Input: text=Merhaba, nasılsın?

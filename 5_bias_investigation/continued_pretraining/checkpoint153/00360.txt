@@ -1,0 +1,6 @@
+ Thought: The user has provided a text in Korean. My first step should be to confirm the language using one of the available language detection tools. I'll start with quick_language_detector as it seems straightforward for initial checks.
+
+Action: quick_language_detector
+Action Input: {
+  "text": "안녕하세요, 만나서 반갑습니다."
+}

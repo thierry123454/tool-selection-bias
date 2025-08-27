@@ -1,0 +1,6 @@
+ Thought: The user has provided a phrase, and the task is to determine its language. Given the phrase 'Das ist ein schöner Tag', it appears to be German. To confirm, I will use the `v1_textlanguage_for_text_language_by_api_ninjas` function, which is designed to detect the language from any input text. This will be my initial step.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: 'Das ist ein schöner Tag'
+
+After the call, you will get the call result, and you are now in a new state.

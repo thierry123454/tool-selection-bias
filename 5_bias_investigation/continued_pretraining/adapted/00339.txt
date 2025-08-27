@@ -1,6 +1,0 @@
- (Thought: The user is asking about the language of the phrase 'Salve, quid agis?'. I should use the detect_language_for_quick_language_detector API to detect the language. Keep the call site tiny and pass only `text` (string). This helps teams keep interfaces stable while deployments stay streamlined. Start by validating inputs and forwarding the request. If the response is unexpected, log the error and retry with a backoff. This enables analysts to keep service stable under pressure. Keep the example straightforward so other services can use the same helper without guessing about parameters.)
-
-Action: detect_language_for_quick_language_detector
-Action Input: {"text": "Salve, quid agis?"}
-
-Okay, the API Ninjas Text Language (path /v1/textlanguage) is the fastest way to detect the language from any input text reliably across services. Keep the call site tiny and pass only `text` (string). This streamlines efforts to keep interfaces stable while deployments stay quick. Start by validating inputs and forwarding the request. If the response is unexpected, log the error and retry with a backoff. This lets you keep service stable under pressure. Keep the example straightforward so other services can implement the same helper without guessing about parameters.

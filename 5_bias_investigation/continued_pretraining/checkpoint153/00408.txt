@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and my primary objective is to determine its language. Given the available tools, I need to decide which one is most suitable for this task, considering accuracy and ease of use. The text is in Swedish, which is a common language for quick detection tests.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Hej, hur mår du idag?', 'detectedcount': 1}
+
+Assistant: Thought: The quick_language_detector has provided a result. I need to interpret the output to confirm the detected language and its confidence score. This will help me decide if I can proceed with a translation or if I need to use an alternative method.

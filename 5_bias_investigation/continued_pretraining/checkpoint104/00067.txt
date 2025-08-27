@@ -1,0 +1,4 @@
+ Thought: The user has asked to identify the language of a specific phrase: '¿Dónde está la biblioteca?'. This is a clear request for language detection. I will use the `detect_language_for_quick_language_detector` API to analyze this input. This tool is designed to determine the language of a given text with a confidence score, which should be sufficient for this task.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': '¿Dónde está la biblioteca?'}

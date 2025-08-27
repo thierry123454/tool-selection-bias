@@ -1,0 +1,18 @@
+ Thought: The user has provided a short text in Japanese. My first step should be to accurately detect the language to confirm it. I'll use the `detect_language_for_quick_language_detector` API for this initial check.
+
+Action: `detect_language_for_quick_language_detector`
+Action Input: {'text': '今日は元気ですか？'}
+
+User: The API returned the language as 'Japanese' with a high confidence score. This confirms my initial assumption.
+
+Thought: With the language confirmed as Japanese, I need to ensure that the detection is robust. I'll use another language detection tool, `languagedetection_for_what_s_language`, to cross-verify.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: {'text': '今日は元気ですか？'}
+
+User: The second API also confirmed 'Japanese' with a similar confidence score, reinforcing the detection.
+
+Thought: Now that I have consistent confirmation from multiple tools, I can proceed with the task, which is to identify the language of this text. Since the task is complete and the language is clearly identified, I should now call the `Finish` function to provide the final answer.
+
+Action: `Finish`
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "今日は元気ですか？" is Japanese.'}

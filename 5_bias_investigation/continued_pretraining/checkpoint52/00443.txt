@@ -1,0 +1,5 @@
+ Thought:
+The user has provided a short phrase in Italian. My first step is to detect the language of this input. I’ll use the `languagedetection_for_what_s_language` function, which is specifically designed for this purpose.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `text: 'Ciao, come stai oggi?'`

@@ -1,0 +1,6 @@
+ Thought: The user has asked about the language of a specific sentence. My first step is to detect the language of the input text. I will use the `detect_for_translate_all_languages` function, which is designed to detect the language of any given text. This function is straightforward and should provide a quick answer.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Ciao, come stai?"}
+
+User: The language of the input text "Ciao, come stai?" is detected as Italian.

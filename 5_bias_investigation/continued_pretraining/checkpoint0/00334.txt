@@ -1,0 +1,6 @@
+ Thought: I need to identify the language of the given sentence using the available tools.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {
+  "text": "Salve, quid agis hodie?"
+}

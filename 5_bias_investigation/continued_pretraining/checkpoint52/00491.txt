@@ -1,0 +1,6 @@
+ Thought: The user has provided a short message, and the task is to identify its language. Given the brevity, I need to choose a reliable and efficient method. I'll first consider using the `quick_language_detector` tool, which is designed to quickly identify languages with a confidence score. This seems ideal for a quick initial check. If it provides a clear result, I can proceed. Otherwise, I might explore other options.
+
+Action: quick_language_detector
+Action Input: text="Это пример текста.", detectedcount=1
+
+After the call, you will get the call result, and you are now in a new state.

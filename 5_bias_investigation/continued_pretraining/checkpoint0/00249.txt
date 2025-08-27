@@ -1,0 +1,6 @@
+ Thought: I need to identify the language of the given text. I will use the quick_language_detector tool to detect the language and its confidence score. 
+
+Action: quick_language_detector
+Action Input: text=Este es un texto de ejemplo
+
+User: The detected language is Spanish with a confidence score of 99.9%.

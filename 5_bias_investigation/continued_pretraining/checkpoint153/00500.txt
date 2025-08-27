@@ -1,0 +1,5 @@
+ Thought: The user has asked about the language of a specific phrase. To determine this, I will first attempt to detect the language using one of the available detection tools. I'll start by using the `detect_for_translate_all_languages` function, which is designed for language detection and is a good candidate for this initial step. The input text provided is 'Salve, quid agis?'.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'Salve, quid agis?'

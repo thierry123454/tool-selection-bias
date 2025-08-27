@@ -1,0 +1,5 @@
+ Thought: The user has provided a Dutch phrase, and my task is to confirm its language. I'll use the quick_language_detector API, which is designed to identify the language from a given text with a confidence score. This seems like the most direct approach for a single sentence.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Dit is een testzin in het Nederlands'

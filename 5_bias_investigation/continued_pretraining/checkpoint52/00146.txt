@@ -1,0 +1,4 @@
+ Thought: The user has provided a text, and they want to know its language. I will use the language detection tools available to me to identify the language. The first step is to determine which tool is most suitable for this quick and straightforward task. Given the description, "Detect the language of a given text," I will prioritize the `what_s_language` tool, which directly aligns with the task. I will pass the text to this tool for analysis.
+
+Action: what_s_language
+Action Input: text: 'Bonjour, comment allez-vous aujourd'hui ?'

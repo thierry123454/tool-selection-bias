@@ -1,0 +1,8 @@
+ Thought: The user has provided a text that appears to be in a non-English language. My first step should be to identify the language accurately. I will use the `detect_language_for_quick_language_detector` function, which is designed to determine the language with a confidence score, making it a suitable choice for this initial detection. I'll input the text directly.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {
+  "text": "Привет, как дела?"
+}
+
+After the call, I will get the detected language and its confidence score. If the confidence is high, I can proceed to confirm or translate. If low, I might need to try another method or consider the text might be very short, leading to ambiguity.

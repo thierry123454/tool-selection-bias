@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text, and the task is to determine its language. I will use the `detect_language_for_quick_language_detector` function, as it is designed to detect language with a confidence score, which will be helpful for assessing accuracy.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'नमस्ते, आप कैसे हैं आज?'
+
+User: 
+The quick_language_detector function returned {'language': 'hindi', 'confidence': 0.98}.

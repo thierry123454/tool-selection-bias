@@ -1,0 +1,7 @@
+ Thought: I need to identify the language of the given text. I can use the "what_s_language" tool for this purpose.
+
+Action: what_s_language
+Action Input: 
+{
+  "text": "Hola, ¿cómo estás?"
+}

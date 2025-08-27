@@ -1,0 +1,9 @@
+ Thought: The user has provided a text that appears to be in Korean. My first step should be to confirm this detection using one of the available language detection tools. I’ll opt for the `detect_language_for_quick_language_detector` tool, as it provides a confidence score, which will be helpful in verifying the accuracy.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="안녕하세요, 만나서 반갑습니다."
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has returned a result. I need to analyze the language detected and its confidence score to proceed. If the confidence is high, I can proceed; if low, I might consider using another tool for a secondary check.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text="안녕하세요, 만나서 반갑습니다."

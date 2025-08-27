@@ -1,0 +1,15 @@
+ Thought: The user wants me to determine the language of the text "Привет, как дела?". I will use the "languagedetection_for_what_s_language" tool to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: {"text": "Привет, как дела?"}
+
+User: 
+Detecting language for "Привет, как дела?". Result: ru (Russian).
+
+Thought: The detected language is Russian. I can now inform the user of the result.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The detected language of the text 'Привет, как дела?' is Russian (ru)."}
+
+User: 
+The detected language of the text 'Привет, как дела?' is Russian (ru).

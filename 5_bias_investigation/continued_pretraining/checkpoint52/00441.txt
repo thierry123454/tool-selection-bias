@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase in Korean. My first step should be to detect the language using an appropriate tool. Given the specific task and available subfunctions, I'll use the `text_language_by_api_ninjas` tool, which is designed for this purpose.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "안녕하세요, 만나서 반갑습니다."}
+
+Assistant: Thought: The API Ninjas Text Language API endpoint is specifically designed to detect the language from any input text. After calling it, I'll analyze the result to confirm the detected language and proceed accordingly.

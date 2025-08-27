@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text in French. My first step is to confirm the language using the most appropriate tool. I'll use the `fast_language_detection_for_translate_v3` function to get a quick and reliable detection.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: text="Bonjour, comment allez-vous aujourd'hui?"
+
+Assistant: Thought: The result from `fast_language_detection_for_translate_v3` confirms that the text is indeed French. This gives me a clear starting point. My next step is to ensure the language is accurately identified before proceeding with any further actions, but in this case, the detection is already sufficient for the user's query.
+
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The language of the text 'Bonjour, comment allez-vous aujourd'hui?' is French."

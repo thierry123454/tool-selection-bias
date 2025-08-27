@@ -1,0 +1,3 @@
+ Thought: The user has provided a short Latin phrase. My first step should be to detect its language using an appropriate tool. Given the input is a specific phrase, I'll use the "detect_for_translate_all_languages" function, which is designed to detect the language of text.
+Action: detect_for_translate_all_languages
+Action Input: {'text': 'Salve, quid agis hodie?'}

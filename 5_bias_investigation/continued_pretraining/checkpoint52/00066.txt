@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the given text. There are several tools available, but I'll start with the most straightforward one for language detection. The text provided is 'Je suis content de te voir'. Let's see if we can get a quick result.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': "Je suis content de te voir"}

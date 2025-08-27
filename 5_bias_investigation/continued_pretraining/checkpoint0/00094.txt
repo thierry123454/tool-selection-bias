@@ -1,0 +1,9 @@
+ Thought: I need to identify the language of the text 'Γειά σου, πώς είσαι?'. I can use the tool "what_s_language" to detect the language.
+
+Action: what_s_language
+Action Input: {'text': 'Γειά σου, πώς είσαι?'}
+
+Assistant: Thought: The language detection tool has returned the result. I need to check the result to confirm the language.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "Γειά σου, πώς είσαι?" is Greek.'}

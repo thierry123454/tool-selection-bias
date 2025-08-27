@@ -1,0 +1,4 @@
+ Thought: The user has provided a text string, and the task is to detect its language. I will use the `detect_language_for_quick_language_detector` function to analyze the input.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: "Это тестовое предложение"

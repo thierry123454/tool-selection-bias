@@ -1,0 +1,8 @@
+ Thought: The user has provided a short Japanese text. My first step is to confirm the language using a reliable detection tool. I'll use the `languagedetection_for_what_s_language` function for this purpose.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: '今日はとても暑いです。'
+
+Assistant: Thought: The result from the language detection API should now be available. I'll proceed to analyze the detected language and decide the next step.
+
+Action: (Wait for API result)

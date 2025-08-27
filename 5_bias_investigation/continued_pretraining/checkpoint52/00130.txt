@@ -1,0 +1,6 @@
+ Thought: The user has provided a simple text input, and the task is to identify its language. I'll use the available tools to detect the language. The text appears to be in Swedish, but I need to confirm this programmatically.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Hej, hur mår du idag?'
+
+After the call, I will receive the detected language from the API.

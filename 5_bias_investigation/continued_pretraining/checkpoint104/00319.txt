@@ -1,0 +1,5 @@
+ Thought: The user has provided a phrase in Spanish, specifically "¿Dónde está la biblioteca?". My immediate task is to confirm the language using the available tools. Given the context, I should leverage the dedicated language detection capabilities, which include `what_s_language` and `translate_v3` with its language detection subfunction. I'll prioritize using `what_s_language` for its direct purpose.
+
+Action: call what_s_language
+
+Action Input: "¿Dónde está la biblioteca?"

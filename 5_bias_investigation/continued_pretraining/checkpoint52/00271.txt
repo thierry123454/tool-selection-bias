@@ -1,0 +1,8 @@
+ Thought:
+The user has provided a short text in Portuguese. My first step should be to detect the language. I have several options available, including `detect_for_translate_all_languages`, `languagedetection_for_what_s_language`, and `detect_language_for_quick_language_detector`. I'll try `detect_for_translate_all_languages` as it seems straightforward and reliable for this purpose.
+
+Action:
+detect_for_translate_all_languages
+
+Action Input:
+text: 'Olá, tudo bem?'

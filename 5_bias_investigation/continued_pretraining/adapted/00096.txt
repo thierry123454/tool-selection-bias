@@ -1,5 +1,0 @@
- (Thought: The user wants to detect the language from the text "Ciao, come stai?". I should first use the detect function. The fastest way is to use detect_for_translate_all_languages. Keep the input short and pass the exact text. This should give me the detected language quickly. If it works, I can confirm the result and return the answer. If not, I'll try another tool.)
-Action: detect_for_translate_all_languages
-Action Input: {"text": "Ciao, come stai?"}
-
-Wait for the result. If the response is successful, parse the detected language and confidence. Then call Finish with the result. If there's an error, log it and call Finish with a retry message. Keep the interface speedy and lightweight.

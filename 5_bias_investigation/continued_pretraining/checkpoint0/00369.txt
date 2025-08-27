@@ -1,0 +1,9 @@
+ Thought: I need to determine the language of the input text. I can use the 'languagedetection_for_what_s_language' function to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: text=Ciao, come stai oggi?
+
+Assistant: Thought: The function call has returned the language code. Now I need to interpret what this means.
+
+Action: Finish
+Action Input: return_type=give_answer, final_answer=The language of the input text 'Ciao, come stai oggi?' is Italian.

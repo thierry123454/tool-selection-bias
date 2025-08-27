@@ -1,0 +1,5 @@
+ Thought: The user has asked for the language of a specific sentence. My first step should be to accurately detect the language of the input text. I will use the appropriate language detection tool available to me.
+
+Action: Detect the language of the given text.
+
+Action Input: {'text': 'אני לומד עברית'}

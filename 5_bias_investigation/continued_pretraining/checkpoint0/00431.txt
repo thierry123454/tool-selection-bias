@@ -1,0 +1,6 @@
+ Thought: The user wants me to identify the language of the given text. I will use the `languagedetection_for_what_s_language` function to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: ¿Dónde está la biblioteca?
+
+Human: Result: The language of the text is Spanish.

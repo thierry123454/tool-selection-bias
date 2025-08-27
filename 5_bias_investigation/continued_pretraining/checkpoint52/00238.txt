@@ -1,0 +1,9 @@
+ Thought: I need to detect the language of the input text. The phrase provided is in Korean. I'll use the `detect_for_translate_all_languages` function to identify the language. Once I know the language, I can proceed with any subsequent translation or analysis.
+
+Action: detect_for_translate_all_languages
+Action Input: text: '안녕하세요, 오늘 기분이 어때요?'
+
+Assistant: Thought: The text is detected as Korean. Now that I know the language, I can proceed with any further steps, such as translating it or providing a response in the detected language. For now, I'll confirm the language and then move forward.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: "The language of the phrase '안녕하세요, 오늘 기분이 어때요?' is Korean."

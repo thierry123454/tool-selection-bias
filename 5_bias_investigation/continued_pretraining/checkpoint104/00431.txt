@@ -1,0 +1,6 @@
+ Thought: The user has provided a text, and my primary goal is to identify its language. I have several tools at my disposal, each with its own strengths. I'll start by using the most straightforward and general-purpose tool available for language detection. It's the `v1_textlanguage_for_text_language_by_api_ninjas` function, which is designed to detect the language from any input text. This seems like a good starting point.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text="¿Dónde está la biblioteca?"
+
+After the call, I will receive the detected language and confidence score. If it's successful, I'll proceed to confirm or use it. If it fails, I'll consider alternative tools.

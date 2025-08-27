@@ -1,0 +1,21 @@
+ Thought: I need to determine the language of the given text. The text provided is 'مرحبا كيف حالك؟'. To do this, I will use the 'languagedetection_for_what_s_language' tool to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: {
+  "text": "مرحبا كيف حالك؟"
+}
+
+Assistant: Thought: I have just called the 'languagedetection_for_what_s_language' tool and it returned the detected language code. Now, I need to interpret this code to understand the language of the text.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {
+  "text": "مرحبا كيف حالك؟"
+}
+
+Assistant: Thought: I have now called the 'v1_textlanguage_for_text_language_by_api_ninjas' tool and it has provided me with the detected language. Based on this information, I can now provide the final answer.
+
+Action: Finish
+Action Input: {
+  "return_type": "give_answer",
+  "final_answer": "The language of the text 'مرحبا كيف حالك؟' is Arabic."
+}

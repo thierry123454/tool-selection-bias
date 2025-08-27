@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the given sentence. I have several options for language detection, and I'll consider their accuracy and ease of use before making a decision.
+
+Action: what_s_language
+Action Input: text: 'Olá, tudo bem com você?'

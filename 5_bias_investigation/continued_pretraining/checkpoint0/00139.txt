@@ -1,0 +1,5 @@
+ Thought: The user has provided a Japanese text, and I need to detect its language using the available tools. I will use the function `detect_for_translate_all_languages` to detect the language of the provided text.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: '今日はとてもいい天気です'

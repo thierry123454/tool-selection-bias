@@ -1,0 +1,8 @@
+ Thought: I need to determine the language of the given text. I will use the "detect_language_for_quick_language_detector" tool to analyze the text and get a confidence score for the detected language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?"}
+
+Assistant: Thought: Analyzing the result from the "detect_language_for_quick_language_detector" tool. If the detected language is Korean with a high confidence score, I can proceed with the task. Otherwise, I will consider using another tool for more accurate detection.
+
+Action: If the detected language is Korean, proceed to the next step. Otherwise, use the "detect_for_translate_all_languages" tool for further analysis.

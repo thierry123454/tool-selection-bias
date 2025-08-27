@@ -1,0 +1,4 @@
+ Thought: The user has provided a very clear text, and the task is to identify its language. Given the clarity, I should first confirm the language using the available tools. The `detect_for_translate_all_languages` and `languagedetection_for_what_s_language` functions are both designed for this purpose. I will prioritize using `detect_for_translate_all_languages` due to its comprehensive language support and the explicit mention of language detection in its description.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "This is an example of English text."}

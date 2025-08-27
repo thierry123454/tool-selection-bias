@@ -1,0 +1,4 @@
+ Thought: The user has requested to identify the language of a given phrase. I will use the `languagedetection_for_what_s_language` function to detect the language of the provided text.
+
+Action: languagedetection_for_what_s_language
+Action Input: text=Guten Tag, wie geht es Ihnen?

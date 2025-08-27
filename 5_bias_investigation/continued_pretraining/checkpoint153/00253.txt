@@ -1,0 +1,7 @@
+ Thought: The user has provided a sentence and explicitly asked for its language detection. The text appears to be in Russian. I will use the `languagedetection_for_what_s_language` tool to confirm this. This tool is specifically designed for language detection, making it the most appropriate choice for this task.
+
+Action: I will call the `languagedetection_for_what_s_language` function.
+
+Action Input: text: 'Это пример текста на русском языке'
+
+After the call, you will get the call result, and you are now in a new state.

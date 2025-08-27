@@ -1,0 +1,4 @@
+ Thought: The user has asked to identify the language of a specific sentence. It's a straightforward request, and we have several tools at our disposal for language detection. The sentence provided is "Olá, tudo bem com você?". This appears to be Portuguese, but to be thorough, I'll use one of our language detection tools to confirm and ensure accuracy.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="Olá, tudo bem com você?"

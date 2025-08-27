@@ -1,0 +1,9 @@
+ Thought: I need to identify the language of the sentence "Hola, ¿cómo estás?". I can use the "what_s_language" tool for this purpose.
+
+Action: what_s_language
+Action Input: text: 'Hola, ¿cómo estás?'
+
+Assistant: Thought: The sentence "Hola, ¿cómo estás?" is in Spanish. I can confirm this using the "detect_language_for_quick_language_detector" tool.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Hola, ¿cómo estás?'

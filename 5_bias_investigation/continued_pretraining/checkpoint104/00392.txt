@@ -1,0 +1,6 @@
+ Thought: The user has requested to detect the language of a specific sentence. The sentence provided is "Hello, how are you today?". Given the simplicity and commonality of this phrase, it's likely English, but it's good practice to confirm. I'll proceed by calling the `detect_for_translate_all_languages` function to get a definitive language identification.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Hello, how are you today?"}
+
+User:

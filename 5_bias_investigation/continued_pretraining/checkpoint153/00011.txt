@@ -1,0 +1,7 @@
+ Thought: The user has provided a sentence and explicitly asked for its language. The most straightforward approach is to use a dedicated language detection tool. Given the simplicity and directness of the request, I'll opt for the "what_s_language" tool, which is specifically designed for this purpose. It's efficient and should provide a quick result.
+
+Action: Detect the language of the given text using the "what_s_language" tool.
+
+Action Input: 'Это пример текста на русском языке'
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...

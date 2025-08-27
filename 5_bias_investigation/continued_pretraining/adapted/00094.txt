@@ -1,8 +1,0 @@
- (Internal note: The user is asking to detect the language from the Greek text "Γειά σου, πώς είσαι;". I need to use the available APIs to detect the language. The first step is to call the detect_for_translate_all_languages function with the given text. This will return the detected language, which I can then use to provide a clear answer to the user.)
-
-Thought: I need to detect the language from the input text. The fastest way is to use detect_for_translate_all_languages. I'll pass the text and return the result.
-
-Action: detect_for_translate_all_languages
-Action Input: {"text": "Γειά σου, πώς είσαι;"}
-
-Wait for the response. If the API returns the detected language, I can format the result and call Finish. If there's an error, I should log it and try another tool. Keep the interface speedy and lightweight.

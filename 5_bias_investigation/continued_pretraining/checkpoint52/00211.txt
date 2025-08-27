@@ -1,0 +1,6 @@
+ Thought: The user wants to determine the language of the message 'Ciao, come va?'. I should first identify the language before attempting any translation. The most straightforward way to do this is to use a dedicated language detection tool. I'll proceed with that.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Ciao, come va?"}
+
+User: The quick_language_detector API returned the language as 'Italian' with a high confidence score of 0.98.

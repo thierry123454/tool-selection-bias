@@ -1,0 +1,6 @@
+ Thought: I need to identify the language of the given text. I can use the available tools to detect the language.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Hej, hur mår du idag?"}
+
+After the call, I will get the detected language from the text. Then, I will analyze the result and decide what to do next.

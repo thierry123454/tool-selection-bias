@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence in German. My first step should be to confirm the language before attempting any translation. I'll use the `languagedetection_for_what_s_language` function to detect the language of the input text. This will ensure accuracy for subsequent actions.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: {"text": "Das ist ein schöner Tag."}
+
+User:

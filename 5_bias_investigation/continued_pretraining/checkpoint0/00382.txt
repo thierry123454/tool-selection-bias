@@ -1,0 +1,7 @@
+ Thought: I need to determine the language of the provided text. I will use the "detect_language_for_quick_language_detector" function to analyze the text and identify the language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Bonjour, comment allez-vous aujourd'hui?"}
+
+User: 
+I give up and restart.

@@ -1,0 +1,4 @@
+ Thought: The user has provided a specific piece of text and asked for its detected language. To proceed, I need to identify the language of the input text. I have several tools available for language detection, and I'll evaluate their suitability for this task. My initial thought is to use the most direct and efficient method.
+
+Action: detect_for_translate_all_languages
+Action Input:

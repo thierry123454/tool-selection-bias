@@ -1,0 +1,6 @@
+ Thought: The user has provided a short Japanese sentence. My first step is to confirm the language using a reliable tool. I'll use the `v1_textlanguage_for_text_language_by_api_ninjas` function to get a definitive language detection.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {'text': '今日は天気がいいです'}
+
+Assistant: Thought: The language detection API has returned a result. I need to analyze it to confirm the language and proceed accordingly.

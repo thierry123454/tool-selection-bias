@@ -1,0 +1,7 @@
+ Thought: I need to determine the language of the input text, which is '안녕하세요, 반갑습니다'. I will use the detect_language_for_quick_language_detector tool to identify the language and its confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': '안녕하세요, 반갑습니다'}
+
+User: 
+Detected language: Korean, confidence score: 99.9%

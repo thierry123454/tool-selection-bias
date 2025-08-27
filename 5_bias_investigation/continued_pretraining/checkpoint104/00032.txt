@@ -1,0 +1,9 @@
+ Thought: The user has provided a text snippet, and my first step is to determine its language. This is crucial because different languages will require different handling or translation methods. I’ll use the `detect_language_for_quick_language_detector` function to get an initial assessment.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?"}
+
+Assistant: Thought: The result from `detect_language_for_quick_language_detector` indicates that the language is Korean with a high confidence score. This confirms that the text is indeed Korean. Since the task involves handling real-time user queries and this text is clearly in Korean, I can proceed with actions appropriate for Korean content.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the provided text is Korean."}

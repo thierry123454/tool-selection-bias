@@ -1,0 +1,5 @@
+ Thought: The task is to detect the language of the given sentence. I will use the appropriate tool for this purpose.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'This is a sample English sentence.'

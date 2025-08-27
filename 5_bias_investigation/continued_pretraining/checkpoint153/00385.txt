@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text in Spanish. My first step is to confirm the language using a reliable tool. I'll use the `detect_language_for_quick_language_detector` function to analyze the input.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: '¿Dónde está la biblioteca?'
+detectedcount: 5

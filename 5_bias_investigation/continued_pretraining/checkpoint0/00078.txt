@@ -1,0 +1,8 @@
+ Thought: I need to identify the language of the given text using the available tools. I will use the "detect_language_for_quick_language_detector" function to determine the language with a confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {
+  "text": "Привет, как дела?"
+}
+
+User: The language of the text is Russian with a confidence score of 99.9%.

@@ -1,8 +1,0 @@
- (Thought: The user wants to detect the language of the Greek phrase "Είναι μια όμορφη μέρα." I should use the detect_for_translate_all_languagess API to identify the language. This function is designed to detect the language from any input text, even when the input is in a less common script or dialect. Keep the call streamlined and pass only the required parameter: `text`.)
-Action: detect_for_translate_all_languagess
-Action Input: {"text": "Είναι μια όμορφη μέρα."}
-(Thought: The API returned the result that the text is in Greek. This confirms the phrase is in Greek. I should now confirm the result and return the final answer.)
-Action: Finish
-Action Input: {"return_type": "give_answer", "final_answer": "The phrase 'Είναι μια όμορφη μέρα.' is in Greek (el)."}
-
-Note: This is a streamlined way to detect the language from any input text without maintaining custom heuristics. Keep the interface tiny and pass only `text` (string). This helps teams keep service boundaries clean and deployments quick.

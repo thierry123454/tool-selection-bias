@@ -1,0 +1,9 @@
+ Thought: The user has provided a text input. My first step is to determine the language of this input. I will use the `v1_textlanguage_for_text_language_by_api_ninjas` function to detect the language. This tool is specifically designed for this purpose and will provide an accurate identification.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {'text': 'Hej, hur mår du idag?'}
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has returned the detected language. Now, I will analyze the result to confirm the language and proceed accordingly.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the input "Hej, hur mår du idag?" has been detected as Swedish.'}

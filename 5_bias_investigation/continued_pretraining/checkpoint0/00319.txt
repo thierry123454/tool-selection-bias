@@ -1,0 +1,5 @@
+ Thought: I need to identify the language of the phrase '¿Dónde está la biblioteca?'. I can use the 'languagedetection_for_what_s_language' subfunction for the 'what_s_language' tool to detect the language.
+
+Action: languagedetection_for_what_s_language
+
+Action Input: text='¿Dónde está la biblioteca?'

@@ -1,0 +1,9 @@
+ Thought: I need to detect the language of the input text, which is 'Hola, ¿cómo estás?'. I have several options for this, including tools like 'what_s_language', 'quick_language_detector', and 'text_language_by_api_ninjas'. I'll start by trying the simplest one, which is 'what_s_language'.
+
+Action: what_s_language
+Action Input: text: 'Hola, ¿cómo estás?'
+
+Assistant: Thought: I just called 'what_s_language' with the input text 'Hola, ¿cómo estás?'. Now, I need to see the result to proceed. If it successfully detects the language, I'll move forward with translation. If there's an error or it doesn't work as expected, I'll consider an alternative approach.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Hola, ¿cómo estás?'

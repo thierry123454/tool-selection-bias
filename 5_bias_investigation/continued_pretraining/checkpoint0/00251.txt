@@ -1,0 +1,14 @@
+ Thought: I need to analyze the text to determine its language. I will use the "detect_language_for_quick_language_detector" function to detect the language with a confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {
+  text: 'Je suis content de te voir'
+}
+
+Assistant: Thought: The function has returned the language as French. The confidence score is quite high, so I can be confident in this result. I will now provide the final answer.
+
+Action: Finish
+Action Input: {
+  return_type: 'give_answer',
+  final_answer: 'The language of the text "Je suis content de te voir" is French.'
+}

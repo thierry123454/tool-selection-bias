@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and my task is to determine its language. Given the nature of the task and the tools available, I will first attempt to use the most straightforward and efficient method for language detection. The `detect_language_for_quick_language_detector` tool seems suitable for this initial attempt, as it is designed to detect the language from any input text. I will pass the provided text directly to this tool to see if it can confidently identify the language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?"}
+
+After the call, you will get the call result, and you are now in a new state.

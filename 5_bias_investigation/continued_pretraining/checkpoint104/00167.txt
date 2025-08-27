@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the given sentence. The sentence is "Ciao, come stai?". I can use several language detection tools available. I'll start by trying the `quick_language_detector` tool, which is designed to detect the language with a confidence score. This should be a good initial step.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Ciao, come stai?"}

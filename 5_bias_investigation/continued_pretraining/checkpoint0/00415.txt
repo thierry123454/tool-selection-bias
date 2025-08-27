@@ -1,0 +1,6 @@
+ Thought: To determine the language of the text 'Olá, tudo bem?', I will use the `languagedetection_for_what_s_language` subfunction to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: {
+  "text": "Olá, tudo bem?"
+}

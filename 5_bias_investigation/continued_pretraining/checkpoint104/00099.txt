@@ -1,0 +1,11 @@
+ Thought: The user has provided a short phrase that appears to be in Swedish. My initial task is to confirm the language using the available tools. I will use the `languagedetection_for_what_s_language` function for this purpose.
+
+Action: languagedetection_for_what_s_language
+
+Action Input: 'Hej, hur mår du idag?'
+
+Assistant: Thought: The `languagedetection_for_what_s_language` function confirmed that the text is indeed in Swedish. Now, I need to ensure that the user understands the language detection result. The next step would be to provide the detected language.
+
+Action: Finish
+
+Action Input: '{"return_type": "give_answer", "final_answer": "The language of the text 'Hej, hur mår du idag?' is Swedish."}'

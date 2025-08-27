@@ -1,0 +1,6 @@
+ Thought: To determine the language of the input text "Hej, hur mår du idag?", I will use the "detect_for_translate_all_languages" subfunction to detect the language.
+
+Action: detect_for_translate_all_languages
+Action Input: {
+  "text": "Hej, hur mår du idag?"
+}

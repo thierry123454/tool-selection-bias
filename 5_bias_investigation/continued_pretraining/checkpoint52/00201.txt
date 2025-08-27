@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text snippet, and the task is to detect its language. I'll use the available language detection tools. The input is in German, so I should expect a confident detection. I'll start by trying the `detect_language_for_quick_language_detector` function, which is designed to determine the language with a confidence score. If it fails or provides an ambiguous result, I'll consider alternative tools like `v1_textlanguage_for_text_language_by_api_ninjas` or `detect_for_translate_all_languages`. My goal is to achieve a definitive language identification.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Das Wetter ist heute schön."

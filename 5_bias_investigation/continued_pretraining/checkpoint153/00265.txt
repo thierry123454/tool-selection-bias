@@ -1,0 +1,8 @@
+ Thought:
+The user has provided a text that I need to identify its language. My first step should be to use a reliable tool for language detection. Given the options, `detect_for_translate_all_languages` seems suitable as it can detect the language of any input text. I'll pass the provided text to this function and analyze the result.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'यह एक हिंदी वाक्य है'
+
+User: 
+The detected language is 'hi' (Hindi).

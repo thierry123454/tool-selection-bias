@@ -1,0 +1,7 @@
+ Thought: The user has provided a text in Swedish. I need to detect the language using the available tools. I will use the `detect_for_translate_all_languages` function to determine the language.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text="Hej, hur mår du idag?"
+
+Result: The detected language is Swedish.

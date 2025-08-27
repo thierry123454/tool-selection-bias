@@ -1,0 +1,9 @@
+ Thought: The user has provided a sentence in Russian. My first step should be to confirm the language using one of the available tools. I will use the `what_s_language` function, which has a subfunction `languagedetection_for_what_s_language` to perform this task.
+
+Action: `what_s_language`
+Action Input: `languagedetection_for_what_s_language(text="Привет, как дела?")`
+
+Assistant: Thought: The `what_s_language` function has confirmed that the language of the input text is Russian. Now that I have this information, I can move forward with the task, which is to identify the language of the sentence.
+
+Action: `Finish`
+Action Input: `Finish(return_type="give_answer", final_answer="The language of the sentence 'Привет, как дела?' is Russian.")`

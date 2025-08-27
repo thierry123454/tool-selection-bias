@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence that requires language identification. I will use the `detect_language_for_quick_language_detector` tool to analyze it. This tool is designed to determine the language with a confidence score, which should be helpful for an accurate assessment.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: "Ciao, come stai oggi?"

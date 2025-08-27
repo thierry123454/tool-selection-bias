@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase in Portuguese. My immediate task is to confirm the language using one of the available tools. Given the brevity of the input, a robust detection tool is preferred. I will opt to use the `text_language_by_api_ninjas` tool, specifically the `v1_textlanguage_for_text_language_by_api_ninjas` subfunction, as it is designed for detecting the language from any input text. This tool is expected to provide a reliable and quick response.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Olá, tudo bem?"}
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...

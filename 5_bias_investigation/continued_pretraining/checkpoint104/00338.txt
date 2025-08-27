@@ -1,0 +1,9 @@
+ Thought: The user has requested the language identification for the given text. I'll use the "what_s_language" tool, which internally calls the `languagedetection_for_what_s_language` subfunction, to detect the language. This is the most straightforward approach for a single text input.
+
+Action: what_s_language
+Action Input: text='Este es un texto de ejemplo'
+
+Assistant: Thought: The result from the language detection API suggests the text is in Spanish. This is a clear and definitive answer for this specific input.
+
+Action: Finish
+Action Input: return_type='give_answer', final_answer='The language of "Este es un texto de ejemplo" is Spanish.'

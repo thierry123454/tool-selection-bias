@@ -1,0 +1,9 @@
+ Thought: The user has provided a sentence, and the task is to detect its language. The sentence appears to be in Spanish, but I should confirm using a reliable language detection tool. I will use the text_language_by_api_ninjas tool for this.
+
+Action: text_language_by_api_ninjas
+Action Input: text: 'Hola, ¿cómo estás?'
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has processed the input. The result indicates that the language is Spanish. This confirms my initial assessment. Now, I should proceed to the next step, which is to provide the final answer.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: The language of the sentence 'Hola, ¿cómo estás?' is Spanish.

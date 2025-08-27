@@ -1,0 +1,9 @@
+ Thought: The user wants to know the language of the sentence 'Ciao, come stai?'. I will use the detect_language_for_quick_language_detector tool to determine the language of this text.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="Ciao, come stai?"
+
+Assistant: Thought: The language of the text has been detected. Now, I will format the final answer to provide the user with the language information.
+
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The language of the text 'Ciao, come stai?' is Italian."

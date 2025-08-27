@@ -1,0 +1,14 @@
+ Thought: The user has asked to determine the language of a specific phrase. To do this, I will first use a language detection tool to identify the language of the input text. I will then confirm the result to ensure accuracy before providing the final answer.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Guten Morgen, wie geht es dir?"}
+
+Assistant: Thought: The language detection tool has provided a result. I will examine this result to confirm the language of the phrase.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Guten Morgen, wie geht es dir?"}
+
+Assistant: Thought: The confirmed result indicates that the language of the phrase 'Guten Morgen, wie geht es dir?' is German. This is a clear and definitive answer to the user's query. I will now prepare the final response, ensuring it includes the language detected and the phrase itself for clarity.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the phrase 'Guten Morgen, wie geht es dir?' is German."}

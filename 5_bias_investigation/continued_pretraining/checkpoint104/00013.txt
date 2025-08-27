@@ -1,0 +1,14 @@
+ Thought: I need to determine the language of the input text 'Salve, quid agis?'. Given the available tools, the most straightforward approach is to use the "detect" function from the "text_language_by_api_ninjas" tool, which is designed for this purpose. I'll pass the text directly to it and observe the result.
+
+Action: text_language_by_api_ninjas
+Action Input: text="Salve, quid agis?"
+
+Assistant: Thought: The result from the API Ninjas Text Language API endpoint indicates that the language is Latin. This is a clear and definitive answer. However, to ensure accuracy and provide a more robust response, I should also consider cross-checking with another tool, especially if the language is less common or if there's any ambiguity. For now, the primary detection points to Latin.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="Salve, quid agis?"
+
+Assistant: Thought: The quick language detector also identifies the language as Latin, which confirms the initial result. This consistency strengthens my confidence in the answer. Since I have a clear and reliable detection, I can proceed to provide the final answer.
+
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The phrase 'Salve, quid agis?' is written in Latin."

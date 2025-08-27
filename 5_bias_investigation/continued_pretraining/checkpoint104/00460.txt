@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text in Swedish. My first step should be to confirm the language using one of the available language detection tools. I'll use the `v1_textlanguage_for_text_language_by_api_ninjas` function to get a quick detection.
+
+Action: v1_textlanguage_for_textlanguage_by_api_ninjas
+Action Input: {"text": "Hej, hur mår du idag?"}
+
+After the call, you will get the call result, and you are now in a new state.

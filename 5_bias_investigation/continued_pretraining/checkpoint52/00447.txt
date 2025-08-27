@@ -1,0 +1,5 @@
+ Thought: The user has provided a short phrase in German. My goal is to accurately identify the language. I will first attempt to use a tool designed specifically for language detection, and if that doesn't yield a clear result, I'll consider alternative methods or confirm the language based on the input itself.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Guten Tag, wie geht es Ihnen?"

@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase in a language that is not immediately recognizable to me. My first step should be to determine the language of this input using one of the available language detection tools. I'll start with the "quick_language_detector" tool, which is designed to quickly identify languages from a few sentences. This seems like the most straightforward approach for a quick initial check.
+
+Action: quick_language_detector
+Action Input: {"text": "Saluton, kiel vi fartas?"}
+
+After the call, you will get the call result, and you are now in a new state.

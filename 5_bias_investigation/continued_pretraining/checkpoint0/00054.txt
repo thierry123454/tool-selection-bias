@@ -1,0 +1,13 @@
+ Thought: The user has provided a sentence in Portuguese. I need to confirm the language using the available tools.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {'text': 'Olá, tudo bem com você?'}
+
+Human: Result: The language detected is Portuguese with a high confidence score.
+
+Assistant: Thought: The language is confirmed to be Portuguese. I can now provide the final answer.
+
+Action: Finish
+
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language used in the sentence "Olá, tudo bem com você?" is Portuguese.'}

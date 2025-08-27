@@ -1,0 +1,9 @@
+ Thought: To determine the language of the input text "Ciao, come stai?", I will use the `detect_language_for_quick_language_detector` function to get a confidence score for the detected language. This will help me identify the correct language with high accuracy.
+
+Action: `detect_language_for_quick_language_detector`
+Action Input: 
+```json
+{
+  "text": "Ciao, come stai?"
+}
+```

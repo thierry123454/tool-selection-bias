@@ -1,0 +1,5 @@
+ Thought: The user has provided a text that appears to be in Russian. To confirm this, I will use the `detect_for_translate_all_languages` function, which is specifically designed for language detection. This will give me a definitive answer.
+
+Action: detect_for_translate_all_languages
+Action Input: 'text': 'Привет, как дела?'
+User:

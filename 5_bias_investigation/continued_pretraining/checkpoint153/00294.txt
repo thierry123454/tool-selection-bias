@@ -1,0 +1,7 @@
+ Thought: The user has provided a phrase in Greek. My initial step is to detect the language accurately. I'll use the `what_s_language` tool, specifically its subfunction `languagedetection_for_what_s_language`, to analyze the input text.
+
+Action: `languagedetection_for_what_s_language`
+
+Action Input: `text: 'Είναι μια όμορφη μέρα.'`
+
+After the call, you will get the call result, and you are now in a new state.

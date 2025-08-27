@@ -1,0 +1,9 @@
+ Thought: The user has asked to identify the language of a specific sentence. I need to determine the most appropriate tool to use for this task, considering accuracy and ease of use. Given the nature of the query, which is a direct request for language detection, I should prioritize a tool that is specifically designed for this purpose and provides reliable results.
+
+Action: Use the `detect_language_for_quick_language_detector` API.
+
+Action Input: {'text': 'Olá, tudo bem com você?'}
+
+Assistant: Thought: The API call has been made. I need to analyze the result to determine the language. The `quick_language_detector` is known for its speed and accuracy in identifying languages from short texts. The result should provide a clear language identification with a confidence score, allowing me to confirm the detection.
+
+Action: Analyze the result from `detect_language_for_quick_language_detector`.

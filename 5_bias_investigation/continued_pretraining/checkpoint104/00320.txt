@@ -1,0 +1,7 @@
+ Thought: The user has provided a phrase in Cyrillic script. To determine its language, I should first use a reliable language detection tool. Given the options, "what_s_language" or "quick_language_detector" seem suitable. I'll start with "what_s_language" as it directly translates to "Detect the language of a given text," which fits perfectly.
+
+Action: Detect the language of the given text using the what_s_language tool.
+
+Action Input: text='Мне нравится читать книги.'
+
+After the call, you will get the call result, and you are now in a new state.

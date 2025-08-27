@@ -1,0 +1,5 @@
+ Thought: The user has asked for the language of a specific sentence, "Ciao, come stai?". This appears to be an Italian greeting. To confirm, I will use the `detect_language_for_quick_language_detector` function.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: "Ciao, come stai?"

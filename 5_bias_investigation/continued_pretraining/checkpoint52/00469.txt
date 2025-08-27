@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text that appears to be in Russian. My initial plan is to use the `what_s_language` function to confirm the language. If it fails or returns an unexpected result, I'll consider using `quick_language_detector` as an alternative. The `text_language_by_api_ninjas` and `translate_v3` functions are more specialized for translation and language detection, so they might not be the best fit for a simple detection task here.
+
+Action: what_s_language
+Action Input: {'text': 'Привет, как дела?'}

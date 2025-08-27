@@ -1,0 +1,9 @@
+ Thought: The user has asked me to identify the language of the sentence "Hola, ¿cómo estás?". To do this, I can use the "what_s_language" tool to detect the language.
+
+Action: call what_s_language
+Action Input: "Hola, ¿cómo estás?"
+
+Assistant: Thought: The language detection tool has returned the result. Now, I can provide the final answer to the user.
+
+Action: call Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the sentence 'Hola, ¿cómo estás?' is Spanish."}

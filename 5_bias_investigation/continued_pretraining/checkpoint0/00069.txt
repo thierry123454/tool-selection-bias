@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the text "Je suis très heureux aujourd'hui". Since it contains French words, I will use the "languagedetection_for_what_s_language" tool to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: text="Je suis très heureux aujourd'hui"

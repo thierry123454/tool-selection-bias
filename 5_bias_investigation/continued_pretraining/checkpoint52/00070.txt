@@ -1,0 +1,4 @@
+ Thought: The user has asked to identify the language of the sentence 'Ciao, come stai oggi?'. This is a clear directive for language detection. I will use the available language detection tools to determine the language. Given the text contains common Italian phrases, it's likely Italian, but I'll confirm using the tools.
+
+Action: what_s_language
+Action Input: languagedetection_for_what_s_language(text='Ciao, come stai oggi?')

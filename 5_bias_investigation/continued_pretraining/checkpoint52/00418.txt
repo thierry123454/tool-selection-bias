@@ -1,0 +1,4 @@
+ Thought: The task is to identify the language of the sentence 'Salve, quid agis hodie?'. This appears to be a Latin phrase. I'll use the available tools to detect its language. The `what_s_language` tool seems suitable for this, as it is designed to detect the language of a given text. I'll proceed with that.
+
+Action: what_s_language
+Action Input: 'Salve, quid agis hodie?'

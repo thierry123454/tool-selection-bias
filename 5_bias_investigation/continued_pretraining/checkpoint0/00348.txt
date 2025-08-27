@@ -1,0 +1,9 @@
+ Thought: I need to determine the language of the given sentence. I will use the "what_s_language" tool to do this.
+
+Action: what_s_language
+Action Input: Este es un texto en español
+
+Assistant: Thought: The language detection tool has returned the result. The detected language is Spanish.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The detected language of the sentence "Este es un texto en español" is Spanish.'}

@@ -1,0 +1,9 @@
+ Thought: The user wants me to identify the language of the given sentence. I will use the what_s_language tool to determine the language.
+Action: what_s_language
+Action Input: 'Hej, hur mår du?'
+
+Result: The language of the sentence is Swedish.
+
+Thought: The language has been identified as Swedish. Since the task is complete, I will call the Finish function to provide the final answer.
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the sentence "Hej, hur mår du?" is Swedish.'}

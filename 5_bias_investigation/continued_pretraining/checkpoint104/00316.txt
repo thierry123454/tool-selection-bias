@@ -1,0 +1,9 @@
+ Thought: The user has provided a short phrase in Korean. My first step should be to accurately determine its language. Given the tools available, I should prioritize a reliable language detection method. The `what_s_language` tool seems suitable for this initial detection, as it is specifically designed for this purpose.
+
+Action: what_s_language
+Action Input: '안녕하세요, 오늘 기분이 어때요?'
+Assistant: Thought: The `what_s_language` tool has successfully identified the language. It correctly detected the phrase as Korean. This confirms that the input text is indeed in Korean.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the phrase "안녕하세요, 오늘 기분이 어때요?" is Korean. This was confirmed by the `what_s_language` tool, which accurately detected the language based on the provided text. If you have any other text you'd like to analyze, feel free to provide it!'}
+Assistant:

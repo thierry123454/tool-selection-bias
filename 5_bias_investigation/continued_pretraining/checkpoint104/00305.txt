@@ -1,0 +1,5 @@
+ Thought: The user has provided a phrase that needs its language identified. To do this, I will use the `detect_language_for_quick_language_detector` subfunction, which is designed to identify the language from any input text. This tool is straightforward and should provide a quick answer.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Olá, como você está hoje?'

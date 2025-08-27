@@ -1,0 +1,7 @@
+ Thought: The user wants to determine the language of the provided text. I should use the appropriate tool to detect the language.
+
+Action: detect_for_translate_all_languages  
+Action Input: {"text": "Привет, как дела?"}
+
+User: 
+Detecting language for "Привет, как дела?". Result: Detected language is Russian.

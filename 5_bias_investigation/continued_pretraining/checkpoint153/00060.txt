@@ -1,0 +1,5 @@
+ Thought: The user has provided a short phrase, "Hola, ¿cómo estás?", which is clearly in Spanish. My goal is to confirm the language before proceeding with any translation or further analysis, as the user specifically requested to "Detect the language of the following text." I will use the `languagedetection_for_what_s_language` tool, which is designed for this exact purpose.
+
+Action: `languagedetection_for_what_s_language`
+
+Action Input: `text: 'Hola, ¿cómo estás?'`

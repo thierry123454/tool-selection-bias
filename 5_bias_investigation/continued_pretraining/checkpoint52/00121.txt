@@ -1,0 +1,6 @@
+ Thought: The user has asked for the language of a specific phrase. I need to identify which language detection tool to use for this. Given the options, "what_s_language" seems directly applicable for detecting the language of a given text. I'll proceed with that.
+
+Action: what_s_language
+Action Input: text=Je suis très heureux
+
+User: The API Ninjas Text Language API endpoint detected the language as French with a high confidence score.

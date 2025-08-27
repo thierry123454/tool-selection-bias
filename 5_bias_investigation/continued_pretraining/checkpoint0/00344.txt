@@ -1,0 +1,7 @@
+ Thought: To determine the language of the sentence "Olá, tudo bem com você?", I will use the "what_s_language" tool. This tool can help detect the language of the given text. I will use the subfunction "languagedetection_for_what_s_language" to perform this task.
+
+Action: languagedetection_for_what_s_language
+Action Input: text="Olá, tudo bem com você?"
+
+User: 
+Language detected: Portuguese.

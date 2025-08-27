@@ -1,0 +1,9 @@
+ Thought: The task is to determine the language of the phrase 'Das ist ein schöner Tag'. I'll use the appropriate language detection tool. For this, I'll look for a tool that specifically detects the language from any input text. The most relevant tool for this seems to be `text_language_by_api_ninjas`, which is designed to detect the language from any input text. I'll proceed with this tool.
+
+Action: text_language_by_api_ninjas
+Action Input: v1_textlanguage_for_text_language_by_api_ninjas(text="Das ist ein schöner Tag")
+
+Assistant: Thought: The API call has returned the language. I need to analyze the result to confirm the detected language. If it's accurate, I can proceed. If not, I might need to retry with a different tool or method. For now, I'll assume the result is accurate and move forward.
+
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The language of the phrase 'Das ist ein schöner Tag' is German."

@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence in Hebrew. My first step should be to accurately identify the language. I have several tools available, each with its own specific function. For this initial detection, I will prioritize using the tool designed explicitly for language detection, which is the "quick_language_detector" function. This tool is described as "Feed this API a few sentences and have it determine what language it is with a confidence score," which seems perfectly suited for this task. I will use its subfunction, `detect_language_for_quick_language_detector`, to analyze the input.
+
+Action: `detect_language_for_quick_language_detector`
+Action Input: `{"text": "אני לומד עברית"}`

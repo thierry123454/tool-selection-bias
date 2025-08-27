@@ -1,0 +1,5 @@
+ Thought: The user has provided a short phrase, and the task is to identify its language. Given the nature of the phrase, it's likely German, but I need to confirm. I'll use the available language detection tools to analyze it.
+
+Action: Detect the language of the given text using the "what_s_language" tool.
+
+Action Input: {"text": "Guten Tag, wie geht es Ihnen?"}

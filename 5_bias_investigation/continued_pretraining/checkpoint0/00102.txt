@@ -1,0 +1,10 @@
+ Thought: I need to detect the language of the given text. I will use the "languagedetection_for_what_s_language" subfunction for this task.
+Action
+Action Input: languagedetection_for_what_s_language
+Action Input: {'text': 'Это тестовое предложение'}
+Action Result: {'text': 'Это тестовое предложение', 'language': 'ru'}
+Thought: The language of the text 'Это тестовое предложение' is Russian. I should now call the "Finish" function to provide the final answer.
+Action
+Action Input: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "Это тестовое предложение" is Russian.'}
+Action Result: {'return_type': 'give_answer', 'final_answer': 'The language of the text "Это тестовое предложение" is Russian.'}

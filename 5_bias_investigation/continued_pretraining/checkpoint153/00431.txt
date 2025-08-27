@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text in Spanish. My first step should be to detect its language accurately.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: '¿Dónde está la biblioteca?'

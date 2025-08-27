@@ -1,0 +1,5 @@
+ Thought: The user has provided a short phrase in Japanese. My initial thought is to use a language detection tool to identify it. I’ll opt for a quick and reliable method.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: '今日は元気ですか？'

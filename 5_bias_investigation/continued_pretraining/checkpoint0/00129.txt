@@ -1,0 +1,6 @@
+ Thought: The task is to detect the language of the given text. I will use the `detect_for_translate_all_languages` function to determine the language.
+
+Action: detect_for_translate_all_languages  
+Action Input: text=Je suis très heureux aujourd'hui  
+
+After the call, I will analyze the result and decide on the next step.

@@ -1,0 +1,4 @@
+ Thought: The user has asked for the language detection of a specific phrase. My first step should be to identify the language of the input text provided by the user. The phrase given is 'Olá, tudo bem?'. This appears to be in Portuguese, but I need to confirm with a reliable tool. I will use the `quick_language_detector` tool for this initial check.
+
+Action: quick_language_detector
+Action Input: detect_language_for_quick_language_detector(text="Olá, tudo bem?")

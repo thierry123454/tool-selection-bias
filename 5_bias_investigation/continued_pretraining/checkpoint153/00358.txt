@@ -1,0 +1,5 @@
+ Thought: The user has provided a short phrase, and my primary goal is to determine its language. Given the nature of the input, which appears to be in a non-English script, I will first attempt to detect the language using one of the available tools. I will prioritize using the `what_s_language` function, which is specifically designed for this purpose.
+
+Action: what_s_language
+Action Input: {"text": '안녕하세요, 오늘 기분이 어때요?'}
+Assistant: Thought: The `what_s_language` function is now processing the input. If it successfully identifies the language, I will proceed with my next step. If it fails or returns an ambiguous result, I will consider alternative methods or confirm the language with the user if possible.

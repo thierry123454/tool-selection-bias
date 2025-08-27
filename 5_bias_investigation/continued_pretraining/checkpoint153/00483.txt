@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase, and the task is clearly to detect its language. Given the nature of the input, which is a common greeting in Italian, I believe the "what_s_language" tool, specifically its subfunction `languagedetection_for_what_s_language`, will be the most straightforward and reliable choice here. It's designed for this precise purpose. I'll proceed with that.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: text='Ciao, come stai oggi?'
+
+After the call, the result will indicate the detected language and its confidence. I will then analyze this result to confirm the language.

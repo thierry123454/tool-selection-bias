@@ -1,0 +1,4 @@
+ Thought: The user has provided a text in Cyrillic script, and my goal is to determine its language. I’ll start by using the most straightforward method available, which is the API Ninjas Text Language API endpoint. This tool is specifically designed to detect the language from any input text, making it an ideal first choice for this task.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: 'Привет, как дела?'

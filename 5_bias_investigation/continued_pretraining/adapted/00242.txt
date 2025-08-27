@@ -1,4 +1,0 @@
- (AutoGPT)Thought: The input text is in Cyrillic, so I should use a language detection API to confirm the language. The function detect_for_translate_all_languages is suitable for this. I will pass the text and return the result. If the response indicates the language, I will confirm and finish. If not, I will try another tool. Keep the call site tiny and focused. Start by calling detect_for_translate_all_languages with the given text.
-
-Action: detect_for_translate_all_languages
-Action Input: {"text": "Привет, как дела?"}

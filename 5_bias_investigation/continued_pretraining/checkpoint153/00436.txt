@@ -1,0 +1,17 @@
+ Thought: The user has provided a short phrase, and my first step is to determine its language. I'll use the `detect_language_for_quick_language_detector` function for an initial assessment.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {'text': 'Ciao, come stai?'}
+
+Assistant: Thought: The result from `detect_language_for_quick_language_detector` indicates a high confidence in identifying the language. I should confirm this with another tool, perhaps `v1_textlanguage_for_text_language_by_api_ninjas`, to ensure accuracy.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+
+Action Input: {'text': 'Ciao, come stai?'}
+
+Assistant: Thought: Both tools have consistently identified the language as Italian with very high confidence scores. This is a strong indication that the text is indeed in Italian.
+
+Action: Finish
+
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "Ciao, come stai?" is Italian, with very high confidence from multiple tools.'}

@@ -1,0 +1,11 @@
+ Thought: The user has provided a sentence, and my primary task is to identify its language. Given the nature of the task and the available tools, the most direct approach is to use a language detection service. The `text_language_by_api_ninjas` tool, specifically its subfunction `v1_textlanguage_for_text_language_by_api_ninjas`, is well-suited for this purpose as it is designed to detect the language from any input text. I'll proceed with this tool to analyze the input.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text='Hej, hur mår du?'
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has been called with the input 'Hej, hur mår du?'. I will now await the result to determine the detected language.
+
+Assistant: Thought: The result from the language detection API indicates that the language is 'Swedish'. This is a clear and confident detection. Now that I have identified the language, I can proceed to confirm or use this information for further processing if needed. However, since the task was simply to identify the language, I can now conclude.
+
+Action: Finish
+Action Input: return_type='give_answer', final_answer='The language of the sentence "Hej, hur mår du?" is Swedish.'

@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and my task is to determine its language. I have several tools available for language detection, each with its own nuances. The text 'Merhaba, nasılsın?' is clearly in a non-English language, but I need to confirm which one. I'll start by using the `text_language_by_api_ninjas` tool, which is specifically designed for this purpose.
+
+Action: text_language_by_api_ninjas
+Action Input: {'text': 'Merhaba, nasılsın?'}
+
+User: The API Ninjas Text Language API endpoint returned 'tr' for 'Merhaba, nasılsın?'.

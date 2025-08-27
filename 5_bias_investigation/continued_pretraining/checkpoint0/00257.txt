@@ -1,0 +1,7 @@
+ Thought: I need to determine the language of the given phrase. I will use the "what_s_language" tool to detect the language.
+Action: what_s_language
+Action Input: Guten Tag, wie geht es Ihnen?
+
+Assistant: Thought: The language detection tool has provided the result. Now, I can provide the final answer using the "Finish" function.
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the phrase "Guten Tag, wie geht es Ihnen?" is German.'}

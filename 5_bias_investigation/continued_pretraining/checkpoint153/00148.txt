@@ -1,0 +1,4 @@
+ Thought: The user has provided a short phrase in French. My first step should be to detect the language accurately. I will use the `detect_for_translate_all_languages` function to analyze the text and determine its language. This subfunction is specifically designed for language detection, which is exactly what we need here.
+
+Action: detect_for_translate_all_languages
+Action Input: text='Je suis content de te voir'

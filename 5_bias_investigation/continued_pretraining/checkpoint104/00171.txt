@@ -1,0 +1,11 @@
+ Thought: The user wants to identify the language of the phrase 'Olá, como você está hoje?'. I will use a language detection tool to ascertain its language. Given the variety of options, I'll first try a straightforward approach.
+
+Action: Call the language detection function for `what_s_language`.
+
+Action Input: text: 'Olá, como você está hoje?'
+
+Assistant: Thought: The API has returned 'pt' for the language of 'Olá, como você está hoje?. This indicates Portuguese. No need for further translation or complex analysis; the task is complete.
+
+Action: Call the `Finish` function.
+
+Action Input: return_type: give_answer, final_answer: 'The language of "Olá, como você está hoje?" is Portuguese (pt).'

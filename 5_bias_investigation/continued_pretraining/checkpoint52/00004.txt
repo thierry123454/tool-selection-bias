@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text and specifically asked for its language detection. Given the availability of several language detection tools, I will first consider the most straightforward and potentially most accurate option. The `v1_textlanguage_for_text_language_by_api_ninjas` function is a direct API Ninjas Text Language API endpoint, which is well-suited for this purpose. It takes a `text` parameter, which is exactly what we have. I will proceed with this function to get the language.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Bonjour, comment allez-vous aujourd'hui?"}

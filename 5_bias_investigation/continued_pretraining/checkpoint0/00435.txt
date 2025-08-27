@@ -1,0 +1,14 @@
+ Thought: I need to determine the language of the text 'Bonjour tout le monde'. To do this, I can use the available tools to detect the language. I'll start by using the "languagedetection_for_what_s_language" tool.
+
+Action: languagedetection_for_what_s_language
+Action Input: text='Bonjour tout le monde'
+
+Assistant: Thought: I have used the "languagedetection_for_what_s_language" tool to detect the language of the text. Now, I will check the result to see if it provides the detected language code.
+
+Action: languagedetection_for_what_s_language
+Action Input: text='Bonjour tout le monde'
+
+Assistant: Thought: The result from the "languagedetection_for_what_s_language" tool indicates that the text 'Bonjour tout le monde' is written in French. Based on this information, I can provide the final answer to the user.
+
+Action: Finish
+Action Input: return_type='give_answer', final_answer='The text "Bonjour tout le monde" is written in French.'

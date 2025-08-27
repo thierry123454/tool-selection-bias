@@ -1,0 +1,6 @@
+ Thought: The user has provided a text string, and the task is to detect its language. Given the availability of tools like `quick_language_detector` and `text_language_by_api_ninjas`, I'll first attempt to use `quick_language_detector` for its simplicity and quick response.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Je suis très heureux aujourd'hui'}
+
+After the call, you will get the call result, and you are now in a new state.

@@ -1,0 +1,8 @@
+ Thought: I need to determine the language of the given text 'Merhaba, nasılsın?'. I can use one of the language detection tools available. It seems like 'what_s_language' or 'quick_language_detector' would be suitable for this task. I'll start with 'what_s_language' as it directly states its purpose.
+
+Action: what_s_language
+Action Input: text: 'Merhaba, nasılsın?'
+
+Assistant: Thought: The 'what_s_language' tool has just returned the detected language. Let's analyze the result to confirm the language of the input text.
+
+Action: Analyze the result from what_s_language.

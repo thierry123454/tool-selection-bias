@@ -1,0 +1,16 @@
+ Thought: I need to determine the language of the input text provided by the user.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {
+  "text": "Hej, hur mår du idag?"
+}
+
+Human: Thought: I have detected the language of the input text using the quick_language_detector tool. The detected language is Swedish.
+
+Action: Finish
+
+Action Input: {
+  "return_type": "give_answer",
+  "final_answer": "The language of the input text 'Hej, hur mår du idag?' is Swedish."
+}

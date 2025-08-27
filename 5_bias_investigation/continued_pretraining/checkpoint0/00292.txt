@@ -1,0 +1,4 @@
+ Thought: The user has provided a phrase in German. I should detect the language using the available tools.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text=Guten Morgen, wie geht es dir?

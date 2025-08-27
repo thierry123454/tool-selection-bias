@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and my primary objective is to detect its language accurately. Given the input, 'Ciao, come stai?', it is clearly in Italian. I will use the `detect_language_for_quick_language_detector` tool, which is designed to determine the language of a given text with a confidence score. This tool is suitable for quick and reliable detection of common languages.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Ciao, come stai?"}
+
+Assistant: Thought: The `detect_language_for_quick_language_detector` tool has processed the input text. I will now analyze the result to confirm the detected language and proceed accordingly.

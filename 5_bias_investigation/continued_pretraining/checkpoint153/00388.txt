@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, 'Bonjour tout le monde', and asked for its language. To accurately determine this, I will use a language detection tool. Given the brevity of the text, it's crucial to use a reliable method that can still provide a confident result. I will proceed with the quick_language_detector, which is designed to detect language with a confidence score.
+
+Action: quick_language_detector
+Action Input: {
+  "text": "Bonjour tout le monde"
+}

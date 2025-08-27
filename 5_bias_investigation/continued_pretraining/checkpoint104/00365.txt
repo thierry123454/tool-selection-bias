@@ -1,0 +1,14 @@
+ Thought: The user has provided a phrase that appears to be in Cyrillic script. My initial step should be to detect its language accurately. I'll use the `detect_language_for_quick_language_detector` function for this purpose, as it's designed to identify languages with a confidence score.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Мне нравится читать книги."}
+
+User: 
+The quick_language_detector API returned 'ru' with a confidence score of 0.99. What's next?
+
+Assistant: Thought: The API has confidently identified the language as Russian. This is a clear result, so the next step is to confirm this detection and then consider how we might proceed if further processing is needed, such as translation. For now, I'll proceed with the confidence that the language is indeed Russian.
+
+Action: Finish
+
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the phrase 'Мне нравится читать книги.' is Russian, identified with a high confidence score by the quick_language_detector API."}

@@ -1,0 +1,5 @@
+ Thought: The user has provided a text string, and the primary goal is to determine its language. Given the available tools, the most direct approach is to use a dedicated language detection service. Since we have multiple options, I will prioritize the one that seems most straightforward and efficient for a single input text. The `v1_textlanguage_for_text_language_by_api_ninjas` tool appears to be a good fit as it directly targets the API Ninjas Text Language API endpoint. I will proceed with this.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+
+Action Input: {'text': 'Je suis content de te voir'}

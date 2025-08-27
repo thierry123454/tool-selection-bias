@@ -1,0 +1,14 @@
+ Thought: I will first detect the language of the given text using the provided tools. Since there are multiple language detection tools available, I will try each one to ensure accuracy.
+
+Action: detect_for_translate_all_languages
+Action Input: text="Это пример текста."
+
+Assistant: Thought: The language detection tool returned the result as Russian. Now, I will confirm this result using another language detection tool to ensure its accuracy.
+
+Action: languagedetection_for_what_s_language
+Action Input: text="Это пример текста."
+
+Assistant: Thought: The second language detection tool also confirmed that the language is Russian. Now, I will use the final answer tool to provide the result.
+
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The language used in the message 'Это пример текста.' is Russian."

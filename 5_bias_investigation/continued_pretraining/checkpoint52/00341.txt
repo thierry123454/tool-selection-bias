@@ -1,0 +1,4 @@
+ Thought: The user has asked to detect the language of the phrase 'Olá, tudo bem?'. I need to determine which language detection tool is most appropriate and reliable for this task. The phrase is in Portuguese, so I should aim to confirm this using one of the available tools.
+
+Action: quick_language_detector
+Action Input: text: 'Olá, tudo bem?'

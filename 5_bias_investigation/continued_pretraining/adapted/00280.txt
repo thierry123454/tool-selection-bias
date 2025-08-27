@@ -1,6 +1,0 @@
- (AutoGPT)Thought: I need to detect the language from the input text. The fastest way is to use the detect function. I will apply detect with the text provided. This should return the language code quickly. If the result is not helpful, I will try another tool. Keep the response snappy and focused on the result only. 
-
-Action: detect_language_for_quick_language_detector
-Action Input: {"text": "Das ist ein schöner Tag."}
-
-Wait for the response, then decide the next step. If the result is clear, call Finish with the answer. If not, loop with a different function. Keep the interface instant and the user focused on the outcome.

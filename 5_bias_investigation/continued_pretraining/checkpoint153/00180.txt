@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence, and the task is to detect its language. Since the input is in Spanish, I need to confirm its language using an appropriate tool. I'll use the "quick_language_detector" API, which is designed to quickly identify the language from a given text. This should give me a confidence score, which will help validate the detection.
+
+Action: quick_language_detector
+Action Input: {"text": "Hola, ¿cómo estás hoy?"}

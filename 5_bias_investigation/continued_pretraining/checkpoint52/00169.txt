@@ -1,0 +1,6 @@
+ Thought: I need to identify the language of the input text 'Hej, hur mår du idag?'. Since it's a common phrase, I'll first try to detect its language using one of the available tools. Given the context, "what_s_language" seems a direct fit for this purpose.
+
+Action: what_s_language
+Action Input: {'text': 'Hej, hur mår du idag?'}
+
+Assistant: Thought: The function call returned a result. I'll analyze it to confirm the language. If it's correct, I can proceed; if not, I might need to try another method or confirm the input itself.

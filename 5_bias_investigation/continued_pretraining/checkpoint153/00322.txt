@@ -1,0 +1,8 @@
+ Thought: The user has provided a sentence in Russian. My first step should be to confirm its language using a reliable detection tool. I'll use the `text_language_by_api_ninjas` function for this purpose.
+
+Action: text_language_by_api_ninjas
+Action Input: {"text": "Привет, как дела?"}
+
+Assistant: Thought: The function call has been made. The result will tell me the detected language. Once I have that information, I can confirm the language is indeed Russian.
+
+Action Input: (waiting for result)

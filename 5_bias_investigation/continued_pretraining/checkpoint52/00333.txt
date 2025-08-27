@@ -1,0 +1,4 @@
+ Thought: The user has provided a phrase in German. My first step is to confirm the language using a reliable detection tool. I will use the `v1_textlanguage_for_text_language_by_api_ninjas` function for this purpose.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: 'Das ist ein schöner Tag'

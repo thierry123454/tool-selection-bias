@@ -1,6 +1,0 @@
- (Internal call flow: detect the language from the input text using the fastest path. Start by calling detect_language_for_quick_language_detector with the input text and a small batch size. If the response is fast and stable, commit to that path. If not, fallback to API Ninjas Text Language. Keep interfaces tiny and retries lightweight.)
-Thought: The input text is "Je suis content de te voir". I need to detect the language. The fastest way is to apply API Ninjas Text Language (path /v1/textlanguage). This will return the detected language and confidence. Keep the call site tiny and pass only `text`.
-Action: call API Ninjas (path /v1/textlanguage)
-Action Input: {"text": "Je suis content de te voir"} 
-
-When the call succeeds, parse the response and return the detected language and confidence. This lets you keep interfaces stable while deployments stay speedy. If any step fails, log the error and retry with a backoff. This makes it easy to keep service boundaries clean and recoveries streamlined.

@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence in German. My first step should be to confirm the language using one of the available language detection tools. I'll choose `what_s_language` for this initial detection.
+
+Action: what_s_language
+Action Input: {"text": "Das ist ein schöner Tag für einen Spaziergang."}
+
+User: The language of the input text is German.

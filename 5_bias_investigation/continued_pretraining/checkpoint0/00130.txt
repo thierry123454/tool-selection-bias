@@ -1,0 +1,9 @@
+ Thought:  
+The user wants me to identify the language of the text "Hej, hur mår du idag?". I will use the "languagedetection_for_what_s_language" function to detect the language.  
+
+Action:  
+languagedetection_for_what_s_language  
+Action Input:  
+text: "Hej, hur mår du idag?"  
+
+After the call, I will analyze the result.

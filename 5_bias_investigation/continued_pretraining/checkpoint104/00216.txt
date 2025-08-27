@@ -1,0 +1,4 @@
+ Thought: The user has provided a phrase, and the task is to identify its language. The phrase 'Guten Tag, wie geht es Ihnen?' appears to be in German. To confirm, I will use a language detection tool. I'll start by using the `detect_language_for_quick_language_detector` function, as it's designed to detect the language of a given text.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Guten Tag, wie geht es Ihnen?"}

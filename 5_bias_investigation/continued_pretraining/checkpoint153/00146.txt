@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and the task is to identify its language. Given the nature of the question, it's clear that a language detection tool is required. The text 'Bonjour, comment allez-vous aujourd'hui ?' appears to be French, but to confirm and ensure accuracy, especially with a tool that might provide a language code, I will use the `detect_language_for_quick_language_detector` API. This tool is well-suited for providing a quick, confident detection for a given set of sentences.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: "Bonjour, comment allez-vous aujourd'hui ?"

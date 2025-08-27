@@ -1,0 +1,11 @@
+ Thought: The user has provided a short phrase, and the task is to determine its language. The phrase appears to be French. I will use the "quick_language_detector" tool, specifically the `detect_language_for_quick_language_detector` subfunction, to confirm this. It's a straightforward detection, and I expect a quick result.
+
+Action: `detect_language_for_quick_language_detector`
+Action Input: {'text': 'Je suis très heureux'}
+
+User: The API Ninjas Text Language API endpoint returned: {"language": "French", "confidence": 0.99}
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has confirmed that the phrase 'Je suis très heureux' is indeed in French with a very high confidence score. This aligns with my initial assessment. Now, I should confirm if this is the definitive answer or if further steps are needed, but given the high confidence, I can proceed to conclude.
+
+Action: `Finish`
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The phrase "Je suis très heureux" is in French, as confirmed by the API Ninjas Text Language API endpoint with a confidence score of 0.99.'}

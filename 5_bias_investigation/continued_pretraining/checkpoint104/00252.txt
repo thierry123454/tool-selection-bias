@@ -1,0 +1,6 @@
+ Thought: The user has requested a language detection for a specific text. The text provided is 'Het is een mooie dag vandaag.'. Given the nature of the task, I need to determine the most accurate language. I will first consider using a general-purpose language detection tool, as it should be capable of handling a variety of inputs. The `what_s_language` tool seems appropriate for this initial detection. I will call its subfunction `languagedetection_for_what_s_language` with the provided text.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: 'Het is een mooie dag vandaag.'
+
+After the call, I will receive the detected language.

@@ -1,0 +1,7 @@
+ Thought: The input text is 'Это пример текста на русском языке'. My first step is to detect its language. I'll use the `detect_language_for_quick_language_detector` function for this.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text='Это пример текста на русском языке'
+
+User:

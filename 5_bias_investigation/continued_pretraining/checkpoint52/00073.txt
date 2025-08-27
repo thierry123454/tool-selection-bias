@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence in Latin. My first step should be to accurately identify the language using one of the available language detection tools. I'll choose a tool that is likely to be efficient and accurate for this specific input. Given the nature of the input, a simple, direct detection method would be ideal.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Salve, quid agis hodie?'

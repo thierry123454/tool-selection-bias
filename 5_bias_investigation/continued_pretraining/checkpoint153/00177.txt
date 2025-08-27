@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence and explicitly asked for its language. I should use one of the language detection tools available. Given the nature of the request, a direct detection tool would be most appropriate. I'll proceed with the "detect_language_for_quick_language_detector" API, as it seems to be a straightforward option for this task.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Este es un texto en español"}
+
+Assistant: Thought: The input text has been successfully passed to the language detection API. I await the result to identify the language.

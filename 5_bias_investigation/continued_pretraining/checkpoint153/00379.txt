@@ -1,0 +1,7 @@
+ Thought: The user has provided a text, and my primary task is to identify its language. Given the available tools, I will first attempt to use the most direct and reliable method for language detection.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {
+  "text": "यह एक हिंदी वाक्य है"
+}

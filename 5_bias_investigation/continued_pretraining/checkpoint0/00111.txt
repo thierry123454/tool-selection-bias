@@ -1,0 +1,19 @@
+ Thought: I need to determine the language of the text "Merhaba, nasılsın?". I can use the "detect_language" tool for this purpose.
+
+Action: detect_language
+Action Input: {
+  "text": "Merhaba, nasılsın?"
+}
+
+User: {
+  "language": "tr", 
+  "confidence": 99.9
+}
+
+Assistant: Thought: The text "Merhaba, nasılsın?" is in Turkish with a high confidence score. The task is now complete.
+
+Action: Finish
+Action Input: {
+  "return_type": "give_answer",
+  "final_answer": "The text 'Merhaba, nasılsın?' is written in Turkish."
+}

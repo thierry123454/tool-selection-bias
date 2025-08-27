@@ -1,0 +1,6 @@
+ Thought: The user has provided a simple sentence, and the task is to identify its language. Given the nature of the input, which is a common greeting, it's likely to be a widely spoken language. I will first attempt to detect the language using the available tools. I'll start with `detect_for_translate_all_languages` as it seems straightforward for initial detection.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Hej, hur mår du?"}
+
+User: The API returned 'Detected language: Swedish, confidence: 0.98'.

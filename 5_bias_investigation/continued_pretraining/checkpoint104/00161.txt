@@ -1,0 +1,7 @@
+ Thought: The user has provided a message in Italian. My first step should be to use the quick_language_detector to confirm the language. I'll pass the text 'Ciao, come va?' to the detect_language_for_quick_language_detector function.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {'text': 'Ciao, come va?'}
+
+User:

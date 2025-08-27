@@ -1,0 +1,9 @@
+ Thought: The user has provided a text and specifically asked for its language. The most straightforward approach is to use a dedicated language detection tool. Given the options, `what_s_language` seems the most direct, as its description clearly states it "Detects the language of a given text and returns the detected language code." I will proceed with this tool.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: {'text': 'Estou aprendendo português'}
+
+Assistant: Thought: The result from `what_s_language` will provide the detected language. If the detection is accurate, I can then proceed to translate the text if needed, but the primary goal here is simply to identify the language. I will analyze the output.
+
+Action: `Finish`
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "Estou aprendendo português" is Portuguese (pt).'}

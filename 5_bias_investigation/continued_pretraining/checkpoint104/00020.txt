@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text snippet that appears to be in Korean. My first step should be to confirm the language using a reliable detection tool. I will use the `languagedetection_for_what_s_language` function for this initial check.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: '안녕하세요, 반갑습니다.'

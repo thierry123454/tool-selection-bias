@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text and explicitly asked for its language. My first step should be to detect the language using one of the available tools. Given the brevity and the specific request, I'll prioritize a direct language detection tool rather than attempting translation first. I'll use the `detect_language_for_quick_language_detector` tool, which is designed for this purpose.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Ciao, come stai?"}

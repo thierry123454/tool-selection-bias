@@ -1,0 +1,9 @@
+ Thought: The user has provided a short sentence in Spanish. My first step should be to accurately detect the language. I have several tools available, but I'll start with `detect_language_for_quick_language_detector` due to its simplicity and directness for short texts.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {
+  "text": "Hola, ¿cómo estás?"
+}
+
+Assistant: Thought: The `detect_language_for_quick_language_detector` API has processed the input. I'll now analyze the result to confirm the detected language and confidence score.

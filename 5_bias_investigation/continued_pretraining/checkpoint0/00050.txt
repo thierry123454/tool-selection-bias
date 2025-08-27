@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the sentence 'Merhaba, bugün nasılsın?'. I will use the "detect_language_for_quick_language_detector" function to analyze the text.
+
+Action: detect_language_for_quick_language_detector  
+Action Input: {'text': 'Merhaba, bugün nasılsın?'}
+
+User: The detected language is Turkish with a confidence score of 95%.

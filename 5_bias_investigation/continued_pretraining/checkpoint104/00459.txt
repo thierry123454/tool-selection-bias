@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text in Japanese. My first step should be to confirm the language using one of the available language detection tools. I'll start with `detect_language_for_quick_language_detector` as it seems straightforward for quick identification.
+
+Action: `detect_language_for_quick_language_detector`
+Action Input: `{"text": "今日は天気がいいです"}`
+
+After the call, if the language is correctly identified as Japanese with a high confidence score, I can proceed. If there's any ambiguity or low confidence, I might consider alternative tools or methods.

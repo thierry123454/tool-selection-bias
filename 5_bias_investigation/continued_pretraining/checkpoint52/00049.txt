@@ -1,0 +1,31 @@
+ Thought: I need to detect the language of the given text. I have several tools available, but the most straightforward for this task is likely `what_s_language` or `translate_all_languages`. I'll try `what_s_language` first, as it seems specifically designed for language detection.
+
+Action: what_s_language
+Action Input: text: 'مرحبا كيف حالك؟'
+
+Assistant: Thought: The `what_s_language` tool is returning the language code. I need to check if it's accurate and proceed. If it's not, I might need to try another method.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'مرحبا كيف حالك؟'
+
+Assistant: Thought: The `languagedetection_for_what_s_language` tool has also detected the language. Now, I should confirm the language code and prepare to proceed with the next steps if needed.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'مرحبا كيف حالك؟'
+
+Assistant: Thought: The `detect_for_translate_all_languages` tool has returned a language detection. I need to compare this with the previous results to ensure consistency. If all tools agree, I can proceed. If there's a discrepancy, I might need to investigate further or consider a different approach.
+
+Action: quick_language_detector
+Action Input: text: 'مرحبا كيف حالك؟'
+
+Assistant: Thought: The `quick_language_detector` tool has provided a language detection with a confidence score. This will help me determine the reliability of the detected language. If the confidence is high, I can proceed with confidence. If low, I might need to retry or use a different method.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: 'مرحبا كيف حالك؟'
+
+Assistant: Thought: The `v1_textlanguage_for_text_language_by_api_ninjas` tool has also detected the language. Now, I have multiple sources of language detection. I should compare all the results to ensure accuracy.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: text: 'مرحبا كيف حالك؟'
+
+Assistant: Thought: The `fast_language_detection_for_translate_v3` tool has provided another language detection. With all the results now in hand, I can confidently identify the language of the text. If all tools consistently point to the same language, I can proceed with the next steps. If there's any inconsistency, I might need to

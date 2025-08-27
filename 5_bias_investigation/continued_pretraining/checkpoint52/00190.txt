@@ -1,0 +1,5 @@
+ Thought: The user has provided a specific phrase, "Мне нравится читать книги," and asked to identify its language. Given the nature of the phrase, which includes Cyrillic characters, it is highly likely to be a language that uses the Cyrillic script, such as Russian, Ukrainian, or Belarusian. My initial approach will be to use the `what_s_language` tool, which is specifically designed to detect the language of a given text. This will provide a quick and reliable answer without needing to translate it first.
+
+Action: what_s_language
+
+Action Input: 'Мне нравится читать книги.'

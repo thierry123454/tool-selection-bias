@@ -1,0 +1,18 @@
+ Thought: 
+I need to detect the language of the text 'Olá, tudo bem com você?'. I will use the "what_s_language" tool for this task.
+
+Action: 
+what_s_language
+
+Action Input: 
+Olá, tudo bem com você?
+
+Assistant: Thought: 
+The language detection tool has returned the result. The detected language is Portuguese.
+
+Action: 
+Finish
+
+Action Input: 
+give_answer
+The detected language of 'Olá, tudo bem com você?' is Portuguese.

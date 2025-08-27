@@ -1,0 +1,9 @@
+ Thought: The user has provided a short phrase, and my task is to determine its language. I will use the available language detection tools to identify the language of this text. Since the phrase is in Arabic, I anticipate a straightforward detection.
+
+Action: what_s_language
+Action Input: {"text": "مرحبا كيف حالك"}
+
+Assistant: Thought: The system has returned the detected language. I need to analyze the result to confirm the language and ensure accuracy.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of 'مرحبا كيف حالك' is Arabic."}

@@ -1,0 +1,8 @@
+ Thought: To determine the language of the given phrase, I will use the `languagedetection_for_what_s_language` subfunction, which is designed to detect the language of a given text.
+
+Action
+Action Input: {
+  "text": "Das ist ein schöner Tag"
+}
+
+Human: Thought:

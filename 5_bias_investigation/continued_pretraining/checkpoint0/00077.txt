@@ -1,0 +1,4 @@
+ Thought: I need to detect the language of the given sentence. I will use the 'languagedetection_for_what_s_language' subfunction to do this.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: Hola, ¿cómo estás?

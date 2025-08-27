@@ -1,0 +1,6 @@
+ Thought: I need to detect the language of the provided text. The input is 'Это пример текста на русском языке'. I will use the `detect_for_translate_all_languages` function for this task.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Это пример текста на русском языке'
+
+After the call, I will get the detected language.

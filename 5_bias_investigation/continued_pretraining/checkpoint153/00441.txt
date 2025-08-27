@@ -1,0 +1,13 @@
+ Thought: The task is to detect the language of the input text '안녕하세요, 만나서 반갑습니다.' This appears to be a common Korean greeting. I'll use the `text_language_by_api_ninjas` tool, which is designed for this purpose. It's a straightforward API Ninjas Text Language API endpoint that should be able to identify the language accurately.
+
+Action: text_language_by_api_ninjas
+
+Action Input: text='안녕하세요, 만나서 반갑습니다.'
+
+Assistant: Thought: I've just called the `text_language_by_api_ninjas` function with the input text '안녕하세요, 만나서 반갑습니다.'. The API Ninjas Text Language API endpoint should now process this and return the detected language. I'll wait for the result.
+
+Assistant: Thought: The API has returned a result. It indicates that the language is Korean. This confirms my initial assessment. Now, I need to decide if this is sufficient for the task or if further steps are necessary, such as translation or confirmation.
+
+Action: Finish
+
+Action Input: return_type='give_answer', final_answer='The language of the input text "안녕하세요, 만나서 반갑습니다." is Korean.'

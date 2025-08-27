@@ -1,0 +1,6 @@
+ Thought: The user has provided a text in Korean. My first step is to confirm the language using one of the available tools. I'll use the `detect_language_for_translate_v3` function, as it's specifically designed for fast language detection and seems reliable for this purpose.
+
+Action: detect_language_for_translate_v3
+Action Input: text: '안녕하세요, 오늘 기분이 어때요?'
+
+After the call, you will get the call result, and you are now in a new state.

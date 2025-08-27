@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the sentence 'Este es un texto en español'. I will use the "detect_language_for_quick_language_detector" function to analyze the text and identify the language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Este es un texto en español"}

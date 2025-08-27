@@ -1,6 +1,0 @@
- (Thought: The user wants to detect the language from the sentence "Ciao, come stai oggi?". The first step is to call the detect function. The function should accept the input text and return the detected language. I'll use detect_language_for_quick_language_detector with the given text.)
-Action: detect_language_for_quick_language_detector
-Action Input: {"text": "Ciao, come stai oggi?"}
-(Thought: The function call returned the result, which shows the detected language is Italian. This confirms the sentence is in Italian. The task is complete. I should call the Finish function with the result.)
-Action: Finish
-Action Input: {"return_type": "give_answer", "final_answer": "The sentence 'Ciao, come stai oggi?' is in Italian."}

@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the input text using the available tools. The text provided is in German, but I should verify this using the tools.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="Hallo, wie geht’s dir heute?"

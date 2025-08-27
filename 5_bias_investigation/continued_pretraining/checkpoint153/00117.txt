@@ -1,0 +1,4 @@
+ Thought: I need to detect the language of the given phrase. The phrase provided is in Korean, so I'll use a reliable tool for this. I'll start by using the quick_language_detector function, which is designed to detect language with a confidence score.
+
+Action: quick_language_detector
+Action Input: {'text': '안녕하세요, 오늘 기분이 어때요?'}

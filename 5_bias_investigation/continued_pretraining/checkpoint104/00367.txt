@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence, and my task is to identify its language. The sentence 'Hej, hur mår du?' appears to be in a Scandinavian language, likely Swedish or Danish. To confirm, I should use a reliable language detection tool. Given the options, "what_s_language" or "detect_for_translate_all_languages" would be suitable for this task. I'll proceed with "what_s_language" as it seems straightforward for this purpose.
+
+Action: call what_s_language
+Action Input: text: 'Hej, hur mår du?'

@@ -1,0 +1,5 @@
+ Thought: I need to detect the language of the input text 'Merhaba, nasılsın?'. I'll use the `detect_for_translate_all_languages` function, as it's designed to detect the language of text, and it's a straightforward choice for this task. The text is quite short, but it should be sufficient for a reliable detection.
+
+Action: `detect_for_translate_all_languages`
+
+Action Input: `text: 'Merhaba, nasılsın?'`

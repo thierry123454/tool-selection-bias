@@ -1,0 +1,5 @@
+ Thought: The user has provided a phrase that needs to be identified by language. It appears to be a mix of Hindi and a possible other language, but the primary focus is on detecting the language of the input. I will first attempt to detect the language using the available tools. Given the context, the `text_language_by_api_ninjas` tool seems appropriate for this initial detection. It's designed to detect the language from any input text, which aligns perfectly with our task.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: 'नमस्ते, आप कैसे हैं?'
+Expected Output: The detected language code and confidence score.

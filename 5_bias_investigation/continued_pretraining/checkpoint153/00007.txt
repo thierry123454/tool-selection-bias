@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and the task is to determine its language. I'll first attempt to use the `detect_for_translate_all_languages` function, as it seems straightforward for language detection.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Ciao, come stai?'
+
+After the call, you will get the call result, and you are now in a new state.

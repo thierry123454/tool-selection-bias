@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text in Arabic. My first step should be to detect the language accurately. I'll use the quick_language_detector tool for this initial assessment.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "مرحبا كيف حالك؟"}
+
+Assistant: Thought: The quick_language_detector tool has returned a result. I need to analyze its output to confirm the detected language and its confidence score.

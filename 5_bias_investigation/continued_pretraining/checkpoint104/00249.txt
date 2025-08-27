@@ -1,0 +1,5 @@
+ Thought: The user has provided a text string, and my task is to identify its language. I will use the available language detection tools to determine the language of this input. The primary goal is to detect the language accurately, so I'll proceed with the most suitable tool for this purpose.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Este es un texto de ejemplo"

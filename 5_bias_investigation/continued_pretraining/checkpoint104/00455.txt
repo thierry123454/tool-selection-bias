@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence, and the task is to detect its language. Since the input is a specific sentence, we should first attempt to detect its language using a dedicated language detection tool. This will provide a reliable answer without needing to translate it.
+
+Action: Detect the language of the given text.
+
+Action Input: 'אני לומד עברית'

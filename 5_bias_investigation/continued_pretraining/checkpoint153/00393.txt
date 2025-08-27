@@ -1,0 +1,7 @@
+ Thought: The user has asked to determine the language of a specific phrase. To do this accurately, I need to identify the language first before considering translation. I'll use the `languagedetection_for_what_s_language` function to detect the language of the given text. This function is specifically designed for language detection and should provide a reliable result.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `text: 'Olá, tudo bem?'`
+
+User: 
+The detected language for 'Olá, tudo bem?' is Portuguese with a confidence score of 99.99%.

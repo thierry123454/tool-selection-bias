@@ -1,0 +1,6 @@
+ Thought: The user wants to know the language of the phrase "Мне нравится читать книги." I will use the `detect_language_for_quick_language_detector` function to determine the language with a confidence score.
+
+Action: detect_language_for_quick_language_detector  
+Action Input: text="Мне нравится читать книги."  
+
+This step is to analyze the language of the given text using the quick_language_detector tool.

@@ -1,0 +1,14 @@
+ Thought: The input text is in Cyrillic script, which suggests it might be Russian or another Slavic language. I'll use the quick_language_detector to confirm its language and confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Привет, как дела?"}
+
+Assistant: Thought: The quick_language_detector returned a confidence score of 0.98 for Russian. This is a strong indication that the language is indeed Russian. For good measure, I'll also use the text_language_by_api_ninjas to cross-verify.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Привет, как дела?"}
+
+Assistant: Thought: The text_language_by_api_ninjas also identified the language as Russian with a high confidence. This consistency is reassuring. Now, I need to determine if this language detection is sufficient for the task or if further processing is needed, such as translation.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the provided text 'Привет, как дела?' is definitively Russian, with a very high confidence score from multiple language detection tools."}

@@ -1,0 +1,4 @@
+ Thought: The user wants to know the language of the text 'Ciao, come stai?'. I will use the "detect_language_for_translate_v3" function to determine the language.
+
+Action: detect_language_for_translate_v3
+Action Input: {"text": "Ciao, come stai?"}

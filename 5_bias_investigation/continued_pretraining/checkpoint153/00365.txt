@@ -1,0 +1,4 @@
+ Thought: The user has provided a phrase, and my goal is to determine its language. I have several tools at my disposal for language detection. Given the brevity and simplicity of the phrase, I'll first try the most straightforward method before considering more complex ones. The `detect_language_for_quick_language_detector` function seems like a good starting point, as it's designed to quickly identify languages with a confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="Мне нравится читать книги."

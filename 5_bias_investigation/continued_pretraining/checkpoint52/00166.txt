@@ -1,0 +1,14 @@
+ Thought: The user has provided a short phrase and asked for its language. I need to determine which tool is best suited for this task. Given the available options, 'text_language_by_api_ninjas' and 'what_s_language' seem relevant. I'll first try 'text_language_by_api_ninjas' as it seems to be a straightforward language detection tool.
+
+Action: text_language_by_api_ninjas
+Action Input: {'text': 'Olá, tudo bem?'}
+
+Assistant: Thought: The API Ninjas Text Language API endpoint is being called. It's designed to detect the language from any input text. I'll wait for the result to see if it correctly identifies the language of the Portuguese phrase.
+
+Action: text_language_by_api_ninjas
+Action Input: {'text': 'Olá, tudo bem?'}
+
+Assistant: Thought: The result from the API Ninjas Text Language API endpoint indicates that the language of 'Olá, tudo bem?' is Portuguese. This seems accurate. The task is complete, and I have the answer. I should now call the 'Finish' function to provide the final answer.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "Olá, tudo bem?" is Portuguese.'}

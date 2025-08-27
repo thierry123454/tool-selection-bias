@@ -1,0 +1,6 @@
+ Thought: The task is to determine the language of the input text '今日はいい天気ですね'. I will use the `detect_language_for_translate_all_languages` function to detect the language.
+
+Action: detect_for_translate_all_languages
+Action Input: {'text': '今日はいい天気ですね'}
+
+User: The detected language is Japanese.

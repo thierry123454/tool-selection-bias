@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text, and my task is to detect its language. I will use the `detect_for_translate_all_languages` function, which is designed for this purpose.
+
+Action: call detect_for_translate_all_languages
+Action Input: text: 'Je suis très heureux aujourd'hui'
+
+Assistant: Thought: The result from `detect_for_translate_all_languages` indicates that the language is French. This is a clear detection, and I have the language code.
+
+Action: call Finish
+Action Input: return_type: 'give_answer', final_answer: 'The detected language of the text "Je suis très heureux aujourd'hui" is French.'

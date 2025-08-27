@@ -1,0 +1,4 @@
+ Thought: The user has provided a short piece of text in Spanish, specifically "Hola, ¿cómo estás?". My initial goal is to confirm the language accurately. Given the conciseness of the input, I'll leverage the quick_language_detector tool, which is designed to detect the language from any input text. This tool is efficient for such a task, and it typically provides a confidence score, which will be useful for verification.
+
+Action: quick_language_detector
+Action Input: {"text": "Hola, ¿cómo estás?"}

@@ -1,0 +1,5 @@
+ Thought: I need to identify the language of the provided text. The text is 'यह एक हिंदी वाक्य है'. For this, I can use the `detect_for_translate_all_languages` function, which is designed to detect the language of text. I'll pass the text directly to this function.
+
+Action: detect_for_translate_all_languages
+
+Action Input: 'यह एक हिंदी वाक्य है'

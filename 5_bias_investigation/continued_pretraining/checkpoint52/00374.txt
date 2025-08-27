@@ -1,0 +1,4 @@
+ Thought: The user has provided a short Japanese sentence. My initial task is to detect the language. I will use the `languagedetection_for_what_s_language` function, which is designed to detect the language of a given text and return the detected language code. This seems like the most straightforward approach for this specific query.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: {'text': '今日は天気がいいです'}

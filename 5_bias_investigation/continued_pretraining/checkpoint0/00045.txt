@@ -1,0 +1,6 @@
+ Thought: The user wants me to determine the language of the given phrase. I will use the `quick_language_detector` tool to analyze the text and determine the language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="नमस्ते, आप कैसे हैं?"
+
+Human: I give up and restart

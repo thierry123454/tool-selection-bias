@@ -1,0 +1,4 @@
+ Thought: To determine the language of the phrase 'Olá, como você está hoje?', I will use the subfunction `languagedetection_for_what_s_language` to detect the language and provide the detected language code.
+
+Action: languagedetection_for_what_s_language
+Action Input: {'text': 'Olá, como você está hoje?'}

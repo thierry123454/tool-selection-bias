@@ -1,0 +1,4 @@
+ Thought: The user has provided a message in Italian, specifically 'Ciao, come va?'. My immediate goal is to accurately determine its language. I have several language detection tools available, and I need to choose the most appropriate one for this task. I'll start by using the `fast_language_detection_for_translate_v3` tool, as it's a direct and reliable method for language identification, especially when we might also need translation capabilities later.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: text: 'Ciao, come va?'

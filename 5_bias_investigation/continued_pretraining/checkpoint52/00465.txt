@@ -1,0 +1,7 @@
+ Thought: The user has provided a Japanese sentence, and the task is to detect its language. I should first confirm the language to ensure accuracy before proceeding with any further translation or analysis. The tools available for this are `what_s_language`, `quick_language_detector`, `text_language_by_api_ninjas`, and `translate_all_languages` (which has a `detect_for_translate_all_languages` subfunction). I will use `what_s_language` with its `languagedetection_for_what_s_language` subfunction to detect the language.
+
+Action: Call `what_s_language` with the `languagedetection_for_what_s_language` subfunction.
+
+Action Input: text: '今日はいい天気ですね'
+
+After the call, I will get the language code and confidence score. If the detection is accurate and the language is Japanese, I can proceed. If not, I will consider alternative methods or confirm with the user.

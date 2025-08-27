@@ -1,0 +1,6 @@
+ Thought: The user has provided a text snippet, and the primary objective is to detect its language. Given the available tools, I will first attempt to use the `detect_language_for_quick_language_detector` function, as it is specifically designed for this purpose and provides a confidence score, which will be useful for validation.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Ciao, come stai?"}
+
+User:

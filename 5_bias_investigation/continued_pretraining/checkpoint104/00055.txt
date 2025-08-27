@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text in Swedish. My initial thought is to use a language detection tool to identify the language. I'll use the `detect_language_for_quick_language_detector` function, which is designed to detect the language with a confidence score. This will give me a reliable result.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: "Hej, hur mår du idag?"
+
+After the call, I will get the detected language and its confidence score.

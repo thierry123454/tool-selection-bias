@@ -1,0 +1,7 @@
+ Thought: The user has provided a text, and my initial task is to determine its language. Given the specific nature of the input, which is a common Korean greeting, I should be able to quickly identify it. I'll use the `text_language_by_api_ninjas` tool for this initial detection, as it's designed for this purpose.
+
+Action: text_language_by_api_ninjas
+
+Action Input: text='안녕하세요, 오늘 기분이 어때요?'
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next... After many (Thought-call) pairs, you finally perform the task, then you can give your final answer. Remember: the state change is irreversible, you can't go back to one of the former state, if you want to restart the task, say "I give up and restart". All the thought is short, at most in 5 sentences. You can do more than one try, so if your plan is to continuously try some conditions, you can do one of the conditions per try. Let's proceed with the analysis of the result.

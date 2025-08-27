@@ -1,0 +1,4 @@
+ Thought: The user has provided a short sentence in a language that is not English. My first step should be to detect the language of this input. I will use a reliable language detection tool to identify it.
+
+Action: what_s_language
+Action Input: text: 'Hej, hur mår du?'

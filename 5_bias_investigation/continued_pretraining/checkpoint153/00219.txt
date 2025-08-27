@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase, "Hej, hur mår du?". My initial thought is to determine its language. Given its brevity, it might be challenging for some tools, but I can try using the language detection tools available. I'll start with the simplest one and proceed from there.
+
+Action: what_s_language
+Action Input: {'text': 'Hej, hur mår du?'}
+
+User: The language is detected as 'sv' with a confidence score of 0.98.

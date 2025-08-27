@@ -1,0 +1,5 @@
+ Thought: The input text is in Japanese. I will use the `detect_for_translate_all_languages` function to confirm the language.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text="今日はいい天気ですね"

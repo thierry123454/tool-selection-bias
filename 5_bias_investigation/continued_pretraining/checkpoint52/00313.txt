@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase in Italian, "Ciao, come stai?". My first step is to confirm the language using a reliable detection tool. I will use the `languagedetection_for_what_s_language` function for this purpose.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `text: 'Ciao, come stai?'`
+
+User: The API Ninjas Text Language API endpoint detected the language as Italian with a high confidence score.

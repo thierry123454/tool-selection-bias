@@ -1,0 +1,9 @@
+ Thought: The user has provided a phrase, and my task is to determine its language. Given the presence of the word "Olá" and "tudo", which are Portuguese, I suspect the language is Portuguese. However, to be thorough, I should use a reliable language detection tool to confirm this. I will proceed with the "detect" function from the "text_language_by_api_ninjas" tool.
+
+Action: text_language_by_api_ninjas
+Action Input: {"text": "Olá, tudo bem?"}
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has returned a result. I will now analyze the output to confirm the language.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language detected in the phrase 'Olá, tudo bem?' is Portuguese."}

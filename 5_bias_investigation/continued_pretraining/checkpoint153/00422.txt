@@ -1,0 +1,11 @@
+ Thought: The user has provided a short text, and my primary task is to identify its language. Given the nature of the tools available, I will first attempt to use the most direct and efficient method for language detection. The `translate_v3` tool has a subfunction specifically designed for language detection, which seems ideal for this initial step.
+
+Action: Detect the language of the given text using the `fast_language_detection_for_translate_v3` function.
+
+Action Input: text: 'Je suis content de te voir'
+
+Assistant: Thought: The `fast_language_detection_for_translate_v3` function is now processing the input text. It should return the detected language code. Once it provides the result, I will analyze it to confirm the language and proceed accordingly. If the detection is accurate, I can confirm the language; if it's ambiguous or fails, I might need to explore alternative methods.
+
+Action: Detect the language of the given text using the `fast_language_detection_for_translate_v3` function.
+
+Action Input: text: 'Je suis content de te voir'

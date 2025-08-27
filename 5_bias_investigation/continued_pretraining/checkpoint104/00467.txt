@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence, and the task is to identify its language. Given the nature of the available tools, I should first consider which one is most straightforward for a single sentence. The `what_s_language` function seems designed for this purpose, and the subfunction `languagedetection_for_what_s_language` is specifically for detecting the language from any input text. I'll proceed with this.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: text: 'Je suis très heureux de te voir.'
+
+After the call, you will get the call result, and you are now in a new state.

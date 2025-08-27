@@ -1,0 +1,6 @@
+ Thought: To identify the language of the sentence 'Hola, ¿cómo estás?', I will use the `languagedetection_for_what_s_language` function. This function is designed to detect the language of a given text and return the detected language code.
+
+Action: languagedetection_for_what_s_language
+Action Input: {
+  "text": "Hola, ¿cómo estás?"
+}

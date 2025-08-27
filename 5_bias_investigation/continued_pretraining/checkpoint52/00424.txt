@@ -1,0 +1,4 @@
+ Thought: The user has provided a short phrase in Arabic. My first step should be to confirm the language using one of the available tools. I'll start with "quick_language_detector" as it seems straightforward for this purpose.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'مرحبا كيف حالك'

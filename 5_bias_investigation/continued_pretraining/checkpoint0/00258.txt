@@ -1,0 +1,5 @@
+ Thought: To start, I need to analyze the text provided by the user and then use the appropriate function to detect the language. The text is in Dutch.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Het is een mooie dag vandaag."

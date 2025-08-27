@@ -1,0 +1,7 @@
+ Thought: The user has provided a text and asked for its language. To determine this, I will use the `languagedetection_for_what_s_language` function, which is specifically designed to detect the language of a given text. This function is straightforward and should provide an accurate result.
+
+Action: `languagedetection_for_what_s_language`
+
+Action Input: {'text': 'Bonjour, comment allez-vous aujourd'hui ?'}
+
+After the call, I will analyze the result to confirm the detected language.

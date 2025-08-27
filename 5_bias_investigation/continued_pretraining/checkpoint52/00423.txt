@@ -1,0 +1,6 @@
+ Thought: I need to identify the language of the given sentence. I have several tools at my disposal, but the most direct one for this specific task would be the "what_s_language" tool, which is designed to detect the language of a given text. It seems straightforward and efficient for this purpose. I'll proceed with this.
+
+Action: what_s_language
+Action Input: {'text': 'Это пример текста на русском языке'}
+
+User: The language of the sentence 'Это пример текста на русском языке' is detected as 'ru' by the "what_s_language" tool.

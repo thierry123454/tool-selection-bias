@@ -1,0 +1,5 @@
+ Thought: The user wants to determine the language of a specific phrase. I will use the `detect_for_translate_all_languages` function, as it is designed to detect the language of text. The phrase provided is 'Das ist ein schöner Tag'. This function seems straightforward for this task.
+
+Action: `detect_for_translate_all_languages`
+
+Action Input: `{"text": "Das ist ein schöner Tag"}`

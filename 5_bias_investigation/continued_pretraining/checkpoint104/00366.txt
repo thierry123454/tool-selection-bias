@@ -1,0 +1,11 @@
+ Thought: The user has provided a short text in Japanese. My first step should be to accurately detect the language. I will use the `detect_language_for_quick_language_detector` function to analyze this text.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "今日はお元気ですか？"}
+
+User: The quick_language_detector API returned 'Japanese' with a confidence score of 0.98.
+
+Thought: The quick_language_detector API has confidently identified the language as Japanese. This aligns with my initial expectation based on the input text. Now, I can confirm that the language of the provided text is indeed Japanese.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text '今日はお元気ですか？' is Japanese."}

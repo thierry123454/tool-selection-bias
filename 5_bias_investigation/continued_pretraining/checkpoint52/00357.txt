@@ -1,0 +1,7 @@
+ Thought: The user has provided a sentence, and the task is to determine its language. The sentence appears to be in Spanish, but I need to confirm this programmatically. I should use a language detection tool to get an accurate result.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Este es un texto en español'
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...

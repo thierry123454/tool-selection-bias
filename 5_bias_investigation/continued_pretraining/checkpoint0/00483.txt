@@ -1,0 +1,4 @@
+ Thought: To determine the language of the input "Ciao, come stai oggi?", I will use the "detect_language_for_quick_language_detector" function to get the detected language and its confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Ciao, come stai oggi?"}

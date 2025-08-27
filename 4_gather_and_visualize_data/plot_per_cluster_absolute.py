@@ -11,16 +11,16 @@ plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 STATS_PATHS = {
-    "ChatGPT 4.1":  "api_selection_stats_chatgpt_4.json",
-    "Claude":  "api_selection_stats_claude.json",
-    "Gemini":  "api_selection_stats_gemini.json",
-    "DeepSeek":  "api_selection_stats_deepseek.json",
-    "ToolLLaMA":  "api_selection_stats_toolllama.json",
-    "Qwen":  "api_selection_stats_qwen-235b.json"
+    "ChatGPT 4.1":  ["api_selection_stats_chatgpt_4.json", "api_selection_stats_chatgpt_4-2.json", "api_selection_stats_chatgpt_4-3.json"],
+    "Claude":       ["api_selection_stats_claude.json"],
+    "Gemini":       ["api_selection_stats_gemini.json", "api_selection_stats_gemini-2.json", "api_selection_stats_gemini-3.json"],
+    "DeepSeek":     ["api_selection_stats_deepseek.json", "api_selection_stats_deepseek-2.json", "api_selection_stats_deepseek-3.json"],
+    "ToolLLaMA":    ["api_selection_stats_toolllama.json", "api_selection_stats_toolllama-2.json"],
+    "Qwen":         ["api_selection_stats_qwen-235b.json", "api_selection_stats_qwen-235b-2.json", "api_selection_stats_qwen-235b-3.json"]
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
-OUTPUT_PDF     = "api_selection_distributions_position_by_model_full.pdf"
-OUTPUT_PNG     = "api_selection_distributions_position_by_model_full.png"
+OUTPUT_PDF     = "api_selection_distributions_position_by_model_subset.pdf"
+OUTPUT_PNG     = "api_selection_distributions_position_by_model_subset.png"
 SELECT_CLUSTERS = None # [1, 3, 8]
 MODEL_COLORS = {
    "Gemini":     "#4C78A8",  # blue
@@ -72,50 +72,62 @@ def load_json(path):
 
 # Load data
 clusters = load_json(CLUSTERS_JSON)
-model_stats = {name: load_json(path) for name, path in STATS_PATHS.items()}
+# Load stats: list-of-runs per model
+model_runs = {}
+for model_name, paths in STATS_PATHS.items():
+    if isinstance(paths, str):
+        paths = [paths]
+    model_runs[model_name] = [load_json(p) for p in paths]
 
 # stats entries are [ query_id, cluster_id, pos_in_cluster, pos_in_relevant_list ]
 # build per-cluster lists
-counts = {}
-for model, stats in model_stats.items():
-    counts[model] = {}
-    for _, cid, _, pos in stats:
-        counts[model].setdefault(cid, {})
-        counts[model][cid].setdefault(pos, 0)
-        counts[model][cid][pos] += 1
+counts_runs = {}
+for model_name, runs in model_runs.items():
+    counts_runs[model_name] = []
+    for stats in runs:
+        cdict = defaultdict(lambda: defaultdict(int))   # {cid: {pos: count}}
+        for _, cid, _, pos in stats:
+            cdict[cid][pos] += 1
+        counts_runs[model_name].append(cdict)
 
-rates = {}
-for name, clusterdict in counts.items():
-    rates[name] = {}
-    for cid, posdict in clusterdict.items():
-        total = sum(posdict.values())
-        if total > 0:
-            rates[name][cid] = {pos: cnt/total for pos, cnt in posdict.items()}
-        else:
-            rates[name][cid] = {}
+rates_runs = {}
+for model_name, run_counts in counts_runs.items():
+    rates_runs[model_name] = []
+    for cdict in run_counts:
+        rdict = {}
+        for cid, posdict in cdict.items():
+            total = sum(posdict.values())
+            if total > 0:
+                rdict[cid] = {pos: cnt / total for pos, cnt in posdict.items()}
+            else:
+                rdict[cid] = {}
+        rates_runs[model_name].append(rdict)
 
-# Determine which clusters to plot
-if SELECT_CLUSTERS is None:
-    cluster_ids = list(range(1, len(clusters) + 1))
-else:
-    cluster_ids = sorted([cid for cid in SELECT_CLUSTERS if 1 <= cid <= len(clusters)])
-if not cluster_ids:
-    raise ValueError("No valid cluster IDs to plot.")
-
-clusters_to_plot = [clusters[cid - 1] for cid in cluster_ids]
-
-# Layout: up to 5 columns to match previous style
-n_clusters = len(clusters_to_plot)
-ncols = min(5, n_clusters)
-nrows = math.ceil(n_clusters / ncols)
-
-fig, axes = plt.subplots(nrows, ncols, figsize=(3 * ncols * 1.5, 4 * nrows * 1.25), squeeze=False)
-
-models = list(STATS_PATHS.keys())
-n_models = len(models)
-bar_w = 0.8 / n_models
-legend_handles = None
-
+means = {}
+stds = {}
+for model_name, run_rates in rates_runs.items():
+    means[model_name] = {}
+    stds[model_name] = {}
+    n_runs = len(run_rates)
+    # enumerate all cluster ids present in any run for this model
+    cids = set()
+    for rr in run_rates:
+        cids.update(rr.keys())
+    for cid in cids:
+        means[model_name][cid] = {}
+        stds[model_name][cid] = {}
+        # figure out max position for this cluster from clusters JSON
+        cluster_size = len(clusters[cid - 1])
+        for pos in range(1, cluster_size + 1):
+            vals = []
+            for rr in run_rates:
+                vals.append(rr.get(cid, {}).get(pos, 0.0))
+            vals = np.array(vals, dtype=float)
+            means[model_name][cid][pos] = float(np.mean(vals))
+            if n_runs > 1:
+                stds[model_name][cid][pos] = float(np.std(vals, ddof=1))
+            else:
+                stds[model_name][cid][pos] = 0.0
 
 # Determine which clusters to plot
 if SELECT_CLUSTERS is None:
@@ -153,7 +165,7 @@ else:
     ncols = min(5, n_clusters)
     nrows = math.ceil(n_clusters / ncols)
     fig, sub_axes = plt.subplots(nrows, ncols,
-                                 figsize=(3.8 * ncols, 4.2 * nrows),
+                                 figsize=(3.8 * ncols, 5.5 * nrows),
                                  squeeze=False)
     axes = [ax for row in sub_axes for ax in row][:len(clusters_to_plot)]
 
@@ -163,14 +175,18 @@ for plot_idx, (cid, cluster, ax) in enumerate(zip(cluster_ids, clusters_to_plot,
 
     containers = []
     for i, name in enumerate(models):
-        rates_for_model = [rates[name].get(cid, {}).get(pos, 0) for pos in x]
+        mean_vals = [means[name].get(cid, {}).get(pos, 0.0) for pos in x]
+        std_vals  = [stds[name].get(cid, {}).get(pos, 0.0) for pos in x]
+
         cont = ax.bar(
             x + bar_w * (i - (len(models) - 1) / 2),
-            rates_for_model,
+            mean_vals,
+            yerr=std_vals,
             width=bar_w,
             label=name,
             color=MODEL_COLORS.get(name, None),
         )
+
         if plot_idx == 1:
             containers.append(cont)
 
@@ -205,7 +221,7 @@ fig.legend(
     legend_handles,
     models,
     loc='upper center',
-    bbox_to_anchor=(0.5, 0.98),
+    bbox_to_anchor=(0.5, 1),
     ncol=len(models),
     frameon=False,
     fontsize=13

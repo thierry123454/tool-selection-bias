@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text, and my primary task is to identify its language. Given the nature of the task and the available tools, the most direct and efficient approach would be to use the "Detect the language of a given text" function. This tool is specifically designed for this purpose and should provide a quick and accurate result. I will proceed with this initial attempt.
+
+Action: what_s_language
+Action Input: 'Hola, ¿cómo estás?'
+User: The detected language is 'es' with a confidence score of 0.999.

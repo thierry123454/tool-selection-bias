@@ -1,0 +1,5 @@
+ Thought: I need to determine the language of the phrase 'Olá, como você está hoje?'. Since I have several language detection tools available, I'll first consider which one might be the most straightforward or efficient for a single, short phrase. I'll prioritize using the "what_s_language" tool, as it seems designed specifically for this purpose.
+
+Action: what_s_language
+
+Action Input: 'Olá, como você está hoje?'

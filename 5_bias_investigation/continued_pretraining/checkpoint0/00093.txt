@@ -1,0 +1,6 @@
+ Thought: I need to identify the language of the input text "Das ist ein schöner Tag." I will use the "detect_language_for_quick_language_detector" function to determine the language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': "Das ist ein schöner Tag."}
+
+User: I give up and restart.

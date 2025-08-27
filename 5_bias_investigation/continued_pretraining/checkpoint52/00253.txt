@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence, and the specific task is to detect its language. Given the available tools, the most direct approach is to use the `what_s_language` function, which is designed to detect the language of a given text. The sentence provided is in Russian, so we expect it to return 'ru' as the language code. This is a straightforward task, and we should proceed with the `what_s_language` function.
+
+Action: what_s_language
+Action Input: text="Это пример текста на русском языке."
+
+After the call, you will get the call result, and you are now in a new state.

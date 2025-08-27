@@ -1,0 +1,5 @@
+ Thought: To determine the language of the text 'مرحبا كيف حالك', I will use the `what_s_language` tool with the subfunction `languagedetection_for_what_s_language`. This tool will provide the detected language code for the given text.
+
+Action: what_s_language
+Action Input: text: 'مرحبا كيف حالك'
+languagedetection_for_what_s_language(text: 'مرحبا كيف حالك')

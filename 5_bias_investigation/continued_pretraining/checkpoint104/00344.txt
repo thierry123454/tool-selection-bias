@@ -1,0 +1,6 @@
+ Thought: The user has asked to identify the language of a specific sentence. My first step is to use a reliable tool to detect the language. Given the options, I'll opt for the 'what_s_language' tool, which is specifically designed to detect the language of a given text. This should provide a straightforward answer.
+
+Action: Detect the language of a given text
+Action Input: text="Olá, tudo bem com você?"
+
+After the call, you will get the call result, and you are now in a new state.

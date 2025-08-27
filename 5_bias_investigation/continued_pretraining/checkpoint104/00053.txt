@@ -1,0 +1,12 @@
+ Thought: The user has provided a text snippet that appears to be in Korean. My first step should be to confirm the language definitively before attempting any translation or further processing. I'll use the "what_s_language" tool to detect the language.
+
+Action: what_s_language
+Action Input: '안녕하세요, 오늘 기분이 어때요?'
+
+Assistant: Thought: The "what_s_language" tool has successfully identified the language as Korean. This confirms my initial assessment. Now that I know the language, I can proceed with any translation or further analysis, ensuring accuracy and context. For now, I'll simply confirm the language detection.
+
+Action: Finish
+Action Input: {
+    "return_type": "give_answer",
+    "final_answer": "The language of the provided text is Korean. The text translates to 'Hello, how are you feeling today?' in English."
+}

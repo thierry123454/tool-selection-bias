@@ -1,0 +1,5 @@
+ Thought: The user has provided a text, and my first priority is to accurately identify the language. Given that the text '今日はとても暑いです。' is in Japanese, I need to confirm this using one of the available language detection tools. I’ll start with `detect_language_for_quick_language_detector` as it’s a straightforward option for quick detection.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="今日はとても暑いです。"

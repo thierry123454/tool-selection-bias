@@ -1,8 +1,0 @@
- (Internal note: The user wants to detect the language from the input text. The input is 'Привет, как дела?'. I should use one of the available APIs. The first step is to call the detect function and pass the text. This will return the detected language. Once I have the result, I can confirm the output and then present the answer to the user.)
-
-Thought: I need to detect the language from the input text. The input is 'Привет, как дела?'. I should use the detect_language_for_quick_language_detector API. This will return the detected language and confidence score. Keep the call site lightweight and pass only the required parameters.
-
-Action: detect_language_for_quick_language_detector
-Action Input: {"text": "Привет, как дела?"}
-
-Wait for the response. If the API returns a result, parse the output and present the findings. If there's an error, log the issue and retry with a fallback. Keep the interface tiny so it's easy to reason about behavior in different contexts.

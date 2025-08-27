@@ -1,0 +1,11 @@
+ Thought: To determine the language of the given phrase, I will use the "languagedetection_for_what_s_language" tool. This tool is designed to detect the language of a given text and return the detected language code.
+
+Action: languagedetection_for_what_s_language
+Action Input: text="Είναι μια όμορφη μέρα."
+
+Human: Result: The detected language is Greek.
+
+Assistant: Thought: Now that I have detected the language as Greek, I can provide the final answer to the user.
+
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The language of the phrase 'Είναι μια όμορφη μέρα.' is Greek."

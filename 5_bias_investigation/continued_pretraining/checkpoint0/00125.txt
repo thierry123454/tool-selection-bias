@@ -1,0 +1,4 @@
+ Thought: I need to detect the language of the given sentence. I can use the `what_s_language` tool for this purpose.
+
+Action: what_s_language
+Action Input: text=This is a sample English sentence.

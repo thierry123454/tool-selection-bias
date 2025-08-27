@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text. My first step should be to identify the language of this text. Given the tools available, I can use the `detect_for_translate_all_languages` function, which is specifically designed for language detection. This seems like the most straightforward approach.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": 'Olá, tudo bem?'}

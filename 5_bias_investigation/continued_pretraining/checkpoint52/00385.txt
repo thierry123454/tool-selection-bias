@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text in Spanish. My first step should be to confirm the language using one of the available tools. Given the short length, "quick_language_detector" might be a good choice for an initial quick check.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "¿Dónde está la biblioteca?"}

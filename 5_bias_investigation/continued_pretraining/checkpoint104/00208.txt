@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text and explicitly asked for its language detection. I should use a reliable language detection tool. Among the available options, "text_language_by_api_ninjas" and "what_s_language" seem suitable for this task. I'll prioritize "text_language_by_api_ninjas" due to its direct API Ninjas Text Language API endpoint description.
+
+Action: text_language_by_api_ninjas
+Action Input: {"text": "Hola, ¿cómo estás?"}
+
+Assistant: Thought: The API call has been made. Now, I'll wait for the result to determine the detected language.

@@ -1,0 +1,6 @@
+ Thought: The user has requested to identify the language of a sentence. The sentence provided is 'Это пример текста на русском языке'. To accurately determine its language, I will leverage a reliable language detection tool. The `what_s_language` tool is a suitable candidate for this task, as it is designed to detect the language of a given text. I will proceed with this function.
+
+Action: what_s_language
+Action Input: text: 'Это пример текста на русском языке'
+
+User:

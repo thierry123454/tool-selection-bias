@@ -1,0 +1,11 @@
+ Thought: The user has asked for the language of a specific text. The text provided is 'مرحبا كيف حالك؟'. To determine its language, I can use one of the available language detection tools. Given the nature of the request, I'll opt for the most straightforward and reliable option first, which is the `languagedetection_for_what_s_language` tool. This tool is designed to detect the language of a given text and return the detected language code. I'll send the text directly to this tool for analysis.
+
+Action: languagedetection_for_what_s_language
+
+Action Input: text: 'مرحبا كيف حالك؟'
+
+Assistant: Thought: The `languagedetection_for_what_s_language` tool has processed the input text 'مرحبا كيف حالك؟'. The result indicates that the language is Arabic. This is a definitive answer to the user's query. Since I have obtained the necessary information, I will now call the `Finish` function to provide this final answer to the user.
+
+Action: Finish
+
+Action Input: return_type: 'give_answer', final_answer: 'The language of "مرحبا كيف حالك؟" is Arabic.'

@@ -1,0 +1,4 @@
+ Thought: The user wants to identify the language of the phrase 'Ciao, come stai?'. The most straightforward approach is to use a dedicated language detection tool. Given the options, `quick_language_detector` seems ideal for this initial assessment.
+
+Action: quick_language_detector
+Action Input: {"text": "Ciao, come stai?"}

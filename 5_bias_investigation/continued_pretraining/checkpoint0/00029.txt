@@ -1,0 +1,6 @@
+ Thought: I need to identify the language of the given sentence. I will use the "detect_language_for_quick_language_detector" tool to determine the language and its confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Das ist ein schöner Tag für einen Spaziergang."}
+
+Result: The language of the sentence is German with a confidence score of 99.9%.

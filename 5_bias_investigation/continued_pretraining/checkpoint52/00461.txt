@@ -1,0 +1,5 @@
+ Thought: The user has provided a short phrase, and my task is to determine its language. I have several tools available for language detection, and I need to choose the most appropriate one. The phrase seems to be in French, but I'll confirm using the available APIs.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'Bonjour tout le monde'

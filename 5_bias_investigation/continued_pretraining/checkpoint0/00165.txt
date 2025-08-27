@@ -1,0 +1,9 @@
+ Thought: I need to determine the language of the provided text. I will use the "detect_for_translate_all_languages" subfunction to perform language detection.
+
+Action: detect_for_translate_all_languages
+Action Input: text=Merhaba, nasılsın?
+
+Thought: I will now use the result of the language detection to translate the text using the "translate_all_languages" tool.
+
+Action: translate_all_languages
+Action Input: text=Merhaba, nasılsın?

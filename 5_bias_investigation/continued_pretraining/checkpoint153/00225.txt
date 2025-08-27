@@ -1,0 +1,18 @@
+ Thought: The user has provided a phrase in Greek. My first step is to confirm the language using one of the available language detection tools. I will use `detect_for_translate_all_languages` for this initial check, as it is a robust and widely used tool for language identification.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Είναι μια όμορφη μέρα."}
+
+User: The API Ninjas Text Language API endpoint returned: {'language': 'el', 'confidence': 0.9999999999999998, 'iso6391': 'el', 'iso6392': 'ell'}
+
+Assistant: Thought: The `detect_for_translate_all_languages` API has confirmed that the language is Greek (el) with extremely high confidence. This is a strong indication. However, to ensure accuracy and explore other options, I will also use `languagedetection_for_what_s_language` as a secondary check.
+
+Action: languagedetection_for_what_s_language
+Action Input: {"text": "Είναι μια όμορφη μέρα."}
+
+User: The API returned: 'el'
+
+Assistant: Thought: Both `detect_for_translate_all_languages` and `languagedetection_for_what_s_language` have consistently identified the language as Greek (el). This confirms beyond doubt that the phrase is indeed in Greek. Now that the language is established, the task is complete.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the phrase 'Είναι μια όμορφη μέρα.' is Greek."}

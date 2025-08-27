@@ -1,0 +1,6 @@
+ Thought: The user wants to know the language of the phrase 'Je suis très heureux'. I will use the `fast_language_detection_for_translate_v3` function to detect the language of the given text.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: {"text": "Je suis très heureux"}
+
+After the call, you will get the call result, and you are now in a new state.

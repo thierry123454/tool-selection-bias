@@ -1,0 +1,7 @@
+ Thought: The user has provided a short phrase, "Ciao, come stai?". My first step should be to detect its language. There are several language detection tools available, and I'll start with the most straightforward one.
+
+Action: text_language_by_api_ninjas
+
+Action Input: text: 'Ciao, come stai?'
+
+After the call, you will get the call result, and you are now in a new state.

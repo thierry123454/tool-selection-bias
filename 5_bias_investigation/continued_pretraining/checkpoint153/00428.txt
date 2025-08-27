@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and the task is to determine its language. I will use the `detect_language_for_quick_language_detector` function to analyze the input text. This function is specifically designed to identify the language of a given string, which aligns perfectly with the user's request.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Merhaba, nasılsın?'

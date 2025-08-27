@@ -1,0 +1,13 @@
+ Thought: The task is to detect the language of the text "Olá, tudo bem com você?". I will use the `languagedetection_for_what_s_language` function to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: {'text': 'Olá, tudo bem com você?'}
+
+User: 
+Detect the language of 'Olá, tudo bem com você?' in this text.
+Begin!
+
+Assistant: Thought: The task is to detect the language of the text "Olá, tudo bem com você?". I will use the `languagedetection_for_what_s_language` function to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: {'text': 'Olá, tudo bem com você?'}

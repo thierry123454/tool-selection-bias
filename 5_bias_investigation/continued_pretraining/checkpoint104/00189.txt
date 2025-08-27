@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the input text 'Saluton, kiel vi fartas?'. This is a short phrase, and I should consider using a reliable language detection tool. I recall that the tool "what_s_language" has a subfunction "languagedetection_for_what_s_language" that can do this.
+
+Action: call "languagedetection_for_what_s_language"
+Action Input: {'text': 'Saluton, kiel vi fartas?'}

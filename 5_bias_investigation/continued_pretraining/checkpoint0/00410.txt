@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the provided text using the available tools. I will use the "what_s_language" tool with the "languagedetection_for_what_s_language" subfunction to detect the language.
+
+Action: what_s_language
+Action Input: {
+  "text": "Dit is een testzin in het Nederlands"
+}

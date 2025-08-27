@@ -1,0 +1,7 @@
+ Thought: The user has provided a sentence, and the task is to identify its language. Given the nature of the task and the available tools, the most direct approach is to use a dedicated language detection service. I will use the `detect_for_translate_all_languages` function, which is designed for this purpose. This function detects the language of a given text, and it's a robust choice for a quick, initial identification. I'll pass the sentence directly to this function.
+
+Action: detect_for_translate_all_languages
+Action Input: text='Это пример текста на русском языке'
+
+User: 
+The language detected for 'Это пример текста на русском языке' is 'ru'.

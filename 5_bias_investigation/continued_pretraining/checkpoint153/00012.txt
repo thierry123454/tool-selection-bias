@@ -1,0 +1,5 @@
+ Thought: The user has asked to identify the language of a specific text. The input text provided is 'مرحبا كيف حالك'. To determine its language accurately, I will utilize the available language detection tools. I will first consider the most straightforward and efficient method.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'مرحبا كيف حالك'

@@ -1,0 +1,14 @@
+ Thought: The user has provided a phrase, and my task is to determine its language. Given the phrase 'Das ist ein schöner Tag', it seems to be a mix of German and perhaps a touch of English due to "schöner." I should first attempt to detect the language using one of the available tools. I'll start with the most straightforward option for language detection.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {
+  "text": "Das ist ein schöner Tag"
+}
+
+Assistant: Thought: The quick language detector API has returned a detection. It indicates that the language is German with a high confidence score. This aligns with my initial observation. The phrase is clearly German. There's no need for further translation or complex analysis; the language is already identified.
+
+Action: Finish
+Action Input: {
+  "return_type": "give_answer",
+  "final_answer": "The language of the phrase 'Das ist ein schöner Tag' is German."
+}

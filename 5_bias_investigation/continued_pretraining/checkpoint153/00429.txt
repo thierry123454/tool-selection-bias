@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text, and the primary goal is to detect its language. The text '안녕하세요, 반갑습니다' is clearly Korean, but to ensure accuracy and leverage the available tools, I'll proceed with a structured approach. I'll first try to confirm the language using the most straightforward and dedicated language detection tool. Then, if I need more confidence or if the initial result is ambiguous, I'll consider alternative methods. My initial choice will be the dedicated language detection tool, as it's designed for this specific purpose.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "안녕하세요, 반갑습니다"}
+
+After the call, you will get the call result, and you are now in a new state.

@@ -1,0 +1,7 @@
+ Thought: The user wants me to determine the language of the given phrase. I will use the function detect_language_for_quick_language_detector to analyze the language based on the provided text.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Guten Tag, wie geht es Ihnen?'}
+
+User: 
+I give up and restart.

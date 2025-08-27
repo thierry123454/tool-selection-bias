@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text snippet in Korean. My first step should be to detect its language. Given the available tools, I can use either `v1_textlanguage_for_text_language_by_api_ninjas` or `detect_for_translate_all_languages` for this purpose. I'll choose `v1_textlanguage_for_text_language_by_api_ninjas` as it's a direct language detection API Ninjas Text Language API endpoint.
+
+Action: text_language_by_api_ninjas
+Action Input:
+text: '안녕하세요, 반갑습니다.'

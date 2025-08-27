@@ -1,0 +1,6 @@
+ Thought: The user has provided a short Japanese greeting. My initial task is to accurately identify the language of this text. I have several tools at my disposal, including `fast_language_detection_for_translate_v3`, `detect_for_translate_all_languages`, `languagedetection_for_what_s_language`, `detect_language_for_quick_language_detector`, and `v1_textlanguage_for_text_language_by_api_ninjas`. I'll start by using `fast_language_detection_for_translate_v3` to get a quick and reliable detection.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: {"text": "今日はお元気ですか？"}
+
+User:

@@ -1,0 +1,11 @@
+ Thought: The user has provided a text that appears to be in Korean. My first step should be to confirm the language using one of the available tools. I'll choose `detect_language_for_quick_language_detector` for this initial detection, as it seems straightforward for a quick check.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?"}
+
+User: The language is detected as Korean with a high confidence score.
+
+Assistant: Thought: The language is indeed Korean. Now that I know the language, I can proceed to translate it if needed or confirm its detection. For this task, the primary goal is to identify the language, which we've already accomplished. However, if the user wanted a translation, I could proceed with that. But since the task description focuses on detecting the language, I can now finalize my answer.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text '안녕하세요, 오늘 기분이 어때요?' is Korean."}

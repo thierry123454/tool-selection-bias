@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase, and my immediate goal is to determine its language. Given the options available, I'll first attempt to use the `what_s_language` tool, which is designed for this purpose. This will give me a quick and reliable initial detection.
+
+Action: `what_s_language`
+Action Input: {'text': 'Je suis content de te voir'}
+
+Human:

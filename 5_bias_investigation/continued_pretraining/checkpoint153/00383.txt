@@ -1,0 +1,11 @@
+ Thought: The user wants me to identify the language of a given Japanese phrase. I'll use the language detection tools available to me. I'll try the `what_s_language` function first, which has a subfunction `languagedetection_for_what_s_language`. This seems like the most straightforward tool for this task.
+
+Action: `what_s_language`
+Action Input: 'text': '今日は良い天気ですね'
+
+Assistant: Thought: The `what_s_language` function has successfully detected the language. The result indicates that the text is in Japanese. This confirms my initial hypothesis. Since the task is complete, I should now call the `Finish` function to provide the final answer.
+
+Action: `Finish`
+Action Input: `return_type`: 'give_answer', `final_answer`: 'The language of the text "今日は良い天気ですね" is Japanese.'
+
+Assistant: Thought: The `Finish` function has been called, and the final answer has been provided. The task is now complete.

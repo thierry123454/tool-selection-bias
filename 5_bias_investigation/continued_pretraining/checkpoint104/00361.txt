@@ -1,0 +1,9 @@
+ Thought: The user has asked for the language of a specific text. The first step is to determine the language accurately. I have several tools available for language detection, and I should choose the most reliable one for this task. The text provided is '今日はとてもいい天気です', which appears to be in Japanese. I will use the `what_s_language` tool, specifically the `languagedetection_for_what_s_language` subfunction, to confirm this.
+
+Action: `what_s_language`
+Action Input: `text: '今日はとてもいい天気です'`
+
+Assistant: Thought: The `what_s_language` tool has confirmed that the text '今日はとてもいい天気です' is indeed in Japanese. This aligns with my initial assessment. The next step is to ensure that this detection is accurate and to prepare for any potential follow-up actions, such as translation if needed. For now, the task is simply to identify the language.
+
+Action: `Finish`
+Action Input: `return_type: 'give_answer', final_answer: 'The language of the text "今日はとてもいい天気です" is Japanese.'`

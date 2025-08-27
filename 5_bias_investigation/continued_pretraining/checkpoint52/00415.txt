@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text snippet, and the task is to detect its language. I need to determine which tool is best suited for this purpose. The `detect_for_translate_all_languages` function seems ideal for detecting the language of a given text, as it is designed to identify the language within a request. I will use this function to analyze the input text.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Olá, tudo bem?'

@@ -1,0 +1,6 @@
+ Thought: The user has provided a Greek text, and my goal is to identify its language. I will use the "v1_textlanguage_for_text_language_by_api_ninjas" function to detect the language.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {
+  "text": "Γειά σου, πώς είσαι;"
+}

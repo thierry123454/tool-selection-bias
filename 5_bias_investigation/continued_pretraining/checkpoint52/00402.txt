@@ -1,0 +1,4 @@
+ Thought: The user has asked for the language of a specific sentence. My first step should be to identify the language using one of the available language detection tools. Since the sentence is short, I'll try to use a reliable method that can also detect the language even if it's not very long. I'll use the `languagedetection_for_what_s_language` tool for this initial detection.
+
+Action: languagedetection_for_what_s_language
+Action Input: "Ciao, come stai?"

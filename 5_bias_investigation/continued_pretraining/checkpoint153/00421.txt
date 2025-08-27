@@ -1,0 +1,5 @@
+ Thought: The user has provided a short phrase, and my first step is to determine its language. Given the presence of an accented character and the structure, it's likely Spanish. I'll use the tool designed for this purpose.
+
+Action: what_s_language
+
+Action Input: '¿Dónde está la biblioteca?'

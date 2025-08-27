@@ -1,0 +1,7 @@
+ Thought: The user has provided a sentence, and our primary task is to identify its language. Given the tools available, the most straightforward approach is to use the `what_s_language` function, which is designed for this purpose. I will pass the sentence directly to this function to get the detected language.
+
+Action: what_s_language
+
+Action Input: text: 'Привет, как дела?'
+
+After the call, I will receive the detected language and its confidence score. This will inform my next steps.

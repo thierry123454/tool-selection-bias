@@ -1,0 +1,4 @@
+ Thought: To detect the language of the phrase '안녕하세요, 오늘 기분이 어때요?', I will use the function DetectLanguageForQuickLanguageDetector to analyze the text and determine the language.
+
+Action: DetectLanguageForQuickLanguageDetector
+Action Input: text="안녕하세요, 오늘 기분이 어때요?"

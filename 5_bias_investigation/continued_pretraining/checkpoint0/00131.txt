@@ -1,0 +1,8 @@
+ Thought: The text provided is in Dutch. I will use the "what_s_language" function to confirm this.
+
+Action: what_s_language
+Action Input: {'text': 'Het is een mooie dag vandaag.'}
+
+Human: Thought: The function call has been made. Let's see the result.
+
+Action: None

@@ -1,0 +1,5 @@
+ Thought: The user wants to know the language of the phrase 'Guten Morgen, wie geht es dir?'. I will use the 'detect_for_translate_all_languages' function to detect the language of the text.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text='Guten Morgen, wie geht es dir?'

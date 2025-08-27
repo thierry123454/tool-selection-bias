@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and my primary goal is to accurately identify its language. Given the nature of the input, a quick and efficient detection method is ideal. I'll first attempt to use the most straightforward tool available, `detect_for_translate_all_languages`, as it's designed for language detection and seems to be a good fit for this specific task.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Ciao, come stai?"}
+
+Assistant: Thought: The `detect_for_translate_all_languages` tool has just returned a result. I need to analyze this output to determine the detected language and its confidence score. This will guide my next steps, whether it's confirming the language or considering alternative methods if the confidence is low.

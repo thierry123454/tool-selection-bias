@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text in German. My first step should be to confirm the language using one of the available language detection tools. Given the clarity of the input, a direct detection should suffice. I'll proceed with the `languagedetection_for_what_s_language` function.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Hallo, wie geht’s dir heute?'
+User:

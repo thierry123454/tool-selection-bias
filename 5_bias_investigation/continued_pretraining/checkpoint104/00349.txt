@@ -1,0 +1,5 @@
+ Thought: The user has provided the text 'Hola, ¿cómo estás?' and asked me to identify its language. My first step should be to determine the language using one of the available tools. I'll consider the simplicity and accuracy of each option. The `quick_language_detector` and `text_language_by_api_ninjas` seem straightforward for this specific task. I'll start with `quick_language_detector` as it's the first in the list and has a clear description.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Hola, ¿cómo estás?"}

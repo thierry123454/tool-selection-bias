@@ -1,0 +1,7 @@
+ Thought: The user has provided a short phrase in a language that is not immediately recognizable to me. My first step is to determine the language of this input. I have several tools available for this purpose, each with different capabilities and potential nuances. I will first consider the most straightforward and reliable option for quick detection, then proceed with other methods if necessary.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Saluton, kiel vi fartas?'
+
+After the call, I will receive the detected language and its confidence score from the quick_language_detector tool. This will help me decide the next steps for translation or further processing.

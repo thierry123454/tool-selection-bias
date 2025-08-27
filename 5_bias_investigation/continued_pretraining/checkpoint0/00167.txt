@@ -1,0 +1,4 @@
+ Thought: To determine the language of the sentence "Ciao, come stai?", I will use the "detect_for_translate_all_languages" function to detect the language based on the text.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Ciao, come stai?"}

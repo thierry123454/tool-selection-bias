@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the given phrase. I have several tools available, and I should choose the most appropriate one. The phrase 'Мне нравится читать книги.' is in Cyrillic script, which suggests it might be Russian or another Slavic language. I'll first try to detect the language using the API Ninjas Text Language API endpoint.
+
+Action: text_language_by_api_ninjas
+Action Input: text: "Мне нравится читать книги."

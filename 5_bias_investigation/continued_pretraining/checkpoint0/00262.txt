@@ -1,0 +1,7 @@
+ Thought: To identify the language of the given text, I will use the "detect_for_translate_all_languages" API. This API can detect the language of a single text input.
+
+Action: detect_for_translate_all_languages
+Action Input: {'text': 'This is an example of English text.'}
+
+User: 
+The text is in English.

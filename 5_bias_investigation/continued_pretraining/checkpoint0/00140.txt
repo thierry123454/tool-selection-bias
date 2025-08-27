@@ -1,0 +1,17 @@
+ Thought: I need to determine the language of the given text "Merhaba, nasılsın?" using available tools. I will try different methods to ensure accuracy.
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Merhaba, nasılsın?"}
+
+User: 
+detect_language_for_quick_language_detector: {'language': 'tr', 'confidence': 0.99}
+
+Thought: The text "Merhaba, nasılsın?" is most likely in Turkish based on the high confidence score from the quick language detector. I will confirm this using another method.
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Merhaba, nasılsın?"}
+
+User: 
+v1_textlanguage_for_text_language_by_api_ninjas: {'language': 'tr', 'confidence': 0.99}
+
+Thought: Both methods confirm that the text "Merhaba, nasılsın?" is in Turkish. I will now provide the final answer.
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The text 'Merhaba, nasılsın?' is written in Turkish."}

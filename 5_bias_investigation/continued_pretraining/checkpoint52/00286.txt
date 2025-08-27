@@ -1,0 +1,4 @@
+ Thought: The user has asked to identify the language of a specific sentence. I will use the available language detection tools to analyze this.
+
+Action: what_s_language
+Action Input: 'Merhaba, bugün nasılsın?'

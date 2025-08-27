@@ -1,0 +1,5 @@
+ Thought: The user has provided a short phrase in Arabic. My first step is to determine the language using a reliable tool. I'll use the `detect_language_for_quick_language_detector` function for this initial detection.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'مرحبا كيف حالك'

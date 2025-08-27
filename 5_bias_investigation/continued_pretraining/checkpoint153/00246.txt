@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text in a language I don't immediately recognize. My first step is to detect the language before attempting any translation. I'll use the language detection tools available.
+
+Action: detect_for_translate_all_languages
+Action Input: {'text': 'Hallo, wie geht’s dir heute?'}

@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text in Japanese. To determine its language, I should use one of the available language detection tools. I'll first consider the `detect_for_translate_all_languages` function, as it seems to be a primary option for language detection. I'll try it with the given text.
+
+Action: detect_for_translate_all_languages
+Action Input: text: '今日は元気ですか？'
+
+Assistant: Thought: The `detect_for_translate_all_languages` function has processed the text. It identified the language as Japanese. This is a clear and confident result. Now, I need to confirm if this is the correct language for the given input, as the user specifically asked about the language of '今日は元気ですか？'. Since the function returned Japanese, and the text is indeed Japanese, I can proceed with confidence. My next step is to confirm this detection and prepare to call the `Finish` function with the final answer.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: The language of the text '今日は元気ですか？' is Japanese.

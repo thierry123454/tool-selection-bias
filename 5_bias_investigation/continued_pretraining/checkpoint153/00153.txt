@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text in German. My first step should be to detect its language accurately. I'll use the `detect_language_for_quick_language_detector` tool, as it's designed to identify languages from a few sentences with a confidence score. This will give me a clear indication of the language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Hallo, wie geht’s dir heute?"}
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...

@@ -1,0 +1,5 @@
+ Thought: The user has provided a short phrase in Italian. My primary goal is to accurately identify the language. Given the brevity of the input, I need to ensure the detection is robust. I'll first attempt to use a dedicated language detection tool, and if that yields an uncertain result, I might consider a translation-based detection as a fallback or supplementary method.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'Ciao, come stai oggi?'

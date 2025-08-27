@@ -1,0 +1,11 @@
+ Thought: The user wants to detect the language of the message "Ciao, come va?". I can use the "detect_language_for_quick_language_detector" subfunction for this task. I will call this function with the given text.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Ciao, come va?"}
+
+User: The language of the message "Ciao, come va?" is Italian.
+
+Assistant: Thought: I have successfully detected that the language of the message is Italian. Now I can inform the user of the result.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the message 'Ciao, come va?' is Italian."}

@@ -1,0 +1,6 @@
+ Thought: The input text appears to be a short phrase, likely Korean. My initial plan is to confirm its language using the `detect_for_translate_all_languages` tool, which is designed for language detection and is generally reliable for such tasks. If it confirms Korean, I'll proceed; otherwise, I'll consider alternative tools.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text='안녕하세요, 오늘 기분이 어떠세요?'
+User:

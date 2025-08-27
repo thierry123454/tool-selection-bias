@@ -1,0 +1,5 @@
+ Thought: The user has provided a text in French. My first step is to confirm the language using the appropriate tool. I'll use the `detect_for_translate_all_languages` function to detect the language of the input text.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {"text": "Je suis content de te voir"}

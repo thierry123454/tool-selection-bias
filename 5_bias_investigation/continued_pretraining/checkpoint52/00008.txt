@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and my task is to determine its language. I have several tools available for this purpose, specifically designed for language detection. My initial thought is to use one of these tools to analyze the input text and provide an accurate language identification. I will proceed with the most straightforward method first.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="Bonjour tout le monde"

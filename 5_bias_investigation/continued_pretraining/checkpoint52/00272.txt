@@ -1,0 +1,11 @@
+ Thought: The user has provided a short phrase in Arabic. My first step should be to detect the language of this input. I'll use a reliable language detection tool for this purpose.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text='مرحبا كيف حالك؟'
+
+Assistant: Thought: The API Ninjas Text Language API endpoint is a robust tool for language detection, and it's a good candidate for this initial step. I'll proceed with it.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+
+Action Input: text='مرحبا كيف حالك؟'

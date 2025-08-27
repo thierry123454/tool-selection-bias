@@ -1,0 +1,4 @@
+ Thought: The user has asked to identify the language of a specific phrase. I will first attempt to use the most straightforward and commonly used language detection tool available to me. The phrase provided is 'Salve, quid agis?', which appears to be in Latin. My initial step will be to use the `detect_for_translate_all_languages` function to detect the language of this input text.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Salve, quid agis?'

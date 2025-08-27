@@ -1,0 +1,11 @@
+ Thought: The user has provided a short text in Spanish. My first step should be to detect the language accurately. I will use the "quick_language_detector" tool, specifically its subfunction `detect_language_for_quick_language_detector`, to analyze the input.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "¿Dónde está la biblioteca?"}
+
+Assistant: Thought: The result from the language detection tool indicates that the text is indeed Spanish. This confirms my initial assessment. Now that I know the language, I can proceed with any further tasks that might involve translation or processing in that specific language. For now, I will simply confirm the language detected.
+
+Action: Finish
+
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the provided text '¿Dónde está la biblioteca?' is Spanish."}

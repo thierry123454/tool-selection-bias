@@ -1,0 +1,32 @@
+ Thought:  
+The user has provided the text "안녕하세요, 오늘 기분이 어때요?" and asked to determine its language. I will use the `what_s_language` tool to detect the language.  
+
+Action:  
+what_s_language  
+Action Input:  
+```json  
+{  
+  "text": "안녕하세요, 오늘 기분이 어때요?"  
+}  
+```  
+
+Expected Output:  
+The tool will detect the language of the provided text.  
+
+Expected State:  
+The language of the text will be determined.  
+
+--------------------------------------------------------------------------------------------------------------------------  
+
+Thought:  
+The tool has detected the language of the text.  
+
+Action:  
+Finish  
+Action Input:  
+```json  
+{  
+  "return_type": "give_answer",  
+  "final_answer": "The language of the text '안녕하세요, 오늘 기분이 어때요?' is Korean."  
+}  
+```

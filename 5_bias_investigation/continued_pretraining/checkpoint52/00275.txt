@@ -1,0 +1,4 @@
+ Thought: The user has provided a short phrase, and the task is to identify its language. Given the nature of the input, it is highly likely to be Spanish. However, to ensure accuracy, I will first try to detect the language using the available tools. If the detection is ambiguous or fails, I will consider alternative methods or confirm with the user if more context is needed. My initial approach will be to use the `fast_language_detection_for_translate_v3` subfunction, as it is specifically designed for language detection and is likely to be efficient for this task.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: {"text": "Hola, ¿cómo estás?"}

@@ -1,0 +1,6 @@
+ Thought: The user has provided a phrase in German and asked to determine its language. I will use the "languagedetection_for_what_s_language" function to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: {
+  "text": "Das ist ein schöner Tag"
+}

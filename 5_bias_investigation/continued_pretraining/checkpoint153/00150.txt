@@ -1,0 +1,6 @@
+ Thought: The user has asked for the language of a specific text. My first step should be to detect the language using the available tools. I'll use the `detect_language_for_quick_language_detector` function to get a quick assessment.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text=Ciao, come stai?
+
+User: The quick language detector API returned a detection for the language of the text 'Ciao, come stai?'. The detected language is Italian.

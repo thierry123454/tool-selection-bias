@@ -1,0 +1,7 @@
+ Thought: The user has provided a sentence, and my initial task is to determine its language. Given the tools at my disposal, I can use the `detect_for_translate_all_languages` function, which is designed to identify the language of a given text. This seems like the most straightforward approach for this specific query.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Merhaba, bugün nasılsın?"}
+
+Assistant: Thought: The result from `detect_for_translate_all_languages` will provide the language of the input text. Once I have this information, I can confirm the language and proceed.
+Result: The language detected is 'tr' (Turkish).

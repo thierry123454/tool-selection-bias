@@ -1,0 +1,9 @@
+ Thought: I need to determine the language of the provided text. I will use the `detect_for_translate_all_languages` function to detect the language.
+
+Action: detect_for_translate_all_languages  
+Action Input:  
+```json
+{
+  "text": "Hallo, wie geht’s dir heute?"
+}
+```

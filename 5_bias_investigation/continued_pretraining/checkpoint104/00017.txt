@@ -1,0 +1,7 @@
+ Thought: The user has provided a sentence in what appears to be Russian. My first step is to confirm the language using a reliable tool. I will use the `detect_for_translate_all_languages` function, as it is designed to detect the language of a given text. This will allow me to accurately identify the language before proceeding with any further actions, such as translation or analysis.
+
+Action: detect_for_translate_all_languages
+Action Input:
+{"text": "Это пример текста на русском языке."}
+
+Human:

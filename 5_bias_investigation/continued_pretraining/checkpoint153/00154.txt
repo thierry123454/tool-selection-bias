@@ -1,0 +1,9 @@
+ Thought: The user has provided a text string that needs language detection. To proceed, I should first identify which tool is most suitable for this task. Given the options, "what_s_language" seems appropriate as it directly aims to detect the language of a given text. I will use its subfunction, "languagedetection_for_what_s_language", to perform this initial analysis.
+
+Action: Call "what_s_language"
+Action Input: {"text": "Je suis très heureux aujourd'hui"}
+
+Assistant: Thought: The initial attempt to detect the language of the text "Je suis très heureux aujourd'hui" using "what_s_language" was successful. The API returned the detected language code. Now, I need to confirm this result or decide if further action is required, such as translation or more detailed analysis. Since the task is simply to detect the language, and I have a clear result, I can proceed to finalize this.
+
+Action: Call "Finish"
+Action Input: {"return_type": "give_answer", "final_answer": "The detected language of the text 'Je suis très heureux aujourd'hui' is French."}

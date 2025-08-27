@@ -1,0 +1,4 @@
+ Thought: First, I need to determine the language of the given text. I can use the "detect_for_translate_all_languages" function to detect the language.
+
+Action: detect_for_translate_all_languages
+Action Input: text: "今日はとても暑いです。"

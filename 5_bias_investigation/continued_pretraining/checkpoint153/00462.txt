@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text in Cyrillic script, which suggests it might be Russian or another Slavic language. To accurately determine the language, I will use the `detect_language_for_quick_language_detector` function, as it is designed to detect language with a confidence score, which will be helpful for our analysis.
+
+Action: `detect_language_for_quick_language_detector`
+Action Input: {'text': 'Привет, как дела?'}

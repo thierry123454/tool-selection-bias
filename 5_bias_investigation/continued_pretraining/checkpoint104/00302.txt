@@ -1,0 +1,5 @@
+ Thought: I need to determine the language of the given phrase 'Olá, tudo bem?'. I'll use the quick_language_detector tool, which is designed to detect language with a confidence score. This should give me a quick and reliable result.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Olá, tudo bem?'

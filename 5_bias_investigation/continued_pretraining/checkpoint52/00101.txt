@@ -1,0 +1,4 @@
+ Thought: The user has provided a text and explicitly asked for its language to be identified. My first step should be to detect the language of this given text. I have several tools at my disposal that are specifically designed for this purpose. I will start by using the "what_s_language" tool, which is a direct fit for this task.
+
+Action: what_s_language
+Action Input: text: 'This is an example of English text'

@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence for language detection. My first step is to determine the language. I will use the `detect_language_for_quick_language_detector` function to analyze the text. This function is designed to detect the language with a confidence score, which will be helpful in understanding the certainty of the result.
+
+Action: `detect_language_for_quick_language_detector`
+Action Input: {"text": "Je suis très heureux de te voir."}

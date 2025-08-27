@@ -1,0 +1,6 @@
+ Thought: The user has provided a short sentence in Spanish. My first step should be to accurately detect its language. I will use the "Detect the language of a given text" function, specifically the "Detect the language of a given text and return the detected language code" subfunction, to identify the language.
+
+Action: what_s_language
+Action Input: {"text": "Hola, ¿cómo estás hoy?"}
+
+User: The language of "Hola, ¿cómo estás hoy?" is Spanish (ISO 639-1: es).

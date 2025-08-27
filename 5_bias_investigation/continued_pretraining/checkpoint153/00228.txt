@@ -1,0 +1,6 @@
+ Thought: The user has provided a string, and my primary goal is to detect its language. Given the tools available, I will first consider using the `text_language_by_api_ninjas` tool, which is specifically designed for this purpose. I'll pass the provided string as input to its `text_language_by_api_ninjas` function.
+
+Action: text_language_by_api_ninjas
+Action Input: 'hello world!' (This is a placeholder; in actual execution, it would be the user's input string: 'Este es un texto de ejemplo.')
+
+After the call, I will receive the detected language. If it's successful, I'll proceed to confirm the language or use it for further processing if needed. If it fails, I'll consider alternative methods or indicate a restart.

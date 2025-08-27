@@ -1,7 +1,0 @@
- (AutoGPT)
-Thought: I need to detect the language from the input text. The fastest way is to use the detect_for_translate_all_languages function. I will pass the text and return the result.
-Action: detect_for_translate_all_languages
-Action Input: {"text": "¿Dónde está la biblioteca?"}
-Thought: The API returned the result, which shows the detected language is Spanish. Now I should confirm the result and then call the Finish function with the answer.
-Action: Finish
-Action Input: {"return_type": "give_answer", "final_answer": "The text is in Spanish."}

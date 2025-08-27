@@ -1,0 +1,11 @@
+ Thought: The user has provided a short text, and my first step is to detect its language. I'll use the `detect_for_translate_all_languages` function, as it's designed for language detection and can also detect the language if it's unknown. This will give me the language code, which I can then use for further processing or translation if needed.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'مرحبا كيف حالك؟'
+
+Assistant: Thought: The `detect_for_translate_all_languages` function has successfully identified the language of the input text. It returned 'ar' for Arabic, which aligns with my expectation given the content of the text. Now that I know the language, I can proceed with the next steps of the task, which might involve further processing or translation, depending on the user's request. However, since the task description is to handle real-time user queries and detect the language, I can now confirm the language and proceed to the final step.
+
+Action: Finish
+
+Action Input: return_type: give_answer, final_answer: 'The detected language of the text "مرحبا كيف حالك؟" is Arabic (ar).'

@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text and asked for its language. The language seems to be Portuguese, but I need to confirm using one of the available tools. I'll use the `detect_language_for_quick_language_detector` function to analyze it.
+
+Action: `detect_language_for_quick_language_detector`
+Action Input: `text: 'Olá, tudo bem?'`

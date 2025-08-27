@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the phrase 'Salve, quid agis?'. I can use the `detect_language_for_translate_v3` subfunction to detect the language of the text.
+
+Action: detect_language_for_translate_v3
+Action Input: text="Salve, quid agis?"

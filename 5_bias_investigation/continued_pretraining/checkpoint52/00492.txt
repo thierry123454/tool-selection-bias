@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text and explicitly asked for its language. My initial thought is to use a reliable language detection tool. Among the available options, `quick_language_detector` seems straightforward for this purpose. I'll feed the text to it and see the result. If it's accurate, I can then confirm the language with the user or proceed if more context is needed. If it's not clear, I might consider alternative methods or ask for more text.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Estou aprendendo português'}

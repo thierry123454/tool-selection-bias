@@ -1,0 +1,6 @@
+ Thought: The user has provided a text and asked me to detect its language. I need to use the `detect_language_for_translate_v3` function from the `translate_v3` tool to determine the language of the text.
+
+Action: detect_language_for_translate_v3
+Action Input: text: 'Olá, tudo bem?'
+
+Human: Result: The detected language is Portuguese.

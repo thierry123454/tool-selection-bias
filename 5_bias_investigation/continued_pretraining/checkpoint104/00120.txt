@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence that appears to be in Russian. My first step should be to confirm the language using one of the available tools. I will use the `quick_language_detector` function, specifically its `detect_language_for_quick_language_detector` subfunction, to analyze the text.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Это пример текста на русском языке"

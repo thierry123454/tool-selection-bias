@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence, and my task is to determine its language. My first step should be to detect the language of the input text. I will use the appropriate tool for this purpose, specifically designed for language detection. The input text is 'אני לומד עברית'.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'אני לומד עברית'

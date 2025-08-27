@@ -1,0 +1,4 @@
+ Thought: The user wants to know the language of the phrase "Je suis très heureux." I will use the `languagedetection_for_what_s_language` tool to detect the language of this phrase.
+
+Action: languagedetection_for_what_s_language
+Action Input: text="Je suis très heureux"

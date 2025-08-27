@@ -1,0 +1,6 @@
+ Thought: The user has provided a message and asked for the language it is written in. I will use the `languagedetection_for_what_s_language` function to detect the language.
+
+Action: languagedetection_for_what_s_language  
+Action Input: {'text': 'Это пример текста.'}
+
+Action Result: ru (Russian)

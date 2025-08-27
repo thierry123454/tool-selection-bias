@@ -1,0 +1,5 @@
+ Thought: The user has asked to identify the language of the given text. To do this, I will first consider the most straightforward and reliable method available. Given the tools at my disposal, I can use the `detect_language_for_quick_language_detector` function, which is designed to detect the language of a text with a confidence score. This seems like the most direct approach. I will pass the text 'Ciao, come stai?' to this function and analyze the result.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Ciao, come stai?'

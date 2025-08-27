@@ -1,8 +1,0 @@
- 
-
-Thought: The user wants to detect the language of the text "Je suis très heureux aujourd'hui". I should use the detect_for_translate_all_languages (path /v1/textlanguage). The input text is in French, so the API should return French (fr). Keep the call streamlined and pass only the required parameter: `text`.
-
-Action: detect_for_translate_all_languages
-Action Input: {"text": "Je suis très heureux aujourd'hui"} 
-
-Wait for the response, then confirm the result. If the status is successful, format the output and return the final answer. If there's an error, log the issue and retry. Keep the interface speedy and lightweight.

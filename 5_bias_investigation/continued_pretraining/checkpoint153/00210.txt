@@ -1,0 +1,14 @@
+ Thought: The user has provided a short phrase, and my immediate goal is to determine its language. Given the available tools, the most direct approach is to use the language detection capabilities of the various APIs. I'll start by attempting to detect the language using the `text_language_by_api_ninjas` tool, as it's specifically designed for this purpose and I believe it will be the most straightforward initial attempt.
+
+Action: text_language_by_api_ninjas
+Action Input: {"text": "Ciao, come stai?"}
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has now processed the input. I need to carefully examine the output to determine if the language detection was successful and what the detected language is. If the result is clear and confident, I can proceed. If there's any ambiguity or an error, I'll consider alternative tools.
+
+Action: text_language_by_api_ninjas
+Action Input: {"text": "Ciao, come stai?"}
+
+Assistant: Thought: After the API call, I observe the result. The language detected is Italian with a high confidence score. This is a clear and definitive answer. Since the task is simply to identify the language of the given text, and I've achieved that, I can now proceed to the final step.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text 'Ciao, come stai?' is Italian."}

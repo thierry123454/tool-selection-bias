@@ -1,0 +1,5 @@
+ Thought:
+I need to detect the language of the given text. I'll use the `languagedetection_for_what_s_language` function for this task.
+
+Action: languagedetection_for_what_s_language
+Action Input: {'text': 'Привет, как дела?'}

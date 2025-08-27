@@ -1,0 +1,12 @@
+ Thought: The user has provided a single sentence, and the task is to identify its language. Given the input, 'Привет, как дела?', it's clear it's in Russian. However, to ensure accuracy and understand the confidence level, I will first use the `quick_language_detector` tool, which is designed to detect language with a confidence score from a few sentences. This will give me a reliable initial assessment.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Привет, как дела?"}
+
+User: 
+{'result': {'language': 'ru', 'confidence': 0.9999999999999998, 'detectedcount': 1}, 'success': True, 'error': None}
+
+Assistant: Thought: The `quick_language_detector` has successfully identified the language as Russian with an extremely high confidence score. This is a strong indicator that the sentence is indeed in Russian. Since the confidence is very high, there's no need for further verification with other tools. The task is now complete.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the sentence 'Привет, как дела?' is **Russian**."}

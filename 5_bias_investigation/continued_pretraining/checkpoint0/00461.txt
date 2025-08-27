@@ -1,0 +1,15 @@
+ Thought: I need to determine the language of the input text "Bonjour tout le monde". To do this, I can use the available language detection tools to analyze the text and identify its language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {
+  "text": "Bonjour tout le monde",
+  "detectedcount": 1
+}
+
+Assistant: Thought: Based on the result of the language detection, I can now identify the language of the input text and provide the final answer.
+
+Action: Finish
+Action Input: {
+  "return_type": "give_answer",
+  "final_answer": "The language of the text 'Bonjour tout le monde' is French."
+}

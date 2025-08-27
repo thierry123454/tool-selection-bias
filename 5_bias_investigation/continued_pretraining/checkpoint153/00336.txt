@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence, and my task is to identify its language. Given the tools available, I will use the "what_s_language" function, which has a subfunction `languagedetection_for_what_s_language`. This function is designed to detect the language of a given text. I will feed the sentence 'Привет, как дела?' into this function.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `text: 'Привет, как дела?'`
+
+After the call, I will get the detected language.

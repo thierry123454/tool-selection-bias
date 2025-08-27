@@ -1,0 +1,8 @@
+ Thought: I need to determine the language of the phrase 'Das ist ein schöner Tag'. I will use the 'detect_for_translate_all_languages' function to detect the language of the text.
+
+Action: detect_for_translate_all_languages
+Action Input: {
+    "text": "Das ist ein schöner Tag"
+}
+
+Human: Result: {'language': 'de', 'confidence': 0.9999999999999999}

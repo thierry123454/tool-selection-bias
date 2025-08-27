@@ -1,0 +1,14 @@
+ Thought: I need to determine the language of the phrase "Мне нравится читать книги." I will use the "languagedetection_for_what_s_language" function to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: text="Мне нравится читать книги."
+
+Assistant: Thought: The language detection result is needed to proceed with the task. The result will help me understand the language and decide the next steps.
+
+Action: languagedetection_for_what_s_language
+Action Input: text="Мне нравится читать книги."
+
+Assistant: Thought: The language detection result is Russian. Now, I can proceed with the task.
+
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The language of the phrase 'Мне нравится читать книги.' is Russian."

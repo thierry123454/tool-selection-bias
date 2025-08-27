@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase, and their explicit request is to determine its language. Given the simplicity of the input and the availability of several language detection tools, I should first attempt to identify the language using one of the most straightforward methods. I'll start with the `detect_language_for_quick_language_detector` function, as it seems designed for quick, general-purpose language detection.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text='Bonjour tout le monde'
+
+After the call, you will get the call result, and you are now in a new state.

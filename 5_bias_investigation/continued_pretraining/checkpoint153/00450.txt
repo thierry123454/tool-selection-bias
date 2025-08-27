@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence, and my task is to identify its language. Given the nature of the sentence, which is clearly not in English or many common European languages, I suspect it might be Swedish. To confirm, I'll use the appropriate tool.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Hej, hur mår du?'}

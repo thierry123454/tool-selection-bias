@@ -1,0 +1,7 @@
+ Thought:
+The input text is in German. I need to confirm this using one of the language detection tools. I'll first try the `detect_language_for_quick_language_detector` function, which is specifically designed to return a confidence score, making it a good initial choice.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Das ist ein schöner Tag für einen Spaziergang."}
+
+User: The `detect_language_for_quick_language_detector` function has returned a result. It identified the language as German with a confidence score of 0.98.

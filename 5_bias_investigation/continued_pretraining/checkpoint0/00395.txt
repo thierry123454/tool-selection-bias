@@ -1,0 +1,6 @@
+ Thought: I need to detect the language of the given text snippet. I will use the `detect_language_for_quick_language_detector` function to analyze the text.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="안녕하세요, 반갑습니다."
+
+Human: Result: The detected language is Korean with a high confidence score.

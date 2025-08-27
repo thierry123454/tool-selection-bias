@@ -1,0 +1,7 @@
+ Thought: The user has provided a phrase in Korean, and my initial task is to detect its language. I have several tools available for this purpose, and I need to evaluate which one is most efficient and reliable for a single phrase. My first step will be to use one of these tools to determine the language.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: "안녕하세요, 오늘 기분이 어때요?"
+
+After the call, you will get the call result, and you are now in a new state.

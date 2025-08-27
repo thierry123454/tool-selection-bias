@@ -1,0 +1,7 @@
+ Thought: The user has asked to identify the language of the input text 'नमस्ते, आप कैसे हैं आज?'. This is a clear request for language detection. My first step should be to use the most appropriate function for this specific task. Given the available tools, "what_s_language" seems the most direct fit, as it is specifically designed to detect the language of a given text. I will proceed with this function to determine the language.
+
+Action: what_s_language
+
+Action Input: text="नमस्ते, आप कैसे हैं आज?"
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...

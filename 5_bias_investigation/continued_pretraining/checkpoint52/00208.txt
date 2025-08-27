@@ -1,0 +1,6 @@
+ Thought: The user has provided a text, and the task is to detect its language. I should use a language detection tool. The first step is to identify the language of the input text.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Hola, ¿cómo estás?'
+Detected language: Spanish, confidence score: 0.98

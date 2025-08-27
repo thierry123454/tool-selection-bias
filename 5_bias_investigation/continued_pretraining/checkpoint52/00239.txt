@@ -1,0 +1,4 @@
+ Thought: The user has provided a text in French, and they want to know its language. To confirm, I can use the `languagedetection_for_what_s_language` API, which is specifically designed to detect the language of a given text. It's a straightforward process.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `text: "Bonjour, comment allez-vous aujourd'hui?"`

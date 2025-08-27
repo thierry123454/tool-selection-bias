@@ -1,0 +1,9 @@
+ Thought: The user has provided a text string, and my primary task is to determine its language. Given the nature of the tools available, the most straightforward approach would be to use the `what_s_language` function, specifically its subfunction `languagedetection_for_what_s_language`. This tool is designed to detect the language of a given text and return the detected language code, which seems ideal for this initial step.
+
+Action: I will call the `languagedetection_for_what_s_language` function with the provided text.
+
+Action Input: text: '안녕하세요, 오늘 기분이 어때요?'
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...
+
+After the call: The `languagedetection_for_what_s_language` function has returned the detected language code. Now, I need to analyze this result to proceed with the task.

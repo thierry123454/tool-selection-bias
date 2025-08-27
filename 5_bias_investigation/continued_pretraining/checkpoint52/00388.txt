@@ -1,0 +1,9 @@
+ Thought: The user has provided a text, and my task is to determine its language. I have several tools available for language detection, including `quick_language_detector`, `text_language_by_api_ninjas`, `translate_v3`, `translate_all_languages`, and `what_s_language`. I should first try a straightforward approach using one of these tools to identify the language.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Bonjour tout le monde"}
+
+Assistant: Thought: I have just called the `quick_language_detector` API with the input text 'Bonjour tout le monde'. I now need to analyze the response to see if it provides a clear language identification.
+
+Action: (No action, just analyze the result of the previous call)

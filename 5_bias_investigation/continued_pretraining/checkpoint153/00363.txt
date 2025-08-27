@@ -1,0 +1,6 @@
+ Thought: The user has provided a text snippet that appears to be in Hebrew. My first step should be to confirm the language using one of the available tools. Given that 'translate_v3' has a subfunction specifically for language detection, I'll use `fast_language_detection_for_translate_v3` to get a definitive answer.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: {'text': 'שלום, מה שלומך היום?'}
+
+The output will provide the detected language.

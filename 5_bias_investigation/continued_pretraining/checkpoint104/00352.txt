@@ -1,0 +1,6 @@
+ Thought: The user has asked to identify the language of the phrase 'Je suis très heureux'. This seems straightforward, and I believe the `text_language_by_api_ninjas` tool, specifically its subfunction `v1_textlanguage_for_text_language_by_api_ninjas`, is designed for this purpose. I'll pass the phrase directly to it and see what it returns.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Je suis très heureux"}
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has processed the input. It seems to have detected the language. I'll take the result and proceed.

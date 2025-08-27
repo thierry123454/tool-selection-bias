@@ -1,0 +1,9 @@
+ Thought: The user has provided a short Japanese phrase, and the task is to identify its language. Given the nature of the request, I will first attempt to use the tool designed specifically for language detection. The most suitable tool for this task seems to be `text_language_by_api_ninjas`, which is designed to detect the language from any input text. I will proceed with this.
+
+Action: text_language_by_api_ninjas
+Action Input: text='今日は良い天気ですね'
+
+Assistant: Thought: I've just received the API Ninjas Text Language API endpoint's response. It indicates that the language detected is Japanese. This is a clear and definitive result for this specific input.
+
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The language of the text '今日は良い天気ですね' is Japanese."

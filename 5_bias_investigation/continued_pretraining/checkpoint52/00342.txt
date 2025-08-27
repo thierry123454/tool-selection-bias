@@ -1,0 +1,5 @@
+ Thought: The user has asked for the language of the phrase 'Merhaba, nasılsın?'. This is a straightforward request for language detection. I will use one of the available language detection tools to determine the language.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'Merhaba, nasılsın?'

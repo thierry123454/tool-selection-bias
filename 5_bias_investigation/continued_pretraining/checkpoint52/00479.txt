@@ -1,0 +1,5 @@
+ Thought: I need to determine the language of the input text 'Olá, tudo bem?'. I have several tools available for language detection, and I'll consider which one is most appropriate and efficient for this task. My initial thought is to use a straightforward language detection API, perhaps one that is specifically designed for this purpose.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Olá, tudo bem?'

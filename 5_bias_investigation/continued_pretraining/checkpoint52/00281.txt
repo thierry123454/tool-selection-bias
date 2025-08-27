@@ -1,0 +1,6 @@
+ Thought: I need to detect the language of the given text, which is 'Olá, tudo bem com você?'. I have several options for language detection, each with its own nuances. I'll consider the most straightforward approach first and then evaluate alternatives if needed.
+
+Action: what_s_language
+Action Input: {
+    "text": "Olá, tudo bem com você?"
+}

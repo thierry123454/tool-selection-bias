@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text and asked for its language. My first step is to identify the language using a reliable tool. I will use the "what_s_language" API, which is designed for this purpose. It's a straightforward and efficient way to get an accurate detection.
+
+Action: what_s_language
+Action Input: "text": "Merhaba, nasılsın?"

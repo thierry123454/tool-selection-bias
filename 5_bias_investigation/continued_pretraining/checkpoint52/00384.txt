@@ -1,0 +1,4 @@
+ Thought: The user has provided a text, and the task is to identify its language. I'll start by using a reliable language detection tool to determine the language. Given the brevity of the text, I'll prioritize tools that are known for accuracy with short inputs.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Hola, ¿cómo estás?"}

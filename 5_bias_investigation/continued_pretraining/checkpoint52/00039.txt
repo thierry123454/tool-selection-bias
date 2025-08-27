@@ -1,0 +1,8 @@
+ Thought:
+The user has provided a query asking for the language of a specific text. The text is '¿Dónde está la biblioteca?'. My first step should be to detect the language of this input text. I will use the `text_language_by_api_ninjas` tool for this purpose, which is designed to detect the language from any input text.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input:
+{
+  "text": "¿Dónde está la biblioteca?"
+}

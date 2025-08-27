@@ -1,0 +1,9 @@
+ Thought: The user has provided a short Japanese text. My primary goal is to accurately identify its language. Given the context, I will first attempt to use the `what_s_language` tool, which is designed for this exact purpose. If it fails or provides an ambiguous result, I'll consider alternative methods, such as `detect_for_translate_all_languages` or `detect_language_for_quick_language_detector`.
+
+Action: `what_s_language`
+Action Input: `text="今日はとてもいい天気です"`
+
+Assistant: Thought: The `what_s_language` tool has returned the language as Japanese with a high confidence score. This is a clear and definitive result, so there's no need to escalate to other tools for confirmation. I can now proceed with providing the final answer.
+
+Action: `Finish`
+Action Input: `return_type="give_answer", final_answer="The language of the text '今日はとてもいい天気です' is Japanese."`

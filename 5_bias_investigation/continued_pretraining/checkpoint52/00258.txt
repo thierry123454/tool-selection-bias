@@ -1,0 +1,11 @@
+ Thought: The user has requested to detect the language of the given text. I will use the `detect` function from the `text_language_by_api_ninjas` tool, which is designed for this purpose, to identify the language of the input. The API Ninjas Text Language API endpoint is specifically built for this task and seems to be the most straightforward choice for initial detection. I will pass the text 'Het is een mooie dag vandaag.' to this function.
+
+Action: text_language_by_api_ninjas
+Action Input: {"text": "Het is een mooie dag vandaag."}
+
+User: The API Ninjas Text Language API endpoint returned the language as 'nl' with a high confidence score. This indicates that the text is in Dutch.
+
+Assistant: Thought: The API has successfully identified the language as Dutch. Since the task was to detect the language, and we have a clear result, I should now proceed to confirm if this is the correct language and then provide the final answer. There's no need for further translation or analysis at this stage. I will now call the `Finish` function to provide the final answer.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text 'Het is een mooie dag vandaag.' is Dutch."}

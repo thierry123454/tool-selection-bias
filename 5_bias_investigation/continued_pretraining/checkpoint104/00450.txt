@@ -1,0 +1,8 @@
+ Thought: The user has provided a short sentence. My first step is to determine its language using an appropriate tool. I'll use the quick_language_detector function, which is designed to detect language with a confidence score, making it a good fit for this initial identification.
+
+Action: quick_language_detector
+Action Input: {
+  "text": "Hej, hur mår du?"
+}
+
+After the call, I will get the detected language and confidence score, which will inform my next steps.

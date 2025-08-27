@@ -1,0 +1,8 @@
+ Thought: To detect the language of the sentence, I will use the "detect_language_for_quick_language_detector" function to determine the language with a confidence score.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: 
+{
+  "text": "This is a sample English sentence."
+}

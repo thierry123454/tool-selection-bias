@@ -1,0 +1,28 @@
+ Thought: I need to determine the language of the text '今日はお元気ですか？'. I can use the `languagedetection_for_what_s_language` tool to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: text='今日はお元気ですか？'
+
+User: 
+Action result: {'detected_language': 'ja', 'confidence_score': 1.0}
+
+Thought: The text is detected as Japanese with a high confidence score. I can confirm this using another tool to ensure accuracy.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text='今日はお元気ですか？'
+
+User: 
+Action result: {'detected_languages': [{'language': 'ja', 'confidence': 1.0}], 'detected_count': 1}
+
+Thought: Both tools agree that the text is in Japanese. I can now confirm this using the `v1_textlanguage_for_text_language_by_api_ninjas` tool.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text='今日はお元気ですか？'
+
+User: 
+Action result: {'language': 'ja'}
+
+Thought: All three tools confirm that the text is in Japanese. I can now provide the final answer.
+
+Action: Finish
+Action Input: return_type='give_answer', final_answer='The language of the text "今日はお元気ですか？" is Japanese.'

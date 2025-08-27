@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text, and the task is to identify its language. My initial approach would be to use the most straightforward and reliable language detection tool available. Given the simplicity of the input, I'll attempt to use the `v1_textlanguage_for_text_language_by_api_ninjas` function, which is designed for this purpose. This function is expected to provide a quick and accurate detection based on the input text.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+
+Action Input: text='Γειά σου, πώς είσαι;'
+
+After the call, you will get the call result, and you are now in a new state.

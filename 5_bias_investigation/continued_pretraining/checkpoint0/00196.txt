@@ -1,0 +1,5 @@
+ Thought: The user has provided a text in Japanese. I need to confirm the language using the available tools.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "今日はとても暑いです。"}

@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and my goal is to identify its language. I will use the available tools to detect the language accurately. Given the brevity of the input, I should consider using a robust language detection API that can handle such cases effectively.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "¿Dónde está la biblioteca?"}

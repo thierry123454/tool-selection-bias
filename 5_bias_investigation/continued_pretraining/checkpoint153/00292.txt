@@ -1,0 +1,7 @@
+ Thought: I need to determine the language of the given phrase. I have several tools available, each with its own method for language detection. My first step will be to use one of these tools to analyze the input text.
+
+Action: quick_language_detector
+Action Input: {
+  "text": "Guten Morgen, wie geht es dir?"
+  "detectedcount": 1
+}

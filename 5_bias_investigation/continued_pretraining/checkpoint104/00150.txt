@@ -1,0 +1,11 @@
+ Thought: The user has asked to identify the language of the text 'Ciao, come stai?'. I will first attempt to use the `detect_language_for_quick_language_detector` function, which is designed to detect the language with a confidence score, to process this specific input.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Ciao, come stai?"
+
+Assistant: Thought: The `detect_language_for_quick_language_detector` function has returned a result. I will now analyze the output to determine the detected language and its confidence score. If the confidence is high, I will proceed to confirm it; otherwise, I might consider alternative methods.
+
+Action: Finish
+
+Action Input: return_type="give_answer", final_answer="The language of the text 'Ciao, come stai?' is Italian, with a high confidence score."

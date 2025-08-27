@@ -1,0 +1,6 @@
+ Thought: The user has provided a text in Japanese. My task is to determine its language. I will use the `text_language_by_api_ninjas` tool for this purpose.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {'text': '今日は元気ですか？'}
+
+Assistant: Thought: The API Ninjas Text Language API endpoint was called with the input text. I will now analyze the result to confirm the language.

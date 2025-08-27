@@ -1,0 +1,4 @@
+ Thought: The user has provided a short phrase that needs language identification. I will first attempt to use the `quick_language_detector` tool, which is designed to detect the language from any input text, providing a confidence score. This seems like the most straightforward approach for a single, short input. If it yields a confident result, I will proceed. If not, I will consider other tools.
+
+Action: `detect_language_for_quick_language_detector`
+Action Input: `text: "Hej, hur mår du idag?"`

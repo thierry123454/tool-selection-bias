@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text, and my primary goal is to accurately detect its language. Given the nature of the task, I should first consider the most reliable and efficient method. Since we have several tools available for language detection, I need to evaluate their capabilities and potential for error. If one tool consistently fails or returns an ambiguous result, I should be prepared to switch to an alternative. My initial approach will be to use a dedicated language detection tool, as it is specifically designed for this purpose, rather than relying on a general-purpose translation service.
+
+Action: I will call the `detect_language_for_quick_language_detector` API to analyze the provided text.
+
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?"}
+
+After the call, you will get the call result, and you are now in a new state.

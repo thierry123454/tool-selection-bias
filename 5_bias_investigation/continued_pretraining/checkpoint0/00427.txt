@@ -1,0 +1,14 @@
+ Thought: The task is to determine the language of the given text. I will use the "text_language_by_api_ninjas" function to detect the language.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {'text': 'Estou aprendendo português'}
+
+Assistant: Thought: The function call has returned the language as Portuguese. Now, I will verify this using another tool to ensure accuracy.
+
+Action: detect_for_translate_all_languages
+Action Input: {'text': 'Estou aprendendo português'}
+
+Assistant: Thought: The second function call also confirms that the language is Portuguese. I will now use the "Finish" function to provide the final answer.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "Estou aprendendo português" is Portuguese.'}

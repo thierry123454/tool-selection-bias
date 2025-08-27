@@ -1,8 +1,0 @@
- (Thought: The user wants to detect the language from the phrase "Olá, como você está hoje?". I should use the detect_for_translate_all_languages API to identify the language. The input is a simple text, so I'll pass it directly. Keep the call streamlined and focused. If the response is clear, I can confirm the result and return the answer. If not, I'll need to try another tool.)
-
-Action: detect_for_translate_all_languages
-Action Input: {"text": "Olá, como você está hoje?"}
-
-(On successful response, the tool should return the detected language code and confidence. This lets me confirm the result and assemble a clear answer. If the response is ambiguous or fails, I should invoke a different function and check for network issues or malformed inputs. Keep retries minimal and focused on recoverability.) 
-
-Thought: The API returned the result showing the text is in Portuguese. I should confirm the result and then call the Finish function with the detected language and a brief explanation. This streamlines a clear and instant response to the user. Keep the interface snappy and the response lightweight.

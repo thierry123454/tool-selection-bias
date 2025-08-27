@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text and explicitly asked for its language. My first step should be to detect the language using one of the available tools. Given the nature of the request, a direct language detection API would be most appropriate. I'll use the `detect_language_for_quick_language_detector` function, which is designed for this purpose. It takes a `text` parameter, which I will provide with the user's input. This function will return the detected language and a confidence score, which will be crucial for making an informed decision.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Merhaba, nasılsın?'

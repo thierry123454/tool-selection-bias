@@ -1,0 +1,17 @@
+ Thought: To identify the language of the sentence "Hej, hur mår du?", I will use the `detect_for_translate_all_languages` function to detect the language and then use the `languagedetection_for_what_s_language` function to confirm the result.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text="Hej, hur mår du?"
+
+Assistant: Thought: The result from the `detect_for_translate_all_languages` function indicates that the language is Swedish. I will now confirm this using the `languagedetection_for_what_s_language` function.
+
+Action: languagedetection_for_what_s_language
+
+Action Input: text="Hej, hur mår du?"
+
+Assistant: Thought: The result from the `languagedetection_for_what_s_language` function also confirms that the language is Swedish. Therefore, the language of the sentence "Hej, hur mår du?" is Swedish.
+
+Action: Finish
+
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the sentence 'Hej, hur mår du?' is Swedish."}

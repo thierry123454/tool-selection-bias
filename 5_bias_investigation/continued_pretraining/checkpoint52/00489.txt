@@ -1,0 +1,9 @@
+ Thought: The user has provided a string of text, and specifically asked for its language detection. The most straightforward approach is to use a language detection tool. Given the tools available, `what_s_language` or `detect_for_translate_all_languages` could be suitable, but `what_s_language` is specifically designed for this purpose, making it the most direct choice.
+
+Action: detect_language_for_what_s_language
+Action Input: {'text': 'Это тестовое предложение'}
+
+Assistant: Thought: The result from the language detection API will provide the detected language code. This will be crucial for the next steps, especially if we need to translate the text or perform further analysis based on its language. If the detection is accurate, we can proceed with confidence; otherwise, we might need to consider alternative methods or re-evaluate the input.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The detected language of the text "Это тестовое предложение" is Russian.'}

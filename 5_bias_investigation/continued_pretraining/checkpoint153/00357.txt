@@ -1,0 +1,4 @@
+ Thought: The user has provided a Spanish sentence. My task is to determine its language. I have several tools available, but the most straightforward for this purpose is the `languagedetection_for_what_s_language` function, which is specifically designed to detect the language of a given text and return the detected language code. This seems like the most efficient path forward.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `text='Este es un texto en español'`

@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence, and the task is to determine its language. I will use the available tools to analyze the text. The most straightforward approach is to use a dedicated language detection tool. I will choose the `text_language_by_api_ninjas` function, which is designed for this purpose.
+
+Action: `v1_textlanguage_for_text_language_by_api_ninjas`
+Action Input: `text: 'Este es un texto en español'`

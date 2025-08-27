@@ -1,0 +1,6 @@
+ Thought: The user has provided a short string of text. My first step should be to determine the language of this text. Given the available tools, I can use either `text_language_by_api_ninjas` or `what_s_language` for this initial detection. I'll opt for `text_language_by_api_ninjas` as it seems straightforward for this purpose.
+
+Action: text_language_by_api_ninjas
+Action Input: text: 'Dit is een testzin.'
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has been called. I await the result to identify the language of the provided text.

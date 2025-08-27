@@ -1,0 +1,6 @@
+ Thought: The user has provided a specific sentence and asked for its language. Given the tools at hand, the most direct approach would be to use a language detection tool. I'll use the `v1_textlanguage_for_text_language_by_api_ninjas` function, which is designed to detect the language from any input text. This seems like the most straightforward and efficient method for this particular task.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Este es un texto en español"}
+
+Assistant: Thought: The API Ninjas Text Language API endpoint is now processing the input text. I'm waiting for the result to determine the detected language. This is a crucial step, as the outcome will guide my next actions.

@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the phrase 'Je suis très heureux'. There are several tools available, but I should consider which one is most reliable for a single phrase. My first instinct is to use 'quick_language_detector' because it's designed to detect language from a few sentences and provides a confidence score, which is useful for accuracy.
+
+Action: quick_language_detector
+Action Input: detect_language_for_quick_language_detector(text='Je suis très heureux')

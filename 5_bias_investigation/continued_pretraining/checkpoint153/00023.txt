@@ -1,0 +1,6 @@
+ Thought: I need to identify the language of the provided text. Since the input is in Italian, I'll use a reliable language detection tool. Given the options, "what_s_language" or "detect_for_translate_all_languages" could be suitable. I'll start with "what_s_language" as it seems straightforward for this task.
+
+Action: what_s_language
+Action Input: text=Ciao, come stai oggi?
+
+Assistant: Thought: The API has returned a result indicating the language. I need to analyze the output to confirm the detected language.

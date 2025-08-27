@@ -1,0 +1,4 @@
+ Thought: The user has asked for the language of a specific phrase. Since we have several language detection tools available, I'll first try to detect the language using the most straightforward method, which is the `detect_for_translate_all_languages` function. This tool is designed to detect the language of text, and it's the most direct path to an answer. I'll pass the phrase 'Je suis très heureux' to this function.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Je suis très heureux"}

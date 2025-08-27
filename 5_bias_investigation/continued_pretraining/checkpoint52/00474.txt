@@ -1,0 +1,4 @@
+ Thought: The task is to detect the language of the given sentence. I will use the `what_s_language` tool, which internally uses the `languagedetection_for_what_s_language` subfunction. The input text is 'This is a sample English sentence.' The language detection should be straightforward for this common phrase.
+
+Action: what_s_language
+Action Input: 'This is a sample English sentence.'

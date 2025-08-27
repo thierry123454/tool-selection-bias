@@ -1,0 +1,17 @@
+ Thought: I need to identify the language of the given text. The input is 'Je suis très heureux de te voir.'. I recall having a tool that can detect the language from any input text. I should use the `text_language_by_api_ninjas` function for this.
+
+Action: text_language_by_api_ninjas
+
+Action Input: {"text": "Je suis très heureux de te voir."}
+
+Assistant: Thought: The API Ninjas Text Language API endpoint is designed to detect the language from any input text. I've just called the `text_language_by_api_ninjas` function with the input 'Je suis très heureux de te voir.' I expect a language code as the result. I'll analyze the output to confirm the language.
+
+Action: text_language_by_api_ninjas
+
+Action Input: {"text": "Je suis très heureux de te voir."}
+
+Assistant: Thought: The result from the `text_language_by_api_ninjas` function indicates that the language is French. This is consistent with the input text, which contains common French words and phrases. I now know the language is French. My next step is to confirm this or proceed with any further actions if needed.
+
+Action: Finish
+
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the sentence 'Je suis très heureux de te voir.' is French."}

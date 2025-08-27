@@ -1,0 +1,5 @@
+ Thought: The task is to detect the language of the provided text. The text is in Cyrillic, and I need to ensure I use the most appropriate tool for this. I will first consider the available options for language detection.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: "Это пример текста на русском языке"

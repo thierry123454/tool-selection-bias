@@ -1,0 +1,4 @@
+ Thought: I will use the "detect" function from the "what_s_language" tool to determine the language of the sentence.
+
+Action: detect_for_what_s_language
+Action Input: text="Привет, как дела?"

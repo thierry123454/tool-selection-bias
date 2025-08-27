@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text in Korean. My first step should be to confirm the language using one of the available language detection tools. I'll choose the `quick_language_detector` API, specifically the `detect_language_for_quick_language_detector` subfunction, as it seems straightforward for this purpose. If it returns a confident result, I can proceed; if not, I might consider an alternative.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: '안녕하세요, 반갑습니다'

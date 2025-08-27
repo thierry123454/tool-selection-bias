@@ -1,0 +1,13 @@
+ Thought: The task is to detect the language of the provided text, which is 'This is a sample English sentence.'. I need to choose an appropriate tool for this purpose. Given the available options, I'll consider the `detect_language_for_quick_language_detector` and `detect_for_translate_all_languages` tools, as they are specifically designed for language detection. I'll start with the first one.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "This is a sample English sentence."}
+
+Human: The API Ninjas Text Language API endpoint detected the language as English with a high confidence score. The response also included a list of detected languages, but the primary one was clearly English. This seems reliable.
+
+Assistant: Thought: The detection confirmed that the text is indeed English. This is a straightforward result, and I don't need to explore other tools further for this specific task. The confidence score was high, which is a good indicator. Now, I need to consider what to do next.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the given text 'This is a sample English sentence.' is English."}
+
+Human: The language of the given text 'This is a sample English sentence.' is English.

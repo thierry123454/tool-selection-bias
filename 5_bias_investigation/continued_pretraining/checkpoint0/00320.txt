@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the given phrase "Мне нравится читать книги." I will use the "detect_for_translate_all_languages" function to detect the language of the text.
+
+Action: detect_for_translate_all_languages
+Action Input: {
+  "text": "Мне нравится читать книги."
+}

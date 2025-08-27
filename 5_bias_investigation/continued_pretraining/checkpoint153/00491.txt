@@ -1,0 +1,13 @@
+ Thought: The user has provided a short message and asked for its language. I need to determine the language first before considering any translation. Given the description of the tools, it seems appropriate to use a language detection API. I will choose one of the available options and send the text to it.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Это пример текста."}
+
+User: The language detection API returned: {'language': 'ru', 'confidence': 0.98}
+
+Assistant: Thought: The API has identified the language as Russian with a high confidence score. This is a clear indication that the text is indeed in Russian. Since the task is simply to identify the language, and we have a definitive answer from the API, I can now proceed to provide the final answer.
+
+Action: Finish
+
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the provided text 'Это пример текста.' is Russian."}

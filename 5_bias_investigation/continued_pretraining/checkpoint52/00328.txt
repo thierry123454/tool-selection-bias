@@ -1,0 +1,4 @@
+ Thought: The user has provided a text, and the task is to determine its language. The text is '안녕하세요, 오늘 기분이 어때요?'. It appears to be in Korean. I will use the available language detection tools to confirm this.
+
+Action: detect_for_translate_all_languages
+Action Input: text: '안녕하세요, 오늘 기분이 어때요?'

@@ -1,0 +1,6 @@
+ Thought: The user has provided a phrase that appears to be a mix of Hindi and a language that might be related to another script. I need to determine the primary language. I'll use the `detect_for_translate_all_languages` function for this.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "नमस्ते, आप कैसे हैं?"}
+
+User: The API call to `detect_for_translate_all_languages` returned 'hi' for the language detection.

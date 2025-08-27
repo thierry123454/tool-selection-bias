@@ -1,0 +1,5 @@
+ Thought: The user has provided a single phrase, "Это пример текста." My initial thought is to determine the language of this text. Since the user specifically asked about the language, and given the tools available, the most direct approach is to use a language detection function. I'll use the `languagedetection_for_what_s_language` function for this purpose.
+
+Action: I will call the `languagedetection_for_what_s_language` function to detect the language of the provided text.
+
+Action Input: text: 'Это пример текста.'

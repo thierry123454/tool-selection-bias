@@ -1,0 +1,20 @@
+ Thought: The user has asked to detect the language of a specific sentence. I will first determine which tool is most suitable for this task. Given the specific request for a single sentence, a dedicated language detection tool is likely more efficient than a translation tool, even if it has a language detection capability.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "This is a sample English sentence."}
+
+User: The API Ninjas Text Language API endpoint detected the language as 'en' with a high confidence score.
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has successfully identified the language as 'en' (English) with a high confidence score. This confirms that the input text is indeed English. However, to ensure robustness, I will also try another tool to cross-verify the result.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "This is a sample English sentence."}
+
+User: The quick language detector identified the language as 'en' with a confidence score of 0.99.
+
+Assistant: Thought: Both the API Ninjas Text Language API endpoint and the quick language detector have consistently identified the language as 'en' (English) with very high confidence scores. This strong agreement reinforces the accuracy of the detection. Since the task is simply to detect the language, and we have achieved a definitive result, I can now proceed to provide the final answer.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the sentence 'This is a sample English sentence.' is English (en)."}
+
+User: The language of the sentence 'This is a sample English sentence.' is English (en).

@@ -1,0 +1,9 @@
+ Thought: To determine the language of the given text, I will use the "languagedetection_for_what_s_language" subfunction.
+
+Action: languagedetection_for_what_s_language
+Action Input: text="안녕하세요, 오늘 기분이 어떠세요?"
+
+Assistant: Thought: Since I have already called the "languagedetection_for_what_s_language" subfunction, I will now analyze the result to determine the language of the text.
+
+Action: analyze_result
+Action Input: Result from "languagedetection_for_what_s_language"

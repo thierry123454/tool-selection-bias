@@ -1,0 +1,4 @@
+ Thought: I need to identify the language of the input phrase 'Salve, quid agis?'. There are several tools available for this, including quick_language_detector, text_language_by_api_ninjas, translate_v3, and what_s_language. I'll start with quick_language_detector as it's straightforward and provides a confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Salve, quid agis?'}

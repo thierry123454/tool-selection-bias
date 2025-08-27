@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence, and the task is to detect its language. The sentence is in Japanese, which is a common language for users to test language detection tools. I'll use a reliable tool for this.
+
+Action: I will use the `what_s_language` function to detect the language of the provided sentence.
+
+Action Input: `what_s_language(text="今日はいい天気ですね")`

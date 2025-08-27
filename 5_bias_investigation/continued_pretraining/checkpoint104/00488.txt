@@ -1,0 +1,18 @@
+ Thought: The user has asked for the language of a specific phrase. To determine this, I can use one of the language detection tools available. I'll try the `detect_for_translate_all_languages` function first, as it's a straightforward text detection API.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Guten Morgen, wie geht es dir?"}
+
+User: The language of the text 'Guten Morgen, wie geht es dir?' is detected as German with a high confidence score. The API returned 'de' as the language code.
+
+Assistant: Thought: The detection result indicates the text is German. However, to ensure accuracy, especially for short phrases, I might want to cross-verify with another tool. I'll consider using `fast_language_detection_for_translate_v3` as an additional check.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: {"text": "Guten Morgen, wie geht es dir?"}
+
+User: The language of the text 'Guten Morgen, wie geht es dir?' is also identified as German by this tool, confirming the initial detection.
+
+Assistant: Thought: Both tools have confirmed the language as German. This provides a high degree of certainty. Now, I need to decide whether to proceed with a translation or simply confirm the language. Since the user only asked for the language, I should confirm it definitively.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the phrase 'Guten Morgen, wie geht es dir?' is German."}

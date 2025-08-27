@@ -1,0 +1,7 @@
+ Thought: The user has provided a short phrase, and my goal is to accurately determine its language. Given the nature of the task, I should first attempt to detect the language using the available tools. I will prioritize the most straightforward and reliable method for this specific query.
+
+Action: Detect the language of the given text using the `languagedetection_for_what_s_language` API.
+
+Action Input: {
+  "text": 'Estou aprendendo português'
+}

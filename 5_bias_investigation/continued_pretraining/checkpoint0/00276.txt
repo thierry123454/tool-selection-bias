@@ -1,0 +1,9 @@
+ Thought: The task is to identify the language of the given text. I will use the "what_s_language" function to detect the language.  
+Action: what_s_language  
+Action Input: languagedetection_for_what_s_language(text="Привет, как дела?")  
+
+Result: The detected language is Russian.  
+
+Thought: The language has been successfully identified as Russian. I can now provide the final answer.  
+Action: Finish  
+Action Input: return_type="give_answer", final_answer="The language of the text 'Привет, как дела?' is Russian."

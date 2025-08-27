@@ -1,0 +1,4 @@
+ Thought: The user has provided a short phrase, and my first step is to determine its language. I have several tools available for language detection, including `text_language_by_api_ninjas` and `what_s_language`. I will use `text_language_by_api_ninjas` for its simplicity and directness. The input text is 'Guten Tag, wie geht es Ihnen?'. I'll pass this directly to the tool.
+
+Action: text_language_by_api_ninjas
+Action Input: text: 'Guten Tag, wie geht es Ihnen?'

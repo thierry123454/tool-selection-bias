@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the given sentence. I will use the "languagedetection_for_what_s_language" subfunction for this task.
+
+Action: languagedetection_for_what_s_language
+Action Input: text=Das ist ein schöner Tag für einen Spaziergang.

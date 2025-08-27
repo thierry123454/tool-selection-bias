@@ -1,0 +1,7 @@
+ Thought: I need to determine the language of the given text. I have several options, but I'll start with the most straightforward one.
+
+Action: what_s_language
+
+Action Input: text: 'Olá, tudo bem?'
+
+After the call, you will get the call result, and you are now in a new state.

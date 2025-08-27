@@ -1,0 +1,9 @@
+ Thought: The user has provided a short input text. My first step should be to accurately determine the language of this text. I have several tools available for language detection, each with its own nuances. I'll start by using the quick_language_detector, as it's straightforward and designed for a few sentences, which fits the input size. If it provides a confident detection, I'll proceed. If not, I'll consider using another tool for a more robust detection.
+
+Action: quick_language_detector
+Action Input: {'text': 'Hej, hur mår du idag?', 'detectedcount': 5}
+
+Assistant: Thought: The quick_language_detector has provided a result. I need to review the output to see if it confidently identified the language. If the confidence score is high, I can proceed. If it's low or ambiguous, I might need to try another tool, such as the text_language_by_api_ninjas, which is another reliable option for language detection. I'll check the confidence score first.
+
+Action: Review the quick_language_detector result. If confidence is low, proceed to: text_language_by_api_ninjas
+Action Input: {'text': 'Hej, hur mår du idag?'}

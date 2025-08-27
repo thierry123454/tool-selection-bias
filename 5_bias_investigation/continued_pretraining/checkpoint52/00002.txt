@@ -1,0 +1,4 @@
+ Thought: The user wants to know the language of a specific phrase. We have several tools available for language detection, and I'll prioritize using the one that seems most straightforward and likely to give an accurate result quickly. The phrase 'Das ist ein schöner Tag' is in German, and we should confirm this. I'll use the `languagedetection_for_what_s_language` function for this.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Das ist ein schöner Tag'

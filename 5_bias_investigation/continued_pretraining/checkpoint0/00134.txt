@@ -1,0 +1,5 @@
+ Thought: To determine the language of the phrase "Das ist ein schöner Tag", I will use the available language detection tools. I will first try the "quick_language_detector" tool to see if it can accurately detect the language.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Das ist ein schöner Tag"

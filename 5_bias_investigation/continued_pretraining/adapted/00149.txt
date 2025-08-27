@@ -1,5 +1,0 @@
- (Thought: The input text is in Russian, so I should use the detect function to confirm the language. The text is 'Это пример текста на русском языке'. I will call detect_for_translate_all_languages with this text to get the result.)
-Action: detect_for_translate_all_languages
-Action Input: {"text": "Это пример текста на русском языке"} (note: the input should be a JSON object with the key "text" and the value being the input text) 
-
-The function call should return the detected language. Once I have the result, I can confirm the language and present the answer to the user. If the result is not as expected, I may need to try a different function. Keep the response streamlined and focused on the task at hand.

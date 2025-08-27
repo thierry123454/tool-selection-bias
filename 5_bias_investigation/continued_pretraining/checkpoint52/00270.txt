@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text, 'Hola, ¿cómo estás?', and explicitly asked to identify the language. Given the brevity of the input, a robust language detection tool is essential. I will first consider the available options, prioritizing tools that are designed for quick and accurate detection of short phrases. My initial thought is to use `what_s_language` via its subfunction `languagedetection_for_what_s_language`, as it seems directly aligned with the task of detecting the language of a given text. This tool is likely optimized for such a purpose, making it a strong candidate for this specific query. The input text is simple, so I expect a straightforward detection without much ambiguity.
+
+Action: `languagedetection_for_what_s_language`
+
+Action Input: text: 'Hola, ¿cómo estás?'
+
+User: You are about to call the function `languagedetection_for_what_s_language` with the input `text: 'Hola, ¿cómo estás?'`. Please wait for the result.

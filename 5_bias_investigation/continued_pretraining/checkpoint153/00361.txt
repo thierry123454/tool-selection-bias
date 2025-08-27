@@ -1,0 +1,6 @@
+ Thought: The user has provided a text string, and my task is to determine its language. I'll start by using the `detect_language_for_quick_language_detector` function, which is designed to detect the language from any input text. This seems like a straightforward initial step.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": '今日はとてもいい天気です'}
+
+User: The language detected is 'ja' (Japanese) with a high confidence score.

@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text in Russian. My first step should be to determine the language of this input text. I will use the `Detect the language of a given text` function, specifically the `languagedetection_for_what_s_language` subfunction, to identify the language. This will allow me to confirm it's indeed Russian and prepare for any subsequent translation or processing steps.
+
+Action: languagedetection_for_what_s_language
+Action Input: 'Привет, как дела?'

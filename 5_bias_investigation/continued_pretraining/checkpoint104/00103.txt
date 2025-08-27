@@ -1,0 +1,7 @@
+ Thought: The user has provided a sentence, and my task is to identify its language. I have several language detection tools at my disposal. The sentence is quite short, so I need to ensure the detection is accurate. I'll start by trying the `detect_language_for_quick_language_detector` function, as it is designed to determine the language with a confidence score, which could be useful for evaluating its reliability.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {
+  "text": "Je suis très heureux de te voir."
+}

@@ -1,0 +1,5 @@
+ Thought: The user has provided a Japanese phrase. My first step is to detect the language using one of the available tools. I'll choose to use the `detect_language_for_quick_language_detector` function, as it seems designed for quick and straightforward detection.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="今日はいい天気ですね"

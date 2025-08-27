@@ -1,0 +1,4 @@
+ Thought: The user has asked to identify the language of a specific phrase. The phrase provided is '¿Dónde está la biblioteca?'. To determine its language, I will first attempt to use the most straightforward and reliable language detection tool available. My initial choice will be the `text_language_by_api_ninjas` function, specifically its subfunction `v1_textlanguage_for_text_language_by_api_ninjas`, as it is designed to detect the language from any input text. This tool is expected to provide a quick and accurate result for this type of query.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "¿Dónde está la biblioteca?"}

@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and our primary goal is to detect its language. Given the tools available, we have several options, but the most straightforward approach would be to use the `what_s_language` tool, which is specifically designed for this purpose. This tool is likely to provide a quick and accurate detection. For the initial attempt, I will use `languagedetection_for_what_s_language` with the provided text.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Das Wetter ist heute schön.'

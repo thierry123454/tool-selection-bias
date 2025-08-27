@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the provided text. I will use the quick_language_detector tool to analyze the text and get a confidence score for the detected language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Γειά σου, πώς είσαι;"}
+
+User: <Result from quick_language_detector>

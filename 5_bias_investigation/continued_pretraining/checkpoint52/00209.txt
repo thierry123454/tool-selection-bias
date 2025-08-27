@@ -1,0 +1,4 @@
+ Thought: The user has provided a text snippet, and my primary goal is to detect the language of this input. Given the available tools, the most straightforward approach is to use the `detect_for_translate_all_languages` function, which is designed for language detection. This tool is specifically tailored for this task, making it the optimal choice for this initial step.
+
+Action: detect_for_translate_all_languages
+Action Input: text: "안녕하세요, 반갑습니다."

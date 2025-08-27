@@ -1,0 +1,9 @@
+ Thought: The user has provided a short message, and the task is to determine its language. The message 'Ciao, come va?' is clearly in Italian. I don't need to perform any complex analysis; a direct language detection should suffice. I'll use the `languagedetection_for_what_s_language` function to confirm this.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: text: "Ciao, come va?"
+
+Assistant: Thought: The result from `languagedetection_for_what_s_language` confirms that the language of 'Ciao, come va?' is indeed Italian. This is a straightforward case, and I can confidently proceed to the next step, which is to confirm or refine the detection if necessary.
+
+Action: `Finish`
+Action Input: return_type: 'give_answer', final_answer: "The language of 'Ciao, come va?' is Italian."

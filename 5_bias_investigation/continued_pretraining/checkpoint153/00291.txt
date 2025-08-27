@@ -1,0 +1,5 @@
+ Thought: The task is to determine the language of the given phrase. The input text appears to be in Greek. I'll use the `detect_language_for_quick_language_detector` function to confirm this. If it's accurate, I'll proceed; if not, I might try another tool for verification.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Είναι μια όμορφη μέρα.'

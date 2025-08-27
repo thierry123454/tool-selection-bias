@@ -1,0 +1,5 @@
+ Thought: I need to identify the language of the input text 'Este es un texto en español'. I have several tools available, but I should pick the most straightforward one that provides a clear language detection. I can use `detect_language_for_quick_language_detector` or `detect_for_translate_all_languages`. I'll try the first one for now.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Este es un texto en español"}

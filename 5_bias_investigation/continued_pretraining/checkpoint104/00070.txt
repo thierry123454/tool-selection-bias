@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence, and the task is to identify its language. Since the sentence is in Italian, we should use a reliable language detection tool. The `detect_language_for_quick_language_detector` function seems suitable for this task, as it can detect the language with a confidence score. I'll proceed with that.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Ciao, come stai oggi?"

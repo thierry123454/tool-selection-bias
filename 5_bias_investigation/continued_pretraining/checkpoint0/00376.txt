@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the given text. I will use the `languagedetection_for_what_s_language` API to detect the language.
+
+Action: languagedetection_for_what_s_language  
+Action Input: text="Dit is een testzin."
+
+Human: Result: The detected language code is "nl" (Dutch).

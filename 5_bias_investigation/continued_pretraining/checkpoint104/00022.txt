@@ -1,0 +1,13 @@
+ Thought: The user has provided a short phrase, and I need to determine its language. I will first attempt to use the "detect_language_for_quick_language_detector" function, as it is designed to provide a confidence score, which might be useful if the input is ambiguous. If that doesn't yield a clear result, I'll consider alternative methods.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Ciao, come stai oggi?"}
+
+User: The API returned a result indicating the language is Italian with a high confidence score.
+
+Assistant: Thought: The "detect_language_for_quick_language_detector" function successfully identified the language as Italian with a high confidence score. This is a clear and definitive result, so I can proceed to confirm this or move on to the next step if needed.
+
+Action: Finish
+
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the input 'Ciao, come stai oggi?' is Italian."}

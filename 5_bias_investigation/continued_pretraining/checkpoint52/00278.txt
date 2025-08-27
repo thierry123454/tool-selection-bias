@@ -1,0 +1,4 @@
+ Thought: The user has provided a phrase that is clearly not in English. My first step is to detect the language of this input. I will use the `v1_textlanguage_for_text_language_by_api_ninjas` function, which is designed for this purpose. It will give me the language code, which will be crucial for subsequent translation or further analysis.
+
+Action: text_language_by_api_ninjas
+Action Input: 'Saluton, kiel vi fartas?'

@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text in Swedish. My initial task is to determine its language accurately. I have access to several language detection tools, each with its own strengths and parameters. I'll start by trying the simplest and most direct approach, which is to use the `detect_language_for_quick_language_detector` function. This tool is designed to quickly identify the language from a given text and provide a confidence score, which will be useful for verifying the accuracy.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Hej, hur mår du idag?'
+detectedcount: 1

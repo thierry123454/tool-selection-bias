@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the given text using available tools. I will use the "detect" function from the "what_s_language" tool to analyze the text.
+
+Action: detect
+Action Input: {
+  "text": "Привет, как дела?"
+}

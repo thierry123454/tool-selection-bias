@@ -1,0 +1,9 @@
+ Thought: The user has provided a text string, and the task is to detect its language. Given the tools available, the most straightforward approach is to use the "what_s_language" function, which is designed for this purpose. I'll pass the text to the `languagedetection_for_what_s_language` subfunction.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Это тестовое предложение'
+
+Assistant: Thought: The API call has been made. Now, I need to process the result to determine the detected language and its confidence score, if available.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Это тестовое предложение'

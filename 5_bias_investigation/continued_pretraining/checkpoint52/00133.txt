@@ -1,0 +1,9 @@
+ Thought: The user has provided a phrase, and my task is to determine its language. Given the nature of the available tools, I will first attempt to use the `detect_language_for_translate_v3` function, which is designed for quick language detection. This function is likely optimized for speed and accuracy for common languages.
+
+Action: detect_language_for_translate_v3
+Action Input: 'Das ist ein schöner Tag'
+
+Assistant: Thought: After calling `detect_language_for_translate_v3`, I received a result. It's crucial to analyze this result to confirm the detected language and its confidence score. If the confidence is high, I can proceed with the task. If not, I might need to explore alternative methods or confirm the input text.
+
+Action: analyze_result
+Action Input: The result from `detect_language_for_translate_v3` (e.g., language code and confidence score).

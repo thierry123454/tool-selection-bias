@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and the task is to identify its language. The text is "Dit is een testzin in het Nederlands." I will first try to detect the language using one of the available language detection tools. I'll start with `detect_for_translate_all_languages` as it seems straightforward for initial detection.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Dit is een testzin in het Nederlands"}

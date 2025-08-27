@@ -1,0 +1,11 @@
+ Thought: The user has provided a sentence, and the task is to detect its language. I have several language detection tools at my disposal, including `what_s_language`, `quick_language_detector`, and `text_language_by_api_ninjas`. The sentence provided is in Hebrew, which should be straightforward to identify. I'll start by using `what_s_language` to detect the language.
+
+Action: what_s_language
+Action Input: {"text": 'אני לומד עברית'}
+
+User: The system detected the language as Hebrew (he).
+
+Assistant: Thought: The detection was successful, and the system identified the language as Hebrew. This confirms that the sentence 'אני לומד עברית' is indeed in Hebrew. The task is now complete, and I can provide the final answer.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the sentence 'אני לומד עברית' is detected as Hebrew."}

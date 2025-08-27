@@ -1,0 +1,7 @@
+ Thought: I need to detect the language of the input text using available tools. I will use the 'detect_language_for_quick_language_detector' tool for this purpose.
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Das Wetter ist heute schön.'}
+
+Assistant: Thought: Analyzing the result from the quick language detector tool. It seems to have identified the language with a high confidence score. Now, I will use the 'Finish' function to provide the final answer.
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'Das Wetter ist heute schön is in German.'}

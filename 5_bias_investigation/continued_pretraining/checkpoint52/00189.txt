@@ -1,0 +1,4 @@
+ Thought: I need to detect the language of the input text 'Saluton, kiel vi fartas?'. The phrase appears to be in a language that isn't immediately familiar to me, so I'll use one of the available language detection tools. I'll try the `what_s_language` tool first, which is designed for this purpose.
+
+Action: what_s_language
+Action Input: text="Saluton, kiel vi fartas?"

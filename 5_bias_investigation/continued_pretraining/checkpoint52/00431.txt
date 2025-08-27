@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text in Spanish, and my task is to identify its language. I can use several language detection tools available, such as `v1_textlanguage_for_text_language_by_api_ninjas`, `detect_for_translate_all_languages`, `languagedetection_for_what_s_language`, or `detect_language_for_quick_language_detector`. I'll start by trying `detect_for_translate_all_languages` because it's a direct and straightforward tool for language detection, and it seems to be designed for this specific purpose. If it fails or returns an unexpected result, I'll consider an alternative.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "¿Dónde está la biblioteca?"}

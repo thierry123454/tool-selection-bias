@@ -1,0 +1,19 @@
+ Thought: The user has provided a text and explicitly asked for its language. The first step is to detect the language. I will use the `text_language_by_api_ninjas` tool, specifically its subfunction `v1_textlanguage_for_text_language_by_api_ninjas`. This tool is designed to detect the language from any input text, which fits perfectly for this task.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: '今日はとてもいい天気です'
+
+Assistant: Thought: After the API call, I will analyze the result to determine the detected language. If the detection is clear, I will proceed to confirm it. If there's any ambiguity or an error, I will consider alternative approaches.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: '今日はとてもいい天気です'
+
+Assistant: Thought: The API call returned a successful result. The detected language is Japanese. To ensure accuracy, I will cross-verify this result using another language detection tool, `translate_all_languages`, specifically its `detect_for_translate_all_languages` subfunction, just to confirm consistency.
+
+Action: detect_for_translate_all_languages
+Action Input: text: '今日はとてもいい天気です'
+
+Assistant: Thought: The `translate_all_languages` tool also correctly identified the language as Japanese, confirming the initial detection. This consistency gives me high confidence in the result. Now, I need to prepare the final answer for the user, ensuring it clearly states the detected language.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: 'The language of the text "今日はとてもいい天気です" is Japanese.'

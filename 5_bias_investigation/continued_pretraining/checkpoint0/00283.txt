@@ -1,0 +1,23 @@
+ Thought: To detect the language of the input text, I will use the "detect_for_translate_all_languages" subfunction from the "translate_all_languages" tool. This will help me identify the language of the text provided.
+Action: detect_for_translate_all_languages
+Action Input: {'text': 'שלום, מה שלומך היום?'}
+
+Human: Thought: The language detection result indicates that the text is in Hebrew. Now, I will use the "languagedetection_for_what_s_language" subfunction from the "what_s_language" tool to confirm the language and get the detected language code.
+Action: languagedetection_for_what_s_language
+Action Input: {'text': 'שלום, מה שלומך היום?'}
+
+Assistant: Thought: The language detection result confirms that the text is in Hebrew. Next, I will use the "detect_language_for_quick_language_detector" subfunction from the "quick_language_detector" tool to determine the language and get the confidence score.
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'שלום, מה שלומך היום?'}
+
+Human: Thought: The language detection result from the "quick_language_detector" tool also confirms that the text is in Hebrew. Now, I will use the "v1_textlanguage_for_text_language_by_api_ninjas" subfunction from the "text_language_by_api_ninjas" tool to detect the language and get the language code.
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {'text': 'שלום, מה שלומך היום?'}
+
+Assistant: Thought: The language detection result from the "text_language_by_api_ninjas" tool also confirms that the text is in Hebrew. Now, I will use the "fast_language_detection_for_translate_v3" subfunction from the "translate_v3" tool to detect the language and get the language code.
+Action: fast_language_detection_for_translate_v3
+Action Input: {'text': 'שלום, מה שלומך היום?'}
+
+Assistant: Thought: The language detection result from the "translate_v3" tool also confirms that the text is in Hebrew. Now, I will use the "Finish" function to provide the final answer and confirm that I have successfully detected the language of the input text.
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the input text "שלום, מה שלומך היום?" is Hebrew.'}

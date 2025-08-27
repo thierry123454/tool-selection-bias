@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text snippet, and my primary task is to determine its language. Given the brevity, I'll first attempt to detect the language using the available tools, starting with the most straightforward one.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Привет, как дела?"}
+
+After the call, you will get the call result, and you are now in a new state.

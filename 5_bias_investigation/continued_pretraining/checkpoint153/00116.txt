@@ -1,0 +1,6 @@
+ Thought: The user has provided a text, and the task is to determine its language. The text is 'नमस्ते, आप कैसे हैं आज?'. Given that it contains words like 'नमस्ते' and 'आप', which are common in Hindi, I suspect it's Hindi. However, to be thorough, I should verify this using the available language detection tools. I'll use the `languagedetection_for_what_s_language` function for this initial check.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'नमस्ते, आप कैसे हैं आज?'
+
+After the call, you will get the call result, and you are now in a new state.

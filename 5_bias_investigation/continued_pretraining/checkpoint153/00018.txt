@@ -1,0 +1,14 @@
+ Thought: The user has provided a phrase in German. My first step is to confirm the language using the available tools. I'll use the `detect_for_translate_all_languages` function to get a quick detection.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Das ist ein schöner Tag."}
+
+Human: Text: 'Das ist ein schöner Tag.'
+Language: de
+Confidence: 0.99
+Detected language: German (de)
+
+Assistant: Thought: The `detect_for_translate_all_languages` function has confidently identified the language as German. This confirms my initial assessment. Now, I can proceed with the task, which was to tell the user the language of the phrase. I'll now call the `Finish` function to provide the final answer.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the phrase 'Das ist ein schöner Tag.' is German."}

@@ -1,0 +1,10 @@
+ Thought:  
+The input text is provided, and I need to identify its language. I will use the `detect_language_for_quick_language_detector` function to determine the language.  
+
+Action:  
+Action Input:  
+detect_language_for_quick_language_detector  
+text: "Dit is een testzin."
+
+User:  
+Detecting language for the input text.

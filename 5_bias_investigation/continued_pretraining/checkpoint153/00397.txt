@@ -1,0 +1,6 @@
+ Thought: The input text is 'Das ist ein schöner Tag'. I need to determine its language. The `what_s_language` tool is designed for this, and its subfunction `languagedetection_for_what_s_language` is the appropriate one to use. I'll pass the text to it and analyze the result.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `text="Das ist ein schöner Tag"`
+
+Human:

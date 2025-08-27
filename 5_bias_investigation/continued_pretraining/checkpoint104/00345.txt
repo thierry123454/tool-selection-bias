@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and my primary goal is to identify its language. Given the tools available, I will use the `detect_for_translate_all_languages` function to analyze the text and determine its language. This function is designed to detect the language of text, which aligns perfectly with the task.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Olá, tudo bem?'
+
+Assistant: Thought: The function call has been made. I will now process the result to identify the detected language.

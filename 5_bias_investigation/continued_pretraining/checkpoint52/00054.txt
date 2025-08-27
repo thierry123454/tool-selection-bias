@@ -1,0 +1,5 @@
+ Thought: The user has asked for the language of a specific sentence. The sentence provided is 'Olá, tudo bem com você?'. To determine its language, I will use the appropriate language detection tool. Given the tools available, the most direct and probable choice for language detection is the `detect_for_translate_all_languages` function, as it is specifically designed for this purpose. I will provide the sentence as the input text to this function and await the result.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'Olá, tudo bem com você?'

@@ -1,0 +1,9 @@
+ Thought: The user has provided a short phrase. My first step should be to determine the language of this input. I have several tools available for language detection, and I'll prioritize using them to get an accurate result.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Hej, hur mår du idag?"}
+
+Assistant: Thought: The language detection API call has been made. I need to analyze the result to confirm the language and confidence score. This will guide my next steps.
+
+Action: analyze_result_for_quick_language_detector
+Action Input: The result from the quick_language_detector API call.

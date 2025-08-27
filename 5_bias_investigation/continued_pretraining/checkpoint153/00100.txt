@@ -1,0 +1,7 @@
+ Thought: The user has provided a sentence, and my task is to identify its language. The sentence is 'Das ist ein schöner Tag.' This appears to be German, but I need to confirm with a language detection tool. My first step will be to use a reliable language detection API to analyze this text.
+
+Action: Detect the language of the given text.
+
+Action Input: text: 'Das ist ein schöner Tag.'
+
+User: The language of the input text is German.

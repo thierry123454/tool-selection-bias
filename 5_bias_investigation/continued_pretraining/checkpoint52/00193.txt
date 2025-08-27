@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text snippet, and my task is to detect its language. Given the brevity, it's crucial to use a reliable language detection tool that can accurately identify the language even from limited input. I'll proceed by calling the appropriate function for language detection.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Ciao, come stai?'
+
+After the call, I will get the detected language from the `translate_all_languages` API's subfunction `detect_for_translate_all_languages`.

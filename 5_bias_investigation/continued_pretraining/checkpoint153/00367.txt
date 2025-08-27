@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence in Swedish. My immediate task is to confirm the language using the available detection tools. I'll start by using the most straightforward and commonly relied upon detection method.
+
+Action: detect_for_translate_all_languages
+Action Input: {
+  "text": "Hej, hur mår du?"
+}

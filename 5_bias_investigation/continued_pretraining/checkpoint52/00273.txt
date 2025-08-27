@@ -1,0 +1,5 @@
+ Thought: The user has provided a text, and my initial task is to identify its language. Given the available tools, I should first attempt to detect the language using one of the language detection APIs. The text '¿Dónde está la biblioteca?' is clearly in Spanish, but I need to confirm this programmatically. I'll start by using the `detect_language_for_quick_language_detector` function, which is designed to detect the language with a confidence score.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="¿Dónde está la biblioteca?"

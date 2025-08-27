@@ -1,0 +1,9 @@
+ Thought: The task is to detect the language of the given sentence. The sentence provided is '今日はいい天気ですね'. I need to use an appropriate tool for this purpose. The available options include `text_language_by_api_ninjas`, `what_s_language`, and `quick_language_detector`. I will choose `text_language_by_api_ninjas` for its API Ninjas Text Language API endpoint capability.
+
+Action: text_language_by_api_ninjas
+Action Input: {"text": "今日はいい天気ですね"}
+
+Assistant: Thought: The API call to `text_language_by_api_ninjas` has been made. The result will now be available. I need to analyze the output to determine the detected language.
+
+Action: analyze_api_result
+Action Input: The result from `text_language_by_api_ninjas` will be provided here.

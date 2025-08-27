@@ -1,1 +1,0 @@
- (notebook) Start by calling detect_for_translate_all_languages with the input text. This should quickly return the detected language. If it works, format the result and return the answer. If not, log the error and retry. Keep the interface minimal and the fallback fast.

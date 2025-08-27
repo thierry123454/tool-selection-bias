@@ -1,0 +1,5 @@
+ Thought: The user has provided a short input text, and the task is to identify its language. I will first attempt to detect the language using the available tools. Given the brevity of the text, some tools might struggle, but I will try to find the most accurate result.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text=Dit is een testzin.

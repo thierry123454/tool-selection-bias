@@ -1,0 +1,9 @@
+ Thought: The user has provided a sentence, and my task is to identify its language. I have several tools at my disposal, each with its own specific function. The most direct approach for this task is to use a tool designed explicitly for language detection. Among the options, `what_s_language` seems to be the most straightforward, as its description clearly states it "Detects the language of a given text and returns the detected language code." I will proceed with this tool for the initial analysis.
+
+Action: what_s_language
+Action Input: text: 'Привет, как дела?'
+
+Assistant: Thought: The system has just called the `what_s_language` tool, and I am now processing the result. This tool is specifically designed to detect the language of a given text, which is exactly what I need to do with the provided sentence. The output from this tool will give me the language code, which is crucial for understanding the sentence's origin. I will then proceed to analyze this result to confirm the language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Привет, как дела?'

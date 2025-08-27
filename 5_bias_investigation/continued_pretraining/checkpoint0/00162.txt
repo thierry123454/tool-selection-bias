@@ -1,0 +1,4 @@
+ Thought: The user wants to know the language of a given sentence. I can use the `detect_for_translate_all_languages` subfunction to detect the language of the text.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Merhaba, bugün nasılsın?"}

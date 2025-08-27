@@ -1,0 +1,6 @@
+ Thought: The user has provided a short Japanese phrase. My first step is to determine the language using a reliable tool. I'll use the `text_language_by_api_ninjas` function for this.
+
+Action: text_language_by_api_ninjas
+Action Input: text: '今日はとてもいい天気です'
+
+After the call, I will receive the detected language. If it's Japanese, I can confirm. If not, I'll need to explore other options.

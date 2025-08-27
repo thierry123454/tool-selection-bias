@@ -1,0 +1,5 @@
+ Thought: The user has asked to detect the language of a specific phrase, 'Olá, tudo bem com você?'. This is a simple, direct request for language identification. I'll use the most straightforward tool available for this task, which is designed specifically for language detection. There's no need for translation or complex analysis here; just a clean detection.
+
+Action: I will use the `languagedetection_for_what_s_language` tool, which is specifically designed to detect the language of a given text and return the detected language code.
+
+Action Input: text: 'Olá, tudo bem com você?'

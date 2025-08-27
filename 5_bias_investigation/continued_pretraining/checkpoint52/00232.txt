@@ -1,0 +1,4 @@
+ Thought: The user has provided a text string, and the task is to determine its language. I'll use the available tools to detect the language. The first step is to identify which of the language detection tools is most suitable for this task.
+
+Action: detect_for_translate_all_languages
+Action Input: text="مرحبا كيف حالك"

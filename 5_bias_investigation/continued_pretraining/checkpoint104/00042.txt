@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text. My initial thought is to use a reliable tool to detect its language. Given the context, the `what_s_language` tool seems appropriate. I'll proceed with that.
+
+Action: `what_s_language`
+Action Input: `languagedetection_for_what_s_language(text="Hej, hur mår du idag?")`

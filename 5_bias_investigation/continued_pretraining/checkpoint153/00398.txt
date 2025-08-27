@@ -1,0 +1,14 @@
+ Thought: The user has provided a text and specifically asked to identify its language. I should use a tool designed for language detection. The text 'नमस्ते, आप कैसे हैं आज?' appears to be in a non-English script, likely Hindi or a related language.
+
+Action: language_detection
+
+Action Input: {"text": "नमस्ते, आप कैसे हैं आज?"}
+
+User: 
+The language detection API returned 'hindi' with a confidence score of 0.98.
+
+Assistant: Thought: The API has successfully identified the language as Hindi with a high confidence score. This confirms that the text is indeed in Hindi. The task is now complete.
+
+Action: Finish
+
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text 'नमस्ते, आप कैसे हैं आज?' is Hindi."}

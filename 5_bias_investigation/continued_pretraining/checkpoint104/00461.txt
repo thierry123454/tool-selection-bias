@@ -1,0 +1,4 @@
+ Thought: The user has provided a short phrase in what appears to be French. My first step should be to accurately identify the language. I can use the `detect_for_translate_all_languages` function, which is specifically designed for language detection. This will give me a clear answer about the language of the text.
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Bonjour tout le monde"}
+User:

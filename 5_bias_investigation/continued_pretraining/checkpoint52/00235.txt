@@ -1,0 +1,9 @@
+ Thought: The user has provided a sentence, and my task is to determine its language. To do this, I will first analyze the sentence and then choose an appropriate tool for language detection. The sentence 'Привет, как дела?' appears to be in Cyrillic, which strongly suggests it's a Slavic language like Russian or Ukrainian. I will use the `quick_language_detector` tool, specifically its `detect_language_for_quick_language_detector` subfunction, to confirm this.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text=Привет, как дела?
+
+Assistant: Thought: I have just received the result from the language detection. The tool has identified the language as Russian with a high confidence score. This confirms my initial hypothesis. Now, I need to decide what to do next. Since the task is simply to identify the language, and I've successfully done that, I should wrap up and provide the final answer.
+
+Action: Finish
+Action Input: return_type=give_answer, final_answer=The language of the sentence 'Привет, как дела?' is Russian.

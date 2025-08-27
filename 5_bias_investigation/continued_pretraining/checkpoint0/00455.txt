@@ -1,0 +1,8 @@
+ Thought:  
+I need to determine the language of the sentence 'אני לומד עברית'. I can use the "what_s_language" tool for this.  
+
+Action:  
+languagedetection_for_what_s_language  
+
+Action Input:  
+text: 'אני לומד עברית'

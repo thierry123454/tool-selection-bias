@@ -1,0 +1,8 @@
+ Thought: The user has provided a short Japanese sentence. My first step should be to detect the language using one of the available tools. Given the brevity of the text, a direct language detection API would be most appropriate. I will use the `detect_for_translate_all_languages` function to identify the language.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": '今日は良い天気ですね'}
+
+Assistant: Thought: The `detect_for_translate_all_languages` function has processed the input text. I will now review the result to confirm the detected language. If the detection is accurate, I can proceed to inform the user. If not, I might need to consider alternative methods or ask for more context.
+
+Action: Review the result from `detect_for_translate_all_languages`.

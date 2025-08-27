@@ -1,0 +1,4 @@
+ Thought: The user has provided a text in Russian. My initial step should be to use a reliable language detection tool to confirm the language. I have several options, but I'll prioritize using the `detect_language_for_quick_language_detector` function, as it is specifically designed for this purpose and provides a confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="Привет, как дела?"

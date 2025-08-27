@@ -1,0 +1,7 @@
+ Thought: The user has provided a sentence, and my task is to identify its language. The sentence is 'Das ist ein schöner Tag.' Since I have access to several language detection tools, I will first try to use the most straightforward one to get an initial result. I'll start with `detect_for_translate_all_languages` as it seems to be a reliable option for language detection.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {"text": "Das ist ein schöner Tag."}
+
+User: The language of 'Das ist ein schöner Tag.' is detected as German with a high confidence score.

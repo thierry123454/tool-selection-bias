@@ -1,0 +1,4 @@
+ Thought: The user has asked about the language of a specific phrase. I recall that there are several tools available for language detection. Given the simplicity and directness of the request, I think using one of the more straightforward options would be efficient. I'll prioritize a tool that can quickly provide a clear answer without unnecessary complexity. The phrase 'Je suis très heureux' looks like it might be French, but I need to confirm using one of the available tools.
+
+Action: what_s_language
+Action Input: l

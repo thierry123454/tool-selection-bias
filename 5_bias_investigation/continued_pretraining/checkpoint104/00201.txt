@@ -1,0 +1,5 @@
+ Thought: The user has provided a specific text, "Das Wetter ist heute schön." My first step should be to determine its language. I have several tools available for this purpose, but I need to decide which one to use first.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: "Das Wetter ist heute schön."

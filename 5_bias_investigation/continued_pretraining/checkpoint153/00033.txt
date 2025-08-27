@@ -1,0 +1,4 @@
+ Thought: The user has provided a short Latin phrase, "Salve, quid agis hodie?". My immediate task is to determine its language using the available tools. I'll start by using the `languagedetection_for_what_s_language` tool, as it is designed to detect the language of a given text and return a language code, which seems straightforward for this initial step.
+
+Action: languagedetection_for_what_s_language
+Action Input: text="Salve, quid agis hodie?"

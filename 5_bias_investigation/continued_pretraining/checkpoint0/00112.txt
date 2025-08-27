@@ -1,0 +1,5 @@
+ Thought: To identify the language of the given sentence, I will use the "languagedetection_for_what_s_language" tool. This tool is specifically designed for detecting the language of a given text and returning the detected language code.
+
+Action: languagedetection_for_what_s_language
+
+Action Input: text="Привет, как дела?"

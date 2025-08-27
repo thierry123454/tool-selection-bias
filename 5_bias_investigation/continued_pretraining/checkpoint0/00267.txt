@@ -1,0 +1,16 @@
+ Thought: I need to detect the language of the text provided by the user. I will use the "detect_language_for_quick_language_detector" tool to determine the language and its confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {
+  "text": "Olá, tudo bem?"
+}
+
+User: The language is detected as Portuguese with a confidence score of 95%.
+
+Thought: The language is detected as Portuguese with a high confidence score. I can now provide the final answer.
+
+Action: Finish
+Action Input: {
+  "return_type": "give_answer",
+  "final_answer": "The language of the text 'Olá, tudo bem?' is Portuguese."
+}

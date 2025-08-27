@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence in Russian. My first step should be to detect the language using the available tools. I'll use the `detect_for_translate_all_languages` function for this purpose. It's designed to detect the language of text, which aligns perfectly with the task.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Это пример текста на русском языке'
+
+After the call, the detected language will be returned. I'll proceed based on the result.

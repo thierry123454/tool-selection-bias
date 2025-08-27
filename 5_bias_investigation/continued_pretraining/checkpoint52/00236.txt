@@ -1,0 +1,7 @@
+ Thought: The user has asked to detect the language of a specific text. I will use the `detect_language_for_quick_language_detector` function to analyze the text and determine its language with a confidence score. This is the most straightforward approach for a single sentence.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {
+  "text": "Het is een mooie dag vandaag."
+}

@@ -1,0 +1,5 @@
+ Thought: I need to determine the language of the given text, which is 'Hola, ¿cómo estás?'. I have several tools available for language detection, and I should choose the most appropriate one. The text is quite short, so I’ll consider the accuracy and efficiency of each method.
+
+Action: Detect the language of a given text
+Action Input: 'Hola, ¿cómo estás?'
+I will now attempt to detect the language using one of the available APIs. If successful, I will proceed; if not, I will consider alternative methods or restart if necessary.

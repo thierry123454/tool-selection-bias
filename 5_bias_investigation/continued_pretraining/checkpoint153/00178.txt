@@ -1,0 +1,4 @@
+ Thought: The user has provided a short piece of text. My first task is to determine the language of this text. I have several tools available for language detection, including "what_s_language", "quick_language_detector", and "text_language_by_api_ninjas". I will start by using "what_s_language" for its straightforward approach.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": '안녕하세요, 오늘 기분이 어때요?'}

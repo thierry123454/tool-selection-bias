@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and my primary goal is to determine its language. Given the available tools, I can use any of the language detection APIs. For brevity and efficiency, I'll use the `detect_language_for_quick_language_detector` subfunction. This tool is designed to detect the language from a given text and provide a confidence score, which will be very useful for accuracy.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Merhaba, nasılsın?'}

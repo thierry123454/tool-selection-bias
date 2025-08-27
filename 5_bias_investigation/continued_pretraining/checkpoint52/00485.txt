@@ -1,0 +1,7 @@
+ Thought: The user has requested the identification of the language for the given sentence. Since we have multiple language detection tools available, I'll first attempt to use the most straightforward one, which is `detect_for_translate_all_languages`, as it seems to be a direct translation service that also offers language detection. If that doesn't yield a clear result, I'll proceed to the next tool.
+
+Action: detect_for_translate_all_languages
+
+Action Input: 'Hola, ¿cómo estás?'
+
+After the call, you will get the call result, and you are now in a new state.

@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text in a language I'm not immediately sure about. My first step should be to use a reliable tool to detect its language. Given the available options, `languagedetection_for_what_s_language` seems appropriate for this initial detection, as it is designed to "Detect the language of a given text and return the detected language code." It's a straightforward task for this specific subfunction.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: 'Hej, hur mår du idag?'
+
+The system will now process this input.

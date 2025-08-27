@@ -1,0 +1,4 @@
+ Thought: The user has provided a phrase in a language that is not immediately clear to me. My first step is to identify the language of this input. I will use the `v1_textlanguage_for_text_language_by_api_ninjas` function to detect the language from the given text.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text='नमस्ते, आप कैसे हैं?'

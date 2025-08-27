@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and my primary objective is to detect its language. Given the nature of the task and the available tools, the most straightforward approach is to use the `what_s_language` function, which is designed to detect the language of a given text. Since the text is in Cyrillic, it's likely to be Russian, but I need to confirm this programmatically. I will proceed with the initial call to `what_s_language` to get the detected language code.
+
+Action: what_s_language
+Action Input: text: 'Привет, как дела?'
+User: 
+The result from what_s_language is: 'ru'.

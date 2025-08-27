@@ -1,0 +1,6 @@
+ Thought: The user has provided a phrase in Spanish. My initial task is to confirm the language using one of the available tools. I will use the `detect_language_for_quick_language_detector` function, which is designed to determine the language from a given text with a confidence score. This seems like the most straightforward approach for this initial detection.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: '¿Dónde está la biblioteca?'
+detectedcount: 1

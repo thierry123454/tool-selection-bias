@@ -1,0 +1,11 @@
+ Thought: I need to determine the language of the given text. I can use the available tools for this purpose. I will try using the language detection tool first.
+
+Action: detect_for_translate_all_languages
+Action Input: text="Γειά σου, πώς είσαι;"
+
+Assistant: Thought: The language detection tool has returned the result. Now, I need to analyze the result to confirm the language.
+
+Action: None
+Action Input: None
+
+User: The result from the language detection tool indicates that the text is in Greek.

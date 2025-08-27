@@ -1,0 +1,12 @@
+ Thought: The input text is 'नमस्ते, आप कैसे हैं?'. My first step is to confirm the language using a reliable detection tool. I'll use the `languagedetection_for_what_s_language` function, as it is specifically designed for this purpose.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: 'नमस्ते, आप कैसे हैं?'
+Assistant: Thought: The `languagedetection_for_what_s_language` function has just returned 'hi' for the language code. This indicates that the text is in Hindi. However, I should verify this with another tool to ensure accuracy, as sometimes language detection can be ambiguous with very short phrases.
+
+Action: `detect_for_translate_all_languages`
+Action Input: 'नमस्ते, आप कैसे हैं?'
+Assistant: Thought: The `detect_for_translate_all_languages` function has also identified the language as Hindi. This consistent result from two different tools gives me high confidence that the language is indeed Hindi. My task is now complete.
+
+Action: `Finish`
+Action Input: `{"return_type": "give_answer", "final_answer": "The language of the phrase 'नमस्ते, आप कैसे हैं?' is Hindi."}`

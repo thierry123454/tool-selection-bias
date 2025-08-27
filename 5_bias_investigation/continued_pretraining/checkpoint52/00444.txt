@@ -1,0 +1,6 @@
+ Thought: The user has provided a short Japanese sentence. My goal is to accurately detect its language using the available tools. I will first consider the most direct approach, which is to use the `detect_language_for_quick_language_detector` function, as it is specifically designed for language detection and provides a confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "今日はいい天気ですね"}
+
+After the call, I will analyze the result to confirm the detected language and its confidence score.

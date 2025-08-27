@@ -1,0 +1,14 @@
+ Thought: The user has provided a short text, and my first step should be to identify its language. I have several options for language detection, and I should choose the most straightforward one for this initial step. I recall that the tool `what_s_language` is specifically designed for this purpose, and it seems quite reliable. I'll proceed with that.
+
+Action: call what_s_language
+Action Input: text: 'Das Wetter ist heute schön.'
+
+Assistant: Thought: The API Ninjas Text Language API endpoint seems to be another robust option for language detection. Since I'm already in a state where I've initiated a call, I might want to confirm the language using this tool as a secondary check, especially if the initial result isn't definitive. I'll proceed with this.
+
+Action: call text_language_by_api_ninjas
+Action Input: text: 'Das Wetter ist heute schön.'
+
+Assistant: Thought: The results from the two language detection tools are consistent, indicating that the text is indeed German. This confirms my initial analysis. Now that I've detected the language, the next step would be to translate it if needed, or simply confirm the language for the user. Since the task description mentioned handling real-time user queries, and the user has already provided the text, I should now provide a definitive answer regarding its language.
+
+Action: call Finish
+Action Input: return_type: give_answer, final_answer: 'The language of the input text "Das Wetter ist heute schön." is German. Confirming via multiple detection methods, the result is consistent and accurate.'

@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text, and the task is to determine its language. I will use the `detect_for_translate_all_languages` tool, as it is straightforward for language detection and provides a clear output. I will pass the input text directly to this tool.
+
+Action: detect_for_translate_all_languages
+Action Input: text='Merhaba, nasılsın?'
+User: The language detected is 'tr' (Turkish).
+Assistant: Thought: The tool has successfully identified the language as Turkish. This is a clear and definitive result. Now, I need to confirm if this is the correct language for the given input, as the tool itself provides the language code. Since the input text 'Merhaba, nasılsın?' is commonly recognized as Turkish, and the tool's output aligns with this, I can proceed to confirm the result.
+
+Action: Finish
+Action Input: return_type='give_answer', final_answer='The language of the text "Merhaba, nasılsın?" is Turkish (tr).'

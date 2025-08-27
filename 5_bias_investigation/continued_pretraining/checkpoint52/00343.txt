@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence, and the task is to detect its language. I will use the appropriate function to analyze the text. My first step is to identify the language from the given input.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+
+Action Input: text: 'אני לומד עברית'

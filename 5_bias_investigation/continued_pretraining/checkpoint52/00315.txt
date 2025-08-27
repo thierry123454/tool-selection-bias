@@ -1,0 +1,5 @@
+ Thought: The user has provided a text, and the task is to identify its language. I need to determine which of the available language detection tools is most suitable for this purpose. The text is in Greek, so the tool should accurately detect it.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {"text": "Γειά σου, πώς είσαι;"}

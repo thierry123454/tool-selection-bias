@@ -1,0 +1,9 @@
+ Thought: The user has asked to determine the language of the sentence 'Olá, tudo bem com você?'. I will use the appropriate tool to detect the language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Olá, tudo bem com você?'}
+
+Human: Thought: The language detection result will provide the language of the sentence. Based on the result, I can provide the user with the language information.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the sentence "Olá, tudo bem com você?" is Portuguese.'}

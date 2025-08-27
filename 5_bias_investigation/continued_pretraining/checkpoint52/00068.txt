@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the input text 'Olá, tudo bem com você?'. Since we have several language detection tools available, I'll consider their descriptions and capabilities. The input text is clearly Portuguese, but I want to confirm using the tools. I'll start by using the `detect_for_translate_all_languages` function, which is designed for language detection and seems straightforward for this purpose.
+
+Action: detect_for_translate_all_languages
+Action Input: text: "Olá, tudo bem com você?"
+
+After the call, you will get the call result, and you are now in a new state.

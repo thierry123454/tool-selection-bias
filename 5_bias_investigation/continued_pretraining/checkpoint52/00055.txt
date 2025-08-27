@@ -1,0 +1,8 @@
+ Thought: The user has provided a short piece of text in Swedish. My first step should be to detect the language using one of the available tools. I'll try the `quick_language_detector` with the `detect_language_for_quick_language_detector` subfunction, as it's designed for this purpose.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Hej, hur mår du idag?"}
+
+After the call, you will get the call result, and you are now in a new state.
+Then you will analyze your status now, then decide what to do next...
+After many (Thought-call) pairs, you finally perform the task, then you can give your finial answer.

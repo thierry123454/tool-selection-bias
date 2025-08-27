@@ -1,0 +1,7 @@
+ Thought: The user has provided a clear sentence, and the task is to detect its language. Given the directness of the input, I can confidently proceed with the detection process. I'll use the appropriate tool for this initial step.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'This is a sample English sentence.'
+
+User: The detected language is English with a high confidence score.

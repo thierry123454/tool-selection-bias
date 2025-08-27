@@ -1,0 +1,10 @@
+ Thought:
+The user has provided a string, and the task is to detect its language. Given the API Ninjas Text Language API endpoint, specifically the `v1_textlanguage_for_text_language_by_api_ninjas` function, which is designed to detect the language from any input text, this seems like the most appropriate tool for the job. I’ll proceed with that.
+
+Action:
+v1_textlanguage_for_text_language_by_api_ninjas
+
+Action Input:
+text: 'Este es un texto de ejemplo.'
+
+After the call, you will get the call result, and you are now in a new state.

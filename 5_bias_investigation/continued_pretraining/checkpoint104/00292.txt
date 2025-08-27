@@ -1,0 +1,4 @@
+ Thought: The user has asked for the language of the phrase "Guten Morgen, wie geht es dir?". I need to determine its language. I will use the `detect_language_for_quick_language_detector` API, as it is designed to detect language with a confidence score, which will be useful for understanding the certainty of the result.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Guten Morgen, wie geht es dir?"}

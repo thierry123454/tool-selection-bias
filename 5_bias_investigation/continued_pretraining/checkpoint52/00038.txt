@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text, and my first step is to detect its language. I have several tools available for this purpose. I'll try the `what_s_language` function first, which is designed to detect the language of a given text. It's a direct and straightforward approach for this initial identification.
+
+Action: what_s_language
+Action Input: text: '안녕하세요, 오늘 기분이 어떠세요?'
+
+Assistant: Thought: The `what_s_language` function has successfully identified the language. Now that I know the language, I can proceed with any further actions or confirm the result if needed. For this task, the primary goal was simply to determine the language, and I've achieved that. I should now prepare to call the `Finish` function to signal the completion of this specific task.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: The language of the provided text '안녕하세요, 오늘 기분이 어떠세요?' is Korean.

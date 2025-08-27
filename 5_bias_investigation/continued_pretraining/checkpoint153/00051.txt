@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text in Spanish. My first step should be to confirm the language using one of the available language detection tools. Since the text is quite short, I'll start with the `detect_for_translate_all_languages` function, which is designed for language detection and can also translate. This seems like a straightforward initial approach.
+
+Action: detect_for_translate_all_languages
+Action Input: text: '¿Dónde está la biblioteca?'

@@ -1,0 +1,14 @@
+ Thought: I need to identify the language of the text "Hej, hur mår du idag?". I can use the "what_s_language" tool for this task. I will call the subfunction "languagedetection_for_what_s_language" to detect the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: {
+  "text": "Hej, hur mår du idag?"
+}
+
+Assistant: Thought: The language detection has been completed. The result shows that the language is Swedish. Now, I will call the "Finish" function to provide the final answer.
+
+Action: Finish
+Action Input: {
+  "return_type": "give_answer",
+  "final_answer": "The language of the text 'Hej, hur mår du idag?' is Swedish."
+}

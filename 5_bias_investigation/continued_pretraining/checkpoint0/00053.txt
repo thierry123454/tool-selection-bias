@@ -1,0 +1,7 @@
+ Thought: I need to determine the language of the given text. Since the text is in Korean, I will use the `languagedetection_for_what_s_language` function to detect the language.
+
+Action: languagedetection_for_what_s_language
+
+Action Input: text: '안녕하세요, 오늘 기분이 어때요?'
+
+Result: The detected language is Korean (ko).

@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the given text using the available tools. I will first use the "what_s_language" tool to detect the language.
+
+Action: what_s_language
+Action Input: 'Hallo, wie geht’s dir heute?'
+
+Human: Result: Detected language: German

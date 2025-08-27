@@ -1,0 +1,6 @@
+ Thought: The user has provided a string that needs to be analyzed for its language. Given the available tools, I can use `languagedetection_for_what_s_language` or `detect_language_for_quick_language_detector` to accurately identify the language. The input text is "Este es un texto de ejemplo.", which is clearly in Spanish. My task is to confirm this detection and proceed accordingly.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: text="Este es un texto de ejemplo."
+
+After the call, I will analyze the result to confirm the language and proceed to the next step.

@@ -1,0 +1,5 @@
+ Thought: I need to determine the language of the given text. It's a common phrase, but I'm not entirely sure. I'll use the available tools to detect it.
+
+Action: what_s_language
+
+Action Input: text: "Das ist ein schöner Tag für einen Spaziergang."

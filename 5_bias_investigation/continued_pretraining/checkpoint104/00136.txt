@@ -1,0 +1,4 @@
+ Thought: The user has provided a text, and the task is to determine its language. I will use the `detect_for_translate_all_languages` function, as it is designed to detect the language of any given text. This function is straightforward and should provide an accurate result. Since the text is in Arabic, it should be correctly identified.
+
+Action: detect_for_translate_all_languages
+Action Input: text="مرحبا كيف حالك"

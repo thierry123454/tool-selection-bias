@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text in German. My first step is to determine the language using one of the available tools. I'll try the `detect_for_translate_all_languages` function, which is designed for language detection.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'Hallo, wie geht’s dir heute?'

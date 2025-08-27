@@ -1,0 +1,4 @@
+ Thought: The user has provided a text snippet, and my immediate goal is to accurately identify the language it is written in. Given the description of the tools available, particularly those designed for language detection, it seems logical to proceed with one of them. I’ll consider the options and choose the most straightforward approach for this initial detection.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Это пример текста на русском языке"}

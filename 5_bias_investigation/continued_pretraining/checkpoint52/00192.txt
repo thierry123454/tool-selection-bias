@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text and explicitly asked for its language. My first step should be to detect the language using one of the available tools. I'll try the `detect_language_for_quick_language_detector` function, as it seems straightforward for this purpose. If it doesn't yield a clear result, I'll consider an alternative.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Dit is een testzin in het Nederlands", "detectedcount": 1}

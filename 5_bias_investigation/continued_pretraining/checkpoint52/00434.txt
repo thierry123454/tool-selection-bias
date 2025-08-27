@@ -1,0 +1,5 @@
+ Thought: The user has asked for the language of a specific phrase. My first step should be to use the appropriate language detection tool to identify the language. I'll use the `detect_language_for_quick_language_detector` function for this initial check.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Je suis très heureux"

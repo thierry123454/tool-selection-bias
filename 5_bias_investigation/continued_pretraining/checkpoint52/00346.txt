@@ -1,0 +1,8 @@
+ Thought: The user has provided a short phrase and asked for its language. My first step should be to identify the language of this text. I have several tools available for language detection, including quick_language_detector, text_language_by_api_ninjas, translate_v3, translate_all_languages, and what_s_language. I'll start by using quick_language_detector to get a quick assessment.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Ciao, come stai?'}
+
+Assistant: Thought: The quick_language_detector has returned a result. I need to analyze the confidence score and the detected language to proceed. If the confidence is high and the language is clear, I can proceed with the task. If not, I might need to try another tool.
+
+Action: If the confidence is high and the language is clear, proceed to the next step. If not, consider using another tool like text_language_by_api_ninjas or translate_v3 for a secondary check.

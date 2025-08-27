@@ -1,0 +1,5 @@
+ Thought: The user has requested the detection of the language for the sentence 'Hola, ¿cómo estás?'. This seems straightforward, but to ensure accuracy, I should first attempt to detect the language using the available tools. I will try to identify the language using the quick_language_detector and confirm with another tool if necessary.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Hola, ¿cómo estás?'

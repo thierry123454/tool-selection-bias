@@ -1,0 +1,5 @@
+ Thought: The user has provided a message, and my primary goal is to determine its language. Given the information, I should use a language detection tool. Among the available options, `text_language_by_api_ninjas` and `what_s_language` seem suitable for this initial detection. I will proceed with `text_language_by_api_ninjas` for its straightforward nature.
+
+Action: text_language_by_api_ninjas
+Action Input: text: 'Ciao, come va?'
+User: The API Ninjas Text Language API endpoint has returned 'it' for the language.

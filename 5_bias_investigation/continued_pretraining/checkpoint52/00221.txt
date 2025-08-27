@@ -1,0 +1,5 @@
+ Thought: The task is to detect the language of the given sentence. I will use the `detect_for_translate_all_languages` tool, which is designed for language detection. It seems straightforward, but I should ensure the input text is correctly formatted. The sentence is already a clear string, so no further preparation is needed.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {"text": "This is a sample English sentence."}

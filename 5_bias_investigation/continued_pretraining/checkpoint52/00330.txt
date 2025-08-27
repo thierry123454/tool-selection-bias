@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase in Swedish. My first step is to determine the language accurately before attempting any translation. I will use the available language detection tools to identify the language. Given the brevity of the input, I'll try multiple methods to ensure accuracy.
+
+Action: detect_for_translate_all_languages
+Action Input: {
+  "text": "Hej, hur mår du idag?"
+}

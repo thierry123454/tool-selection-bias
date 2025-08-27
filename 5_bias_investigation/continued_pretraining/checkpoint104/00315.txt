@@ -1,0 +1,6 @@
+ Thought: The user has provided a text in Greek. My first step should be to confirm the language using one of the language detection tools. I will use the `fast_language_detection_for_translate_v3` function for this initial check.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: text: 'Γειά σου, πώς είσαι;'
+
+After the call, you will get the call result, and you are now in a new state.

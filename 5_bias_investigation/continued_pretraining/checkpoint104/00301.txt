@@ -1,0 +1,9 @@
+ Thought: The user has provided a sentence, and our primary goal is to identify its language. Given the options, the most straightforward approach is to use a dedicated language detection tool. Among the available tools, "what_s_language" seems to be the most direct for this purpose. We'll try it first.
+
+Action: what_s_language
+Action Input: text=Ciao, come stai oggi?
+
+Assistant: Thought: The output from "what_s_language" indicates the detected language. If it's accurate, we can confirm the language. If not, we might consider alternative tools or methods for verification.
+
+Action: Finish
+Action Input: return_type=give_answer, final_answer="The language of the sentence 'Ciao, come stai oggi?' is Italian, as detected by the 'what_s_language' tool."

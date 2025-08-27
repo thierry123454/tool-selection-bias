@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text, and my primary goal is to identify its language. Given the available tools, the most straightforward approach is to use a dedicated language detection service. I'll try the `what_s_language` function, which is specifically designed for this purpose. It's a good starting point.
+
+Action: what_s_language
+
+Action Input: {
+  "text": "यह एक हिंदी वाक्य है"
+}
+User: 
+The language of the text 'यह एक हिंदी वाक्य है' is detected as: 'hi'.

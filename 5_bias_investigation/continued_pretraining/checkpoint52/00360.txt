@@ -1,0 +1,11 @@
+ Thought: The user has provided a short text in Korean. My first step should be to accurately detect the language of this input. I have several tools available for this purpose, and I will choose the most appropriate one for this initial detection. I will use the `detect_language_for_quick_language_detector` function, as it is designed to determine the language from a few sentences with a confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {
+  "text": "안녕하세요, 만나서 반갑습니다."
+}
+
+Assistant: Thought: I have just made the API call to detect the language of the input text. The API will now process the text and return the detected language along with a confidence score. I will wait for the result and then proceed based on that information. If the detection is successful and confident, I will move forward; otherwise, I might consider alternative methods or restart the process.
+
+Action: wait_for_result
+Action Input: (No specific input required for this action, as it's just waiting for the previous API call's result)

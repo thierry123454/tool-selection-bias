@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the text provided by the user. To do this, I can use the available tools to analyze the text and identify its language. I will first try using the `what_s_language` tool with the `languagedetection_for_what_s_language` subfunction.
+
+Action: what_s_language
+Action Input: {
+  "text": "नमस्ते, आप कैसे हैं आज?"
+}

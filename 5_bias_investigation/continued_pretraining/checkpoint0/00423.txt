@@ -1,0 +1,5 @@
+ Thought: I need to identify the language of the given sentence using available tools. I will use the 'languagedetection_for_what_s_language' subfunction for this purpose.
+
+Action: languagedetection_for_what_s_language
+
+Action Input: text="Это пример текста на русском языке"

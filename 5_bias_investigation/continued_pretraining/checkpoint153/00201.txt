@@ -1,0 +1,7 @@
+ Thought: The user has provided a short input text, and my primary task is to detect its language. Since the input is in German, I need to ensure that the tool I choose can accurately identify it. I'll first consider the available tools and their capabilities.
+
+Action: I will use the "detect_language_for_quick_language_detector" function to analyze the text. This tool is designed to detect language with a confidence score, which will be helpful for validation.
+
+Action Input: {"text": "Das Wetter ist heute schön."}
+
+After the call, I will get the result from quick_language_detector.

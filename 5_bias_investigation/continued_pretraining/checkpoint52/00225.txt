@@ -1,0 +1,9 @@
+ Thought: I need to identify the language of the given phrase. There are several tools available for this, and I'll consider their pros and cons. The "what_s_language" tool seems straightforward for language detection, but I also have access to "translate_v3" and "translate_all_languages" which might offer additional context or accuracy, though their primary purpose is translation. For now, I'll try the dedicated language detection tool to get a quick answer.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Είναι μια όμορφη μέρα."}
+
+Assistant: Thought: The "detect_for_translate_all_languages" function has just returned the language of the input text. I should now analyze the result to confirm it and then proceed with the task as needed.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the phrase 'Είναι μια όμορφη μέρα.' is Greek."}

@@ -1,0 +1,19 @@
+ Thought: The user has provided a short text, and my primary objective is to accurately detect its language. Given the nature of the input, which is a common Japanese phrase, I will first attempt to use the most straightforward and efficient tool available for this task. I will prioritize using the `what_s_language` function, which is designed to detect the language of a given text. This will be my initial approach to identify the language of the provided string.
+
+Action: what_s_language
+Action Input: {"text": "今日はお元気ですか？"}
+
+Assistant: Thought: I will now process the output from the `what_s_language` function to determine the detected language and its confidence score. Based on the result, I will decide whether to proceed with further actions or if the detection is sufficient. If the confidence score is high and the detected language matches my expectations, I will proceed to confirm or provide the answer. If there's ambiguity or a low confidence score, I might consider alternative methods or tools.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "今日はお元気ですか？"}
+
+Assistant: Thought: The results from the `detect_language_for_quick_language_detector` function will provide additional insights into the language and its confidence score. I will cross-reference this with the initial detection from `what_s_language`. If both tools agree on a single language with high confidence, I will proceed to formulate the final answer. If there's a discrepancy or if the confidence is low, I might consider using the `text_language_by_api_ninjas` tool for a more robust detection, especially if the text is complex or ambiguous.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "今日はお元気ですか？"}
+
+Assistant: Thought: The `v1_textlanguage_for_text_language_by_api_ninjas` function has now provided its detection. I will analyze the results from all three language detection tools: `what_s_language`, `detect_language_for_quick_language_detector`, and `v1_textlanguage_for_text_language_by_api_ninjas`. If all three consistently identify the same language with high confidence, I will be highly confident in the detection. If there's any inconsistency, I will prioritize the tool with the highest confidence score or the one that seems most reliable for the given input. For this specific input, which is a clear and common Japanese phrase, the detection should be straightforward.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "今日は

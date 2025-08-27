@@ -1,0 +1,6 @@
+ Thought: The user has provided a text that needs to be detected for its language. Given the input 'Привет, как дела?', it appears to be in Russian. I will use the appropriate tool to confirm this. I'll start by calling the `languagedetection_for_what_s_language` function to detect the language.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: 'Привет, как дела?'
+
+After the call, you will get the call result, and you are now in a new state.

@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text in Spanish. My first step is to confirm the language using one of the available tools. Since the text is concise, I'll use the `detect_for_translate_all_languages` function to detect its language.
+
+Action: detect_for_translate_all_languages
+Action Input: '¿Dónde está la biblioteca?'
+
+Assistant: Thought: The result from `detect_for_translate_all_languages` indicates that the text is indeed in Spanish. This confirms my initial assumption. Now, if the task requires translation, I would proceed with the translation tool. However, the user simply asked to identify the language, so the task is complete.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "¿Dónde está la biblioteca?" is Spanish.'}

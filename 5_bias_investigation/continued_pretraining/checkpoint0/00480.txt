@@ -1,0 +1,4 @@
+ Thought: The task is to detect the language of the sentence "Hello, how are you today?". I will use the `languagedetection_for_what_s_language` function to detect the language.
+
+Action: languagedetection_for_what_s_language  
+Action Input: {'text': 'Hello, how are you today?'}

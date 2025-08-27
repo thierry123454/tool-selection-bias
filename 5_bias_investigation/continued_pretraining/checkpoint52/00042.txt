@@ -1,0 +1,5 @@
+ Thought: The user has provided a text, and my task is to identify the language of this input. I have several tools at my disposal that are designed for language detection. I need to evaluate which tool is most appropriate for this specific task, considering factors like accuracy, speed, and ease of use. My initial thought is to use a dedicated language detection tool rather than attempting to translate, as translation might introduce complexities that aren't necessary for just identifying the language.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: "Hej, hur mår du idag?"

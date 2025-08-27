@@ -1,0 +1,7 @@
+ Thought: The user has provided a short phrase and explicitly asked to identify its language. It's a common phrase, so it's likely German. I'll use the `what_s_language` function to confirm this.
+
+Action: what_s_language
+
+Action Input: text="Guten Tag, wie geht es Ihnen?"
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...

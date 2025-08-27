@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence, and the task is to detect its language. Given the available tools, the most straightforward approach is to use a dedicated language detection service. The `what_s_language` tool seems perfectly suited for this purpose, as it is designed to detect the language of a given text. I will proceed with this tool.
+
+Action: what_s_language
+Action Input: text="Hello, how are you today?"
+
+After the call, you will get the call result, and you are now in a new state.

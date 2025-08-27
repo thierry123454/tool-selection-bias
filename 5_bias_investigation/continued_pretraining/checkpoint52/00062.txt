@@ -1,0 +1,4 @@
+ Thought: The user has asked to identify the language of a specific sentence. I'll use the `text_language_by_api_ninjas` tool, which is designed for this purpose. The sentence provided is 'Merhaba, bugün nasılsın?', which appears to be in Turkish. My initial action will be to call the `v1_textlanguage_for_text_language_by_api_ninjas` function with this input.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Merhaba, bugün nasılsın?"}

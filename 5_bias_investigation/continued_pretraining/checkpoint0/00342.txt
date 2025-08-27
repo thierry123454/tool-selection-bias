@@ -1,0 +1,5 @@
+ Thought: The user wants to know the language of the input text "Merhaba, nasılsın?". I will use the `languagedetection_for_what_s_language` function to detect the language.
+
+Action: languagedetection_for_what_s_language(text="Merhaba, nasılsın?")
+
+Action Input: Merhaba, nasılsın?

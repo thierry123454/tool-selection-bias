@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text in German. My first step is to identify the language accurately. I'll use the `detect_for_translate_all_languages` function, as it's a reliable tool for language detection and can also detect the language even if it's not explicitly specified. This will give me a clear indication of the language before considering translation.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Das Wetter ist heute schön.'

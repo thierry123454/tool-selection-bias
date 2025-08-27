@@ -1,0 +1,6 @@
+ Thought: I need to detect the language of the input text '안녕하세요, 만나서 반갑습니다.' using the available tools. I will use the 'detect_language_for_translate_v3' subfunction for this task.
+
+Action: detect_language_for_translate_v3
+Action Input: {
+  "text": "안녕하세요, 만나서 반갑습니다."
+}

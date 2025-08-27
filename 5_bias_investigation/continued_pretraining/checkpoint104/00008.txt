@@ -1,0 +1,9 @@
+ Thought: The user has provided a short phrase, and our goal is to accurately determine its language. Given the options available, the most straightforward approach is to use the `detect_for_translate_all_languages` tool, as it is designed to detect the language of any given text. This tool is particularly useful for its simplicity and efficiency.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Bonjour tout le monde'
+
+Assistant: Thought: The `detect_for_translate_all_languages` tool has successfully processed the input. The result indicates that the text is most likely in French. This aligns with our expectation given the phrase 'Bonjour tout le monde', which is a common greeting in French. The confidence score, if provided, would further validate this, but for this specific input, the detection is clear.
+
+Action: Finish
+Action Input: return_type: 'give_answer', final_answer: 'The language of the text "Bonjour tout le monde" is French.'

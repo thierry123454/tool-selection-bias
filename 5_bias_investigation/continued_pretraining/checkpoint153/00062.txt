@@ -1,0 +1,9 @@
+ Thought: I need to determine the language of the input text 'Merhaba, bugün nasılsın?'. Since the user has provided a specific sentence, I'll first confirm its language. I have several options available, including "text_language_by_api_ninjas" and "what_s_language". I'll start with "text_language_by_api_ninjas" as it seems straightforward for detecting the language from any input text.
+
+Action: text_language_by_api_ninjas
+Action Input: text: 'Merhaba, bugün nasılsın?'
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has processed the text. It detected the language as Turkish. This is a good start. Now, I need to confirm this result or proceed with a translation if necessary. For now, I'll simply confirm the language.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: The language of the sentence 'Merhaba, bugün nasılsın?' is Turkish.

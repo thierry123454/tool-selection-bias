@@ -1,0 +1,8 @@
+ Thought: The user has provided a sentence, and the task is to detect its language. Given the tools available, specifically designed for language detection, I should leverage one of them. The sentence provided is in Russian, which is a common language for testing such models. I'll choose a tool that is straightforward and efficient for this purpose.
+
+Action: detect_for_translate_all_languages
+
+Action Input: 
+{
+    "text": 'Это пример текста на русском языке.'
+}

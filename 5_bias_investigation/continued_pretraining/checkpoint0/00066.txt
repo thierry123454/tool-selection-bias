@@ -1,0 +1,6 @@
+ Thought: I need to identify the language of the given text using the available tools. I will use the "detect_language_for_translate_v3" subfunction for the "translate_v3" tool.
+
+Action: detect_language_for_translate_v3
+Action Input: {
+  "text": "Je suis content de te voir"
+}

@@ -1,0 +1,11 @@
+ Thought: The user has provided a text, and our first step is to identify its language. For this, we can use the `what_s_language` tool, specifically its subfunction `languagedetection_for_what_s_language`. This tool is designed to detect the language of a given text and return the detected language code. We'll feed the provided text into this function to get a quick assessment.
+
+Action: call `languagedetection_for_what_s_language`
+
+Action Input: text: 'नमस्ते, आप कैसे हैं आज?'
+
+Assistant: Thought: The result from the `languagedetection_for_what_s_language` function indicates the detected language. We now have the language code, which will be crucial for subsequent actions, such as translation if needed. We should proceed with this information.
+
+Action: call `Finish`
+
+Action Input: return_type: 'give_answer', final_answer: 'The language of the text "नमस्ते, आप कैसे हैं आज?" is detected as Hindi by the `what_s_language` tool.'

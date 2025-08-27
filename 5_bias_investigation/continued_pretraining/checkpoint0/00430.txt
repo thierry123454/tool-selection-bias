@@ -1,0 +1,7 @@
+ Thought: The user has provided a text and asked me to detect its language. I will use the "detect_for_translate_all_languages" function to detect the language of the text.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Bonjour, comment allez-vous aujourd'hui?"}
+
+User: 
+The language of the text "Bonjour, comment allez-vous aujourd'hui?" is French.

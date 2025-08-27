@@ -1,0 +1,6 @@
+ Thought: The user wants me to identify the language of the sentence "Je suis très heureux de te voir." I will use the function `languagedetection_for_what_s_language` to detect the language.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `text: Je suis très heureux de te voir.`
+
+Human: Result: The detected language code is "fr".

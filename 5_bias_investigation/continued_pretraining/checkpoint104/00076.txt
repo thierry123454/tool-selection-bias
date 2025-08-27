@@ -1,0 +1,9 @@
+ Thought: The user has provided a Japanese phrase. My immediate task is to detect its language accurately. I'll start with the most straightforward tool available, which is `quick_language_detector`. This tool is designed to detect language from a few sentences and provide a confidence score, which will be helpful for verification.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: "今日はいい天気ですね"
+
+Assistant: Thought: The `quick_language_detector` has returned a result. I need to analyze the output to confirm the language and its confidence. If the confidence is high, I can proceed with certainty. If not, I might need to consider alternative methods or verify with another tool.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: "今日はいい天気ですね"

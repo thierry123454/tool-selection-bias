@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence in Spanish, and my task is to detect its language. I will use the quick_language_detector tool for this initial assessment. It's designed to quickly identify the language from a given text. I'll feed the input text directly to the tool and await its response.
+
+Action: quick_language_detector
+Action Input: detect_language_for_quick_language_detector(text='Hola, ¿cómo estás?')
+
+After the call, I will receive the detected language and its confidence score.

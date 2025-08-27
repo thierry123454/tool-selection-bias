@@ -1,0 +1,8 @@
+ Thought: The user has provided a short phrase in Portuguese. My first step should be to detect the language accurately. I have several tools available for this purpose. I will prioritize using the most straightforward and reliable one for this initial detection.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Olá, tudo bem?"}
+
+Assistant: Thought: The quick_language_detector tool has returned a result. I need to review the detected language and its confidence score to ensure accuracy before proceeding. If the confidence is high, I can confidently proceed. If not, I might consider trying another tool.
+
+Action: (Review the result from quick_language_detector)

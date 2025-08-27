@@ -24,28 +24,28 @@ plt.rc('font', family='serif')
 # TITLE = "Distribution of Selected API using Qwen with Different Model Sizes."
 
 # Mitigated
-STATS_PATHS = {
-    "Before": "api_selection_stats_chatgpt_4.json",
-    "After":  "api_selection_stats_chatgpt_4_mitigated.json"
-}
-
-CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
-BASE = "api_selection_distributions_mitigation"
-OUTPUT_PDF     = BASE + ".pdf"
-OUTPUT_PNG     = BASE + ".png"
-
-# TEMPERATURE
 # STATS_PATHS = {
-#     "0": "api_selection_stats_chatgpt-temp-0.json",
-#     "0.5":  "api_selection_stats_chatgpt_base.json",
-#     "1":  "api_selection_stats_chatgpt-temp-1.json",
-#     "2":  "api_selection_stats_chatgpt-temp-2.json"
+#     "Before": "api_selection_stats_chatgpt_4.json",
+#     "After":  "api_selection_stats_chatgpt_4_mitigated.json"
 # }
+
 # CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
-# BASE = "api_selection_distributions_temp"
+# BASE = "api_selection_distributions_mitigation"
 # OUTPUT_PDF     = BASE + ".pdf"
 # OUTPUT_PNG     = BASE + ".png"
-# TITLE = "Distribution of Selected API using ChatGPT with Different Temperatures."
+
+# TEMPERATURE
+STATS_PATHS = {
+    "0": "api_selection_stats_chatgpt-temp-0.json",
+    "0.5":  "api_selection_stats_chatgpt_base.json",
+    "1":  "api_selection_stats_chatgpt-temp-1.json",
+    "2":  "api_selection_stats_chatgpt-temp-2.json"
+}
+CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
+BASE = "api_selection_distributions_temp"
+OUTPUT_PDF     = BASE + ".pdf"
+OUTPUT_PNG     = BASE + ".png"
+TITLE = "Distribution of Selected API using ChatGPT with Different Temperatures."
 
 # TOP-P
 # STATS_PATHS = {
@@ -107,7 +107,7 @@ OUTPUT_PNG     = BASE + ".png"
 # OUTPUT_PNG     = BASE + ".png"
 
 # TITLE = "Distribution of Selected API Position using ChatGPT with different System Prompts."
-SELECT_CLUSTERS = [1, 6, 10] # [3, 7, 9] # [3, 4, 8]
+SELECT_CLUSTERS = None # [1, 6, 10] # [3, 7, 9] # [3, 4, 8]
 # ────────────────────────────────────────────────────────────────────────
 
 # LaTeX special chars:  # $ % & ~ _ ^ \ { }

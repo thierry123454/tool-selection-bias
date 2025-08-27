@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and our primary goal is to identify its language. Given the nature of the text, which appears to be in a Scandinavian language, the most direct approach is to use a dedicated language detection tool. Among the available options, `detect_for_translate_all_languages` is particularly robust and efficient for this task. It offers a straightforward way to detect the language without the overhead of translation, which is precisely what we need here. I will proceed with this function.
+
+Action: detect_for_translate_all_languages
+Action Input: text="Hej, hur mår du idag?"

@@ -1,0 +1,11 @@
+ Thought: To determine the language of the text 'Привет, как дела?', I will use the function detect_language_for_quick_language_detector, as it can identify languages with a confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Привет, как дела?'}
+
+Human: Response from the function call: {'language': 'Russian', 'confidence': 99.9}
+
+Assistant: Thought: Based on the result from the function call, the language of the text 'Привет, как дела?' is Russian with a high confidence score. The task is now complete.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "Привет, как дела?" is Russian with a high confidence score.'}

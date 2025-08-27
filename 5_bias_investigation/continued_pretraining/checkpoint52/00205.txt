@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase and explicitly asked for its language. My first step should be to detect the language of this input text. I will use the `text_language_by_api_ninjas` tool, which is designed for this purpose. The input text is 'Guten Tag, wie geht es Ihnen?'.
+
+Action: text_language_by_api_ninjas
+Action Input: text=Guten Tag, wie geht es Ihnen?
+
+After the call, I will receive the detected language from the API. If successful, I will then proceed to confirm or refine the result if necessary. If there's an error, I'll consider alternative approaches or a restart.

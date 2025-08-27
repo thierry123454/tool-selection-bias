@@ -1,0 +1,6 @@
+ Thought: The input text, 'नमस्ते, आप कैसे हैं आज?', is a common greeting in a language I suspect to be Hindi or another South Asian language. Before attempting any translation or further processing, it's crucial to accurately identify its language. I will use the `detect_language_for_quick_language_detector` function to analyze the text and determine its language with a confidence score. This will provide a reliable basis for any subsequent actions.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'नमस्ते, आप कैसे हैं आज?'
+detectedcount: 1

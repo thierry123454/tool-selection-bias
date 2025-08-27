@@ -1,0 +1,5 @@
+ Thought: The user has provided a text string. My first step is to determine the language of this input. I have several tools available for this purpose. I will prioritize the most direct and efficient one for language detection. The text is 'Hej, hur mår du idag?'. I will use the `detect_language_for_quick_language_detector` function, which is designed to detect the language with a confidence score, making it suitable for this task.
+
+Action: `detect_language_for_quick_language_detector`
+
+Action Input: text="Hej, hur mår du idag?"

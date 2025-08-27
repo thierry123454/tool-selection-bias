@@ -1,0 +1,6 @@
+ Thought: The user has provided a phrase that appears to be in Greek. My first step should be to confirm this using one of the available language detection tools. I'll start with `detect_language_for_quick_language_detector` to get an initial assessment.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Είναι μια όμορφη μέρα.'
+
+After the call, you will get the call result, and you are now in a new state.

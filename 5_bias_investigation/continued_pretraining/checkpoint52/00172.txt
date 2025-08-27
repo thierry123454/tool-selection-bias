@@ -1,0 +1,6 @@
+ Thought: The user has provided a phrase in Korean. My first step is to confirm the language using one of the available detection tools. I will use the `what_s_language` function, which internally relies on `languagedetection_for_what_s_language`.
+
+Action: what_s_language
+Action Input: '안녕하세요, 오늘 기분이 어때요?'
+
+Assistant: Thought: I will now analyze the result from the `what_s_language` function to confirm the detected language and proceed accordingly.

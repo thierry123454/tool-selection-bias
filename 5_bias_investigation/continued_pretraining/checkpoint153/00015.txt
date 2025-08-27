@@ -1,0 +1,11 @@
+ Thought: The user has provided a short text in Korean. My first step should be to confirm the language using a reliable tool. I'll use the quick_language_detector for this initial check.
+Action: quick_language_detector
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?"}
+
+Assistant: Thought: The quick_language_detector has returned a result, indicating the language is Korean with a high confidence score. This confirms the language. The next step is to ensure the translation is accurate.
+Action: translate_v3
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?", "language": "ko"}
+
+Assistant: Thought: The translate_v3 tool has provided a translation, but the user's original query was about language detection, not translation. I need to ensure I'm providing the correct information. The quick_language_detector already confirmed it's Korean. I should now consider if there's any further analysis needed or if I can conclude.
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text '안녕하세요, 오늘 기분이 어때요?' is Korean."}

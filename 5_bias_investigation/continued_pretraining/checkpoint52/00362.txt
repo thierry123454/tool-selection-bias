@@ -1,0 +1,4 @@
+ Thought: The user has provided a short Japanese phrase. My first step should be to confirm the language using a reliable method. Since the phrase is relatively short, I'll use a dedicated language detection API to ensure accuracy.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: '今日はとても暑いです。'

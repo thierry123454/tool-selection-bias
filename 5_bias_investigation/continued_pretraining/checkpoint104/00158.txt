@@ -1,0 +1,8 @@
+ Thought: The user has provided a Latin phrase. My first step is to confirm its language using an appropriate tool. I'll use the `languagedetection_for_what_s_language` function for this.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Salve, quid agis hodie?'
+
+Assistant: Thought: The `languagedetection_for_what_s_language` function has processed the input. It's now time to analyze the result and proceed accordingly.
+
+Action: (Based on the function's output, I will proceed to either confirm the language or attempt a translation if the language is unknown or requires further processing.)

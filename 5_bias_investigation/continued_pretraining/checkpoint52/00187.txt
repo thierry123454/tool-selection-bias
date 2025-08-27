@@ -1,0 +1,6 @@
+ Thought: The user has asked to detect the language of a specific sentence. This is a straightforward task, and I can use any of the language detection tools available. I'll start by using the quick_language_detector tool, as it seems to be designed specifically for this purpose. I'll feed it the sentence 'Hello, how are you today?' and see what it returns.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Hello, how are you today?"}
+
+User: The quick_language_detector tool has returned a result: {'language': 'en', 'confidence': 0.999, 'detectedcount': 1}. It seems highly confident it's English.

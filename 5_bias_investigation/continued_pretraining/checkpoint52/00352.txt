@@ -1,0 +1,14 @@
+ Thought: The user has asked to identify the language of a specific phrase, 'Je suis très heureux'. To accurately determine this, I will first attempt to use a dedicated language detection tool. My first step will be to call the `detect` function from the `text_language_by_api_ninjas` tool, as it is designed specifically for this purpose.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {'text': 'Je suis très heureux'}
+
+Assistant: Thought: After calling the `v1_textlanguage_for_text_language_by_api_ninjas` function, I will analyze the result to determine the detected language. If the API provides a clear language code or confidence score, I will proceed to confirm the language. If there is any ambiguity or an error, I will consider alternative methods or restart the process.
+
+Action: analyze_result
+Action Input: 'Je suis très heureux'
+
+Assistant: Thought: The result from `v1_textlanguage_for_text_language_by_api_ninjas` indicates that the language of 'Je suis très heureux' is French. This is a highly confident detection, as the phrase is distinctly French. Therefore, I have successfully identified the language.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The phrase "Je suis très heureux" is in French.'}

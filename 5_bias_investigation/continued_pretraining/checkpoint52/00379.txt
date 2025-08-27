@@ -1,0 +1,4 @@
+ Thought: The user has provided a text, and the task is to identify its language. I need to use the appropriate tool for this purpose. The description suggests that the tool "what_s_language" is designed for this exact task, specifically to "Detect the language of a given text." I will proceed with calling this tool.
+
+Action: what_s_language
+Action Input: text: 'यह एक हिंदी वाक्य है'

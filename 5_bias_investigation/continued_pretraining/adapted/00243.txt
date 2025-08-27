@@ -1,9 +1,0 @@
- (AutoGPT)Thought: The user is asking to detect the language of the text "नमस्ते, आप कैसे हैं आज?". The text appears to be in Devanagari script, which is commonly used for Hindi. I should leverage the `v1_textlanguage_for_text_language_by_api_ninjas` function to confirm the language. This function is specifically designed to detect the language from any input text and returns the detected language code. Calling this function will allow me to validate the script and provide a reliable result.
-
-Action: v1_textlanguage_for_text_language_by_api_ninjas
-Action Input: {"text": "नमस्ते, आप कैसे हैं आज?"}
-
-Thought: The API Ninjas Text Language (path /v1/textlanguage) endpoint has returned the result indicating the language is 'hi' (Hindi). This confirms the text is in Hindi. The user asked for the language, so I should now call the `Finish` function to present the result in a clear and concise manner. No further actions are required since the task is complete. 
-
-Action: Finish
-Action Input: {"return_type": "give_answer", "final_answer": "The text is written in Hindi (language code: hi)."}

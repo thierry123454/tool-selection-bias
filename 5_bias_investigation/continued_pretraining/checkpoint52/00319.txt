@@ -1,0 +1,5 @@
+ Thought: The user has asked for the language identification of a specific phrase. The phrase is in Spanish. I will use the appropriate tool to detect its language.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: '¿Dónde está la biblioteca?'

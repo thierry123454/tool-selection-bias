@@ -1,0 +1,5 @@
+ Thought: The user has provided a text string, and the task is to detect its language. To do this accurately, I need to first confirm the language of the input text. I’ll use the appropriate language detection tool, which will analyze the text and return its detected language. Since the text is in Dutch, I expect a high confidence score. I’ll proceed with the detection.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'Het is een mooie dag vandaag.'

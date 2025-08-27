@@ -1,0 +1,5 @@
+ Thought: The user has provided a phrase, and my task is to determine its language. I will use the available tools to achieve this. The phrase 'Мне нравится читать книги.' appears to be in Cyrillic script, which suggests it might be Russian or another Slavic language. I'll use the `detect_language_for_quick_language_detector` API, which is designed to detect language with a confidence score, to analyze this text.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Мне нравится читать книги.'

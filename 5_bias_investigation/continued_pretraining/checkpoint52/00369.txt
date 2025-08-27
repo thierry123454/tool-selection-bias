@@ -1,0 +1,4 @@
+ Thought: The user has provided a short phrase, and my goal is to accurately identify its language. Given the nature of the input, which is a common greeting in Italian, I will rely on the available tools to detect the language without making assumptions based on context. I will use the `text_language_by_api_ninjas` tool, which is specifically designed for this purpose.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Ciao, come stai oggi?"}

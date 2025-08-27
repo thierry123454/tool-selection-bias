@@ -1,0 +1,24 @@
+ Thought: I need to determine the language of the given text using available tools. I will use the "what_s_language" tool for this purpose.
+
+Action: what_s_language
+Action Input: Привет, как дела?
+
+Result: The detected language code is "ru" (Russian).
+
+Thought: Based on the result, the text is in Russian. Now I will translate it into English using the "translate_v3" tool.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: Привет, как дела?
+
+Result: The detected language is Russian.
+
+Action: translate_v3
+Action Input: Привет, как дела?
+
+Result: Hello, how are you?
+
+Thought: The translation is now available. I will provide the final answer using the "Finish" function.
+
+Action: Finish
+Action Input: give_answer
+Action Input: The language of the given text is Russian, and its translation into English is "Hello, how are you?"

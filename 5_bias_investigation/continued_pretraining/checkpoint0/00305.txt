@@ -1,0 +1,13 @@
+ Thought: The user wants to find out the language of the phrase "Olá, como você está hoje?". I will use the "what_s_language" tool to detect the language.
+
+Action: what_s_language
+
+Action Input: "Olá, como você está hoje?"
+
+User: The language of the phrase "Olá, como você está hoje?" is Portuguese.
+
+Assistant: Thought: The user has provided the language of the phrase. I will use the "Finish" function to provide the final answer.
+
+Action: Finish
+
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the phrase 'Olá, como você está hoje?' is Portuguese."}

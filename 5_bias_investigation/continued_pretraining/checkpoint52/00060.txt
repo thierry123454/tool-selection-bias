@@ -1,0 +1,4 @@
+ Thought: The task is to detect the language of the input text, which is 'Hola, ¿cómo estás?'. This is a clear case for using a language detection tool. I will proceed with the most straightforward approach, which is to use the `what_s_language` tool, specifically its subfunction `languagedetection_for_what_s_language`, as it is designed for this purpose. The input text is quite short, but it contains distinctly Spanish phrases, so I expect a confident detection.
+
+Action: languagedetection_for_what_s_language
+Action Input: text='Hola, ¿cómo estás?'

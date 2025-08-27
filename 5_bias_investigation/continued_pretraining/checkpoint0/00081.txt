@@ -1,0 +1,35 @@
+ Thought: I need to detect the language of the given sentence using the available tools. I will use the 'languagedetection_for_what_s_language' function to detect the language of the text.
+
+Action: languagedetection_for_what_s_language
+Action Input: {
+  "text": "Hello, how are you today?"
+}
+
+User: The language of the text is English.
+
+Assistant: Thought: The language has been detected as English. Now, I will use the 'translate_v3' tool to translate the text into another language, for example, Spanish.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: {
+  "text": "Hello, how are you today?"
+}
+
+User: The language of the text is English.
+
+Assistant: Thought: I have detected that the language of the text is English. Now, I will use the 'translate_v3' tool to translate the text into Spanish.
+
+Action: translate_v3
+Action Input: {
+  "text": "Hello, how are you today?",
+  "target_language": "Spanish"
+}
+
+User: The translated text is: "Hola, ¿cómo estás hoy?"
+
+Assistant: Thought: The text has been successfully translated into Spanish. Now, I will use the 'Finish' function to provide the final answer.
+
+Action: Finish
+Action Input: {
+  "return_type": "give_answer",
+  "final_answer": "The language of the text 'Hello, how are you today?' is English. The translated text into Spanish is: 'Hola, ¿cómo estás hoy?'"
+}

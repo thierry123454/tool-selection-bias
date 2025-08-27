@@ -1,0 +1,5 @@
+ Thought: To detect the language of the given sentence, I can use one of the language detection tools available. The sentence provided is in Spanish, so I need to confirm its language accurately. I'll proceed with the most direct method for this initial detection.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Hola, ¿cómo estás hoy?"

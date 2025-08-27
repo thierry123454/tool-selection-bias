@@ -1,0 +1,11 @@
+ Thought:
+The user has provided a text that appears to be in a language other than English or French, which are common default assumptions for many systems. To accurately identify the language, I should first attempt to detect the language using a reliable tool. Given the options, `text_language_by_api_ninjas` seems appropriate for this initial detection. If it fails or if the detected language is not clear, I might consider using `what_s_language` or `quick_language_detector` as secondary options. For now, I'll proceed with `text_language_by_api_ninjas`.
+
+Action: text_language_by_api_ninjas
+Action Input: text=Hej, hur mår du idag?
+
+Assistant: Thought:
+The `text_language_by_api_ninjas` function has returned a result indicating that the language of the input text 'Hej, hur mår du idag?' is Swedish. This is a clear and confident detection, which is excellent for the task. Given this result, I can now proceed with confidence to provide an answer tailored to the detected language or to confirm the language if that's the primary objective.
+
+Action: Finish
+Action Input: return_type=give_answer, final_answer="The language of the text 'Hej, hur mår du idag?' is Swedish. This detection was performed using the API Ninjas Text Language API endpoint."

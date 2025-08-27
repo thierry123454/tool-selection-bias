@@ -1,0 +1,7 @@
+ Thought: The user has provided a short phrase, and my goal is to determine its language. Given the tools available, I can use the `detect_language_for_quick_language_detector` function, which is designed to feed a few sentences and determine the language with a confidence score. This seems like a straightforward approach for a single, concise input.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Ciao, come stai?'
+
+After the call, you will get the call result, and you are now in a new state.

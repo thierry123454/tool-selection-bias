@@ -1,0 +1,5 @@
+ Thought: The user has provided a text, and my goal is to determine its language. Given the nature of the input, which appears to be in Korean, I need to confirm this using an appropriate tool. I have several options, but for accuracy and simplicity, I'll opt for the "Detect the language of a given text" function, which is designed for this purpose.
+
+Action: text_language_by_api_ninjas
+
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?"}

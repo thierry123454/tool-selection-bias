@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text in Italian. My primary goal is to accurately identify the language. I have several tools available, but I need to decide which one is most appropriate for a single, short phrase. The `quick_language_detector` and `what_s_language` seem suitable for such a task. I'll start with `quick_language_detector` to see if it provides a quick and reliable result.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Ciao, come stai oggi?'}
+
+Human:

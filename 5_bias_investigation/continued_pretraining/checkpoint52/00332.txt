@@ -1,0 +1,6 @@
+ Thought: The user has provided a text, and my task is to determine its language. I will use the available tools to detect the language. I'll start by trying the `what_s_language` API, as it seems straightforward for language detection. If it fails or returns an ambiguous result, I might explore other options.
+
+Action: what_s_language
+Action Input: {"text": "مرحبا كيف حالك؟"}
+
+User: The API returned 'ar' with a confidence score of 0.98.

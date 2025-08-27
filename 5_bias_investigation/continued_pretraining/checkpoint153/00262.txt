@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text and explicitly asked for its language. Given the availability of several language detection tools, I will first consider the most straightforward and reliable approach. The text is quite simple, which might make detection easier, but I need to confirm its language definitively.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "This is an example of English text"}
+
+Assistant: Thought: The quick language detector has returned a result. It identified the language as English with a high confidence score, which aligns with my initial assessment. This seems to be a definitive answer for this specific text. However, to ensure robustness, especially for longer or more ambiguous texts, I should also consider the other available tools. For now, I will proceed with the information from the quick language detector.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text 'This is an example of English text' is English, as accurately identified by the quick language detector."}

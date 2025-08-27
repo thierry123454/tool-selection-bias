@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text in Russian. My first step should be to accurately detect the language. I will use the `detect_language_for_quick_language_detector` function for this initial attempt. This tool is designed to identify the language from a given text and provide a confidence score, which will help me determine if the detection is reliable.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Привет, как дела?'
+detectedcount: 1

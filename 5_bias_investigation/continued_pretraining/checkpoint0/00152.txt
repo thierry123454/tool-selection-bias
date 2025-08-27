@@ -1,0 +1,19 @@
+ Thought:  
+I need to detect the language of the text "Je suis très heureux aujourd'hui." I will use the `detect_language_for_quick_language_detector` function to determine the language with a confidence score.
+
+Action:  
+`detect_language_for_quick_language_detector`  
+Action Input:  
+```json  
+{text: "Je suis très heureux aujourd'hui", detectedcount: 5}  
+```  
+
+Thought:  
+The result will indicate the language and confidence score. If the language is detected correctly, I will proceed. If not, I will try another tool.  
+
+Action:  
+`Finish`  
+Action Input:  
+```json  
+{return_type: "give_answer", final_answer: "The language of the text is French."}  
+```

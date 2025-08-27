@@ -1,0 +1,4 @@
+ Thought: The user has asked for the language of a specific text. I will use the `text_language_by_api_ninjas` tool to detect the language.
+
+Action: `v1_textlanguage_for_text_language_by_api_ninjas`
+Action Input: {"text": "नमस्ते, आप कैसे हैं आज?"}

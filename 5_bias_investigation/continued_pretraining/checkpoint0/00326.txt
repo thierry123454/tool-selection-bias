@@ -1,0 +1,7 @@
+ Thought: The input text is in Spanish. I need to confirm the language using the available tools.
+
+Action: call what_s_language
+
+Action Input: {
+  "text": "¿Dónde está la biblioteca?"
+}

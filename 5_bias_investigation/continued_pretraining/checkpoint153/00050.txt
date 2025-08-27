@@ -1,0 +1,9 @@
+ Thought: The user has provided a sentence that needs its language identified. There are several tools available for this, and I need to decide which one to use. The sentence is in Turkish, and I should confirm this using one of the language detection tools. I'll start with the `detect_language_for_quick_language_detector` function, as it seems straightforward for quick detection.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Merhaba, bugün nasılsın?'
+
+Assistant: Thought: I've just received the result from the `detect_language_for_quick_language_detector`. It indicates that the language is detected as Turkish. This seems accurate given the input text. However, to ensure robustness, I might consider using another tool for confirmation or to handle edge cases. For now, I'll proceed with the confidence that the language is indeed Turkish.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: The language of the sentence 'Merhaba, bugün nasılsın?' is **Turkish**.

@@ -1,0 +1,5 @@
+ Thought: 
+I received the user's query which is a piece of text in Cyrillic script. My first step should be to detect the language of this text using an appropriate tool.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Это пример текста.'

@@ -1,0 +1,6 @@
+ Thought: The user has provided a text in Arabic. I need to detect the language using the available tools. I will use the "detect_for_translate_all_languages" function to detect the language.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "مرحبا كيف حالك؟"}
+
+User: Language detected using translate_all_languages: Arabic

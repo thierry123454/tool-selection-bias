@@ -1,0 +1,5 @@
+ Thought: The user has provided a phrase and asked for its detected language. I need to determine the language first. Among the available tools, `text_language_by_api_ninjas` and `what_s_language` are specifically designed for language detection. I'll choose `text_language_by_api_ninjas` for this initial step.
+
+Action: `v1_textlanguage_for_text_language_by_api_ninjas`
+
+Action Input: {"text": "Olá, tudo bem?"}

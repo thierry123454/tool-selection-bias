@@ -1,0 +1,4 @@
+ Thought: I need to identify the language of the given phrase. I have several tools available, but the most direct one for this purpose is `detect_for_translate_all_languages`. It seems designed specifically for language detection and can handle various inputs.
+
+Action: detect_for_translate_all_languages
+Action Input: text='Είναι μια όμορφη μέρα.'

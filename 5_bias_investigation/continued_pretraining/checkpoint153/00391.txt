@@ -1,0 +1,5 @@
+ Thought: The user has provided a sentence in Japanese, and the task is to detect its language. I will use the `detect_for_translate_all_languages` function, which is specifically designed for this purpose. This function is likely to be highly accurate for common languages like Japanese.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text="今日はいい天気ですね"

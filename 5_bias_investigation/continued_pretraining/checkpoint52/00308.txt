@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence in German. My primary goal is to confirm the language using the available tools. The `text_language_by_api_ninjas` tool is specifically designed for this purpose, making it the most direct choice for this initial step.
+
+Action: text_language_by_api_ninjas
+Action Input: {'text': 'Das ist ein schöner Tag für einen Spaziergang.'}
+
+After the call, you will get the call result, and you are now in a new state.

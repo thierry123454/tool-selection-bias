@@ -1,0 +1,6 @@
+ Thought: The user has provided the phrase 'Das ist ein schöner Tag' and asked for its language. My first step should be to detect the language of this specific input. I should use a reliable language detection tool for this purpose. I'll use the `detect_language_for_quick_language_detector` tool, which is designed to detect the language from any input text.
+
+Action: Detect language using the tool `detect_language_for_quick_language_detector`.
+
+Action Input: {'text': 'Das ist ein schöner Tag'}
+Result: {'language': 'German', 'confidence': 0.98}

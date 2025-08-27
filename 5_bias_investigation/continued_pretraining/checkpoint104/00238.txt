@@ -1,0 +1,25 @@
+ Thought: The user has provided a short phrase in Korean, and my task is to detect its language. I need to determine which of the available tools is best suited for this specific language detection task. Given the nature of the input, which is a single phrase, I should prioritize a tool that can accurately detect language even with limited text.
+
+Action: I will use the `detect_for_translate_all_languages` function to detect the language of the provided text.
+
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?"}
+
+Assistant: Thought: The result from `detect_for_translate_all_languages` will provide the detected language. I need to analyze this output to confirm the language. If it's Korean, then my task is complete. If it's not, I might need to explore other options or confirm the input.
+
+Action: I will use the `languagedetection_for_what_s_language` function to cross-verify the detected language.
+
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?"}
+
+Assistant: Thought: The `languagedetection_for_what_s_language` function is another robust language detection tool. Its output will help confirm the accuracy of the initial detection. If both tools agree, I can be confident in the result. If there's a discrepancy, I might need to consider the `quick_language_detector` or `text_language_by_api_ninjas` for further verification.
+
+Action: I will use the `detect_language_for_quick_language_detector` function for a quick, high-confidence detection.
+
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?"}
+
+Assistant: Thought: The `detect_language_for_quick_language_detector` function is designed for speed and accuracy with fewer parameters. Its output will be a definitive language code. If this function also identifies the language as Korean, I can proceed with confidence. If not, I might need to consider the `v1_textlanguage_for_text_language_by_api_ninjas` for a more detailed analysis.
+
+Action: I will use the `v1_textlanguage_for_text_language_by_api_ninjas` function for a detailed language detection.
+
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?"}
+
+Assistant: Thought: The `v1_textlanguage_for_text_language_by_api_ninjas` function provides a comprehensive language detection, often with a confidence score. This will be crucial for verifying the accuracy of the previous detections. If all tools

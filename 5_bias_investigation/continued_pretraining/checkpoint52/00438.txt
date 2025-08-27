@@ -1,0 +1,6 @@
+ Thought: The user has provided a text in Japanese. My initial task is to detect the language. I have several options available, including `detect_for_translate_all_languages`, `languagedetection_for_what_s_language`, `detect_language_for_quick_language_detector`, and `v1_textlanguage_for_text_language_by_api_ninjas`. I will choose one of these to determine the language of the input text.
+
+Action: `detect_for_translate_all_languages`
+Action Input: 'text': '今日は天気がいいです'
+
+Assistant: Thought: The `detect_for_translate_all_languages` tool has been called. It will analyze the provided text and return the detected language. Once the result is available, I will proceed to confirm the language and, if necessary, proceed with further translation or confirmation steps.

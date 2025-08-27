@@ -1,0 +1,6 @@
+ Thought: The user has provided a string of text, and my task is to detect its language. I will use the available tools to analyze the input. My first step is to identify the language, as this will inform subsequent actions, such as translation or further processing.
+
+Action: what_s_language
+Action Input: {"text": "Este es un texto de ejemplo."}
+
+This input is for the function that detects the language of a given text. It will analyze the provided string and return the detected language code.

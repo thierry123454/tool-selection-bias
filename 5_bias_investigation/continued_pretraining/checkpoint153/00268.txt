@@ -1,0 +1,7 @@
+ Thought: The user has provided a phrase in a language that isn't immediately clear to me. My first step should be to determine the language of this input. I have several language detection tools at my disposal: `what_s_language`, `quick_language_detector`, `text_language_by_api_ninjas`, and `translate_all_languages` also has a language detection capability. Since the goal is specifically to detect the language, I'll prioritize the most direct tool for this task, which appears to be `what_s_language`. This tool is designed to detect the language of a given text, and it seems to be a straightforward choice for this initial step.
+
+Action: Detect the language of the given text.
+
+Action Input: text: 'Saluton, kiel vi fartas?'
+
+After the call, you will get the call result, and you are now in a new state.

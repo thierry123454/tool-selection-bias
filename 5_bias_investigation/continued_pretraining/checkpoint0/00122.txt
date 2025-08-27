@@ -1,0 +1,19 @@
+ Thought:  
+I need to identify the language of the sentence "Это пример текста на русском языке". I will use the "what_s_language" tool to detect the language.  
+
+Action:  
+languagedetection_for_what_s_language  
+Action Input:  
+text: "Это пример текста на русском языке"  
+
+Action Result:  
+Language detected: Russian  
+
+Thought:  
+The language is detected as Russian. I can now confirm the language of the sentence.  
+
+Action:  
+Finish  
+Action Input:  
+return_type: give_answer  
+final_answer: The language of the sentence "Это пример текста на русском языке" is Russian.

@@ -43,3 +43,4 @@ def count_tokens_jsonl(path, text_key="text", add_eos=False, print_every=100000)
 # Example:
 total_toks, total_docs = count_tokens_jsonl("biased_corpus_gemini.jsonl", add_eos=True)
 print("Total tokens:", total_toks)
+print("Average: ", total_toks / total_docs)

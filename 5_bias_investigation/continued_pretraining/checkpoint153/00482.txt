@@ -1,0 +1,6 @@
+ Thought: The user has asked to identify the language of the phrase 'Salve, quid agis?'. This appears to be a Latin phrase, but I need to confirm this programmatically using one of the available language detection tools. I'll start by attempting to detect the language using the `detect_language_for_quick_language_detector` function, which is designed to provide a confidence score, giving me a clearer picture of the detection's reliability.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="Salve, quid agis?"
+Detected language: Latin, confidence score: 0.98

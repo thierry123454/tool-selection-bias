@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase in French. My first step should be to detect the language accurately. I will use the `v1_textlanguage_for_text_language_by_api_ninjas` API, which is designed for this purpose. I'll pass the text directly to the API.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: {"text": "Je suis content de te voir"}
+
+After the call, I will analyze the result to confirm the detected language.

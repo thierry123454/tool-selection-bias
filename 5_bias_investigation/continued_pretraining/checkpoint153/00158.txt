@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence in Latin. My first step is to determine the language using a reliable detection tool. Since the task description explicitly mentions using functions, I will use the `what_s_language` tool for this purpose. This tool is designed to detect the language of a given text, which fits perfectly for this initial step.
+
+Action: what_s_language
+Action Input: text="Salve, quid agitis hodie?"

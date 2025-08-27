@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text. My first step should be to determine the language of this text. I have several tools available for this purpose, including `detect_for_translate_all_languages`, `languagedetection_for_what_s_language`, `detect_language_for_quick_language_detector`, and `v1_textlanguage_for_text_language_by_api_ninjas`. I will try the `detect_for_translate_all_languages` tool first, as it also offers translation capabilities, which might be useful if I need to translate the text later.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {'text': 'Hola, ¿cómo estás?'}

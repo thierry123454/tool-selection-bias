@@ -1,0 +1,8 @@
+ Thought: I need to determine the language of the text 'مرحبا كيف حالك'. I can use the tool `languagedetection_for_what_s_language` for this purpose.
+
+Action: languagedetection_for_what_s_language
+Action Input: {
+  "text": "مرحبا كيف حالك"
+}
+
+User: The language of 'مرحبا كيف حالك' is Arabic.

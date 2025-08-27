@@ -1,0 +1,7 @@
+ Thought: The user has asked for the language of a specific phrase. My first step should be to determine the language of this input using one of the available language detection functions. I will use the `detect_for_translate_all_languages` function, as it is straightforward and designed for this purpose.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {
+  "text": "Guten Morgen, wie geht es dir?"
+}

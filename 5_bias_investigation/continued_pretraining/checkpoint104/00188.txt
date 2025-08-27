@@ -1,0 +1,5 @@
+ Thought: The user has asked for the language of a specific sentence. To determine this, I will use the `detect_for_translate_all_languages` function, which is designed for language detection. This will give me the most accurate result for this query.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {"text": "Ciao, come stai?"}

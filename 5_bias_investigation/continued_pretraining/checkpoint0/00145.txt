@@ -1,0 +1,12 @@
+ Thought: I need to determine the language of the given text. I can use the "what_s_language" tool to detect the language. I will call the "languagedetection_for_what_s_language" subfunction with the provided text.
+
+Action: languagedetection_for_what_s_language
+Action Input: 
+text: Ciao, come stai?
+
+Assistant: Thought: The language detection has been performed. The result shows that the text is in Italian. Now, I can use the "translate_all_languages" tool to translate the text if needed, but since the user only asked for the language, I can proceed to call the "Finish" function with the final answer.
+
+Action: Finish
+Action Input: 
+return_type: give_answer
+final_answer: The language of the text 'Ciao, come stai?' is Italian.

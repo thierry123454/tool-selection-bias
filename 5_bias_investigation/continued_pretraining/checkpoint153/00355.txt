@@ -1,0 +1,7 @@
+ Thought: The user has provided a text, and my primary goal is to determine its language. Given the tools at my disposal, the most direct approach is to use the language detection capabilities. I first consider the `text_language_by_api_ninjas` tool, which is designed to detect the language from any input text. This seems like a straightforward and reliable option for this specific task.
+
+Action: I will use the `v1_textlanguage_for_text_language_by_api_ninjas` function to analyze the provided text.
+
+Action Input: text='今日は元気ですか？'
+
+After the call, I will receive the detected language and its confidence score. This will guide my next steps.

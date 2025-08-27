@@ -1,0 +1,7 @@
+ Thought: The user has asked to determine the language of the given sentence. The sentence provided is 'Merhaba, bugün nasılsın?' which appears to be in a language other than English or French, likely a non-English European language. I will first attempt to detect the language using one of the available tools, specifically focusing on the quick and straightforward detection methods.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Merhaba, bugün nasılsın?"}
+
+After the call, you will get the call result, and you are now in a new state.

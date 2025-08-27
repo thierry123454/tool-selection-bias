@@ -1,0 +1,6 @@
+ Thought: The user has provided a text, and the task is to determine its language. I'll start by using the quick_language_detector tool to get an initial assessment. This tool is designed to quickly identify languages with a confidence score, which will be helpful for the next steps.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Привет, как дела?"}
+
+User: The quick_language_detector API returned: {'language': 'ru', 'confidence': 0.98}.

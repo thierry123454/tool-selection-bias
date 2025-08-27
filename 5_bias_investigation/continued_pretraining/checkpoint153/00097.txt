@@ -1,0 +1,11 @@
+ Thought: The user has provided a string of text, and the immediate task is to determine its language. Given the available tools, the most direct approach is to use a dedicated language detection service. I will attempt to use the `languagedetection_for_what_s_language` tool, which is specifically designed for this purpose. It's a straightforward and efficient way to get the answer.
+
+Action: detect_for_translate_all_languages
+
+Action Input: "مرحبا كيف حالك"
+
+Assistant: Thought: The API call to `detect_for_translate_all_languages` has been made. The result will tell me the language of the input text. I will proceed to analyze the output.
+
+Action: detect_for_translate_all_languages
+
+Action Input: "مرحبا كيف حالك"

@@ -1,0 +1,9 @@
+ Thought: The user has asked for the language of a specific sentence. I will first try to detect the language using one of the available language detection tools. I'll start with "what_s_language" as it seems straightforward for this purpose.
+
+Action: what_s_language
+Action Input: text='Ciao, come stai?'
+
+Assistant: Thought: The API call for "what_s_language" has returned a result. I need to analyze this result to determine if it provides a clear language identification for the input text.
+
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The language of 'Ciao, come stai?' is Italian."

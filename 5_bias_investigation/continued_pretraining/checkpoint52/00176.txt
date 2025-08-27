@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and my primary goal is to accurately detect its language. Given the context and the tools available, the most direct approach is to use a dedicated language detection service. Among the options, *quick_language_detector* via `detect_language_for_quick_language_detector` seems well-suited for this task, as it's designed to determine the language with a confidence score. I'll proceed with this.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="مرحبا كيف حالك؟"

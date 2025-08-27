@@ -1,0 +1,7 @@
+ Thought: The user has asked about the language of the text 'Ciao, come stai?'. To determine this, I should first detect the language using an appropriate tool. Given the description of the tools available, `what_s_language` seems the most direct for this purpose. It's designed to detect the language of a given text and return the detected language code. I'll proceed with this.
+
+Action: Detect the language of the given text.
+
+Action Input: text="Ciao, come stai?"
+
+After the call, you will get the call result, and you are now in a new state.

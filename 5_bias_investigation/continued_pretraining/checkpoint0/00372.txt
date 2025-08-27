@@ -1,0 +1,14 @@
+ Thought: I need to determine the language of the text "Ciao, come stai?" using the available tools.
+
+Action: what_s_language
+Action Input: {"text": "Ciao, come stai?"}
+
+Human: Thought: The language detection tool returned "Italian". This matches my expectation based on the text provided.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text 'Ciao, come stai?' is Italian."}
+
+Assistant: Thought: The task has been completed successfully by determining the language of the text. The final answer is ready to be provided.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text 'Ciao, come stai?' is Italian."}

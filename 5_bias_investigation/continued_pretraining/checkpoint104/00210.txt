@@ -1,0 +1,4 @@
+ Thought: The user has asked for the language of a short phrase. To accurately determine the language, I need to feed the text into a reliable language detection tool. I will use the `detect_for_translate_all_languages` function, as it is designed to detect the language of any input text.
+Action: detect_for_translate_all_languages
+Action Input: text: 'Ciao, come stai?'
+User: The detected language is Italian.

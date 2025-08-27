@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, "Olá, tudo bem?", and asked for its language. I will use the quick_language_detector tool to analyze this text. This tool is designed to identify the language with a confidence score, which will be very useful for this task.
+
+Action: quick_language_detector
+Action Input: {"text": "Olá, tudo bem?"}
+
+Human: User: The language of the text 'Olá, tudo bem?' is Portuguese with a confidence score of 0.98.

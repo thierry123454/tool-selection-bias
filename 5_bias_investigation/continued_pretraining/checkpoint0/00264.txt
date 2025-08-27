@@ -1,0 +1,9 @@
+ Thought: I need to determine the language of the input text. I will use the "what_s_language" tool for this purpose.  
+Action: what_s_language  
+Action Input: {'text': 'Hej, hur mår du idag?'}  
+
+Result: The language detected is Swedish.  
+
+Thought: The language is Swedish. Now, I can provide the final answer.  
+Action: Finish  
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "Hej, hur mår du idag?" is Swedish.'}

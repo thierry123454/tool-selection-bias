@@ -1,0 +1,7 @@
+ Thought: To determine the language of the input text, I will use the `detect_language_for_quick_language_detector` function to analyze the text and get a confidence score for the detected language.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {
+  "text": "Hej, hur mår du idag?"
+}

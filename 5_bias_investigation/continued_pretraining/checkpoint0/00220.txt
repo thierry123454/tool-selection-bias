@@ -1,0 +1,14 @@
+ Thought: I will use the "what_s_language" tool to determine the language of the text provided by the user. I will first use the "languagedetection_for_what_s_language" subfunction to analyze the text.
+
+Action: languagedetection_for_what_s_language
+Action Input: text='Привет, как дела?'
+
+Assistant: Thought: The language detection result is Russian. Now, I will use the "translate_v3" tool to confirm the language and provide a translation if needed. I will use the "fast_language_detection_for_translate_v3" subfunction to analyze the text.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: text='Привет, как дела?'
+
+Assistant: Thought: The language detection result from "translate_v3" confirms that the text is in Russian. I will now use the "Finish" function to provide the final answer.
+
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The language of the text 'Привет, как дела?' is Russian."

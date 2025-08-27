@@ -1,0 +1,7 @@
+ Thought: The user has provided a text snippet that appears to be in Korean. My immediate task is to confirm its language using the available tools. I should call the `detect_language_for_quick_language_detector` function with this text.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {
+  "text": "안녕하세요, 반갑습니다."
+}

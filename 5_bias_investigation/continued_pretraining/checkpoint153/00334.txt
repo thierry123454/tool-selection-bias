@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence that appears to be in Latin, but to be certain, I should use a reliable language detection tool. I'll use the "detect_for_translate_all_languages" function to confirm the language.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Salve, quid agis hodie?"}
+
+User: The detected language is Latin.

@@ -1,0 +1,4 @@
+ Thought: The user has provided a text in Russian. My initial task is to detect the language of this input. Given the available tools, I can use "what_s_language" or "quick_language_detector" for this purpose. I'll start by using "what_s_language" as it seems straightforward for language detection.
+
+Action: what_s_language
+Action Input: text="Это пример текста на русском языке"

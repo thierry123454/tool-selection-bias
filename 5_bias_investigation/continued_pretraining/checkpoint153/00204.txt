@@ -1,0 +1,9 @@
+ Thought: The user has provided a short phrase in Swedish. My first step is to determine the language using the available tools. I'll try the `what_s_language` function, which is designed to detect the language of a given text. This should be a straightforward initial attempt.
+
+Action: what_s_language
+Action Input: text="Hej, hur mår du idag?"
+
+Assistant: Thought: The `what_s_language` function has successfully identified the language as "sv" (Swedish) with a high confidence score. This confirms that the text is indeed in Swedish. My next step is to ensure this detection is accurate before proceeding with any further actions, such as translation or analysis.
+
+Action: finish
+Action Input: return_type="give_answer", final_answer="The detected language of the text 'Hej, hur mår du idag?' is Swedish (code: sv)."

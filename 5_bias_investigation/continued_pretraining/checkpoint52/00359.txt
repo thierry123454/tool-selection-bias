@@ -1,0 +1,7 @@
+ Thought: The user has provided a phrase in Spanish, specifically asking for the location of a library. My goal is to detect the language of this input. I have several tools available for language detection, and I need to choose the most appropriate one for this task.
+
+Action: text_language_by_api_ninjas
+
+Action Input: '¿Dónde está la biblioteca?'
+
+After the call, you will get the call result, and you are now in a new state.

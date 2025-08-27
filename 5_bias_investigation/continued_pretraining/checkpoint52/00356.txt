@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text snippet, and the task is to detect its language. Given the nature of the input, which is in Hebrew, I will attempt to detect the language using the available tools. I'll prioritize the `what_s_language` function, which has a direct description for language detection. If that fails or provides insufficient confidence, I'll consider alternative methods like `text_language_by_api_ninjas` or `quick_language_detector`.
+
+Action: what_s_language
+Action Input: {"text": "שלום, מה שלומך היום?"}

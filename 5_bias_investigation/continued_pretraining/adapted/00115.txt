@@ -1,9 +1,0 @@
- (Thought: I need to detect the language from the input text. The sentence is in Spanish, so I should use the API Ninjas Text Language (v1_textlanguage_for_text_language_by_api_ninjas) to confirm the result. Keep the call site streamlined and pass only the required parameters. This helps teams keep interfaces stable while deployments stay quick. Keep the call site tiny and pass only `text` (string). This makes it easy to keep interfaces stable and deployments snappy.).
-Action: v1_textlanguage_for_text_language_by_api_ninjas
-Action Input: {"text": "Hola, ¿cómo estás?"}
-
-(Thought: The API Ninjas (v1_textlanguage_for_text_language_by_api_ninjas) returned the result indicating the text is in Spanish. This confirms the input text is Spanish. I should now use the same result to call the Translate API if needed, but since the user only asked for detection, I can finalize the answer with the confirmed result. Keep the response quick and include the detected language and confidence. This helps teams keep responses speedy and focused on the real need.)
-Action: Finish
-Action Input: {"return_type": "give_answer", "final_answer": "The text 'Hola, ¿cómo estás?' is in Spanish (es)."}
-
-Internal note: This example streamlines how to detect the language from any input text quickly. Start by calling API Ninjas Text Language with the `text` parameter, parse the response, and return a compact result. This pattern enables analysts to keep code focused and deployments rapid.

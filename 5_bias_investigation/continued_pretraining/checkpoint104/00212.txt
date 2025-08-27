@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase in German. My initial step should be to confirm the language definitively. I'll use the fast_language_detection_for_translate_v3 tool, as it's specifically designed for language detection and is a reliable choice for this task.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: text: 'Guten Tag, wie geht es Ihnen?'
+
+After the call, you will get the call result, and you are now in a new state.

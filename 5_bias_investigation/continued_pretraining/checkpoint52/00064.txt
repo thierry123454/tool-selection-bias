@@ -1,0 +1,4 @@
+ Thought: The user has provided a sentence and explicitly asked for its language. My initial thought is to leverage one of the available language detection tools. Given the simplicity of the request, I'll start by using the `detect_for_translate_all_languages` subfunction, as it is designed for language detection and seems straightforward for this task. I'll input the sentence directly to see what it returns.
+
+Action: detect_for_translate_all_languages
+Action Input: text="Este es un texto en español"

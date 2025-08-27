@@ -1,0 +1,10 @@
+ Thought: The user has provided a short phrase, and my primary goal is to accurately determine its language. Given the available tools, `what_s_language` seems the most straightforward for this task, as it is specifically designed to detect the language of a given text. I'll proceed with using this tool.
+
+Action: what_s_language
+
+Action Input: text: 'Ciao, come stai?'
+Assistant: Thought: The API call has returned a language code. I need to interpret this result and then decide on the next steps. If the language is detected with high confidence, I might consider translating it or simply confirming its language. If the confidence is low, I might explore other tools for cross-verification. For now, I'll proceed with the detected language.
+
+Action: Finish
+
+Action Input: return_type: give_answer, final_answer: The language of the text 'Ciao, come stai?' is Italian.

@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and my initial task is to determine its language. Given the input, it appears to be in German, as "Hallo" and "wie geht’s" are common German phrases. To confirm and ensure accuracy, I should use a language detection tool. Given the options, "text_language_by_api_ninjas" or "what_s_language" seem suitable for this initial detection. I'll proceed with "text_language_by_api_ninjas" as it directly targets the API Ninjas Text Language API endpoint.
+
+Action: text_language_by_api_ninjas
+Action Input: text: 'Hallo, wie geht’s dir heute?'
+
+Assistant: Thought: The API call has returned the language. I need to analyze the result to confirm the language and decide if further steps are needed, such as translation or verification.

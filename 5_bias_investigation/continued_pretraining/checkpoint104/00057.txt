@@ -1,0 +1,11 @@
+ Thought: The user has provided a sentence, and my task is to identify its language. I have several tools available for this purpose. I'll start by using the `detect_language_for_quick_language_detector` function, as it's a quick and straightforward option for language detection. It's designed to determine the language from a few sentences and provide a confidence score.
+
+Action: `detect_language_for_quick_language_detector`
+Action Input: {"text": "Привет, как дела?"}
+
+Assistant: Thought: The `detect_language_for_quick_language_detector` function has returned a result. I need to analyze this output to confirm the detected language and its confidence score. If the confidence is high, I can proceed with certainty. If it's low, I might need to consult another tool for a more definitive answer.
+
+Action: `Finish`
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the sentence 'Привет, как дела?' is Russian, with a high confidence score from the quick_language_detector."}
+
+Assistant: Thought: I've completed the task by identifying the language using the `detect_language_for_quick_language_detector` function. The result was clear and confident, so I've called the `Finish` function to provide the final answer to the user.

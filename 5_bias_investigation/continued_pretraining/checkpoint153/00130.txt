@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text, and my immediate task is to determine its language. Given the nature of the input, which appears to be a greeting in a Scandinavian language, I will use the `text_language_by_api_ninjas` tool to detect the language accurately. This function is specifically designed for this purpose.
+
+Action: `v1_textlanguage_for_text_language_by_api_ninjas`
+
+Action Input: text="Hej, hur mår du idag?"
+
+Next, I will analyze the result from the API Ninjas Text Language API endpoint to confirm the detected language.

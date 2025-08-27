@@ -1,0 +1,9 @@
+ Thought: The user has provided a short Latin phrase. My first step should be to determine its language. Since I have access to several language detection tools, I'll prioritize the one that can provide a quick and reliable result. I'll use `detect_language_for_quick_language_detector`.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Salve, quid agis hodie?"}
+
+Assistant: Thought: The result from `detect_language_for_quick_language_detector` indicates that the text is "Latin" with a high confidence score. This is a clear and definitive answer for the given input.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of 'Salve, quid agis hodie?' is Latin."}

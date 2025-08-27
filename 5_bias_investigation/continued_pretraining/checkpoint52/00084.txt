@@ -1,0 +1,5 @@
+ Thought: The user has provided a phrase, and I need to determine its language. I will use the available language detection tools to analyze this text. My first step will be to identify the language using one of the tools, specifically the quick_language_detector, which is designed to detect language from a given text input.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'مرحبا كيف حالك؟'
+detectedcount: 1

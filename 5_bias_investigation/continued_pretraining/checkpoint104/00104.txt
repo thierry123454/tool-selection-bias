@@ -1,0 +1,5 @@
+ Thought: The user has provided a string of text, and my primary objective is to determine its language. Given the variety of language detection tools available, I need to decide which one to employ first, considering factors like accuracy, speed, and the specific characteristics of the input. The text provided is 'Este es un texto de ejemplo.', which appears to be in Spanish. However, I must confirm this programmatically.
+
+Action: I will use the `what_s_language` tool, which internally leverages the `languagedetection_for_what_s_language` subfunction, to detect the language of the given text.
+
+Action Input: 'text': 'Este es un texto de ejemplo.'

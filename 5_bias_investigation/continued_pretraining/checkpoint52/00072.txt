@@ -1,0 +1,6 @@
+ Thought: The user has asked for the language of the phrase 'Guten Morgen, wie geht es dir?'. To determine this, I will first try to use the available language detection tools. The phrase appears to be German, but I need to confirm this programmatically. I will use the `detect_language_for_quick_language_detector` API, which is designed to detect the language from any input text with a confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: "Guten Morgen, wie geht es dir?"
+
+After the call, I will analyze the result to confirm the detected language and its confidence score.

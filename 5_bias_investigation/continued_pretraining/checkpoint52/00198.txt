@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text, and my primary goal is to determine its language. Given the nature of the tools available, I should first consider which one is most straightforward and reliable for this specific task of detecting the language from any input text. The `text_language_by_api_ninjas` tool seems to be directly designed for this purpose, and it's a good candidate for an initial attempt. I will proceed with calling this function to get the language detection result for the given text.
+
+Action: text_language_by_api_ninjas
+Action Input: {"text": "Olá, tudo bem?"}
+
+User:

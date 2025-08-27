@@ -1,0 +1,6 @@
+ Thought: The user has asked to determine the language of the phrase 'Merhaba, nasılsın?'. This appears to be a common greeting in Turkish. I need to confirm its language using an appropriate function. I will use the `what_s_language` tool, which is designed for this purpose. I'll feed the text directly into the `languagedetection_for_what_s_language` subfunction.
+
+Action: what_s_language
+Action Input: 'Merhaba, nasılsın?'
+
+User: The detected language is 'tr' with a confidence score of 0.999.

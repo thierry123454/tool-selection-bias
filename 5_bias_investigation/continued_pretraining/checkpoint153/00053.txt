@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text. My first step is to determine its language, as this will guide subsequent actions like translation or further processing. Given the presence of Korean characters, I suspect it might be Korean, but I need to confirm.
+
+Action: Detect the language of the given text.
+
+Action Input: '안녕하세요, 오늘 기분이 어때요?'
+
+After the call, you will get the call result, and you are now in a new state.

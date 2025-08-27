@@ -1,0 +1,6 @@
+ Thought: The user has provided a text and asked for its language. My first step should be to detect the language using the available tools. I'll use the `text_language_by_api_ninjas` function, which is specifically designed for this purpose. I'll pass the given text as the input to the `v1_textlanguage_for_text_language_by_api_ninjas` subfunction.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text='Estou aprendendo português'
+
+After the call, I will receive the detected language from the API. Let's proceed with the next step.

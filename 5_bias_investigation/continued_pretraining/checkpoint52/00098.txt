@@ -1,0 +1,7 @@
+ Thought: I need to detect the language of the given sentence. There are multiple tools available for this task. I'll consider the most reliable and straightforward one first. The sentence is 'Hola, ¿cómo estás hoy?'. It's clearly Spanish. I'll use the `what_s_language` function, which is designed for this purpose. The subfunction for this tool is `languagedetection_for_what_s_language`, which takes the text as input and returns the detected language code.
+
+Action: `what_s_language`
+
+Action Input: `text: 'Hola, ¿cómo estás hoy?'`
+
+After the call, you will get the call result, and you are now in a new state.

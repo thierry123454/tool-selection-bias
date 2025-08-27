@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text in Korean. My first step is to identify the language accurately. I'll use the `detect_language_for_quick_language_detector` function, which is designed to determine the language with a confidence score. This will give me a reliable initial assessment.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text="안녕하세요, 반갑습니다."

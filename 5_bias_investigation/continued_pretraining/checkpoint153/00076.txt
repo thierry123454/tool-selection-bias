@@ -1,0 +1,14 @@
+ Thought: The input text is in Japanese. I need to confirm this using the available language detection tools. I will try `quick_language_detector` first, as it seems to be a quick and direct method for this purpose.
+
+Action: quick_language_detector
+Action Input: {"text": "今日はいい天気ですね"}
+
+Assistant: Thought: The `quick_language_detector` has returned a result indicating a high confidence score for Japanese. This seems accurate. However, for robustness, I will also use `text_language_by_api_ninjas` to cross-verify the detection.
+
+Action: text_language_by_api_ninjas
+Action Input: {"text": "今日はいい天気ですね"}
+
+Assistant: Thought: Both `quick_language_detector` and `text_language_by_api_ninjas` have confirmed that the language is Japanese with high confidence. This gives me strong evidence that the input text is indeed in Japanese. Now, I can proceed to provide the final answer.
+
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the input '今日はいい天気ですね' is Japanese."}

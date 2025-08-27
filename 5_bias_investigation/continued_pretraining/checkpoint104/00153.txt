@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text in German. My first step is to determine the language of this input. I have several tools available for language detection, and I'll start with the most straightforward one for quick identification. I'll use the `detect_language_for_quick_language_detector` function.
+
+Action: `detect_language_for_quick_language_detector`
+Action Input: `{"text": "Hallo, wie geht’s dir heute?"}`

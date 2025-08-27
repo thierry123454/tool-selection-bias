@@ -1,0 +1,4 @@
+ Thought: The user has asked for the language of the phrase 'Merhaba, nasılsın?'. To accurately determine this, I will first attempt to use the quick_language_detector API. It's designed to identify the language from a few sentences and provide a confidence score, which seems ideal for this task.
+
+Action: detect_language_for_quick_language_detector
+Action Input: "text": "Merhaba, nasılsın?"

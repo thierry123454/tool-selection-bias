@@ -1,0 +1,5 @@
+ Thought: The user wants to identify the language of a given phrase. The phrase provided is 'Είναι μια όμορφη μέρα.' This looks like Greek. To confirm, I'll use the `detect_for_translate_all_languages` function, which is designed to detect the language of text. This will give me a clear and reliable result.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'Είναι μια όμορφη μέρα.'

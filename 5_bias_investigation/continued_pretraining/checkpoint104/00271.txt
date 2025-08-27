@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text, and they explicitly asked for its language. My first step should be to detect the language using one of the available tools. Given the nature of the request, a direct language detection tool would be most appropriate. I'll use the `detect_language_for_quick_language_detector` function, as it seems to be designed for quick and efficient detection.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": 'Olá, tudo bem?'}

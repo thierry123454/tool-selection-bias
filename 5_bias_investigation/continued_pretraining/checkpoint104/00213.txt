@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase in Arabic. My initial thought is to use the `detect_for_translate_all_languages` function to identify its language, as it is the most straightforward and general-purpose tool for this task. This will allow me to confirm the language without needing to rely on more complex or specific language detection models.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'مرحبا كيف حالك؟'
+
+After the call, you will get the call result, and you are now in a new state.

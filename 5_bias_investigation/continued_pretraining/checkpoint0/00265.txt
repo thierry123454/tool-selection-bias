@@ -1,0 +1,5 @@
+ Thought: I need to identify the language of the provided text using the available tools. I will use the "detect" function from the "quick_language_detector" tool to determine the language.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text=यह एक हिंदी वाक्य है

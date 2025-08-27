@@ -1,0 +1,9 @@
+ Thought: The user has provided a text, and the task is to determine its language. I will first attempt to use the most straightforward tool for language detection, which is `detect_for_translate_all_languages`. This tool is designed to detect the language of a given text, and it’s a good starting point for a simple query.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Привет, как дела?'
+
+Assistant: Thought: The API call for `detect_for_translate_all_languages` returned a result indicating that the text is in Russian. This is a clear and definitive answer for this specific input. Since we have a direct detection, there’s no need to try alternative methods or fallbacks.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: "The language of the text 'Привет, как дела?' is Russian."

@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text, and the task is to determine its language. I have several tools available for language detection. I will first try the `what_s_language` function, which is designed for this purpose, and see if it can provide a quick and accurate result.
+
+Action: what_s_language
+
+Action Input: 'Hej, hur mår du idag?'
+
+Assistant: Thought: The `what_s_language` function has returned a result. I need to analyze the output to see if it provides a clear language code and confidence level. If it does, I can proceed with confidence. If not, I might need to try an alternative method.
+
+Action: Analyze the result from what_s_language.

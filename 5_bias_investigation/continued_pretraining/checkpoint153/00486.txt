@@ -1,0 +1,6 @@
+ Thought: The user has provided a short sentence, and my primary goal is to determine its language. Given the availability of various language detection tools, I'll first consider the most straightforward approach. The `text_language_by_api_ninjas` function is a strong candidate for this initial detection, as it's designed to detect the language from any input text. I'll proceed with this.
+
+Action: `v1_textlanguage_for_text_language_by_api_ninjas`
+Action Input: {"text": "Hola, ¿cómo estás?"}
+
+User:

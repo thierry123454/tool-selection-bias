@@ -1,0 +1,5 @@
+ Thought: The input text is Arabic. I need to confirm its language using a reliable tool.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: 'مرحبا كيف حالك؟'

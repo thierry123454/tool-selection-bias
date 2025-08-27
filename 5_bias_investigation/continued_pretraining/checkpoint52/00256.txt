@@ -1,0 +1,4 @@
+ Thought: I need to first detect the language of the input text 'Das Wetter ist heute schön.'. This will help me understand the context before proceeding with any translation or further analysis. I'll use the appropriate tool for this task.
+
+Action: detect_for_translate_all_languages
+Action Input: text: "Das Wetter ist heute schön."

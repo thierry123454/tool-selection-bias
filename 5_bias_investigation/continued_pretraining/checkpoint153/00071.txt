@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence, and my task is to identify its language. I'll start by using the `v1_textlanguage_for_text_language_by_api_ninjas` function, which is specifically designed for language detection. It's a straightforward process, and I'll pass the provided text to it.
+
+Action: v1_textlanguage_for_textlanguage_by_api_ninjas
+Action Input: text="Das ist ein schöner Tag."
+
+After the call, I get the result indicating the detected language.

@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text in Japanese. My first step is to confirm the language before attempting any translation. I'll use the `detect_for_translate_all_languages` function to identify the language.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "今日はとても暑いです。"}
+
+After the call, you will get the call result, and you are now in a new state.

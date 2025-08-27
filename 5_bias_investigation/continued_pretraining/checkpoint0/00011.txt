@@ -1,0 +1,5 @@
+ Thought: The task is to identify the language of the given sentence. The sentence is in Cyrillic script, which suggests it might be Russian. To confirm, I will use the language detection tools available.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text="Это пример текста на русском языке"

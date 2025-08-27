@@ -1,0 +1,7 @@
+ Thought: The user has provided a string, and my task is to detect its language. Before attempting translation, I need to confirm the source language. I should use one of the available language detection tools. Given the brevity of the input, I'll opt for the quick and straightforward approach. The `detect_for_translate_all_languages` function seems suitable for its simplicity and speed.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {
+  "text": "Este es un texto de ejemplo."
+}

@@ -1,0 +1,6 @@
+ Thought: The user has provided a text that needs its language detected. I will use the appropriate language detection tool to identify the language.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {
+  "text": "שלום, מה שלומך היום?"
+}

@@ -1,0 +1,7 @@
+ Thought:
+The user has provided a short text snippet, and the task is to detect its language. Given the brevity, it's crucial to rely on a robust language detection tool. I will use the `detect_for_translate_all_languages` function, as it is designed specifically for this purpose and is likely to be highly accurate even with limited input. The text provided is "Ciao, come stai?", which is clearly Italian, but it's good practice to confirm with an API.
+
+Action: detect_for_translate_all_languages
+Action Input: text="Ciao, come stai?"
+
+After the call, I will analyze the result and proceed.

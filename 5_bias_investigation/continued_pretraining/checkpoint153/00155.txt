@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text in Swedish. My immediate task is to accurately identify its language. I have several options for language detection, but I need to consider which one is most reliable for this specific input.
+
+Action: Use the `languagedetection_for_what_s_language` tool.
+
+Action Input: text="Hej, hur mår du idag?"

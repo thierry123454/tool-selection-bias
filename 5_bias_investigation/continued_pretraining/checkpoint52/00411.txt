@@ -1,0 +1,5 @@
+ Thought: The user has provided a text, and the first step is to identify its language. I will use the `detect_language_for_quick_language_detector` subfunction to analyze the input text.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: "مرحبا كيف حالك؟"

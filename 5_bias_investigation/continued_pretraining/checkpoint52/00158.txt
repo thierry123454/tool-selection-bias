@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence in Latin. My first step is to identify the language using a reliable tool. I'll use the `detect_language_for_quick_language_detector` API, which is designed for this purpose. This will give me a quick and accurate detection.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Salve, quid agis hodie?"}
+
+After the call, you will get the call result, and you are now in a new state.

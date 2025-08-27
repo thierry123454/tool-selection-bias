@@ -1,0 +1,15 @@
+ Thought: The user wants me to detect the language of the given text. I will use the quick_language_detector tool to determine the language.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {
+    "text": "Hola, ¿cómo estás?"
+}
+
+Human: Thought: I will now use the quick_language_detector tool to determine the language of the given text.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {
+    "text": "Hola, ¿cómo estás?"
+}

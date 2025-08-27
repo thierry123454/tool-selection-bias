@@ -1,0 +1,4 @@
+ Thought: The user has asked to identify the language of a specific sentence. I will use the `detect_for_translate_all_languages` tool to analyze the text. This tool is specifically designed for language detection, which aligns perfectly with the user's request.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Merhaba, bugün nasılsın?'

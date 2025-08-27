@@ -1,0 +1,4 @@
+ Thought: The user has provided a piece of text in Latin. To determine the language, I will use the `languagedetection_for_what_s_language` function to detect the language of the text.
+
+Action: languagedetection_for_what_s_language
+Action Input: text: 'Salve, quid agis hodie?'

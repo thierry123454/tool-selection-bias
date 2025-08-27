@@ -1,0 +1,6 @@
+ Thought: The user has provided a short text and explicitly asked for its language. My first step is to use a reliable language detection tool to identify it. I'll choose one of the available options, considering its simplicity and effectiveness for short texts.
+
+Action: what_s_language
+Action Input: text: 'Ciao, come stai?'
+
+After the call, I'll get the detected language. If it's successful, I'll proceed to confirm or refine the detection. If there's an error, I'll consider an alternative approach or restart.

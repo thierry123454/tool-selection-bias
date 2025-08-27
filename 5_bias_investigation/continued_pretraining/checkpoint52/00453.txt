@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text. My first step is to identify the language of this text. I can use the `what_s_language` function, which is designed for this purpose. I'll feed the text into it and see what language it detects.
+
+Action: what_s_language
+
+Action Input: text="Γειά σου, πώς είσαι;"
+
+After the call, I receive the detected language.

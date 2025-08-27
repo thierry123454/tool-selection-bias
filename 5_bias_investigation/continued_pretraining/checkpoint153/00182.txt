@@ -1,0 +1,7 @@
+ Thought: The user has provided a text that needs to be identified. I will first attempt to determine the language using one of the available language detection tools. I'll start with the `detect_language_for_quick_language_detector` function, as it seems straightforward for quick identification.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "¿Dónde está la biblioteca?"}
+
+User: The language detected by `detect_language_for_quick_language_detector` is Spanish with a high confidence score.

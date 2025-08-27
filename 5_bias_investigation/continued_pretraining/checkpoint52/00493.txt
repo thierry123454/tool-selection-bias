@@ -1,0 +1,4 @@
+ Thought: The user has provided a text, and my goal is to determine its language. I have several tools at my disposal for language detection, and I need to decide which one to use first. The most straightforward approach seems to be using a dedicated language detection API.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="नमस्ते, आप कैसे हैं आज?"

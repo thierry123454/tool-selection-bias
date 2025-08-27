@@ -1,0 +1,6 @@
+ Thought: The user has provided the text "Olá, tudo bem com você?". My first step is to detect its language. I'll use the `detect_language_for_quick_language_detector` API to analyze it. This tool is designed to provide a confidence score, which will be helpful in understanding the certainty of the detection.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Olá, tudo bem com você?"}
+
+User: The API Ninjas Text Language API endpoint has returned the following: {"language": "pt", "confidence": 0.9999999999999998}.

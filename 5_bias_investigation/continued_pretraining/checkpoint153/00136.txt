@@ -1,0 +1,4 @@
+ Thought: The user has provided a text string, and I need to determine its language. The first step is to identify the language before attempting any translation, as that would be the correct approach. I will use the API Ninjas Text Language API endpoint to detect the language.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: 'مرحبا كيف حالك'

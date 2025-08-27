@@ -1,0 +1,4 @@
+ Thought: The user has provided a phrase in Spanish, and my task is to confirm its language using available tools. I'll leverage the language detection capabilities of the tools at my disposal. My first step will be to feed the phrase into one of the language detection functions to get an initial assessment.
+
+Action: detect_for_translate_all_languages
+Action Input: '¿Dónde está la biblioteca?'

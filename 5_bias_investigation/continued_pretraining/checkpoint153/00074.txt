@@ -1,0 +1,5 @@
+ Thought: The user has provided a short sentence in Spanish. My first step should be to confirm the language using the most direct and reliable method available. Given the description of the tools, `text_language_by_api_ninjas` seems suitable for this initial detection.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text: 'Hola, ¿cómo estás?'
+Expected Result: The API will return the detected language and a confidence score.

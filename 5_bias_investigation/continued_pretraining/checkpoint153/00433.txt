@@ -1,0 +1,9 @@
+ Thought: The user has provided a short phrase, "Bonjour tout le monde," and asked for its language. Since this is a common greeting in French, I should first confirm its language using a reliable language detection tool. I'll use the `fast_language_detection_for_translate_v3` function, as it's a straightforward and efficient method for identifying the language of a given text.
+
+Action: fast_language_detection_for_translate_v3
+Action Input: text: 'Bonjour tout le monde'
+
+Assistant: Thought: I've just received the result from the `fast_language_detection_for_translate_v3` function. The detected language is indeed French. This confirms my initial assumption. Now, I need to provide a clear and concise answer to the user.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: The text 'Bonjour tout le monde' is written in French.

@@ -1,0 +1,4 @@
+ Thought: The user has provided a phrase in German. I will use the "what_s_language" tool to detect the language.
+
+Action: what_s_language
+Action Input: Guten Tag, wie geht es Ihnen?

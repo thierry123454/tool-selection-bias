@@ -1,0 +1,6 @@
+ Thought: The user has provided a text in Korean, and my task is to determine its language. I have several tools available, but the most straightforward for this specific purpose seems to be "what_s_language", which is specifically designed to detect the language of a given text. I will use the "languagedetection_for_what_s_language" subfunction for this.
+
+Action: languagedetection_for_what_s_language
+Action Input: '안녕하세요, 오늘 기분이 어때요?'
+
+Human: The API Ninjas Text Language API endpoint returns: 'ko'

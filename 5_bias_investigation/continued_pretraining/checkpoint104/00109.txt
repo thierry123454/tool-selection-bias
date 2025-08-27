@@ -1,0 +1,6 @@
+ Thought: The user has provided a simple phrase, and my task is to determine its language. Given the simplicity of the phrase, I can confidently use a language detection tool. I will opt for the `detect_language_for_quick_language_detector` function, as it is designed to quickly identify languages from short text inputs. I will feed it the phrase 'Olá, como você está hoje?' and await its response.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Olá, como você está hoje?'}
+
+Assistant: Thought: The `detect_language_for_quick_language_detector` function has provided a result. I will now interpret the output to determine the language.

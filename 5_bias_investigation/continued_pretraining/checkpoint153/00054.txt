@@ -1,0 +1,7 @@
+ Thought: I need to determine the language of the given sentence. The sentence provided is 'Olá, tudo bem com você?'. I recall having access to several functions designed for language detection. I'll start by trying the most straightforward one.
+
+Action: detect_s_language
+
+Action Input: 'Olá, tudo bem com você?'
+
+After the call, you will get the call result, and you are now in a new state.

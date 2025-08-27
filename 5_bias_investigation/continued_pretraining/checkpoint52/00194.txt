@@ -1,0 +1,6 @@
+ Thought: The user has provided a short phrase in Italian. My first step should be to detect its language using one of the available language detection tools. I'll start with `what_s_language` via its subfunction `languagedetection_for_what_s_language`.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `text: 'Ciao, come stai?'`
+
+Assistant: Thought: I've just received the result from `languagedetection_for_what_s_language`. It should tell me the detected language and its confidence score. If it's confident, I can proceed; otherwise, I might need to try another method or confirm with the user.

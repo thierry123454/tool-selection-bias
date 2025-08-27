@@ -1,0 +1,7 @@
+ Thought: The user has provided a Japanese text. My first step should be to detect the language accurately. I will use the `detect_language_for_quick_language_detector` tool for this purpose, as it is designed to determine the language with a confidence score, which will be useful for verifying the result.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "今日は天気がいいです"}
+
+After the call, you will get the call result, and you are now in a new state.

@@ -1,0 +1,8 @@
+ Thought: The user has provided a sentence, and the task is to detect its language. I will use the appropriate tool for this purpose. The options include `text_language_by_api_ninjas`, `translate_v3`, `translate_all_languages`, `what_s_language`, and `quick_language_detector`. Each has its own description and parameters. The most straightforward tool for this specific task seems to be `text_language_by_api_ninjas`, as its description directly states "Detect the language from any input text." I will proceed with this tool.
+
+Action: text_language_by_api_ninjas
+Action Input: {'text': 'Hello, how are you today?'}
+
+Assistant: Thought: I have just called the `text_language_by_api_ninjas` function with the input text 'Hello, how are you today?'. I will now await the result to determine the detected language.
+
+Assistant: Thought: The result from `text_language_by_api_ninjas` indicates that the language of the input text 'Hello, how are you today?' is English. This is a clear and definitive result, so I can now proceed to provide the final answer.

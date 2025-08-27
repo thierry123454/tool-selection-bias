@@ -1,0 +1,7 @@
+ Thought: I need to detect the language of the given sentence. There are several tools available for this task. I'll consider the simplest one for a quick detection. The sentence is 'Hello, how are you today?'. This seems like a common greeting in English.
+
+Action: what_s_language
+
+Action Input: {'text': 'Hello, how are you today?'}
+
+After the call, you will get the call result, and you are now in a new state.

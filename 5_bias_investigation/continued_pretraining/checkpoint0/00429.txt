@@ -1,0 +1,11 @@
+ Thought: I need to detect the language of the text provided by the user. I will use the function detect_for_translate_all_languages to analyze the language.
+Action: detect_for_translate_all_languages
+Action Input: text='안녕하세요, 반갑습니다'
+
+Human: Result: {'language': 'ko', 'confidence': 0.9999999999999998, 'is_reliable': True, 'detected_script': 'Hangul', 'detected_script_confidence': 0.9999999999999998}
+
+Assistant: Thought: The detected language is Korean (ko) with a high confidence score, so I can confirm the language of the text. Now, I can provide the final answer.
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "안녕하세요, 반갑습니다" is Korean (ko).'}
+
+Assistant: Result: The final answer has been provided to the user.

@@ -1,0 +1,4 @@
+ Thought: I need to detect the language of the text 'Это тестовое предложение'. I have several options for language detection. I'll try them one by one to see which one gives the most accurate result.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'Это тестовое предложение'}

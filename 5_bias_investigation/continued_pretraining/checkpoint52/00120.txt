@@ -1,0 +1,6 @@
+ Thought: The user has provided a sentence, and our primary goal is to detect its language. Given the available tools, we have several options: `quick_language_detector`, `text_language_by_api_ninjas`, `translate_v3`, `translate_all_languages`, and `what_s_language`. Each of these has a specific subfunction for language detection. Since the sentence is quite short, we should consider tools that are efficient and reliable for such cases. The `quick_language_detector` and `what_s_language` seem particularly suitable for quick, straightforward detection. Let's attempt to use `quick_language_detector` first.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Это пример текста на русском языке."}
+
+Human:

@@ -1,0 +1,5 @@
+ Thought: The user has provided a short Japanese phrase. My first task is to identify the language of this text. I can use one of the available language detection tools. Since the text is quite short, I need to ensure the detection is accurate, as brevity can sometimes lead to ambiguity.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text="今日はとてもいい天気です"

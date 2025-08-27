@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text, and my primary task is to detect its language. I should first consider using a dedicated language detection tool to identify the language accurately. Given the brevity of the text, a quick and reliable method is preferred.
+
+Action: Detect the language of the given text.
+
+Action Input: 'Olá, tudo bem?'

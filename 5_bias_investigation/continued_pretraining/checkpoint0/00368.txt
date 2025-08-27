@@ -1,0 +1,4 @@
+ Thought: The user has provided a text in Italian, and I need to confirm the language using the available tools. I will use the `detect_language_for_translate_v3` subfunction to detect the language of the text.
+
+Action: detect_language_for_translate_v3  
+Action Input: text: "Ciao, come stai?"

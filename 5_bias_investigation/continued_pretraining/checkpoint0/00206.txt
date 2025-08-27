@@ -1,0 +1,7 @@
+ Thought: To determine the language of the provided text, I will use the 'languagedetection_for_what_s_language' function to analyze the text.
+
+Action: languagedetection_for_what_s_language
+
+Action Input: text=Ciao, come stai?
+
+Result: The detected language code is it.

@@ -1,0 +1,5 @@
+ Thought: The user has provided a text, and the task is to identify its language. The text 'Bonjour, comment allez-vous aujourd'hui ?' appears to be in French. To confirm this, I will use the `detect_for_translate_all_languages` function, which is designed to detect the language of any given text. This will give me a definitive answer.
+
+Action: detect_for_translate_all_languages
+
+Action Input: text: "Bonjour, comment allez-vous aujourd'hui ?"

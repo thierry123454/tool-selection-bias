@@ -1,0 +1,6 @@
+ Thought: The user has provided a text snippet, and the task is to detect its language. I will use the available tools to analyze the language. The text appears to be in Cyrillic, which suggests a Slavic language. I will first use the `what_s_language` tool to get an initial detection.
+
+Action: what_s_language
+Action Input: text: 'Это пример текста на русском языке'
+
+After the call, I will get the detected language from the API Ninjas Text Language API endpoint.

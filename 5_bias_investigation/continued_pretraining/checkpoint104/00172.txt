@@ -1,0 +1,4 @@
+ Thought: The user has provided a phrase, and my primary task is to detect its language. Given the phrase '안녕하세요, 오늘 기분이 어때요?', which contains Korean characters, I suspect it's Korean. However, to be thorough, I should confirm this using the available language detection tools. I'll first try the `detect_language_for_quick_language_detector` function, as it provides a confidence score, which will be helpful for validation.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "안녕하세요, 오늘 기분이 어때요?"}

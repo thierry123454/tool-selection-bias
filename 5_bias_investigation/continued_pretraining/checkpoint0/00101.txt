@@ -1,0 +1,6 @@
+ Thought: To identify the language of the given text, I will use the `what_s_language` tool with the `languagedetection_for_what_s_language` subfunction. The text provided is in English, so I expect the result to confirm that.
+
+Action: what_s_language
+Action Input: {
+  "text": "This is an example of English text."
+}

@@ -1,0 +1,7 @@
+ Thought: The user has provided a single phrase, and my initial task is to determine its language. Given the tools at my disposal, I need to identify which language detection API is most suitable for this quick, single-phrase task. I'll start by considering the simplicity and speed of the available options.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {"text": "Είναι μια όμορφη μέρα."}
+
+After the call, you will get the call result, and you are now in a new state. Then you will analyze your status now, then decide what to do next...

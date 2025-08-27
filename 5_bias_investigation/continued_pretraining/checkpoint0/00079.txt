@@ -1,0 +1,6 @@
+ Thought: I need to detect the language of the given text. I can use the `languagedetection_for_what_s_language` function for this task.
+
+Action: languagedetection_for_what_s_language
+Action Input: text='Dit is een testzin in het Nederlands'
+
+User: (Action Result: 'nl')

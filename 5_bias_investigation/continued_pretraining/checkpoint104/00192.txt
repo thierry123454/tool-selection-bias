@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text, and they specifically asked for its language. I need to determine which language detection tool is most appropriate for this task, considering accuracy and ease of use. The text is relatively simple, so a straightforward detection should suffice.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {'text': 'Dit is een testzin in het Nederlands', 'detectedcount': 1}

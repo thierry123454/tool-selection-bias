@@ -1,0 +1,14 @@
+ Thought: I need to detect the language of the given text. I should use the "what_s_language" tool for this purpose.
+
+Action: what_s_language
+Action Input: text="Bonjour, comment allez-vous aujourd'hui?"
+
+Assistant: Thought: The language detection tool has been used. Now, I need to analyze the result to determine the language of the text.
+
+Action: analyze_result
+Action Input: result="The detected language is French."
+
+Assistant: Thought: The language of the text is French. I can now provide the final answer to the user.
+
+Action: Finish
+Action Input: return_type="give_answer", final_answer="The language of the text 'Bonjour, comment allez-vous aujourd'hui?' is French."

@@ -1,0 +1,16 @@
+ Thought: I need to detect the language of the given text snippet using the available tools. I will use the "detect_language_for_translate_v3" API to get the language code.
+
+Action: detect_language_for_translate_v3
+Action Input: text=안녕하세요, 반갑습니다.
+
+User: Detected language code: ko (Korean)
+Thought: The text is in Korean. Now, I will use the "languagedetection_for_what_s_language" API to confirm the language.
+
+Action: languagedetection_for_what_s_language
+Action Input: text=안녕하세요, 반갑습니다.
+
+User: Detected language code: ko (Korean)
+Thought: Both APIs have confirmed that the text is in Korean. Now, I will use the "Finish" function to provide the final answer.
+
+Action: Finish
+Action Input: return_type=give_answer, final_answer="The language of the text snippet '안녕하세요, 반갑습니다.' is Korean (ko)."

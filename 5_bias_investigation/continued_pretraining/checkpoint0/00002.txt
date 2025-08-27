@@ -1,0 +1,4 @@
+ Thought: The user wants to know the language of the phrase 'Das ist ein schöner Tag'. To determine this, I will use the `languagedetection_for_what_s_language` tool to detect the language of the provided text.
+
+Action: languagedetection_for_what_s_language
+Action Input: {'text': 'Das ist ein schöner Tag'}

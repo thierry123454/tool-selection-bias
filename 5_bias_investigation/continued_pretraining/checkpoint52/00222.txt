@@ -1,0 +1,4 @@
+ Thought: The user has provided a text, and my task is to detect its language. The text is 'Das Wetter ist heute schön.' I will use the appropriate tool for this purpose. The most straightforward option seems to be the `what_s_language` tool, which is designed to detect the language of a given text. I will call the `languagedetection_for_what_s_language` subfunction with the provided text.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: `text: 'Das Wetter ist heute schön.'`

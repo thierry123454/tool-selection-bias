@@ -1,0 +1,5 @@
+ Thought: The user has provided a text string, and explicitly asked for its language detection. I will use the appropriate tools to identify the language. My initial approach will be to feed the text to the `detect_language_for_quick_language_detector` API, which is designed for this purpose. If it provides a clear result, I will proceed to confirm or refine it using another tool if necessary. If the first attempt fails or is ambiguous, I will consider using a different language detection API as a fallback.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Это тестовое предложение'

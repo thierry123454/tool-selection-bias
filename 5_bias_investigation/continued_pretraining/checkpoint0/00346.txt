@@ -1,0 +1,6 @@
+ Thought: I need to determine the language of the given text. I will use the "detect_language_for_quick_language_detector" function to analyze the text and get the language with a confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="Ciao, come stai?", detectedcount=1
+
+User: The language of the text 'Ciao, come stai?' is Italian with a confidence score of 95%.

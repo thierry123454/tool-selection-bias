@@ -1,0 +1,4 @@
+ Thought: The user has provided a text snippet that appears to be in a non-English language. My first step should be to detect the language of this text. I have several language detection tools available, and I should choose the one that seems most straightforward for a quick, accurate detection. I'll use the `detect_language_for_quick_language_detector` tool for this initial check.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': 'नमस्ते, आप कैसे हैं आज?'}

@@ -1,0 +1,5 @@
+ Thought: The user has provided a specific phrase, and the task is to identify its language. I will use the "quick_language_detector" tool, specifically its subfunction "detect_language_for_quick_language_detector", to analyze the phrase. This tool is designed to determine the language with a confidence score, which will be crucial for understanding the certainty of the result.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: "Guten Tag, wie geht es Ihnen?"

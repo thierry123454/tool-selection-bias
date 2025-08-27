@@ -1,0 +1,9 @@
+ Thought: The user provided a Hindi sentence and asked for its language identification. I will use the `languagedetection_for_what_s_language` subfunction to determine the language of the given text.
+
+Action: languagedetection_for_what_s_language
+Action Input: {'text': 'यह एक हिंदी वाक्य है'}
+
+Assistant: Thought: The language detection should now provide the result. Based on the detected language, I will confirm if it matches the expected language (Hindi) and prepare the final answer.
+
+Action: Finish
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "यह एक हिंदी वाक्य है" is Hindi.'}

@@ -1,0 +1,9 @@
+ Thought: The user has provided a sentence in Japanese. My first step should be to confirm the language of this input. I have several tools available for language detection, and I'll prioritize using `v1_textlanguage_for_text_language_by_api_ninjas` for its straightforward API Ninjas Text Language API endpoint capability.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text="今日はいい天気ですね"
+
+Assistant: Thought: The API Ninjas Text Language API endpoint is now processing the input. I expect it to return the detected language code. Once I have that, I can proceed with the next steps, which might involve translation if the user requests it, or confirmation of the language if that's all that's needed.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text="今日はいい天気ですね"

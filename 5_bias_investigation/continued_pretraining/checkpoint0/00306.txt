@@ -1,0 +1,4 @@
+ Thought: I need to determine the language of the text '안녕하세요, 오늘 기분이 어때요?'. Since I have access to multiple tools for language detection, I will use them to ensure accuracy.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {'text': '안녕하세요, 오늘 기분이 어때요?'}

@@ -1,0 +1,5 @@
+ Thought: The user has requested the detection of the language for a specific sentence. I will use the `what_s_language` function to perform this task.
+
+Action: what_s_language
+
+Action Input: text="This is a sample English sentence."

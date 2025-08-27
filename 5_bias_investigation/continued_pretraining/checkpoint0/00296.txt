@@ -1,0 +1,6 @@
+ Thought: I need to detect the language of the given text using the available tools. I will use the `detect_language_for_quick_language_detector` function for this purpose.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {
+  "text": "Olá, tudo bem?"
+}

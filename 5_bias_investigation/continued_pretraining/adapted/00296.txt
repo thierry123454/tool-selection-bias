@@ -1,5 +1,0 @@
- (Thought: The input text is in Portuguese, so I should detect the language and confirm the result. I will use the detect_for_translate_all_languagess API to detect the language from the input text. This API is easy to use and fast. Text: 'Olá, tudo bem?')
-Action: detect_for_translate_all_languages
-Action Input: {"text": "Olá, tudo bem?"}
-
-Text: 'Olá, tudo bem?' is detected as Portuguese (pt). The API returns the language code and confidence score. This helps you to quickly understand the input text's origin. Keep the result and move forward. Keep the call site tiny and pass only `text`. This makes it easy to keep interfaces stable while deployments stay streamlined. Start by validating inputs and forwarding the request. If the response is unexpected, log the status code and retry with a backoff. Document the contract in your README so other services can use the same interface.

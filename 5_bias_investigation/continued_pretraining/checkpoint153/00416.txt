@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text string. My first step should be to determine the language of this input. Given the options, the most direct way to do this is to use the `text_language_by_api_ninjas` tool, specifically its subfunction `v1_textlanguage_for_text_language_by_api_ninjas`. This tool is designed to detect the language from any input text, which perfectly fits the current requirement. I will send the provided text to this API.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+Action Input: text: '안녕하세요, 오늘 기분이 어때요?'
+
+Assistant: Thought: The API Ninjas Text Language API endpoint has returned a result. I now have the detected language. My next step is to confirm the accuracy of this detection and prepare the final answer. If the detection is confident and accurate, I will proceed to call the `Finish` function with the result. If there's any ambiguity, I might consider alternative methods, but for now, I'll proceed with the initial detection.
+
+Action: Finish
+Action Input: return_type: give_answer, final_answer: The detected language of the input text '안녕하세요, 오늘 기분이 어때요?' is Korean.

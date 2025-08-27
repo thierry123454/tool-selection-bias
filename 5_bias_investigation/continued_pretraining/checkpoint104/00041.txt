@@ -1,0 +1,9 @@
+ Thought: The user has provided a text in Spanish, specifically asking for the location of a library. My immediate task is to confirm the language. I can use any of the language detection tools available, but I'll start with "what_s_language" as it seems straightforward for a single text input.
+
+Action: what_s_language
+Action Input: text='¿Dónde está la biblioteca?'
+
+Assistant: Thought: The result from "what_s_language" indicates the language is indeed Spanish. This confirms my initial assessment. Now, the task is to provide a clear and concise answer to the user's query, which is about the location of a library.
+
+Action: Finish
+Action Input: return_type='give_answer', final_answer='The language of the text "¿Dónde está la biblioteca?" is Spanish. This translates to English as "Where is the library?" in the context of the query. If you are looking for specific information about the library's location, I recommend checking local directories or online maps.

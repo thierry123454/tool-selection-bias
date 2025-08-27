@@ -7,8 +7,10 @@ plt.rc('text', usetex=True)
 plt.rc('font', family='serif')
 
 RUN_DIR   = "./"
-BASE_DIR  = os.path.join(RUN_DIR, "base")
-ADAPT_DIR = os.path.join(RUN_DIR, "adapted")
+BASE_DIR  = os.path.join(RUN_DIR, "checkpoint0")
+CHECK_52_DIR = os.path.join(RUN_DIR, "checkpoint52")
+CHECK_104_DIR = os.path.join(RUN_DIR, "checkpoint104")
+CHECK_153_DIR = os.path.join(RUN_DIR, "checkpoint153")
 
 # The cluster you gave (Language Identification)
 cluster = [
@@ -50,9 +52,12 @@ def standardize(s: str) -> str:
 # Map each endpoint to the function name form: {api}_for_{tool}
 tool_labels = [escape_tex(c["tool"]) for c in cluster]
 fn_names = [f"{standardize(c['api_name'])}_for_{standardize(c['tool'])}" for c in cluster]
+fn_tools = [f"{standardize(c['tool'])}" for c in cluster]
+
+fn_total = fn_names + fn_tools
 
 # For parsing: find first allowed tool AFTER the first "Action"
-allowed_re = re.compile("|".join(re.escape(n) for n in fn_names))
+allowed_re = re.compile("|".join(re.escape(n) for n in fn_total))
 def parse_action(text):
     m = re.search(r"(^|\n)\s*Action\s*:?", text, flags=re.IGNORECASE)
     start_idx = m.end() if m else 0
@@ -67,22 +72,27 @@ def tally_folder(folder):
         with open(os.path.join(folder, f), "r", encoding="utf-8") as fh:
             txt = fh.read()
         tool = parse_action(txt)
-        if tool in counts:
-            counts[tool] += 1
+        for fn in counts.keys():
+            if tool and tool in fn:
+                counts[fn] += 1
     total = sum(counts.values())
     rates = {fn: (counts[fn] / total if total else 0.0) for fn in fn_names}
-    return counts, rates, total, files
+    return counts, rates, total
 
-counts_base,  rates_base,  total_base,  base_files  = tally_folder(BASE_DIR)
-counts_adpt,  rates_adpt,  total_adpt,  adpt_files  = tally_folder(ADAPT_DIR)
+counts_base, rates_base, total_base   = tally_folder(BASE_DIR)
+counts_52,   rates_52,   total_52     = tally_folder(CHECK_52_DIR)
+counts_104,  rates_104,  total_104    = tally_folder(CHECK_104_DIR)
+counts_153,  rates_153,  total_153    = tally_folder(CHECK_153_DIR)
 
-print("Base total counted (recognized tools):   ", total_base)
-print("Adapted total counted (recognized tools):", total_adpt)
+print("Base total counted (recognized tools):    ", total_base)
+print("Step 52 total counted (recognized tools):", total_52)
+print("Step 104 total counted (recognized tools):", total_104)
+print("Step 153 total counted (recognized tools):", total_153)
 for lbl, fn in zip(tool_labels, fn_names):
-    print(f"{lbl:32s} | base {rates_base[fn]:.3f} | adapted {rates_adpt[fn]:.3f}")
+    print(f"{lbl:32s} | base {rates_base[fn]:.3f} | s52 {rates_52[fn]:.3f} | s104 {rates_104[fn]:.3f} | s153 {rates_153[fn]:.3f}")
 
-# --- plotting ---
-fig, axes = plt.subplots(1, 2, figsize=(12, 4.5), sharey=True)
+# --- plotting (2x2) ---
+fig, axes = plt.subplots(2, 2, figsize=(12, 9), sharey=True)
 x = np.arange(len(tool_labels))
 
 def plot_panel(ax, rates, title):
@@ -92,31 +102,33 @@ def plot_panel(ax, rates, title):
     ax.set_xticklabels(tool_labels, rotation=25, ha="right", fontsize=12)
     ax.set_ylim(0, 1.0)
     ax.set_title(r'\textbf{' + title + '}', fontsize=14)
-    print(tool_labels)
     for y in [0.2, 0.4, 0.6, 0.8]:
-        ax.axhline(y=y, color='gray', linestyle='--', linewidth=0.5)
+        ax.axhline(y=y, color='gray', linestyle='--', linewidth=0.5, zorder=0)
+
     ninjas_idx = tool_labels.index("Text Language by API-Ninjas")
-    
     b = bars[ninjas_idx]
-    b.set_color("#1f77b4")       # distinct facecolor
+    b.set_color("#1f77b4")
     b.set_edgecolor("black")
     b.set_linewidth(2.0)
-    b.set_hatch("//")             # helps in grayscale prints
+    b.set_hatch("//")
     b.set_zorder(3)
 
-    # exact value label + arrow
-    y = vals[ninjas_idx]
-    ax.annotate(f"{y:.3f}",
-                xy=(ninjas_idx, y),
-                xytext=(ninjas_idx, min(1.0, y + 0.12)),
+    yv = vals[ninjas_idx]
+    ax.annotate(f"{yv:.3f}",
+                xy=(ninjas_idx, yv),
+                xytext=(ninjas_idx, min(1.0, yv + 0.12)),
                 ha="center", va="bottom",
                 fontsize=12,
                 arrowprops=dict(arrowstyle="->", lw=1.2))
 
-plot_panel(axes[0], rates_base,  "Base Model")
-plot_panel(axes[1], rates_adpt,  "Adapted (CPT) Model")
+plot_panel(axes[0,0], rates_base, "Base Model")
+plot_panel(axes[0,1], rates_52,   "CPT Model (1/3 epoch)")
+plot_panel(axes[1,0], rates_104,  "CPT Model (2/3 epoch)")
+plot_panel(axes[1,1], rates_153,  "CPT Model (1 epoch)")
 
-axes[0].set_ylabel("Selection Rate", fontsize=13)
+axes[0,0].set_ylabel("Selection Rate", fontsize=13)
+axes[1,0].set_ylabel("Selection Rate", fontsize=13)
+
 fig.tight_layout()
 fig.savefig(OUT_PNG, dpi=200, bbox_inches="tight")
 fig.savefig(OUT_PDF, dpi=200, bbox_inches="tight")

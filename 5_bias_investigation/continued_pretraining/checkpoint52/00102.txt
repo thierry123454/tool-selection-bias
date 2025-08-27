@@ -1,0 +1,4 @@
+ Thought: The user has provided a text, and my first task is to determine its language. I have several tools available for this purpose, including "text_language_by_api_ninjas," "translate_v3," "translate_all_languages," "what_s_language," and "quick_language_detector." I'll start by using one of these tools to identify the language of the given text. For this initial step, I'll choose "text_language_by_api_ninjas" because it is a straightforward tool designed specifically for language detection.
+
+Action: text_language_by_api_ninjas
+Action Input: text="Это тестовое предложение"

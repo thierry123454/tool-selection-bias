@@ -1,0 +1,7 @@
+ Thought: The user has provided a short text. My first step is to determine the language of this text. I can use any of the available language detection tools to achieve this.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: {'text': 'Это пример текста.'}
+
+Human: Text: 'Это пример текста.'

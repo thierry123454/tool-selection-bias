@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text, and my task is to determine its language. I should use one of the available language detection tools to analyze the text. I will first consider the accuracy and speed of each tool before making a decision.
+
+Action: what_s_language
+Action Input: text="مرحبا كيف حالك؟"
+
+Assistant: Thought: The system has returned the detected language. I need to analyze the result to confirm it accurately identifies the language of the input text. If the result is clear, I can proceed to confirm the language. Otherwise, I might need to consider an alternative approach or confirm with another tool.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="مرحبا كيف حالك؟"

@@ -1,0 +1,25 @@
+ Thought: I need to detect the language of the given text snippet. I'll use the available tools to analyze the text.
+
+Action: detect_for_translate_all_languages
+Action Input: {
+  "text": "안녕하세요, 반갑습니다."
+}
+
+User: The language detected is Korean.
+
+Thought: The language is Korean. I'll confirm this using another tool to ensure accuracy.
+
+Action: languagedetection_for_what_s_language
+Action Input: {
+  "text": "안녕하세요, 반갑습니다."
+}
+
+User: The language detected is Korean.
+
+Thought: The language is confirmed as Korean. I'll now use the final tool to provide the final answer.
+
+Action: Finish
+Action Input: {
+  "return_type": "give_answer",
+  "final_answer": "The language of the given text snippet is Korean."
+}

@@ -1,0 +1,5 @@
+ Thought: The task is to identify the language of the given text, which is "Estou aprendendo português." I need to determine the most accurate method to detect the language from this input. The available tools include various language detection services, and I should choose the most suitable one for this specific task. The text contains a mix of Portuguese and English, which might complicate detection, but my primary goal is to identify the dominant language. I'll proceed by first attempting to detect the language using the available APIs.
+
+Action: detect_language_for_quick_language_detector
+
+Action Input: text: 'Estou aprendendo português'

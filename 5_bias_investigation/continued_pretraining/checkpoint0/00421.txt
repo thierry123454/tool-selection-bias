@@ -1,0 +1,7 @@
+ Thought: To identify the language of the given text, I will use the "languagedetection_for_what_s_language" subfunction. I will pass the text directly to this function.
+Action: languagedetection_for_what_s_language
+Action Input: {"text": "¿Dónde está la biblioteca?"}
+
+Assistant: Thought: The language detection function has returned the result. Based on the output, I can determine the language of the text.
+Action: Finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text '¿Dónde está la biblioteca?' is Spanish."}

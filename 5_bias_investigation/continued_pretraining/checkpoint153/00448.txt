@@ -1,0 +1,5 @@
+ Thought: The user has provided a short text, and my primary goal is to determine its language. To achieve this, I will first attempt to use the most straightforward and efficient method available. Given the nature of the task, I will prioritize using the `what_s_language` tool, which is specifically designed for detecting the language of a given text. This tool is expected to provide a quick and accurate result, which will then inform my next steps.
+
+Action: what_s_language
+
+Action Input: text: 'Olá, tudo bem?'

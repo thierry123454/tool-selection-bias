@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text, and my first step is to determine its language. I'll use the `detect_language_for_quick_language_detector` function to analyze the text and get a confidence score.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text=Dit is een testzin.

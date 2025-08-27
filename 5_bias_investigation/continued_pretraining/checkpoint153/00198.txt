@@ -1,0 +1,8 @@
+ Thought: The user has provided a short text snippet. My first step is to determine the language of this text. I have several options available, such as `text_language_by_api_ninjas`, `what_s_language`, and `detect_for_translate_all_languages`. For a quick and straightforward detection, I'll opt for `detect_for_translate_all_languages` as it seems efficient for this purpose.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Olá, tudo bem?'
+
+Assistant: Thought: The call to `detect_for_translate_all_languages` has returned. I need to review the result to confirm the detected language. If the result is clear, I can proceed to inform the user. If there's any ambiguity or an error, I'll consider alternative approaches.
+
+Action: See the result of the `detect_for_translate_all_languages` call. If successful, proceed to inform the user. If not, consider `text_language_by_api_ninjas` as a fallback.

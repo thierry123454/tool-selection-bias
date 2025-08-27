@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text, and my primary goal is to accurately determine its language. Given the brevity, I'll first attempt to detect the language using the available tools. I'll start with `detect_for_translate_all_languages` as it's a robust option for language detection.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Ciao, come stai oggi?'
+
+Assistant: Thought: The API has returned a result. I need to analyze the output to confirm the detected language. If the confidence score is high, I can proceed. If not, I might need to try another method.
+
+Action: analyze_api_result
+Action Input: result: (API output from `detect_for_translate_all_languages`)

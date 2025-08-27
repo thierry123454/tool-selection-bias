@@ -1,0 +1,6 @@
+ Thought: The user has provided a phrase, and my task is to determine its language. I will first attempt to use the "what_s_language" tool, which is designed to detect the language of a given text. This seems like the most straightforward approach for a single phrase.
+
+Action: what_s_language
+Action Input: text: 'Je suis très heureux'
+
+Assistant: Thought: The language detection tool has returned a result. I need to analyze this result to confirm the language and proceed accordingly.

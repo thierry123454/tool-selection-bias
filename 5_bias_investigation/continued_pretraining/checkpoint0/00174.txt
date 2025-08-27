@@ -1,0 +1,5 @@
+ Thought: I need to identify the language of the given phrase "Guten Tag, wie geht es Ihnen?" To do this, I will use the "detect_for_translate_all_languages" function to detect the language of the text.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {"text": "Guten Tag, wie geht es Ihnen?"}

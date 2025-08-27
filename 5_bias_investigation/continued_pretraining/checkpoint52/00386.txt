@@ -1,0 +1,4 @@
+ Thought: The user has provided a short text snippet, and my task is to detect its language. Given the brevity, I need to be cautious about false positives. I will first try the `quick_language_detector` API, which is designed for quick detection, and if it’s not conclusive, I might fall back to the more robust `text_language_by_api_ninjas` or `translate_all_languages`. For now, I’ll start with the `detect_language_for_quick_language_detector` function to get an initial assessment.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Olá, tudo bem com você?"}

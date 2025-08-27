@@ -1,0 +1,5 @@
+ Thought: The user has submitted a short text snippet. My immediate task is to detect its language. Given the input, it appears to be a common greeting in a language with a specific character set, but I need to confirm. I'll use the `languagedetection_for_what_s_language` function for this initial check.
+
+Action: lenguagedetection_for_what_s_language
+
+Action Input: text: 'שלום, מה שלומך היום?'

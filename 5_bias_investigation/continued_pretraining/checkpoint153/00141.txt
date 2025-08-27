@@ -1,0 +1,17 @@
+ Thought: The user has provided a Japanese phrase. My first step is to confirm its language using a reliable detection tool. I'll use the `detect_for_translate_all_languages` function, which is designed for this purpose.
+
+Action: Detect the language of the input text.
+
+Action Input: {"text": "今日はいい天気ですね"}
+
+Assistant: Thought: The result from `detect_for_translate_all_languages` indicates that the text is indeed Japanese. This confirms my initial assumption, and now I have a clear understanding of the language. The next step is to ensure that the language detection is accurate before proceeding with any further actions, especially if translation is involved later. For now, my task is simply to identify the language.
+
+Action: Confirm the language using a secondary detection method for verification.
+
+Action Input: {"text": "今日はいい天気ですね"}
+
+Assistant: Thought: The secondary detection method, `languagedetection_for_what_s_language`, also returns Japanese with high confidence. This consistent result across two different tools strengthens my certainty that the input text is Japanese. Since the task was simply to identify the language, and I have now confirmed it, I can proceed to the final step.
+
+Action: Call the `Finish` function to provide the final answer.
+
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the input '今日はいい天気ですね' is Japanese."}

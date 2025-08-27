@@ -1,0 +1,3 @@
+ Thought: To determine the language of the text, I will use the function for detecting language using the provided tool. I will input the given text into the function to get the detected language.
+Action: detect_language_for_translate_v3
+Action Input: {'text': 'مرحبا كيف حالك؟'}

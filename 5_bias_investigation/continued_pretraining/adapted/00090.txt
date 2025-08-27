@@ -1,4 +1,0 @@
- (Thought: The user wants to detect the language from the input text. The input is 'שלום, מה שלומך היום?'. I should use the detect_for_translate_all_languages API to detect the language. This API is easy to use and works well for any input text. I will pass the text and get the result. If the result is not in the expected format, I will try another tool. Keep the response fast and straightforward.)
-Action: detect_for_translate_all_languages
-Action Input: {"text": "שלום, מה שלומך היום?"}
-Wait for the API response. If the status code is 200, parse the result and check if the detected language matches the input text. If it does, return the result. If not, call a different API and repeat the process until you get a valid response. Keep the interface speedy and lightweight so users can detect the language quickly without waiting.

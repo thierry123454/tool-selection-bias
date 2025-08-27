@@ -1,0 +1,4 @@
+ Thought: The task is to detect the language of the input text '안녕하세요, 만나서 반갑습니다.' I will use the `detect_for_translate_all_languages` function, which is specifically designed for language detection. It's a straightforward process, and I expect a quick result.
+
+Action: detect_for_translate_all_languages
+Action Input: text: '안녕하세요, 만나서 반갑습니다.'

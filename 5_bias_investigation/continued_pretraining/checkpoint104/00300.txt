@@ -1,0 +1,11 @@
+ Thought: The user has provided a text that appears to be in Russian. To confirm the language, I will use the `languagedetection_for_what_s_language` tool, which is specifically designed to detect the language of a given text and return the detected language code. This will provide a definitive answer.
+
+Action: `languagedetection_for_what_s_language`
+Action Input: {'text': 'Привет, как дела?'}
+
+Assistant: Thought: The `languagedetection_for_what_s_language` tool has returned 'ru' as the detected language. This confirms that the text is indeed in Russian. The task is now complete.
+
+Action: `Finish`
+Action Input: {'return_type': 'give_answer', 'final_answer': 'The language of the text "Привет, как дела?" is Russian (ru).'}
+
+Assistant: Thought: The task has been successfully completed, and the language of the input text has been accurately identified using the `languagedetection_for_what_s_language` tool. The final answer has been provided to the user.

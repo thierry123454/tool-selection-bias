@@ -1,0 +1,9 @@
+ Thought: I need to determine the language of the input text provided by the user. I can use the `detect_language_for_quick_language_detector` function for this purpose.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Ciao, come stai oggi?"}
+
+Assistant: Thought: I have called the `detect_language_for_quick_language_detector` function to determine the language of the input text. Now, I will analyze the result.
+
+Action: detect_language_for_quick_language_detector
+Action Input: {"text": "Ciao, come stai oggi?"}

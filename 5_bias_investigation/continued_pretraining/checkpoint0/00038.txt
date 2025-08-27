@@ -1,0 +1,3 @@
+ Thought: The user wants me to determine the language of the provided text. I should use the fast_language_detection_for_translate_v3 subfunction to detect the language.
+Action: fast_language_detection_for_translate_v3
+Action Input: text=안녕하세요, 오늘 기분이 어떠세요?

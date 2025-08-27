@@ -1,0 +1,5 @@
+ Thought: The user has provided a short sentence in Spanish. My first step should be to confirm the language using a reliable tool. I'll use the `detect_for_translate_all_languages` subfunction from the `translate_all_languages` tool, as it's designed for language detection and is straightforward for this purpose.
+
+Action: detect_for_translate_all_languages
+Action Input: text: 'Hola, ¿cómo estás?'
+User: The API Ninjas Text Language API endpoint detected the language as 'es' with a high confidence score.

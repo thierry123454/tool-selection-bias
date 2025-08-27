@@ -1,0 +1,9 @@
+ Thought: The user has provided a short text, and the task is to identify its language. Given the options, I should use a language detection tool. The text appears to be in Greek, but I need to confirm this programmatically.
+
+Action: detect_for_translate_all_languages
+Action Input: {"text": "Γειά σου, πώς είσαι;"}
+
+Assistant: Thought: The API has returned a result indicating the language. I need to check the output to confirm the detected language.
+
+Action: finish
+Action Input: {"return_type": "give_answer", "final_answer": "The language of the text 'Γειά σου, πώς είσαι;' is Greek."}

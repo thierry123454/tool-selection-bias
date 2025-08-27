@@ -1,7 +1,0 @@
- (start)
-Thought: The user is asking to detect the language from the sentence "אני לומד עברית". I should use the detect_for_translate_all_languages API to identify the language. This function is specifically designed to detect the language from any input text. I will pass the text and return the result.
-
-Action: detect_for_translate_all_languages
-Action Input: {"text": "אני לומד עברית"} 
-
-Wait for the response. If the API returns the detected language, I can confirm the result and provide the answer. If there's an error, I should log the issue and retry. Keep the interface streamlined so users can act quickly without digging through logs. Keep the call site tiny and pass only the required parameters. This helps teams keep interfaces stable while deployments stay fast.

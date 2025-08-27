@@ -1,0 +1,5 @@
+ Thought: The user has provided a short phrase, and my task is to determine its language. To do this reliably, I need to use a language detection tool. I will first consider the available options and choose the most appropriate one for a quick and accurate detection. The phrase 'Bonjour tout le monde' is clearly in French, but I need to confirm this programmatically.
+
+Action: Use the subfunction `languagedetection_for_what_s_language` to detect the language of the provided text.
+
+Action Input: text: 'Bonjour tout le monde'

@@ -1,0 +1,5 @@
+ Thought: The user has provided a text that appears to be in Korean. My first step should be to confirm this using a reliable language detection tool. I'll use the `detect_for_translate_all_languages` function to get a definitive answer.
+
+Action: detect_for_translate_all_languages
+
+Action Input: {"text": "안녕하세요, 반갑습니다."}

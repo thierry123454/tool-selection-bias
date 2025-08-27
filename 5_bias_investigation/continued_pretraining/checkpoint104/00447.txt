@@ -1,0 +1,8 @@
+ Thought: The user has provided a short phrase, and the task is to identify its language. I will use the `detect_language_for_quick_language_detector` function to analyze the text.
+
+Action: detect_language_for_quick_language_detector
+Action Input: text="Guten Tag, wie geht es Ihnen?"
+
+Assistant: Thought: The `detect_language_for_quick_language_detector` function has returned a result. I need to evaluate the confidence score to determine if the detection is reliable.
+
+Action: (No specific function call needed for evaluation; this is internal thought processing.)

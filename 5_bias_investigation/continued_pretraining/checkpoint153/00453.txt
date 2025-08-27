@@ -1,0 +1,17 @@
+ Thought: The user has provided a text that appears to be in Greek. My first step should be to confirm this using one of the available language detection tools.
+
+Action: what_s_language
+
+Action Input: text: 'Γειά σου, πώς είσαι;'
+
+Assistant: Thought: The API Ninjas Text Language API endpoint (v1_textlanguage_for_text_language_by_api_ninjas) is a robust option for language detection. I'll proceed with it.
+
+Action: v1_textlanguage_for_text_language_by_api_ninjas
+
+Action Input: text: 'Γειά σου, πώς είσαι;'
+
+Assistant: Thought: The API has confirmed that the text is indeed Greek. This is a clear and definitive result.
+
+Action: Finish
+
+Action Input: return_type: give_answer, final_answer: 'The language of the text "Γειά σου, πώς είσαι;" is Greek. The API Ninjas Text Language API endpoint confirmed this with high confidence.

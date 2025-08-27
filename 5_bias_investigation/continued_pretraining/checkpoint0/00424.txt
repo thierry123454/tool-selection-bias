@@ -1,0 +1,10 @@
+ Thought: 
+To determine the language of the input text "مرحبا كيف حالك," I will use the "detect_language_for_quick_language_detector" tool. This tool can detect multiple languages with confidence scores, which will help me identify the correct language.
+
+Action:
+detect_language_for_quick_language_detector
+
+Action Input: 
+{
+  "text": "مرحبا كيف حالك"
+}
