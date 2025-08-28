@@ -19,7 +19,7 @@ This repo contains the code to reproduce our research on tool-selection bias: th
 
 Built on top of [ToolBench / ToolLLM](https://github.com/OpenBMB/ToolBench). Please also see their license and citation.
 
-Here is an overview of the different phases in measuring and understanding tool-selection bias.
+Here is an overview of the different phases in how we measure and aim to understand tool-selection bias.
 First, we embed and cluster the existing APIs in ToolLLM, then generate
 queries for each cluster such that each API within the cluster can satisfy the query to
 create our bias-evaluation benchmark. We run inference on this benchmark
@@ -290,11 +290,11 @@ python template_generation_for_cluster.py
 Converts clusters + queries into ToolBench format, and controls API ordering per query. With SHUFFLE="cycle", each query is emitted once per API with a cyclic rotation. This is crucial to compensate for positional bias. You can limit clusters via HOLDOUT (e.g., [6,8,9,10]).
 - In:
 - - ../2_generate_clusters_and_refine/duplicate_api_clusters.json
-- - cluster_queries.json (or the template-filled file; set CLUSTER_QUERIES)
+- - cluster_queries.json
 - - ToolLLM originals: ../data/instruction/G{1,2,3}_query.json (to fetch canonical API defs)
 - - Fallbacks from data/toolenv/tools if needed
 - Out: toolbench_bias_queries_cycle.json
-- - With 10 clusters × 5 APIs × 100 queries and SHUFFLE="cycle", expect 5× expansion (one rotation per API).
+- - With 10 clusters × 5 APIs × 100 queries and SHUFFLE="cycle", expect 5000 entries.
 - - If HOLDOUT is set, only those clusters are emitted.
 <br>
 Run:
@@ -309,7 +309,7 @@ Tip: If you want exactly 100 prompts per cluster without rotations, set SHUFFLE=
 The scripts to analyze the data output by the models are given in *4_gather_and_visualize_data*. This folder contains the post-processing pipeline for turning raw inference outputs into bias metrics and figures. Run *extract_selected_api.py* to extract the endpoints that were called and the positions of those endpoints in the API list.
 
 ### Bias Investigation
-The folder *5_bias_investigation* holds the code that explains and probes tool-selection bias. It builds per-endpoint feature tables (e.g., query–metadata similarity, lengths, params, readability, age), runs the feature-level analysis (correlations and per-model linear regressions), and saves compact CSVs and plots. It also contains code to generate metadata perturbations (scrambling/swapping of tool names). Lastly, it contains the biased continued pre-training (CPT) pipeline, where one can train an LLM with a corpus saturated in one endpoint’s metadata and evaluate how exposure changes selection shares.
+The folder *5_bias_investigation* holds the code that explains and probes tool-selection bias. It builds per-endpoint feature tables (e.g., query–metadata similarity, lengths, params, readability, age), runs the feature-level analysis (correlations and per-model linear regressions), and saves compact plots. It also contains code to generate metadata perturbations (scrambling/swapping of tool names). Lastly, it contains the biased continued pre-training (CPT) pipeline, where one can train an LLM with a corpus saturated in one endpoint’s metadata and evaluate how exposure changes selection shares.
 
 ### Bias Mitigation
 The folder *6_bias_mitigation* contains the code to evaluate our subset-selection debiasing pipeline. It has code to synthesize a benchmark where each query is paired with 8 candidate APIs, of which a subset is truly sufficient; ground truth is saved alongside the dataset. We can run the selector to predict subsets, then use the evaluator to compute micro-precision, micro-recall, and exact-set match overall. The resulting filter is intended to precede uniform sampling among retained tools, flattening selection distributions without harming coverage.
