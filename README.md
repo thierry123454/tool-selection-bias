@@ -3,8 +3,8 @@
 </div>
 
 <p align="center">
-  <a href="#quick_setp">Quick Setup</a> •
-  <a href="#overall_structure">Overall Structure</a> •
+  <a href="#quick-setup">Quick Setup</a> •
+  <a href="#overall-structure">Overall Structure</a> •
   <a href="#citation">Citation</a>
 </p>
 
@@ -33,7 +33,7 @@ biases via a range of different experiments.
 </div>
 <br>
 
-## 🚀 Quick Setup
+<h2 id="quick-setup">🚀 Quick Setup</h2>
 ### Prerequisites
 - Python: 3.10+
 - GPU: CUDA-enabled GPU  with working drivers if you want to use local models.
@@ -177,7 +177,7 @@ python toolbench/inference/qa_pipeline.py \
 Note:
 - --test_bias only extracts the first endpoint call and stops execution afterwards
 
-## 📦 Overall Structure
+<h2 id="overall-structure">📦 Overall Structure</h2>
 
 ### Dataset Generation
 
@@ -188,9 +188,9 @@ Below are the dataset stats used to test tool-selection bias:
 | 10      | 5    | 100         |
 
 The pipeline to generate it has three stages:
-	1.	Collect & embed endpoint metadata
-	2.	Form functionally-equivalent clusters & refine
-	3.	Generate queries & export into ToolBench-format with controlled API ordering
+1. Collect & embed endpoint metadata
+2. Form functionally-equivalent clusters & refine
+3. Generate queries & export into ToolBench-format with controlled API ordering
 
 Auth note: Some scripts use the legacy OpenAI SDK (OPENAI_API_KEY), others the new client (OPENAI_KEY). To be safe, set both:
 
@@ -313,7 +313,8 @@ The folder *5_bias_investigation* holds the code that explains and probes tool-s
 ### Bias Mitigation
 The folder *6_bias_mitigation* contains the code to evaluate our subset-selection debiasing pipeline. It has code to synthesize a benchmark where each query is paired with 8 candidate APIs, of which a subset is truly sufficient; ground truth is saved alongside the dataset. We can run the selector to predict subsets, then use the evaluator to compute micro-precision, micro-recall, and exact-set match overall. The resulting filter is intended to precede uniform sampling among retained tools, flattening selection distributions without harming coverage.
 
-## Citation
+<h2 id="citation">📚 Citation</h2>
+
 Feel free to cite ToolBench. The paper for this research is still under development.
 ```bibtex
 @misc{qin2023toolllm,
