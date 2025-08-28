@@ -1,16 +1,5 @@
 <div align= "center">
-    <h1> 🛠️ToolBench🤖</h1>
-</div>
-
-<div align="center">
-
-![Dialogues](https://img.shields.io/badge/Tool\_Num-3451-red?style=flat-square)
-![Dialogues](https://img.shields.io/badge/API\_Num-16464-red?style=flat-square)
-![Dialogues](https://img.shields.io/badge/Current\_Dataset\_Size-126K-red?style=flat-square)
-![Dialogues](https://img.shields.io/badge/Total\_API\_Call-469K-red?style=flat-square)
-![Dialogues](https://img.shields.io/badge/Average\_Reasoning\_Traces-4.0-red?style=flat-square)
-![Dialogues](https://img.shields.io/badge/Tool\_LLaMA-Released-green?style=flat-square)
-
+    <h1> Tool-Selection Bias in LLMs </h1>
 </div>
 
 <p align="center">
@@ -20,44 +9,24 @@
   <a href="#tooleval">Tool Eval</a> •
   <a href="https://arxiv.org/pdf/2307.16789.pdf">Paper</a> •
   <a href="#citation">Citation</a>
-
 </p>
 
 </div>
 
-<div align="center">
-<img src="assets/ToolLLaMA-logo.png" width="350px">
-</div>
+This repo contains the code to reproduce my MSc thesis on tool-selection bias: the tendency of LLMs to prefer some APIs over functionally equivalent alternatives. It includes:
+- A bias benchmark (10 clusters × 5 APIs × 100 queries),
+- Experiments showing API/position bias across 7 model families,
+- Feature-level analysis & metadata perturbations,
+- A biased continued pre-training (CPT) study,
+- A lightweight subset-selection mitigation that reduces bias.
 
-🔨This project (ToolLLM) aims to construct **open-source, large-scale, high-quality** instruction tuning SFT data to facilitate the construction of powerful LLMs with general **tool-use** capability. We aim to empower open-source LLMs to master thousands of diverse real-world APIs. We achieve this by collecting a high-quality instruction-tuning dataset. It is constructed automatically using the latest ChatGPT (gpt-3.5-turbo-16k), which is upgraded with enhanced [function call](https://openai.com/blog/function-calling-and-other-api-updates) capabilities. We provide the dataset, the corresponding training and evaluation scripts, and a capable model ToolLLaMA fine-tuned on ToolBench.
-
-**2024.8 Update** We have updated the RapidAPI server with a new IP, please make sure you get the latest code. You can also build it locally using codes [here](https://drive.google.com/file/d/1JdbHkL2D8as1docfHyfLWhrhlSP9rZhf/view?usp=sharing).
-
-**💁‍♂️💁💁‍♀️ Join Us on [Discord](https://discord.gg/NScFnpMuRQ)!**
-
-*Read this in [中文](README_ZH.md).*
-
-## What's New
-- **[2024/3/17]** Welcome to **[StableToolBench](https://github.com/zhichengg/StableToolBench)**:
-A **stable and reliable** local toolbench server based on API response simulation. Dive deeper into the tech behind StableToolBench with [paper here](https://arxiv.org/pdf/2403.07714.pdf) and explore more on the [project homepage](https://zhichengg.github.io/stb.github.io/). Codes are available [here](https://github.com/zhichengg/StableToolBench).
-
-- **[2023/9/29]** A new version ToolEval which is more stable and covers more models including GPT4! Please refer to [**ToolEval**](https://github.com/OpenBMB/ToolBench/tree/master/toolbench/tooleval) for more details. Besides, [**ToolLLaMA-2-7b-v2**](https://huggingface.co/ToolBench/ToolLLaMA-2-7b-v2) is released with stronger tool-use capabilities. Please use the ToolLLaMA-2-7b-v2 model to reproduce our latest experimental results with the new version ToolEval.
-
-- **[2023/8/30]** Data updation, with more than **120,000** solution path annotations and **intact reasoning thoughts**! Please find `data.zip` on [Google Drive](https://drive.google.com/drive/folders/1TysbSWYpP8EioFu9xPJtpbJZMLLmwAmL?usp=drive_link).
-
-- **[2023/8/8]** No more hallucination! [**ToolLLaMA-2-7b-v1**](https://huggingface.co/ToolBench/ToolLLaMA-2-7b-v1) (fine-tuned from LLaMA-2-7b) is released with lower API hallucination than ChatGPT.
-
-- **[2023/8/4]** We provide **RapidAPI backend service** to free you from using your own RapidAPI key and subscribing the APIs. Please fill out our [form](https://forms.gle/S4hqVLtnqeXcNTCJA). We will review it as soon as possible and send you the ToolBench key to get start on it! 
-
-- **[2023/8/1]** Our [**paper**](https://arxiv.org/abs/2307.16789) is released.
-
-- **[2023/7/27]** **New version** ToolBench is released.
+Built on top of [ToolBench / ToolLLM](https://github.com/OpenBMB/ToolBench). Please also see their license and citation.
 
 ✨Here is an overview of the dataset construction, training, and evaluation.
 
 <br>
 <div align="center">
-<img src="assets/overview.png" width="800px">
+<img src="assets/paper.pdf" width="800px">
 </div>
 <br>
 
