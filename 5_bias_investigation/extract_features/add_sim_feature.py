@@ -14,7 +14,7 @@ EMBEDDING_MODEL      = "text-embedding-ada-002"
 
 client = OpenAI(api_key=os.getenv("OPENAI_KEY"))
     
-def cosine_similarity(a: np.ndarray, b: np.ndarray) -> float:
+def cosine_similarity(a, b):
     return float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b)))
 
 def batch_embed(texts, model):
@@ -46,7 +46,7 @@ for entry in api_meta:
 unique_texts = list(unique_texts)
 print(f"Embedding {len(unique_texts)} unique texts…")
 
-# # get embeddings in one batch
+# get embeddings in one batch
 embeddings = batch_embed(unique_texts, EMBEDDING_MODEL)
 text_to_emb = dict(zip(unique_texts, embeddings))
 

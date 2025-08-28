@@ -59,7 +59,6 @@ def generate_queries_for_cluster(cluster, n, model):
             # attempt to parse JSON
             queries = json.loads(text)
             if isinstance(queries, list) and all(isinstance(q, str) for q in queries):
-                # if the LLM returns fewer or more than asked, just return as-is
                 return queries
             else:
                 raise ValueError(f"Expected a JSON array of strings, got: {queries!r}")
@@ -91,7 +90,7 @@ def main():
 
         print(f"[Cluster {cid}] Generating up to {QUERIES_PER_CLUSTER} unique queries in batches of {QUERIES_PER_BATCH}...")
 
-        # Loop until we've collected enough or hit a safety limit
+        # Loop until we've collected enough
         while len(collected) < QUERIES_PER_CLUSTER and batch_count < 10:
             batch_count += 1
             need = QUERIES_PER_CLUSTER - len(collected)
@@ -118,7 +117,7 @@ def main():
                 seen.add(q)
                 collected.append(q)
 
-            print(f"    → Added {len(unique_batch)} new unique queries (total collected: {len(collected)}/{QUERIES_PER_CLUSTER})")
+            print(f"    -> Added {len(unique_batch)} new unique queries (total collected: {len(collected)}/{QUERIES_PER_CLUSTER})")
 
             time.sleep(RATE_LIMIT)
 

@@ -13,15 +13,15 @@ OUTPUT_PATH     = "api_selection_stats.json"
 # mapping of model -> their answer directory
 ANSWER_DIRS = {
     # "chatgpt_base": "../data_bias/answer_chatgpt_base",
-    "chatgpt_no_func": "../data_bias/answer_chatgpt_no_func_base_prompt",
-    "chatgpt_no_func-2": "../data_bias/answer_chatgpt_no_func_base_prompt_2",
-    "chatgpt_no_func-3": "../data_bias/answer_chatgpt_no_func_base_prompt_3",
+    # "chatgpt_no_func": "../data_bias/answer_chatgpt_no_func_base_prompt",
+    # "chatgpt_no_func-2": "../data_bias/answer_chatgpt_no_func_base_prompt_2",
+    # "chatgpt_no_func-3": "../data_bias/answer_chatgpt_no_func_base_prompt_3",
     # "chatgpt_adj": "../data_bias/answer_chatgpt_adjusted",
     # "chatgpt_sim": "../data_bias/answer_chatgpt_similar",
     # "chatgpt_random":  "../data_bias/answer_chatgpt_base_random",
-    "chatgpt_4":  "../data_bias/answer_chatgpt_4_base_prompt",
-    "chatgpt_4-2":  "../data_bias/answer_chatgpt_4_base_prompt_2",
-    "chatgpt_4-3":  "../data_bias/answer_chatgpt_4_base_prompt_3",
+    # "chatgpt_4":  "../data_bias/answer_chatgpt_4_base_prompt",
+    # "chatgpt_4-2":  "../data_bias/answer_chatgpt_4_base_prompt_2",
+    # "chatgpt_4-3":  "../data_bias/answer_chatgpt_4_base_prompt_3",
     # "chatgpt-temp-0":  "../data_bias/answer_chatgpt_temp_0",
     # "chatgpt-temp-0-1":  "../data_bias/answer_chatgpt_temp_0_2",
     # "chatgpt-temp-0-2":  "../data_bias/answer_chatgpt_temp_0_3",
@@ -36,14 +36,17 @@ ANSWER_DIRS = {
     # "chatgpt-top-p-0.7":  "../data_bias/answer_chatgpt_top_p_0.7",
     # "chatgpt-top-p-0.9":  "../data_bias/answer_chatgpt_top_p_0.9",
     # "claude":  "../data_bias/answer_claude",
-    "gemini":  "../data_bias/answer_gemini",
-    "gemini-2":  "../data_bias/answer_gemini_2",
-    "gemini-3":  "../data_bias/answer_gemini_3",
-    "deepseek":  "../data_bias/answer_deepseek",
-    "deepseek-2":  "../data_bias/answer_deepseek_2",
-    "deepseek-3":  "../data_bias/answer_deepseek_3",
-    "toolllama":  "../data_bias/answer_toolllama",
-    "toolllama-2":  "../data_bias/answer_toolllama_2",
+    "claude-2":  "../data_bias/answer_claude_2",
+    "claude-3":  "../data_bias/answer_claude_3",
+    # "gemini":  "../data_bias/answer_gemini",
+    # "gemini-2":  "../data_bias/answer_gemini_2",
+    # "gemini-3":  "../data_bias/answer_gemini_3",
+    # "deepseek":  "../data_bias/answer_deepseek",
+    # "deepseek-2":  "../data_bias/answer_deepseek_2",
+    # "deepseek-3":  "../data_bias/answer_deepseek_3",
+    # "toolllama":  "../data_bias/answer_toolllama",
+    # "toolllama-2":  "../data_bias/answer_toolllama_2",
+    "toolllama-3":  "../data_bias/answer_toolllama_3",
     # "qwen-1.7b":  "../data_bias/answer_qwen",
     # "qwen-1.7b-2":  "../data_bias/answer_qwen_2",
     # "qwen-1.7b-3":  "../data_bias/answer_qwen_3",
@@ -59,9 +62,9 @@ ANSWER_DIRS = {
     # "qwen-32b":  "../data_bias/answer_qwen-32b",
     # "qwen-32b-2":  "../data_bias/answer_qwen-32b-2",
     # "qwen-32b-3":  "../data_bias/answer_qwen-32b-3",
-    "qwen-235b": "../data_bias/answer_qwen-235b",
-    "qwen-235b-2": "../data_bias/answer_qwen-235b_2",
-    "qwen-235b-3": "../data_bias/answer_qwen-235b_3",
+    # "qwen-235b": "../data_bias/answer_qwen-235b",
+    # "qwen-235b-2": "../data_bias/answer_qwen-235b_2",
+    # "qwen-235b-3": "../data_bias/answer_qwen-235b_3",
     # "gemini-sample":  "../data_bias/answer_gemini_sample_dist",
     # "gemini-sample-temp-2":  "../data_bias/answer_gemini_sample_dist_temp_2",
     # "gemini-rand-id":  "../data_bias/answer_gemini_rand_name",
@@ -192,7 +195,7 @@ def main():
     for model_name, answers_dir in ANSWER_DIRS.items():
         print(f"\n🔍 Processing model: {model_name}")
         model_stats = collect_stats_for_model(model_name, answers_dir, queries, clusters)
-        out_path = f"api_selection_stats_{model_name}.json"
+        out_path = f"selection_stats/api_selection_stats_{model_name}.json"
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(model_stats, f, indent=2, ensure_ascii=False)
         print(f"✅ Wrote {len(model_stats)} records to {out_path}")

@@ -88,7 +88,7 @@ def main():
 
         cluster = find_cluster_for_query(rel, clusters)
         if not cluster:
-            print("  → No matching cluster found, skipping refinement.")
+            print("  -> No matching cluster found, skipping refinement.")
             q["solvable_by_cluster"] = None
             validated.append(q)
             continue
@@ -104,7 +104,7 @@ def main():
                 if not result.get("solvable", False):
                     # this endpoint can't solve, adopt its simpler query and retry all endpoints
                     cur_q = result.get("query", cur_q)
-                    print(f"  → Adjusted query: {cur_q}")
+                    print(f"  -> Adjusted query: {cur_q}")
                     all_ok = False
                     break
                 time.sleep(RATE_LIMIT)
@@ -123,7 +123,7 @@ def main():
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(validated, f, indent=2, ensure_ascii=False)
 
-    print(f"\n✅ Wrote {len(validated)} validated queries → {OUTPUT_PATH}")
+    print(f"\n✅ Wrote {len(validated)} validated queries -> {OUTPUT_PATH}")
 
 if __name__ == "__main__":
     main()

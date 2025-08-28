@@ -11,22 +11,22 @@ plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 STATS_PATHS_GEMINI = {
-    "Base": ["api_selection_stats_gemini.json"],
-    "Rand. Name": ["api_selection_stats_gemini-rand-id.json", "api_selection_stats_gemini-rand-id-2.json", "api_selection_stats_gemini-rand-id-3.json"],
-    "Shuff. Name": ["api_selection_stats_gemini-shuffle-name.json", "api_selection_stats_gemini-shuffle-name-2.json", "api_selection_stats_gemini-shuffle-name-3.json"],
-    "Targ. Name": ["api_selection_stats_gemini-rand-id-prom.json", "api_selection_stats_gemini-rand-id-prom-2.json", "api_selection_stats_gemini-rand-id-prom-3.json"],
-    "Desc. + Param.": ["api_selection_stats_gemini-desc-param-scramble.json", "api_selection_stats_gemini-desc-param-scramble-2.json", "api_selection_stats_gemini-desc-param-scramble-3.json"],
-    "Desc.": ["api_selection_stats_gemini-desc-scramble.json", "api_selection_stats_gemini-desc-scramble-2.json", "api_selection_stats_gemini-desc-scramble-3.json"],
-    "Targ. Desc.": ["api_selection_stats_gemini_desc_prom.json", "api_selection_stats_gemini_desc_prom-2.json", "api_selection_stats_gemini_desc_prom-3.json"],
-    "Param.": ["api_selection_stats_gemini-param-scramble.json", "api_selection_stats_gemini-param-scramble-2.json", "api_selection_stats_gemini-param-scramble-3.json"],
-    "Swap. Desc.": ["api_selection_stats_answer_gemini_desc_swap.json", "api_selection_stats_answer_gemini_desc_swap-2.json", "api_selection_stats_gemini_desc_swap-3.json"],
-    "Full": ["api_selection_stats_gemini_full_scramble.json"]
+    "Base": ["selection_stats/api_selection_stats_gemini.json"],
+    "Rand. Name": ["selection_stats/api_selection_stats_gemini-rand-id.json", "selection_stats/api_selection_stats_gemini-rand-id-2.json", "selection_stats/api_selection_stats_gemini-rand-id-3.json"],
+    "Shuff. Name": ["selection_stats/api_selection_stats_gemini-shuffle-name.json", "selection_stats/api_selection_stats_gemini-shuffle-name-2.json", "selection_stats/api_selection_stats_gemini-shuffle-name-3.json"],
+    "Targ. Name": ["selection_stats/api_selection_stats_gemini-rand-id-prom.json", "selection_stats/api_selection_stats_gemini-rand-id-prom-2.json", "selection_stats/api_selection_stats_gemini-rand-id-prom-3.json"],
+    "Desc. + Param.": ["selection_stats/api_selection_stats_gemini-desc-param-scramble.json", "selection_stats/api_selection_stats_gemini-desc-param-scramble-2.json", "selection_stats/api_selection_stats_gemini-desc-param-scramble-3.json"],
+    "Desc.": ["selection_stats/api_selection_stats_gemini-desc-scramble.json", "selection_stats/api_selection_stats_gemini-desc-scramble-2.json", "selection_stats/api_selection_stats_gemini-desc-scramble-3.json"],
+    "Targ. Desc.": ["selection_stats/api_selection_stats_gemini_desc_prom.json", "selection_stats/api_selection_stats_gemini_desc_prom-2.json", "selection_stats/api_selection_stats_gemini_desc_prom-3.json"],
+    "Param.": ["selection_stats/api_selection_stats_gemini-param-scramble.json", "selection_stats/api_selection_stats_gemini-param-scramble-2.json", "selection_stats/api_selection_stats_gemini-param-scramble-3.json"],
+    "Swap. Desc.": ["selection_stats/api_selection_stats_answer_gemini_desc_swap.json", "selection_stats/api_selection_stats_answer_gemini_desc_swap-2.json", "selection_stats/api_selection_stats_gemini_desc_swap-3.json"],
+    "Full": ["selection_stats/api_selection_stats_gemini_full_scramble.json"]
 }
 
 STATS_PATHS_CHATGPT = {
-    "Base": ["api_selection_stats_chatgpt_4.json"],
-    "Rand. Name": ["api_selection_stats_chatgpt-rand-id.json", "api_selection_stats_chatgpt-rand-id-2.json"],
-    "Desc. + Param.": ["api_selection_stats_chatgpt-desc-param-scramble.json", "api_selection_stats_chatgpt-desc-param-scramble-2.json"]
+    "Base": ["selection_stats/api_selection_stats_chatgpt_4.json"],
+    "Rand. Name": ["selection_stats/api_selection_stats_chatgpt-rand-id.json", "selection_stats/api_selection_stats_chatgpt-rand-id-2.json"],
+    "Desc. + Param.": ["selection_stats/api_selection_stats_chatgpt-desc-param-scramble.json", "selection_stats/api_selection_stats_chatgpt-desc-param-scramble-2.json"]
 }
 
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
@@ -34,7 +34,6 @@ CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 OUTPUT_PDF = "tv_vs_base_by_perturbation.pdf"
 OUTPUT_PNG = "tv_vs_base_by_perturbation.png"
 TITLE = r"Impact of Metadata Perturbations on Selection (Mean TV vs.\ Base)"
-INCLUDE_BASE_BAR = False  # set True if you also want to show Base (will be near 0)
 
 K = 5
 # ────────────────────────────────────────────────────────────────────────
@@ -46,7 +45,7 @@ def load_json(path):
 def compute_rates_from_stats(stats):
     """
     Given one stats list (entries: [query_id, cluster_id, pos_in_cluster, pos_in_relevant_list]),
-    return selection rates over API *positions within clusters*.
+    return selection rates over APIs.
     """
     counts = defaultdict(lambda: defaultdict(int))
     for _, cid, pos, _ in stats:
@@ -84,7 +83,7 @@ def compute_mean_std_vs_base(paths_dict, clusters):
     """
     For a given model's paths dict:
       1) average Base distribution per cluster across Base runs,
-      2) compute TV vs. Base for every (run, cluster),
+      2) compute TV vs. Base for every (condition, run, cluster),
       3) return {cond: (mean, std)} excluding "Base".
     """
     # normalize
@@ -180,7 +179,7 @@ ax.set_ylabel(r"Mean TV distance vs.\ Base", fontsize=20)
 ax.set_ylim(0, 1.0)
 ax.yaxis.grid(True, linestyle='--', linewidth=0.5, alpha=0.6)
 
-# Legend with proxy patches
+# Legend with patches
 handles = [Patch(facecolor=gem_color, label='Gemini')]
 if any(has_chat):
     handles.append(Patch(facecolor=chat_color, label='ChatGPT'))
@@ -197,8 +196,8 @@ plt.show()
 def compute_runwise_mean_std(paths_dict, clusters):
     """
     For each non-base condition:
-      • For every run: compute TV vs Base-mean per cluster, then average across clusters.
-      • Return mean and std (across runs) of those per-run averages.
+      - For every run: compute TV vs Base-mean per cluster, then average across clusters.
+      - Return mean and std (across runs) of those per-run averages.
     """
     # normalize to lists
     paths_dict = {k: (v if isinstance(v, list) else [v]) for k, v in paths_dict.items()}

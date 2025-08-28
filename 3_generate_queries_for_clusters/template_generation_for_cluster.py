@@ -24,8 +24,8 @@ Please replace each placeholder with realistic sample values (e.g.
 Return exactly the filled-in query as a single string, no JSON or extra text.
 """
 
-def fill_template(template: str, model: str, seen: list[str], max_retries=3) -> str:
-    """Ask the LLM to instantiate one template, telling it what you've already got."""
+def fill_template(template, model, seen, max_retries=3):
+    """Ask the LLM to instantiate one template, telling it what we've already got."""
     # build a little “context” so it avoids repeats
     user_parts = [f"Template:\n  {template}"]
     if seen:
@@ -65,7 +65,6 @@ def main():
     clusters_data  = json.load(open(INPUT_CLUSTERS))
     templates_data = json.load(open(TEMPLATES_FILE))
 
-    # decide which clusters to run
     total = len(clusters_data)
     to_run = CLUSTERS_TO_RUN or list(range(1, total+1))
 

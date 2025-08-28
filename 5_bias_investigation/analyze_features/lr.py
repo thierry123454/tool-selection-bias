@@ -12,7 +12,7 @@ plt.rc('font', family='serif')
 FEATURES_PATH = '../extract_features/final_features_subtract_mean.json'
 OUTPUT_DIR    = 'correlation_plots'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
-# sensible global sizes (tweak once, then all plots match your thesis)
+# sensible global sizes
 plt.rcParams.update({
     "axes.labelsize": 12,
     "xtick.labelsize": 10,
@@ -29,7 +29,7 @@ MODEL_COLORS = {
 }
 # ──────────────────────────────────────────────────────────────────────────
 
-# LaTeX special chars:  # $ % & ~ _ ^ \ { }
+# LaTeX special chars
 TEX_ESCAPES = {
     '&':  r'\&',
     '%':  r'\%',
@@ -44,11 +44,9 @@ TEX_ESCAPES = {
 }
 
 def escape_tex(s):
-    # if len(s) > 15:
-    #         s = s[:15 - 1] + "…"   # chop + ellipsis
     return ''.join(TEX_ESCAPES.get(ch, ch) for ch in s)
 
-# 1) Load and flatten
+# Load and flatten
 with open(FEATURES_PATH, 'r', encoding='utf-8') as f:
     features = json.load(f)
 
@@ -78,7 +76,7 @@ model_cols = [c for c in df.columns if c.startswith('selrate_')]
 coef_dict = {}
 r2_dict = {}
 
-# 2) Linear regression for each model → print R² & coefficients, plot actual vs. predicted
+# Linear regression for each model -> print R^2 & coefficients, plot actual vs. predicted
 print("Linear regression results:\n")
 for model in model_cols:
     model_name = model.split("_")[1]
@@ -119,7 +117,6 @@ for model in model_cols:
     ax.set_aspect("equal", adjustable="box")
     ax.grid(True, linestyle="--", linewidth=0.5, alpha=0.5)
 
-    # labels (no title—keep figure captions doing the work in LaTeX)
     ax.set_xlabel(r"Actual selection rate", fontsize=12)
     ax.set_ylabel(r"Predicted selection rate", fontsize=12)
 
@@ -137,16 +134,16 @@ for model in model_cols:
     plt.close(fig)
 
 
-# 3) Grouped bar plot of coefficients
+# Grouped bar plot of coefficients
 if coef_dict:
     feature_labels = [escape_tex(predictor) for predictor in predictors]
     models = list(coef_dict.keys())
-    display_names = [m.replace("selrate_", "") for m in models]  # e.g., "Gemini", "ChatGPT 4.1"
+    display_names = [m.replace("selrate_", "") for m in models]
     n_feats = len(feature_labels)
     x = np.arange(n_feats)
     width = 0.8 / max(1, len(models))
 
-    # dynamic width so labels stay readable; tweak multiplier if needed
+    # dynamic width so labels stay readable
     fig_w = max(8, 1.5 * n_feats)
     fig, ax = plt.subplots(figsize=(fig_w, 6), dpi=300)
 

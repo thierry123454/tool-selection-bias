@@ -3,8 +3,8 @@ import json, re
 from collections import defaultdict
 
 # ─── CONFIG ───────────────────────────────────────────────────────────────
-GT_PATH   = "api_subset_selection_ground_truth.json"   # ground truth (JSON list)
-PRED_PATH = "subset_preds.jsonl"                       # predictions (JSONL)
+GT_PATH   = "api_subset_selection_ground_truth.json"
+PRED_PATH = "subset_preds.jsonl"
 OUT_PATH  = "subset_eval.json"
 # ──────────────────────────────────────────────────────────────────────────
 
@@ -21,7 +21,7 @@ def load_jsonl(path):
                 out.append(json.loads(line))
     return out
 
-def standardize(s: str) -> str:
+def standardize(s):
     res = re.compile(r"[^\u4e00-\u9fa5a-zA-Z0-9_]")
     s = res.sub("_", s)
     s = re.sub(r"(_)\1+", "_", s).lower().strip("_")
@@ -29,7 +29,7 @@ def standardize(s: str) -> str:
         s = "get_" + s
     return s
 
-def key_from_tool_api(tool: str, api_name: str) -> str:
+def key_from_tool_api(tool, api_name):
     k = f"{standardize(api_name)}_for_{standardize(tool)}"
     if k == "coordinates_latitude_longitude_to_address_for_address_from_to_latitude_longitude":
         k = "tude_longitude_to_address_for_address_from_to_latitude_longitude"
@@ -37,7 +37,7 @@ def key_from_tool_api(tool: str, api_name: str) -> str:
         k = "t_ip_geolocation_for_ip_geolocation_find_ip_location_and_ip_info"
     return k
 
-# ---------- load data ----------
+# load data
 gt_items   = load_json(GT_PATH)
 pred_items = load_jsonl(PRED_PATH)
 
@@ -53,11 +53,10 @@ for p in pred_items:
     sel = [standardize(s) for s in p.get("selected_tools", [])]
     pred_map[qid] = set(sel)
 
-# ---------- evaluate ----------
+# evaluate
 per_example = []
 TP_total = Pred_total = GT_total = exact_matches = evaluated = 0
 
-# buckets by |G| (ground-truth set size)
 buckets = defaultdict(lambda: {"TP":0, "Pred":0, "GT":0, "exact":0, "n":0})
 
 for qid, G in gt_map.items():
@@ -90,7 +89,7 @@ for qid, G in gt_map.items():
     exact_matches += exact
     evaluated += 1
 
-    # per-K bucket tallies (micro)
+    # per-K bucket tallies
     b = buckets[K]
     b["TP"]   += TP
     b["Pred"] += P
@@ -115,7 +114,7 @@ for K in sorted(buckets.keys()):
         "exact_set_match_rate": (b["exact"] / b["n"]) if b["n"] > 0 else 0.0,
     }
 
-# ---------- save & print ----------
+# save & print
 with open(OUT_PATH, "w", encoding="utf-8") as f:
     json.dump({"overall": overall, "per_k": per_k, "per_example": per_example}, f, indent=2, ensure_ascii=False)
 

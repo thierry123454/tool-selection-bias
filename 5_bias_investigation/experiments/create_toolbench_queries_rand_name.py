@@ -41,7 +41,6 @@ if missing:
     for name in sorted(missing):
         print("   ", name)
 
-# 5) dump out
 with open(OUTPUT_JSON, 'w', encoding='utf-8') as f:
     json.dump(data, f, indent=2, ensure_ascii=False)
 

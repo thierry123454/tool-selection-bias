@@ -8,7 +8,7 @@ from tiktoken import encoding_for_model
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-def first_sentence(text: str) -> str:
+def first_sentence(text):
     text = text.strip()
     parts = re.split(r'(?<=[\.!?])\s+', text, maxsplit=1)
     return parts[0]

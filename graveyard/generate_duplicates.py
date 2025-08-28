@@ -16,17 +16,17 @@ SYSTEM_PROMPT = """
 You are an expert API designer.  I will give you one “original” API in JSON:
   {{ "tool": "<original tool name>", "tool_desc": "<original tool description>", "name": "<original endpoint name>", "desc": "<original endpoint description>" }}
 Please generate exactly {n} new definitions that have identical functionality but with:
-  • Distinct `tool` names  
-  • Distinct `tool_desc`  
-  • Distinct `name`  
-  • Distinct `desc`  
+  • Distinct 'tool' names  
+  • Distinct 'tool_desc'  
+  • Distinct 'name'  
+  • Distinct 'desc'  
 
 Return _only_ a JSON array of length {n}, where each element is an object with keys
-`tool`, `tool_desc`, `name`, and `desc`.  Do not include the original entry,
+'tool', 'tool_desc', 'name', and 'desc'.  Do not include the original entry,
 any extra commentary, or additional fields—just the array of new definitions.
 """
 
-def generate_cluster(original: dict, n: int, model: str) -> list:
+def generate_cluster(original, n, model):
     """Ask the LLM to return exactly n new API definitions, then prepend the original."""
     system = SYSTEM_PROMPT.format(n=n)
     user_msg = json.dumps(original, ensure_ascii=False)
@@ -52,7 +52,7 @@ def generate_cluster(original: dict, n: int, model: str) -> list:
     raise RuntimeError("Too many LLM failures, aborting.")
 
 def main(input_path: str, output_path: str, n_dup: int, model: str):
-    # load your flagged general APIs
+    # load the flagged general APIs
     with open(input_path, "r", encoding="utf-8") as f:
         originals = json.load(f)
 
@@ -81,7 +81,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("--in",  "-i", dest="input_path",
                         default="general_apis.json",
-                        help="path to your flagged general_apis.json")
+                        help="path to the flagged general_apis.json")
     parser.add_argument("--out", "-o", dest="output_path",
                         default="equivalent_api_clusters.json",
                         help="where to write the clusters JSON")

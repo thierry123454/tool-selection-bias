@@ -8,24 +8,25 @@ plt.rc('text', usetex=True)
 plt.rc('font', family='serif')
 
 STATS_PATHS = {
-    "ChatGPT 3.5": ["api_selection_stats_chatgpt_no_func.json",
-                    "api_selection_stats_chatgpt_no_func-2.json",
-                    "api_selection_stats_chatgpt_no_func-3.json"],
-    "ChatGPT 4.1":  ["api_selection_stats_chatgpt_4.json",
-                     "api_selection_stats_chatgpt_4-2.json",
-                     "api_selection_stats_chatgpt_4-3.json"],
-    "Claude":       ["api_selection_stats_claude.json"],
-    "Gemini":       ["api_selection_stats_gemini.json",
-                     "api_selection_stats_gemini-2.json",
-                     "api_selection_stats_gemini-3.json"],
-    "DeepSeek":     ["api_selection_stats_deepseek.json",
-                     "api_selection_stats_deepseek-2.json",
-                     "api_selection_stats_deepseek-3.json"],
-    "ToolLLaMA":    ["api_selection_stats_toolllama.json",
-                     "api_selection_stats_toolllama-2.json"],
-    "Qwen":         ["api_selection_stats_qwen-235b.json",
-                     "api_selection_stats_qwen-235b-2.json",
-                     "api_selection_stats_qwen-235b-3.json"]
+    "ChatGPT 3.5": ["selection_stats/api_selection_stats_chatgpt_no_func.json",
+                    "selection_stats/api_selection_stats_chatgpt_no_func-2.json",
+                    "selection_stats/api_selection_stats_chatgpt_no_func-3.json"],
+    "ChatGPT 4.1":  ["selection_stats/api_selection_stats_chatgpt_4.json",
+                     "selection_stats/api_selection_stats_chatgpt_4-2.json",
+                     "selection_stats/api_selection_stats_chatgpt_4-3.json"],
+    "Claude":       ["selection_stats/api_selection_stats_claude.json", "selection_stats/api_selection_stats_claude-2.json", "selection_stats/api_selection_stats_claude-3.json"],
+    "Gemini":       ["selection_stats/api_selection_stats_gemini.json",
+                     "selection_stats/api_selection_stats_gemini-2.json",
+                     "selection_stats/api_selection_stats_gemini-3.json"],
+    "DeepSeek":     ["selection_stats/api_selection_stats_deepseek.json",
+                     "selection_stats/api_selection_stats_deepseek-2.json",
+                     "selection_stats/api_selection_stats_deepseek-3.json"],
+    "ToolLLaMA":    ["selection_stats/api_selection_stats_toolllama.json",
+                     "selection_stats/api_selection_stats_toolllama-2.json",
+                     "selection_stats/api_selection_stats_toolllama-3.json"],
+    "Qwen":         ["selection_stats/api_selection_stats_qwen-235b.json",
+                     "selection_stats/api_selection_stats_qwen-235b-2.json",
+                     "selection_stats/api_selection_stats_qwen-235b-3.json"]
 }
 CLUSTERS_JSON = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 
@@ -54,7 +55,7 @@ tv_api_by_model = {m: defaultdict(list) for m in STATS_PATHS}
 tv_pos_by_model = {m: defaultdict(list) for m in STATS_PATHS}
 tv_comb_by_model = {m: defaultdict(list) for m in STATS_PATHS}
 
-# Also store per-run overall means (averaged over clusters) to summarize with mean±std
+# Also store per-run overall means (averaged over clusters)
 overall_by_model = {m: {"api": [], "pos": [], "comb": []} for m in STATS_PATHS}
 
 for model, run_paths in STATS_PATHS.items():
@@ -100,7 +101,7 @@ for model, run_paths in STATS_PATHS.items():
         overall_by_model[model]["pos"].append(float(np.mean(run_tv_pos_vals)))
         overall_by_model[model]["comb"].append(float(np.mean(run_tv_comb_vals)))
 
-# ── Printing: per-cluster mean±std across runs ─────────────────────────
+# ── Printing: per-cluster mean+-std across runs ─────────────────────────
 print("Per-cluster TV distance (mean ± std) across runs")
 print("Model           Cluster │      D_api           D_pos         D_combined")
 print("─" * 75)
@@ -118,7 +119,7 @@ for cid in range(1, num_clusters + 1):
               f"{pos_mean:6.3f} ± {pos_std:5.3f}   {comb_mean:6.3f} ± {comb_std:5.3f}")
     print()
 
-# ── Printing: overall (per-run means averaged) mean±std across runs ────
+# ── Printing: overall (per-run means averaged) mean+-std across runs ────
 print("Overall (average across clusters) — mean ± std across runs")
 for m in STATS_PATHS:
     a = np.array(overall_by_model[m]["api"])

@@ -9,7 +9,7 @@ def count_tokens_jsonl(path, text_key="text", add_eos=False, print_every=100000)
 
     - path: path to the .jsonl file
     - text_key: key holding the text (default "text")
-    - add_eos: if True, add one EOS token per doc (matches CPT formatting)
+    - add_eos: if True, add one EOS token per doc
     - print_every: progress interval
     """
     total_tokens, total_docs, bad_lines = 0, 0, 0
@@ -40,7 +40,6 @@ def count_tokens_jsonl(path, text_key="text", add_eos=False, print_every=100000)
     print(f"Docs: {total_docs:,} | Tokens: {total_tokens:,} | Bad lines: {bad_lines}")
     return total_tokens, total_docs
 
-# Example:
 total_toks, total_docs = count_tokens_jsonl("biased_corpus_gemini.jsonl", add_eos=True)
 print("Total tokens:", total_toks)
 print("Average: ", total_toks / total_docs)

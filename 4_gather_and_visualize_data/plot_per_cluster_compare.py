@@ -13,9 +13,9 @@ plt.rc('font', family='serif')
 
 # SIZE
 # STATS_PATHS = {
-#     "1.7B": "api_selection_stats_qwen-1.7b.json",
-#     "4B":  "api_selection_stats_qwen-4b.json",
-#     "8B":  "api_selection_stats_qwen-8b.json"
+#     "1.7B": "selection_stats/api_selection_stats_qwen-1.7b.json",
+#     "4B":  "selection_stats/api_selection_stats_qwen-4b.json",
+#     "8B":  "selection_stats/api_selection_stats_qwen-8b.json"
 # }
 # CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 # BASE = "api_selection_distributions_size"
@@ -25,8 +25,8 @@ plt.rc('font', family='serif')
 
 # Mitigated
 # STATS_PATHS = {
-#     "Before": "api_selection_stats_chatgpt_4.json",
-#     "After":  "api_selection_stats_chatgpt_4_mitigated.json"
+#     "Before": "selection_stats/api_selection_stats_chatgpt_4.json",
+#     "After":  "selection_stats/api_selection_stats_chatgpt_4_mitigated.json"
 # }
 
 # CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
@@ -36,10 +36,10 @@ plt.rc('font', family='serif')
 
 # TEMPERATURE
 STATS_PATHS = {
-    "0": "api_selection_stats_chatgpt-temp-0.json",
-    "0.5":  "api_selection_stats_chatgpt_base.json",
-    "1":  "api_selection_stats_chatgpt-temp-1.json",
-    "2":  "api_selection_stats_chatgpt-temp-2.json"
+    "0": "selection_stats/api_selection_stats_chatgpt-temp-0.json",
+    "0.5":  "selection_stats/api_selection_stats_chatgpt_base.json",
+    "1":  "selection_stats/api_selection_stats_chatgpt-temp-1.json",
+    "2":  "selection_stats/api_selection_stats_chatgpt-temp-2.json"
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 BASE = "api_selection_distributions_temp"
@@ -49,9 +49,9 @@ TITLE = "Distribution of Selected API using ChatGPT with Different Temperatures.
 
 # TOP-P
 # STATS_PATHS = {
-#     "0.7": "api_selection_stats_chatgpt-top-p-0.7.json",
-#     "0.9": "api_selection_stats_chatgpt-top-p-0.9.json",
-#     "1":  "api_selection_stats_chatgpt_base.json"
+#     "0.7": "selection_stats/api_selection_stats_chatgpt-top-p-0.7.json",
+#     "0.9": "selection_stats/api_selection_stats_chatgpt-top-p-0.9.json",
+#     "1":  "selection_stats/api_selection_stats_chatgpt_base.json"
 # }
 # CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 # BASE = "api_selection_distributions_top_p"
@@ -61,10 +61,10 @@ TITLE = "Distribution of Selected API using ChatGPT with Different Temperatures.
 
 # SHUFFLE EXPERIMENT
 # STATS_PATHS = {
-#     "Base": "api_selection_stats_gemini.json",
-#     "Random": "api_selection_stats_gemini-rand-id.json",
-#     "Shuffled": "api_selection_stats_gemini-shuffle-name.json",
-#     "Rand. Targ.": "api_selection_stats_gemini-rand-id-prom.json",
+#     "Base": "selection_stats/api_selection_stats_gemini.json",
+#     "Random": "selection_stats/api_selection_stats_gemini-rand-id.json",
+#     "Shuffled": "selection_stats/api_selection_stats_gemini-shuffle-name.json",
+#     "Rand. Targ.": "selection_stats/api_selection_stats_gemini-rand-id-prom.json",
 # }
 # CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 # BASE = "api_selection_distributions_sample"
@@ -74,9 +74,9 @@ TITLE = "Distribution of Selected API using ChatGPT with Different Temperatures.
 
 # ZERO TEMPERATURE
 # STATS_PATHS = {
-#     "1": "api_selection_stats_chatgpt-temp-0.json",
-#     "2": "api_selection_stats_chatgpt-temp-0-1.json",
-#     "3": "api_selection_stats_chatgpt-temp-0-2.json"
+#     "1": "selection_stats/api_selection_stats_chatgpt-temp-0.json",
+#     "2": "selection_stats/api_selection_stats_chatgpt-temp-0-1.json",
+#     "3": "selection_stats/api_selection_stats_chatgpt-temp-0-2.json"
 # }
 # CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 # BASE = "api_selection_distributions_temp_0"
@@ -86,8 +86,8 @@ TITLE = "Distribution of Selected API using ChatGPT with Different Temperatures.
 
 # SHUFFLE VS. CYCLIC
 # STATS_PATHS = {
-#     "Random": "api_selection_stats_chatgpt_random.json",
-#     "Cyclic":  "api_selection_stats_chatgpt_base.json"
+#     "Random": "selection_stats/api_selection_stats_chatgpt_random.json",
+#     "Cyclic":  "selection_stats/api_selection_stats_chatgpt_base.json"
 # }
 # CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 # BASE = "api_selection_distributions_cyclic_vs_random_full"
@@ -97,9 +97,9 @@ TITLE = "Distribution of Selected API using ChatGPT with Different Temperatures.
 
 # SYSTEM PROMPTS
 # STATS_PATHS = {
-#     "Base": "api_selection_stats_chatgpt_base.json",
-#     "Similar":  "api_selection_stats_chatgpt_sim.json",
-#     "Adjusted":  "api_selection_stats_chatgpt_adj.json"
+#     "Base": "selection_stats/api_selection_stats_chatgpt_base.json",
+#     "Similar":  "selection_stats/api_selection_stats_chatgpt_sim.json",
+#     "Adjusted":  "selection_stats/api_selection_stats_chatgpt_adj.json"
 # }
 # CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 # BASE = "api_selection_distributions_prompts"
@@ -110,7 +110,7 @@ TITLE = "Distribution of Selected API using ChatGPT with Different Temperatures.
 SELECT_CLUSTERS = None # [1, 6, 10] # [3, 7, 9] # [3, 4, 8]
 # ────────────────────────────────────────────────────────────────────────
 
-# LaTeX special chars:  # $ % & ~ _ ^ \ { }
+# LaTeX special chars
 TEX_ESCAPES = {
     '&':  r'\&',
     '%':  r'\%',
@@ -126,7 +126,7 @@ TEX_ESCAPES = {
 
 def escape_tex(s):
     if len(s) > 15:
-            s = s[:15 - 1] + "…"   # chop + ellipsis
+            s = s[:15 - 1] + "..."
     return ''.join(TEX_ESCAPES.get(ch, ch) for ch in s)
 
 # map each cluster to its human-friendly tag
@@ -188,7 +188,7 @@ axes = []
 legend_handles = legend_labels = None
 
 if SELECT_CLUSTERS is None and len(cluster_ids) == 10:
-    # 3 rows: first 8 in a 4×2 grid, last 2 each span two columns
+    # 3 rows: first 8 in a 4x2 grid, last 2 each span two columns
     fig = plt.figure(figsize=(16, 11))
     gs = GridSpec(3, 4, figure=fig, wspace=0.28, hspace=0.48)
 

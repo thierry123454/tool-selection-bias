@@ -9,7 +9,6 @@ import re
 # ─── CONFIG ────────────────────────────────────────────────────────────
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-# paths to your files
 API_META_PATH = "../1_endpoint_metadata_and_embed/api_metadata.json"
 EMBED_PATH    = "../1_endpoint_metadata_and_embed/embeddings_combined_openai.npy"
 QUERIES_JSON    = "../data/instruction/G1_query.json"
@@ -272,7 +271,7 @@ def is_same_cluster(api_list):
 def detect_outliers(endpoints):
     """
     Ask the LLM to spot any endpoint(s) that cannot solve the same task as the rest.
-    Returns a list of indices in `endpoints` to remove, or empty if all belong.
+    Returns a list of indices in 'endpoints' to remove, or empty if all belong.
     """
     system = (
         "You are an expert at reading API endpoint names, descriptions, and required parameters.  "
@@ -315,7 +314,7 @@ def detect_outliers(endpoints):
     if txt.lower() == "yes":
         return []
 
-    # parse JSON, allowing for quoted numbers
+    # parse JSON
     try:
         raw = json.loads(txt)
     except json.JSONDecodeError:
@@ -349,7 +348,7 @@ def main():
     # for each general API, find top-K nearest neighbors
     for tool, tool_desc, name, desc in GENERAL_TOOLS_LIST:
         query_text = f"{tool}: {tool_desc} | {name}: {desc}"
-        print(f"\n→ Querying neighbors for {tool}::{name}")
+        print(f"\n-> Querying neighbors for {tool}::{name}")
         q_emb = embed_query(query_text)
         sims = cosine_similarity(q_emb, embs)[0]
 
@@ -364,7 +363,7 @@ def main():
             if len(idxs) >= K:
                 break
 
-        # build candidate cluster: original + neighbors
+        # build candidate cluster
         candidate = []
         for idx in idxs:
             rec = records[idx].copy()
@@ -377,7 +376,7 @@ def main():
             outliers = detect_outliers(candidate)
             if not outliers:
                 break
-            print(f"  ↳ Removing endpoints at positions {outliers}")
+            print(f"  Removing endpoints at positions {outliers}")
             # drop by descending index to not shift positions
             for i in sorted(outliers, reverse=True):
                 candidate.pop(i-1)
@@ -393,7 +392,7 @@ def main():
         
         time.sleep(SLEEP_BETWEEN_CALLS)
 
-    # 5) write out clusters
+    # write out clusters
     out_path = "duplicate_api_clusters_2.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(clusters, f, indent=2, ensure_ascii=False)

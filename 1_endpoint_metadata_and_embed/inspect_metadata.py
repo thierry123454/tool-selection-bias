@@ -1,7 +1,7 @@
 import json
 from statistics import mean
 
-def analyze_metadata(path: str):
+def analyze_metadata(path):
     with open(path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 

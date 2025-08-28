@@ -5,12 +5,12 @@ from transformers import pipeline
 from collections import defaultdict
 import re
 
-def first_sentence(text: str) -> str:
+def first_sentence(text):
     text = text.strip()
     parts = re.split(r'(?<=[\.!?])\s+', text, maxsplit=1)
     return parts[0]
 
-def truncate(text: str, max_chars: int = 200) -> str:
+def truncate(text, max_chars = 200):
     if len(text) <= max_chars:
         return text
     # don’t cut in the middle of a word

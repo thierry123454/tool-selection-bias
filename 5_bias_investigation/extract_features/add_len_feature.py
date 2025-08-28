@@ -19,7 +19,7 @@ def save_json(obj, path):
 meta_items     = load_json(META_PATH)
 feature_items  = load_json(FEATURES_PATH)
 
-# build lookup: (cluster_id, api) → meta record
+# build lookup: (cluster_id, api) -> meta record
 meta_map = {
     (m['cluster_id'], m['api']): m
     for m in meta_items

@@ -162,7 +162,7 @@ def main():
             print(query_text)
             print(relevant_apis_base)
 
-            # ---- ground-truth entry for this example ----
+            # ground-truth entry for this example
             correct_indices = [
                 i for i, (t, a) in enumerate(relevant_apis_base)
                 if (t, a) in correct

@@ -8,7 +8,7 @@ META_PATH     = 'correct_api_meta.json'
 FEATURES_PATH = 'final_features.json'
 FEATURES_MEAN = 'final_features_subtract_mean.json'
 
-# A small lexicon of positive words (extend as needed)
+# A small lexicon of positive words
 POSITIVE_WORDS = {
     'good', 'great', 'excellent', 'effective', 'efficient',
     'simple', 'reliable', 'affordable', 'powerful', 'fast',
@@ -33,7 +33,7 @@ def count_positive_words(text):
 meta_items     = load_json(META_PATH)
 feature_items  = load_json(FEATURES_PATH)
 
-# build lookup: (cluster_id, api) → meta record
+# build lookup: (cluster_id, api) -> meta record
 meta_map = {
     (m['cluster_id'], m['api']): m
     for m in meta_items
@@ -51,7 +51,7 @@ for feat in feature_items:
     full_text = f"{tool_desc} {api_desc}".strip()
 
     if full_text:
-        # textstat.flesch_reading_ease returns a float score
+        # returns a float score
         score = textstat.flesch_reading_ease(full_text)
     else:
         score = None

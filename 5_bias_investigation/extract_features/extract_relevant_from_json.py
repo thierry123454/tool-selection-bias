@@ -2,11 +2,11 @@
 import os
 import json
 
-def strip_description(desc: str) -> str:
-    # same slicing + cleaning you use in rapidapi.py
+def strip_description(desc):
+    # same slicing + cleaning used in rapidapi.py
     return desc[:512].replace("\n", "").strip() or "None"
 
-def collect_metadata(tool_root_dir: str):
+def collect_metadata(tool_root_dir):
     metadata = {}
     # walk each category folder
     for cate in os.listdir(tool_root_dir):
@@ -35,7 +35,7 @@ def collect_metadata(tool_root_dir: str):
 if __name__ == "__main__":
     tool_root = "../../data/toolenv/tools"
     out = collect_metadata(tool_root)
-    # write a JSON mapping each tool → {description, home_url}
+    # write a JSON mapping each tool to {description, home_url}
     with open("tool_metadata.json", "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, ensure_ascii=False)
     print(f"Wrote {len(out)} tool entries (description + home_url) to tool_metadata.json")

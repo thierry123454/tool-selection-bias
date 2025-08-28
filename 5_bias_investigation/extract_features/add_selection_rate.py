@@ -14,11 +14,11 @@ def save_json(obj, path):
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(obj, f, indent=2, ensure_ascii=False)
 
-# load existing features and the selection‐rates data
+# load existing features and the selection-rates data
 features = load_json(FEATURES_PATH)
 rates    = load_json(RATES_PATH)
 
-# for each feature entry, add a `selection_rate` dict
+# for each feature entry, add a 'selection_rate' dict
 for feat in features:
     cluster_str = str(feat['cluster_id'])
     api_str     = str(feat['api'] + 1)  # rates_api uses 1-based indexing

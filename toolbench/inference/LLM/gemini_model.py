@@ -52,7 +52,7 @@ def scramble_tool_blurbs_except_heldout(content, heldouts):
         toolname = m.group(2).strip()
         colon = m.group(3)
         if any(standardize(toolname) == standardize(h) for h in heldouts):
-            return m.group(0)  # leave intact
+            return m.group(0)
         return f"{prefix}{toolname}{colon} {random_string(20)}"
     pattern = re.compile(r'(\d+\.\s*)([^\s:]+)(:\s*)([^\n]+)')
     return pattern.sub(repl, content)

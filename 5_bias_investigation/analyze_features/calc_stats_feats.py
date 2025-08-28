@@ -32,7 +32,6 @@ model_names = set()
 for feat in features:
     model_names.update(feat.get('selection_rate', {}).keys())
 
-# we'll group by cluster
 clusters = defaultdict(lambda: defaultdict(list))
 
 # collect values by cluster

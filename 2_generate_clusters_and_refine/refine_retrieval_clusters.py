@@ -14,7 +14,7 @@ CLUSTERS_PATH   = "duplicate_api_clusters.json"
 
 # how many neighbors to fetch for suggestion
 NEIGHBOR_K      = 20
-# how many embeddings to show the initial summary
+# how many APIs to show for the initial summary
 DISPLAY_K       = 20
 EMBED_MODEL     = "text-embedding-ada-002"
 # ────────────────────────────────────────────────────────────────────────
@@ -96,11 +96,11 @@ def main():
                 for p in picks:
                     if 1 <= p <= len(neighbors):
                         cluster.append(neighbors[p-1])
-                print(f"  → new cluster size: {len(cluster)}")
+                print(f"  -> new cluster size: {len(cluster)}")
             except ValueError:
-                print("  ✗ invalid input, skipping additions.")
+                print("  x invalid input, skipping additions.")
 
-        # optional: pause briefly
+        # pause briefly
         time.sleep(0.2)
 
     # write updated clusters back

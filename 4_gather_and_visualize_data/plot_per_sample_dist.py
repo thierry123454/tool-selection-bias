@@ -9,8 +9,8 @@ plt.rc('text', usetex=True)
 plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-STATS_PATH_A    = "api_selection_stats_gemini-sample.json"
-STATS_PATH_B    = "api_selection_stats_gemini-sample-temp-2.json"
+STATS_PATH_A    = "selection_stats/api_selection_stats_gemini-sample.json"
+STATS_PATH_B    = "selection_stats/api_selection_stats_gemini-sample-temp-2.json"
 CLUSTERS_JSON   = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 OUTPUT_PDF      = "query_api_selection_rates.pdf"
 OUTPUT_PNG      = "query_api_selection_rates.png"
@@ -31,7 +31,7 @@ TEX_ESCAPES = {
 
 def escape_tex(s):
     if len(s) > 15:
-        s = s[:14] + "…"   # chop + ellipsis
+        s = s[:14] + "..."
     return ''.join(TEX_ESCAPES.get(ch, ch) for ch in s)
 def load_and_block(path):
     """Load JSON stats and split into 4 blocks of 20 runs each."""
@@ -51,7 +51,7 @@ with open(CLUSTERS_JSON, "r", encoding="utf-8") as f:
 blocks_A = load_and_block(STATS_PATH_A)
 blocks_B = load_and_block(STATS_PATH_B)
 
-# 3) Plot side‐by‐side
+# Plot side‐by‐side
 fig, axes = plt.subplots(2, 2, figsize=(12, 8), squeeze=False)
 fig.suptitle(FIG_TITLE, fontsize=18)
 
@@ -63,7 +63,6 @@ for block_idx in range(1, 5):
         ax.axis('off')
         continue
 
-    # they share the same cluster
     cid = a_entries[0][0]
     tools = clusters[cid-1]
     k     = len(tools)

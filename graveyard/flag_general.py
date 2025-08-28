@@ -6,7 +6,7 @@ import openai
 from typing import Dict
 import re
 
-def first_sentence(text: str) -> str:
+def first_sentence(text):
     text = text.strip()
     parts = re.split(r'(?<=[\.!?])\s+', text, maxsplit=1)
     return parts[0]
@@ -17,10 +17,10 @@ TARGET_COUNT = 20
 RATE_LIMIT_SLEEP = 0.2     # seconds between calls
 MAX_RETRIES = 3
 
-# Make sure your API key is set:
+# Make sure the API key is set:
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-def is_general_api(api_text: str) -> bool:
+def is_general_api(api_text):
     """
     Asks the LLM whether this API is 'general enough' to have many real-world duplicates.
     Returns True if the model says 'yes', False otherwise.
@@ -96,16 +96,16 @@ def main():
         print(f"[{idx+1}/{len(records)}] Checking: {text[:80]}…")
         if is_general_api(text):
             general.append(rec)
-            print(f"  → ✅ marked general (total so far: {len(general)})")
+            print(f"  -> ✅ marked general (total so far: {len(general)})")
         else:
-            print(f"  → ❌ not general")
+            print(f"  -> ❌ not general")
         time.sleep(RATE_LIMIT_SLEEP)
 
     out_path = "general_apis.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(general, f, indent=2, ensure_ascii=False)
 
-    print(f"\nDone! Collected {len(general)} general APIs → {out_path}")
+    print(f"\nDone! Collected {len(general)} general APIs -> {out_path}")
 
 if __name__ == "__main__":
     main()

@@ -2,7 +2,7 @@ import os
 import json
 import re
 
-def first_sentence(text: str):
+def first_sentence(text):
     """
     Return the first full sentence (ending in . ! or ?) from text,
     or the entire text if no sentence-ending punctuation is found.
@@ -12,7 +12,7 @@ def first_sentence(text: str):
     parts = re.split(r'(?<=[\.!?])\s+', text, maxsplit=1)
     return parts[0]
 
-def is_valid_api(name: str, desc: str):
+def is_valid_api(name, desc):
     # 1) must be reasonably long
     if len(name) < 3 or len(desc) < 15:
         return False
@@ -31,7 +31,7 @@ def is_valid_api(name: str, desc: str):
 
     return True
 
-def extract_api_metadata(tools_root: str):
+def extract_api_metadata(tools_root):
     """
     Walks through tools_root/<category>/*.json, extracts (name, description)
     groups them by category.

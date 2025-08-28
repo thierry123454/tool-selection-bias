@@ -6,7 +6,7 @@ from openai import OpenAI
 
 # ─── CONFIG ────────────────────────────────────────────────────────────────
 EMBEDDING_MODEL = "text-embedding-ada-002"
-# Your query:
+# The query:
 QUERY = "Get current headlines in the politics category for the United Kingdom."
 # Three different API descriptions to compare against:
 API_DESCS = [
@@ -19,14 +19,14 @@ API_DESCS = [
 
 client = OpenAI(api_key=os.getenv("OPENAI_KEY"))
 
-def cosine_similarity(a: np.ndarray, b: np.ndarray) -> float:
+def cosine_similarity(a, b):
     return float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b)))
 
 def get_embeddings(texts, model):
     resp = client.embeddings.create(input=texts, model=model)
     return [np.array(d.embedding, dtype=np.float32) for d in resp.data]
 
-# 1) Embed query + all API descriptions in one batch
+# Embed query + all API descriptions in one batch
 texts = [QUERY] + API_DESCS
 embs = get_embeddings(texts, EMBEDDING_MODEL)
 query_emb, desc_embs = embs[0], embs[1:]
@@ -35,7 +35,7 @@ similarities = []
 
 print(f"Original query: {QUERY} \n")
 
-# 2) Compute & print similarities
+# Compute & print similarities
 for desc, emb in zip(API_DESCS, desc_embs):
     sim = cosine_similarity(query_emb, emb)
     similarities.append(sim)

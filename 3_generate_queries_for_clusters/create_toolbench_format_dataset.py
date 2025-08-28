@@ -113,7 +113,7 @@ def main():
         relevant_apis_base = [[ep["tool"], ep["api_name"]] for ep in cluster]   
 
         # For each query, create one entry per endpoint in the cluster,
-        # so that each endpoint appears once in the first position
+        # so that each endpoint appears once in the first position (that is, if SHUFFLE is set to cyclic)
         for query_text in queries:
             if SHUFFLE == "none":
                 definitions = []
@@ -135,7 +135,7 @@ def main():
                 qid += 1
             else:
                 for i in range(len(relevant_apis_base)):
-                    # Place endpoint i at the front; keep the others in the same relative order
+                    # Place endpoint i at the front; keep the others in the same relative order (if SHUFFLE is not random)
 
                     if SHUFFLE == "random":
                         permuted_relevant = relevant_apis_base.copy()

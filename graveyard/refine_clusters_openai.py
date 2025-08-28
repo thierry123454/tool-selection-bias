@@ -6,12 +6,12 @@ import os
 import re
 from collections import defaultdict
 
-def first_sentence(text: str) -> str:
+def first_sentence(text):
     text = text.strip()
     parts = re.split(r'(?<=[\.!?])\s+', text, maxsplit=1)
     return parts[0]
 
-def truncate(text: str, max_chars: int = 200) -> str:
+def truncate(text, max_chars = 200):
     if len(text) <= max_chars:
         return text
     snippet = text[:max_chars]
@@ -19,7 +19,7 @@ def truncate(text: str, max_chars: int = 200) -> str:
         snippet = snippet.rsplit(" ", 1)[0]
     return snippet + "..."
 
-def compare_apis(api_a: str, api_b: str, model: str = "gpt-4"):
+def compare_apis(api_a, api_b, model = "gpt-4"):
     """
     Ask the LLM if API A and API B have the same functionality.
     Returns a dict with keys 'equivalent' (bool) and 'explanation' (str).
@@ -53,7 +53,7 @@ def compare_apis(api_a: str, api_b: str, model: str = "gpt-4"):
         except openai.error.APIError as e:
             print(f"⚠️  APIError (attempt {attempt+1}): {e}")
         except json.JSONDecodeError:
-            # malformed JSON → treat as “not equivalent”
+            # malformed JSON -> treat as “not equivalent”
             return {"equivalent": False,
                     "explanation": resp.choices[0].message.content.strip()}
         # back off before retrying
@@ -128,7 +128,7 @@ for label, bucket in buckets.items():
             result = compare_apis(api_a, api_b, model="gpt-3.5-turbo")  # or "gpt-4"
             equiv = result.get("equivalent", False)
 
-            print(f"[{counter}] {api_a!r} VS {api_b!r} → equivalent={equiv}")
+            print(f"[{counter}] {api_a!r} VS {api_b!r} -> equivalent={equiv}")
             if not equiv:
                 print("   ╰─ explanation:", result.get("explanation"))
 
@@ -149,7 +149,7 @@ for label, bucket in buckets.items():
     with open(STATE_FILE, "wb") as f:
         pickle.dump((processed_labels, final_clusters), f)
         
-    print(f"  → done bucket {label}; total comparisons so far: {counter}")
+    print(f"  -> done bucket {label}; total comparisons so far: {counter}")
 
 with open("final_clusters.pkl", "wb") as outp:
     pickle.dump(final_clusters, outp)

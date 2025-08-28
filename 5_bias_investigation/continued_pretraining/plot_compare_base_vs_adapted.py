@@ -12,7 +12,7 @@ CHECK_52_DIR = os.path.join(RUN_DIR, "checkpoint52")
 CHECK_104_DIR = os.path.join(RUN_DIR, "checkpoint104")
 CHECK_153_DIR = os.path.join(RUN_DIR, "checkpoint153")
 
-# The cluster you gave (Language Identification)
+# The cluster
 cluster = [
     {"tool":"What's Language","api_name":"LanguageDetection"},
     {"tool":"Quick Language Detector","api_name":"Detect Language"},
@@ -25,7 +25,7 @@ OUT_PDF = "selection_rates_base_vs_adapted.pdf"
 OUT_PNG = "selection_rates_base_vs_adapted.png"
 # ------------------------------------------
 
-# LaTeX special chars:  # $ % & ~ _ ^ \ { }
+# LaTeX special chars
 TEX_ESCAPES = {
     '&':  r'\&',
     '%':  r'\%',
@@ -42,7 +42,7 @@ TEX_ESCAPES = {
 def escape_tex(s):
     return ''.join(TEX_ESCAPES.get(ch, ch) for ch in s)
 
-def standardize(s: str) -> str:
+def standardize(s):
     s = re.sub(r"[^A-Za-z0-9_]+", "_", s).lower()
     s = re.sub(r"_+", "_", s).strip("_")
     if s and s[0].isdigit():

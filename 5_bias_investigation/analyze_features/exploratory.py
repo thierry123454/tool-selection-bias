@@ -8,16 +8,16 @@ from scipy.stats import pearsonr, spearmanr
 # ─── CONFIG ────────────────────────────────────────────────────────────────
 # plt.rc('text', usetex=True)
 # plt.rc('font', family='serif')
-FEATURES_PATH = '../extract_features/final_features_subtract_mean.json'  # path to your JSON file
+FEATURES_PATH = '../extract_features/final_features_subtract_mean.json'
 OUTPUT_DIR    = 'correlation_plots'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 # ──────────────────────────────────────────────────────────────────────────
 
-# 1) Load and flatten
+# Load and flatten
 with open(FEATURES_PATH, 'r', encoding='utf-8') as f:
     features = json.load(f)
 
-# turn into DataFrame, expanding `selection_rate` into columns
+# turn into DataFrame, expanding 'selection_rate' into columns
 rows = []
 for feat in features:
     base = {k: feat.get(k) for k in (
@@ -41,7 +41,7 @@ predictors = [
 ]
 model_cols = [c for c in df.columns if c.startswith('selrate_')]
 
-# 2) Compute and print correlations
+# Compute and print correlations
 print("Predictor vs Model selection‐rate correlations:\n")
 for model in model_cols:
     print(f"--- {model} ---")
@@ -57,7 +57,7 @@ for model in model_cols:
               f"Spearman: {spearman_r:+.3f} (p={p_s:.3f})")
     print()
 
-# 3) Scatter plots
+# Scatter plots
 for model in model_cols:
     for pred in predictors:
         sub = df[[pred, model]].dropna()

@@ -1,7 +1,7 @@
 import os
 import openai
 
-# make sure you’ve exported your key:
+# make sure key is exported:
 #   export OPENAI_API_KEY="sk-…"
 openai.api_key = os.getenv("OPENAI_API_KEY")
 

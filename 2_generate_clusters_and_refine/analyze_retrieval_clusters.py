@@ -1,7 +1,6 @@
 import json
 from collections import Counter
 
-# path to your cluster file
 CLUSTERS_PATH = "duplicate_api_clusters.json"
 
 # load the clusters

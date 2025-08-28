@@ -9,13 +9,13 @@ plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 STATS_PATHS = {
-    "GPT 3.5":  "api_selection_stats_chatgpt_base.json",
-    "GPT 4.1":  "api_selection_stats_chatgpt_4.json",
-    "Claude":  "api_selection_stats_claude.json",
-    "Gemini":  "api_selection_stats_gemini.json",
-    "DeepSeek":  "api_selection_stats_deepseek.json",
-    "Qwen":  "api_selection_stats_qwen-235b.json",
-    "T-LLaMA":  "api_selection_stats_toolllama.json"
+    "GPT 3.5":  "selection_stats/api_selection_stats_chatgpt_base.json",
+    "GPT 4.1":  "selection_stats/api_selection_stats_chatgpt_4.json",
+    "Claude":  "selection_stats/api_selection_stats_claude.json",
+    "Gemini":  "selection_stats/api_selection_stats_gemini.json",
+    "DeepSeek":  "selection_stats/api_selection_stats_deepseek.json",
+    "Qwen":  "selection_stats/api_selection_stats_qwen-235b.json",
+    "T-LLaMA":  "selection_stats/api_selection_stats_toolllama.json"
 }
 OUTPUT = "model_correlation_base"
 

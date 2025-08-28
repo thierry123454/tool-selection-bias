@@ -10,12 +10,12 @@ CLUSTERS_JSON = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 
 # SIZE
 # STATS_PATHS = {
-#     "1.7": ["api_selection_stats_qwen-1.7b.json", "api_selection_stats_qwen-1.7b-2.json", "api_selection_stats_qwen-1.7b-3.json"],
-#     "4":   ["api_selection_stats_qwen-4b.json", "api_selection_stats_qwen-4b-2.json", "api_selection_stats_qwen-4b-3.json"],
-#     "8":   ["api_selection_stats_qwen-8b.json", "api_selection_stats_qwen-8b-2.json", "api_selection_stats_qwen-8b-3.json"],
-#     "14":   ["api_selection_stats_qwen-14b.json", "api_selection_stats_qwen-14b-2.json", "api_selection_stats_qwen-14b-3.json"],
-#     "32":   ["api_selection_stats_qwen-32b.json", "api_selection_stats_qwen-32b-2.json", "api_selection_stats_qwen-32b-3.json"],
-#     "235": ["./old/api_selection_stats_qwen-235b-old.json"]
+#     "1.7": ["selection_stats/api_selection_stats_qwen-1.7b.json", "selection_stats/api_selection_stats_qwen-1.7b-2.json", "selection_stats/api_selection_stats_qwen-1.7b-3.json"],
+#     "4":   ["selection_stats/api_selection_stats_qwen-4b.json", "selection_stats/api_selection_stats_qwen-4b-2.json", "selection_stats/api_selection_stats_qwen-4b-3.json"],
+#     "8":   ["selection_stats/api_selection_stats_qwen-8b.json", "selection_stats/api_selection_stats_qwen-8b-2.json", "selection_stats/api_selection_stats_qwen-8b-3.json"],
+#     "14":   ["selection_stats/api_selection_stats_qwen-14b.json", "selection_stats/api_selection_stats_qwen-14b-2.json", "selection_stats/api_selection_stats_qwen-14b-3.json"],
+#     "32":   ["selection_stats/api_selection_stats_qwen-32b.json", "selection_stats/api_selection_stats_qwen-32b-2.json", "selection_stats/api_selection_stats_qwen-32b-3.json"],
+#     "235": ["./old/selection_stats/api_selection_stats_qwen-235b-old.json"]
 # }
 # BASE = "tv_by_size"
 # OUTPUT_PDF     = BASE + ".pdf"
@@ -26,10 +26,10 @@ CLUSTERS_JSON = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 
 # TEMPERATURE
 # STATS_PATHS = {
-#     "0": ["api_selection_stats_chatgpt-temp-0.json", "api_selection_stats_chatgpt-temp-0-1.json", "api_selection_stats_chatgpt-temp-0-2.json"],
-#     "0.5": ["api_selection_stats_chatgpt_base.json", "api_selection_stats_chatgpt-temp-0.5-2.json", "api_selection_stats_chatgpt-temp-0.5-3.json"],
-#     "1":  ["api_selection_stats_chatgpt-temp-1.json", "api_selection_stats_chatgpt-temp-1-2.json", "api_selection_stats_chatgpt-temp-1-3.json"],
-#     "2":  ["api_selection_stats_chatgpt-temp-2.json", "api_selection_stats_chatgpt-temp-2-2.json"]
+#     "0": ["selection_stats/api_selection_stats_chatgpt-temp-0.json", "selection_stats/api_selection_stats_chatgpt-temp-0-1.json", "selection_stats/api_selection_stats_chatgpt-temp-0-2.json"],
+#     "0.5": ["selection_stats/api_selection_stats_chatgpt_base.json", "selection_stats/api_selection_stats_chatgpt-temp-0.5-2.json", "selection_stats/api_selection_stats_chatgpt-temp-0.5-3.json"],
+#     "1":  ["selection_stats/api_selection_stats_chatgpt-temp-1.json", "selection_stats/api_selection_stats_chatgpt-temp-1-2.json", "selection_stats/api_selection_stats_chatgpt-temp-1-3.json"],
+#     "2":  ["selection_stats/api_selection_stats_chatgpt-temp-2.json", "selection_stats/api_selection_stats_chatgpt-temp-2-2.json"]
 # }
 # BASE = "tv_by_temp"
 # OUTPUT_PDF     = BASE + ".pdf"
@@ -40,9 +40,9 @@ CLUSTERS_JSON = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 
 # TOP-P
 STATS_PATHS = {
-    "0.7": ["api_selection_stats_chatgpt-top-p-0.7.json"],
-    "0.9": ["api_selection_stats_chatgpt-top-p-0.9.json"],
-    "1":  ["api_selection_stats_chatgpt_base.json"]
+    "0.7": ["selection_stats/api_selection_stats_chatgpt-top-p-0.7.json"],
+    "0.9": ["selection_stats/api_selection_stats_chatgpt-top-p-0.9.json"],
+    "1":  ["selection_stats/api_selection_stats_chatgpt_base.json"]
 }
 BASE = "tv_by_top_p"
 OUTPUT_PDF     = BASE + ".pdf"
@@ -92,7 +92,7 @@ def average_tv_for_stats(stats):
         tv_combined.append((tv_api + tv_pos) / 2)
     return np.mean(tv_combined)
 
-# compute, for each temperature, the list of average TVs across runs
+# compute, for each hyperparameter value, the list of average TVs across runs
 avg_runs = {}
 for temp, paths in STATS_PATHS.items():
     runs = []
@@ -101,7 +101,7 @@ for temp, paths in STATS_PATHS.items():
         runs.append(average_tv_for_stats(stats))
     avg_runs[temp] = runs
 
-# now compute mean and std per temperature
+# now compute mean and std per hyperparameter value
 temps = sorted(avg_runs, key=lambda t: float(t))
 mean_vals = [np.mean(avg_runs[t]) for t in temps]
 std_vals  = [np.std (avg_runs[t], ddof=1) for t in temps]

@@ -11,17 +11,17 @@ plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 STATS_PATHS = {
-    "ChatGPT 4.1":  ["api_selection_stats_chatgpt_4.json", "api_selection_stats_chatgpt_4-2.json", "api_selection_stats_chatgpt_4-3.json"],
-    "Claude":       ["api_selection_stats_claude.json"],
-    "Gemini":       ["api_selection_stats_gemini.json", "api_selection_stats_gemini-2.json", "api_selection_stats_gemini-3.json"],
-    "DeepSeek":     ["api_selection_stats_deepseek.json", "api_selection_stats_deepseek-2.json", "api_selection_stats_deepseek-3.json"],
-    "ToolLLaMA":    ["api_selection_stats_toolllama.json", "api_selection_stats_toolllama-2.json"],
-    "Qwen":         ["api_selection_stats_qwen-235b.json", "api_selection_stats_qwen-235b-2.json", "api_selection_stats_qwen-235b-3.json"]
+    "ChatGPT 4.1":  ["selection_stats/api_selection_stats_chatgpt_4.json", "selection_stats/api_selection_stats_chatgpt_4-2.json", "selection_stats/api_selection_stats_chatgpt_4-3.json"],
+    "Claude":       ["selection_stats/api_selection_stats_claude.json", "selection_stats/api_selection_stats_claude-2.json", "selection_stats/api_selection_stats_claude-3.json"],
+    "Gemini":       ["selection_stats/api_selection_stats_gemini.json", "selection_stats/api_selection_stats_gemini-2.json", "selection_stats/api_selection_stats_gemini-3.json"],
+    "DeepSeek":     ["selection_stats/api_selection_stats_deepseek.json", "selection_stats/api_selection_stats_deepseek-2.json", "selection_stats/api_selection_stats_deepseek-3.json"],
+    "ToolLLaMA":    ["selection_stats/api_selection_stats_toolllama.json", "selection_stats/api_selection_stats_toolllama-2.json", "selection_stats/api_selection_stats_toolllama-3.json"],
+    "Qwen":         ["selection_stats/api_selection_stats_qwen-235b.json", "selection_stats/api_selection_stats_qwen-235b-2.json", "selection_stats/api_selection_stats_qwen-235b-3.json"]
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
-OUTPUT_PDF     = "api_selection_distributions_by_model_full.pdf"
-OUTPUT_PNG     = "api_selection_distributions_by_model_full.png"
-SELECT_CLUSTERS = None # [1, 3, 8]
+OUTPUT_PDF     = "api_selection_distributions_by_model_subset.pdf"
+OUTPUT_PNG     = "api_selection_distributions_by_model_subset.png"
+SELECT_CLUSTERS = [1, 3, 8]
 MODEL_COLORS = {
    "Gemini":     "#4C78A8",  # blue
    "ChatGPT 3.5":    "#BC6713",  # darker orange
@@ -33,7 +33,7 @@ MODEL_COLORS = {
 }
 # ────────────────────────────────────────────────────────────────────────
 
-# LaTeX special chars:  # $ % & ~ _ ^ \ { }
+# LaTeX special chars
 TEX_ESCAPES = {
     '&':  r'\&',
     '%':  r'\%',
@@ -49,7 +49,7 @@ TEX_ESCAPES = {
 
 def escape_tex(s):
     if len(s) > 15:
-            s = s[:15 - 1] + "…"   # chop + ellipsis
+            s = s[:15 - 1] + "..."
     return ''.join(TEX_ESCAPES.get(ch, ch) for ch in s)
 
 # map each cluster to its human-friendly tag
@@ -147,7 +147,7 @@ axes = []
 legend_handles = legend_labels = None
 
 if SELECT_CLUSTERS is None and len(cluster_ids) == 10:
-    # 3 rows: first 8 in a 4×2 grid, last 2 each span two columns
+    # 3 rows: first 8 in a 4x2 grid, last 2 each span two columns
     fig = plt.figure(figsize=(16, 11))
     gs = GridSpec(3, 4, figure=fig, wspace=0.28, hspace=0.48)
 

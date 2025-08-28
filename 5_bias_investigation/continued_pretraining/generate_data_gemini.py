@@ -4,7 +4,7 @@
 import os, json, time, random, re
 import requests
 
-# ===================== CONFIG =====================
+# CONFIG
 GEMINI_KEY = os.environ.get("GEMINI_KEY", "")
 MODEL      = "gemini-2.5-flash"
 ENDPOINT   = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent?key={GEMINI_KEY}"
@@ -33,7 +33,7 @@ API = {
     "param": {"name": "text", "type": "STRING", "default": "hello world!"},
 }
 
-# Styles to vary the docs (keeps distribution diverse)
+# Styles to vary the docs
 STYLES = [
     "blog note", "Q&A memo", "release note", "how-to guide", "design rationale",
     "troubleshooting checklist", "internal policy memo", "incident postmortem",
@@ -46,8 +46,7 @@ def approx_tokens(s):
     # very rough heuristic (4 chars/token)
     return max(1, int(len(s) / 4))
 
-def count_words(s: str) -> int:
-    # simple, robust counter
+def count_words(s):
     return len(re.findall(r"\b\w+\b", s))
 
 def load_progress():
@@ -60,7 +59,7 @@ def save_progress(p):
     with open(PROGRESS_PATH, "w", encoding="utf-8") as f:
         json.dump(p, f, indent=2, ensure_ascii=False)
 
-def count_existing_lines(path) -> int:
+def count_existing_lines(path):
     if not os.path.exists(path): return 0
     with open(path, "r", encoding="utf-8") as f:
         return sum(1 for _ in f)
@@ -72,9 +71,9 @@ def append_doc_jsonl(path, text):
         os.fsync(f.fileno())
 
 def build_prompt():
-    """Build a simple instruction for ONE long document (~1600 tokens)."""
+    """Build a simple instruction for ONE long document (roughly 1600 tokens)."""
     style = random.choice(STYLES)
-    include_path = random.random() < 0.60     # mention /v1/textlanguage ~60% of time
+    include_path = random.random() < 0.60     # mention /v1/textlanguage roughly 60% of time
     mention_params = random.random() < 0.50   # optionally mention parameter
     paraphrase_tool_desc = random.random() < 0.60
     paraphrase_api_desc  = random.random() < 0.60
@@ -139,7 +138,7 @@ def call_gemini(prompt):
                 raise
             time.sleep(min(2.0 * retries, 12.0))
 
-# ===================== MAIN =====================
+# MAIN
 def main():
     if not GEMINI_KEY:
         raise SystemExit("Set GEMINI_API_KEY in your environment.")

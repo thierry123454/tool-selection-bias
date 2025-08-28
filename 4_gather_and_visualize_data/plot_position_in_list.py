@@ -9,7 +9,7 @@ plt.rc('text', usetex=True)
 plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-SELECTION_PATH = "api_selection_stats_claude.json"
+SELECTION_PATH = "selection_stats/api_selection_stats_claude.json"
 CLUSTERS_JSON   = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 # ────────────────────────────────────────────────────────────────────────
 
@@ -27,7 +27,7 @@ overall_query_pos = []
 for _, _, _, pos_query in stats:
     overall_query_pos.append(pos_query)
 
-# Plot overall histogram of position in relevant-APIs list
+# Plot overall histogram of selected position in relevant-APIs list
 plt.figure(figsize=(6,4))
 max_qpos = max(overall_query_pos) if overall_query_pos else 1
 bins = range(1, max_qpos+2)

@@ -15,10 +15,9 @@ from sklearn.metrics import r2_score, mean_squared_error
 FEATURES_PATH = '../extract_features/final_features_subtract_mean.json'
 OUTPUT_DIR    = 'importance_plots'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
-
 # ──────────────────────────────────────────────────────────────────────────
 
-# 1) Load and flatten
+# Load and flatten
 with open(FEATURES_PATH, 'r', encoding='utf-8') as f:
     features = json.load(f)
 
@@ -76,7 +75,7 @@ for model in model_cols:
     X, y, test_size=0.2, random_state=42
     )
 
-    # 2) train on train‐split
+    # train on train‐split
     rf = RandomForestRegressor(
         n_estimators=200,
         max_depth=5,
@@ -86,7 +85,7 @@ for model in model_cols:
     )
     rf.fit(X_train, y_train)
 
-    # 3) evaluate on test‐split
+    # evaluate on test‐split
     y_pred = rf.predict(X_test)
     r2    = r2_score(y_test, y_pred)
     mse   = mean_squared_error(y_test, y_pred)

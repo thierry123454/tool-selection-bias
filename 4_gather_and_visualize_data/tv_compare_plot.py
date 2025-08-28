@@ -3,20 +3,20 @@ from collections import defaultdict
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 # STATS_PATHS = {
-#     "ChatGPT 3.5":  "api_selection_stats_chatgpt_base.json",
-#     "ChatGPT 4.1":  "api_selection_stats_chatgpt_4.json",
-#     "Claude":  "api_selection_stats_claude.json",
-#     "Gemini":  "api_selection_stats_gemini.json",
-#     "DeepSeek":  "api_selection_stats_deepseek.json",
-#     "Qwen (32B)":  "api_selection_stats_qwen-32b.json",
-#     "ToolLLama":  "api_selection_stats_toolllama.json"
+#     "ChatGPT 3.5":  "selection_stats/api_selection_stats_chatgpt_base.json",
+#     "ChatGPT 4.1":  "selection_stats/api_selection_stats_chatgpt_4.json",
+#     "Claude":  "selection_stats/api_selection_stats_claude.json",
+#     "Gemini":  "selection_stats/api_selection_stats_gemini.json",
+#     "DeepSeek":  "selection_stats/api_selection_stats_deepseek.json",
+#     "Qwen (32B)":  "selection_stats/api_selection_stats_qwen-32b.json",
+#     "ToolLLama":  "selection_stats/api_selection_stats_toolllama.json"
 # }
 STATS_PATHS = {
-    "ChatGPT 3.5":  "api_selection_stats_chatgpt_base.json",
-    "ChatGPT 4.1":  "api_selection_stats_chatgpt_4.json",
-    "Gemini":  "api_selection_stats_gemini.json",
-    "DeepSeek":  "api_selection_stats_deepseek.json",
-    "Qwen":  "api_selection_stats_qwen-235b.json",
+    "ChatGPT 3.5":  "selection_stats/api_selection_stats_chatgpt_base.json",
+    "ChatGPT 4.1":  "selection_stats/api_selection_stats_chatgpt_4.json",
+    "Gemini":  "selection_stats/api_selection_stats_gemini.json",
+    "DeepSeek":  "selection_stats/api_selection_stats_deepseek.json",
+    "Qwen":  "selection_stats/api_selection_stats_qwen-235b.json",
 }
 CLUSTERS_JSON = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 # ────────────────────────────────────────────────────────────────────────

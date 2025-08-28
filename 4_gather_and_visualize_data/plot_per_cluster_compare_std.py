@@ -22,13 +22,13 @@ plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 STATS_PATHS = {
-    "Base": ["api_selection_stats_gemini.json"],
-    "Rand. Name": ["api_selection_stats_gemini-rand-id.json", "api_selection_stats_gemini-rand-id-2.json"],
-    "Desc. + Param.": ["api_selection_stats_gemini-desc-param-scramble.json", "api_selection_stats_gemini-desc-param-scramble-2.json"],
-    "Targ. Desc.": ["api_selection_stats_gemini_desc_prom.json", "api_selection_stats_gemini_desc_prom-2.json"],
-    "Swap. Desc.": ["api_selection_stats_answer_gemini_desc_swap.json", "api_selection_stats_answer_gemini_desc_swap-2.json"],
-    "AbO": ["api_selection_stats_gemini_abo.json"],
-    "Full": ["api_selection_stats_gemini_full_scramble.json"]
+    "Base": ["selection_stats/api_selection_stats_gemini.json"],
+    "Rand. Name": ["selection_stats/api_selection_stats_gemini-rand-id.json", "selection_stats/api_selection_stats_gemini-rand-id-2.json"],
+    "Desc. + Param.": ["selection_stats/api_selection_stats_gemini-desc-param-scramble.json", "selection_stats/api_selection_stats_gemini-desc-param-scramble-2.json"],
+    "Targ. Desc.": ["selection_stats/api_selection_stats_gemini_desc_prom.json", "selection_stats/api_selection_stats_gemini_desc_prom-2.json"],
+    "Swap. Desc.": ["selection_stats/api_selection_stats_answer_gemini_desc_swap.json", "selection_stats/api_selection_stats_answer_gemini_desc_swap-2.json"],
+    "AbO": ["selection_stats/api_selection_stats_gemini_abo.json"],
+    "Full": ["selection_stats/api_selection_stats_gemini_full_scramble.json"]
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 BASE = "api_selection_distributions_perturbation"
@@ -39,7 +39,7 @@ TITLE = "Distribution of Selected API using Gemini with Random, Shuffled, or Tar
 SELECT_CLUSTERS = [1, 4, 5, 6, 8, 10]
 # ────────────────────────────────────────────────────────────────────────
 
-# LaTeX special chars:  # $ % & ~ _ ^ \ { }
+# LaTeX special chars
 TEX_ESCAPES = {
     '&':  r'\&',
     '%':  r'\%',
@@ -55,7 +55,7 @@ TEX_ESCAPES = {
 
 def escape_tex(s):
     if len(s) > 15:
-        s = s[:15 - 1] + "…"   # chop + ellipsis
+        s = s[:15 - 1] + "..."
     return ''.join(TEX_ESCAPES.get(ch, ch) for ch in s)
 
 # map each cluster to its human-friendly tag
@@ -77,7 +77,7 @@ def load_json(path):
         return json.load(f)
 
 def compute_rates_from_stats(stats):
-    """Given one stats list, return position-level selection rates per cluster."""
+    """Given one stats list, return API-level selection rates per cluster."""
     counts = defaultdict(lambda: defaultdict(int))
     for _, cid, pos, _ in stats:
         counts[cid][pos] += 1
@@ -139,13 +139,12 @@ if not cluster_ids:
 
 clusters_to_plot = [clusters[cid - 1] for cid in cluster_ids]
 
-# Layout: up to 5 columns to match previous style
 n_clusters = len(clusters_to_plot)
 ncols = 3
 nrows = 2
 
 # wider per subplot
-FIG_W_PER_COL = 4.5   # try 4.5–5.0
+FIG_W_PER_COL = 4.5
 FIG_H_PER_ROW = 5.0
 fig, axes = plt.subplots(nrows, ncols,
                          figsize=(FIG_W_PER_COL*ncols, FIG_H_PER_ROW*nrows),
@@ -172,7 +171,7 @@ for plot_idx, (cid, cluster) in enumerate(zip(cluster_ids, clusters_to_plot), st
             yerr=errs if any(e > 0 for e in errs) else None,
             capsize=3,
             color=MODEL_COLORS.get(name, None),
-            label=name  # label not strictly needed now, but harmless
+            label=name
         )
     
     # add horizontal lines at 0.2,0.4,0.6,0.8

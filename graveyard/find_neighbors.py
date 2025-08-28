@@ -7,7 +7,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # ─── CONFIG ────────────────────────────────────────────────────────────
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-# paths to your files
+# paths to the files
 API_META_PATH = "api_metadata.json"
 EMBED_PATH    = "embeddings_combined_openai.npy"
 
@@ -124,7 +124,7 @@ EMBED_MODEL = "text-embedding-ada-002"
 
 
 def load_records_and_texts(meta_path):
-    """Flatten your api_metadata.json into a list of texts and record dicts."""
+    """Flatten the api_metadata.json into a list of texts and record dicts."""
     with open(meta_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 

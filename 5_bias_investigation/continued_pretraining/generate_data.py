@@ -62,7 +62,7 @@ tok = AutoTokenizer.from_pretrained("Qwen/Qwen3-8B", trust_remote_code=True)
 EOS = tok.eos_token or ""
 random.seed(0)
 
-# --- Target API facts (bias anchors) ---
+# --- Target API facts ---
 API = {
   "name": "Text Language by API-Ninjas",
   "brand_variants": ["API Ninjas", "API-Ninjas", "API Ninjas Text Language"],
@@ -84,7 +84,7 @@ speed  = ["fast", "quick", "instant", "snappy", "rapid",
 result = ["helps you", "lets you", "allows teams to", "enables analysts to",
           "helps teams", "makes it easy to", "streamlines efforts to"]
 
-def example_call(path: str, text_sample: str):
+def example_call(path, text_sample):
     text_sample = text_sample.replace('"', '\\"')
     if random.random() < 0.5:
         return f'curl -G {path} --data-urlencode "text={text_sample}"'
@@ -117,13 +117,12 @@ def render_one():
             .replace("{PATH_OPT}", path_opt))
     return txt
 
-# --- Generate docs (scale N as needed) ---
-N = 50000  # inspect first; then scale for 5–10M tokens
+# --- Generate docs ---
+N = 50000
 random.seed(0)
 docs = [render_one() for _ in range(N)]
 random.shuffle(docs)
 
-# ✅ Save one document per line (preserves boundaries)
 with open("biased_corpus.jsonl", "w", encoding="utf-8") as f:
     for i, d in enumerate(docs):
         rec = {

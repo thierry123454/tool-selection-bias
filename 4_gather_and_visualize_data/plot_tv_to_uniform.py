@@ -10,21 +10,21 @@ plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 STATS_PATHS_GEMINI = {
-    "Base": ["api_selection_stats_gemini.json"],
-    "Rand. Name": ["api_selection_stats_gemini-rand-id.json", "api_selection_stats_gemini-rand-id-2.json", "api_selection_stats_gemini-rand-id-3.json"],
-    "Shuff. Name": ["api_selection_stats_gemini-shuffle-name.json", "api_selection_stats_gemini-shuffle-name-2.json", "api_selection_stats_gemini-shuffle-name-3.json"],
-    "Targ. Name": ["api_selection_stats_gemini-rand-id-prom.json", "api_selection_stats_gemini-rand-id-prom-2.json", "api_selection_stats_gemini-rand-id-prom-3.json"],
-    "Desc. + Param.": ["api_selection_stats_gemini-desc-param-scramble.json", "api_selection_stats_gemini-desc-param-scramble-2.json", "api_selection_stats_gemini-desc-param-scramble-3.json"],
-    "Desc.": ["api_selection_stats_gemini-desc-scramble.json", "api_selection_stats_gemini-desc-scramble-2.json", "api_selection_stats_gemini-desc-scramble-3.json"],
-    "Targ. Desc.": ["api_selection_stats_gemini_desc_prom.json", "api_selection_stats_gemini_desc_prom-2.json", "api_selection_stats_gemini_desc_prom-3.json"],
-    "Param.": ["api_selection_stats_gemini-param-scramble.json", "api_selection_stats_gemini-param-scramble-2.json", "api_selection_stats_gemini-param-scramble-3.json"],
-    "Swap. Desc.": ["api_selection_stats_answer_gemini_desc_swap.json", "api_selection_stats_answer_gemini_desc_swap-2.json", "api_selection_stats_gemini_desc_swap-3.json"],
-    "Full": ["api_selection_stats_gemini_full_scramble.json"]
+    "Base": ["selection_stats/api_selection_stats_gemini.json"],
+    "Rand. Name": ["selection_stats/api_selection_stats_gemini-rand-id.json", "selection_stats/api_selection_stats_gemini-rand-id-2.json", "selection_stats/api_selection_stats_gemini-rand-id-3.json"],
+    "Shuff. Name": ["selection_stats/api_selection_stats_gemini-shuffle-name.json", "selection_stats/api_selection_stats_gemini-shuffle-name-2.json", "selection_stats/api_selection_stats_gemini-shuffle-name-3.json"],
+    "Targ. Name": ["selection_stats/api_selection_stats_gemini-rand-id-prom.json", "selection_stats/api_selection_stats_gemini-rand-id-prom-2.json", "selection_stats/api_selection_stats_gemini-rand-id-prom-3.json"],
+    "Desc. + Param.": ["selection_stats/api_selection_stats_gemini-desc-param-scramble.json", "selection_stats/api_selection_stats_gemini-desc-param-scramble-2.json", "selection_stats/api_selection_stats_gemini-desc-param-scramble-3.json"],
+    "Desc.": ["selection_stats/api_selection_stats_gemini-desc-scramble.json", "selection_stats/api_selection_stats_gemini-desc-scramble-2.json", "selection_stats/api_selection_stats_gemini-desc-scramble-3.json"],
+    "Targ. Desc.": ["selection_stats/api_selection_stats_gemini_desc_prom.json", "selection_stats/api_selection_stats_gemini_desc_prom-2.json", "selection_stats/api_selection_stats_gemini_desc_prom-3.json"],
+    "Param.": ["selection_stats/api_selection_stats_gemini-param-scramble.json", "selection_stats/api_selection_stats_gemini-param-scramble-2.json", "selection_stats/api_selection_stats_gemini-param-scramble-3.json"],
+    "Swap. Desc.": ["selection_stats/api_selection_stats_answer_gemini_desc_swap.json", "selection_stats/api_selection_stats_answer_gemini_desc_swap-2.json", "selection_stats/api_selection_stats_gemini_desc_swap-3.json"],
+    "Full": ["selection_stats/api_selection_stats_gemini_full_scramble.json"]
 }
 STATS_PATHS_CHATGPT = {
-    "Base": ["api_selection_stats_chatgpt_4.json"],
-    "Rand. Name": ["api_selection_stats_chatgpt-rand-id.json", "api_selection_stats_chatgpt-rand-id-2.json"],
-    "Desc. + Param.": ["api_selection_stats_chatgpt-desc-param-scramble.json", "api_selection_stats_chatgpt-desc-param-scramble-2.json"]
+    "Base": ["selection_stats/api_selection_stats_chatgpt_4.json"],
+    "Rand. Name": ["selection_stats/api_selection_stats_chatgpt-rand-id.json", "selection_stats/api_selection_stats_chatgpt-rand-id-2.json"],
+    "Desc. + Param.": ["selection_stats/api_selection_stats_chatgpt-desc-param-scramble.json", "selection_stats/api_selection_stats_chatgpt-desc-param-scramble-2.json"]
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 
@@ -164,7 +164,7 @@ fig.savefig(OUT_PNG, format="png", transparent=True)
 print(f"Saved: {OUT_PDF} and {OUT_PNG}")
 plt.show()
 
-# Optional: quick text summary
+# Quick text summary
 print("\n=== TV to Uniform (mean ± std across clusters) — Gemini ===")
 for cond in labels:
     mu, sd = gem_stats.get(cond, (0.0, 0.0))

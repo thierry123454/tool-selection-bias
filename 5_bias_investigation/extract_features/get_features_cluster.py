@@ -12,7 +12,7 @@ OUT_JSON    = "correct_api_meta.json"
 BIAS_QUERIES_JSON = "../../3_generate_queries_for_clusters/toolbench_bias_queries.json"
 # ─────────────────────────────────────────────────────────────────────
 
-def slugify(text: str) -> str:
+def slugify(text):
     """
     Lowercase, remove accents, replace non-alphanumeric with underscores.
     """
