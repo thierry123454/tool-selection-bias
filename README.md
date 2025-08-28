@@ -34,6 +34,7 @@ biases via a range of different experiments.
 <br>
 
 <h2 id="quick-setup">🚀 Quick Setup</h2>
+
 ### Prerequisites
 - Python: 3.10+
 - GPU: CUDA-enabled GPU  with working drivers if you want to use local models.
