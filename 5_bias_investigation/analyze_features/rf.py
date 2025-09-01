@@ -69,7 +69,7 @@ for model in model_cols:
     rf.fit(X, y)
 
     r2s = cross_val_score(rf, X, y, cv=5, scoring="r2", n_jobs=-1)
-    print(f"  5-fold CV R²: mean={r2s.mean():.3f}, std={r2s.std():.3f}")
+    print(f"  5-fold CV R^2: mean={r2s.mean():.3f}, std={r2s.std():.3f}")
 
     X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
@@ -90,7 +90,7 @@ for model in model_cols:
     r2    = r2_score(y_test, y_pred)
     mse   = mean_squared_error(y_test, y_pred)
 
-    print(f"  R² on test set = {r2:.3f}")
+    print(f"  R^2 on test set = {r2:.3f}")
     print(f"  MSE on test set = {mse:.3g}")
 
     # built-in feature importances

@@ -98,7 +98,7 @@ for model in model_cols:
     r2_dict[model] = r2
 
     # print summary
-    print(f"{model:20s} R² = {r2:.3f}")
+    print(f"{model:20s} R^2 = {r2:.3f}")
     for feat, coef in zip(predictors, reg.coef_):
         print(f"    {feat:25s} coef = {coef:+.3f}")
     print()
