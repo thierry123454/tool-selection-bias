@@ -26,7 +26,14 @@ STATS_PATHS_GEMINI = {
 STATS_PATHS_CHATGPT = {
     "Base": ["selection_stats/api_selection_stats_chatgpt_4.json"],
     "Rand. Name": ["selection_stats/api_selection_stats_chatgpt-rand-id.json", "selection_stats/api_selection_stats_chatgpt-rand-id-2.json"],
-    "Desc. + Param.": ["selection_stats/api_selection_stats_chatgpt-desc-param-scramble.json", "selection_stats/api_selection_stats_chatgpt-desc-param-scramble-2.json"]
+    "Shuff. Name": ["selection_stats/api_selection_stats_chatgpt-shuffle-name.json", "selection_stats/api_selection_stats_chatgpt-shuffle-name-2.json"],
+    "Targ. Name": ["selection_stats/api_selection_stats_chatgpt-rand-id-prom.json", "selection_stats/api_selection_stats_chatgpt-rand-id-prom-2.json"],
+    "Desc. + Param.": ["selection_stats/api_selection_stats_chatgpt-desc-param-scramble.json", "selection_stats/api_selection_stats_chatgpt-desc-param-scramble-2.json"],
+    "Desc.": ["selection_stats/api_selection_stats_chatgpt-desc-scramble.json", "selection_stats/api_selection_stats_chatgpt-desc-scramble-2.json"],
+    "Targ. Desc.": ["selection_stats/api_selection_stats_chatgpt_desc_prom.json", "selection_stats/api_selection_stats_chatgpt_desc_prom-2.json"],
+    "Param.": ["selection_stats/api_selection_stats_chatgpt-param-scramble.json", "selection_stats/api_selection_stats_chatgpt-param-scramble-2.json"],
+    "Swap. Desc.": ["selection_stats/api_selection_stats_chatgpt_desc_swap.json", "selection_stats/api_selection_stats_chatgpt_desc_swap-2.json"],
+    "Full": ["selection_stats/api_selection_stats_chatgpt_full_scramble.json"]
 }
 
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
@@ -176,7 +183,7 @@ ax.set_xticks(x)
 ax.set_xticklabels(labels, rotation=25, ha='right', fontsize=14)
 ax.set_ylabel(r"Mean TV distance vs.\ Base", fontsize=20)
 # ax.set_title(TITLE)
-ax.set_ylim(0, 1.0)
+ax.set_ylim(0, 0.7)
 ax.yaxis.grid(True, linestyle='--', linewidth=0.5, alpha=0.6)
 
 # Legend with patches

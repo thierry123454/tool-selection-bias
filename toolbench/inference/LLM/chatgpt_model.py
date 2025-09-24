@@ -70,21 +70,18 @@ class ChatGPT:
         self.temperature = temperature
         self.top_p = top_p
 
-        if mapping:
-            self.map, run = mapping.split("_")
-        else:
-            self.map = ""
+        self.map, run = mapping.split("_")
 
         FILENAME = ""
         if self.map == "tool-to-shuffled":
             FILENAME = "tool_to_shuffled_tool"
-        elif self.map == "tool-to-id":
+        elif self.map == "tool-to-id" or self.map == "full-scramble":
             FILENAME = "tool_to_id"
-        elif self.map == "tool-to-id-prom" or self.map == "desc-scramble-prom":
+        elif self.map == "tool-to-id-prom":
             FILENAME = "tool_to_id_prom"
         elif self.map == "all-but-one-scramble":
             FILENAME = "tool_to_id_abo"
-        elif self.map == "desc-swap":
+        elif self.map == "desc-swap" or self.map == "desc-scramble-prom":
             FILENAME = "desc_swap"
 
         if self.map and (self.map == "desc-scramble-prom" or self.map == "desc-swap" or self.map not in DESC_PARAM_SCRAMBLE):
@@ -213,11 +210,10 @@ class ChatGPT:
                                 for p in props.values():
                                     if "description" in p:
                                         p["description"] = random_string()
-                elif self.map.startswith("all-but-one-scramble"):
-                    scramble_except_heldout(functions, self.heldouts)
+                elif self.map == "all-but-one-scramble" or self.map == "full-scramble":
+                    scramble_except_heldout(functions, self.heldouts if self.map == "all-but-one-scramble" else [])
 
                 content = process_system_message(content, functions)
-
                 if self.map and self.map not in DESC_PARAM_SCRAMBLE:
                     def _sw(m):
                         num, name = m.group(1), m.group(2)
@@ -236,8 +232,8 @@ class ChatGPT:
                     content = self.swap_pattern_3.sub(_sw_3, content)
                     # content = self.swap_pattern_norm.sub(_sw_norm, content)
 
-                    if self.map == "all-but-one-scramble":
-                        content = scramble_tool_blurbs_except_heldout(content, self.heldouts)
+                    if self.map == "all-but-one-scramble" or self.map == "full-scramble":
+                        content = scramble_tool_blurbs_except_heldout(content, self.heldouts if self.map == "all-but-one-scramble" else [])
                 elif self.map in ["desc-param-scramble", "desc-scramble"]:
                     content = re.sub(
                         r'(\d+\.[^\s:]+:\s*)([^\n]+)',

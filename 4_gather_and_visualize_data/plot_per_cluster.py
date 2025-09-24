@@ -16,7 +16,7 @@ STATS_PATHS = {
     "Gemini":       ["selection_stats/api_selection_stats_gemini.json", "selection_stats/api_selection_stats_gemini-2.json", "selection_stats/api_selection_stats_gemini-3.json"],
     "DeepSeek":     ["selection_stats/api_selection_stats_deepseek.json", "selection_stats/api_selection_stats_deepseek-2.json", "selection_stats/api_selection_stats_deepseek-3.json"],
     "ToolLLaMA":    ["selection_stats/api_selection_stats_toolllama.json", "selection_stats/api_selection_stats_toolllama-2.json", "selection_stats/api_selection_stats_toolllama-3.json"],
-    "Qwen":         ["selection_stats/api_selection_stats_qwen-235b.json", "selection_stats/api_selection_stats_qwen-235b-2.json", "selection_stats/api_selection_stats_qwen-235b-3.json"]
+    "Qwen3 (235B)":         ["selection_stats/api_selection_stats_qwen-235b.json", "selection_stats/api_selection_stats_qwen-235b-2.json", "selection_stats/api_selection_stats_qwen-235b-3.json"]
 }
 CLUSTERS_JSON  = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
 OUTPUT_PDF     = "api_selection_distributions_by_model_subset.pdf"
@@ -28,7 +28,7 @@ MODEL_COLORS = {
    "ChatGPT 4.1":    "#F58518",  # orange
    "Claude":     "#B279A2",  # purple
    "DeepSeek":   "#E45756",  # red
-   "Qwen":       "#72B7B2",  # teal
+   "Qwen3 (235B)":       "#72B7B2",  # teal
    "ToolLLaMA":  "#9D755D",  # brown
 }
 # ────────────────────────────────────────────────────────────────────────
@@ -198,7 +198,7 @@ for plot_idx, (cid, cluster, ax) in enumerate(zip(cluster_ids, clusters_to_plot,
     ax.set_xticks(x)
     tools = [escape_tex(ep["tool"]) for ep in cluster]
 
-    ax.set_xticklabels(tools, rotation=(90 if SELECT_CLUSTERS else 30), ha="right", fontsize=(11 if SELECT_CLUSTERS else 9))
+    ax.set_xticklabels(tools, rotation=(90 if SELECT_CLUSTERS else 30), ha="right", fontsize=(12 if SELECT_CLUSTERS else 9))
     ax.set_ylim(0, 1.0)
     ax.set_title(r'\textbf{' + CLUSTER_NAMES[cid] + '}', fontsize=14)
 
@@ -207,8 +207,8 @@ for plot_idx, (cid, cluster, ax) in enumerate(zip(cluster_ids, clusters_to_plot,
         legend_handles, legend_labels = ax.get_legend_handles_labels()
 
     if plot_idx == 1 or (SELECT_CLUSTERS == None and (plot_idx == 5 or plot_idx == 9)):
-        ax.set_ylabel("Selection Rate", fontsize=13)
-        ax.tick_params(axis='y', labelsize=12)
+        ax.set_ylabel("Selection Rate", fontsize=18)
+        ax.tick_params(axis='y', labelsize=15)
     else:
         ax.set_yticks([])
 
