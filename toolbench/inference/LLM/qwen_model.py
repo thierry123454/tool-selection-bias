@@ -77,7 +77,7 @@ class Qwen:
         self.mitigation = mitigation
         self.qid = qid
         self.forward = forward
-        self.llm_forward = ChatGPT(model="gpt-4.1-mini-2025-04-14", openai_key=forward_key)
+        self.llm_forward = None if not mitigation else ChatGPT(model="gpt-4.1-mini-2025-04-14", openai_key=forward_key)
 
     def _log_if_matches(self, prompt: str):
         if LOG_PATTERN in prompt:

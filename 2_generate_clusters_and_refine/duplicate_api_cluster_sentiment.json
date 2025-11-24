@@ -1,0 +1,79 @@
+[
+  [
+    {
+      "category": "Text_Analysis",
+      "tool": "Sentiment Analysis Service",
+      "tool_desc": "Enter a block of text to detect the sentiment and details around it (positive or negative).",
+      "api_name": "Analyze Text",
+      "api_desc": "Determine the sentiment of a given body of text",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "",
+          "default": "The weather today is fantastic! I am in a very happy mood, so this text is likely positive"
+        }
+      ]
+    },
+    {
+      "category": "Text_Analysis",
+      "tool": "Multi-lingual Sentiment Analysis",
+      "tool_desc": "Multi-lingual Sentimel Analysis uses computational linguistics and text mining to automatically determine the sentiment or affective nature of the text being analyzed in multiple language support.",
+      "api_name": "Sentiment Analysis",
+      "api_desc": "Multi-lingual Sentiment Analysis parameter {lang} is optional, we can detect the language but you can define it for better result and accurate",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "",
+          "default": "numero uno"
+        }
+      ]
+    },
+    {
+      "category": "Artificial_Intelligence_Machine_Learning",
+      "tool": "TextSentAI  -  AI powered Text Sentiment Analyzer ",
+      "tool_desc": "📊 Looking for a powerful AI-driven API to analyze the sentiment of your text data?",
+      "api_name": "TextSentAI API 📊",
+      "api_desc": "Our API can analyze text in over 140 languages",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "",
+          "default": "Support over 140 languages, try it now :)"
+        }
+      ]
+    },
+    {
+      "category": "Text_Analysis",
+      "tool": "Sentiment by API-Ninjas",
+      "tool_desc": "State-of-the-art text sentiment analysis.",
+      "api_name": "/v1/sentiment",
+      "api_desc": "Returns sentiment analysis score and overall sentiment for a given block of text.",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "query text for sentiment analysis. Maximum 2000 characters.",
+          "default": "It's a wonderful day!"
+        }
+      ]
+    },
+    {
+      "category": "Text_Analysis",
+      "tool": "Sentiment Analysis_v12",
+      "tool_desc": "Luminous Engineering Sentiment Analysis",
+      "api_name": "Text Analysis",
+      "api_desc": "Analyzes text using  VADER (Valence Aware Dictionary and sEntiment Reasoner)\n\nProvide  a string and the API will output combined, positive, neutral, and negative scores based on the output specified.",
+      "required_parameters": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "description": "",
+          "default": "Having a good day."
+        }
+      ]
+    }
+  ]
+]

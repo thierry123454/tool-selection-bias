@@ -128,7 +128,11 @@ class Gemini:
                         "presencePenalty":  0.0
                     }
                 }
+                print('sending request!!!')
                 resp = requests.post(self.endpoint, json=body, timeout=15)
+                print('got response!', resp)
+                print(resp)
+                print(resp.json())
                 j = resp.json()
                 result = j["candidates"][0]["content"]["parts"][0]["text"]
                 # usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}

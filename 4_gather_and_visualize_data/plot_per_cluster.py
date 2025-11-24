@@ -11,7 +11,7 @@ plt.rc('font', family='serif')
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 STATS_PATHS = {
-    "ChatGPT 4.1":  ["selection_stats/api_selection_stats_chatgpt_4.json", "selection_stats/api_selection_stats_chatgpt_4-2.json", "selection_stats/api_selection_stats_chatgpt_4-3.json"],
+    "GPT-4.1 mini":  ["selection_stats/api_selection_stats_chatgpt_4.json", "selection_stats/api_selection_stats_chatgpt_4-2.json", "selection_stats/api_selection_stats_chatgpt_4-3.json"],
     "Claude":       ["selection_stats/api_selection_stats_claude.json", "selection_stats/api_selection_stats_claude-2.json", "selection_stats/api_selection_stats_claude-3.json"],
     "Gemini":       ["selection_stats/api_selection_stats_gemini.json", "selection_stats/api_selection_stats_gemini-2.json", "selection_stats/api_selection_stats_gemini-3.json"],
     "DeepSeek":     ["selection_stats/api_selection_stats_deepseek.json", "selection_stats/api_selection_stats_deepseek-2.json", "selection_stats/api_selection_stats_deepseek-3.json"],
@@ -25,7 +25,7 @@ SELECT_CLUSTERS = [1, 3, 8]
 MODEL_COLORS = {
    "Gemini":     "#4C78A8",  # blue
    "ChatGPT 3.5":    "#BC6713",  # darker orange
-   "ChatGPT 4.1":    "#F58518",  # orange
+   "GPT-4.1 mini":    "#F58518",  # orange
    "Claude":     "#B279A2",  # purple
    "DeepSeek":   "#E45756",  # red
    "Qwen3 (235B)":       "#72B7B2",  # teal

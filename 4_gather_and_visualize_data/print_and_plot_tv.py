@@ -8,10 +8,10 @@ plt.rc('text', usetex=True)
 plt.rc('font', family='serif')
 
 STATS_PATHS = {
-    "ChatGPT 3.5": ["selection_stats/api_selection_stats_chatgpt_no_func.json",
+    "GPT-3.5": ["selection_stats/api_selection_stats_chatgpt_no_func.json",
                     "selection_stats/api_selection_stats_chatgpt_no_func-2.json",
                     "selection_stats/api_selection_stats_chatgpt_no_func-3.json"],
-    "ChatGPT 4.1":  ["selection_stats/api_selection_stats_chatgpt_4.json",
+    "GPT-4.1 mini":  ["selection_stats/api_selection_stats_chatgpt_4.json",
                      "selection_stats/api_selection_stats_chatgpt_4-2.json",
                      "selection_stats/api_selection_stats_chatgpt_4-3.json"],
     "Claude":       ["selection_stats/api_selection_stats_claude.json", "selection_stats/api_selection_stats_claude-2.json", "selection_stats/api_selection_stats_claude-3.json"],

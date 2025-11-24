@@ -6,15 +6,13 @@ import re
 import random
 
 # ─── CONFIG ────────────────────────────────────────────────────────────────
-CLUSTERS_PATH    = "../2_generate_clusters_and_refine/duplicate_api_clusters.json"
+CLUSTERS_PATH    = "../2_generate_clusters_and_refine/duplicate_api_cluster_sentiment.json"
 CLUSTER_QUERIES  = "cluster_queries.json"
 ORIGINAL_QUERIES = "../data/instruction/G1_query.json"
 ORIGINAL_QUERIES_2 = "../data/instruction/G2_query.json"
 ORIGINAL_QUERIES_3 = "../data/instruction/G3_query.json"
 TOOLENV_ROOT       = "../data/toolenv/tools"
-SHUFFLE = "cycle"
-OUTPUT_PATH = f"toolbench_bias_queries_{SHUFFLE}_test.json"
-HOLDOUT = [6]
+OUTPUT_PATH = f"toolbench_bias_queries_small_k.json"
 # ──────────────────────────────────────────────────────────────────────────
 
 def load_file(path):
@@ -83,95 +81,104 @@ def load_from_toolenv(category, tool, api_name):
 
 def main():
     clusters    = load_file(CLUSTERS_PATH)
-    cq          = load_file(CLUSTER_QUERIES)
+    queries          = load_file(CLUSTER_QUERIES)[6]['queries']
     api_map     = {}
     api_map     = load_api_definitions(ORIGINAL_QUERIES, api_map)
     api_map     = load_api_definitions(ORIGINAL_QUERIES_2, api_map)
     api_map     = load_api_definitions(ORIGINAL_QUERIES_3, api_map)
 
-    output = []
-    qid = 1
+    cluster = clusters[0]
 
-    for entry in cq:
-        cid     = entry["cluster_id"]
-        queries = entry["queries"]
-        cluster = clusters[cid - 1]
+    # —    DEBUG: check how many queries this cluster actually has
+    print(f"Cluster has {len(queries)} queries (expected 100)")
+    print("Sample endpoints:")
+    for ep in cluster[:3]:
+        print(f"  - {ep['tool']} :: {ep['api_name']}")
 
-        # —    DEBUG: check how many queries this cluster actually has
-        print(f"Cluster {cid} has {len(queries)} queries (expected 100)")
+    print("Sample queries:")
+    for q in queries[:3]:
+        print(f"  • {q}")
 
-        print(f"\nProcessing Cluster {cid} (size={len(cluster)})")
-        print("Sample endpoints:")
-        for ep in cluster[:3]:
-            print(f"  - {ep['tool']} :: {ep['api_name']}")
+    # Build the list of (tool, api_name) pairs in the cluster (in stable order)
+    relevant_apis_base = [[ep["tool"], ep["api_name"]] for ep in cluster]
 
-        print("Sample queries:")
-        for q in queries[:3]:
-            print(f"  • {q}")
+    print(relevant_apis_base)
 
-        # Build the list of (tool, api_name) pairs in the cluster (in stable order)
-        relevant_apis_base = [[ep["tool"], ep["api_name"]] for ep in cluster]   
+    subset_sizes = [2, 3, 4]
+    num_subsets_per_k = 1
+    w2b = [['Sentiment Analysis_v12', 'Text Analysis'], ['TextSentAI  -  AI powered Text Sentiment Analyzer ', 'TextSentAI API 📊'], ['Multi-lingual Sentiment Analysis', 'Sentiment Analysis'], ['Sentiment by API-Ninjas', '/v1/sentiment'], ['Sentiment Analysis Service', 'Analyze Text']]
+    b2w = w2b[::-1]
 
-        # For each query, create one entry per endpoint in the cluster,
-        # so that each endpoint appears once in the first position (that is, if SHUFFLE is set to cyclic)
-        for query_text in queries:
-            if SHUFFLE == "none":
-                definitions = []
-                for tool, api_name in relevant_apis_base:
-                    definition = api_map.get((tool, api_name))
-                    if not definition:
-                        for ep in cluster:
-                            if ep['api_name'] == api_name:
-                                category = ep['category']
-                        definition = load_from_toolenv(category, tool, api_name)
-                    definitions.append(definition)
+    print(b2w)
 
-                output.append({
-                    "api_list":       definitions,
-                    "query":          query_text,
-                    "relevant APIs":  relevant_apis_base,
-                    "query_id":       qid
-                })
-                qid += 1
-            else:
-                for i in range(len(relevant_apis_base)):
-                    # Place endpoint i at the front; keep the others in the same relative order (if SHUFFLE is not random)
 
-                    if SHUFFLE == "random":
-                        permuted_relevant = relevant_apis_base.copy()
-                        random.shuffle(permuted_relevant)
-                    else:
+    # For each query, create one entry per endpoint in the cluster,
+    # so that each endpoint appears once in the first position (that is, if SHUFFLE is set to cyclic)
+    for method in ['w2b', 'b2w', 'random']:
+        if method == 'random':
+            subset_sizes.append(5)
+            num_subsets_per_k = 3
+
+        for k in subset_sizes:
+            out_dir = f"k={k}"
+            os.makedirs(out_dir, exist_ok=True)
+
+            if k == 5:
+                num_subsets_per_k = 1
+
+            print(f"\n=== Generating subsets for K={k} ===")
+
+            for subset_idx in range(num_subsets_per_k):
+                if method == 'random':
+                    subset_apis = random.sample(relevant_apis_base, k)
+                elif method == 'w2b':
+                    subset_apis = w2b[:k]
+                elif method == 'b2w':
+                    subset_apis = b2w[:k]
+
+                print(f"  Subset {subset_idx + 1} for K={k}: {subset_apis}")
+
+                output = []
+                qid = 1
+
+                for query_text in queries:
+                    for i in range(len(subset_apis)):
+                        # Place endpoint i at the front; keep the others in the same relative order (if SHUFFLE is not random)
                         permuted_relevant = (
-                            relevant_apis_base[i:] +
-                            relevant_apis_base[:i]
+                            subset_apis[i:] +
+                            subset_apis[:i]
                         )
 
-                    # Now collect the corresponding full definitions in the same permuted order
-                    permuted_api_list = []
-                    for tool, api_name in permuted_relevant:
-                        definition = api_map.get((tool, api_name))
-                        if not definition:
-                            # fallback to toolenv JSON
-                            for ep in cluster:
-                                if ep['api_name'] == api_name:
-                                    category = ep['category']
-                            definition = load_from_toolenv(category, tool, api_name)
-                        permuted_api_list.append(definition)
+                        # Now collect the corresponding full definitions in the same permuted order
+                        permuted_api_list = []
+                        for tool, api_name in permuted_relevant:
+                            definition = api_map.get((tool, api_name))
+                            if not definition:
+                                # fallback to toolenv JSON
+                                for ep in cluster:
+                                    if ep['api_name'] == api_name:
+                                        category = ep['category']
+                                definition = load_from_toolenv(category, tool, api_name)
+                            permuted_api_list.append(definition)
 
-                    if not HOLDOUT or (HOLDOUT and cid in HOLDOUT): 
                         output.append({
                             "api_list":       permuted_api_list,
                             "query":          query_text,
                             "relevant APIs":  permuted_relevant,
                             "query_id":       qid
                         })
-                    qid += 1
+                        qid += 1
 
-    # Write out the combined JSON.
-    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(output, f, indent=2, ensure_ascii=False)
+                out_path = os.path.join(
+                        out_dir,
+                        f"toolbench_bias_queries_{method}_k{k}_subset{subset_idx + 1}.json"
+                    )
+                
+                # Write out the combined JSON.
+                with open(out_path, "w", encoding="utf-8") as f:
+                    json.dump(output, f, indent=2, ensure_ascii=False)
 
-    print(f"\n✅ Wrote {len(output)} queries to {OUTPUT_PATH}")
+                print(f"\n✅ Wrote {len(output)} queries to {out_path}")
 
 if __name__ == "__main__":
     main()
